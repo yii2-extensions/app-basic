@@ -1,0 +1,50 @@
+# codeception coverage
+c3.php
+
+# composer itself is not needed
+composer.phar
+composer.lock
+
+# composer vendor dir
+/vendor
+
+# local phpunit config
+/phpunit.xml
+
+# Mac DS_Store Files
+.DS_Store
+
+# netbeans project files
+nbproject
+
+#node_modules
+/node_modules
+
+# package json lock
+package-lock.json
+
+# phpstorm project files
+.idea
+
+# phpunit itself is not needed
+phpunit.phar
+
+# vagrant runtime
+/.vagrant
+
+# vscode
+.vscode
+
+# windows thumbnail cache
+Thumbs.db
+
+# yii console commands
+requirements.php
+/yii
+/yii_test
+/yii_test.bat
+
+# zend studio for eclipse project files
+.buildpath
+.project
+.settings

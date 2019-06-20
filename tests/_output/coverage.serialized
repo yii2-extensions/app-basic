@@ -1,0 +1,1136 @@
+<?php
+$coverage = new SebastianBergmann\CodeCoverage\CodeCoverage;
+$coverage->setData(array (
+  'D:\\git-local\\terabytesoftw\\app-basic\\src\\views\\layouts\\main.php' => 
+  array (
+    15 => 
+    array (
+      0 => 'aboutPageTest',
+      1 => 'contactPageTest',
+      2 => 'contactSubmitFormEmptyDataTest',
+      3 => 'contactSubmitFormEmailWrongDataTest',
+      4 => 'contactSubmitFormSuccessDataTest',
+      5 => 'indexPageTest',
+      6 => 'contactFormPageTest',
+      7 => 'contactFormSubmitFormEmptyDataTest',
+      8 => 'contactFormSubmitFormEmailWrongDataTest',
+      9 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    17 => 
+    array (
+      0 => 'aboutPageTest',
+      1 => 'contactPageTest',
+      2 => 'contactSubmitFormEmptyDataTest',
+      3 => 'contactSubmitFormEmailWrongDataTest',
+      4 => 'contactSubmitFormSuccessDataTest',
+      5 => 'indexPageTest',
+      6 => 'contactFormPageTest',
+      7 => 'contactFormSubmitFormEmptyDataTest',
+      8 => 'contactFormSubmitFormEmailWrongDataTest',
+      9 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    18 => 
+    array (
+      0 => 'aboutPageTest',
+      1 => 'contactPageTest',
+      2 => 'contactSubmitFormEmptyDataTest',
+      3 => 'contactSubmitFormEmailWrongDataTest',
+      4 => 'contactSubmitFormSuccessDataTest',
+      5 => 'indexPageTest',
+      6 => 'contactFormPageTest',
+      7 => 'contactFormSubmitFormEmptyDataTest',
+      8 => 'contactFormSubmitFormEmailWrongDataTest',
+      9 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    20 => 
+    array (
+    ),
+    46 => 
+    array (
+      0 => 'aboutPageTest',
+      1 => 'contactPageTest',
+      2 => 'contactSubmitFormEmptyDataTest',
+      3 => 'contactSubmitFormEmailWrongDataTest',
+      4 => 'contactSubmitFormSuccessDataTest',
+      5 => 'indexPageTest',
+      6 => 'contactFormPageTest',
+      7 => 'contactFormSubmitFormEmptyDataTest',
+      8 => 'contactFormSubmitFormEmailWrongDataTest',
+      9 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    47 => 
+    array (
+      0 => 'aboutPageTest',
+      1 => 'contactPageTest',
+      2 => 'contactSubmitFormEmptyDataTest',
+      3 => 'contactSubmitFormEmailWrongDataTest',
+      4 => 'contactSubmitFormSuccessDataTest',
+      5 => 'indexPageTest',
+      6 => 'contactFormPageTest',
+      7 => 'contactFormSubmitFormEmptyDataTest',
+      8 => 'contactFormSubmitFormEmailWrongDataTest',
+      9 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    53 => 
+    array (
+      0 => 'aboutPageTest',
+      1 => 'contactPageTest',
+      2 => 'contactSubmitFormEmptyDataTest',
+      3 => 'contactSubmitFormEmailWrongDataTest',
+      4 => 'contactSubmitFormSuccessDataTest',
+      5 => 'indexPageTest',
+      6 => 'contactFormPageTest',
+      7 => 'contactFormSubmitFormEmptyDataTest',
+      8 => 'contactFormSubmitFormEmailWrongDataTest',
+      9 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    54 => 
+    array (
+      0 => 'aboutPageTest',
+      1 => 'contactPageTest',
+      2 => 'contactSubmitFormEmptyDataTest',
+      3 => 'contactSubmitFormEmailWrongDataTest',
+      4 => 'contactSubmitFormSuccessDataTest',
+      5 => 'indexPageTest',
+      6 => 'contactFormPageTest',
+      7 => 'contactFormSubmitFormEmptyDataTest',
+      8 => 'contactFormSubmitFormEmailWrongDataTest',
+      9 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    55 => 
+    array (
+      0 => 'aboutPageTest',
+      1 => 'contactPageTest',
+      2 => 'contactSubmitFormEmptyDataTest',
+      3 => 'contactSubmitFormEmailWrongDataTest',
+      4 => 'contactSubmitFormSuccessDataTest',
+      5 => 'indexPageTest',
+      6 => 'contactFormPageTest',
+      7 => 'contactFormSubmitFormEmptyDataTest',
+      8 => 'contactFormSubmitFormEmailWrongDataTest',
+      9 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    62 => 
+    array (
+      0 => 'aboutPageTest',
+      1 => 'contactPageTest',
+      2 => 'contactSubmitFormEmptyDataTest',
+      3 => 'contactSubmitFormEmailWrongDataTest',
+      4 => 'contactSubmitFormSuccessDataTest',
+      5 => 'indexPageTest',
+      6 => 'contactFormPageTest',
+      7 => 'contactFormSubmitFormEmptyDataTest',
+      8 => 'contactFormSubmitFormEmailWrongDataTest',
+      9 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    63 => 
+    array (
+      0 => 'aboutPageTest',
+      1 => 'contactPageTest',
+      2 => 'contactSubmitFormEmptyDataTest',
+      3 => 'contactSubmitFormEmailWrongDataTest',
+      4 => 'contactSubmitFormSuccessDataTest',
+      5 => 'indexPageTest',
+      6 => 'contactFormPageTest',
+      7 => 'contactFormSubmitFormEmptyDataTest',
+      8 => 'contactFormSubmitFormEmailWrongDataTest',
+      9 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    80 => 
+    array (
+      0 => 'aboutPageTest',
+      1 => 'contactPageTest',
+      2 => 'contactSubmitFormEmptyDataTest',
+      3 => 'contactSubmitFormEmailWrongDataTest',
+      4 => 'contactSubmitFormSuccessDataTest',
+      5 => 'indexPageTest',
+      6 => 'contactFormPageTest',
+      7 => 'contactFormSubmitFormEmptyDataTest',
+      8 => 'contactFormSubmitFormEmailWrongDataTest',
+      9 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    81 => 
+    array (
+      0 => 'aboutPageTest',
+      1 => 'contactPageTest',
+      2 => 'contactSubmitFormEmptyDataTest',
+      3 => 'contactSubmitFormEmailWrongDataTest',
+      4 => 'contactSubmitFormSuccessDataTest',
+      5 => 'indexPageTest',
+      6 => 'contactFormPageTest',
+      7 => 'contactFormSubmitFormEmptyDataTest',
+      8 => 'contactFormSubmitFormEmailWrongDataTest',
+      9 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    82 => 
+    array (
+      0 => 'aboutPageTest',
+      1 => 'contactPageTest',
+      2 => 'contactSubmitFormEmptyDataTest',
+      3 => 'contactSubmitFormEmailWrongDataTest',
+      4 => 'contactSubmitFormSuccessDataTest',
+      5 => 'indexPageTest',
+      6 => 'contactFormPageTest',
+      7 => 'contactFormSubmitFormEmptyDataTest',
+      8 => 'contactFormSubmitFormEmailWrongDataTest',
+      9 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    83 => 
+    array (
+      0 => 'aboutPageTest',
+      1 => 'contactPageTest',
+      2 => 'contactSubmitFormEmptyDataTest',
+      3 => 'contactSubmitFormEmailWrongDataTest',
+      4 => 'contactSubmitFormSuccessDataTest',
+      5 => 'indexPageTest',
+      6 => 'contactFormPageTest',
+      7 => 'contactFormSubmitFormEmptyDataTest',
+      8 => 'contactFormSubmitFormEmailWrongDataTest',
+      9 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    85 => 
+    array (
+      0 => 'aboutPageTest',
+      1 => 'contactPageTest',
+      2 => 'contactSubmitFormEmptyDataTest',
+      3 => 'contactSubmitFormEmailWrongDataTest',
+      4 => 'contactSubmitFormSuccessDataTest',
+      5 => 'indexPageTest',
+      6 => 'contactFormPageTest',
+      7 => 'contactFormSubmitFormEmptyDataTest',
+      8 => 'contactFormSubmitFormEmailWrongDataTest',
+      9 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    86 => 
+    array (
+      0 => 'aboutPageTest',
+      1 => 'contactPageTest',
+      2 => 'contactSubmitFormEmptyDataTest',
+      3 => 'contactSubmitFormEmailWrongDataTest',
+      4 => 'contactSubmitFormSuccessDataTest',
+      5 => 'indexPageTest',
+      6 => 'contactFormPageTest',
+      7 => 'contactFormSubmitFormEmptyDataTest',
+      8 => 'contactFormSubmitFormEmailWrongDataTest',
+      9 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+  ),
+  'D:\\git-local\\terabytesoftw\\app-basic\\src\\views\\site\\about.php' => 
+  array (
+    9 => 
+    array (
+      0 => 'aboutPageTest',
+    ),
+    10 => 
+    array (
+      0 => 'aboutPageTest',
+    ),
+    17 => 
+    array (
+      0 => 'aboutPageTest',
+    ),
+  ),
+  'D:\\git-local\\terabytesoftw\\app-basic\\src\\controllers\\SiteController.php' => 
+  array (
+    28 => 
+    array (
+      0 => 'aboutPageTest',
+      1 => 'contactPageTest',
+      2 => 'contactSubmitFormEmptyDataTest',
+      3 => 'contactSubmitFormEmailWrongDataTest',
+      4 => 'contactSubmitFormSuccessDataTest',
+      5 => 'indexPageTest',
+      6 => 'contactFormPageTest',
+      7 => 'contactFormSubmitFormEmptyDataTest',
+      8 => 'contactFormSubmitFormEmailWrongDataTest',
+      9 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    39 => 
+    array (
+      0 => 'aboutPageTest',
+      1 => 'contactPageTest',
+      2 => 'contactSubmitFormEmptyDataTest',
+      3 => 'contactSubmitFormEmailWrongDataTest',
+      4 => 'contactSubmitFormSuccessDataTest',
+      5 => 'indexPageTest',
+      6 => 'contactFormPageTest',
+      7 => 'contactFormSubmitFormEmptyDataTest',
+      8 => 'contactFormSubmitFormEmailWrongDataTest',
+      9 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    45 => NULL,
+    54 => 
+    array (
+      0 => 'aboutPageTest',
+      1 => 'contactPageTest',
+      2 => 'contactSubmitFormEmptyDataTest',
+      3 => 'contactSubmitFormEmailWrongDataTest',
+      4 => 'contactSubmitFormSuccessDataTest',
+      5 => 'indexPageTest',
+      6 => 'contactFormPageTest',
+      7 => 'contactFormSubmitFormEmptyDataTest',
+      8 => 'contactFormSubmitFormEmailWrongDataTest',
+      9 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    57 => 
+    array (
+      0 => 'aboutPageTest',
+      1 => 'contactPageTest',
+      2 => 'contactSubmitFormEmptyDataTest',
+      3 => 'contactSubmitFormEmailWrongDataTest',
+      4 => 'contactSubmitFormSuccessDataTest',
+      5 => 'indexPageTest',
+      6 => 'contactFormPageTest',
+      7 => 'contactFormSubmitFormEmptyDataTest',
+      8 => 'contactFormSubmitFormEmailWrongDataTest',
+      9 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    58 => 
+    array (
+      0 => 'aboutPageTest',
+      1 => 'contactPageTest',
+      2 => 'contactSubmitFormEmptyDataTest',
+      3 => 'contactSubmitFormEmailWrongDataTest',
+      4 => 'contactSubmitFormSuccessDataTest',
+      5 => 'indexPageTest',
+      6 => 'contactFormPageTest',
+      7 => 'contactFormSubmitFormEmptyDataTest',
+      8 => 'contactFormSubmitFormEmailWrongDataTest',
+      9 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    61 => NULL,
+    70 => 
+    array (
+      0 => 'indexPageTest',
+    ),
+    71 => NULL,
+    82 => 
+    array (
+      0 => 'aboutPageTest',
+    ),
+    83 => NULL,
+    94 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    96 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    97 => 
+    array (
+      0 => 'contactSubmitFormSuccessDataTest',
+      1 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    98 => 
+    array (
+      0 => 'contactSubmitFormSuccessDataTest',
+      1 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    100 => 
+    array (
+      0 => 'contactSubmitFormSuccessDataTest',
+      1 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    103 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    104 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    106 => NULL,
+    120 => 
+    array (
+      0 => 'contactSubmitFormSuccessDataTest',
+      1 => 'contactFormSubmitFormSuccessDataTest',
+      2 => 'Terabytesoft\\App\\Basic\\ContactFormTest::testContactFormSentEmail',
+    ),
+    121 => 
+    array (
+      0 => 'contactSubmitFormSuccessDataTest',
+      1 => 'contactFormSubmitFormSuccessDataTest',
+      2 => 'Terabytesoft\\App\\Basic\\ContactFormTest::testContactFormSentEmail',
+    ),
+    122 => 
+    array (
+      0 => 'contactSubmitFormSuccessDataTest',
+      1 => 'contactFormSubmitFormSuccessDataTest',
+      2 => 'Terabytesoft\\App\\Basic\\ContactFormTest::testContactFormSentEmail',
+    ),
+    123 => 
+    array (
+      0 => 'contactSubmitFormSuccessDataTest',
+      1 => 'contactFormSubmitFormSuccessDataTest',
+      2 => 'Terabytesoft\\App\\Basic\\ContactFormTest::testContactFormSentEmail',
+    ),
+    124 => 
+    array (
+      0 => 'contactSubmitFormSuccessDataTest',
+      1 => 'contactFormSubmitFormSuccessDataTest',
+      2 => 'Terabytesoft\\App\\Basic\\ContactFormTest::testContactFormSentEmail',
+    ),
+    125 => 
+    array (
+      0 => 'contactSubmitFormSuccessDataTest',
+      1 => 'contactFormSubmitFormSuccessDataTest',
+      2 => 'Terabytesoft\\App\\Basic\\ContactFormTest::testContactFormSentEmail',
+    ),
+    126 => 
+    array (
+      0 => 'contactSubmitFormSuccessDataTest',
+      1 => 'contactFormSubmitFormSuccessDataTest',
+      2 => 'Terabytesoft\\App\\Basic\\ContactFormTest::testContactFormSentEmail',
+    ),
+    127 => 
+    array (
+      0 => 'contactSubmitFormSuccessDataTest',
+      1 => 'contactFormSubmitFormSuccessDataTest',
+      2 => 'Terabytesoft\\App\\Basic\\ContactFormTest::testContactFormSentEmail',
+    ),
+  ),
+  'D:\\git-local\\terabytesoftw\\app-basic\\src\\views\\site\\contact.php' => 
+  array (
+    12 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    13 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    23 => 
+    array (
+      0 => 'contactSubmitFormSuccessDataTest',
+      1 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    24 => 
+    array (
+      0 => 'contactSubmitFormSuccessDataTest',
+      1 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    29 => 
+    array (
+      0 => 'contactSubmitFormSuccessDataTest',
+      1 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    30 => 
+    array (
+      0 => 'contactSubmitFormSuccessDataTest',
+      1 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    33 => 
+    array (
+      0 => 'contactSubmitFormSuccessDataTest',
+      1 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    36 => 
+    array (
+      0 => 'contactSubmitFormSuccessDataTest',
+      1 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    37 => 
+    array (
+      0 => 'contactSubmitFormSuccessDataTest',
+      1 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    39 => 
+    array (
+      0 => 'contactSubmitFormSuccessDataTest',
+      1 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    45 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    46 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    51 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    70 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    71 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    72 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    73 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    74 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    75 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    77 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    79 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    82 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    83 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    84 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    85 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    86 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    88 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    90 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    93 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    94 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    95 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    96 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    97 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    99 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    101 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    104 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    105 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    106 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    107 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    108 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    110 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    111 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    113 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    116 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    117 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    118 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    119 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    121 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    122 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    124 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    125 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    127 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    128 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    130 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    131 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    135 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    139 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+    140 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+    ),
+  ),
+  'D:\\git-local\\terabytesoftw\\app-basic\\src\\forms\\ContactForm.php' => 
+  array (
+    29 => 
+    array (
+      0 => 'contactPageTest',
+      1 => 'contactSubmitFormEmptyDataTest',
+      2 => 'contactSubmitFormEmailWrongDataTest',
+      3 => 'contactSubmitFormSuccessDataTest',
+      4 => 'contactFormPageTest',
+      5 => 'contactFormSubmitFormEmptyDataTest',
+      6 => 'contactFormSubmitFormEmailWrongDataTest',
+      7 => 'contactFormSubmitFormSuccessDataTest',
+      8 => 'Terabytesoft\\App\\Basic\\ContactFormTest::testContactFormRules',
+      9 => 'Terabytesoft\\App\\Basic\\ContactFormTest::testContactFormSentEmail',
+    ),
+    35 => NULL,
+  ),
+  'D:\\git-local\\terabytesoftw\\app-basic\\src\\views\\site\\index.php' => 
+  array (
+    10 => 
+    array (
+      0 => 'indexPageTest',
+    ),
+    41 => 
+    array (
+      0 => 'indexPageTest',
+    ),
+    60 => 
+    array (
+      0 => 'indexPageTest',
+    ),
+    79 => 
+    array (
+      0 => 'indexPageTest',
+    ),
+  ),
+  'D:\\git-local\\terabytesoftw\\app-basic\\src\\views\\site\\error.php' => 
+  array (
+    9 => 
+    array (
+    ),
+  ),
+));
+$coverage->setTests(array (
+  'aboutPageTest' => 
+  array (
+    'size' => 'unknown',
+    'status' => -1,
+  ),
+  'contactPageTest' => 
+  array (
+    'size' => 'unknown',
+    'status' => -1,
+  ),
+  'contactSubmitFormEmptyDataTest' => 
+  array (
+    'size' => 'unknown',
+    'status' => -1,
+  ),
+  'contactSubmitFormEmailWrongDataTest' => 
+  array (
+    'size' => 'unknown',
+    'status' => -1,
+  ),
+  'contactSubmitFormSuccessDataTest' => 
+  array (
+    'size' => 'unknown',
+    'status' => -1,
+  ),
+  'indexPageTest' => 
+  array (
+    'size' => 'unknown',
+    'status' => -1,
+  ),
+  'contactFormPageTest' => 
+  array (
+    'size' => 'unknown',
+    'status' => -1,
+  ),
+  'contactFormSubmitFormEmptyDataTest' => 
+  array (
+    'size' => 'unknown',
+    'status' => -1,
+  ),
+  'contactFormSubmitFormEmailWrongDataTest' => 
+  array (
+    'size' => 'unknown',
+    'status' => -1,
+  ),
+  'contactFormSubmitFormSuccessDataTest' => 
+  array (
+    'size' => 'unknown',
+    'status' => -1,
+  ),
+  'Terabytesoft\\App\\Basic\\ContactFormTest::testContactFormRules' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'Terabytesoft\\App\\Basic\\ContactFormTest::testContactFormSentEmail' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'UNCOVERED_FILES_FROM_WHITELIST' => 
+  array (
+    'size' => 'unknown',
+    'status' => -1,
+  ),
+));
+
+$filter = $coverage->filter();
+$filter->setWhitelistedFiles(array (
+  'D:\\git-local\\terabytesoftw\\app-basic\\src\\controllers\\SiteController.php' => true,
+  'D:\\git-local\\terabytesoftw\\app-basic\\src\\forms\\ContactForm.php' => true,
+  'D:\\git-local\\terabytesoftw\\app-basic\\src\\views\\layouts\\main.php' => true,
+  'D:\\git-local\\terabytesoftw\\app-basic\\src\\views\\site\\about.php' => true,
+  'D:\\git-local\\terabytesoftw\\app-basic\\src\\views\\site\\contact.php' => true,
+  'D:\\git-local\\terabytesoftw\\app-basic\\src\\views\\site\\error.php' => true,
+  'D:\\git-local\\terabytesoftw\\app-basic\\src\\views\\site\\index.php' => true,
+));
+
+return $coverage;

@@ -1,0 +1,15 @@
+imports:
+    - php
+checks:
+    php:
+        code_rating: true
+        duplication: true
+tools:
+    php_sim: false
+    php_cpd: false
+filter:
+    excluded_paths:
+        - config/*
+        - docs/*
+        - tests/*
+        - vendor/*
