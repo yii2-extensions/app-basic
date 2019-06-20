@@ -4,6 +4,10 @@ checks:
     php:
         code_rating: true
         duplication: true
+        excluded_dependencies:
+            - phpunit/phpunit
+            - fzaninotto/faker
+
 tools:
     php_sim: false
     php_cpd: false
