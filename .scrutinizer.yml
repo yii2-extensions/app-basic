@@ -9,6 +9,9 @@ checks:
             - fzaninotto/faker
 
 tools:
+    external_code_coverage: true
+    external_code_coverage:
+        timeout: 2100
     php_sim: false
     php_cpd: false
 filter:
