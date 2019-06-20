@@ -9,6 +9,7 @@ class ContactCest
     public function _before(AcceptanceTester $I)
     {
         $I->amOnPage('/site/contact');
+        $I->wait(5); // secs
     }
 
     public function contactPageTest(AcceptanceTester $I)

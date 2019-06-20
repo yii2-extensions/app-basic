@@ -9,6 +9,7 @@ class IndexCest
     public function _before(AcceptanceTester $I)
     {
         $I->amOnPage('/site/index');
+        $I->wait(5); // secs
     }
 
     public function indexPageTest(AcceptanceTester $I)

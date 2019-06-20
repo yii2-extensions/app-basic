@@ -9,6 +9,7 @@ class AboutCest
     public function _before(AcceptanceTester $I)
     {
         $I->amOnPage('/site/about');
+        $I->wait(5); // secs
     }
 
     public function aboutPageTest(AcceptanceTester $I)
