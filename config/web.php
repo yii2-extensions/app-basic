@@ -2,8 +2,8 @@
 
 $config = [
     'id' => 'basic',
-    'basePath' => dirname(__DIR__).'\\src',
-    'vendorPath' => dirname(__DIR__).'\\vendor',
+    'basePath' => dirname(__DIR__).'/src',
+    'vendorPath' => dirname(__DIR__).'/vendor',
     'bootstrap' => ['log'],
     'controllerNamespace' => 'terabytesoft\app\basic\controllers',
     'aliases' => [
