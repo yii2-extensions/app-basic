@@ -6,5 +6,4 @@ namespace Terabytesoft\App\Basic\Helper;
 
 class Acceptance extends \Codeception\Module
 {
-
 }

@@ -6,5 +6,4 @@ namespace Terabytesoft\App\Basic\Helper;
 
 class Unit extends \Codeception\Module
 {
-
 }
