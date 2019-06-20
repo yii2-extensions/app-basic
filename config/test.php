@@ -1,4 +1,8 @@
 <?php
+
+$appbasic = require __DIR__ . '/appbasic.php';
+$params = require __DIR__ . '/params.php';
+
 /**
  * Application configuration shared by all test types
  */
@@ -44,7 +48,7 @@ $config = [
             'enableCsrfValidation' => true,
         ],
     ],
-    'params' => $params
+    'params' => array_merge($params, $appbasic)
 ];
 
 return $config;

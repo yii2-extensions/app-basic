@@ -18,7 +18,7 @@ settings:
 modules:
     config:
         Yii2:
-            configFile: '/vendor/hiqdev/composer-config-plugin-output/tests.php'
+            configFile: '/config/test.php'
 coverage:
     enabled: true
     whitelist:
