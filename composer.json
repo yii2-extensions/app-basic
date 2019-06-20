@@ -21,7 +21,7 @@
     },
     "require-dev": {
         "codeception/codeception": "^3.0",
-        "codeception/c3": "*",
+        "codeception/c3": "2.*",
         "codeception/specify": "*",
         "codeception/verify": "*",
         "dms/phpunit-arraysubset-asserts": "^0.1.0",
