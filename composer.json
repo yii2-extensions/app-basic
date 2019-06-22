@@ -34,7 +34,6 @@
         "foxy/foxy": "^1.0",
         "hiqdev/composer-config-plugin": "^1.0@dev",
         "monolog/monolog": "*",
-        "phpunit/phpunit": "8.1.*",
         "yiisoft/yii2-debug": "~2.1.0",
         "yiisoft/yii2-gii": "~2.1.0",
         "yiisoft/yii2-faker": "~2.0.0"

@@ -3,7 +3,6 @@ c3.php
 
 # composer itself is not needed
 composer.phar
-composer.lock
 
 # composer vendor dir
 /vendor
