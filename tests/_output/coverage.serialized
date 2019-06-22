@@ -235,7 +235,7 @@ $coverage->setData(array (
   ),
   'D:\\git-local\\terabytesoftw\\app-basic\\src\\controllers\\SiteController.php' => 
   array (
-    31 => 
+    33 => 
     array (
       0 => 'testAboutPageTest',
       1 => 'testContactPageTest',
@@ -248,8 +248,8 @@ $coverage->setData(array (
       8 => 'testContactFormSubmitFormEmailWrongDataTest',
       9 => 'testContactFormSubmitFormSuccessDataTest',
     ),
-    37 => NULL,
-    47 => 
+    39 => NULL,
+    49 => 
     array (
       0 => 'testAboutPageTest',
       1 => 'testContactPageTest',
@@ -262,7 +262,7 @@ $coverage->setData(array (
       8 => 'testContactFormSubmitFormEmailWrongDataTest',
       9 => 'testContactFormSubmitFormSuccessDataTest',
     ),
-    50 => 
+    53 => 
     array (
       0 => 'testAboutPageTest',
       1 => 'testContactPageTest',
@@ -275,41 +275,17 @@ $coverage->setData(array (
       8 => 'testContactFormSubmitFormEmailWrongDataTest',
       9 => 'testContactFormSubmitFormSuccessDataTest',
     ),
-    51 => 
-    array (
-      0 => 'testAboutPageTest',
-      1 => 'testContactPageTest',
-      2 => 'testcontactSubmitFormEmptyDataTest',
-      3 => 'testContactSubmitFormEmailWrongDataTest',
-      4 => 'testContactSubmitFormSuccessDataTest',
-      5 => 'testIndexPageTest',
-      6 => 'testContactFormPageTest',
-      7 => 'testContactFormSubmitFormEmptyDataTest',
-      8 => 'testContactFormSubmitFormEmailWrongDataTest',
-      9 => 'testContactFormSubmitFormSuccessDataTest',
-    ),
-    54 => NULL,
-    61 => 
+    56 => NULL,
+    63 => 
     array (
       0 => 'testIndexPageTest',
     ),
-    62 => NULL,
-    69 => 
+    64 => NULL,
+    71 => 
     array (
       0 => 'testAboutPageTest',
     ),
-    70 => NULL,
-    78 => 
-    array (
-      0 => 'testContactPageTest',
-      1 => 'testcontactSubmitFormEmptyDataTest',
-      2 => 'testContactSubmitFormEmailWrongDataTest',
-      3 => 'testContactSubmitFormSuccessDataTest',
-      4 => 'testContactFormPageTest',
-      5 => 'testContactFormSubmitFormEmptyDataTest',
-      6 => 'testContactFormSubmitFormEmailWrongDataTest',
-      7 => 'testContactFormSubmitFormSuccessDataTest',
-    ),
+    72 => NULL,
     80 => 
     array (
       0 => 'testContactPageTest',
@@ -321,12 +297,18 @@ $coverage->setData(array (
       6 => 'testContactFormSubmitFormEmailWrongDataTest',
       7 => 'testContactFormSubmitFormSuccessDataTest',
     ),
-    81 => 
-    array (
-      0 => 'testContactSubmitFormSuccessDataTest',
-      1 => 'testContactFormSubmitFormSuccessDataTest',
-    ),
     82 => 
+    array (
+      0 => 'testContactPageTest',
+      1 => 'testcontactSubmitFormEmptyDataTest',
+      2 => 'testContactSubmitFormEmailWrongDataTest',
+      3 => 'testContactSubmitFormSuccessDataTest',
+      4 => 'testContactFormPageTest',
+      5 => 'testContactFormSubmitFormEmptyDataTest',
+      6 => 'testContactFormSubmitFormEmailWrongDataTest',
+      7 => 'testContactFormSubmitFormSuccessDataTest',
+    ),
+    83 => 
     array (
       0 => 'testContactSubmitFormSuccessDataTest',
       1 => 'testContactFormSubmitFormSuccessDataTest',
@@ -336,7 +318,12 @@ $coverage->setData(array (
       0 => 'testContactSubmitFormSuccessDataTest',
       1 => 'testContactFormSubmitFormSuccessDataTest',
     ),
-    87 => 
+    86 => 
+    array (
+      0 => 'testContactSubmitFormSuccessDataTest',
+      1 => 'testContactFormSubmitFormSuccessDataTest',
+    ),
+    89 => 
     array (
       0 => 'testContactPageTest',
       1 => 'testcontactSubmitFormEmptyDataTest',
@@ -347,7 +334,7 @@ $coverage->setData(array (
       6 => 'testContactFormSubmitFormEmailWrongDataTest',
       7 => 'testContactFormSubmitFormSuccessDataTest',
     ),
-    88 => 
+    90 => 
     array (
       0 => 'testContactPageTest',
       1 => 'testcontactSubmitFormEmptyDataTest',
@@ -358,19 +345,7 @@ $coverage->setData(array (
       6 => 'testContactFormSubmitFormEmailWrongDataTest',
       7 => 'testContactFormSubmitFormSuccessDataTest',
     ),
-    90 => NULL,
-    99 => 
-    array (
-      0 => 'testContactSubmitFormSuccessDataTest',
-      1 => 'testContactFormSubmitFormSuccessDataTest',
-      2 => 'Terabytesoft\\App\\Basic\\ContactFormTest::testContactFormSentEmail',
-    ),
-    100 => 
-    array (
-      0 => 'testContactSubmitFormSuccessDataTest',
-      1 => 'testContactFormSubmitFormSuccessDataTest',
-      2 => 'Terabytesoft\\App\\Basic\\ContactFormTest::testContactFormSentEmail',
-    ),
+    92 => NULL,
     101 => 
     array (
       0 => 'testContactSubmitFormSuccessDataTest',
@@ -383,13 +358,13 @@ $coverage->setData(array (
       1 => 'testContactFormSubmitFormSuccessDataTest',
       2 => 'Terabytesoft\\App\\Basic\\ContactFormTest::testContactFormSentEmail',
     ),
-    104 => 
+    103 => 
     array (
       0 => 'testContactSubmitFormSuccessDataTest',
       1 => 'testContactFormSubmitFormSuccessDataTest',
       2 => 'Terabytesoft\\App\\Basic\\ContactFormTest::testContactFormSentEmail',
     ),
-    105 => 
+    104 => 
     array (
       0 => 'testContactSubmitFormSuccessDataTest',
       1 => 'testContactFormSubmitFormSuccessDataTest',
@@ -408,6 +383,18 @@ $coverage->setData(array (
       2 => 'Terabytesoft\\App\\Basic\\ContactFormTest::testContactFormSentEmail',
     ),
     108 => 
+    array (
+      0 => 'testContactSubmitFormSuccessDataTest',
+      1 => 'testContactFormSubmitFormSuccessDataTest',
+      2 => 'Terabytesoft\\App\\Basic\\ContactFormTest::testContactFormSentEmail',
+    ),
+    109 => 
+    array (
+      0 => 'testContactSubmitFormSuccessDataTest',
+      1 => 'testContactFormSubmitFormSuccessDataTest',
+      2 => 'Terabytesoft\\App\\Basic\\ContactFormTest::testContactFormSentEmail',
+    ),
+    110 => 
     array (
       0 => 'testContactSubmitFormSuccessDataTest',
       1 => 'testContactFormSubmitFormSuccessDataTest',

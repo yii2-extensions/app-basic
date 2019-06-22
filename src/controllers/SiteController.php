@@ -4,9 +4,11 @@ namespace terabytesoft\app\basic\controllers;
 
 use terabytesoft\app\basic\forms\ContactForm;
 use yii\base\Model;
+use yii\captcha\CaptchaAction;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
+use yii\web\ErrorAction;
 use yii\web\Response;
 
 /**
@@ -44,10 +46,10 @@ class SiteController extends Controller
     {
         return [
             'error' => [
-                'class' => yii\web\ErrorAction::class,
+                'class' => ErrorAction::class,
             ],
             'captcha' => [
-                'class' => 'yii\captcha\CaptchaAction',
+                'class' => CaptchaAction::class,
                 'fixedVerifyCode' => YII_ENV ? 'testme' : null,
             ],
         ];

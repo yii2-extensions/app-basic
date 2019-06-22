@@ -1,40 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1561234910">
-  <project timestamp="1561234910">
+<coverage generated="1561236221">
+  <project timestamp="1561236221">
     <package name="terabytesoft\app\basic\controllers">
       <file name="D:\git-local\terabytesoftw\app-basic\src\controllers\SiteController.php">
         <class name="terabytesoft\app\basic\controllers\SiteController" namespace="terabytesoft\app\basic\controllers">
-          <metrics complexity="9" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="22" coveredstatements="22" elements="28" coveredelements="28"/>
+          <metrics complexity="9" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="27" coveredelements="27"/>
         </class>
-        <line num="27" type="method" name="behaviors" visibility="public" complexity="1" crap="1" count="10"/>
-        <line num="31" type="stmt" count="10"/>
-        <line num="43" type="method" name="actions" visibility="public" complexity="2" crap="2" count="10"/>
-        <line num="47" type="stmt" count="10"/>
-        <line num="50" type="stmt" count="10"/>
-        <line num="51" type="stmt" count="10"/>
-        <line num="59" type="method" name="actionIndex" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="61" type="stmt" count="1"/>
-        <line num="67" type="method" name="actionAbout" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="69" type="stmt" count="1"/>
-        <line num="76" type="method" name="actionContact" visibility="public" complexity="3" crap="3" count="8"/>
-        <line num="78" type="stmt" count="8"/>
+        <line num="29" type="method" name="behaviors" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="33" type="stmt" count="10"/>
+        <line num="45" type="method" name="actions" visibility="public" complexity="2" crap="2" count="10"/>
+        <line num="49" type="stmt" count="10"/>
+        <line num="53" type="stmt" count="10"/>
+        <line num="61" type="method" name="actionIndex" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="63" type="stmt" count="1"/>
+        <line num="69" type="method" name="actionAbout" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="71" type="stmt" count="1"/>
+        <line num="78" type="method" name="actionContact" visibility="public" complexity="3" crap="3" count="8"/>
         <line num="80" type="stmt" count="8"/>
-        <line num="81" type="stmt" count="2"/>
-        <line num="82" type="stmt" count="2"/>
+        <line num="82" type="stmt" count="8"/>
+        <line num="83" type="stmt" count="2"/>
         <line num="84" type="stmt" count="2"/>
-        <line num="87" type="stmt" count="8"/>
-        <line num="88" type="stmt" count="8"/>
-        <line num="97" type="method" name="sendContact" visibility="public" complexity="1" crap="1" count="3"/>
-        <line num="99" type="stmt" count="3"/>
-        <line num="100" type="stmt" count="3"/>
+        <line num="86" type="stmt" count="2"/>
+        <line num="89" type="stmt" count="8"/>
+        <line num="90" type="stmt" count="8"/>
+        <line num="99" type="method" name="sendContact" visibility="public" complexity="1" crap="1" count="3"/>
         <line num="101" type="stmt" count="3"/>
         <line num="102" type="stmt" count="3"/>
+        <line num="103" type="stmt" count="3"/>
         <line num="104" type="stmt" count="3"/>
-        <line num="105" type="stmt" count="3"/>
         <line num="106" type="stmt" count="3"/>
         <line num="107" type="stmt" count="3"/>
         <line num="108" type="stmt" count="3"/>
-        <metrics loc="109" ncloc="80" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="22" coveredstatements="22" elements="28" coveredelements="28"/>
+        <line num="109" type="stmt" count="3"/>
+        <line num="110" type="stmt" count="3"/>
+        <metrics loc="111" ncloc="82" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="27" coveredelements="27"/>
       </file>
     </package>
     <package name="terabytesoft\app\basic\forms">
@@ -146,6 +145,6 @@
       <line num="79" type="stmt" count="1"/>
       <metrics loc="97" ncloc="92" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="4" coveredelements="4"/>
     </file>
-    <metrics files="7" loc="543" ncloc="473" classes="2" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="107" coveredstatements="104" elements="114" coveredelements="111"/>
+    <metrics files="7" loc="545" ncloc="475" classes="2" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="106" coveredstatements="103" elements="113" coveredelements="110"/>
   </project>
 </coverage>
