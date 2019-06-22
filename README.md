@@ -163,7 +163,6 @@ $ vendor/bin/codecept run
 ### **LICENCE:**
 
 [![License](https://poser.pugx.org/terabytesoftw/app-basic/license)](LICENSE.md)
-
 [![YiiFramework](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=flat)](https://www.yiiframework.com/)
 [![Total Downloads](https://poser.pugx.org/terabytesoftw/app-basic/downloads)](https://packagist.org/packages/terabytesoft/app-basic)
 [![Total Downloads](https://github.styleci.io/repos/165419144/shield?branch=master)](https://github.styleci.io/repos/165419144)
