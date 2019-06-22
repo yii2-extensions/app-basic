@@ -5,6 +5,7 @@ checks:
         code_rating: true
         duplication: true
         excluded_dependencies:
+            - hiqdev/composer-config-plugin
             - phpunit/phpunit
             - fzaninotto/faker
 
