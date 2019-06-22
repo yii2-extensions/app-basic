@@ -8,7 +8,6 @@ use terabytesoft\app\basic\forms\ContactForm;
 
 class ContactFormTest extends \Codeception\Test\Unit
 {
-
     private $config = [];
     private $controller;
     private $model;
