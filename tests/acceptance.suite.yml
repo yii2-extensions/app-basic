@@ -13,7 +13,7 @@ modules:
     config:
         WebDriver:
             url: 'http://127.0.0.1:8080/'
-            #port: 9515 # Enabled run acceptance tests localhost
+            port: 9515
             browser: chrome
             capabilities:
                 "goog:chromeOptions":

@@ -37,14 +37,8 @@ before_script:
   - echo "Download selenium-server-standalone jar file"
   - wget -c -nc --retry-connrefused --tries=0 https://bit.ly/2TlkRyu -O selenium-server-standalone.jar
 
-  - echo "Download chromedriver"
-  - wget https://chromedriver.storage.googleapis.com/75.0.3770.90/chromedriver_linux64.zip
-  - unzip -o -q chromedriver_linux64.zip
-  - chromedriver --url-base=wd/hub/ > /dev/null 2>&1&
-
-
   - echo "Run selenium-server"
-  - nohup bash -c "java -jar selenium-server-standalone.jar &" && sleep 1; cat nohup.out
+  - nohup bash -c "java -jar selenium-server-standalone.jar -port 9515 &" && sleep 1; cat nohup.out
 
 script:
   - |
