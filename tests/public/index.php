@@ -6,7 +6,7 @@ use yii\web\Application;
 include '../../c3.php';
 
 define('MY_APP_STARTED', true);
-defined('YII_ENV', true);
+defined('YII_ENV') or define('YII_ENV', true);
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 
 (function () {

@@ -3,9 +3,9 @@
 namespace Terabytesoft\App\Basic;
 
 use terabytesoft\app\basic\assets\AppAsset;
+use yii\base\Theme;
 use yii\bootstrap4\BootstrapAsset;
 use yii\web\AssetBundle;
-use yii\base\Theme;
 use yii\web\View;
 use yii\web\JqueryAsset;
 use yii\web\YiiAsset;
@@ -22,24 +22,24 @@ class AppAssetTest extends \Codeception\Test\Unit
     private $view;
 
     /**
-     * @var \Terabytesoft\App\Basic\UnitTester
+     * @var \UnitTester
      */
     protected $tester;
 
-    protected function _before()
+    protected function _before(): void
     {
         $this->view = new View();
     }
 
     /**
      * testAppAssetSimpleDependency
-     *
-     * @return void
      */
-    public function testAppAssetSimpleDependency()
+    public function testAppAssetSimpleDependency(): void
     {
         \PHPUnit_Framework_Assert::assertEmpty($this->view->assetBundles);
+
         AppAsset::register($this->view);
+
         \PHPUnit_Framework_Assert::assertCount(4, $this->view->assetBundles);
         \PHPUnit_Framework_Assert::assertArrayHasKey(AppAsset::class, $this->view->assetBundles);
         \PHPUnit_Framework_Assert::assertArrayHasKey(YiiAsset::class, $this->view->assetBundles);
@@ -56,22 +56,20 @@ class AppAssetTest extends \Codeception\Test\Unit
 
     /**
      * testAppAssetSourcesPublish
-     *
-     * @return void
      */
-    public function testAppAssetSourcesPublish()
+    public function testAppAssetSourcesPublish(): void
     {
         $bundle = AppAsset::register($this->view);
+
         \PHPUnit_Framework_Assert::assertTrue(is_dir($bundle->basePath));
+
         $this->sourcesPublishVerifyFiles('css', $bundle);
     }
 
     /**
      * testAppAssetRegister
-     *
-     * @return void
      */
-    public function testAppAssetRegister()
+    public function testAppAssetRegister(): void
     {
         \PHPUnit_Framework_Assert::assertEmpty($this->view->assetBundles);
 
@@ -96,9 +94,8 @@ class AppAssetTest extends \Codeception\Test\Unit
      *
      * @param string $type
      * @param array  $bundle
-     * @return void
      */
-    private function sourcesPublishVerifyFiles($type, $bundle)
+    private function sourcesPublishVerifyFiles($type, $bundle): void
     {
         foreach ($bundle->$type as $filename) {
             $publishedFile = $bundle->basePath . DIRECTORY_SEPARATOR . $filename;
@@ -106,6 +103,7 @@ class AppAssetTest extends \Codeception\Test\Unit
             \PHPUnit_Framework_Assert::assertFileExists($publishedFile);
             \PHPUnit_Framework_Assert::assertFileEquals($publishedFile, $sourceFile);
         }
+
         \PHPUnit_Framework_Assert::assertTrue(is_dir($bundle->basePath));
     }
 }

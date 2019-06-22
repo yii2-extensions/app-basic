@@ -9,32 +9,24 @@ use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\Response;
 
+/**
+ * SiteController
+ *
+ * Controller web application basic
+ */
 class SiteController extends Controller
 {
     /**
-     * Undocumented variable
-     *
-     * @var [type]
+     * @var array
      */
     public $app;
 
     /**
-     * {@inheritdoc}
+     * behaviors
      */
     public function behaviors()
     {
         return [
-            'access' => [
-                'class' => AccessControl::class,
-                'only' => ['logout'],
-                'rules' => [
-                    [
-                        'actions' => ['logout'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
             'verbs' => [
                 'class' => VerbFilter::class,
                 'actions' => [
@@ -44,14 +36,15 @@ class SiteController extends Controller
         ];
     }
 
+
     /**
-     * {@inheritdoc}
+     * actions
      */
     public function actions()
     {
         return [
             'error' => [
-                'class' => 'yii\web\ErrorAction',
+                'class' => yii\web\ErrorAction::class,
             ],
             'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
@@ -61,32 +54,23 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays homepage.
-     *
-     * @return string
+     * actionIndex
      */
-    public function actionIndex()
+    public function actionIndex(): string
     {
         return $this->render('index');
     }
 
     /**
-     * actionAbout.
-     *
-     * displays about page
-     *
-     * @return string
+     * actionAbout
      **/
-    public function actionAbout()
+    public function actionAbout(): string
     {
         return $this->render('about');
     }
 
     /**
-     * actionContact.
-     *
-     * displays contact page
-     *
+     * actionContact
      * @return response|string
      **/
     public function actionContact()
@@ -94,7 +78,7 @@ class SiteController extends Controller
         $model = new ContactForm();
 
         if ($model->load($this->module->request->post()) && $model->validate()) {
-            $this->sendContact($this->module->params['app.basic.email'], $model);
+            $this->sendContact($this->module->params['app.basic.email.admin'], $model);
             $this->module->session->setFlash('contactFormSubmitted');
 
             return $this->refresh();
@@ -106,20 +90,17 @@ class SiteController extends Controller
     }
 
     /**
-     * sendContactForm.
-     *
-     * sends an email to the specified email address using the information collected by this model
-     *
+     * sendContact
      * @param string $email the target email address
      * @param Model  $model
-     *
-     * @return bool whether the model passes validation
      **/
-    public function sendContact(string $email, Model $model)
+    public function sendContact(string $email, Model $model): void
     {
         $this->module->mailer->compose()
             ->setTo($email)
-            ->setFrom([$this->module->params['senderEmail'] => $this->module->params['senderName']])
+            ->setFrom(
+                [$this->module->params['app.basic.email.admin'] => $this->module->params['app.basic.email.sendername']]
+            )
             ->setReplyTo([$model->email => $model->name])
             ->setSubject($model->subject)
             ->setTextBody($model->body)

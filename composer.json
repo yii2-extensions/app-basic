@@ -1,20 +1,26 @@
 {
-    "name": "yiisoft/yii2-app-basic",
-    "description": "Yii 2 Basic Project Template",
-    "keywords": ["yii2", "framework", "basic", "project template"],
-    "homepage": "http://www.yiiframework.com/",
-    "type": "project",
+    "name": "terabytesoftw/app-basic",
+    "type": "yii2-extension",
+    "description": "Yii 2.0 Web Application Basic",
+    "keywords": [
+        "application",
+        "basic",
+        "web",
+        "yii"
+    ],
+    "homepage": "https://github.com/terabytesoftw/app-basic",
     "license": "BSD-3-Clause",
-    "support": {
-        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
-        "forum": "http://www.yiiframework.com/forum/",
-        "wiki": "http://www.yiiframework.com/wiki/",
-        "irc": "irc://irc.freenode.net/yii",
-        "source": "https://github.com/yiisoft/yii2"
-    },
+    "authors": [
+        {
+            "name": "Wilmer Arambula",
+            "email": "wilmer.arambula@gmail.com"
+        }
+    ],
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "php": ">=5.4.0",
+        "oomphinc/composer-installers-extender": "^1.1",
         "yiisoft/yii2": "^2.0.20",
         "yiisoft/yii2-bootstrap4": "^2.0.3",
         "yiisoft/yii2-swiftmailer": "^2.1.0"
@@ -28,6 +34,7 @@
         "foxy/foxy": "^1.0",
         "hiqdev/composer-config-plugin": "^1.0@dev",
         "monolog/monolog": "*",
+        "phpunit/phpunit": "8.1.*",
         "yiisoft/yii2-debug": "~2.1.0",
         "yiisoft/yii2-gii": "~2.1.0",
         "yiisoft/yii2-faker": "~2.0.0"
@@ -54,15 +61,25 @@
                 "config/params.php"
             ],
             "console": "config/console.php",
-            "tests": "config/test.php",
-            "web": "config/web.php"
+            "tests": [
+                "config/test.php"
+            ]
+        },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
+        "installer-paths": {
+            "./node_modules/{$name}": [
+                "type:bower-asset",
+                "type:npm-asset"
+            ]
         }
     },
-    "provide": {
-        "bower-asset/jquery": "3.4.*@stable | 3.3.*@stable | 3.2.*@stable | 3.1.*@stable | 2.2.*@stable | 2.1.*@stable | 1.11.*@stable | 1.12.*@stable",
-        "bower-asset/inputmask": "~3.2.2 | ~3.3.5",
-        "bower-asset/punycode": "1.3.*",
-        "bower-asset/yii2-pjax": "~2.0.1",
-        "npm-asset/bootstrap": "^4.3"
-    }
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
 }

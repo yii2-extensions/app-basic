@@ -14,10 +14,12 @@ use yii\bootstrap4\Breadcrumbs;
 
 AppAsset::register($this);
 
-if ($this->context->module->user->isGuest) {
-    $menuItems = $this->context->module->params['app.basic.menu.isguest'];
-} else {
-    $menuItems = $this->context->module->params['app.basic.menu.logged'];
+$menuItems = $this->context->module->params['app.basic.menu.isguest'];
+
+if (isset($this->context->module->extensions['terabytesoft/app-user'])) {
+    if (!$this->context->module->user->isGuest) {
+        $menuItems = $this->context->module->params['app.basic.menu.logged'];
+    }
 }
 
 ?>
@@ -28,7 +30,7 @@ if ($this->context->module->user->isGuest) {
     <?= Html::beginTag('html', ['lang' => $this->context->module->language]) ?>
 
         <?= Html::beginTag('head') ?>
-            <?= Html::tag('meta', '', []) ?>
+            <?= Html::tag('meta', '', ['charset' => $this->context->module->charset]) ?>
             <?= Html::tag('meta', '', ['http-equiv' => 'X-UA-Compatible', 'content' => 'IE=edge']) ?>
             <?= Html::tag('meta', '', ['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1']) ?>
             <?= Html::csrfMetaTags() ?>
@@ -72,7 +74,7 @@ if ($this->context->module->user->isGuest) {
                         <?= Html::beginTag('div', ['class' => 'container flex-fill']) ?>
 
                             <?= Html::beginTag('p', ['class' => 'float-left']) ?>
-                                <?= $this->context->module->params['app.basic.autor']?>
+                                <?= $this->context->module->params['app.basic.footer.autor']?>
                             <?= Html::endTag('p') ?>
 
                             <?= Html::beginTag('p', ['class' => 'float-right']) ?>

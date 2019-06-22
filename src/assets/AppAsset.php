@@ -1,4 +1,5 @@
 <?php
+
 namespace terabytesoft\app\basic\assets;
 
 use yii\web\AssetBundle;

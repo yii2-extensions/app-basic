@@ -4,15 +4,30 @@ namespace Terabytesoft\App\Basic;
 
 use Terabytesoft\App\Basic\AcceptanceTester;
 
+/**
+ * Class IndexCest.
+ *
+ * Acceptance tests for codeception
+ */
 class IndexCest
 {
-    public function _before(AcceptanceTester $I)
+    /**
+     * _before
+     *
+     * @param AcceptanceTester $I
+     */
+    public function _before(AcceptanceTester $I): void
     {
         $I->amOnPage('/site/index');
         $I->wait(5); // secs
     }
 
-    public function indexPageTest(AcceptanceTester $I)
+    /**
+     * indexPageTest
+     *
+     * @param AcceptanceTester $I
+     */
+    public function testIndexPageTest(AcceptanceTester $I): void
     {
         $I->wantTo('ensure that index page works.');
         $I->expectTo('see page index.');

@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * Web application bootstrap configuration
+ */
+
 if (!defined('WEBAPP_ROOT_DIR')) {
     define('WEBAPP_ROOT_DIR', dirname(__DIR__, 1));
 }

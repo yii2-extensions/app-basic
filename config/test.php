@@ -1,27 +1,32 @@
 <?php
 
+/**
+ * Web application configuration shared by all test types
+ */
+
 $appbasic = require __DIR__ . '/appbasic.php';
 $params = require __DIR__ . '/params.php';
 
-/**
- * Application configuration shared by all test types
- */
+$params = array_merge($appbasic, $params ?? []);
 
 $config = [
-    'id' => 'basic',
-    'basePath' => dirname(__DIR__).'/src',
-    'vendorPath' => dirname(__DIR__).'/vendor',
-    'bootstrap' => ['log'],
-    'controllerNamespace' => 'terabytesoft\app\basic\controllers',
+    'id' => $params['app.basic.id'],
     'aliases' => [
-        '@bower' => dirname(__DIR__).'/node_modules',
-        '@npm'   => dirname(__DIR__).'/node_modules',
-        '@public' => dirname(__DIR__).'/tests/public',
-        '@runtime' => dirname(__DIR__).'/tests/public/@runtime',
-        '@terabytesoft/app/basic/tests' => dirname(__DIR__).'/tests',
+        '@bower' => $params['app.basic.alias.path.bower'],
+        '@npm'   => $params['app.basic.alias.path.npm'],
+        '@public' => $params['app.basic.alias.path.public'],
+        '@runtime' => $params['app.basic.alias.path.runtime'],
+        '@terabytesoft/app/basic/tests' => $params['app.basic.alias.path.terabytesoft.test'],
     ],
-    'language' => 'en-US',
+    'basePath' => $params['app.basic.base.path'],
+    'bootstrap' => $params['app.basic.bootstrap'],
+    'controllerNamespace' => $params['app.basic.controller.namespace'],
+    'language' => $params['app.basic.language'],
+    'vendorPath' => $params['app.basic.vendor.path'],
     'components' => [
+        'assetManager' => [
+            'basePath' => $params['app.basic.assetmanager.base.path'],
+        ],
         'i18n' => [
             'translations' => [
                 'AppBasic' => [
@@ -29,26 +34,29 @@ $config = [
                 ],
             ],
         ],
-        'user' => [
-            'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
+        'log' => [
+            'traceLevel' => 'YII_DEBUG' ? 3 : 0,
+            'targets' => [
+                [
+                    'class' => yii\log\FileTarget::class,
+                    'levels' => $params['app.basic.log.levels'],
+                    'logFile' => $params['app.basic.log.logFile'],
+                ],
+            ],
         ],
         'mailer' => [
-            'useFileTransport' => true,
-        ],
-        'assetManager' => [
-            'basePath' => '@public/assets',
-        ],
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
+            'useFileTransport' => $params['app.basic.mailer.usefiletransport'],
         ],
         'request' => [
-            'cookieValidationKey' => 'testme-codeception',
-            'enableCsrfValidation' => true,
+            'cookieValidationKey' => $params['app.basic.request.cookievalidationkey'],
+            'enableCsrfValidation' => $params['app.basic.request.enablecsrfvalidation'],
+        ],
+        'urlManager' => [
+            'enablePrettyUrl' => $params['app.basic.urlmanager.enableprettyurl'],
+            'showScriptName' => $params['app.basic.urlmanager.showscriptname'],
         ],
     ],
-    'params' => array_merge($params, $appbasic)
+    'params' => $params,
 ];
 
 return $config;

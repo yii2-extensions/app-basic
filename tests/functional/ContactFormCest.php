@@ -4,19 +4,39 @@ namespace Terabytesoft\App\Basic;
 
 use Terabytesoft\App\Basic\FunctionalTester;
 
+/**
+ * Class ContactFormCest.
+ *
+ * Functional tests for codeception
+ */
 class ContactFormCest
 {
+    /**
+     * _before
+     *
+     * @param FunctionalTester $I
+     */
     public function _before(FunctionalTester $I)
     {
         $I->amOnPage('/site/contact');
     }
 
-    public function contactFormPageTest(FunctionalTester $I)
+    /**
+     * testContactFormPageTest
+     *
+     * @param FunctionalTester $I
+     */
+    public function testContactFormPageTest(FunctionalTester $I): void
     {
         $I->see(\Yii::t('basic', 'Contact'), 'h1');
     }
 
-    public function contactFormSubmitFormEmptyDataTest(FunctionalTester $I)
+    /**
+     * testContactFormSubmitFormEmptyDataTest
+     *
+     * @param FunctionalTester $I
+     */
+    public function testContactFormSubmitFormEmptyDataTest(FunctionalTester $I): void
     {
         $I->amGoingTo('contact form submit form with empty data.');
         $I->submitForm('#contact-form', []);
@@ -27,7 +47,12 @@ class ContactFormCest
         $I->see(\Yii::t('basic', 'Body cannot be blank.'), '.invalid-feedback');
     }
 
-    public function contactFormSubmitFormEmailWrongDataTest(FunctionalTester $I)
+    /**
+     * testContactFormSubmitFormEmailWrongDataTest
+     *
+     * @param FunctionalTester $I
+     */
+    public function testContactFormSubmitFormEmailWrongDataTest(FunctionalTester $I): void
     {
         $I->amGoingTo('contact form submit form with email wrong.');
         $I->submitForm('#contact-form', [
@@ -45,7 +70,12 @@ class ContactFormCest
         $I->dontSee(\Yii::t('basic', 'The verification code is incorrect'), '.invalid-feedback');
     }
 
-    public function contactFormSubmitFormSuccessDataTest(FunctionalTester $I)
+    /**
+     * testContactFormSubmitFormSuccessDataTest
+     *
+     * @param FunctionalTester $I
+     */
+    public function testContactFormSubmitFormSuccessDataTest(FunctionalTester $I): void
     {
         $I->amGoingTo('contact form submit form with success data.');
         $I->submitForm('#contact-form', [

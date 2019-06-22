@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Web application console configuration
+ */
+
 $config = [
     'id' => 'basic-console',
     'basePath' => dirname(__DIR__),
@@ -22,13 +26,6 @@ $config = [
                     'levels' => ['error', 'warning'],
                 ],
             ],
-        ],
-        'db' => [
-            'class' => $params['app.basic.db.class'],
-            'dsn' => $params['app.basic.db.dns'],
-            'username' => $params['app.basic.db.username'],
-            'password' => $params['app.basic.db.password'],
-            'charset' => $params['app.basic.db.charset'],
         ],
     ],
     'params' => $params,

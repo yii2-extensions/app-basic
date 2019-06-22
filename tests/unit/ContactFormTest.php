@@ -8,12 +8,21 @@ use terabytesoft\app\basic\forms\ContactForm;
 
 class ContactFormTest extends \Codeception\Test\Unit
 {
+
     private $config = [];
     private $controller;
     private $model;
     private $rules;
 
-    public function testContactFormRules()
+    /**
+     * @var \UnitTester
+     */
+    protected $tester;
+
+    /**
+     * testContactFormRules
+     */
+    public function testContactFormRules(): void
     {
         // test rules form model.
         $this->model = new ContactForm();
@@ -25,10 +34,14 @@ class ContactFormTest extends \Codeception\Test\Unit
             // verifyCode needs to be entered correctly
             ['verifyCode', \yii\captcha\CaptchaValidator::class],
         ];
+
         Assert::AssertArraySubset($this->model->rules(), $this->rules, true);
     }
 
-    public function testContactFormSentEmail()
+    /**
+     * testContactFormSentEmail
+     */
+    public function testContactFormSentEmail(): void
     {
         $this->controller = new SiteController('SiteController', \Yii::$app, $this->config);
 
@@ -63,6 +76,7 @@ class ContactFormTest extends \Codeception\Test\Unit
         expect($emailMessage->getFrom())->hasKey('noreply@example.com');
         expect($emailMessage->getReplyTo())->hasKey('tester@example.com');
         expect($emailMessage->getSubject())->equals('very important letter subject');
+
         \PHPUnit_Framework_Assert::assertStringContainsString('body of current message', $emailMessage);
     }
 }

@@ -4,21 +4,41 @@ namespace Terabytesoft\App\AppBasic;
 
 use Terabytesoft\App\Basic\AcceptanceTester;
 
+/**
+ * Class ContactCest.
+ *
+ * Acceptance tests for codeception
+ */
 class ContactCest
 {
-    public function _before(AcceptanceTester $I)
+    /**
+     * _before
+     *
+     * @param AcceptanceTester $I
+     */
+    public function _before(AcceptanceTester $I): void
     {
         $I->amOnPage('/site/contact');
         $I->wait(5); // secs
     }
 
-    public function contactPageTest(AcceptanceTester $I)
+    /**
+     * testContactPageTest
+     *
+     * @param AcceptanceTester $I
+     */
+    public function testContactPageTest(AcceptanceTester $I): void
     {
         $I->wantTo('ensure that contact page works.');
         $I->see(\Yii::t('AppBasic', 'Contact'), 'h1');
     }
 
-    public function contactSubmitFormEmptyDataTest(AcceptanceTester $I)
+    /**
+     * testcontactSubmitFormEmptyDataTest
+     *
+     * @param AcceptanceTester $I
+     */
+    public function testcontactSubmitFormEmptyDataTest(AcceptanceTester $I): void
     {
         $I->amGoingTo('contact submit form with empty data.');
         $I->click('contact-button');
@@ -30,7 +50,12 @@ class ContactCest
         $I->see(\Yii::t('AppBasic', 'Body cannot be blank.'));
     }
 
-    public function contactSubmitFormEmailWrongDataTest(AcceptanceTester $I)
+    /**
+     * testContactSubmitFormEmailWrongDataTest
+     *
+     * @param AcceptanceTester $I
+     */
+    public function testContactSubmitFormEmailWrongDataTest(AcceptanceTester $I): void
     {
         $I->amGoingTo('contact submit form with email wrong.');
         $I->fillField('#contactform-name', 'tester');
@@ -44,7 +69,12 @@ class ContactCest
         $I->see(\Yii::t('AppBasic', 'Email is not a valid email address.'));
     }
 
-    public function contactSubmitFormSuccessDataTest(AcceptanceTester $I)
+    /**
+     * testContactSubmitFormSuccessDataTest
+     *
+     * @param AcceptanceTester $I
+     */
+    public function testContactSubmitFormSuccessDataTest(AcceptanceTester $I):void
     {
         $I->amGoingTo('contact submit form with success data.');
         $I->fillField('#contactform-name', 'tester');
