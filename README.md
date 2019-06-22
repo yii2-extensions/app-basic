@@ -11,10 +11,13 @@
     </a>
     <a href="https://travis-ci.org/terabytesoftw/app-basic" target="_blank">
         <img src="https://travis-ci.org/terabytesoftw/app-basic.svg?branch=master" alt="Build Status">
-    </a>
+    </a>  
     <a href="https://scrutinizer-ci.com/g/terabytesoftw/app-basic/" target="_blank">
         <img src="https://scrutinizer-ci.com/g/terabytesoftw/app-basic/badges/build.png?b=master" alt="Build Status">
     </a>
+    <a href="https://scrutinizer-ci.com/g/terabytesoftw/app-basic/" target="_blank">
+        <img src="https://scrutinizer-ci.com/g/terabytesoftw/app-basic/badges/coverage.png?b=master" alt="Build Status">
+    </a>    
     <a href="https://scrutinizer-ci.com/g/terabytesoftw/app-basic/?branch=master" target="_blank">
      	<img src="https://scrutinizer-ci.com/g/terabytesoftw/app-basic/badges/quality-score.png?b=master" alt="Code Quality">
     </a>
@@ -23,10 +26,7 @@
     </a>
     <a href="https://codeclimate.com/github/terabytesoftw/app-basic/maintainability" target="_blank">
         <img src="https://api.codeclimate.com/v1/badges/9bbe65b6fda1abd74c2c/maintainability" alt="Maintainability">
-    </a>
-	<a href="https://github.styleci.io/repos/165419144">
-		<img src="https://github.styleci.io/repos/165419144/shield?branch=master" alt="StyleCI">
-	</a>		
+    </a>		
 </p>
 </br>
 
@@ -163,5 +163,7 @@ $ vendor/bin/codecept run
 ### **LICENCE:**
 
 [![License](https://poser.pugx.org/terabytesoftw/app-basic/license)](LICENSE.md)
+
 [![YiiFramework](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=flat)](https://www.yiiframework.com/)
 [![Total Downloads](https://poser.pugx.org/terabytesoftw/app-basic/downloads)](https://packagist.org/packages/terabytesoft/app-basic)
+[![Total Downloads](https://github.styleci.io/repos/165419144/shield?branch=master)](https://github.styleci.io/repos/165419144)
