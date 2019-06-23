@@ -1,89 +1,69 @@
 ### **Example: appbasic.php**
 
 ```
-/** app basic autorname **/
-'app.basic.autor' => '©'.date('Y').'. '.Yii::t('AppBasic', 'TerabyteSoft SA - Wilmer Arambula.'),
+// alias path web application
+'app.basic.alias.path.bower'   => '@root/node_modules',
+'app.basic.alias.path.npm'     => '@root/node_modules',
+'app.basic.alias.path.public'  => '@root/tests/public',
+'app.basic.alias.path.runtime' => '@root/tests/public/@runtime',
 
-/** app basic error view path **/
-'app.basic.error.view.pathmap' => '@TerabyteSoft/App/Basic/Views/Site/Error.php',
+// alias path tests codeception
+'app.basic.alias.path.terabytesoft.test' => '@root/tests',
 
-/** app basic captcha code bug:https://github.com/yiisoft/yii-captcha/issues/15 **/
-'app.basic.captcha.fixedVerifyCode' => 'TestMe',
+// base path web application
+'app.basic.base.path' => '@root/src',
 
-/** app basic application email **/
-'app.basic.email' => 'admin@appbasic.com',
+// boostrap config
+'app.basic.bootstrap' => ['log'],
 
-/** app basic application id **/
-'app.basic.id' => 'AppBasic',
+// controller namespaces web application
+'app.basic.controller.namespace' => 'terabytesoft\app\basic\controllers',
 
-/** app basic application name **/
-'app.basic.name' => 'My Project Basic',
+// email sender form contact
+'app.basic.email.admin'      => 'noreply@example.com',
+'app.basic.email.sendername' => 'appbasic mailer example',
 
-/** app basic layout theme **/
-'app.basic.layout' => 'Main.php',
+// footer text autor
+'app.basic.footer.autor' => '©'.date('Y').'. '.\Yii::t('AppBasic', 'TerabyteSoft SA - Wilmer Arambula.'),
 
-/** app basic menu user is guest only https://github.com/terabytesoft/app-basic **/
+// web application id, language, name
+'app.basic.id'       => 'basic',
+'app.basic.language' => 'en-US',
+'app.basic.name'     => 'My Project Basic',
+
+// menu simple web application user guest
 'app.basic.menu.isguest' => [
     [
-        'label' => Yii::t('AppBasic', 'About'),
+        'label' => \Yii::t('AppBasic', 'About'),
         'url' => ['/site/about']
     ],
     [
-        'label' => Yii::t('AppBasic', 'Contact'),
+        'label' => \Yii::t('AppBasic', 'Contact'),
         'url' => ['/site/contact']
     ],
 ],
 
-/** app basic menu user is user logged only https://github.com/terabytesoft/app-basic **/
-'app.basic.menu.logged' => [
-],
+// menu web application + module user admin
+'app.basic.menu.logged' => [],
 
-/** app basic menu user is guest install before https://github.com/terabytesoft/app-user **/
-'app.basic.menu.isguest' => [
-    [
-        'label' => Yii::t('AppBasic', 'About'),
-        'url' => ['/site/about']
-    ],
-    [
-        'label' => Yii::t('AppBasic', 'Contact'),
-        'url' => ['/site/contact']
-    ],
-    [
-        'label' => Yii::t('ModuleUser', 'Sign up'),
-        'url' => ['/user/registration/register'],
-    ],
-    [
-        'label' => Yii::t('ModuleUser', 'Login'),
-        'url' => ['/user/security/login']
-    ],
-],
+// vendor path
+'app.basic.vendor.path' => '@root/vendor',
 
-/** app basic menu user is logged, install before https://github.com/terabytesoft/app-user **/
-'app.basic.menu.logged' => [
-    [
-        'label' => Yii::t('ModuleUser', 'Manage Users'),
-        'url' => ['/user/admin/index'],
-    ],
-    [
-        'label' => Yii::t('ModuleUser', 'Settings Account'),
-        'url' => ['/user/settings/account'],
-    ],
-    [
-        'label' => Yii::t('ModuleUser', 'Settings Profile'),
-        'url' => ['/user/settings/profile'],
-    ],
-    [
-        'label' => Yii::t('ModuleUser', 'Logout'),
-        'url' => ['/user/security/logout'],
-        'linkOptions' => ['data-method' => 'POST'],
-    ],
-],
+// component assetmanager
+'app.basic.assetmanager.base.path' => '@public/assets',
 
-/** app basic theme pathmap **/
-'app.basic.theme.pathmap.layout' => '@TerabyteSoft/App/Basic/Views/Layouts',
-'app.basic.theme.pathmap.site' => '@TerabyteSoft/App/Basic/Views/Site',
+// component log
+'app.basic.log.levels'  => ['error', 'warning', 'info'],
+'app.basic.log.logFile' => '@runtime/logs/app.log',
 
-/** app basic config translator **/
-'app.basic.translator.basePath' => '@TerabyteSoft/App/Basic/Messages',
-'app.basic.translator.sourceLanguage' => 'en',
+// component mailer
+'app.basic.mailer.usefiletransport' => true,
+
+// component request
+'app.basic.request.cookievalidationkey'  => 'testme-codeception',
+'app.basic.request.enablecsrfvalidation' => true,
+
+// component urlmanager
+'app.basic.urlmanager.enableprettyurl' => true,
+'app.basic.urlmanager.showscriptname'  => true,
 ```

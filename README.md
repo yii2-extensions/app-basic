@@ -110,7 +110,7 @@ php -S 127.0.0.1:8080 -t public > /dev/null 2>&1&
 
 ### **CONFIGURATION:**
 
-- [Detailed Settings](docs/Config.MD).
+- [Detailed Settings](docs/CONFIG.md).
 
 **NOTE:** 
 
