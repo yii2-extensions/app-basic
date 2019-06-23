@@ -1,4 +1,5 @@
 <?php
+
 /**
  * main.
  *
@@ -48,7 +49,7 @@ if (isset($this->context->module->extensions['terabytesoft/app-user'])) {
                         'brandLabel' => \Yii::t('AppBasic', $this->context->module->name),
                         'brandUrl'   => $this->context->module->homeUrl,
                         'options'    => [
-                            'class' => 'navbar  navbar-dark bg-dark navbar-expand-lg',
+                            'class' => 'navbar navbar-dark bg-dark navbar-expand-lg',
                         ],
                     ]);
 
@@ -59,7 +60,20 @@ if (isset($this->context->module->extensions['terabytesoft/app-user'])) {
 
                     NavBar::end(); ?>
 
-                    <?= Html::beginTag('div', ['class' => 'container flex-fill']) ?>
+                    <?= Html::beginTag(
+                        'div',
+                        [
+                            'class' => in_array(
+                                $this->context->action->id,
+                                [
+                                    'index',
+                                    'about'
+                                ]
+                            )
+                            ? 'd-flex flex-fill align-items-center justify-content-center'
+                            : 'container flex-fill'
+                        ]
+                    ) ?>
 
                         <?= Breadcrumbs::widget([
                             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],

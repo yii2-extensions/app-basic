@@ -1,4 +1,5 @@
 <?php
+
 /**
  * contact.
  *
@@ -10,13 +11,12 @@ use yii\bootstrap4\Html;
 use yii\captcha\Captcha;
 
 $this->title = $this->title = \Yii::t('AppBasic', 'Contact');
-$this->params['breadcrumbs'][] = $this->title;
 
 ?>
 
 <?= Html::beginTag('div', ['class' => 'site-contact']) ?>
 
-    <?= Html::tag('h1', '<b>'.Html::encode($this->title).'</b>', ['class' => 'text-center c-grey-900 mb-40']) ?>
+    <?= Html::tag('h1', '<b>'.Html::encode($this->title).'</b>', ['class' => 'text-center c-grey-900 mb-40 display-4']) ?>
 
     <?php if ($this->context->module->session->hasFlash('contactFormSubmitted')) : ?>
         <?= Html::beginTag('div', ['class' => 'alert alert-success']) ?>
