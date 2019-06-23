@@ -43,7 +43,7 @@ before_script:
   - echo "Download chromedriver"
   - wget https://chromedriver.storage.googleapis.com/75.0.3770.90/chromedriver_linux64.zip
   - unzip -o -q chromedriver_linux64.zip
-  - chromedriver --url-base=wd/hub/ > /dev/null 2>&1&
+  - chromedriver --port=9515 --url-base=wd/hub/ > /dev/null 2>&1&
 
 script:
   - |
