@@ -31,7 +31,6 @@
         "codeception/specify": "*",
         "codeception/verify": "*",
         "dms/phpunit-arraysubset-asserts": "^0.1.0",
-        "foxy/foxy": "^1.0",
         "hiqdev/composer-config-plugin": "^1.0@dev",
         "monolog/monolog": "*",
         "yiisoft/yii2-debug": "~2.1.0",
