@@ -30,7 +30,7 @@ class ContactCest
     public function testContactPageTest(AcceptanceTester $I): void
     {
         $I->wantTo('ensure that contact page works.');
-        $I->see(\Yii::t('AppBasic', 'Contact'), 'h1');
+        $I->see(\Yii::t('AppBasic', 'Contact'));
     }
 
     /**

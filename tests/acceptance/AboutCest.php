@@ -31,6 +31,6 @@ class AboutCest
     {
         $I->wantTo('ensure that about page works.');
         $I->expectTo('see page about.');
-        $I->see(\Yii::t('AppBasic', 'About'), 'h1');
+        $I->see(\Yii::t('AppBasic', 'About'));
     }
 }

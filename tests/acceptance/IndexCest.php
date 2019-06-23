@@ -31,6 +31,6 @@ class IndexCest
     {
         $I->wantTo('ensure that index page works.');
         $I->expectTo('see page index.');
-        $I->see(\Yii::t('basic', 'Congratulations'), 'h1');
+        $I->see(\Yii::t('AppBasic', 'Web Application'));
     }
 }
