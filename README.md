@@ -72,7 +72,6 @@ features to your application.
 
 - The minimum requirement by this project template that your Web server supports:
     - PHP 7.2 or higher.
-    - NPM [Installation](https://nodejs.org/en/download/)
 
 ### **INSTALLATION:**
 
@@ -83,7 +82,7 @@ If you do not have <a href="http://getcomposer.org/" title="Composer" target="_b
 You can then install this project template using the following command:
 
 ~~~
-composer create-project --prefer-dist --stability=dev terabytesoft/app-template-basic myapp
+composer create-project --prefer-dist --stability=dev terabytesoftw/app-template-basic myapp
 ~~~
 
 <p align="justify">
@@ -92,7 +91,7 @@ directly under the Web root.
 </p>
 
 <p align="justify">
-<strong>App Web Application Basic (terabytesoft/app-basic) is installed automatically together with the Web Project Skeleton Application Basic (terabytesoft/app-template-basic), both try the necessary packages to start your Web Application Basic in Yii3.</strong>
+<strong>App Web Application Basic (terabytesoftw/app-basic) is installed automatically together with the Web Project Skeleton Application Basic (terabytesoftw/app-template-basic), both try the necessary packages to start your Web Application Basic in Yii 2.0.</strong>
 </p>
 
 __*Virtual Host:*__
@@ -103,10 +102,10 @@ http://localhost/
 
 __*Server Yii:*__
 
-Directory - / [app-template-basic]
+Directory - [app-template-basic]
 
 ~~~
- ./vendor/bin/yii serve
+php -S 127.0.0.1:8080 -t public > /dev/null 2>&1&
 ~~~
 
 ### **CONFIGURATION:**
@@ -116,7 +115,7 @@ Directory - / [app-template-basic]
 **NOTE:** 
 
 <p align="justify">
-All the configuration is customizable through parameters, there is no need to modify any configuration of Yii 3.0 Web Application Basic, if you need any extra configuration you can open an issue with pleasure we will add it.
+All the configuration is customizable through parameters, there is no need to modify any configuration of Yii 2.0 Web Application Basic, if you need any extra configuration you can open an issue with pleasure we will add it.
 </p>
 
 Very important when changing any configuration run `composer du`, to apply it.
@@ -124,7 +123,7 @@ Very important when changing any configuration run `composer du`, to apply it.
 ### **GENERATE MESSAGES TRANSLATION:**
 
 <p align="justify">
-To generate the Yii 3.0 Web Application Basic translations, you can change the language settings in:
+To generate the Yii 2.0 Web Application Basic translations, you can change the language settings in:
 <p>
 
 ```
@@ -138,16 +137,28 @@ config/messages.php - [app-template-basic]:
 
 ```
 root directory - [app-template-basic]:
- ./vendor/bin/yii message config/messages.php
+./vendor/bin/yii message config/messages.php
 ```
 
 ### **RUN TESTS CODECEPTION:**
 
 ~~~
+// access path directory app-basic
 $ cd vendor/terabytesoft/app-basic
+
+// download all composer dependencies
 $ composer update --prefer-dist -vvv
+
+// download & run crhomedriver version chrome desktop
+$ wget -P vendor/bin https://chromedriver.storage.googleapis.com/75.0.3770.90/chromedriver_linux64.zip
+$ unzip -o -q vendor/bin/chromedriver_linux64.zip
+$ vendor/bin/chromedriver --port=9515 --url-base=wd/hub/ > /dev/null 2>&1&
+
+// run web server cli php
 $ php -S 127.0.0.1:8080 -t tests/public > /dev/null 2>&1&
-$ vendor/bin/codecept run
+
+// run all tests with code coverage
+$ vendor/bin/codecept run --coverage-xml
 ~~~
 
 ### **WEB SERVER SUPPORT:**
