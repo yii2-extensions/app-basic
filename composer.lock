@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0fcefcebf12f1d307b33ecd47d172f4c",
+    "content-hash": "72c2957cb47f2787690ab704050f6a71",
     "packages": [
         {
             "name": "bower-asset/inputmask",
@@ -783,17 +783,17 @@
             "time": "2019-02-06T07:57:58+00:00"
         },
         {
-            "name": "terabytesoftw/alert",
+            "name": "terabytesoftw/widget-alert",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/terabytesoftw/alert.git",
-                "reference": "580548a086e5be945631234aaebe27626dfb3791"
+                "url": "https://github.com/terabytesoftw/widget-alert.git",
+                "reference": "5d3047ffa080bb655ab91b259dc2a13555714055"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/terabytesoftw/alert/zipball/580548a086e5be945631234aaebe27626dfb3791",
-                "reference": "580548a086e5be945631234aaebe27626dfb3791",
+                "url": "https://api.github.com/repos/terabytesoftw/widget-alert/zipball/5d3047ffa080bb655ab91b259dc2a13555714055",
+                "reference": "5d3047ffa080bb655ab91b259dc2a13555714055",
                 "shasum": ""
             },
             "require": {
@@ -811,7 +811,7 @@
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
-                    "1.0": "1.0.x-dev"
+                    "dev-master": "1.0.x-dev"
                 },
                 "installer-types": [
                     "bower-asset",
@@ -847,7 +847,7 @@
                 "widget",
                 "yii"
             ],
-            "time": "2019-06-24T19:11:18+00:00"
+            "time": "2019-06-24T20:22:04+00:00"
         },
         {
             "name": "yiisoft/yii2",
@@ -5069,7 +5069,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "terabytesoftw/alert": 20,
+        "terabytesoftw/widget-alert": 20,
         "hiqdev/composer-config-plugin": 20
     },
     "prefer-stable": true,
