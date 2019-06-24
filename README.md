@@ -144,10 +144,7 @@ root directory - [app-template-basic]:
 ### **RUN TESTS CODECEPTION:**
 
 ~~~
-// access path directory app-basic
-$ cd vendor/terabytesoft/app-basic
-
-// download all composer dependencies
+// download all composer dependencies root project
 $ composer update --prefer-dist -vvv
 
 // download & run crhomedriver version chrome desktop
