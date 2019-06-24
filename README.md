@@ -28,6 +28,7 @@
         <img src="https://api.codeclimate.com/v1/badges/9bbe65b6fda1abd74c2c/maintainability" alt="Maintainability">
     </a>		
 </p>
+
 </br>
 
 <p align="center">
@@ -175,5 +176,5 @@ $ vendor/bin/codecept run --coverage-xml
 
 [![License](https://poser.pugx.org/terabytesoftw/app-basic/license)](LICENSE.md)
 [![YiiFramework](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=flat)](https://www.yiiframework.com/)
-[![Total Downloads](https://poser.pugx.org/terabytesoftw/app-basic/downloads)](https://packagist.org/packages/terabytesoft/app-basic)
+[![Total Downloads](https://poser.pugx.org/terabytesoftw/app-basic/downloads)](https://packagist.org/packages/terabytesoftw/app-basic)
 [![Total Downloads](https://github.styleci.io/repos/165419144/shield?branch=master)](https://github.styleci.io/repos/165419144)
