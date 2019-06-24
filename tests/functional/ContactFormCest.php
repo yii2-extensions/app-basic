@@ -90,6 +90,6 @@ class ContactFormCest
         $I->see(\Yii::t(
             'basic',
             'Thank you for contacting us. We will respond to you as soon as possible.'
-        ), 'p');
+        ), '.alert');
     }
 }
