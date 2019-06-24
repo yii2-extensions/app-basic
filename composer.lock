@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "713886b45ddaeb2290b88b6459e2ae19",
+    "content-hash": "0fcefcebf12f1d307b33ecd47d172f4c",
     "packages": [
         {
             "name": "bower-asset/inputmask",
@@ -785,11 +785,16 @@
         {
             "name": "terabytesoftw/alert",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/terabytesoftw/alert.git",
+                "reference": "580548a086e5be945631234aaebe27626dfb3791"
+            },
             "dist": {
-                "type": "path",
-                "url": "d:/git-local/terabytesoftw/alert",
-                "reference": "4d0f4c7d42b9484297449234c1c10f4ad9211296",
-                "shasum": null
+                "type": "zip",
+                "url": "https://api.github.com/repos/terabytesoftw/alert/zipball/580548a086e5be945631234aaebe27626dfb3791",
+                "reference": "580548a086e5be945631234aaebe27626dfb3791",
+                "shasum": ""
             },
             "require": {
                 "oomphinc/composer-installers-extender": "^1.1",
@@ -798,7 +803,10 @@
                 "yiisoft/yii2-bootstrap4": "^2.0.3"
             },
             "require-dev": {
-                "codeception/codeception": "^3.0"
+                "codeception/c3": "2.*",
+                "codeception/codeception": "^3.0",
+                "hiqdev/composer-config-plugin": "^1.0@dev",
+                "monolog/monolog": "*"
             },
             "type": "yii2-extension",
             "extra": {
@@ -821,11 +829,7 @@
                     "terabytesoft\\widgets\\": "src"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "terabyteSoft\\widgets\\tests\\": "tests"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -842,7 +846,8 @@
                 "bootstrap4",
                 "widget",
                 "yii"
-            ]
+            ],
+            "time": "2019-06-24T19:11:18+00:00"
         },
         {
             "name": "yiisoft/yii2",
