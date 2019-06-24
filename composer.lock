@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "71f2770c0feeeb6d4fbf1a2ba9eb9cc0",
+    "content-hash": "713886b45ddaeb2290b88b6459e2ae19",
     "packages": [
         {
             "name": "bower-asset/inputmask",
@@ -327,16 +327,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.8",
+            "version": "2.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "c26463ff9241f27907112fbcd0c86fa670cfef98"
+                "reference": "128cc721d771ec2c46ce59698f4ca42b73f71b25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/c26463ff9241f27907112fbcd0c86fa670cfef98",
-                "reference": "c26463ff9241f27907112fbcd0c86fa670cfef98",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/128cc721d771ec2c46ce59698f4ca42b73f71b25",
+                "reference": "128cc721d771ec2c46ce59698f4ca42b73f71b25",
                 "shasum": ""
             },
             "require": {
@@ -380,7 +380,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2019-05-16T22:02:54+00:00"
+            "time": "2019-06-23T10:14:27+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -781,6 +781,68 @@
                 "shim"
             ],
             "time": "2019-02-06T07:57:58+00:00"
+        },
+        {
+            "name": "terabytesoftw/alert",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "d:/git-local/terabytesoftw/alert",
+                "reference": "4d0f4c7d42b9484297449234c1c10f4ad9211296",
+                "shasum": null
+            },
+            "require": {
+                "oomphinc/composer-installers-extender": "^1.1",
+                "php": ">=5.4.0",
+                "yiisoft/yii2": "^2.0.20",
+                "yiisoft/yii2-bootstrap4": "^2.0.3"
+            },
+            "require-dev": {
+                "codeception/codeception": "^3.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "1.0": "1.0.x-dev"
+                },
+                "installer-types": [
+                    "bower-asset",
+                    "npm-asset"
+                ],
+                "installer-paths": {
+                    "./node_modules/{$name}": [
+                        "type:bower-asset",
+                        "type:npm-asset"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "terabytesoft\\widgets\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "terabyteSoft\\widgets\\tests\\": "tests"
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Wilmer Arambula",
+                    "email": "wilmer.arambula@gmail.com"
+                }
+            ],
+            "description": "Widget Alert with Bootstrap4",
+            "homepage": "https://github.com/terabytesoftw/alert",
+            "keywords": [
+                "alert",
+                "bootstrap4",
+                "widget",
+                "yii"
+            ]
         },
         {
             "name": "yiisoft/yii2",
@@ -1568,66 +1630,6 @@
                 "webdriver"
             ],
             "time": "2019-06-13T08:02:18+00:00"
-        },
-        {
-            "name": "foxy/foxy",
-            "version": "v1.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fxpio/foxy.git",
-                "reference": "341d972df15f38efd5eaa505dd63aa4116655a7c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fxpio/foxy/zipball/341d972df15f38efd5eaa505dd63aa4116655a7c",
-                "reference": "341d972df15f38efd5eaa505dd63aa4116655a7c",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1.1",
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "composer/composer": "^1.5.0"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "Foxy\\Foxy",
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Foxy\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "François Pluchino",
-                    "email": "francois.pluchino@gmail.com"
-                }
-            ],
-            "description": "Fast, reliable, and secure NPM/Yarn bridge for Composer",
-            "homepage": "https://github.com/fxpio/foxy",
-            "keywords": [
-                "Bridge",
-                "asset",
-                "composer",
-                "dependency manager",
-                "nodejs",
-                "npm",
-                "package",
-                "yarn"
-            ],
-            "time": "2019-05-17T17:18:57+00:00"
         },
         {
             "name": "fzaninotto/faker",
@@ -5062,6 +5064,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "terabytesoftw/alert": 20,
         "hiqdev/composer-config-plugin": 20
     },
     "prefer-stable": true,

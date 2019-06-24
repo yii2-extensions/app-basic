@@ -81,6 +81,7 @@ class SiteController extends Controller
 
         if ($model->load($this->module->request->post()) && $model->validate()) {
             $this->sendContact($this->module->params['app.basic.email.admin'], $model);
+
             $this->module->session->setFlash('contactFormSubmitted');
 
             return $this->refresh();

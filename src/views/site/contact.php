@@ -16,14 +16,17 @@ $this->title = $this->title = \Yii::t('AppBasic', 'Contact');
 
 <?= Html::beginTag('div', ['class' => 'site-contact']) ?>
 
-    <?= Html::tag('h1', '<b>'.Html::encode($this->title).'</b>', ['class' => 'text-center c-grey-900 mb-40 display-4']) ?>
+    <?= Html::tag(
+        'h1',
+        '<b>'.Html::encode($this->title).'</b>',
+        ['class' => 'text-center c-grey-900 mb-40 display-4']
+    ) ?>
 
     <?php if ($this->context->module->session->hasFlash('contactFormSubmitted')) : ?>
-        <?= Html::beginTag('div', ['class' => 'alert alert-success']) ?>
-            <?= Html::tag('p', \Yii::t('AppBasic', 'Thank you for contacting us. We will respond to you as soon '.
-                'as possible.'))
-            ?>
-        <?= Html::endTag('div') ?>
+
+        <?= Html::tag('hr', '', ['class' => 'mb-2']) ?>
+
+        <br/>
 
         <?= Html::beginTag('p') ?>
             <?= \Yii::t('AppBasic', 'Note that if you turn on the Yii debugger, you should be able '.
@@ -40,6 +43,14 @@ $this->title = $this->title = \Yii::t('AppBasic', 'Contact');
                 ) ?>
             <?php endif ?>
         <?= Html::endTag('p') ?>
+
+        <?= Html::beginTag('div', ['class' => 'alert alert-success', 'role' => 'alert']) ?>
+            <?= \Yii::t(
+                'AppBasic',
+                'Thank you for contacting us. We will respond to you as soon as possible.'
+            ) ?>
+        <?= Html::endTag('div') ?>
+
     <?php else : ?>
         <?= Html::beginTag('p', ['class' => 'text-center mb-4']) ?>
             <?= \Yii::t('AppBasic', 'If you have business inquiries or other questions,<br/> please fill out the '.

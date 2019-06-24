@@ -6,8 +6,8 @@
  * Layout web application basic
  **/
 
+use terabytesoft\widgets\Alert;
 use terabytesoft\app\basic\assets\AppAsset;
-//use TerabyteSoft\Widgets\Alert;
 use yii\bootstrap4\Html;
 use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
@@ -78,6 +78,8 @@ if (isset($this->context->module->extensions['terabytesoft/app-user'])) {
                         <?= Breadcrumbs::widget([
                             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
                         ]) ?>
+
+                        <?= Alert::widget() ?>
 
                         <?= $content ?>
 
