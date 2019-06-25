@@ -1,7 +1,7 @@
 {
     "name": "terabytesoftw/app-basic",
     "type": "yii2-extension",
-    "description": "Yii 2.0 Web Application Basic",
+    "description": "Web Application Basic",
     "keywords": [
         "application",
         "basic",
@@ -52,7 +52,7 @@
     },
     "extra": {
         "branch-alias": {
-            "1.0": "1.0.x-dev"
+            "dev-master": "1.0.x-dev"
         },
         "config-plugin": {
             "params": [
