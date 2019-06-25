@@ -1,6 +1,6 @@
                                 BSD 3-Clause License
 
-Copyright (c) 2018, TERABYTE SOFTWARE SA
+Copyright (c) 2019, Terabytesoft SA
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
