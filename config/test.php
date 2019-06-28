@@ -18,7 +18,7 @@ $config = [
         '@runtime' => $params['app.basic.alias.path.test.runtime'],
         '@terabytesoft/app/basic/tests' => $params['app.basic.alias.path.terabytesoft.test'],
     ],
-    'basePath' => $params['app.basic.base.path'],
+    'basePath' => $params['app.basic.base.path.test'],
     'bootstrap' => $params['app.basic.bootstrap'],
     'controllerNamespace' => $params['app.basic.controller.namespace'],
     'language' => $params['app.basic.language'],
