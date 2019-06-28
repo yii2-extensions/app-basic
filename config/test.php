@@ -14,8 +14,8 @@ $config = [
     'aliases' => [
         '@bower' => $params['app.basic.alias.path.bower'],
         '@npm'   => $params['app.basic.alias.path.npm'],
-        '@public' => $params['app.basic.alias.path.public'],
-        '@runtime' => $params['app.basic.alias.path.runtime'],
+        '@public' => $params['app.basic.alias.path.test.public'],
+        '@runtime' => $params['app.basic.alias.path.test.runtime'],
         '@terabytesoft/app/basic/tests' => $params['app.basic.alias.path.terabytesoft.test'],
     ],
     'basePath' => $params['app.basic.base.path'],

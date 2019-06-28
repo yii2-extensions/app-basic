@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Yii web bootstrap file
+ */
+
 $_bootstrap = dirname(__dir__) . '/_bootstrap.php';
 
 if (!is_file($_bootstrap)) {

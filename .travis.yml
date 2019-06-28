@@ -1,7 +1,8 @@
 language: php
 
 php:
-  - 7.3
+  - '7.2'
+  - '7.3'
 
 dist: trusty
 
@@ -45,13 +46,18 @@ before_script:
   - unzip -o -q chromedriver_linux64.zip
   - chromedriver --port=9515 --url-base=wd/hub/ > /dev/null 2>&1&
 
+  - |
+    if [ $TRAVIS_PHP_VERSION = '7.2' ];
+      then CODECEPTION_FLAGS="unit,functional";
+      else CODECEPTION_FLAGS="--coverage-xml";
+    fi
 script:
   - |
     cd tests
     php -S 127.0.0.1:8080 -t public > /dev/null 2>&1&
     cd ..
     vendor/bin/codecept build
-    vendor/bin/codecept run --coverage-xml
+    vendor/bin/codecept run $CODECEPTION_FLAGS
 
 after_script:
   - |

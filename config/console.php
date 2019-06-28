@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Web application console configuration
+ * Console application configuration
  */
 
 return [

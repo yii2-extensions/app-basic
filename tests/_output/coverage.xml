@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1561728835">
-  <project timestamp="1561728835">
+<coverage generated="1561735263">
+  <project timestamp="1561735263">
     <package name="terabytesoft\app\basic\controllers">
       <file name="D:\git-local\terabytesoftw\app-basic\src\controllers\SiteController.php">
         <class name="terabytesoft\app\basic\controllers\SiteController" namespace="terabytesoft\app\basic\controllers">

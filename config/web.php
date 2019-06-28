@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Web application configuration shared by all test types
+ * Web application configuration
  */
 
 $config = [

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Web application params configuration custom
+ * Params application configuration custom
  */
 
 return [

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Web application params configuration
+ * Params application basic configuration
  */
 
 require_once './vendor/yiisoft/yii2/Yii.php';
@@ -10,8 +10,10 @@ return [
     // app basic web applications options
     'app.basic.alias.path.bower' => '@root/node_modules',
     'app.basic.alias.path.npm' => '@root/node_modules',
-    'app.basic.alias.path.public' => '@root/tests/public',
-    'app.basic.alias.path.runtime' => '@root/tests/public/@runtime',
+    'app.basic.alias.path.public' => '@root/public',
+    'app.basic.alias.path.runtime' => '@root/public/@runtime',
+    'app.basic.alias.path.test.public' => '@root/tests/public',
+    'app.basic.alias.path.test.runtime' => '@root/tests/public/@runtime',
     'app.basic.alias.path.terabytesoft.test' => '@root/tests',
     'app.basic.base.path' => '@root/src',
     'app.basic.bootstrap' => ['log'],
