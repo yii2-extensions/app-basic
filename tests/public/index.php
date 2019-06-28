@@ -1,18 +1,14 @@
 <?php
 
-use hiqdev\composer\config\Builder;
-use yii\web\Application;
+$_bootstrap = dirname(__dir__) . '/_bootstrap.php';
 
-include '../../c3.php';
+if (!is_file($_bootstrap)) {
+    die('You need to set up _bootstrap');
+}
 
-define('MY_APP_STARTED', true);
-defined('YII_ENV') or define('YII_ENV', true);
-defined('YII_DEBUG') or define('YII_DEBUG', true);
+require_once $_bootstrap;
 
 (function () {
-    require dirname(__DIR__, 2) . '/config/bootstrap.php';
-
-    $config = require Builder::path('tests');
-
-    (new Application($config))->run();
+    $config = require hiqdev\composer\config\Builder::path('tests');
+    (new yii\web\Application($config))->run();
 })();

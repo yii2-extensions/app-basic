@@ -59,9 +59,13 @@
                 "config/appbasic.php",
                 "config/params.php"
             ],
+            "defines": "config/defines.php",
             "console": "config/console.php",
             "tests": [
                 "config/test.php"
+            ],
+            "web": [
+                "config/web.php"
             ]
         },
         "installer-types": [

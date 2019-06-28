@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "72c2957cb47f2787690ab704050f6a71",
+    "content-hash": "8df3c6c7a494d3a6a5769283d001fcef",
     "packages": [
         {
             "name": "bower-asset/inputmask",
@@ -788,12 +788,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/terabytesoftw/widget-alert.git",
-                "reference": "5d3047ffa080bb655ab91b259dc2a13555714055"
+                "reference": "d22dfeb6806012a376a7c29972a12dc4d1939a53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/terabytesoftw/widget-alert/zipball/5d3047ffa080bb655ab91b259dc2a13555714055",
-                "reference": "5d3047ffa080bb655ab91b259dc2a13555714055",
+                "url": "https://api.github.com/repos/terabytesoftw/widget-alert/zipball/d22dfeb6806012a376a7c29972a12dc4d1939a53",
+                "reference": "d22dfeb6806012a376a7c29972a12dc4d1939a53",
                 "shasum": ""
             },
             "require": {
@@ -847,7 +847,7 @@
                 "widget",
                 "yii"
             ],
-            "time": "2019-06-24T20:22:04+00:00"
+            "time": "2019-06-25T12:46:10+00:00"
         },
         {
             "name": "yiisoft/yii2",

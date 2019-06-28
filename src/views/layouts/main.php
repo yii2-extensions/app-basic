@@ -60,6 +60,8 @@ if (isset($this->context->module->extensions['terabytesoft/app-user'])) {
 
                     NavBar::end(); ?>
 
+                    <?= Alert::widget() ?>
+
                     <?= Html::beginTag(
                         'div',
                         [
@@ -78,8 +80,6 @@ if (isset($this->context->module->extensions['terabytesoft/app-user'])) {
                         <?= Breadcrumbs::widget([
                             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
                         ]) ?>
-
-                        <?= Alert::widget() ?>
 
                         <?= $content ?>
 

@@ -1,10 +1,10 @@
 <?php
 
-require_once './vendor/yiisoft/yii2/Yii.php';
-
 /**
  * Web application params configuration
  */
+
+require_once './vendor/yiisoft/yii2/Yii.php';
 
 return [
     // app basic web applications options

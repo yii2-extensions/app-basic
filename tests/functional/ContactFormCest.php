@@ -28,7 +28,7 @@ class ContactFormCest
      */
     public function testContactFormPageTest(FunctionalTester $I): void
     {
-        $I->see(\Yii::t('basic', 'Contact'), 'h1');
+        $I->see(\Yii::t('AppBasic', 'Contact'), 'h1');
     }
 
     /**
@@ -41,10 +41,10 @@ class ContactFormCest
         $I->amGoingTo('contact form submit form with empty data.');
         $I->submitForm('#contact-form', []);
         $I->expectTo('see validations errors.');
-        $I->see(\Yii::t('basic', 'Name cannot be blank.'), '.invalid-feedback');
-        $I->see(\Yii::t('basic', 'Email cannot be blank.'), '.invalid-feedback');
-        $I->see(\Yii::t('basic', 'Subject cannot be blank.'), '.invalid-feedback');
-        $I->see(\Yii::t('basic', 'Body cannot be blank.'), '.invalid-feedback');
+        $I->see(\Yii::t('AppBasic', 'Name cannot be blank.'), '.invalid-feedback');
+        $I->see(\Yii::t('AppBasic', 'Email cannot be blank.'), '.invalid-feedback');
+        $I->see(\Yii::t('AppBasic', 'Subject cannot be blank.'), '.invalid-feedback');
+        $I->see(\Yii::t('AppBasic', 'Body cannot be blank.'), '.invalid-feedback');
     }
 
     /**
@@ -64,10 +64,10 @@ class ContactFormCest
         ]);
         $I->expectTo('Email is not a valid email address');
         $I->dontSee('Name cannot be blank', '.invalid-feedback');
-        $I->see(\Yii::t('basic', 'Email is not a valid email address.'), '.invalid-feedback');
-        $I->dontSee(\Yii::t('basic', 'Subject cannot be blank'), '.invalid-feedback');
-        $I->dontSee(\Yii::t('basic', 'Body cannot be blank'), '.invalid-feedback');
-        $I->dontSee(\Yii::t('basic', 'The verification code is incorrect'), '.invalid-feedback');
+        $I->see(\Yii::t('AppBasic', 'Email is not a valid email address.'), '.invalid-feedback');
+        $I->dontSee(\Yii::t('AppBasic', 'Subject cannot be blank'), '.invalid-feedback');
+        $I->dontSee(\Yii::t('AppBasic', 'Body cannot be blank'), '.invalid-feedback');
+        $I->dontSee(\Yii::t('AppBasic', 'The verification code is incorrect'), '.invalid-feedback');
     }
 
     /**
@@ -88,7 +88,7 @@ class ContactFormCest
         $I->expectTo('success.');
         $I->dontSeeElement('#contact-form');
         $I->see(\Yii::t(
-            'basic',
+            'AppBasic',
             'Thank you for contacting us. We will respond to you as soon as possible.'
         ), '.alert');
     }
