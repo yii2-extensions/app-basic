@@ -3,4 +3,5 @@ preset: psr2
 finder:
   exclude:
     - docs
+    - tests/_support
     - vendor

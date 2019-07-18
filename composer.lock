@@ -788,12 +788,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/terabytesoftw/helper-mailer.git",
-                "reference": "2631b7b7906ceaae28b32609adbbdf7fd9ed8899"
+                "reference": "5d67876a6b42b6802fb757d27cddec03e2b59516"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/terabytesoftw/helper-mailer/zipball/2631b7b7906ceaae28b32609adbbdf7fd9ed8899",
-                "reference": "2631b7b7906ceaae28b32609adbbdf7fd9ed8899",
+                "url": "https://api.github.com/repos/terabytesoftw/helper-mailer/zipball/5d67876a6b42b6802fb757d27cddec03e2b59516",
+                "reference": "5d67876a6b42b6802fb757d27cddec03e2b59516",
                 "shasum": ""
             },
             "require": {
@@ -863,7 +863,7 @@
                 "user",
                 "yii"
             ],
-            "time": "2019-07-15T22:34:00+00:00"
+            "time": "2019-07-18T01:24:14+00:00"
         },
         {
             "name": "terabytesoftw/widget-alert",
