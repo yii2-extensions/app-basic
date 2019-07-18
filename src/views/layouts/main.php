@@ -70,10 +70,10 @@ if (isset(\Yii::$app->extensions['terabytesoftw/app-user'])) {
                         'div',
                         [
                             'class' => in_array(
-                                $this->context->action->id,
+                                $this->context->action->uniqueId,
                                 [
-                                    'index',
-                                    'about'
+                                    'site/index',
+                                    'site/about'
                                 ]
                             )
                             ? 'd-flex flex-fill align-items-center justify-content-center'
