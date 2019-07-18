@@ -27,4 +27,3 @@ coverage:
         exclude:
             - src/assets/css/*
             - src/messages/*
-            - src/mail/*
