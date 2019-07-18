@@ -1,6 +1,6 @@
 <?php
 
-namespace Terabytesoft\App\Basic;
+namespace terabytesoft\app\basic\tests;
 
 use DMS\PHPUnitExtensions\ArraySubset\Assert;
 use terabytesoft\app\basic\controllers\SiteController;
@@ -8,10 +8,20 @@ use terabytesoft\app\basic\forms\ContactForm;
 
 class ContactFormTest extends \Codeception\Test\Unit
 {
-    private $config = [];
-    private $controller;
-    private $model;
-    private $rules;
+    /**
+     * @var \yii\base\Controller $controller
+     */
+    protected $controller;
+
+    /**
+     * @var \yii\base\Model $model
+     */
+    protected $model;
+
+    /**
+     * @var array $rules
+     */
+    protected $rules;
 
     /**
      * @var \UnitTester
@@ -19,12 +29,29 @@ class ContactFormTest extends \Codeception\Test\Unit
     protected $tester;
 
     /**
+     * _before
+     */
+    public function _before(): void
+    {
+        $this->controller = new SiteController('SiteController', \Yii::$app, []);
+        $this->model = new ContactForm();
+    }
+    /**
+     * _after
+     */
+    public function _after(): void
+    {
+        unset($this->controller);
+        unset($this->model);
+        unset($this->tester);
+    }
+
+    /**
      * testContactFormRules
      */
     public function testContactFormRules(): void
     {
         // test rules form model.
-        $this->model = new ContactForm();
         $this->rules = [
             // name, email, subject and body are required
             [['name', 'email', 'subject', 'body'], 'required'],
@@ -42,8 +69,6 @@ class ContactFormTest extends \Codeception\Test\Unit
      */
     public function testContactFormSentEmail(): void
     {
-        $this->controller = new SiteController('SiteController', \Yii::$app, $this->config);
-
         /** @var ContactForm $model */
         $this->model = $this->getMockBuilder('terabytesoft\app\basic\forms\ContactForm')
             ->setMethods(['validate'])
@@ -60,9 +85,9 @@ class ContactFormTest extends \Codeception\Test\Unit
             'body' => 'body of current message',
         ];
 
-        expect($this->model->validate());
+        \PHPUnit_Framework_Assert::assertTrue($this->model->validate());
 
-        $this->controller->sendContact('admin@example.com', $this->model);
+        $this->controller->sendContact($this->model);
 
         // using Yii2 module actions to check email was sent
         $this->tester->seeEmailIsSent();
@@ -70,12 +95,11 @@ class ContactFormTest extends \Codeception\Test\Unit
         /** @var MessageInterface $emailMessage */
         $emailMessage = $this->tester->grabLastSentEmail();
 
-        expect('valid email is sent', $emailMessage)->isInstanceOf('yii\swiftmailer\Message');
-        expect($emailMessage->getTo())->hasKey('admin@example.com');
-        expect($emailMessage->getFrom())->hasKey('noreply@example.com');
-        expect($emailMessage->getReplyTo())->hasKey('tester@example.com');
-        expect($emailMessage->getSubject())->equals('very important letter subject');
-
+        \PHPUnit_Framework_Assert::assertInstanceOf(\yii\mail\MessageInterface::class, $emailMessage);
+        \PHPUnit_Framework_Assert::assertArrayHasKey('tester@example.com', $emailMessage->getTo());
+        \PHPUnit_Framework_Assert::assertArrayHasKey('noreply@appbasic.com', $emailMessage->getFrom());
+        \PHPUnit_Framework_Assert::assertArrayHasKey('tester@example.com', $emailMessage->getReplyTo());
+        \PHPUnit_Framework_Assert::assertEquals('very important letter subject', $emailMessage->getSubject());
         \PHPUnit_Framework_Assert::assertStringContainsString('body of current message', $emailMessage);
     }
 }

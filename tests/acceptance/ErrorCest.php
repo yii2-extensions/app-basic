@@ -5,28 +5,28 @@ namespace terabytesoft\app\basic\tests;
 use terabytesoft\app\basic\tests\AcceptanceTester;
 
 /**
- * Class IndexCest
+ * Class ErrorCest
  *
  * Acceptance tests for codeception
  */
-class IndexCest
+class ErrorCest
 {
     /**
      * _before
      */
     public function _before(AcceptanceTester $I): void
     {
-        $I->wantTo('ensure that index page works.');
-        $I->amOnPage('/site/index');
+        $I->wantTo('ensure that error page works.');
+        $I->amOnPage('/site/index1');
         $I->wait(5); // secs
     }
 
     /**
-     * testIndexPage
+     * testErrorPage
      */
-    public function testIndexPage(AcceptanceTester $I): void
+    public function testErrorPage(AcceptanceTester $I): void
     {
-        $I->expectTo('see page index.');
-        $I->see(\Yii::t('app.basic', 'Web Application'));
+        $I->expectTo('see page error.');
+        $I->see(\Yii::t('app.basic', 'Page not found.'));
     }
 }

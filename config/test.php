@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Web application configuration shared by all test types
+ * Test application configuration shared by all test types
  */
 
 $appbasic = require __DIR__ . '/appbasic.php';
@@ -10,15 +10,16 @@ $params = require __DIR__ . '/params.php';
 $params = array_merge($appbasic, $params ?? []);
 
 $config = [
-    'id' => $params['app.basic.id'],
+    'id' => 'test.app.basic',
+    'name' => $params['app.basic.name'],
     'aliases' => [
-        '@bower' => $params['app.basic.alias.path.bower'],
-        '@npm'   => $params['app.basic.alias.path.npm'],
-        '@public' => $params['app.basic.alias.path.test.public'],
-        '@runtime' => $params['app.basic.alias.path.test.runtime'],
-        '@terabytesoft/app/basic/tests' => $params['app.basic.alias.path.terabytesoft.test'],
+        '@bower' => '@root/node_modules',
+        '@npm'   => '@root/node_modules',
+        '@public' => '@root/tests/public',
+        '@runtime' => '@root/tests/public/@runtime',
+        '@terabytesoft/app/basic/tests' => '@root/tests',
     ],
-    'basePath' => $params['app.basic.base.path.test'],
+    'basePath' => '@root/src',
     'bootstrap' => $params['app.basic.bootstrap'],
     'controllerNamespace' => $params['app.basic.controller.namespace'],
     'language' => $params['app.basic.language'],
@@ -29,7 +30,7 @@ $config = [
         ],
         'i18n' => [
             'translations' => [
-                'AppBasic' => [
+                'app.basic' => [
                     'class' => yii\i18n\PhpMessageSource::class,
                 ],
             ],

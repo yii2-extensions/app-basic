@@ -1,4 +1,4 @@
-namespace: Terabytesoft\App\Basic
+namespace: terabytesoft\app\basic\tests
 paths:
     tests: tests
     output: tests/_output
@@ -25,6 +25,6 @@ coverage:
         include:
             - src/*
         exclude:
-            - src/assets/*
+            - src/assets/css/*
             - src/messages/*
             - src/mail/*

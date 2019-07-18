@@ -11,5 +11,5 @@ modules:
         - PhpBrowser:
             url: http://127.0.0.1:8080
         # add a framework module here
-        - \Terabytesoft\App\Basic\Helper\Functional
+        - \terabytesoft\app\basic\tests\Helper\Functional
     step_decorators: ~

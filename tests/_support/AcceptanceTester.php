@@ -1,5 +1,5 @@
 <?php
-namespace Terabytesoft\App\Basic;
+namespace terabytesoft\app\basic\tests;
 
 /**
  * Inherited Methods
@@ -20,7 +20,7 @@ class AcceptanceTester extends \Codeception\Actor
 {
     use _generated\AcceptanceTesterActions;
 
-    /**
-     * Define custom actions here
-     */
+   /**
+    * Define custom actions here
+    */
 }

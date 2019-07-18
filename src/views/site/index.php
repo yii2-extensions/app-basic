@@ -8,7 +8,7 @@
 
 use yii\bootstrap4\Html;
 
-$this->title = \Yii::t('AppBasic', 'Index');
+$this->title = \Yii::t('app.basic', 'Index');
 
 ?>
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace Terabytesoft\App\AppBasic;
+namespace terabytesoft\app\basic\tests;
 
-use Terabytesoft\App\Basic\AcceptanceTester;
+use terabytesoft\app\basic\tests\AcceptanceTester;
 
 /**
- * Class ContactCest.
+ * Class ContactCest
  *
  * Acceptance tests for codeception
  */
@@ -13,49 +13,43 @@ class ContactCest
 {
     /**
      * _before
-     *
-     * @param AcceptanceTester $I
      */
     public function _before(AcceptanceTester $I): void
     {
+        $I->wantTo('ensure that contact page works.');
         $I->amOnPage('/site/contact');
         $I->wait(5); // secs
     }
 
     /**
-     * testContactPageTest
-     *
-     * @param AcceptanceTester $I
+     * testContactPage
      */
-    public function testContactPageTest(AcceptanceTester $I): void
+    public function testContactPage(AcceptanceTester $I): void
     {
-        $I->wantTo('ensure that contact page works.');
-        $I->see(\Yii::t('AppBasic', 'Contact'));
+        $I->expectTo('see page contact.');
+        $I->see(\Yii::t('app.basic', 'Contact'));
     }
 
     /**
-     * testcontactSubmitFormEmptyDataTest
-     *
-     * @param AcceptanceTester $I
+     * testcontactSubmitFormEmptyData
      */
-    public function testcontactSubmitFormEmptyDataTest(AcceptanceTester $I): void
+    public function testcontactSubmitFormEmptyData(AcceptanceTester $I): void
     {
         $I->amGoingTo('contact submit form with empty data.');
         $I->click('contact-button');
         $I->wait(5); // secs
+
         $I->expectTo('see validations errors.');
-        $I->see(\Yii::t('AppBasic', 'Name cannot be blank.'));
-        $I->see(\Yii::t('AppBasic', 'Email cannot be blank.'));
-        $I->see(\Yii::t('AppBasic', 'Subject cannot be blank.'));
-        $I->see(\Yii::t('AppBasic', 'Body cannot be blank.'));
+        $I->see(\Yii::t('app.basic', 'Name cannot be blank.'));
+        $I->see(\Yii::t('app.basic', 'Email cannot be blank.'));
+        $I->see(\Yii::t('app.basic', 'Subject cannot be blank.'));
+        $I->see(\Yii::t('app.basic', 'Body cannot be blank.'));
     }
 
     /**
-     * testContactSubmitFormEmailWrongDataTest
-     *
-     * @param AcceptanceTester $I
+     * testContactSubmitFormEmailWrongData
      */
-    public function testContactSubmitFormEmailWrongDataTest(AcceptanceTester $I): void
+    public function testContactSubmitFormEmailWrongData(AcceptanceTester $I): void
     {
         $I->amGoingTo('contact submit form with email wrong.');
         $I->fillField('#contactform-name', 'tester');
@@ -65,16 +59,15 @@ class ContactCest
         $I->fillField('#contactform-verifycode', 'testme');
         $I->click('contact-button');
         $I->wait(5); // secs
+
         $I->expectTo('Email is not a valid email address.');
-        $I->see(\Yii::t('AppBasic', 'Email is not a valid email address.'));
+        $I->see(\Yii::t('app.basic', 'Email is not a valid email address.'));
     }
 
     /**
-     * testContactSubmitFormSuccessDataTest
-     *
-     * @param AcceptanceTester $I
+     * testContactSubmitFormSuccessData
      */
-    public function testContactSubmitFormSuccessDataTest(AcceptanceTester $I):void
+    public function testContactSubmitFormSuccessData(AcceptanceTester $I):void
     {
         $I->amGoingTo('contact submit form with success data.');
         $I->fillField('#contactform-name', 'tester');
@@ -84,8 +77,9 @@ class ContactCest
         $I->fillField('#contactform-verifycode', 'testme');
         $I->click('contact-button');
         $I->wait(5); // secs
+
         $I->expectTo('success.');
         $I->dontSeeElement('#contact-form');
-        $I->see(\Yii::t('AppBasic', 'Thank you for contacting us. We will respond to you as soon as possible.'));
+        $I->see(\Yii::t('app.basic', 'Thank you for contacting us. We will respond to you as soon as possible.'));
     }
 }

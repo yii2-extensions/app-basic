@@ -6,6 +6,7 @@
 
 $config = [
     'id' => $params['app.basic.id'],
+    'name' => $params['app.basic.name'],
     'aliases' => [
         '@bower' => $params['app.basic.alias.path.bower'],
         '@npm'   => $params['app.basic.alias.path.npm'],
@@ -23,7 +24,7 @@ $config = [
         ],
         'i18n' => [
             'translations' => [
-                'AppBasic' => [
+                'app.basic' => [
                     'class' => yii\i18n\PhpMessageSource::class,
                 ],
             ],

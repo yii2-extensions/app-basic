@@ -3,7 +3,9 @@
 namespace terabytesoft\app\basic\controllers;
 
 use terabytesoft\app\basic\forms\ContactForm;
+use terabytesoft\helpers\Mailer;
 use yii\base\Model;
+use yii\base\Module;
 use yii\captcha\CaptchaAction;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
@@ -19,9 +21,9 @@ use yii\web\Response;
 class SiteController extends Controller
 {
     /**
-     * @var array
+     * @var object
      */
-    public $app;
+    private $mailer;
 
     /**
      * behaviors
@@ -56,6 +58,15 @@ class SiteController extends Controller
     }
 
     /**
+     * __construct
+     */
+    public function __construct($id, Module $module, array $config = [])
+    {
+        $this->mailer = new Mailer(\Yii::$app->mailer);
+        parent::__construct($id, $module, $config);
+    }
+
+    /**
      * actionIndex
      */
     public function actionIndex(): string
@@ -80,7 +91,7 @@ class SiteController extends Controller
         $model = new ContactForm();
 
         if ($model->load($this->module->request->post()) && $model->validate()) {
-            $this->sendContact($this->module->params['app.basic.email.admin'], $model);
+            $this->sendContact($model);
 
             $this->module->session->setFlash('contactFormSubmitted');
 
@@ -94,19 +105,19 @@ class SiteController extends Controller
 
     /**
      * sendContact
-     * @param string $email the target email address
-     * @param Model  $model
+     * @param Model $model
      **/
-    public function sendContact(string $email, Model $model): void
+    public function sendContact(Model $model): void
     {
-        $this->module->mailer->compose()
-            ->setTo($email)
-            ->setFrom(
-                [$this->module->params['app.basic.email.admin'] => $this->module->params['app.basic.email.sendername']]
-            )
-            ->setReplyTo([$model->email => $model->name])
-            ->setSubject($model->subject)
-            ->setTextBody($model->body)
-            ->send();
+        $this->mailer->sendMessage(
+            $model->email,
+            $model->subject,
+            [
+                'replyTo' => [
+                    $model->email => $model->name
+                ],
+                'textBody' => $model->body
+            ]
+        );
     }
 }

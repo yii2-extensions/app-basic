@@ -1,11 +1,11 @@
 <?php
 
-namespace Terabytesoft\App\Basic;
+namespace terabytesoft\app\basic\tests;
 
-use Terabytesoft\App\Basic\AcceptanceTester;
+use terabytesoft\app\basic\tests\AcceptanceTester;
 
 /**
- * Class AboutCest.
+ * Class AboutCest
  *
  * Acceptance tests for codeception
  */
@@ -13,24 +13,20 @@ class AboutCest
 {
     /**
      * _before
-     *
-     * @param AcceptanceTester $I
      */
     public function _before(AcceptanceTester $I): void
     {
+        $I->wantTo('ensure that about page works.');
         $I->amOnPage('/site/about');
         $I->wait(5); // secs
     }
 
     /**
-     * testAboutPageTest
-     *
-     * @param AcceptanceTester $I
+     * testAboutPage
      */
-    public function testAboutPageTest(AcceptanceTester $I): void
+    public function testAboutPage(AcceptanceTester $I): void
     {
-        $I->wantTo('ensure that about page works.');
         $I->expectTo('see page about.');
-        $I->see(\Yii::t('AppBasic', 'About'));
+        $I->see(\Yii::t('app.basic', 'About'));
     }
 }

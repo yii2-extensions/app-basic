@@ -12,25 +12,19 @@ return [
     'app.basic.alias.path.npm' => '@root/node_modules',
     'app.basic.alias.path.public' => '@root/public',
     'app.basic.alias.path.runtime' => '@root/public/@runtime',
-    'app.basic.alias.path.test.public' => '@root/tests/public',
-    'app.basic.alias.path.test.runtime' => '@root/tests/public/@runtime',
-    'app.basic.alias.path.terabytesoft.test' => '@root/tests',
     'app.basic.base.path' => '@vendor/terabytesoftw/app-basic/src',
-    'app.basic.base.path.test' => '@root/src',
     'app.basic.bootstrap' => ['log'],
     'app.basic.controller.namespace' => 'terabytesoft\app\basic\controllers',
-    'app.basic.email.admin' => 'noreply@example.com',
-    'app.basic.email.sendername' => 'appbasic mailer example',
-    'app.basic.footer.autor' => '©'.date('Y').'. '.\Yii::t('AppBasic', 'TerabyteSoft SA - Wilmer Arambula.'),
-    'app.basic.id' => 'basic',
+    'app.basic.footer.autor' => '©' . date('Y') . '. ' . \Yii::t('app.basic', 'TerabyteSoft SA - Wilmer Arambula.'),
+    'app.basic.id' => 'app.basic',
     'app.basic.language' => 'en-US',
     'app.basic.menu.isguest' => [
         [
-            'label' => \Yii::t('AppBasic', 'About'),
+            'label' => \Yii::t('app.basic', 'About'),
             'url' => ['/site/about']
         ],
         [
-            'label' => \Yii::t('AppBasic', 'Contact'),
+            'label' => \Yii::t('app.basic', 'Contact'),
             'url' => ['/site/contact']
         ],
     ],

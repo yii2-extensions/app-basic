@@ -1,6 +1,6 @@
 <?php
 
-namespace Terabytesoft\App\Basic;
+namespace terabytesoft\app\basic\tests;
 
 use terabytesoft\app\basic\assets\AppAsset;
 use yii\base\Theme;
@@ -11,24 +11,43 @@ use yii\web\JqueryAsset;
 use yii\web\YiiAsset;
 
 /**
- * Class AppAssetTest.
+ * Class AppAssetTest
  *
  * Unit tests for codeception
  */
 class AppAssetTest extends \Codeception\Test\Unit
 {
-    private $app;
-    private $bundle;
-    private $view;
+    /**
+     * @var \yii\web\AssetBundle $bundle
+     */
+    protected $bundle;
 
     /**
      * @var \UnitTester
      */
     protected $tester;
 
+    /**
+     * @var \yii\web\View $view
+     */
+    protected $view;
+
+    /**
+     *_before
+     */
     protected function _before(): void
     {
         $this->view = new View();
+    }
+
+    /**
+     *_after
+     */
+    protected function _after(): void
+    {
+        unset($this->bundle);
+        unset($this->tester);
+        unset($this->view);
     }
 
     /**
@@ -59,11 +78,11 @@ class AppAssetTest extends \Codeception\Test\Unit
      */
     public function testAppAssetSourcesPublish(): void
     {
-        $bundle = AppAsset::register($this->view);
+        $this->bundle = AppAsset::register($this->view);
 
-        \PHPUnit_Framework_Assert::assertTrue(is_dir($bundle->basePath));
+        \PHPUnit_Framework_Assert::assertTrue(is_dir($this->bundle->basePath));
 
-        $this->sourcesPublishVerifyFiles('css', $bundle);
+        $this->sourcesPublishVerifyFiles('css', $this->bundle);
     }
 
     /**
@@ -81,7 +100,7 @@ class AppAssetTest extends \Codeception\Test\Unit
         \PHPUnit_Framework_Assert::assertArrayHasKey(JqueryAsset::class, $this->view->assetBundles);
         \PHPUnit_Framework_Assert::assertArrayHasKey(BootstrapAsset::class, $this->view->assetBundles);
 
-        $result = $this->view->renderFile('@terabytesoft/app/basic/tests/_data/main.php');
+        $result = $this->view->renderFile(codecept_data_dir() . '/views/main.php');
 
         \PHPUnit_Framework_Assert::assertRegexp('/site.css/', $result);
         \PHPUnit_Framework_Assert::assertRegexp('/yii.js/', $result);
@@ -91,15 +110,13 @@ class AppAssetTest extends \Codeception\Test\Unit
 
     /**
      * sourcesPublishVerifyFiles
-     *
-     * @param string $type
-     * @param array  $bundle
      */
-    private function sourcesPublishVerifyFiles($type, $bundle): void
+    protected function sourcesPublishVerifyFiles(string $type, AssetBundle $bundle): void
     {
         foreach ($bundle->$type as $filename) {
             $publishedFile = $bundle->basePath . DIRECTORY_SEPARATOR . $filename;
             $sourceFile = $bundle->sourcePath . DIRECTORY_SEPARATOR . $filename;
+
             \PHPUnit_Framework_Assert::assertFileExists($publishedFile);
             \PHPUnit_Framework_Assert::assertFileEquals($publishedFile, $sourceFile);
         }

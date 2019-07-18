@@ -10,7 +10,7 @@ use yii\bootstrap4\ActiveForm;
 use yii\bootstrap4\Html;
 use yii\captcha\Captcha;
 
-$this->title = $this->title = \Yii::t('AppBasic', 'Contact');
+$this->title = $this->title = \Yii::t('app.basic', 'Contact');
 
 ?>
 
@@ -29,15 +29,15 @@ $this->title = $this->title = \Yii::t('AppBasic', 'Contact');
         <br/>
 
         <?= Html::beginTag('p') ?>
-            <?= \Yii::t('AppBasic', 'Note that if you turn on the Yii debugger, you should be able '.
+            <?= \Yii::t('app.basic', 'Note that if you turn on the Yii debugger, you should be able '.
                 'to view the mail message on the mail panel of the debugger.').'</br></br>'
             ?>
             <?php if ($this->context->module->mailer->useFileTransport) : ?>
-                <?= \Yii::t('AppBasic', 'Because the application is in development mode, the email is not sent but '.
+                <?= \Yii::t('app.basic', 'Because the application is in development mode, the email is not sent but '.
                     'saved as a file under:').'</br>' ?>
                 <?= '<code>'.\Yii::getAlias($this->context->module->mailer->fileTransportPath).'</code>'.'</br></br>' ?>
                 <?= \Yii::t(
-                    'AppBasic',
+                    'app.basic',
                     'Please configure the <code>useFileTransport</code> property of the <code>mail</code> '.
                     'application component to be false to enable email sending.'
                 ) ?>
@@ -47,14 +47,14 @@ $this->title = $this->title = \Yii::t('AppBasic', 'Contact');
         <?= $this->context->module->session->setFlash(
             'success',
             \Yii::t(
-                'AppBasic',
+                'app.basic',
                 'Thank you for contacting us. We will respond to you as soon as possible.'
             )
         ) ?>
 
     <?php else : ?>
         <?= Html::beginTag('p', ['class' => 'text-center mb-4']) ?>
-            <?= \Yii::t('AppBasic', 'If you have business inquiries or other questions,<br/> please fill out the '.
+            <?= \Yii::t('app.basic', 'If you have business inquiries or other questions,<br/> please fill out the '.
                 'following form to contact us.<br/> <b>Thank you</b>.')
             ?>
         <?= Html::endTag('p') ?>
@@ -83,46 +83,46 @@ $this->title = $this->title = \Yii::t('AppBasic', 'Contact');
                 ->textInput([
                     'autofocus'   => true,
                     'oninput'     => 'this.setCustomValidity("")',
-                    'oninvalid'   => 'this.setCustomValidity("'.\Yii::t('AppBasic', 'Enter Username Here').'")',
-                    'placeholder' => \Yii::t('AppBasic', 'Username'),
+                    'oninvalid'   => 'this.setCustomValidity("'.\Yii::t('app.basic', 'Enter Username Here').'")',
+                    'placeholder' => \Yii::t('app.basic', 'Username'),
                     'required'    => (YII_ENV === 'test') ? false : true,
                     'tabindex'    => '1',
                 ])
-                ->label(\Yii::t('AppBasic', 'Username'))
+                ->label(\Yii::t('app.basic', 'Username'))
             ?>
 
             <?= $form->field($model, 'email')
                 ->textInput([
                     'oninput'     => 'this.setCustomValidity("")',
-                    'oninvalid'   => 'this.setCustomValidity("'.\Yii::t('AppBasic', 'Enter Email Here').'")',
-                    'placeholder' => \Yii::t('AppBasic', 'Email'),
+                    'oninvalid'   => 'this.setCustomValidity("'.\Yii::t('app.basic', 'Enter Email Here').'")',
+                    'placeholder' => \Yii::t('app.basic', 'Email'),
                     'required'    => (YII_ENV === 'test') ? false : true,
                     'tabindex'    => '2',
                 ])
-                ->label(\Yii::t('AppBasic', 'Email'))
+                ->label(\Yii::t('app.basic', 'Email'))
             ?>
 
             <?= $form->field($model, 'subject')
                 ->textInput([
                     'oninput'     => 'this.setCustomValidity("")',
-                    'oninvalid'   => 'this.setCustomValidity("'.\Yii::t('AppBasic', 'Enter Subject Here').'")',
-                    'placeholder' => \Yii::t('AppBasic', 'Subject'),
+                    'oninvalid'   => 'this.setCustomValidity("'.\Yii::t('app.basic', 'Enter Subject Here').'")',
+                    'placeholder' => \Yii::t('app.basic', 'Subject'),
                     'required'    => (YII_ENV === 'test') ? false : true,
                     'tabindex'    => '3',
                 ])
-                ->label(\Yii::t('AppBasic', 'Subject'))
+                ->label(\Yii::t('app.basic', 'Subject'))
             ?>
 
             <?= $form->field($model, 'body')
                 ->textarea([
                     'oninput'     => 'this.setCustomValidity("")',
-                    'oninvalid'   => 'this.setCustomValidity("'.\Yii::t('AppBasic', 'Enter Body Here').'")',
-                    'placeholder' => \Yii::t('AppBasic', 'Body'),
+                    'oninvalid'   => 'this.setCustomValidity("'.\Yii::t('app.basic', 'Enter Body Here').'")',
+                    'placeholder' => \Yii::t('app.basic', 'Body'),
                     'required'    => (YII_ENV === 'test') ? false : true,
                     'rows'        => 6,
                     'tabindex'    => '4',
                 ])
-                ->label(\Yii::t('AppBasic', 'Body'))
+                ->label(\Yii::t('app.basic', 'Body'))
             ?>
 
             <?= $form->field($model, 'verifyCode', [
@@ -131,24 +131,24 @@ $this->title = $this->title = \Yii::t('AppBasic', 'Contact');
                     Captcha::class,
                     [
                         'template' => '{input}<div class="text-center">'.'<b>'.
-                            \Yii::t('AppBasic', 'Captcha Code').':'.'</b>'.'{image}</div>',
+                            \Yii::t('app.basic', 'Captcha Code').':'.'</b>'.'{image}</div>',
                         'options' => [
                             'class'       => 'form-control',
                             'oninput'     => 'this.setCustomValidity("")',
                             'oninvalid'   => 'this.setCustomValidity("'.
-                                             \Yii::t('AppBasic', 'Enter Captcha Code Here').'")',
-                            'placeholder' => \Yii::t('AppBasic', 'Captcha Code'),
+                                             \Yii::t('app.basic', 'Enter Captcha Code Here').'")',
+                            'placeholder' => \Yii::t('app.basic', 'Captcha Code'),
                             'required'    => (YII_ENV === 'test') ? false : true,
                             'style'       => 'margin-bottom:10px',
                             'tabindex'    => '5',
                         ],
                     ]
                 )
-                ->label(\Yii::t('AppBasic', 'Captcha Code'))
+                ->label(\Yii::t('app.basic', 'Captcha Code'))
             ?>
 
             <?= Html::beginTag('div', ['class' => 'form-group']) ?>
-                <?= Html::submitButton(\Yii::t('AppBasic', 'Contact us'), [
+                <?= Html::submitButton(\Yii::t('app.basic', 'Contact us'), [
                         'class' => 'btn btn-lg btn-primary btn-block', 'name' => 'contact-button', 'tabindex' => '6',
                     ]) ?>
             <?= Html::endTag('div') ?>

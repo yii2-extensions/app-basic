@@ -1,11 +1,11 @@
 <?php
 
-namespace Terabytesoft\App\Basic;
+namespace terabytesoft\app\basic\tests;
 
-use Terabytesoft\App\Basic\FunctionalTester;
+use terabytesoft\app\basic\tests\FunctionalTester;
 
 /**
- * Class ContactFormCest.
+ * Class ContactFormCest
  *
  * Functional tests for codeception
  */
@@ -13,11 +13,10 @@ class ContactFormCest
 {
     /**
      * _before
-     *
-     * @param FunctionalTester $I
      */
     public function _before(FunctionalTester $I)
     {
+        $I->wantTo('ensure that contact page works.');
         $I->amOnPage('/site/contact');
     }
 
@@ -28,29 +27,27 @@ class ContactFormCest
      */
     public function testContactFormPageTest(FunctionalTester $I): void
     {
-        $I->see(\Yii::t('AppBasic', 'Contact'), 'h1');
+        $I->expectTo('see page contact.');
+        $I->see(\Yii::t('app.basic', 'Contact'), 'h1');
     }
 
     /**
      * testContactFormSubmitFormEmptyDataTest
-     *
-     * @param FunctionalTester $I
      */
     public function testContactFormSubmitFormEmptyDataTest(FunctionalTester $I): void
     {
         $I->amGoingTo('contact form submit form with empty data.');
         $I->submitForm('#contact-form', []);
+
         $I->expectTo('see validations errors.');
-        $I->see(\Yii::t('AppBasic', 'Name cannot be blank.'), '.invalid-feedback');
-        $I->see(\Yii::t('AppBasic', 'Email cannot be blank.'), '.invalid-feedback');
-        $I->see(\Yii::t('AppBasic', 'Subject cannot be blank.'), '.invalid-feedback');
-        $I->see(\Yii::t('AppBasic', 'Body cannot be blank.'), '.invalid-feedback');
+        $I->see(\Yii::t('app.basic', 'Name cannot be blank.'), '.invalid-feedback');
+        $I->see(\Yii::t('app.basic', 'Email cannot be blank.'), '.invalid-feedback');
+        $I->see(\Yii::t('app.basic', 'Subject cannot be blank.'), '.invalid-feedback');
+        $I->see(\Yii::t('app.basic', 'Body cannot be blank.'), '.invalid-feedback');
     }
 
     /**
      * testContactFormSubmitFormEmailWrongDataTest
-     *
-     * @param FunctionalTester $I
      */
     public function testContactFormSubmitFormEmailWrongDataTest(FunctionalTester $I): void
     {
@@ -62,18 +59,17 @@ class ContactFormCest
             'ContactForm[body]' => 'test content',
             'ContactForm[verifyCode]' => 'testme',
         ]);
+
         $I->expectTo('Email is not a valid email address');
         $I->dontSee('Name cannot be blank', '.invalid-feedback');
-        $I->see(\Yii::t('AppBasic', 'Email is not a valid email address.'), '.invalid-feedback');
-        $I->dontSee(\Yii::t('AppBasic', 'Subject cannot be blank'), '.invalid-feedback');
-        $I->dontSee(\Yii::t('AppBasic', 'Body cannot be blank'), '.invalid-feedback');
-        $I->dontSee(\Yii::t('AppBasic', 'The verification code is incorrect'), '.invalid-feedback');
+        $I->see(\Yii::t('app.basic', 'Email is not a valid email address.'), '.invalid-feedback');
+        $I->dontSee(\Yii::t('app.basic', 'Subject cannot be blank'), '.invalid-feedback');
+        $I->dontSee(\Yii::t('app.basic', 'Body cannot be blank'), '.invalid-feedback');
+        $I->dontSee(\Yii::t('app.basic', 'The verification code is incorrect'), '.invalid-feedback');
     }
 
     /**
      * testContactFormSubmitFormSuccessDataTest
-     *
-     * @param FunctionalTester $I
      */
     public function testContactFormSubmitFormSuccessDataTest(FunctionalTester $I): void
     {
@@ -85,10 +81,11 @@ class ContactFormCest
             'ContactForm[body]' => 'test content',
             'ContactForm[verifyCode]' => 'testme',
         ]);
+
         $I->expectTo('success.');
         $I->dontSeeElement('#contact-form');
         $I->see(\Yii::t(
-            'AppBasic',
+            'app.basic',
             'Thank you for contacting us. We will respond to you as soon as possible.'
         ), '.alert');
     }

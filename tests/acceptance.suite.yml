@@ -6,10 +6,9 @@
 
 actor: AcceptanceTester
 modules:
-modules:
     enabled:
         - WebDriver
-        - \Terabytesoft\App\Basic\Helper\Acceptance
+        - \terabytesoft\app\basic\tests\Helper\Acceptance
     config:
         WebDriver:
             url: 'http://127.0.0.1:8080/'

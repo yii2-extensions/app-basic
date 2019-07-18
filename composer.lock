@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "874afaa267a590d3632a43458451e64f",
+    "content-hash": "06c834fefc990d548a6581d5033fd46d",
     "packages": [
         {
             "name": "bower-asset/inputmask",
@@ -384,23 +384,23 @@
         },
         {
             "name": "ezyang/htmlpurifier",
-            "version": "v4.10.0",
+            "version": "v4.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezyang/htmlpurifier.git",
-                "reference": "d85d39da4576a6934b72480be6978fb10c860021"
+                "reference": "83ab08bc1af7d808a9e0fbf024f1c24bfd73c0a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/d85d39da4576a6934b72480be6978fb10c860021",
-                "reference": "d85d39da4576a6934b72480be6978fb10c860021",
+                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/83ab08bc1af7d808a9e0fbf024f1c24bfd73c0a7",
+                "reference": "83ab08bc1af7d808a9e0fbf024f1c24bfd73c0a7",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2"
             },
             "require-dev": {
-                "simpletest/simpletest": "^1.1"
+                "simpletest/simpletest": "dev-master#72de02a7b80c6bb8864ef9bf66d41d2f58f826bd"
             },
             "type": "library",
             "autoload": {
@@ -413,7 +413,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL"
+                "LGPL-2.1-or-later"
             ],
             "authors": [
                 {
@@ -427,7 +427,7 @@
             "keywords": [
                 "html"
             ],
-            "time": "2018-02-23T01:58:20+00:00"
+            "time": "2019-07-14T18:58:38+00:00"
         },
         {
             "name": "npm-asset/bootstrap",
@@ -783,6 +783,89 @@
             "time": "2019-02-06T07:57:58+00:00"
         },
         {
+            "name": "terabytesoftw/helper-mailer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/terabytesoftw/helper-mailer.git",
+                "reference": "2631b7b7906ceaae28b32609adbbdf7fd9ed8899"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/terabytesoftw/helper-mailer/zipball/2631b7b7906ceaae28b32609adbbdf7fd9ed8899",
+                "reference": "2631b7b7906ceaae28b32609adbbdf7fd9ed8899",
+                "shasum": ""
+            },
+            "require": {
+                "oomphinc/composer-installers-extender": "^1.1",
+                "php": "^7.2.0",
+                "yiisoft/yii2": "^2.0.20",
+                "yiisoft/yii2-swiftmailer": "^2.1.2"
+            },
+            "require-dev": {
+                "codeception/c3": "2.*",
+                "codeception/codeception": "^3.0",
+                "dms/phpunit-arraysubset-asserts": "^0.1.0",
+                "hiqdev/composer-config-plugin": "^1.0@dev",
+                "monolog/monolog": "*",
+                "yiisoft/yii2-debug": "~2.1.0",
+                "yiisoft/yii2-faker": "~2.0.0",
+                "yiisoft/yii2-gii": "~2.1.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                },
+                "config-plugin": {
+                    "params": [
+                        "config/maileruser.php"
+                    ],
+                    "tests": [
+                        "config/test.php"
+                    ],
+                    "web": [
+                        "config/web.php"
+                    ]
+                },
+                "installer-types": [
+                    "bower-asset",
+                    "npm-asset"
+                ],
+                "installer-paths": {
+                    "./node_modules/{$name}": [
+                        "type:bower-asset",
+                        "type:npm-asset"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "terabytesoft\\helpers\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Wilmer Arambula",
+                    "email": "wilmer.arambula@gmail.com"
+                }
+            ],
+            "description": "Component Mailer User Core",
+            "homepage": "https://github.com/terabytesoftw/helper-mailer",
+            "keywords": [
+                "component",
+                "core",
+                "mailer",
+                "user",
+                "yii"
+            ],
+            "time": "2019-07-15T22:34:00+00:00"
+        },
+        {
             "name": "terabytesoftw/widget-alert",
             "version": "dev-master",
             "source": {
@@ -851,16 +934,16 @@
         },
         {
             "name": "yiisoft/yii2",
-            "version": "2.0.21",
+            "version": "2.0.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "7e4622252c5f272373e1339a47d331e4a55e9591"
+                "reference": "d430bf78cf59e341bf4a1cb401a4ae71a889a492"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/7e4622252c5f272373e1339a47d331e4a55e9591",
-                "reference": "7e4622252c5f272373e1339a47d331e4a55e9591",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/d430bf78cf59e341bf4a1cb401a4ae71a889a492",
+                "reference": "d430bf78cf59e341bf4a1cb401a4ae71a889a492",
                 "shasum": ""
             },
             "require": {
@@ -947,20 +1030,20 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2019-06-18T14:25:08+00:00"
+            "time": "2019-07-16T19:44:09+00:00"
         },
         {
             "name": "yiisoft/yii2-bootstrap4",
-            "version": "2.0.4",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-bootstrap4.git",
-                "reference": "9024a36278013047d45435aa0b29ec2eed2867ec"
+                "reference": "30317f483b38fdac3476583d68e619d3b3393a4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap4/zipball/9024a36278013047d45435aa0b29ec2eed2867ec",
-                "reference": "9024a36278013047d45435aa0b29ec2eed2867ec",
+                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap4/zipball/30317f483b38fdac3476583d68e619d3b3393a4d",
+                "reference": "30317f483b38fdac3476583d68e619d3b3393a4d",
                 "shasum": ""
             },
             "require": {
@@ -1016,27 +1099,28 @@
                 "bootstrap4",
                 "yii2"
             ],
-            "time": "2019-06-11T12:21:55+00:00"
+            "time": "2019-07-02T10:22:59+00:00"
         },
         {
             "name": "yiisoft/yii2-composer",
-            "version": "2.0.7",
+            "version": "2.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-composer.git",
-                "reference": "1439e78be1218c492e6cde251ed87d3f128b9534"
+                "reference": "5c7ca9836cf80b34db265332a7f2f8438eb469b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/1439e78be1218c492e6cde251ed87d3f128b9534",
-                "reference": "1439e78be1218c492e6cde251ed87d3f128b9534",
+                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/5c7ca9836cf80b34db265332a7f2f8438eb469b9",
+                "reference": "5c7ca9836cf80b34db265332a7f2f8438eb469b9",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.0"
             },
             "require-dev": {
-                "composer/composer": "^1.0"
+                "composer/composer": "^1.0",
+                "phpunit/phpunit": "<7"
             },
             "type": "composer-plugin",
             "extra": {
@@ -1070,7 +1154,7 @@
                 "extension installer",
                 "yii2"
             ],
-            "time": "2018-07-05T15:44:47+00:00"
+            "time": "2019-07-16T13:22:30+00:00"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
@@ -1370,46 +1454,6 @@
             "time": "2019-02-27T12:58:57+00:00"
         },
         {
-            "name": "codeception/specify",
-            "version": "0.4.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Codeception/Specify.git",
-                "reference": "21b586f503ca444aa519dd9cafb32f113a05f286"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Specify/zipball/21b586f503ca444aa519dd9cafb32f113a05f286",
-                "reference": "21b586f503ca444aa519dd9cafb32f113a05f286",
-                "shasum": ""
-            },
-            "require": {
-                "myclabs/deep-copy": "~1.1",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Codeception\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Bodnarchuk",
-                    "email": "davert.php@mailican.com"
-                }
-            ],
-            "description": "BDD code blocks for PHPUnit and Codeception",
-            "time": "2016-10-21T09:42:00+00:00"
-        },
-        {
             "name": "codeception/stub",
             "version": "2.1.0",
             "source": {
@@ -1438,46 +1482,6 @@
             ],
             "description": "Flexible Stub wrapper for PHPUnit's Mock Builder",
             "time": "2019-03-02T15:35:10+00:00"
-        },
-        {
-            "name": "codeception/verify",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Codeception/Verify.git",
-                "reference": "f45b39025b3f5cfd9a9d8fb992432885ff5380c1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Verify/zipball/f45b39025b3f5cfd9a9d8fb992432885ff5380c1",
-                "reference": "f45b39025b3f5cfd9a9d8fb992432885ff5380c1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">= 7.0",
-                "phpunit/phpunit": "> 6.0"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/Codeception/function.php"
-                ],
-                "psr-4": {
-                    "Codeception\\": "src\\Codeception"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Bodnarchuk",
-                    "email": "davert@codeception.com"
-                }
-            ],
-            "description": "BDD assertion library for PHPUnit",
-            "time": "2017-11-12T01:51:59+00:00"
         },
         {
             "name": "dms/phpunit-arraysubset-asserts",
@@ -1804,33 +1808,37 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.5.2",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "9f83dded91781a01c63574e387eaa769be769115"
+                "reference": "239400de7a173fe9901b9ac7c06497751f00727a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/9f83dded91781a01c63574e387eaa769be769115",
-                "reference": "9f83dded91781a01c63574e387eaa769be769115",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/239400de7a173fe9901b9ac7c06497751f00727a",
+                "reference": "239400de7a173fe9901b9ac7c06497751f00727a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0",
                 "psr/http-message": "~1.0",
-                "ralouphie/getallheaders": "^2.0.5"
+                "ralouphie/getallheaders": "^2.0.5 || ^3.0.0"
             },
             "provide": {
                 "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
+                "ext-zlib": "*",
                 "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
+            },
+            "suggest": {
+                "zendframework/zend-httphandlerrunner": "Emit PSR-7 responses"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.5-dev"
+                    "dev-master": "1.6-dev"
                 }
             },
             "autoload": {
@@ -1867,7 +1875,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2018-12-04T20:46:45+00:00"
+            "time": "2019-07-01T23:21:34+00:00"
         },
         {
             "name": "hiqdev/composer-config-plugin",
@@ -1875,17 +1883,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hiqdev/composer-config-plugin.git",
-                "reference": "820a9e6804f8e955597d81eced85dd8d15577000"
+                "reference": "77a8eac56f924377efd69be823832db7c444174e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hiqdev/composer-config-plugin/zipball/820a9e6804f8e955597d81eced85dd8d15577000",
-                "reference": "820a9e6804f8e955597d81eced85dd8d15577000",
+                "url": "https://api.github.com/repos/hiqdev/composer-config-plugin/zipball/77a8eac56f924377efd69be823832db7c444174e",
+                "reference": "77a8eac56f924377efd69be823832db7c444174e",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.0",
-                "php": ">=7.0.0"
+                "php": ">=7.1",
+                "riimu/kit-phpencoder": "^2.4"
             },
             "require-dev": {
                 "composer/composer": "~1.0@dev"
@@ -1944,7 +1953,7 @@
                 "config",
                 "plugin"
             ],
-            "time": "2019-05-12T18:15:35+00:00"
+            "time": "2019-07-04T15:46:39+00:00"
         },
         {
             "name": "hoa/consistency",
@@ -2622,6 +2631,20 @@
             "time": "2019-04-07T13:18:21+00:00"
         },
         {
+            "name": "npm-asset/fortawesome--fontawesome-free",
+            "version": "5.10.0-patch11",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-5.10.0-11.tgz",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "npm-asset",
+            "license": [
+                "(CC-BY-4.0 AND OFL-1.1 AND MIT)"
+            ]
+        },
+        {
             "name": "phar-io/manifest",
             "version": "1.0.3",
             "source": {
@@ -2978,16 +3001,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "7.0.5",
+            "version": "7.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "aed67b57d459dcab93e84a5c9703d3deb5025dff"
+                "reference": "d471d0d2b529a67c6a722dd446c4ec90881ac315"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/aed67b57d459dcab93e84a5c9703d3deb5025dff",
-                "reference": "aed67b57d459dcab93e84a5c9703d3deb5025dff",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/d471d0d2b529a67c6a722dd446c4ec90881ac315",
+                "reference": "d471d0d2b529a67c6a722dd446c4ec90881ac315",
                 "shasum": ""
             },
             "require": {
@@ -2996,17 +3019,17 @@
                 "php": "^7.2",
                 "phpunit/php-file-iterator": "^2.0.2",
                 "phpunit/php-text-template": "^1.2.1",
-                "phpunit/php-token-stream": "^3.0.1",
+                "phpunit/php-token-stream": "^3.0.2",
                 "sebastian/code-unit-reverse-lookup": "^1.0.1",
-                "sebastian/environment": "^4.1",
+                "sebastian/environment": "^4.2.2",
                 "sebastian/version": "^2.0.1",
-                "theseer/tokenizer": "^1.1"
+                "theseer/tokenizer": "^1.1.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8.0"
+                "phpunit/phpunit": "^8.2.2"
             },
             "suggest": {
-                "ext-xdebug": "^2.6.1"
+                "ext-xdebug": "^2.7.2"
             },
             "type": "library",
             "extra": {
@@ -3037,7 +3060,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2019-06-06T12:28:18+00:00"
+            "time": "2019-07-08T05:29:42+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -3181,16 +3204,16 @@
         },
         {
             "name": "phpunit/php-token-stream",
-            "version": "3.0.1",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "c99e3be9d3e85f60646f152f9002d46ed7770d18"
+                "reference": "c4a66b97f040e3e20b3aa2a243230a1c3a9f7c8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/c99e3be9d3e85f60646f152f9002d46ed7770d18",
-                "reference": "c99e3be9d3e85f60646f152f9002d46ed7770d18",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/c4a66b97f040e3e20b3aa2a243230a1c3a9f7c8c",
+                "reference": "c4a66b97f040e3e20b3aa2a243230a1c3a9f7c8c",
                 "shasum": ""
             },
             "require": {
@@ -3226,20 +3249,20 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2018-10-30T05:52:18+00:00"
+            "time": "2019-07-08T05:24:54+00:00"
         },
         {
             "name": "phpunit/phpunit",
-            "version": "8.2.3",
+            "version": "8.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "f67ca36860ebca7224d4573f107f79bd8ed0ba03"
+                "reference": "c1b8534b3730f20f58600124129197bf1183dc92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/f67ca36860ebca7224d4573f107f79bd8ed0ba03",
-                "reference": "f67ca36860ebca7224d4573f107f79bd8ed0ba03",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c1b8534b3730f20f58600124129197bf1183dc92",
+                "reference": "c1b8534b3730f20f58600124129197bf1183dc92",
                 "shasum": ""
             },
             "require": {
@@ -3266,7 +3289,7 @@
                 "sebastian/global-state": "^3.0.0",
                 "sebastian/object-enumerator": "^3.0.3",
                 "sebastian/resource-operations": "^2.0.1",
-                "sebastian/type": "^1.1.0",
+                "sebastian/type": "^1.1.3",
                 "sebastian/version": "^2.0.1"
             },
             "require-dev": {
@@ -3309,7 +3332,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2019-06-19T12:03:56+00:00"
+            "time": "2019-07-15T06:26:24+00:00"
         },
         {
             "name": "psr/container",
@@ -3459,24 +3482,24 @@
         },
         {
             "name": "ralouphie/getallheaders",
-            "version": "2.0.5",
+            "version": "3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ralouphie/getallheaders.git",
-                "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa"
+                "reference": "120b605dfeb996808c31b6477290a714d356e822"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
-                "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
+                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/120b605dfeb996808c31b6477290a714d356e822",
+                "reference": "120b605dfeb996808c31b6477290a714d356e822",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3"
+                "php": ">=5.6"
             },
             "require-dev": {
-                "phpunit/phpunit": "~3.7.0",
-                "satooshi/php-coveralls": ">=1.0"
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^5 || ^6.5"
             },
             "type": "library",
             "autoload": {
@@ -3495,7 +3518,58 @@
                 }
             ],
             "description": "A polyfill for getallheaders.",
-            "time": "2016-02-11T07:05:27+00:00"
+            "time": "2019-03-08T08:55:37+00:00"
+        },
+        {
+            "name": "riimu/kit-phpencoder",
+            "version": "v2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Riimu/Kit-PHPEncoder.git",
+                "reference": "7e876d25019c3f6c23321ab5ac1a55c72fcd0933"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Riimu/Kit-PHPEncoder/zipball/7e876d25019c3f6c23321ab5ac1a55c72fcd0933",
+                "reference": "7e876d25019c3f6c23321ab5ac1a55c72fcd0933",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.2 || ^6.5 || ^5.7"
+            },
+            "suggest": {
+                "ext-gmp": "To convert GMP numbers into PHP code"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Riimu\\Kit\\PHPEncoder\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Riikka Kalliomäki",
+                    "email": "riikka.kalliomaki@gmail.com",
+                    "homepage": "http://riimu.net"
+                }
+            ],
+            "description": "Highly customizable alternative to var_export for PHP code generation",
+            "homepage": "http://kit.riimu.net",
+            "keywords": [
+                "code",
+                "encoder",
+                "export",
+                "generator",
+                "variable"
+            ],
+            "time": "2018-07-03T12:46:23+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -4025,16 +4099,16 @@
         },
         {
             "name": "sebastian/type",
-            "version": "1.1.2",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/type.git",
-                "reference": "251ca774d58181fe1d3eda68843264eaae7e07ef"
+                "reference": "3aaaa15fa71d27650d62a948be022fe3b48541a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/251ca774d58181fe1d3eda68843264eaae7e07ef",
-                "reference": "251ca774d58181fe1d3eda68843264eaae7e07ef",
+                "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/3aaaa15fa71d27650d62a948be022fe3b48541a3",
+                "reference": "3aaaa15fa71d27650d62a948be022fe3b48541a3",
                 "shasum": ""
             },
             "require": {
@@ -4067,7 +4141,7 @@
             ],
             "description": "Collection of value objects that represent the types of the PHP type system",
             "homepage": "https://github.com/sebastianbergmann/type",
-            "time": "2019-06-19T06:39:12+00:00"
+            "time": "2019-07-02T08:10:15+00:00"
         },
         {
             "name": "sebastian/version",
@@ -4820,6 +4894,633 @@
             "time": "2019-04-06T14:04:46+00:00"
         },
         {
+            "name": "terabytesoftw/app-user",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/terabytesoftw/app-user.git",
+                "reference": "4bbc5cef328694d4d0d56292e15aa765a31c6da3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/terabytesoftw/app-user/zipball/4bbc5cef328694d4d0d56292e15aa765a31c6da3",
+                "reference": "4bbc5cef328694d4d0d56292e15aa765a31c6da3",
+                "shasum": ""
+            },
+            "require": {
+                "ezyang/htmlpurifier": "^4.6",
+                "oomphinc/composer-installers-extender": "^1.1",
+                "php": "^7.2.0",
+                "terabytesoftw/asset-floatlabel": "^1.0@dev",
+                "terabytesoftw/asset-fontawesome": "^1.0@dev",
+                "terabytesoftw/asset-user": "^1.0@dev",
+                "terabytesoftw/events-user": "^1.0@dev",
+                "terabytesoftw/helper-password": "^1.0@dev",
+                "terabytesoftw/helper-timezone": "^1.0@dev",
+                "terabytesoftw/mailer-user": "^1.0@dev",
+                "yiisoft/yii2": "^2.0.20"
+            },
+            "require-dev": {
+                "codeception/c3": "2.*",
+                "codeception/codeception": "^3.0",
+                "codeception/specify": "*",
+                "codeception/verify": "*",
+                "dms/phpunit-arraysubset-asserts": "^0.1.0",
+                "hiqdev/composer-config-plugin": "^1.0@dev",
+                "monolog/monolog": "*",
+                "terabytesoftw/app-basic": "^1.0@dev",
+                "yiisoft/yii2-debug": "~2.1.0",
+                "yiisoft/yii2-faker": "~2.0.0",
+                "yiisoft/yii2-gii": "~2.1.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                },
+                "config-plugin": {
+                    "defines": [
+                        "config/defines.php",
+                        "config/events/admincontroller.php",
+                        "config/events/recoverycontroller.php",
+                        "config/events/registrationcontroller.php",
+                        "config/events/securitycontroller.php",
+                        "config/events/settingscontroller.php"
+                    ],
+                    "params": [
+                        "config/appuser.php",
+                        "config/params.php"
+                    ],
+                    "console": [
+                        "config/console.php"
+                    ],
+                    "tests": [
+                        "config/test.php"
+                    ],
+                    "web": [
+                        "config/web.php"
+                    ]
+                },
+                "installer-types": [
+                    "bower-asset",
+                    "npm-asset"
+                ],
+                "installer-paths": {
+                    "./node_modules/{$name}": [
+                        "type:bower-asset",
+                        "type:npm-asset"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "terabytesoft\\app\\user\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Wilmer Arambula",
+                    "email": "wilmer.arambula@gmail.com"
+                }
+            ],
+            "description": "Flexible user registration and authentication module for Yii 2.0",
+            "keywords": [
+                "User management",
+                "yii"
+            ],
+            "time": "2019-07-17T13:34:11+00:00"
+        },
+        {
+            "name": "terabytesoftw/asset-floatlabel",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/terabytesoftw/asset-floatlabel.git",
+                "reference": "47a62154c21881256aadb6c938586d2ffd08fdbc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/terabytesoftw/asset-floatlabel/zipball/47a62154c21881256aadb6c938586d2ffd08fdbc",
+                "reference": "47a62154c21881256aadb6c938586d2ffd08fdbc",
+                "shasum": ""
+            },
+            "require": {
+                "oomphinc/composer-installers-extender": "^1.1",
+                "php": "^7.2.0",
+                "yiisoft/yii2": "^2.0.20",
+                "yiisoft/yii2-bootstrap4": "^2.0.3"
+            },
+            "require-dev": {
+                "codeception/c3": "2.*",
+                "codeception/codeception": "^3.0",
+                "codeception/specify": "*",
+                "codeception/verify": "*",
+                "dms/phpunit-arraysubset-asserts": "^0.1.0",
+                "hiqdev/composer-config-plugin": "^1.0@dev",
+                "monolog/monolog": "*",
+                "yiisoft/yii2-debug": "~2.1.0",
+                "yiisoft/yii2-faker": "~2.0.0",
+                "yiisoft/yii2-gii": "~2.1.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                },
+                "installer-types": [
+                    "bower-asset",
+                    "npm-asset"
+                ],
+                "installer-paths": {
+                    "./node_modules/{$name}": [
+                        "type:bower-asset",
+                        "type:npm-asset"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "terabytesoft\\assets\\floatlabel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Wilmer Arambula",
+                    "email": "wilmer.arambula@gmail.com"
+                }
+            ],
+            "description": "Asset Floating Label Bootstrap4",
+            "homepage": "https://github.com/terabytesoftw/asset-floatlabel",
+            "keywords": [
+                "asset",
+                "bootstrap4",
+                "floatlabel"
+            ],
+            "time": "2019-07-09T21:12:08+00:00"
+        },
+        {
+            "name": "terabytesoftw/asset-fontawesome",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/terabytesoftw/asset-fontawesome.git",
+                "reference": "5e0c2e798f7c16afe385f364626305334f90d514"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/terabytesoftw/asset-fontawesome/zipball/5e0c2e798f7c16afe385f364626305334f90d514",
+                "reference": "5e0c2e798f7c16afe385f364626305334f90d514",
+                "shasum": ""
+            },
+            "require": {
+                "npm-asset/fortawesome--fontawesome-free": "^5.6.3",
+                "oomphinc/composer-installers-extender": "^1.1",
+                "php": "^7.2.0",
+                "yiisoft/yii2": "^2.0.20"
+            },
+            "require-dev": {
+                "codeception/c3": "2.*",
+                "codeception/codeception": "^3.0",
+                "codeception/specify": "*",
+                "codeception/verify": "*",
+                "dms/phpunit-arraysubset-asserts": "^0.1.0",
+                "hiqdev/composer-config-plugin": "^1.0@dev",
+                "monolog/monolog": "*",
+                "yiisoft/yii2-debug": "~2.1.0",
+                "yiisoft/yii2-gii": "~2.1.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                },
+                "config-plugin": {
+                    "params": [
+                        "config/assetfontawesome.php"
+                    ],
+                    "tests": [
+                        "config/test.php"
+                    ]
+                },
+                "installer-types": [
+                    "bower-asset",
+                    "npm-asset"
+                ],
+                "installer-paths": {
+                    "./node_modules/{$name}": [
+                        "type:bower-asset",
+                        "type:npm-asset"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "terabytesoft\\assets\\fontawesome\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Wilmer Arambula",
+                    "email": "wilmer.arambula@gmail.com"
+                }
+            ],
+            "description": "Assets Font Awesome Free",
+            "homepage": "https://github.com/terabytesoftw/asset-fontawesome",
+            "keywords": [
+                "assets",
+                "font awesome",
+                "free"
+            ],
+            "time": "2019-07-05T21:01:10+00:00"
+        },
+        {
+            "name": "terabytesoftw/asset-user",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/terabytesoftw/asset-user.git",
+                "reference": "dac29f69a4dd1567ec2612eb50b6e3c3aa3b88e2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/terabytesoftw/asset-user/zipball/dac29f69a4dd1567ec2612eb50b6e3c3aa3b88e2",
+                "reference": "dac29f69a4dd1567ec2612eb50b6e3c3aa3b88e2",
+                "shasum": ""
+            },
+            "require": {
+                "oomphinc/composer-installers-extender": "^1.1",
+                "php": "^7.2.0",
+                "yiisoft/yii2": "^2.0.20",
+                "yiisoft/yii2-bootstrap4": "^2.0.3"
+            },
+            "require-dev": {
+                "codeception/c3": "2.*",
+                "codeception/codeception": "^3.0",
+                "codeception/specify": "*",
+                "codeception/verify": "*",
+                "dms/phpunit-arraysubset-asserts": "^0.1.0",
+                "hiqdev/composer-config-plugin": "^1.0@dev",
+                "monolog/monolog": "*",
+                "yiisoft/yii2-debug": "~2.1.0",
+                "yiisoft/yii2-faker": "~2.0.0",
+                "yiisoft/yii2-gii": "~2.1.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                },
+                "installer-types": [
+                    "bower-asset",
+                    "npm-asset"
+                ],
+                "installer-paths": {
+                    "./node_modules/{$name}": [
+                        "type:bower-asset",
+                        "type:npm-asset"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "terabytesoft\\assets\\user\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Wilmer Arambula",
+                    "email": "wilmer.arambula@gmail.com"
+                }
+            ],
+            "description": "Assets User Core Bootstrap 4",
+            "homepage": "https://github.com/terabytesoftw/asset-user",
+            "keywords": [
+                "assets",
+                "bootstrap4",
+                "core",
+                "user",
+                "yii"
+            ],
+            "time": "2019-07-09T21:09:52+00:00"
+        },
+        {
+            "name": "terabytesoftw/events-user",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/terabytesoftw/events-user.git",
+                "reference": "4c57258dcface9329a169fbaae5dad72ff9c6809"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/terabytesoftw/events-user/zipball/4c57258dcface9329a169fbaae5dad72ff9c6809",
+                "reference": "4c57258dcface9329a169fbaae5dad72ff9c6809",
+                "shasum": ""
+            },
+            "require": {
+                "oomphinc/composer-installers-extender": "^1.1",
+                "php": "^7.2.0",
+                "yiisoft/yii2": "^2.0.20"
+            },
+            "require-dev": {
+                "codeception/c3": "2.*",
+                "codeception/codeception": "^3.0",
+                "dms/phpunit-arraysubset-asserts": "^0.1.0",
+                "hiqdev/composer-config-plugin": "^1.0@dev",
+                "monolog/monolog": "*",
+                "yiisoft/yii2-debug": "~2.1.0",
+                "yiisoft/yii2-faker": "~2.0.0",
+                "yiisoft/yii2-gii": "~2.1.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                },
+                "installer-types": [
+                    "bower-asset",
+                    "npm-asset"
+                ],
+                "installer-paths": {
+                    "./node_modules/{$name}": [
+                        "type:bower-asset",
+                        "type:npm-asset"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "terabytesoft\\events\\user\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Wilmer Arambula",
+                    "email": "wilmer.arambula@gmail.com"
+                }
+            ],
+            "description": "Events User Core",
+            "homepage": "https://github.com/terabytesoftw/events-user",
+            "keywords": [
+                "core",
+                "events",
+                "user",
+                "yii"
+            ],
+            "time": "2019-07-12T18:05:41+00:00"
+        },
+        {
+            "name": "terabytesoftw/helper-password",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/terabytesoftw/helper-password.git",
+                "reference": "9dc93405aec88f802615b4c7d5347859cf4689f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/terabytesoftw/helper-password/zipball/9dc93405aec88f802615b4c7d5347859cf4689f9",
+                "reference": "9dc93405aec88f802615b4c7d5347859cf4689f9",
+                "shasum": ""
+            },
+            "require": {
+                "oomphinc/composer-installers-extender": "^1.1",
+                "php": "^7.2.0",
+                "yiisoft/yii2": "^2.0.20"
+            },
+            "require-dev": {
+                "codeception/c3": "2.*",
+                "codeception/codeception": "^3.0",
+                "codeception/specify": "*",
+                "codeception/verify": "*",
+                "dms/phpunit-arraysubset-asserts": "^0.1.0",
+                "hiqdev/composer-config-plugin": "^1.0@dev",
+                "monolog/monolog": "*",
+                "yiisoft/yii2-debug": "~2.1.0",
+                "yiisoft/yii2-faker": "~2.0.0",
+                "yiisoft/yii2-gii": "~2.1.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                },
+                "config-plugin": {
+                    "params": [
+                        "config/helperpassword.php"
+                    ],
+                    "tests": [
+                        "config/test.php"
+                    ]
+                },
+                "installer-types": [
+                    "bower-asset",
+                    "npm-asset"
+                ],
+                "installer-paths": {
+                    "./node_modules/{$name}": [
+                        "type:bower-asset",
+                        "type:npm-asset"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "terabytesoft\\helpers\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Wilmer Arambula",
+                    "email": "wilmer.arambula@gmail.com"
+                }
+            ],
+            "description": "Template giyhub yii2",
+            "homepage": "https://github.com/terabytesoftw/helper-password",
+            "keywords": [
+                "github",
+                "template",
+                "yii"
+            ],
+            "time": "2019-07-12T18:01:24+00:00"
+        },
+        {
+            "name": "terabytesoftw/helper-timezone",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/terabytesoftw/helper-timezone.git",
+                "reference": "1974c154421c08f6c6921be770ad6530fd4164c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/terabytesoftw/helper-timezone/zipball/1974c154421c08f6c6921be770ad6530fd4164c4",
+                "reference": "1974c154421c08f6c6921be770ad6530fd4164c4",
+                "shasum": ""
+            },
+            "require": {
+                "oomphinc/composer-installers-extender": "^1.1",
+                "php": "^7.2.0",
+                "yiisoft/yii2": "^2.0.20"
+            },
+            "require-dev": {
+                "codeception/c3": "2.*",
+                "codeception/codeception": "^3.0",
+                "dms/phpunit-arraysubset-asserts": "^0.1.0",
+                "hiqdev/composer-config-plugin": "^1.0@dev",
+                "monolog/monolog": "*",
+                "yiisoft/yii2-debug": "~2.1.0",
+                "yiisoft/yii2-faker": "~2.0.0",
+                "yiisoft/yii2-gii": "~2.1.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                },
+                "installer-types": [
+                    "bower-asset",
+                    "npm-asset"
+                ],
+                "installer-paths": {
+                    "./node_modules/{$name}": [
+                        "type:bower-asset",
+                        "type:npm-asset"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "terabytesoft\\helpers\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Wilmer Arambula",
+                    "email": "wilmer.arambula@gmail.com"
+                }
+            ],
+            "description": "Helper TimeZone",
+            "homepage": "https://github.com/terabytesoftw/helper-timezone",
+            "keywords": [
+                "helper",
+                "timezone",
+                "yii"
+            ],
+            "time": "2019-07-15T17:35:23+00:00"
+        },
+        {
+            "name": "terabytesoftw/mailer-user",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/terabytesoftw/mailer-user.git",
+                "reference": "c57325d4de9cfa8d7c905a457f9b233159a6a8ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/terabytesoftw/mailer-user/zipball/c57325d4de9cfa8d7c905a457f9b233159a6a8ef",
+                "reference": "c57325d4de9cfa8d7c905a457f9b233159a6a8ef",
+                "shasum": ""
+            },
+            "require": {
+                "oomphinc/composer-installers-extender": "^1.1",
+                "php": "^7.2.0",
+                "yiisoft/yii2": "^2.0.20",
+                "yiisoft/yii2-swiftmailer": "^2.1.2"
+            },
+            "require-dev": {
+                "codeception/c3": "2.*",
+                "codeception/codeception": "^3.0",
+                "dms/phpunit-arraysubset-asserts": "^0.1.0",
+                "hiqdev/composer-config-plugin": "^1.0@dev",
+                "monolog/monolog": "*",
+                "yiisoft/yii2-debug": "~2.1.0",
+                "yiisoft/yii2-faker": "~2.0.0",
+                "yiisoft/yii2-gii": "~2.1.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                },
+                "config-plugin": {
+                    "params": [
+                        "config/maileruser.php"
+                    ],
+                    "tests": [
+                        "config/test.php"
+                    ],
+                    "web": [
+                        "config/web.php"
+                    ]
+                },
+                "installer-types": [
+                    "bower-asset",
+                    "npm-asset"
+                ],
+                "installer-paths": {
+                    "./node_modules/{$name}": [
+                        "type:bower-asset",
+                        "type:npm-asset"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "terabytesoft\\mailer\\user\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Wilmer Arambula",
+                    "email": "wilmer.arambula@gmail.com"
+                }
+            ],
+            "description": "Component Mailer User Core",
+            "homepage": "https://github.com/terabytesoftw/mailer-user",
+            "keywords": [
+                "component",
+                "core",
+                "mailer",
+                "user",
+                "yii"
+            ],
+            "time": "2019-07-13T19:39:16+00:00"
+        },
+        {
             "name": "theseer/tokenizer",
             "version": "1.1.3",
             "source": {
@@ -5069,8 +5770,10 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "terabytesoftw/helper-mailer": 20,
         "terabytesoftw/widget-alert": 20,
-        "hiqdev/composer-config-plugin": 20
+        "hiqdev/composer-config-plugin": 20,
+        "terabytesoftw/app-user": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

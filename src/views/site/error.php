@@ -20,11 +20,11 @@ $this->title = $name;
     <?= Html::endTag('div') ?>
 
     <?= Html::beginTag('p') ?>
-        <?= \Yii::t('AppBasic', 'The above error occurred while the Web server was processing your request') ?>
+        <?= \Yii::t('app.basic', 'The above error occurred while the Web server was processing your request') ?>
     <?= Html::endTag('p') ?>
 
     <?= Html::beginTag('p') ?>
-        <?= \Yii::t('AppBasic', 'Please contact us if you think this is a server error. Thank you') ?>
+        <?= \Yii::t('app.basic', 'Please contact us if you think this is a server error. Thank you') ?>
     <?= Html::endTag('p') ?>
 
 <?php echo Html::endTag('div');
