@@ -28,7 +28,6 @@ return [
             'url' => ['/site/contact']
         ],
     ],
-    'app.basic.menu.logged' => [],
     'app.basic.name' => 'My Project Basic',
     'app.basic.vendor.path' => '@root/vendor',
 

@@ -5,7 +5,7 @@
  */
 
 // Codeception c3 environment variables
-define('MY_APP_STARTED', true);
+defined('MY_APP_STARTED') or define('MY_APP_STARTED', true);
 
 // Yii2 environment variables
 defined('YII_DEBUG') or define('YII_DEBUG', true);
