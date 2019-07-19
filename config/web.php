@@ -22,6 +22,9 @@ $config = [
         'assetManager' => [
             'basePath' => $params['app.basic.assetmanager.base.path'],
         ],
+        'errorHandler' => [
+            'errorAction' => $params['app.basic.errorhandler.erroraction'],
+        ],
         'i18n' => [
             'translations' => [
                 'app.basic' => [

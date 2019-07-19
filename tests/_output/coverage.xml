@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1563409424">
-  <project timestamp="1563409424">
+<coverage generated="1563544817">
+  <project timestamp="1563544817">
     <package name="terabytesoft\app\basic\assets">
       <file name="D:\git-local\terabytesoftw\app-basic\src\assets\AppAsset.php">
         <class name="terabytesoft\app\basic\assets\AppAsset" namespace="terabytesoft\app\basic\assets">
@@ -14,8 +14,8 @@
         <class name="terabytesoft\app\basic\controllers\SiteController" namespace="terabytesoft\app\basic\controllers">
           <metrics complexity="10" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="28" coveredelements="28"/>
         </class>
-        <line num="31" type="method" name="behaviors" visibility="public" complexity="1" crap="1" count="12"/>
-        <line num="35" type="stmt" count="12"/>
+        <line num="31" type="method" name="behaviors" visibility="public" complexity="1" crap="1" count="11"/>
+        <line num="35" type="stmt" count="11"/>
         <line num="47" type="method" name="actions" visibility="public" complexity="2" crap="2" count="12"/>
         <line num="51" type="stmt" count="12"/>
         <line num="55" type="stmt" count="12"/>
@@ -56,33 +56,33 @@
       </file>
     </package>
     <file name="D:\git-local\terabytesoftw\app-basic\src\views\layouts\main.php">
-      <line num="16" type="stmt" count="12"/>
-      <line num="18" type="stmt" count="12"/>
-      <line num="20" type="stmt" count="12"/>
-      <line num="21" type="stmt" count="12"/>
-      <line num="23" type="stmt" count="12"/>
-      <line num="24" type="stmt" count="12"/>
+      <line num="16" type="stmt" count="11"/>
+      <line num="18" type="stmt" count="11"/>
+      <line num="20" type="stmt" count="11"/>
+      <line num="21" type="stmt" count="11"/>
+      <line num="23" type="stmt" count="11"/>
+      <line num="24" type="stmt" count="11"/>
       <line num="25" type="stmt" count="1"/>
       <line num="26" type="stmt" count="1"/>
       <line num="27" type="stmt" count="1"/>
-      <line num="53" type="stmt" count="12"/>
-      <line num="54" type="stmt" count="12"/>
-      <line num="60" type="stmt" count="12"/>
-      <line num="61" type="stmt" count="12"/>
-      <line num="62" type="stmt" count="12"/>
-      <line num="69" type="stmt" count="12"/>
-      <line num="70" type="stmt" count="12"/>
-      <line num="73" type="stmt" count="12"/>
+      <line num="53" type="stmt" count="11"/>
+      <line num="54" type="stmt" count="11"/>
+      <line num="60" type="stmt" count="11"/>
+      <line num="61" type="stmt" count="11"/>
+      <line num="62" type="stmt" count="11"/>
+      <line num="69" type="stmt" count="11"/>
+      <line num="70" type="stmt" count="11"/>
+      <line num="73" type="stmt" count="11"/>
       <line num="79" type="stmt" count="3"/>
-      <line num="80" type="stmt" count="12"/>
-      <line num="84" type="stmt" count="12"/>
-      <line num="85" type="stmt" count="12"/>
-      <line num="102" type="stmt" count="12"/>
-      <line num="103" type="stmt" count="12"/>
-      <line num="104" type="stmt" count="12"/>
-      <line num="105" type="stmt" count="12"/>
-      <line num="107" type="stmt" count="12"/>
-      <line num="108" type="stmt" count="12"/>
+      <line num="80" type="stmt" count="11"/>
+      <line num="84" type="stmt" count="11"/>
+      <line num="85" type="stmt" count="11"/>
+      <line num="102" type="stmt" count="11"/>
+      <line num="103" type="stmt" count="11"/>
+      <line num="104" type="stmt" count="11"/>
+      <line num="105" type="stmt" count="11"/>
+      <line num="107" type="stmt" count="11"/>
+      <line num="108" type="stmt" count="11"/>
       <metrics loc="124" ncloc="119" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="27" elements="27" coveredelements="27"/>
     </file>
     <file name="D:\git-local\terabytesoftw\app-basic\src\views\site\about.php">
@@ -158,8 +158,8 @@
       <metrics loc="160" ncloc="155" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="64" coveredstatements="64" elements="64" coveredelements="64"/>
     </file>
     <file name="D:\git-local\terabytesoftw\app-basic\src\views\site\error.php">
-      <line num="10" type="stmt" count="1"/>
-      <metrics loc="30" ncloc="25" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="1" coveredelements="1"/>
+      <line num="10" type="stmt" count="0"/>
+      <metrics loc="30" ncloc="25" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="1" coveredelements="0"/>
     </file>
     <file name="D:\git-local\terabytesoftw\app-basic\src\views\site\index.php">
       <line num="11" type="stmt" count="2"/>
@@ -167,6 +167,6 @@
       <line num="20" type="stmt" count="2"/>
       <metrics loc="22" ncloc="17" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="3" coveredelements="3"/>
     </file>
-    <metrics files="8" loc="542" ncloc="467" classes="2" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="119" coveredstatements="119" elements="127" coveredelements="127"/>
+    <metrics files="8" loc="542" ncloc="467" classes="2" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="119" coveredstatements="118" elements="127" coveredelements="126"/>
   </project>
 </coverage>

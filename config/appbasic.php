@@ -18,6 +18,10 @@ return [
     'app.basic.footer.autor' => '©' . date('Y') . '. ' . \Yii::t('app.basic', 'TerabyteSoft SA - Wilmer Arambula.'),
     'app.basic.id' => 'app.basic',
     'app.basic.language' => 'en-US',
+    'app.basic.name' => 'My Project Basic',
+    'app.basic.vendor.path' => '@root/vendor',
+
+    // menu default without extension ['terabytesoftw/app-user']
     'app.basic.menu.isguest' => [
         [
             'label' => \Yii::t('app.basic', 'About'),
@@ -28,11 +32,43 @@ return [
             'url' => ['/site/contact']
         ],
     ],
-    'app.basic.name' => 'My Project Basic',
-    'app.basic.vendor.path' => '@root/vendor',
+
+    // menu default with extension ['terabytesoftw/app-user']
+    'app.basic.setting.menu.user.isguest' => [
+        [
+            'label' => \Yii::t('app.basic', 'Sign up'),
+            'url' => ['/user/registration/register'],
+        ],
+        [
+            'label' => \Yii::t('app.basic', 'Login'),
+            'url' => ['/user/security/login']
+        ],
+    ],
+    'app.basic.setting.menu.user.logged' => [
+        [
+            'label' =>  \Yii::t('app.basic', 'Manage Users'),
+            'url' => ['/user/admin/index'],
+        ],
+        [
+            'label' =>  \Yii::t('app.basic', 'Settings Account'),
+            'url' => ['/user/settings/account'],
+        ],
+        [
+            'label' =>  \Yii::t('app.basic', 'Settings Profile'),
+            'url' => ['/user/settings/profile'],
+        ],
+        [
+            'label' =>  \Yii::t('app.basic', 'Logout'),
+            'url' => ['/user/security/logout'],
+            'linkOptions' => ['data-method' => 'POST'],
+        ],
+    ],
 
     // component assetmanager
     'app.basic.assetmanager.base.path' => '@public/assets',
+
+    // component errorHandler
+    'app.basic.errorhandler.erroraction' => 'site/error',
 
     // component log
     'app.basic.log.levels' => ['error', 'warning', 'info'],

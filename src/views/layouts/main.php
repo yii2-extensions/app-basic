@@ -20,10 +20,10 @@ $menuItems = \Yii::$app->params['app.basic.menu.isguest'];
 if (isset(\Yii::$app->extensions['terabytesoftw/app-user']) || (YII_ENV === 'test')) {
     switch (\Yii::$app->user->isGuest) {
         case true:
-            $menuItems = array_merge($menuItems, \Yii::$app->params['app.user.setting.menu.isguest']);
+            $menuItems = array_merge($menuItems, \Yii::$app->params['app.basic.setting.menu.user.isguest']);
             break;
         case false:
-            $menuItems = \Yii::$app->params['app.user.setting.menu.logged'];
+            $menuItems = \Yii::$app->params['app.basic.setting.menu.user.logged'];
             break;
     }
 }

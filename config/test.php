@@ -28,6 +28,9 @@ $config = [
         'assetManager' => [
             'basePath' => $params['app.basic.assetmanager.base.path'],
         ],
+        'errorHandler' => [
+            'errorAction' => $params['app.basic.errorhandler.erroraction'],
+        ],
         'i18n' => [
             'translations' => [
                 'app.basic' => [
@@ -55,6 +58,9 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => $params['app.basic.urlmanager.enableprettyurl'],
             'showScriptName' => $params['app.basic.urlmanager.showscriptname'],
+        ],
+        'user' => [
+            'identityClass' => \yii\web\User::class,
         ],
     ],
     'params' => $params,
