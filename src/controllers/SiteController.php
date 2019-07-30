@@ -62,7 +62,7 @@ class SiteController extends Controller
      */
     public function __construct($id, Module $module, array $config = [])
     {
-        $this->mailer = new Mailer(\Yii::$app->mailer);
+        $this->mailer = new Mailer();
         parent::__construct($id, $module, $config);
     }
 
