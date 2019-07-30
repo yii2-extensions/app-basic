@@ -7,7 +7,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -22,7 +22,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -37,7 +37,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -52,7 +52,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -67,7 +67,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -82,7 +82,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -109,7 +109,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -124,7 +124,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -139,7 +139,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -154,7 +154,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -169,7 +169,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -184,7 +184,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -199,7 +199,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -214,7 +214,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -235,7 +235,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -250,7 +250,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -265,7 +265,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -280,7 +280,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -295,7 +295,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -310,7 +310,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -325,7 +325,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -340,7 +340,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -355,7 +355,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -387,7 +387,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -403,7 +403,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -418,7 +418,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -434,7 +434,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -451,7 +451,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -468,7 +468,7 @@ $coverage->setData(array (
     array (
       0 => 'testAboutPage',
       1 => 'testContactPage',
-      2 => 'testcontactSubmitFormEmptyData',
+      2 => 'testContactSubmitFormEmptyData',
       3 => 'testContactSubmitFormEmailWrongData',
       4 => 'testContactSubmitFormSuccessData',
       5 => 'testErrorPage',
@@ -495,7 +495,7 @@ $coverage->setData(array (
     91 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -506,7 +506,7 @@ $coverage->setData(array (
     93 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -532,7 +532,7 @@ $coverage->setData(array (
     101 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -543,7 +543,7 @@ $coverage->setData(array (
     102 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -594,7 +594,7 @@ $coverage->setData(array (
     13 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -605,7 +605,7 @@ $coverage->setData(array (
     19 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -616,7 +616,7 @@ $coverage->setData(array (
     20 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -627,7 +627,7 @@ $coverage->setData(array (
     21 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -638,7 +638,7 @@ $coverage->setData(array (
     22 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -704,7 +704,7 @@ $coverage->setData(array (
     57 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -715,7 +715,7 @@ $coverage->setData(array (
     58 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -726,7 +726,7 @@ $coverage->setData(array (
     63 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -737,7 +737,7 @@ $coverage->setData(array (
     82 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -748,7 +748,7 @@ $coverage->setData(array (
     83 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -759,7 +759,7 @@ $coverage->setData(array (
     84 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -770,7 +770,7 @@ $coverage->setData(array (
     85 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -781,7 +781,7 @@ $coverage->setData(array (
     86 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -792,7 +792,7 @@ $coverage->setData(array (
     87 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -803,7 +803,7 @@ $coverage->setData(array (
     89 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -814,7 +814,7 @@ $coverage->setData(array (
     91 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -825,7 +825,7 @@ $coverage->setData(array (
     94 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -836,7 +836,7 @@ $coverage->setData(array (
     95 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -847,7 +847,7 @@ $coverage->setData(array (
     96 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -858,7 +858,7 @@ $coverage->setData(array (
     97 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -869,7 +869,7 @@ $coverage->setData(array (
     98 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -880,7 +880,7 @@ $coverage->setData(array (
     100 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -891,7 +891,7 @@ $coverage->setData(array (
     102 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -902,7 +902,7 @@ $coverage->setData(array (
     105 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -913,7 +913,7 @@ $coverage->setData(array (
     106 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -924,7 +924,7 @@ $coverage->setData(array (
     107 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -935,7 +935,7 @@ $coverage->setData(array (
     108 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -946,7 +946,7 @@ $coverage->setData(array (
     109 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -957,7 +957,7 @@ $coverage->setData(array (
     111 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -968,7 +968,7 @@ $coverage->setData(array (
     113 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -979,7 +979,7 @@ $coverage->setData(array (
     116 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -990,7 +990,7 @@ $coverage->setData(array (
     117 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -1001,7 +1001,7 @@ $coverage->setData(array (
     118 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -1012,7 +1012,7 @@ $coverage->setData(array (
     119 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -1023,7 +1023,7 @@ $coverage->setData(array (
     120 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -1034,7 +1034,7 @@ $coverage->setData(array (
     122 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -1045,7 +1045,7 @@ $coverage->setData(array (
     123 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -1056,7 +1056,7 @@ $coverage->setData(array (
     125 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -1067,7 +1067,7 @@ $coverage->setData(array (
     128 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -1078,7 +1078,7 @@ $coverage->setData(array (
     129 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -1089,7 +1089,7 @@ $coverage->setData(array (
     130 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -1100,7 +1100,7 @@ $coverage->setData(array (
     131 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -1111,7 +1111,7 @@ $coverage->setData(array (
     133 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -1122,7 +1122,7 @@ $coverage->setData(array (
     134 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -1133,7 +1133,7 @@ $coverage->setData(array (
     136 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -1144,7 +1144,7 @@ $coverage->setData(array (
     137 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -1155,7 +1155,7 @@ $coverage->setData(array (
     139 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -1166,7 +1166,7 @@ $coverage->setData(array (
     140 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -1177,7 +1177,7 @@ $coverage->setData(array (
     142 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -1188,7 +1188,7 @@ $coverage->setData(array (
     143 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -1199,7 +1199,7 @@ $coverage->setData(array (
     147 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -1210,7 +1210,7 @@ $coverage->setData(array (
     151 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -1221,7 +1221,7 @@ $coverage->setData(array (
     152 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -1235,7 +1235,7 @@ $coverage->setData(array (
     27 => 
     array (
       0 => 'testContactPage',
-      1 => 'testcontactSubmitFormEmptyData',
+      1 => 'testContactSubmitFormEmptyData',
       2 => 'testContactSubmitFormEmailWrongData',
       3 => 'testContactSubmitFormSuccessData',
       4 => 'testContactFormPageTest',
@@ -1284,7 +1284,7 @@ $coverage->setTests(array (
     'size' => 'unknown',
     'status' => -1,
   ),
-  'testcontactSubmitFormEmptyData' => 
+  'testContactSubmitFormEmptyData' => 
   array (
     'size' => 'unknown',
     'status' => -1,

@@ -16,7 +16,7 @@ class ErrorCest
      */
     public function _before(AcceptanceTester $I): void
     {
-        $I->wantTo('ensure that error page works.');
+        $I->wantTo('error page works.');
         $I->amOnPage('/site/index1');
         $I->wait(5); // secs
     }

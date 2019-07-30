@@ -16,7 +16,7 @@ class IndexCest
      */
     public function _before(AcceptanceTester $I): void
     {
-        $I->wantTo('ensure that index page works.');
+        $I->wantTo('index page works.');
         $I->amOnPage('/site/index');
         $I->wait(5); // secs
     }

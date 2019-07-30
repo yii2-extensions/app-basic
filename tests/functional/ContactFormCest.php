@@ -16,7 +16,7 @@ class ContactFormCest
      */
     public function _before(FunctionalTester $I)
     {
-        $I->wantTo('ensure that contact page works.');
+        $I->wantTo('contact page works.');
         $I->amOnPage('/site/contact');
     }
 

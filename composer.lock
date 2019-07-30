@@ -789,12 +789,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/terabytesoftw/helper-mailer.git",
-                "reference": "a71bbb0625a6d28e15fefaeebcdf84a1f7a288d3"
+                "reference": "c8ed1ac09b4959ec81109b1a48ce8dabd1196953"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/terabytesoftw/helper-mailer/zipball/a71bbb0625a6d28e15fefaeebcdf84a1f7a288d3",
-                "reference": "a71bbb0625a6d28e15fefaeebcdf84a1f7a288d3",
+                "url": "https://api.github.com/repos/terabytesoftw/helper-mailer/zipball/c8ed1ac09b4959ec81109b1a48ce8dabd1196953",
+                "reference": "c8ed1ac09b4959ec81109b1a48ce8dabd1196953",
                 "shasum": ""
             },
             "require": {
@@ -807,7 +807,7 @@
                 "codeception/c3": "2.*",
                 "codeception/codeception": "^3.0",
                 "dms/phpunit-arraysubset-asserts": "^0.1.0",
-                "hiqdev/composer-config-plugin": "^1.0@dev",
+                "hiqdev/composer-config-plugin": "^0.3.0",
                 "monolog/monolog": "*",
                 "yiisoft/yii2-debug": "~2.1.0",
                 "yiisoft/yii2-faker": "~2.0.0",
@@ -864,7 +864,7 @@
                 "user",
                 "yii"
             ],
-            "time": "2019-07-20T20:22:02+00:00"
+            "time": "2019-07-30T15:27:42+00:00"
         },
         {
             "name": "terabytesoftw/widget-alert",

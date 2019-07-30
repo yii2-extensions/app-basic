@@ -16,7 +16,7 @@ class ContactCest
      */
     public function _before(AcceptanceTester $I): void
     {
-        $I->wantTo('ensure that contact page works.');
+        $I->wantTo('contact page works.');
         $I->amOnPage('/site/contact');
         $I->wait(5); // secs
     }
@@ -33,7 +33,7 @@ class ContactCest
     /**
      * testcontactSubmitFormEmptyData
      */
-    public function testcontactSubmitFormEmptyData(AcceptanceTester $I): void
+    public function testContactSubmitFormEmptyData(AcceptanceTester $I): void
     {
         $I->amGoingTo('contact submit form with empty data.');
         $I->click('contact-button');

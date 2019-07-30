@@ -16,7 +16,7 @@ class AboutCest
      */
     public function _before(AcceptanceTester $I): void
     {
-        $I->wantTo('ensure that about page works.');
+        $I->wantTo('about page works.');
         $I->amOnPage('/site/about');
         $I->wait(5); // secs
     }
