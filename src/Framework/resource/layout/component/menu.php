@@ -26,11 +26,11 @@ NavBar::begin(
         ],
     ]
 );
-    echo Nav::widget(
-        [
-            'options' => ['class' => 'navbar-nav'],
-            'items'   => $menuItems,
-        ]
-    );
+echo Nav::widget(
+    [
+        'options' => ['class' => 'navbar-nav'],
+        'items'   => $menuItems,
+    ]
+);
 
 NavBar::end();
