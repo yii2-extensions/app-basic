@@ -1,6 +1,6 @@
 <p align="center">
-    <a href="https://github.com/terabytesoft/app-basic" target="_blank">
-        <img src="https://lh3.googleusercontent.com/D9TFw1F6ddPuheDc_tpNptTdvTg-FNNpjLSBN14X6Sc-3JDiOxfE67rEh4OZfygonx1tKei2b2DEOHDLjF6T3xl8e-rkEEPZeGqLTWcS_v2cBRlyo0vcZLDHG5ivSDGIWCsenbol=w2400" height="50px;">
+    <a href="https://github.com/yii2-extensions/debug" target="_blank">
+        <img src="https://www.yiiframework.com/image/yii_logo_light.svg" height="100px;">
     </a>
     <h1 align="center">Web Application Basic</h1>
 </p>
@@ -16,8 +16,8 @@
         <img src="https://github.com/yii2-extensions/app-basic/actions/workflows/build.yml/badge.svg" alt="build">
     </a>
     <a href="https://codecov.io/gh/yii2-extensions/app-basic" target="_blank">
-        <img src="https://codecov.io/gh/yii2-extensions/app-basic/branch/main/graph/badge.svg?token=MF0XUGVLYC" alt="codecov">
-    </a>    
+        <img src="https://codecov.io/gh/yii2-extensions/app-basic/graph/badge.svg?token=zcXbeTspxy" alt="codecov">
+    </a>
     <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml" target="_blank">
         <img src="https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml/badge.svg" alt="static analysis">
     </a>
