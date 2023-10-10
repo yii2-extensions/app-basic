@@ -15,6 +15,7 @@
         "npm-asset/fortawesome--fontawesome-free": "^6.0",
         "sjaakp/yii2-icon": "^1.0",
         "oomphinc/composer-installers-extender": "^2.0",
+        "yiisoft/yii2": "^2.2",
         "yiisoft/yii2-bootstrap5": "^2.0",
         "yiisoft/yii2-symfonymailer": "^3.0"
     },
