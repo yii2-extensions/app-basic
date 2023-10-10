@@ -41,11 +41,11 @@
     const svgOfActiveBtn = btnToActive.querySelector('svg use').getAttribute('href')
 
     // Añade las siguientes líneas para mostrar el icono de verificación en el botón activo.
-    const activeCheckIcon = btnToActive.querySelector('.bi');
+    const activeCheckIcon = btnToActive.querySelector('.check');
     activeCheckIcon.classList.remove('d-none');
 
     document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-      const checkIcon = element.querySelector('.bi');
+      const checkIcon = element.querySelector('.check');
       if (element === btnToActive) {
         checkIcon.classList.remove('d-none');
       } else {
