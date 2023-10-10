@@ -1,80 +1,55 @@
 {
-    "name": "terabytesoftw/app-basic",
-    "type": "yii2-extension",
+    "name": "yii2-extensions/app-basic",
+    "type": "project",
     "description": "Web Application Basic",
     "keywords": [
         "application",
         "basic",
         "web",
-        "yii"
-    ],
-    "homepage": "https://github.com/terabytesoftw/app-basic",
-    "license": "BSD-3-Clause",
-    "authors": [
-        {
-            "name": "Wilmer Arambula",
-            "email": "wilmer.arambula@gmail.com"
-        }
+        "yii2"
     ],
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": "^7.2.0",
-        "oomphinc/composer-installers-extender": "^1.1",
-        "terabytesoftw/helper-mailer": "^1.0@dev",
-        "terabytesoftw/widget-alert": "^1.0@dev",
-        "yiisoft/yii2": "^2.0.23",
-        "yiisoft/yii2-bootstrap4": "^2.0.3"
+        "php": ">=8.1",
+        "npm-asset/fortawesome--fontawesome-free": "^6.0",
+        "sjaakp/yii2-icon": "^1.0",
+        "oomphinc/composer-installers-extender": "^2.0",
+        "yiisoft/yii2-bootstrap5": "^2.0",
+        "yiisoft/yii2-symfonymailer": "^3.0"
     },
     "require-dev": {
-        "codeception/codeception": "^3.0",
-        "codeception/c3": "2.*",
-        "dms/phpunit-arraysubset-asserts": "^0.1.0",
-        "hiqdev/composer-config-plugin": "^0.3.0",
-        "monolog/monolog": "*",
-        "yiisoft/yii2-debug": "~2.1.0",
-        "yiisoft/yii2-gii": "~2.1.0",
-        "yiisoft/yii2-faker": "~2.0.0"
+        "codeception/c3": "^2.8",
+        "codeception/codeception": "^5.0.0",
+        "codeception/lib-innerbrowser": "^4.0",
+        "codeception/module-asserts": "^3.0",
+        "codeception/module-filesystem": "^3.0",
+        "codeception/module-yii2": "^1.1",
+        "codeception/verify": "^3.0",
+        "maglnet/composer-require-checker": "^4.6",
+        "symfony/browser-kit": "^6.3",
+        "symfony/process": "^6.3",
+        "yii2-extensions/debug": "dev-main",
+        "yii2-extensions/gii": "dev-main",
+        "yii2-extensions/phpstan": "dev-main"
     },
     "autoload": {
-        "psr-4": {"terabytesoft\\app\\basic\\": "src/"}
+        "psr-4": {
+            "App\\": "src/"
+        }
     },
     "autoload-dev": {
-        "psr-4": {"terabytesoft\\app\\basic\\tests\\": "tests/"}
-	},
-    "config": {
-        "process-timeout": 1800,
-        "fxp-asset": {
-            "enabled": false
+        "psr-4": {
+            "App\\Tests\\": "tests/"
         }
     },
     "extra": {
         "branch-alias": {
             "dev-master": "1.0.x-dev"
         },
-        "config-plugin": {
-            "params": [
-                "config/appbasic.php",
-                "config/params.php"
-            ],
-            "defines": "config/defines.php",
-            "console": "config/console.php",
-            "tests": [
-                "config/test.php"
-            ],
-            "web": [
-                "config/web.php"
-            ]
-        },
-        "installer-types": [
-            "bower-asset",
-            "npm-asset"
-        ],
+        "installer-types": ["bower-asset", "npm-asset"],
         "installer-paths": {
-            "./node_modules/{$name}": [
-                "type:bower-asset",
-                "type:npm-asset"
-            ]
+            "./node_modules/{$name}/": ["type:bower-asset", "type:npm-asset"]
         }
     },
     "repositories": [
@@ -82,5 +57,14 @@
             "type": "composer",
             "url": "https://asset-packagist.org"
         }
-    ]
+    ],
+    "config": {
+        "allow-plugins": {
+            "codeception/c3": true,
+            "yiisoft/yii2-composer": true,
+            "composer/installers": true,
+            "hiqdev/composer-config-plugin": true,
+            "oomphinc/composer-installers-extender": true
+        }
+    }
 }

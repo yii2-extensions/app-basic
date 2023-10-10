@@ -1,34 +1,47 @@
 <?php
 
-/**
- * Web application configuration
- */
+declare(strict_types=1);
+
+use Faker\Provider\Uuid;
+
+$params = require_once __DIR__ . '/params.php';
 
 $config = [
-    'id' => $params['app.basic.id'],
-    'name' => $params['app.basic.name'],
+    'id' => 'app.basic',
+    'name' => 'My Project Basic',
     'aliases' => [
-        '@bower' => $params['app.basic.alias.path.bower'],
-        '@npm'   => $params['app.basic.alias.path.npm'],
-        '@public' => $params['app.basic.alias.path.public'],
-        '@runtime' => $params['app.basic.alias.path.runtime'],
+        '@root' => dirname(__DIR__),
+        '@bower' => '@root/node_modules',
+        '@npm'   => '@root/node_modules',
+        '@resource' => '@root/src/Framework/resource',
+        '@web' => '@root/web',
+        '@runtime' => '@web/runtime',
     ],
-    'basePath' => $params['app.basic.base.path'],
-    'bootstrap' => $params['app.basic.bootstrap'],
-    'controllerNamespace' => $params['app.basic.controller.namespace'],
-    'language' => $params['app.basic.language'],
-    'vendorPath' => $params['app.basic.vendor.path'],
+    'basePath' => dirname(__DIR__),
+    'bootstrap' => ['log'],
+    'controllerMap' => [
+        'about' => [
+            'class' => \App\UseCase\About\AboutController::class,
+        ],
+        'contact' => [
+            'class' => \App\UseCase\Contact\ContactController::class,
+        ],
+        'site' => [
+            'class' => \App\UseCase\Site\SiteController::class,
+        ],
+    ],
+    'language' => 'en-US',
     'components' => [
-        'assetManager' => [
-            'basePath' => $params['app.basic.assetmanager.base.path'],
+        'cache' => [
+            'class' => \yii\caching\FileCache::class,
         ],
         'errorHandler' => [
-            'errorAction' => $params['app.basic.errorhandler.erroraction'],
+            'errorAction' => 'site/error',
         ],
         'i18n' => [
             'translations' => [
                 'app.basic' => [
-                    'class' => yii\i18n\PhpMessageSource::class,
+                    'class' => \yii\i18n\PhpMessageSource::class,
                 ],
             ],
         ],
@@ -36,25 +49,43 @@ $config = [
             'traceLevel' => 'YII_DEBUG' ? 3 : 0,
             'targets' => [
                 [
-                    'class' => yii\log\FileTarget::class,
-                    'levels' => $params['app.basic.log.levels'],
-                    'logFile' => $params['app.basic.log.logFile'],
+                    'class' => \yii\log\FileTarget::class,
+                    'levels' => ['error', 'warning', 'info'],
+                    'logFile' => '@runtime/logs/app.log',
                 ],
             ],
         ],
         'mailer' => [
-            'useFileTransport' => $params['app.basic.mailer.usefiletransport'],
+            'class' => \yii\symfonymailer\Mailer::class,
+            'useFileTransport' => true,
         ],
         'request' => [
-            'cookieValidationKey' => $params['app.basic.request.cookievalidationkey'],
-            'enableCsrfValidation' => $params['app.basic.request.enablecsrfvalidation'],
+            'cookieValidationKey' => 'your secret key here',
+            'enableCsrfValidation' => true,
         ],
         'urlManager' => [
-            'enablePrettyUrl' => $params['app.basic.urlmanager.enableprettyurl'],
-            'showScriptName' => $params['app.basic.urlmanager.showscriptname'],
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
         ],
     ],
     'params' => $params,
 ];
+
+if (YII_ENV_DEV) {
+    // configuration adjustments for 'dev' environment
+    $config['bootstrap'][] = 'debug';
+    $config['modules']['debug'] = [
+        'class' => 'yii\debug\Module',
+        // uncomment the following to add your IP if you are not connecting from localhost.
+        // 'allowedIPs' => ['127.0.0.1', '::1'],
+    ];
+
+    $config['bootstrap'][] = 'gii';
+    $config['modules']['gii'] = [
+        'class' => 'yii\gii\Module',
+        // uncomment the following to add your IP if you are not connecting from localhost.
+        //'allowedIPs' => ['127.0.0.1', '::1'],
+    ];
+}
 
 return $config;

@@ -1,12 +1,10 @@
 # Codeception Test Suite Configuration
 #
 # Suite for unit or integration tests.
-
 actor: UnitTester
 modules:
     enabled:
-        - Asserts
-        - \terabytesoft\app\basic\tests\Helper\Unit
-        - Yii2:
+      - Asserts
+      - Yii2:
             part: [orm, email, fixtures]
-    step_decorators: ~
+step_decorators: ~

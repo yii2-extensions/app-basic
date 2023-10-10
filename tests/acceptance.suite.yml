@@ -5,16 +5,14 @@
 # If you need both WebDriver and PHPBrowser tests - create a separate suite.
 
 actor: AcceptanceTester
+extensions:
+  enabled:
+    - Codeception\Extension\RunProcess:
+        0: php -d variables_order=EGPCS -S 127.0.0.1:8080 web/index-test.php -t web
+        sleep: 1
 modules:
     enabled:
-        - WebDriver
-        - \terabytesoft\app\basic\tests\Helper\Acceptance
-    config:
-        WebDriver:
-            url: 'http://127.0.0.1:8080/'
-            port: 9515
-            browser: chrome
-            capabilities:
-                "goog:chromeOptions":
-                    args: ["--headless", "--disable-gpu", "--window-size=1024,768"]
-    step_decorators: ~
+      - Filesystem
+      - Yii2
+      - Asserts
+step_decorators: ~
