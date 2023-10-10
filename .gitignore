@@ -39,7 +39,6 @@ Thumbs.db
 
 # yii console commands
 requirements.php
-/yii
 /yii_test
 /yii_test.bat
 
