@@ -65,8 +65,8 @@ root
 The web application contains:
 
 - [x] Pages - [Screenshots]:
-    - [about](docs/about.jpg)
-    - [contact](docs/contact.jpg)
+    - [about](docs/about.png)
+    - [contact](docs/contact.png)
 
 <p align="justify">
 It includes all commonly used configurations that would allow you to focus on adding new
