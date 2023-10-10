@@ -37,9 +37,11 @@ use yii\bootstrap5\Html;
                 ) ?>
                     <?= Icon::renderIcon('solid', 'sun', ['class' => 'me-2 fa-solid theme-icon']) ?>
                     Light
-                    <?= Html::beginTag('svg', ['class' => 'bi ms-auto d-none', 'width' => '1em', 'height' => '1em']) ?>
-                        <?= Html::tag('use', '', ['href' => '#check2']) ?>
-                    <?= Html::endTag('svg') ?>
+                    <?= Icon::renderIcon(
+                        'solid',
+                        'check',
+                        ['class' => 'check ms-auto d-none', 'width' => '1em', 'height' => '1em'],
+                    ) ?>
                 <?= Html::endTag('button') ?>
             <?= Html::endTag('li') ?>
             <?= Html::beginTag('li') ?>
@@ -53,9 +55,11 @@ use yii\bootstrap5\Html;
                 ) ?>
                     <?= Icon::renderIcon('solid', 'moon', ['class' => 'me-2 fa-solid theme-icon']) ?>
                     Dark
-                    <?= Html::beginTag('svg', ['class' => 'bi ms-auto d-none', 'width' => '1em', 'height' => '1em']) ?>
-                        <?= Html::tag('use', '', ['href' => '#check2']) ?>
-                    <?= Html::endTag('svg') ?>
+                    <?= Icon::renderIcon(
+                        'solid',
+                        'check',
+                        ['class' => 'check ms-auto d-none', 'width' => '1em', 'height' => '1em'],
+                    ) ?>
                 <?= Html::endTag('button') ?>
             <?= Html::endTag('li') ?>
             <?= Html::beginTag('li') ?>
@@ -69,9 +73,11 @@ use yii\bootstrap5\Html;
                 ) ?>
                     <?= Icon::renderIcon('solid', 'circle-half-stroke', ['class' => 'me-2 fa-solid theme-icon']) ?>
                     Auto
-                    <?= Html::beginTag('svg', ['class' => 'bi ms-auto d-none', 'width' => '1em', 'height' => '1em']) ?>
-                        <?= Html::tag('use', '', ['href' => '#check2']) ?>
-                    <?= Html::endTag('svg') ?>
+                    <?= Icon::renderIcon(
+                        'solid',
+                        'check',
+                        ['class' => 'check ms-auto d-none', 'width' => '1em', 'height' => '1em'],
+                    ) ?>
                 <?= Html::endTag('button') ?>
             <?= Html::endTag('li') ?>
         <?= Html::endTag('ul') ?>
