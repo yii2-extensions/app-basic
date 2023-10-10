@@ -1,29 +1,25 @@
-namespace: terabytesoft\app\basic\tests
+namespace: App\Tests
+bootstrap: _bootstrap.php
+support_namespace: Support
 paths:
     tests: tests
     output: tests/_output
-    data: tests/_data
-    support: tests/_support
+    data: tests/Support/Data
+    support: tests/Support
     envs: tests/_envs
 actor_suffix: Tester
-extensions:
-    enabled:
-        - Codeception\Extension\RunFailed
-        - Codeception\Extension\Logger
 settings:
-    bootstrap: _bootstrap.php
-    suite_class: \PHPUnit_Framework_TestSuite
     memory_limit: 1024M
     colors: true
 modules:
     config:
         Yii2:
             configFile: 'config/test.php'
+extensions:
+    enabled:
+        - Codeception\Extension\RunFailed
 coverage:
     enabled: true
     whitelist:
         include:
             - src/*
-        exclude:
-            - src/assets/css/*
-            - src/messages/*

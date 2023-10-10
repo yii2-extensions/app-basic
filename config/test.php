@@ -1,69 +1,58 @@
 <?php
 
-/**
- * Test application configuration shared by all test types
- */
+declare(strict_types=1);
 
-$appbasic = require __DIR__ . '/appbasic.php';
 $params = require __DIR__ . '/params.php';
 
-$params = array_merge($appbasic, $params ?? []);
-
-$config = [
-    'id' => 'test.app.basic',
-    'name' => $params['app.basic.name'],
+return [
+    'id' => 'basic-tests',
     'aliases' => [
+        '@root' => dirname(__DIR__),
         '@bower' => '@root/node_modules',
         '@npm'   => '@root/node_modules',
-        '@public' => '@root/tests/public',
-        '@runtime' => '@root/tests/public/@runtime',
-        '@terabytesoft/app/basic/tests' => '@root/tests',
+        '@resource' => '@root/src/Framework/resource',
+        '@web' => '@root/web',
+        '@runtime' => '@web/runtime',
     ],
-    'basePath' => '@root/src',
-    'bootstrap' => $params['app.basic.bootstrap'],
-    'controllerNamespace' => $params['app.basic.controller.namespace'],
-    'language' => $params['app.basic.language'],
-    'vendorPath' => $params['app.basic.vendor.path'],
+    'basePath' => dirname(__DIR__),
+    'bootstrap' => ['log'],
+    'controllerMap' => [
+        'about' => [
+            'class' => \App\UseCase\About\AboutController::class,
+        ],
+        'contact' => [
+            'class' => \App\UseCase\Contact\ContactController::class,
+        ],
+        'site' => [
+            'class' => \App\UseCase\Site\SiteController::class,
+        ],
+    ],
+    'language' => 'en-US',
     'components' => [
         'assetManager' => [
-            'basePath' => $params['app.basic.assetmanager.base.path'],
+            'basePath' => dirname(__DIR__) . '/web/assets',
         ],
         'errorHandler' => [
-            'errorAction' => $params['app.basic.errorhandler.erroraction'],
+            'errorAction' => 'site/error',
         ],
         'i18n' => [
             'translations' => [
                 'app.basic' => [
-                    'class' => yii\i18n\PhpMessageSource::class,
-                ],
-            ],
-        ],
-        'log' => [
-            'traceLevel' => 'YII_DEBUG' ? 3 : 0,
-            'targets' => [
-                [
-                    'class' => yii\log\FileTarget::class,
-                    'levels' => $params['app.basic.log.levels'],
-                    'logFile' => $params['app.basic.log.logFile'],
+                    'class' => \yii\i18n\PhpMessageSource::class,
                 ],
             ],
         ],
         'mailer' => [
-            'useFileTransport' => $params['app.basic.mailer.usefiletransport'],
-        ],
-        'request' => [
-            'cookieValidationKey' => $params['app.basic.request.cookievalidationkey'],
-            'enableCsrfValidation' => $params['app.basic.request.enablecsrfvalidation'],
+            'class' => \yii\symfonymailer\Mailer::class,
+            'useFileTransport' => true,
         ],
         'urlManager' => [
-            'enablePrettyUrl' => $params['app.basic.urlmanager.enableprettyurl'],
-            'showScriptName' => $params['app.basic.urlmanager.showscriptname'],
+            'showScriptName' => true,
         ],
-        'user' => [
-            'identityClass' => \yii\web\User::class,
+        'request' => [
+            'cookieValidationKey' => 'test',
+            'enableCsrfValidation' => false,
         ],
     ],
     'params' => $params,
 ];
-
-return $config;
