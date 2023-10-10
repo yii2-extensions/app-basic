@@ -45,7 +45,13 @@ final class ContactController extends Controller
             return $this->refresh();
         }
 
-        return $this->render('index', ['model' => $this->formModel]);
+        return $this->render(
+            'index',
+            [
+                'model' => $this->formModel,
+                'module' => $this->module,
+            ],
+        );
     }
 
     public function getViewPath(): string

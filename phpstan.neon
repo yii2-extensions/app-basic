@@ -9,7 +9,7 @@ parameters:
         - YII_ENV_PROD
         - YII_ENV_TEST
 
-    level: 2
+    level: 1
 
     paths:
         - src
