@@ -7,7 +7,9 @@ namespace App\UseCase\Contact;
 use App\UseCase\Controller;
 use yii\base\Module;
 use yii\captcha\CaptchaAction;
+use yii\web\Request;
 use yii\web\Response;
+use yii\web\Session;
 
 final class ContactController extends Controller
 {
@@ -30,6 +32,7 @@ final class ContactController extends Controller
         $id,
         Module $module,
         private ContactForm $formModel,
+        private Session $session,
         array $config = []
     ) {
         parent::__construct($id, $module, $config);
@@ -38,11 +41,10 @@ final class ContactController extends Controller
     public function actionIndex(): Response|string
     {
         $mailer = $this->getMailer();
-        $session = $this->getSession();
 
         if ($this->formModel->load($this->getRequest()->post()) && $this->formModel->validate()) {
             if ($this->formModel->sendContact($mailer, $this->module->params)) {
-                $session->setFlash('contactFormSubmitted');
+                $this->session->setFlash('contactFormSubmitted');
             }
 
             return $this->refresh();
@@ -53,7 +55,7 @@ final class ContactController extends Controller
             [
                 'model' => $this->formModel,
                 'mailer' => $mailer,
-                'session' => $session,
+                'session' => $this->session,
             ],
         );
     }
