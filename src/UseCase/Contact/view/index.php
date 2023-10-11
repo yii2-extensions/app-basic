@@ -3,15 +3,17 @@
 declare(strict_types=1);
 
 use App\UseCase\Contact\ContactForm;
-use yii\base\Module;
 use yii\bootstrap5\ActiveForm;
 use yii\bootstrap5\Html;
 use yii\captcha\Captcha;
+use yii\symfonymailer\Mailer;
+use yii\web\Session;
 use yii\web\View;
 
 /**
  * @var ContactForm $model
- * @var Module $module
+ * @var Mailer $mailer
+ * @var Session $session
  * @var View $this
  */
 $this->title = $this->title = Yii::t('app.basic', 'Contact');
@@ -22,7 +24,7 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
         '<b>'.Html::encode($this->title).'</b>',
         ['class' => 'text-center c-grey-900 mb-40 display-4']
     ) ?>
-    <?php if ($module->session->hasFlash('contactFormSubmitted')) : ?>
+    <?php if ($session->hasFlash('contactFormSubmitted')) : ?>
         <?= Html::tag(
             'div',
             Yii::t(
@@ -42,26 +44,26 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
                 'app.basic',
                 'Note that if you turn on the Yii debugger, you should be able to view the mail message on the mail panel of the debugger.'
             ) ?>
-            <?php if ($module->mailer->useFileTransport) : ?>
+            <?php if ($mailer->useFileTransport) : ?>
                 <?= Yii::t(
                     'app.basic',
                     'Because the application is in development mode, the email is not sent but saved as a file under:'
                 ) ?>
-                <?= '<code>' . Yii::getAlias($module->mailer->fileTransportPath) . '</code>' ?>
+                <?= '<code>' . Yii::getAlias($mailer->fileTransportPath) . '</code>' ?>
                 <?= Yii::t(
                     'app.basic',
                     'Please configure the <code>useFileTransport </code>property of the <code>mail </code>application component to be false to enable email sending.'
                 ) ?>
             <?php endif ?>
         <?= Html::endTag('p') ?>
-        <?= $module->session->setFlash(
+        <?= $session->setFlash(
             'success',
             Yii::t(
                 'app.basic',
                 'Thank you for contacting us. We will respond to you as soon as possible.'
             )
         ) ?>
-        <?php $module->session->removeFlash('contactFormSubmitted') ?>
+        <?php $session->removeFlash('contactFormSubmitted') ?>
     <?php else : ?>
         <?= Html::beginTag('p', ['class' => 'text-center mb-4']) ?>
             <?= Yii::t(

@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 use App\Framework\Asset\AppAsset;
 use sjaakp\icon\Icon;
-use sjaakp\icon\IconAsset;
-use terabytesoft\widgets\Alert;
 use yii\bootstrap5\Breadcrumbs;
 use yii\bootstrap5\Html;
 use yii\web\View;
@@ -27,15 +25,7 @@ AppAsset::register($this);
                     <?= Html::beginTag(
                         'div',
                         [
-                            'class' => in_array(
-                                $this->context->action->uniqueId,
-                                [
-                                    'site/index',
-                                    'about/index'
-                                ]
-                            )
-                            ? 'd-flex flex-fill align-items-center justify-content-center'
-                            : 'container flex-fill'
+                            'd-flex flex-fill align-items-center justify-content-center',
                         ]
                     ) ?>
                         <?= Breadcrumbs::widget(

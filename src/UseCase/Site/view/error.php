@@ -21,6 +21,6 @@ $this->title = $name;
         <?= Yii::t('app.basic', 'The above error occurred while the Web server was processing your request.') ?>
     <?= Html::endTag('p') ?>
     <?= Html::beginTag('p') ?>
-        <?= \Yii::t('app.basic', 'Please contact us if you think this is a server error. Thank you.') ?>
+        <?= Yii::t('app.basic', 'Please contact us if you think this is a server error. Thank you.') ?>
     <?= Html::endTag('p') ?>
 <?= Html::endTag('div');

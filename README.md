@@ -10,19 +10,22 @@
         <img src="https://img.shields.io/badge/PHP-%3E%3D8.1-787CB5" alt="php-version">
     </a>
     <a href="https://github.com/yiisoft/yii2/tree/2.2" target="_blank">
-        <img src="https://img.shields.io/badge/yii2%20version-2.2-blue" alt="yii2-version">
+        <img src="https://img.shields.io/badge/Yii2%20version-2.2-blue" alt="yii2-version">
     </a>
     <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/build.yml" target="_blank">
-        <img src="https://github.com/yii2-extensions/app-basic/actions/workflows/build.yml/badge.svg" alt="build">
+        <img src="https://github.com/yii2-extensions/app-basic/actions/workflows/build.yml/badge.svg" alt="PHPUnit">
     </a>
     <a href="https://codecov.io/gh/yii2-extensions/app-basic" target="_blank">
-        <img src="https://codecov.io/gh/yii2-extensions/app-basic/graph/badge.svg?token=zcXbeTspxy" alt="codecov">
+        <img src="https://codecov.io/gh/yii2-extensions/app-basic/graph/badge.svg?token=zcXbeTspxy" alt="Codecov">
     </a>
     <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml" target="_blank">
-        <img src="https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml/badge.svg" alt="static analysis">
+        <img src="https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml/badge.svg" alt="PHPStan">
     </a>
+    <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml" target="_blank">
+        <img src="https://img.shields.io/badge/PHPStan%20level-5-blue" alt="PHPStan level">
+    </a>    
     <a href="https://github.styleci.io/repos/698621511?branch=main" target="_blank">
-        <img src="https://github.styleci.io/repos/698621511/shield?branch=main" alt="static analysis">
+        <img src="https://github.styleci.io/repos/698621511/shield?branch=main" alt="Code style">
     </a>        
 </p>
 

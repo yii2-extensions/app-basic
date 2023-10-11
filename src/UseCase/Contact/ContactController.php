@@ -37,9 +37,12 @@ final class ContactController extends Controller
 
     public function actionIndex(): Response|string
     {
-        if ($this->formModel->load($this->module->request->post()) && $this->formModel->validate()) {
-            if ($this->formModel->sendContact($this->module)) {
-                $this->module->session->setFlash('contactFormSubmitted');
+        $mailer = $this->getMailer();
+        $session = $this->getSession();
+
+        if ($this->formModel->load($this->getRequest()->post()) && $this->formModel->validate()) {
+            if ($this->formModel->sendContact($mailer, $this->module->params)) {
+                $session->setFlash('contactFormSubmitted');
             }
 
             return $this->refresh();
@@ -49,7 +52,8 @@ final class ContactController extends Controller
             'index',
             [
                 'model' => $this->formModel,
-                'module' => $this->module,
+                'mailer' => $mailer,
+                'session' => $session,
             ],
         );
     }
