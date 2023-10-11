@@ -35,7 +35,7 @@ final class ContactForm extends Model
     {
         return $mailer->compose()
             ->setTo($this->email)
-            ->setFrom([$params['mailer.sender'] => $params['mailer.sender.name']])
+            ->setFrom([$params['app.mailer.sender'] => $params['app.mailer.sender.name']])
             ->setReplyTo([$this->email => $this->name])
             ->setSubject($this->subject)
             ->setTextBody($this->body)

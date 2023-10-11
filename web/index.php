@@ -1,5 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
+use Yiisoft\Config\Config;
+use Yiisoft\Config\ConfigPaths;
+
 // comment out the following two lines when deployed to production
 defined('YII_DEBUG') or define('YII_DEBUG', false);
 
@@ -20,6 +25,8 @@ if (getenv('YII_C3')) {
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../vendor/yiisoft/yii2/Yii.php';
 
-$config = require __DIR__ . '/../config/web.php';
+$config = new Config(
+    new ConfigPaths(dirname(__DIR__) . '/config'),
+);
 
-(new yii\web\Application($config))->run();
+(new yii\web\Application($config->get('web')))->run();

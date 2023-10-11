@@ -46,3 +46,6 @@ requirements.php
 .buildpath
 .project
 .settings
+
+# config plugin
+/config/.merge-plan.php

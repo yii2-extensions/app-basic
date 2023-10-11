@@ -2,10 +2,6 @@
 
 declare(strict_types=1);
 
-use Faker\Provider\Uuid;
-
-$params = require_once __DIR__ . '/params.php';
-
 $config = [
     'id' => 'app.basic',
     'name' => 'My Project Basic',
