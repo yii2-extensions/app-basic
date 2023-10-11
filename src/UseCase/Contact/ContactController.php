@@ -7,7 +7,7 @@ namespace App\UseCase\Contact;
 use App\UseCase\Controller;
 use yii\base\Module;
 use yii\captcha\CaptchaAction;
-use yii\web\Request;
+use yii\symfonymailer\Mailer;
 use yii\web\Response;
 use yii\web\Session;
 
@@ -15,8 +15,6 @@ final class ContactController extends Controller
 {
     public function actions(): array
     {
-        $actions = parent::actions();
-
         return array_merge(
             [
                 'captcha' => [
@@ -32,6 +30,7 @@ final class ContactController extends Controller
         $id,
         Module $module,
         private ContactForm $formModel,
+        private Mailer $mailer,
         private Session $session,
         array $config = []
     ) {
@@ -40,10 +39,8 @@ final class ContactController extends Controller
 
     public function actionIndex(): Response|string
     {
-        $mailer = $this->getMailer();
-
         if ($this->formModel->load($this->getRequest()->post()) && $this->formModel->validate()) {
-            if ($this->formModel->sendContact($mailer, $this->module->params)) {
+            if ($this->formModel->sendContact($this->mailer, $this->module->params)) {
                 $this->session->setFlash('contactFormSubmitted');
             }
 
@@ -54,7 +51,7 @@ final class ContactController extends Controller
             'index',
             [
                 'model' => $this->formModel,
-                'mailer' => $mailer,
+                'mailer' => $this->mailer,
                 'session' => $this->session,
             ],
         );

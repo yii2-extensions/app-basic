@@ -4,12 +4,9 @@ declare(strict_types=1);
 
 namespace App\UseCase\Contact;
 
-use Symfony\Component\Mailer\MailerInterface;
 use yii\base\Model;
-use yii\base\Module;
 use yii\captcha\CaptchaValidator;
-use yii\mail\MailerInterface as MailMailerInterface;
-use yii\symfonymailer\Mailer;
+use yii\mail\MailerInterface;
 
 /**
  * Form model for contact page.
@@ -34,7 +31,7 @@ class ContactForm extends Model
         ];
     }
 
-    public function sendContact(MailMailerInterface $mailer, array $params): bool
+    public function sendContact(MailerInterface $mailer, array $params): bool
     {
         return $mailer->compose()
             ->setTo($this->email)

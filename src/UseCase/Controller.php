@@ -5,10 +5,8 @@ declare(strict_types=1);
 namespace App\UseCase;
 
 use yii\filters\VerbFilter;
-use yii\mail\MailerInterface;
 use yii\web\ErrorAction;
 use yii\web\Request;
-use yii\web\Session;
 
 class Controller extends \yii\web\Controller
 {
@@ -36,11 +34,6 @@ class Controller extends \yii\web\Controller
                 ],
             ],
         ];
-    }
-
-    protected function getMailer(): MailerInterface
-    {
-        return $this->module->get('mailer');
     }
 
     protected function getRequest(): Request
