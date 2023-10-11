@@ -56,6 +56,11 @@ return [
                 'useFileTransport' => true,
             ],
         ],
+        'singletons' => [
+            \yii\web\Session::class => static function (): \yii\web\Session {
+                return new \yii\web\Session();
+            },
+        ],
     ],
     'params' => $params,
 ];
