@@ -55,10 +55,6 @@ $config = [
                 ],
             ],
         ],
-        'mailer' => [
-            'class' => \yii\symfonymailer\Mailer::class,
-            'useFileTransport' => true,
-        ],
         'request' => [
             'cookieValidationKey' => 'your secret key here',
             'enableCsrfValidation' => true,
@@ -66,6 +62,13 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+        ],
+    ],
+    'container' => [
+        'definitions' => [
+            \yii\symfonymailer\Mailer::class => [
+                'useFileTransport' => true,
+            ],
         ],
     ],
     'params' => $params,

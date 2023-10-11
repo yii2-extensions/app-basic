@@ -38,11 +38,6 @@ class Controller extends \yii\web\Controller
         ];
     }
 
-    protected function getMailer(): MailerInterface
-    {
-        return $this->module->get('mailer');
-    }
-
     protected function getRequest(): Request
     {
         return $this->module->get('request');

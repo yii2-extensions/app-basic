@@ -42,16 +42,19 @@ return [
                 ],
             ],
         ],
-        'mailer' => [
-            'class' => \yii\symfonymailer\Mailer::class,
-            'useFileTransport' => true,
-        ],
         'urlManager' => [
             'showScriptName' => true,
         ],
         'request' => [
             'cookieValidationKey' => 'test',
             'enableCsrfValidation' => false,
+        ],
+    ],
+    'container' => [
+        'definitions' => [
+            \yii\symfonymailer\Mailer::class => [
+                'useFileTransport' => true,
+            ],
         ],
     ],
     'params' => $params,
