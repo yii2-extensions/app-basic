@@ -24,10 +24,8 @@ AppAsset::register($this);
                     <?= $this->render('component/menu') ?>
                     <?= Html::beginTag(
                         'div',
-                        [
-                            'd-flex flex-fill align-items-center justify-content-center',
-                        ]
-                    ) ?>
+                        ['class' => 'd-flex flex-fill align-items-center justify-content-center'])
+                    ?>
                         <?= Breadcrumbs::widget(
                             [
                                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],

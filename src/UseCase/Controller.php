@@ -47,9 +47,4 @@ class Controller extends \yii\web\Controller
     {
         return $this->module->get('request');
     }
-
-    protected function getSession(): Session
-    {
-        return $this->module->get('session');
-    }
 }
