@@ -16,8 +16,6 @@ final class ContactController extends Controller
 {
     public function actions(): array
     {
-        $actions = parent::actions();
-
         return array_merge(
             [
                 'captcha' => [
