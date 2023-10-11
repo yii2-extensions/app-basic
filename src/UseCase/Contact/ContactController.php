@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\UseCase\Contact;
 
 use App\UseCase\Controller;
+use Yii;
 use yii\base\Module;
 use yii\captcha\CaptchaAction;
 use yii\symfonymailer\Mailer;
@@ -42,6 +43,13 @@ final class ContactController extends Controller
         if ($this->formModel->load($this->getRequest()->post()) && $this->formModel->validate()) {
             if ($this->formModel->sendContact($this->mailer, $this->module->params)) {
                 $this->session->setFlash('contactFormSubmitted');
+                $this->session->setFlash(
+                    'success',
+                    Yii::t(
+                        'app.basic',
+                        'Thank you for contacting us. We will respond to you as soon as possible.'
+                    ),
+                );
             }
 
             return $this->refresh();
