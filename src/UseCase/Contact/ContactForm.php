@@ -11,7 +11,7 @@ use yii\mail\MailerInterface;
 /**
  * Form model for contact page.
  */
-class ContactForm extends Model
+final class ContactForm extends Model
 {
     public string $name = '';
     public string $email = '';

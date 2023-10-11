@@ -9,7 +9,6 @@ use yii\web\View;
  * @var View $this
  */
 ?>
-
 <?= Html::beginTag('head') ?>
     <?= Html::tag('meta', '', ['charset' => Yii::$app->charset]) ?>
     <?= Html::tag('meta', '', ['http-equiv' => 'X-UA-Compatible', 'content' => 'IE=edge']) ?>
