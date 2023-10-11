@@ -3,8 +3,6 @@
 declare(strict_types=1);
 
 $config = [
-    'id' => 'app.basic',
-    'name' => 'My Project Basic',
     'aliases' => [
         '@root' => dirname(__DIR__),
         '@bower' => '@root/node_modules',
@@ -15,18 +13,6 @@ $config = [
     ],
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'controllerMap' => [
-        'about' => [
-            'class' => \App\UseCase\About\AboutController::class,
-        ],
-        'contact' => [
-            'class' => \App\UseCase\Contact\ContactController::class,
-        ],
-        'site' => [
-            'class' => \App\UseCase\Site\SiteController::class,
-        ],
-    ],
-    'language' => 'en-US',
     'components' => [
         'cache' => [
             'class' => \yii\caching\FileCache::class,
@@ -72,7 +58,22 @@ $config = [
             },
         ],
     ],
+    'controllerMap' => [
+        'about' => [
+            'class' => \App\UseCase\About\AboutController::class,
+        ],
+        'contact' => [
+            'class' => \App\UseCase\Contact\ContactController::class,
+        ],
+        'site' => [
+            'class' => \App\UseCase\Site\SiteController::class,
+        ],
+    ],
+    'id' => 'app.basic',
+    'language' => 'en-US',
+    'name' => 'My Project Basic',
     'params' => $params,
+    'runtimePath' => dirname(__DIR__) . '/web/runtime',
 ];
 
 if (YII_ENV_DEV) {

@@ -4,8 +4,9 @@ declare(strict_types=1);
 
 return [
     'config-plugin' => [
-        'params' => ['params.php'],
+        'console' => 'console.php',
         'web' => 'web.php',
+        'params' => 'params.php',
     ],
     'config-plugin-environments' => [
         'tests' => [

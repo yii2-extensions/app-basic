@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Yiisoft\Config\Config;
 use Yiisoft\Config\ConfigPaths;
 
@@ -15,8 +17,6 @@ require __DIR__ . '/../c3.php';
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../vendor/yiisoft/yii2/Yii.php';
 
-$config = new Config(
-    new ConfigPaths(dirname(__DIR__) . '/config'),
-);
+$config = new Config(new ConfigPaths(dirname(__DIR__), 'config', 'vendor'));
 
 (new yii\web\Application($config->get('test')))->run();
