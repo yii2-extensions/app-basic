@@ -1,5 +1,8 @@
 <?php
 
+use Yiisoft\Config\Config;
+use Yiisoft\Config\ConfigPaths;
+
 // NOTE: Make sure this file is not accessible when deployed to production
 if (!in_array(@$_SERVER['REMOTE_ADDR'], ['127.0.0.1', '::1'])) {
     die('You are not allowed to access this file.');
@@ -12,6 +15,8 @@ require __DIR__ . '/../c3.php';
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../vendor/yiisoft/yii2/Yii.php';
 
-$config = require __DIR__ . '/../config/test.php';
+$config = new Config(
+    new ConfigPaths(dirname(__DIR__) . '/config'),
+);
 
-(new yii\web\Application($config))->run();
+(new yii\web\Application($config->get('test')))->run();

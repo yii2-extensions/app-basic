@@ -3,8 +3,12 @@
 declare(strict_types=1);
 
 return [
-    // menu default without extension ['yii2-extensions/app-user']
-    'app.basic.menu.isguest' => [
+    // mailer params
+    'app.mailer.sender' => 'noreply@example.com',
+    'app.mailer.sender.name' => 'app basic example',
+
+    // menu params
+    'app.menu.isguest' => [
         [
             'label' => \Yii::t('app.basic', 'About'),
             'url' => ['/about/index']
@@ -15,10 +19,6 @@ return [
         ],
     ],
 
-    'app.basic.setting.menu.user.isguest' => [],
-
-    'mailer.sender' => 'noreply@example.com',
-    'mailer.sender.name' => 'app basic example',
-
+    // params sjaakp/yii2-icon
     'icons'  => '@npm/fortawesome--fontawesome-free/svgs/{family}/{name}.svg',
 ];

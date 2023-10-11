@@ -6,7 +6,7 @@ use yii\bootstrap5\Html;
 use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
 
-$menuItems = \Yii::$app->params['app.basic.menu.isguest'];
+$menuItems = \Yii::$app->params['app.menu.isguest'];
 
 NavBar::begin(
     [
