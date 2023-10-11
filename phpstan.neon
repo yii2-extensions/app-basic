@@ -2,6 +2,9 @@ includes:
 	- vendor/yii2-extensions/phpstan/extension.neon
 
 parameters:
+    bootstrapFiles:
+        - tests/_bootstrap.php
+
     dynamicConstantNames:
         - YII_DEBUG
         - YII_ENV
@@ -9,7 +12,7 @@ parameters:
         - YII_ENV_PROD
         - YII_ENV_TEST
 
-    level: 1
+    level: 5
 
     paths:
         - src

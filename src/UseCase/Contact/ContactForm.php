@@ -4,9 +4,12 @@ declare(strict_types=1);
 
 namespace App\UseCase\Contact;
 
+use Symfony\Component\Mailer\MailerInterface;
 use yii\base\Model;
 use yii\base\Module;
 use yii\captcha\CaptchaValidator;
+use yii\mail\MailerInterface as MailMailerInterface;
+use yii\symfonymailer\Mailer;
 
 /**
  * Form model for contact page.
@@ -31,11 +34,11 @@ class ContactForm extends Model
         ];
     }
 
-    public function sendContact(Module $module): bool
+    public function sendContact(MailMailerInterface $mailer, array $params): bool
     {
-        return $module->mailer->compose()
+        return $mailer->compose()
             ->setTo($this->email)
-            ->setFrom([$module->params['mailer.sender'] => $module->params['mailer.sender.name']])
+            ->setFrom([$params['mailer.sender'] => $params['mailer.sender.name']])
             ->setReplyTo([$this->email => $this->name])
             ->setSubject($this->subject)
             ->setTextBody($this->body)

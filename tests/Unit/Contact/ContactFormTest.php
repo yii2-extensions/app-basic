@@ -7,6 +7,8 @@ namespace App\Tests\Unit\Contact;
 use App\UseCase\Contact\ContactForm;
 use yii\mail\MessageInterface;
 
+use function verify;
+
 final class ContactFormTest extends \Codeception\Test\Unit
 {
     public $tester;
@@ -23,7 +25,7 @@ final class ContactFormTest extends \Codeception\Test\Unit
             'verifyCode' => 'testme',
         ];
 
-        verify($formModel->sendContact(\Yii::$app))->notEmpty();
+        verify($formModel->sendContact(\Yii::$app->mailer, \Yii::$app->params))->notEmpty();
 
         // using Yii2 module actions to check email was sent
         $this->tester->seeEmailIsSent();
@@ -32,7 +34,6 @@ final class ContactFormTest extends \Codeception\Test\Unit
         $emailMessage = $this->tester->grabLastSentEmail();
 
         verify($emailMessage)->instanceOf(MessageInterface::class);
-
         verify($emailMessage->getTo())->arrayHasKey('tester@example.com');
         verify($emailMessage->getFrom())->arrayHasKey('noreply@example.com');
         verify($emailMessage->getReplyTo())->arrayHasKey('tester@example.com');
