@@ -5,7 +5,6 @@ declare(strict_types=1);
 $params = require __DIR__ . '/params.php';
 
 return [
-    'id' => 'basic-tests',
     'aliases' => [
         '@root' => dirname(__DIR__),
         '@bower' => '@root/node_modules',
@@ -16,18 +15,6 @@ return [
     ],
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'controllerMap' => [
-        'about' => [
-            'class' => \App\UseCase\About\AboutController::class,
-        ],
-        'contact' => [
-            'class' => \App\UseCase\Contact\ContactController::class,
-        ],
-        'site' => [
-            'class' => \App\UseCase\Site\SiteController::class,
-        ],
-    ],
-    'language' => 'en-US',
     'components' => [
         'assetManager' => [
             'basePath' => dirname(__DIR__) . '/web/assets',
@@ -62,5 +49,20 @@ return [
             },
         ],
     ],
+    'controllerMap' => [
+        'about' => [
+            'class' => \App\UseCase\About\AboutController::class,
+        ],
+        'contact' => [
+            'class' => \App\UseCase\Contact\ContactController::class,
+        ],
+        'site' => [
+            'class' => \App\UseCase\Site\SiteController::class,
+        ],
+    ],
+    'id' => 'basic-tests',
+    'language' => 'en-US',
+    'name' => 'My Project Basic',
     'params' => $params,
+    'runtimePath' => dirname(__DIR__) . '/web/runtime',
 ];

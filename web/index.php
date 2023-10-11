@@ -25,8 +25,6 @@ if (getenv('YII_C3')) {
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../vendor/yiisoft/yii2/Yii.php';
 
-$config = new Config(
-    new ConfigPaths(dirname(__DIR__) . '/config'),
-);
+$config = new Config(new ConfigPaths(dirname(__DIR__), 'config', 'vendor'));
 
 (new yii\web\Application($config->get('web')))->run();
