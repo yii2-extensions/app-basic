@@ -8,7 +8,6 @@ use App\UseCase\Controller;
 use yii\base\Module;
 use yii\captcha\CaptchaAction;
 use yii\symfonymailer\Mailer;
-use yii\web\Request;
 use yii\web\Response;
 use yii\web\Session;
 
