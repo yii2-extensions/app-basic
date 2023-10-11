@@ -22,6 +22,7 @@ AppAsset::register($this);
             <?php $this->beginBody() ?>
                 <?= Html::beginTag('wrapper', ['class' => 'd-flex flex-column']) ?>
                     <?= $this->render('component/menu') ?>
+                    <?= $this->render('component/alert') ?>
                     <?= Html::beginTag(
                         'div',
                         ['class' => 'd-flex flex-fill align-items-center justify-content-center'])
