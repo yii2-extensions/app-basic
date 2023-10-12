@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6e76cf1fba32753c581047747b8990c5",
+    "content-hash": "3b59bd62c5a08b27ca48c205b3fca3be",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -6067,12 +6067,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii2-extensions/debug.git",
-                "reference": "a6b3e206e811a182d805856b1559b88a05181f2e"
+                "reference": "2a0fd8c2891327138b0602e7a2573fc1a408ee9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2-extensions/debug/zipball/a6b3e206e811a182d805856b1559b88a05181f2e",
-                "reference": "a6b3e206e811a182d805856b1559b88a05181f2e",
+                "url": "https://api.github.com/repos/yii2-extensions/debug/zipball/2a0fd8c2891327138b0602e7a2573fc1a408ee9b",
+                "reference": "2a0fd8c2891327138b0602e7a2573fc1a408ee9b",
                 "shasum": ""
             },
             "require": {
@@ -6095,6 +6095,13 @@
             "extra": {
                 "branch-alias": {
                     "dev-main": "1.0.x-dev"
+                },
+                "config-plugin-options": {
+                    "source-directory": "config"
+                },
+                "config-plugin": {
+                    "web": "web/*.php",
+                    "params": "params.php"
                 }
             },
             "autoload": {
@@ -6116,7 +6123,7 @@
                 "issues": "https://github.com/yii2-extensions/debug/issues",
                 "source": "https://github.com/yii2-extensions/debug/tree/main"
             },
-            "time": "2023-10-09T18:19:23+00:00"
+            "time": "2023-10-12T10:42:21+00:00"
         },
         {
             "name": "yii2-extensions/gii",
@@ -6124,12 +6131,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii2-extensions/gii.git",
-                "reference": "9b0e62e6c519549c4a9b6ae514ffc443b152dbec"
+                "reference": "efde024b13680a5d8e058fecabe197e7bba476e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2-extensions/gii/zipball/9b0e62e6c519549c4a9b6ae514ffc443b152dbec",
-                "reference": "9b0e62e6c519549c4a9b6ae514ffc443b152dbec",
+                "url": "https://api.github.com/repos/yii2-extensions/gii/zipball/efde024b13680a5d8e058fecabe197e7bba476e9",
+                "reference": "efde024b13680a5d8e058fecabe197e7bba476e9",
                 "shasum": ""
             },
             "require": {
@@ -6148,6 +6155,13 @@
             "extra": {
                 "branch-alias": {
                     "dev-main": "1.0.x-dev"
+                },
+                "config-plugin-options": {
+                    "source-directory": "config"
+                },
+                "config-plugin": {
+                    "web": "web/*.php",
+                    "params": "params.php"
                 }
             },
             "autoload": {
@@ -6169,7 +6183,7 @@
                 "issues": "https://github.com/yii2-extensions/gii/issues",
                 "source": "https://github.com/yii2-extensions/gii/tree/main"
             },
-            "time": "2023-10-11T10:00:25+00:00"
+            "time": "2023-10-12T11:38:50+00:00"
         },
         {
             "name": "yii2-extensions/phpstan",
