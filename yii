@@ -5,6 +5,7 @@ declare(strict_types=1);
 
 use Yiisoft\Config\Config;
 use Yiisoft\Config\ConfigPaths;
+use Yiisoft\Config\Modifier\RecursiveMerge;
 
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'dev');
@@ -12,7 +13,10 @@ defined('YII_ENV') or define('YII_ENV', 'dev');
 require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/vendor/yiisoft/yii2/Yii.php';
 
-$config = new Config(new ConfigPaths(__DIR__, 'config', 'vendor'));
+$config = new Config(
+    new ConfigPaths(__DIR__, 'config', 'vendor'),
+    modifiers: [RecursiveMerge::groups('console')],
+);
 
 $application = new yii\console\Application($config->get('console'));
 $exitCode = $application->run();
