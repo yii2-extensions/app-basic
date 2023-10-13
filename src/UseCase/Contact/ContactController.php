@@ -9,6 +9,7 @@ use Yii;
 use yii\base\Module;
 use yii\captcha\CaptchaAction;
 use yii\symfonymailer\Mailer;
+use yii\web\Request;
 use yii\web\Response;
 use yii\web\Session;
 
@@ -40,7 +41,11 @@ final class ContactController extends Controller
 
     public function actionIndex(): Response|string
     {
-        if ($this->formModel->load($this->getRequest()->post()) && $this->formModel->validate()) {
+        if (
+            $this->request instanceof Request &&
+            $this->formModel->load($this->request->post()) &&
+            $this->formModel->validate()
+        ) {
             if ($this->formModel->sendContact($this->mailer, $this->module->params)) {
                 $this->session->setFlash('contactFormSubmitted');
                 $this->session->setFlash(

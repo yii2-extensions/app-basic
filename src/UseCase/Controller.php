@@ -6,7 +6,6 @@ namespace App\UseCase;
 
 use yii\filters\VerbFilter;
 use yii\web\ErrorAction;
-use yii\web\Request;
 
 class Controller extends \yii\web\Controller
 {
@@ -34,10 +33,5 @@ class Controller extends \yii\web\Controller
                 ],
             ],
         ];
-    }
-
-    protected function getRequest(): Request
-    {
-        return $this->module->get('request');
     }
 }
