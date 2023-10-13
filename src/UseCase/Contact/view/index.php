@@ -21,7 +21,7 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
 <?= Html::beginTag('div', ['class' => 'container site-contact']) ?>
     <?= Html::tag(
         'h1',
-        '<b>'.Html::encode($this->title).'</b>',
+        '<b>' . Html::encode($this->title) . '</b>',
         ['class' => 'text-center c-grey-900 mb-40 display-4']
     ) ?>
     <?php $form = ActiveForm::begin(
