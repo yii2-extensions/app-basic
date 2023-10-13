@@ -6,22 +6,21 @@ use yii\bootstrap5\Html;
 use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
 
-$menuItems = \Yii::$app->params['app.menu.isguest'];
+$menuItems = Yii::$app->params['app.menu.isguest'];
 
 $orders = \array_column($menuItems, 'order');
 \array_multisort($orders, SORT_ASC, $menuItems);
 
-
 NavBar::begin(
     [
         'brandLabel' => Html::img(
-            \Yii::getAlias('@web/image/yiiframework.svg'),
+            Yii::getAlias('@web/image/yiiframework.svg'),
             [
-                'alt' => \Yii::$app->name,
+                'alt' => Yii::$app->name,
                 'width' => '200',
             ],
         ),
-        'brandUrl'   => \Yii::$app->homeUrl,
+        'brandUrl'   => Yii::$app->homeUrl,
         'collapseOptions' => [
             'class' => 'justify-content-end',
         ],
@@ -30,6 +29,7 @@ NavBar::begin(
         ],
     ]
 );
+
 echo Nav::widget(
     [
         'options' => ['class' => 'navbar-nav'],

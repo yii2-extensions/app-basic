@@ -15,7 +15,7 @@ $alertTypes = [
     'warning' => 'alert-warning',
 ];
 
-$session = \Yii::$app->getSession();
+$session = Yii::$app->getSession();
 $flashes = $session->getAllFlashes();
 
 foreach ($flashes as $type => $message) {
