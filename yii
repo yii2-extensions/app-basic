@@ -15,7 +15,8 @@ require __DIR__ . '/vendor/yiisoft/yii2/Yii.php';
 
 $config = new Config(
     new ConfigPaths(__DIR__, 'config', 'vendor'),
-    modifiers: [RecursiveMerge::groups('console')],
+    modifiers: [RecursiveMerge::groups('console', 'params-console')],
+    paramsGroup: 'params-console',
 );
 
 $application = new yii\console\Application($config->get('console'));

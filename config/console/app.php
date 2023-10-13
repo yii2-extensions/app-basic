@@ -6,7 +6,7 @@ declare(strict_types=1);
  * @var array $params
  */
 return [
-    'id' => $params['app.console.id'] ?? 'console.basic',
+    'id' => $params['app.id'] ?? 'console.basic',
     'basePath' => dirname(__DIR__, 2),
     'bootstrap' => $params['app.bootstrap'] ?? [],
     'aliases' => [
@@ -16,5 +16,6 @@ return [
         '@resource' => dirname(__DIR__, 2) . '/src/Framework/resource',
         '@tests' => '@app/tests',
     ],
+    'controllerMap' => $params['app.controllerMap'] ?? [],
     'params' => $params,
 ];
