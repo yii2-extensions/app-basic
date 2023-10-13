@@ -17,19 +17,20 @@ if (isset($params['yii.gii']) && $params['yii.gii'] === true) {
 
 return [
     'aliases' => [
-        '@root' => dirname(__DIR__, 2),
-        '@bower' => '@root/node_modules',
-        '@npm'   => '@root/node_modules',
-        '@resource' => '@root/src/Framework/resource',
-        '@web' => '@root/web',
-        '@runtime' => '@web/runtime',
+        '@app' => dirname(__DIR__, 2),
+        '@bower' => '@app/node_modules',
+        '@npm'   => '@app/node_modules',
+        '@public' => '@app/public',
+        '@web' => '@public',
+        '@resource' => '@app/src/Framework/resource',
+        '@runtime' => '@public/runtime',
     ],
     'basePath' => dirname(__DIR__, 2),
     'bootstrap' => $bootstrap,
     'controllerMap' => $params['app.controllerMap'] ?? [],
-    'id' => $params['app.web.id'] ?? 'app.basic',
+    'id' => $params['app.id'] ?? 'app.basic',
     'language' => $params['app.language'] ?? 'en-US',
     'name' => $params['app.name'] ?? 'app basic example',
     'params' => $params,
-    'runtimePath' => dirname(__DIR__, 2) . '/web/runtime',
+    'runtimePath' => dirname(__DIR__, 2) . '/public/runtime',
 ];

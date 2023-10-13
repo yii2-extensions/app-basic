@@ -60,7 +60,7 @@ root
 │       └── Site            Site use case.
 ├── tests                   Tests codeception.
 ├── vendor                  Composer dependencies.
-├── web                     Web server public.
+├── public                  Web server public.
 ```
 
 ## Features
@@ -89,7 +89,7 @@ composer create-project --prefer-dist --stability=dev yii2-extensions/app-basic 
 ~~~
 
 <p align="justify">
-Now you should be able to access the application through the following URL, assuming `web` is the directory
+Now you should be able to access the application through the following URL, assuming `public` is the directory
 directly under the Web root.
 </p>
 

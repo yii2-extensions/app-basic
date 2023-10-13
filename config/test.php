@@ -2,22 +2,26 @@
 
 declare(strict_types=1);
 
-$params = require __DIR__ . '/params.php';
+$params = array_merge(
+    require __DIR__ . '/params.php',
+    require __DIR__ . '/params-web.php',
+);
 
 return [
     'aliases' => [
-        '@root' => dirname(__DIR__),
-        '@bower' => '@root/node_modules',
-        '@npm'   => '@root/node_modules',
-        '@resource' => '@root/src/Framework/resource',
-        '@web' => '@root/web',
-        '@runtime' => '@web/runtime',
+        '@app' => dirname(__DIR__),
+        '@bower' => '@app/node_modules',
+        '@npm'   => '@app/node_modules',
+        '@public' => '@app/public',
+        '@web' => '@public',
+        '@resource' => '@app/src/Framework/resource',
+        '@runtime' => '@public/runtime',
     ],
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
         'assetManager' => [
-            'basePath' => dirname(__DIR__) . '/web/assets',
+            'basePath' => dirname(__DIR__) . '/public/assets',
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -64,5 +68,5 @@ return [
     'language' => 'en-US',
     'name' => 'My Project Basic',
     'params' => $params,
-    'runtimePath' => dirname(__DIR__) . '/web/runtime',
+    'runtimePath' => dirname(__DIR__) . '/public/runtime',
 ];

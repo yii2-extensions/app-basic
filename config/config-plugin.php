@@ -11,6 +11,14 @@ return [
             'web/*.php',
         ],
         'params' => 'params.php',
+        'params-console' => [
+            '$params',
+            'params-console.php'
+        ],
+        'params-web' => [
+            '$params',
+            'params-web.php'
+        ],
     ],
     'config-plugin-environments' => [
         'tests' => [

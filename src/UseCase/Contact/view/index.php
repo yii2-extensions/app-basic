@@ -52,7 +52,6 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
                     'tabindex' => '1',
                 ]
             )
-            ->label(Yii::t('app.basic', 'Username'))
         ?>
         <?= $form->field($model, 'email')
             ->textInput(
@@ -64,7 +63,6 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
                     'tabindex' => '2',
                 ]
             )
-            ->label(Yii::t('app.basic', 'Email'))
         ?>
         <?= $form->field($model, 'subject')
             ->textInput(
@@ -76,7 +74,6 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
                     'tabindex' => '3',
                 ]
             )
-            ->label(Yii::t('app.basic', 'Subject'))
         ?>
         <?= $form->field($model, 'body')
             ->textarea(
@@ -89,7 +86,6 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
                     'tabindex' => '4',
                 ]
             )
-            ->label(Yii::t('app.basic', 'Body'))
         ?>
         <?= $form->field($model, 'verifyCode', ['labelOptions' => ['id' => 'verifyCode']])
             ->widget(
@@ -108,7 +104,6 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
                     ],
                 ]
             )
-            ->label(Yii::t('app.basic', 'Captcha Code'))
         ?>
         <?= Html::beginTag('div', ['class' => 'd-grid gap-2']) ?>
             <?= Html::submitButton(
