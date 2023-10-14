@@ -18,7 +18,10 @@ return [
         '@runtime' => '@public/runtime',
     ],
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => [
+        \App\Events::class,
+        'log'
+    ],
     'components' => [
         'assetManager' => [
             'basePath' => dirname(__DIR__) . '/public/assets',
