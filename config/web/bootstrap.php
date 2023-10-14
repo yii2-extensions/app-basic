@@ -4,6 +4,6 @@ declare(strict_types=1);
 
 return [
     'bootstrap' => [
-        \App\Events::class,
+        \App\Framework\EventHandler\ContactEventHandler::class,
     ],
 ];
