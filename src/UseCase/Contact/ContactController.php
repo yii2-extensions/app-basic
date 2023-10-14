@@ -30,6 +30,7 @@ final class ContactController extends Controller
     public function __construct(
         $id,
         Module $module,
+        private ContactEvent $contactEvent,
         private ContactForm $formModel,
         private Mailer $mailer,
         private Session $session,
@@ -45,12 +46,10 @@ final class ContactController extends Controller
             $this->formModel->load($this->request->post()) &&
             $this->formModel->validate()
         ) {
-            $event = new ContactEvent($this->formModel);
-
             if ($this->formModel->sendContact($this->mailer, $this->module->params)) {
                 $this->session->setFlash('contactFormSubmitted');
 
-                $this->trigger(ContactEvent::EVENT_AFTER_SEND, $event);
+                $this->trigger(ContactEvent::EVENT_AFTER_SEND, $this->contactEvent);
             }
 
             return $this->refresh();

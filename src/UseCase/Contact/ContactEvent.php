@@ -10,14 +10,4 @@ use yii\base\Model;
 final class ContactEvent extends Event
 {
     public const EVENT_AFTER_SEND = 'contact.afterSend';
-
-    public function __construct(private Model $form, array $config = [])
-    {
-        parent::__construct($config);
-    }
-
-    public function getForm(): Model
-    {
-        return $this->form;
-    }
 }
