@@ -19,7 +19,7 @@ return [
     ],
     'basePath' => dirname(__DIR__),
     'bootstrap' => [
-        \App\Events::class,
+        \App\Framework\EventHandler\ContactEventHandler::class,
         'log'
     ],
     'components' => [
