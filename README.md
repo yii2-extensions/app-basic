@@ -45,10 +45,19 @@ Web Application Basic of Yii Version 2.2. <a href="http://www.yiiframework.com/"
 
 ```text
 root
-├── config                  Configuration files.
+├── config                  
+│   └── Console             Console configuration.
+│   └── Web                 Web configuration.
+│   └── config-plugin.php   Plugin configuration.
+│   └── messages.php        Translation configuration.
+│   └── params-console.php  Console parameters.
+│   └── params-web.php      Web parameters.
+│   └── params.php          Common parameters.
+│   └── test.php            Test configuration.
 ├── src             
 │   └── Framework 
 │       └── Asset           Asset bundles.
+│       └── EnventHandler   Event handler.
 │       └── resources 
 │           └── css         Css files.
 │           └── js          Js files.
