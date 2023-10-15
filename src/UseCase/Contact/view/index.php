@@ -28,7 +28,7 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
                 <?= Html::tag('h1', '<b>' . Html::encode($this->title) . '</b>', ['class' => 'contact-form-title']) ?>
                 <?= Html::beginTag('p', ['class' => 'contact-form-subtitle']) ?>
                     <?= Yii::t(
-                        'app.user',
+                        'app.basic',
                         'Please fill out the following fields to Sign up.'
                     ) ?>
                 <?= Html::endTag('p') ?>
