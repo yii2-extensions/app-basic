@@ -10,8 +10,13 @@ use yii\web\View;
  * @var View $this
  */
 ?>
-<?= Html::beginTag('div', ['class' => 'container']) ?>
-    <?= Html::beginTag('footer', ['class' => 'd-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top']) ?>
+<?= Html::beginTag('div', ['class' => 'container mt-auto']) ?>
+    <?= Html::beginTag(
+        'footer',
+        [
+            'class' => 'd-flex justify-content-between align-items-center py-3 my-4 border-top border-secondary-subtle',
+        ],
+    ) ?>
         <?= Html::beginTag('div', ['class' => 'col-md-4']) ?>
             <?= Html::beginTag(
                 'a',
@@ -21,10 +26,17 @@ use yii\web\View;
                     'aria-label' => 'Yii Framework',
                 ],
             ) ?>
-                <?= Html::tag('span', '&copy; ' . date('Y') . ' <strong>YiiFramework</strong>', ['class' => 'mb-3 mb-md-0 text-body-secondary']) ?>
+                <?= Html::tag(
+                    'span',
+                    '&copy; ' . date('Y') . ' <strong>YiiFramework</strong>',
+                    ['class' => 'mb-3 mb-md-0 text-body-secondary'],
+                ) ?>
             <?= Html::endTag('a') ?>
         <?= Html::endTag('div') ?>
-        <?= Html::beginTag('ul', ['class' => 'nav col-md-4 justify-content-end list-unstyled d-flex align-items-center']) ?>
+        <?= Html::beginTag(
+            'ul',
+            ['class' => 'nav col-md-4 justify-content-end list-unstyled d-flex align-items-center'],
+        ) ?>
             <?= Html::tag(
                 'li',
                 Html::a(

@@ -18,26 +18,23 @@ AppAsset::register($this);
     <!DOCTYPE html>
     <?= Html::beginTag('html', ['lang' => Yii::$app->language, 'data-bs-theme' => 'auto']) ?>
         <?= $this->render('head') ?>
-        <?= Html::beginTag('body') ?>
-            <?php $this->beginBody() ?>
-                <?= Html::beginTag('wrapper', ['class' => 'd-flex flex-column']) ?>
-                    <?= $this->render('component/menu') ?>
-                    <?= $this->render('component/alert') ?>
-                    <?= Html::beginTag(
-                        'div',
-                        ['class' => 'd-flex flex-fill align-items-center justify-content-center'])
-                    ?>
+        <?php $this->beginBody() ?>
+            <?= Html::beginTag('body', ['class' => 'd-flex']) ?>
+                <?= Html::beginTag('div', ['class' => 'cover-container d-flex w-100 h-100 mx-auto flex-column']) ?>
+                    <?= Html::beginTag('header', ['class' => 'mb-auto']) ?>
+                        <?= $this->render('component/menu') ?>
+                        <?= $this->render('component/alert') ?>
                         <?= Breadcrumbs::widget(
                             [
                                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
                             ]
                         ) ?>
-                        <?= $content ?>
-                    <?= Html::endTag('div') ?>
+                    <?= Html::endTag('header') ?>
+                    <?= Html::tag('main', $content) ?>
                     <?= $this->render('footer') ?>
-                <?= Html::endTag('wrapper') ?>
+                <?= Html::endTag('div') ?>
                 <?= Icon::symbols($this) ?>
-            <?php $this->endBody() ?>
-        <?= Html::endTag('body') ?>
+            <?= Html::endTag('body') ?>
+        <?php $this->endBody() ?>
     <?= Html::endTag('html') ?>
 <?php $this->endPage();
