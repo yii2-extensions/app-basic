@@ -2,7 +2,7 @@
  * site.css
  *
  * Css web application basic
- **/
+ */
 
 /**********************************************************************************************************************
  * MAIN                                                                                                               *
@@ -26,15 +26,6 @@ html, body {
 	height: 100vh;
 }
 
-wrapper {
-    min-height: 100vh;
-    height: auto;
-}
-
-wrapper > .container {
-    padding: 35px 15px 20px;
-}
-
 /**********************************************************************************************************************
  * BREADCRUMBS                                                                                                        *
  **********************************************************************************************************************/
@@ -42,152 +33,4 @@ wrapper > .container {
     color: #7c8695;
     content: "/\00a0";
     padding: 0 5px;
-}
-
-/**********************************************************************************************************************
- * ERROR-SUMMARY                                                                                                      *
- **********************************************************************************************************************/
- .error-summary {
-    color: #a94442;
-    background: #fdf7f7;
-    border-left: 3px solid #eed3d7;
-    padding: 10px 20px;
-    margin: 0 0 15px 0;
-}
-
-/**********************************************************************************************************************
- * FORMS                                                                                                              *
- **********************************************************************************************************************/
-.form-contact {
-    width: 100%;
-    max-width: 420px;
-    padding: 15px;
-    margin: auto;
-}
-
-.form-label-group {
-    position: relative;
-    margin-bottom: 1rem;
-}
-
-.form-label-group > input,
-.form-label-group > label,
-.form-label-group > textarea {
-    padding: var(--input-padding-y) var(--input-padding-x);
-}
-
-.form-label-group > label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    margin-bottom: 0;
-    line-height: 1.5;
-    color: #495057;
-    border: 1px solid transparent;
-    border-radius: .25rem;
-    transition: all .1s ease-in-out;
-}
-
-.form-label-group input::-webkit-input-placeholder {
-    color: transparent;
-}
-
-.form-label-group textarea::-webkit-input-placeholder {
-    color: transparent;
-}
-
-.form-label-group input::-ms-input-placeholder {
-    color: transparent;
-}
-
-.form-label-group input::-moz-placeholder {
-    color: transparent;
-}
-
-.form-label-group input:-ms-input-placeholder {
-    color: transparent;
-}
-
-.form-label-group textarea::-ms-input-placeholder {
-    color: transparent;
-}
-
-.form-label-group textarea::-moz-placeholder {
-    color: transparent;
-}
-
-.form-label-group textarea:-ms-input-placeholder {
-    color: transparent;
-}
-
-.form-label-group input::placeholder {
-    color: transparent;
-}
-
-.form-label-group textarea::placeholder {
-    color: transparent;
-}
-
-.form-label-group input:not(:placeholder-shown) {
-    padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
-    padding-bottom: calc(var(--input-padding-y) / 3);
-}
-
-.form-label-group textarea:not(:placeholder-shown) {
-    padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
-    padding-bottom: calc(var(--input-padding-y) / 3);
-}
-
-.form-label-group input:not(:placeholder-shown) ~ label {
-    padding-top: calc(var(--input-padding-y) / 3);
-    padding-bottom: calc(var(--input-padding-y) / 3);
-    font-size: 12px;
-    color: #777;
-}
-
-.form-label-group textarea:not(:placeholder-shown) ~ label {
-    padding-top: calc(var(--input-padding-y) / 3);
-    padding-bottom: calc(var(--input-padding-y) / 3);
-    font-size: 12px;
-    color: #777;
-}
-
-/**********************************************************************************************************************
- * FOOTER                                                                                                             *
- **********************************************************************************************************************/
- .footer {
-    height: 70px;
-    background-color: #f5f5f5;
-    border-top: 1px solid #ddd;
-    padding: 20px;
-}
-
-/**********************************************************************************************************************
- * JUMBOTROM                                                                                                          *
- **********************************************************************************************************************/
-.jumbotron {
-    text-align: center;
-    background-color: transparent;
-}
-
-.jumbotron .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-}
-
-/**********************************************************************************************************************
- * SITE-ABOUT                                                                                                         *
- **********************************************************************************************************************/
- .site-about {
-    text-align: center !important;
-}
-
-/**********************************************************************************************************************
- * NOT-SET                                                                                                            *
- **********************************************************************************************************************/
-.not-set {
-    color: #c55;
-    font-style: italic;
 }

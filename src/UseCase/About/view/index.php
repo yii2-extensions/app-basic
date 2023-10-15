@@ -10,7 +10,7 @@ use yii\web\View;
  */
 $this->title = Yii::t('app.basic', 'About');
 ?>
-<?= Html::beginTag('div', ['class' => 'site-about']) ?>
+<?= Html::beginTag('div', ['class' => 'text-center']) ?>
     <?= Html::tag('h1', '<b>'. Html::encode($this->title) . '</b>', ['class' => 'c-grey-900 mb-40 display-4']) ?>
     <?= Html::tag(
         'p',

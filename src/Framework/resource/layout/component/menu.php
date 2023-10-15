@@ -25,7 +25,7 @@ NavBar::begin(
             'class' => 'justify-content-end',
         ],
         'options'    => [
-            'class' => 'navbar navbar bg-body-tertiary navbar-expand-lg',
+            'class' => 'navbar navbar bg-body-secondary navbar-expand-lg',
         ],
     ]
 );
