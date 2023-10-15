@@ -32,7 +32,7 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
                         'Please fill out the following fields to Sign up.'
                     ) ?>
                 <?= Html::endTag('p') ?>
-                <?= Html::tag('hr', '', ['class' => 'mb-2']) ?>
+                <?= Html::tag('hr', '', ['class' => 'mb-3']) ?>
                 <?php $form = ActiveForm::begin(
                     [
                         'id' => 'contact-form',
