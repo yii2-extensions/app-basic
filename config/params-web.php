@@ -2,16 +2,29 @@
 
 declare(strict_types=1);
 
+use App\UseCase\About\AboutController;
+use App\UseCase\Contact\ContactController;
+use App\UseCase\Site\SiteController;
+
 return [
+    'app.aliases' => [
+        '@app' => dirname(__DIR__),
+        '@bower' => '@app/node_modules',
+        '@npm'   => '@app/node_modules',
+        '@public' => '@app/public',
+        '@web' => '@public',
+        '@resource' => '@app/src/Framework/resource',
+        '@runtime' => '@public/runtime',
+    ],
     'app.controllerMap' => [
         'about' => [
-            'class' => \App\UseCase\About\AboutController::class,
+            'class' => AboutController::class,
         ],
         'contact' => [
-            'class' => \App\UseCase\Contact\ContactController::class,
+            'class' => ContactController::class,
         ],
         'site' => [
-            'class' => \App\UseCase\Site\SiteController::class,
+            'class' => SiteController::class,
         ],
     ],
     'app.menu.isguest' => [
@@ -26,7 +39,6 @@ return [
             'order' => 2
         ],
     ],
-    'app.name' => 'app basic example',
     'app.id' => 'app.basic',
 
     'icons'  => '@npm/fortawesome--fontawesome-free/svgs/{family}/{name}.svg',

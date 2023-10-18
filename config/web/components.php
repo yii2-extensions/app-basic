@@ -2,13 +2,16 @@
 
 declare(strict_types=1);
 
-/**
- * @var array $params
- */
+use yii\caching\FileCache;
+use yii\i18n\PhpMessageSource;
+use yii\log\FileTarget;
+
+declare(strict_types=1);
+
 return [
     'components' => [
         'cache' => [
-            'class' => \yii\caching\FileCache::class,
+            'class' => FileCache::class,
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -16,7 +19,7 @@ return [
         'i18n' => [
             'translations' => [
                 'app.basic' => [
-                    'class' => \yii\i18n\PhpMessageSource::class,
+                    'class' => PhpMessageSource::class,
                 ],
             ],
         ],
@@ -24,7 +27,7 @@ return [
             'traceLevel' => 'YII_DEBUG' ? 3 : 0,
             'targets' => [
                 [
-                    'class' => \yii\log\FileTarget::class,
+                    'class' => FileTarget::class,
                     'levels' => ['error', 'warning', 'info'],
                     'logFile' => '@runtime/logs/app.log',
                 ],

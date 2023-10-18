@@ -2,14 +2,22 @@
 
 declare(strict_types=1);
 
-$params = array_merge(
+use App\Framework\EventHandler\ContactEventHandler;
+use App\UseCase\About\AboutController;
+use App\UseCase\Contact\ContactController;
+use App\UseCase\Site\SiteController;
+use yii\i18n\PhpMessageSource;
+use yii\symfonymailer\Mailer;
+use yii\web\Session;
+
+$params = \array_merge(
     require __DIR__ . '/params.php',
     require __DIR__ . '/params-web.php',
 );
 
 return [
     'aliases' => [
-        '@app' => dirname(__DIR__),
+        '@app' => \dirname(__DIR__),
         '@bower' => '@app/node_modules',
         '@npm'   => '@app/node_modules',
         '@public' => '@app/public',
@@ -17,14 +25,14 @@ return [
         '@resource' => '@app/src/Framework/resource',
         '@runtime' => '@public/runtime',
     ],
-    'basePath' => dirname(__DIR__),
+    'basePath' => \dirname(__DIR__),
     'bootstrap' => [
-        \App\Framework\EventHandler\ContactEventHandler::class,
+        ContactEventHandler::class,
         'log'
     ],
     'components' => [
         'assetManager' => [
-            'basePath' => dirname(__DIR__) . '/public/assets',
+            'basePath' => \dirname(__DIR__) . '/public/assets',
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -32,7 +40,7 @@ return [
         'i18n' => [
             'translations' => [
                 'app.basic' => [
-                    'class' => \yii\i18n\PhpMessageSource::class,
+                    'class' => PhpMessageSource::class,
                 ],
             ],
         ],
@@ -46,30 +54,30 @@ return [
     ],
     'container' => [
         'definitions' => [
-            \yii\symfonymailer\Mailer::class => [
+            Mailer::class => [
                 'useFileTransport' => true,
             ],
         ],
         'singletons' => [
-            \yii\web\Session::class => static function (): \yii\web\Session {
-                return new \yii\web\Session();
+            Session::class => static function (): Session {
+                return new Session();
             },
         ],
     ],
     'controllerMap' => [
         'about' => [
-            'class' => \App\UseCase\About\AboutController::class,
+            'class' => AboutController::class,
         ],
         'contact' => [
-            'class' => \App\UseCase\Contact\ContactController::class,
+            'class' => ContactController::class,
         ],
         'site' => [
-            'class' => \App\UseCase\Site\SiteController::class,
+            'class' => SiteController::class,
         ],
     ],
     'id' => 'basic-tests',
     'language' => 'en-US',
     'name' => 'My Project Basic',
     'params' => $params,
-    'runtimePath' => dirname(__DIR__) . '/public/runtime',
+    'runtimePath' => \dirname(__DIR__) . '/public/runtime',
 ];
