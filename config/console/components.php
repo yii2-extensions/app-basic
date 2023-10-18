@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-/**
- * @var array $params
- */
+use yii\caching\FileCache;
+use yii\log\FileTarget;
+
 return [
     'components' => [
         'cache' => [
-            'class' => yii\caching\FileCache::class,
+            'class' => FileCache::class,
         ],
         'log' => [
             'targets' => [
                 [
-                    'class' => yii\log\FileTarget::class,
+                    'class' => FileTarget::class,
                     'levels' => ['error', 'warning'],
                 ],
             ],

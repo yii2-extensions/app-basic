@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-/**
- * @var array $params
- */
+use yii\symfonymailer\Mailer;
+use yii\web\Session;
+
 return [
     'container' => [
         'definitions' => [
-            \yii\symfonymailer\Mailer::class => [
+            Mailer::class => [
                 'useFileTransport' => true,
             ],
         ],
         'singletons' => [
-            \yii\web\Session::class => static function (): \yii\web\Session {
-                return new \yii\web\Session();
+            Session::class => static function (): Session {
+                return new Session();
             },
         ],
     ],

@@ -7,15 +7,10 @@ declare(strict_types=1);
  */
 return [
     'id' => $params['app.id'] ?? 'console.basic',
-    'basePath' => dirname(__DIR__, 2),
+    'aliases' => $params['app.aliases'] ?? [],
+    'basePath' => \dirname(__DIR__, 2),
     'bootstrap' => $params['app.bootstrap'] ?? [],
-    'aliases' => [
-        '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
-        '@root' => dirname(__DIR__, 2),
-        '@resource' => dirname(__DIR__, 2) . '/src/Framework/resource',
-        '@tests' => '@app/tests',
-    ],
     'controllerMap' => $params['app.controllerMap'] ?? [],
     'params' => $params,
+    'runtimePath' => \dirname(__DIR__, 2) . '/public/runtime',
 ];
