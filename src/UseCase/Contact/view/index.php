@@ -143,6 +143,7 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
                             <br/>
                             <?= '<code>' . Yii::getAlias($mailer->fileTransportPath) . '</code>' ?>
                             <br/>
+                            <br/>
                             <?= Yii::t(
                                 'app.basic',
                                 'Please configure the <code>useFileTransport </code>property of the <code>mail </code>application component to be false to enable email sending.'

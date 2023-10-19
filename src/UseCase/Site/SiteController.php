@@ -13,7 +13,7 @@ final class SiteController extends Controller
     public function actions(): array
     {
         return [
-            'error' => [
+            '404' => [
                 'class' => ErrorAction::class,
             ],
         ];

@@ -79,6 +79,7 @@ The web application contains:
 - [x] Pages - [Screenshots]:
     - [about](docs/about.png)
     - [contact](docs/contact.png)
+    - [404](docs/404.png)
 
 <p align="justify">
 It includes all commonly used configurations that would allow you to focus on adding new

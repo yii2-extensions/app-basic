@@ -23,6 +23,6 @@ return [
     'controllerMap' => $params['app.controllerMap'] ?? [],
     'language' => $params['app.language'] ?? 'en-US',
     'name' => $params['app.name'] ?? 'Web application basic',
-    'params' => $params,
+    'params' => $params['app.params'] ?? [],
     'runtimePath' => \dirname(__DIR__, 2) . '/public/runtime',
 ];

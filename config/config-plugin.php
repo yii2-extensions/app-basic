@@ -16,11 +16,6 @@ return [
             'params-web.php'
         ],
     ],
-    'config-plugin-environments' => [
-        'tests' => [
-            'test' => 'test.php',
-        ],
-    ],
     'config-plugin-options' => [
         'source-directory' => 'config',
     ],
