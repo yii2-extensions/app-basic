@@ -38,7 +38,7 @@ jobs:
 
       - name: Download and configure Selenium and Chrome
         run: |
-          wget -c -nc --retry-connrefused --tries=0 https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.1.1/selenium-server-4.1.1.jar -O selenium-server-standalone.jar
+          wget -c -nc --retry-connrefused --tries=0 https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.14.0/selenium-server-4.14.1.jar -O selenium-server-standalone.jar
           java -jar selenium-server-standalone.jar -port 9515 & sleep 1;
           wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
           sudo apt-get update
