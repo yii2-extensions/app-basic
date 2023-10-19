@@ -4,11 +4,6 @@
 # Perform tests in browser using the WebDriver or PhpBrowser.
 # If you need both WebDriver and PHPBrowser tests - create a separate suite.
 actor: AcceptanceTester
-extensions:
-  enabled:
-    - Codeception\Extension\RunProcess:
-      0: YII_C3=true ./yii serve
-      sleep: 1
 modules:
   enabled:
     - WebDriver
