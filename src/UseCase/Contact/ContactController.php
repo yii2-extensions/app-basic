@@ -31,7 +31,7 @@ final class ContactController extends Controller
         $id,
         Module $module,
         private ContactEvent $contactEvent,
-        private ContactForm $formModel,
+        private ContactForm $contactForm,
         private Mailer $mailer,
         private Session $session,
         array $config = []
@@ -41,12 +41,14 @@ final class ContactController extends Controller
 
     public function actionIndex(): Response|string
     {
+        $this->performAjaxValidation($this->contactForm);
+
         if (
             $this->request instanceof Request &&
-            $this->formModel->load($this->request->post()) &&
-            $this->formModel->validate()
+            $this->contactForm->load($this->request->post()) &&
+            $this->contactForm->validate()
         ) {
-            if ($this->formModel->sendContact($this->mailer, $this->module->params)) {
+            if ($this->contactForm->sendContact($this->mailer, $this->module->params)) {
                 $this->session->setFlash('contactFormSubmitted');
 
                 $this->trigger(ContactEvent::EVENT_AFTER_SEND, $this->contactEvent);
@@ -58,7 +60,7 @@ final class ContactController extends Controller
         return $this->render(
             'index',
             [
-                'model' => $this->formModel,
+                'model' => $this->contactForm,
                 'mailer' => $this->mailer,
                 'session' => $this->session,
             ],
