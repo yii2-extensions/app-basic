@@ -41,7 +41,7 @@ jobs:
           cd chromedriver-linux64
           chromedriver --port=9515 --url-base=wd/hub/ > /dev/null 2>&1&
           cd ..
-          echo google-chrome --product-version
+          google-chrome --product-version
 
       - name: Run Codeception
         run: |
