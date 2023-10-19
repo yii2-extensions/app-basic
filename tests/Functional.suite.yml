@@ -6,8 +6,8 @@
 # Remove this suite if you don't use frameworks
 actor: FunctionalTester
 modules:
-    enabled:
-      - Filesystem
-      - Yii2
-      - Asserts
+  enabled:
+    - Filesystem
+    - Yii2
+    - Asserts
 step_decorators: ~
