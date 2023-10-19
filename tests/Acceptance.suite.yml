@@ -5,14 +5,18 @@
 # If you need both WebDriver and PHPBrowser tests - create a separate suite.
 
 actor: AcceptanceTester
-extensions:
-  enabled:
-    - Codeception\Extension\RunProcess:
-        0: ./yii serve
-        sleep: 1
 modules:
     enabled:
-      - Filesystem
-      - Yii2
       - Asserts
+      - Filesystem
+      - WebDriver
+      - Yii2
+    config:
+        WebDriver:
+            url: 'http://127.0.0.1:8080/'
+            port: 9515
+            browser: chrome
+            capabilities:
+                "goog:chromeOptions":
+                    args: ["--headless", "--disable-gpu", "--window-size=1024,768"]
 step_decorators: ~
