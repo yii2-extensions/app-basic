@@ -6,8 +6,6 @@ use yii\caching\FileCache;
 use yii\i18n\PhpMessageSource;
 use yii\log\FileTarget;
 
-declare(strict_types=1);
-
 return [
     'components' => [
         'cache' => [
