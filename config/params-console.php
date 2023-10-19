@@ -19,4 +19,5 @@ return [
             'docroot' => \dirname(__DIR__) . '/public',
         ],
     ],
+    'app.params' => [],
 ];
