@@ -44,7 +44,7 @@ class Controller extends \yii\web\Controller
      * Performs the AJAX validation.
      *
      * @codeCoverageIgnore
-     * 
+     *
      * @todo use selenium to test this.
      */
     protected function performAjaxValidation(Model $model)
