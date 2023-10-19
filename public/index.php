@@ -12,7 +12,7 @@ defined('YII_DEBUG') or define('YII_DEBUG', false);
 if (getenv('YII_ENV')) {
     defined('YII_ENV') or define('YII_ENV', getenv('YII_ENV'));
 } else {
-    defined('YII_ENV') or define('YII_ENV', 'dev');
+    defined('YII_ENV') or define('YII_ENV', 'prod');
 }
 
 if (getenv('YII_C3')) {
