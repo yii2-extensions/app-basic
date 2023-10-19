@@ -12,10 +12,6 @@ extensions:
 modules:
   enabled:
     - WebDriver
-    - Yii2:
-      part: orm
-      entryScript: index.php
-      cleanup: false
   config:
     WebDriver:
       url: 'http://127.0.0.1:8080/'
