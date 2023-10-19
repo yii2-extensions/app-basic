@@ -11,8 +11,6 @@ modules:
       WebDriver:
           url: 'http://127.0.0.1:8080/'
           port: 9515
-          browser: chrome
-          capabilities:
-              "goog:chromeOptions":
-                  args: ["--headless", "--disable-gpu", "--window-size=1024,768"]
+          browser: chrome # 'chrome' or 'firefox'
+          window_size: maximize
 step_decorators: ~
