@@ -27,6 +27,7 @@
         "codeception/lib-innerbrowser": "^4.0",
         "codeception/module-asserts": "^3.0",
         "codeception/module-filesystem": "^3.0",
+        "codeception/module-webdriver": "^4.0",
         "codeception/module-yii2": "^1.1",
         "codeception/verify": "^3.0",
         "maglnet/composer-require-checker": "^4.6",
@@ -70,7 +71,6 @@
             "codeception/c3": true,
             "yiisoft/yii2-composer": true,
             "composer/installers": true,
-            "hiqdev/composer-config-plugin": true,
             "oomphinc/composer-installers-extender": true,
             "yiisoft/config": true
         }
