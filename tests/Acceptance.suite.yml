@@ -7,7 +7,7 @@ actor: AcceptanceTester
 extensions:
   enabled:
     - Codeception\Extension\RunProcess:
-      0: ./yii serve
+      0: YII_C3=true ./yii serve
       sleep: 1
 modules:
   enabled:
