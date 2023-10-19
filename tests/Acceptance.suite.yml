@@ -7,10 +7,11 @@
 actor: AcceptanceTester
 modules:
     enabled:
-      - Asserts
-      - Filesystem
-      - WebDriver
-      - Yii2
+        - WebDriver
+        - Yii2:
+            part: orm
+            entryScript: index-test.php
+            cleanup: false
     config:
         WebDriver:
             url: 'http://127.0.0.1:8080/'
