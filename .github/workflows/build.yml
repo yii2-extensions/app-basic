@@ -24,11 +24,6 @@ name: build
 jobs:
   codeception:
     runs-on: ubuntu-latest
-    services:
-      chrome:
-        image: selenium/standalone-chrome:latest
-        ports:
-          - 9515:9515
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -40,10 +35,9 @@ jobs:
         run: |
           wget -c -nc --retry-connrefused --tries=0 https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.14.0/selenium-server-4.14.1.jar -O selenium-server-standalone.jar
           java -jar selenium-server-standalone.jar -port 9515 & sleep 1;
-          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          sudo apt-get update
-          sudo apt-get install ./google-chrome-stable_current_amd64.deb -y
-          sudo apt-get install -yqq unzip
+          wget https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/118.0.5993.70/linux64/chrome-linux64.zip
+          unzip -o -q chrome-linux64.zip
+          chromedriver --port=9515 --url-base=wd/hub/ > /dev/null 2>&1&
 
       - name: Run Codeception
         run: |
