@@ -4,8 +4,13 @@ declare(strict_types=1);
 
 namespace App\UseCase;
 
+use Yii;
+use yii\base\Model;
 use yii\filters\VerbFilter;
 use yii\web\ErrorAction;
+use yii\web\Request;
+use yii\web\Response;
+use yii\widgets\ActiveForm;
 
 class Controller extends \yii\web\Controller
 {
@@ -33,5 +38,28 @@ class Controller extends \yii\web\Controller
                 ],
             ],
         ];
+    }
+
+    /**
+     * Performs the AJAX validation.
+     *
+     * @codeCoverageIgnore
+     * 
+     * @todo use selenium to test this.
+     */
+    protected function performAjaxValidation(Model $model)
+    {
+        if (
+            $this->request instanceof Request &&
+            $this->response instanceof Response &&
+            $this->request->isAjax &&
+            $model->load($this->request->post())
+        ) {
+            $this->response->format = Response::FORMAT_JSON;
+            $this->response->data = ActiveForm::validate($model);
+            $this->response->send();
+
+            Yii::$app->end();
+        }
     }
 }
