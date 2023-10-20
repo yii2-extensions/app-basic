@@ -9,7 +9,6 @@ use yii\log\FileTarget;
 /**
  * @var array $params
  */
-
 return [
     'components' => [
         'assetManager' => [

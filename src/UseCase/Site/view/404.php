@@ -23,8 +23,8 @@ $this->title = Html::encode($name);
         ) ?>
     <?= Html::endTag('div') ?>
     <?= Html::beginTag('div', ['class' => 'text-center mb-3']) ?>
-        <?= Html::tag('h1', \Yii::t('app.basic', $this->title), ['class' => 'mb-4']) ?>
-        <?= Html::tag('h6', \Yii::t('app.basic', 'Oops! Looks like you followed a bad link.')) ?>
-        <?= Html::tag('h6', \Yii::t('app.basic', 'If you think this is a problem with us, please tell us.')) ?>
+        <?= Html::tag('h1', Yii::t('app.basic', $this->title), ['class' => 'mb-4']) ?>
+        <?= Html::tag('h6', Yii::t('app.basic', 'Oops! Looks like you followed a bad link.')) ?>
+        <?= Html::tag('h6', Yii::t('app.basic', 'If you think this is a problem with us, please tell us.')) ?>
     <?= Html::endTag('div') ?>
 <?= Html::endTag('div');

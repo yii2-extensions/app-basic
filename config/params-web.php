@@ -6,7 +6,7 @@ use App\UseCase\About\AboutController;
 use App\UseCase\Contact\ContactController;
 use App\UseCase\Site\SiteController;
 
-$rootDir = \dirname(__DIR__);
+$rootDir = dirname(__DIR__);
 
 return [
     // application settings
@@ -38,12 +38,12 @@ return [
         'app.mailer.sender.name' => 'Web application basic',
         'app.menu.isguest' => [
             [
-                'label' => \Yii::t('app.basic', 'About'),
+                'label' => Yii::t('app.basic', 'About'),
                 'url' => ['/about/index'],
                 'order' => 1
             ],
             [
-                'label' => \Yii::t('app.basic', 'Contact'),
+                'label' => Yii::t('app.basic', 'Contact'),
                 'url' => ['/contact/index'],
                 'order' => 2
             ],
@@ -52,6 +52,7 @@ return [
     ],
     'app.request.cookieValidationKey' => 'your secret key here',
     'app.request.enableCsrfValidation' => true,
+    'app.root.dir' => $rootDir,
     'app.urlManager.enablePrettyUrl' => true,
     'app.urlManager.showScriptName' => false,
 
