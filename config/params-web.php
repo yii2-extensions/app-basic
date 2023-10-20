@@ -52,6 +52,7 @@ return [
     ],
     'app.request.cookieValidationKey' => 'your secret key here',
     'app.request.enableCsrfValidation' => true,
+    'app.root.dir' => $rootDir,
     'app.urlManager.enablePrettyUrl' => true,
     'app.urlManager.showScriptName' => false,
 

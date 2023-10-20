@@ -8,7 +8,6 @@ use yii\web\Session;
 /**
  * @var array $params
  */
-
 return [
     'container' => [
         'definitions' => [
