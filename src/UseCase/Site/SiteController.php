@@ -19,18 +19,6 @@ final class SiteController extends Controller
         ];
     }
 
-    public function behaviors(): array
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::class,
-                'actions' => [
-                    'logout' => ['post'],
-                ],
-            ],
-        ];
-    }
-
     public function actionIndex(): string
     {
         return $this->render('index');

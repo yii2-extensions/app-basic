@@ -26,7 +26,7 @@ AppAsset::register($this);
                         <?= $this->render('component/alert') ?>
                         <?= Breadcrumbs::widget(
                             [
-                                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                                'links' => $this->params['breadcrumbs'] ?? [],
                             ]
                         ) ?>
                     <?= Html::endTag('header') ?>

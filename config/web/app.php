@@ -8,11 +8,11 @@ declare(strict_types=1);
 $bootstrap = $params['app.bootstrap'] ?? [];
 
 if (isset($params['yii.debug']) && $params['yii.debug'] === true) {
-    $bootstrap = \array_merge($bootstrap, ['debug']);
+    $bootstrap = array_merge($bootstrap, ['debug']);
 }
 
 if (isset($params['yii.gii']) && $params['yii.gii'] === true) {
-    $bootstrap = \array_merge($bootstrap, ['gii']);
+    $bootstrap = array_merge($bootstrap, ['gii']);
 }
 
 return [

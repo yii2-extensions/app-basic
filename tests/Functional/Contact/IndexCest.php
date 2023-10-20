@@ -8,7 +8,7 @@ use App\Tests\Support\FunctionalTester;
 
 final class IndexCest
 {
-    public function _before(FunctionalTester $I)
+    public function _before(FunctionalTester $I): void
     {
         $I->amGoingTo('navigate to the Contact page.');
         $I->amOnRoute('contact/index');

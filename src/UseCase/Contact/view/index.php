@@ -58,7 +58,7 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
                                 'oninput' => 'this.setCustomValidity("")',
                                 'oninvalid' => 'this.setCustomValidity("' . Yii::t('app.basic', 'Enter Username Here') .'")',
                                 'placeholder' => Yii::t('app.basic', 'Username'),
-                                'required' => (YII_ENV === 'test') ? false : true,
+                                'required' => !((YII_ENV === 'test')),
                                 'tabindex' => '1',
                             ]
                         )
@@ -69,7 +69,7 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
                                 'oninput' => 'this.setCustomValidity("")',
                                 'oninvalid' => 'this.setCustomValidity("' . Yii::t('app.basic', 'Enter Email Here') . '")',
                                 'placeholder' => Yii::t('app.basic', 'Email'),
-                                'required' => (YII_ENV === 'tests') ? false : true,
+                                'required' => !((YII_ENV === 'tests')),
                                 'tabindex' => '2',
                             ]
                         )
@@ -80,7 +80,7 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
                                 'oninput' => 'this.setCustomValidity("")',
                                 'oninvalid' => 'this.setCustomValidity("' . Yii::t('app.basic', 'Enter Subject Here').'")',
                                 'placeholder' => Yii::t('app.basic', 'Subject'),
-                                'required' => (YII_ENV === 'test') ? false : true,
+                                'required' => !((YII_ENV === 'test')),
                                 'tabindex' => '3',
                             ]
                         )
@@ -91,7 +91,7 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
                                 'oninput' => 'this.setCustomValidity("")',
                                 'oninvalid' => 'this.setCustomValidity("' . Yii::t('app.basic', 'Enter Body Here') . '")',
                                 'placeholder' => Yii::t('app.basic', 'Body'),
-                                'required' => (YII_ENV === 'test') ? false : true,
+                                'required' => !((YII_ENV === 'test')),
                                 'style' => 'height: 100px',
                                 'tabindex' => '4',
                             ]
@@ -108,7 +108,7 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
                                     'oninput' => 'this.setCustomValidity("")',
                                     'oninvalid' => 'this.setCustomValidity("' . Yii::t('app.basic', 'Enter Captcha Code Here') . '")',
                                     'placeholder' => Yii::t('app.basic', 'Captcha Code'),
-                                    'required' => (YII_ENV === 'test') ? false : true,
+                                    'required' => !((YII_ENV === 'test')),
                                     'style' => 'margin-bottom:10px',
                                     'tabindex' => '5',
                                 ],

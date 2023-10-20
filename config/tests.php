@@ -8,19 +8,19 @@ use yii\log\FileTarget;
 use yii\symfonymailer\Mailer;
 use yii\web\Session;
 
-$params = \array_merge(
+$params = array_merge(
     require __DIR__ . '/params.php',
     require __DIR__ . '/params-web.php',
 );
-$roorDir = \dirname(__DIR__);
-$aliases = \array_merge(
+$rootDir = dirname(__DIR__);
+$aliases = array_merge(
     $params['app.aliases'],
-    ['@app' => $roorDir],
+    ['@app' => $rootDir],
 );
 
 return [
     'aliases' => $aliases,
-    'basePath' => $roorDir,
+    'basePath' => $rootDir,
     'bootstrap' => [
         ContactEventHandler::class,
         'log',

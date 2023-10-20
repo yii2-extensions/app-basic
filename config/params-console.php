@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use yii\console\controllers\ServeController;
 
-$rootDir = \dirname(__DIR__);
+$rootDir = dirname(__DIR__);
 
 return [
     'app.aliases' => [

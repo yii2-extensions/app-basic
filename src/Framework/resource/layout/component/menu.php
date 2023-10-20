@@ -8,8 +8,8 @@ use yii\bootstrap5\NavBar;
 
 $menuItems = Yii::$app->params['app.menu.isguest'] ?? [];
 
-$orders = \array_column($menuItems, 'order');
-\array_multisort($orders, SORT_ASC, $menuItems);
+$orders = array_column($menuItems, 'order');
+array_multisort($orders, SORT_ASC, $menuItems);
 
 NavBar::begin(
     [

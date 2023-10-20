@@ -30,10 +30,10 @@ final class ContactController extends Controller
     public function __construct(
         $id,
         Module $module,
-        private ContactEvent $contactEvent,
-        private ContactForm $contactForm,
-        private Mailer $mailer,
-        private Session $session,
+        private readonly ContactEvent $contactEvent,
+        private readonly ContactForm $contactForm,
+        private readonly Mailer $mailer,
+        private readonly Session $session,
         array $config = []
     ) {
         parent::__construct($id, $module, $config);
