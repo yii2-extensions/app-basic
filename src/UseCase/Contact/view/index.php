@@ -37,7 +37,7 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
                     [
                         'id' => 'contact-form',
                         'layout' => 'default',
-                        'enableAjaxValidation' => true,
+                        'enableAjaxValidation' => false,
                         'enableClientValidation' => false,
                         'fieldConfig' => [
                             'template' => '{input}{label}{hint}{error}',

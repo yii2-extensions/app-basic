@@ -41,8 +41,6 @@ final class ContactController extends Controller
 
     public function actionIndex(): Response|string
     {
-        $this->performAjaxValidation($this->contactForm);
-
         if (
             $this->request instanceof Request &&
             $this->contactForm->load($this->request->post()) &&
