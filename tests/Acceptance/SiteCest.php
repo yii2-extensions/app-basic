@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Acceptance\Site;
+namespace App\Tests\Acceptance;
 
 use App\Tests\Support\AcceptanceTester;
 
-final class IndexCest
+final class SiteCest
 {
-    public function homePageTest(AcceptanceTester $I): void
+    public function homePage(AcceptanceTester $I): void
     {
         $I->amGoingTo('navigate to the Home page.');
         $I->amOnRoute('/');
