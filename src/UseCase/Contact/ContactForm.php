@@ -9,9 +9,6 @@ use yii\base\Model;
 use yii\captcha\CaptchaValidator;
 use yii\mail\MailerInterface;
 
-/**
- * Form model for contact page.
- */
 final class ContactForm extends Model
 {
     public string $name = '';
