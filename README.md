@@ -94,9 +94,9 @@ If you do not have <a href="http://getcomposer.org/" title="Composer" target="_b
 
 You can then install this project app-basic using the following command:
 
-~~~
+```shell
 composer create-project --prefer-dist --stability=dev yii2-extensions/app-basic myapp
-~~~
+```
 
 <p align="justify">
 Now you should be able to access the application through the following URL, assuming `public` is the directory
@@ -105,15 +105,22 @@ directly under the Web root.
 
 __*Virtual Host:*__
 
-~~~
+```
 http://localhost:8080/
-~~~
+```
 
 __*Server Yii:*__
 
-~~~
+```shell
 php -S 127.0.0.1:8080 -t public > /dev/null 2>&1&
-~~~
+```
+
+__Console commands:__
+
+```shell
+./yii hellow/index
+```
+
 
 ## Generate translations
 
