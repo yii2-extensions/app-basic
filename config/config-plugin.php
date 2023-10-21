@@ -5,7 +5,11 @@ declare(strict_types=1);
 return [
     'config-plugin' => [
         'console' => 'console/*.php',
-        'web' => 'web/*.php',
+        'web' => [
+            '$yii2-debug',
+            '$yii2-gii',
+            'web/*.php'
+        ],
         'params' => 'params.php',
         'params-console' => [
             '$params',
