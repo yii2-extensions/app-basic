@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\UseCase\Site;
 
 use App\UseCase\Controller;
-use yii\filters\VerbFilter;
 use yii\web\ErrorAction;
 
 final class SiteController extends Controller
