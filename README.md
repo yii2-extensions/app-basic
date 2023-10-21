@@ -122,7 +122,6 @@ __Console commands:__
 ./yii hellow/index
 ```
 
-
 ## Generate translations
 
 <p align="justify">
