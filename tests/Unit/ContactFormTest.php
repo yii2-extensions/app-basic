@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Unit\Contact;
+namespace App\Tests\Unit;
 
 use App\UseCase\Contact\ContactForm;
 use Codeception\Test\Unit;

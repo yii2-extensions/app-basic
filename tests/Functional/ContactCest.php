@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Functional\Contact;
+namespace App\Tests\Functional;
 
 use App\Tests\Support\FunctionalTester;
 
-final class IndexCest
+final class ContactCest
 {
     public function _before(FunctionalTester $I): void
     {

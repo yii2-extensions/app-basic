@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Acceptance\About;
+namespace App\Tests\Acceptance;
 
 use App\Tests\Support\AcceptanceTester;
 
-final class IndexCest
+final class AboutCest
 {
-    public function aboutPageTest(AcceptanceTester $I): void
+    public function aboutPage(AcceptanceTester $I): void
     {
         $I->amGoingTo('navigate to the About page.');
         $I->amOnRoute('about/index');

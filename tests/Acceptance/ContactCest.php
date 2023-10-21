@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Acceptance\Contact;
+namespace App\Tests\Acceptance;
 
 use App\Tests\Support\AcceptanceTester;
 
-final class IndexCest
+final class ContactCest
 {
-    public function contactPageTest(AcceptanceTester $I): void
+    public function contactPage(AcceptanceTester $I): void
     {
         $I->amGoingTo('navigate to the Contact page.');
         $I->amOnRoute('contact/index');
