@@ -66,6 +66,7 @@ root
 │   └── UseCase
 │       └── About           About use case.
 │       └── Contact         Contact use case.
+│       └── Hello           Hello use case (console).
 │       └── Site            Site use case.
 ├── tests                   Tests codeception.
 ├── vendor                  Composer dependencies.
