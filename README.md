@@ -56,8 +56,8 @@ root
 │   └── test.php            Test configuration.
 ├── src             
 │   └── Framework 
-│       └── Asset           Asset bundles.
-│       └── EnventHandler   Event handler.
+│       └── Asset           Asset bundle files.
+│       └── EnventHandler   Event handler files.
 │       └── resources 
 │           └── css         Css files.
 │           └── js          Js files.
