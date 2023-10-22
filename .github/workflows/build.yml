@@ -27,7 +27,8 @@ jobs:
     secrets:
       AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
     with:
+      extensions: gd, intl
       os: >-
-        ['ubuntu-latest']
+        ['ubuntu-latest', 'windows-latest']
       php: >-
-        ['8.1', '8.2',  '8.3']
+        ['8.1', '8.2', '8.3']

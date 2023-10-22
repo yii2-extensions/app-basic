@@ -70,7 +70,6 @@
             "codeception/c3": true,
             "yiisoft/yii2-composer": true,
             "composer/installers": true,
-            "hiqdev/composer-config-plugin": true,
             "oomphinc/composer-installers-extender": true,
             "yiisoft/config": true
         }
