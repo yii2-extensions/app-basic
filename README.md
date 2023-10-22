@@ -46,31 +46,31 @@ Web Application Basic of Yii Version 2.2. <a href="http://www.yiiframework.com/"
 ```text
 root
 ├── config                  
-│   └── Console             Console configuration.
-│   └── Web                 Web configuration.
-│   └── config-plugin.php   Plugin configuration.
-│   └── messages.php        Translation configuration.
-│   └── params-console.php  Console parameters.
-│   └── params-web.php      Web parameters.
-│   └── params.php          Common parameters.
+│   ├── Console             Console configuration.
+│   ├── Web                 Web configuration.
+│   ├── config-plugin.php   Plugin configuration.
+│   ├── messages.php        Translation configuration.
+│   ├── params-console.php  Console parameters.
+│   ├── params-web.php      Web parameters.
+│   ├── params.php          Common parameters.
 │   └── test.php            Test configuration.
 ├── src             
-│   └── Framework 
-│       └── Asset           Asset bundle files.
-│       └── EnventHandler   Event handler files.
-│       └── resources 
-│           └── css         Css files.
-│           └── js          Js files.
-│           └── layout      Layout files.
-│           └── message     Translation files.
+│   ├── Framework 
+│   │   ├── Asset           Asset bundle files.
+│   │   ├── EnventHandler   Event handler files.
+│   │   └── resources 
+│   │       ├── css         Css files.
+│   │       ├── js          Js files.
+│   │       ├── layout      Layout files.
+│   │       └── message     Translation files.
 │   └── UseCase
-│       └── About           About use case.
-│       └── Contact         Contact use case.
-│       └── Hello           Hello use case (console).
+│       ├── About           About use case.
+│       ├── Contact         Contact use case.
+│       ├── Hello           Hello use case (console).
 │       └── Site            Site use case.
 ├── tests                   Tests codeception.
 ├── vendor                  Composer dependencies.
-├── public                  Web server public.
+└── public                  Web server public.
 ```
 
 ## Features
