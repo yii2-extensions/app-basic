@@ -113,7 +113,7 @@ http://localhost:8080/
 __*Server Yii:*__
 
 ```shell
-php -S 127.0.0.1:8080 -t public > /dev/null 2>&1&
+./yii serve
 ```
 
 __Console commands:__
