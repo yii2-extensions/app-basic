@@ -4,8 +4,13 @@ declare(strict_types=1);
 
 return [
     'config-plugin' => [
-        'console' => 'console/*.php',
+        'common' => 'common/*.php',
+        'console' => [
+            '$common',
+            'console/*.php',
+        ],
         'web' => [
+            '$common',
             '$yii2-debug',
             '$yii2-gii',
             'web/*.php'

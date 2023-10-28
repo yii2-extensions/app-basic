@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-use yii\caching\FileCache;
 use yii\i18n\PhpMessageSource;
-use yii\log\FileTarget;
 
 /**
  * @var array $params
@@ -14,9 +12,6 @@ return [
         'assetManager' => [
             'basePath' => $params['app.assetManager.basePath'],
         ],
-        'cache' => [
-            'class' => FileCache::class,
-        ],
         'errorHandler' => [
             'errorAction' => $params['app.errorHandler.errorAction'],
         ],
@@ -24,16 +19,6 @@ return [
             'translations' => [
                 'app.basic' => [
                     'class' => PhpMessageSource::class,
-                ],
-            ],
-        ],
-        'log' => [
-            'traceLevel' => 'YII_DEBUG' ? 3 : 0,
-            'targets' => [
-                [
-                    'class' => FileTarget::class,
-                    'levels' => ['error', 'warning', 'info'],
-                    'logFile' => '@runtime/logs/app.log',
                 ],
             ],
         ],

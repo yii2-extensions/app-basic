@@ -9,7 +9,7 @@ use App\UseCase\Site\SiteController;
 $rootDir = dirname(__DIR__);
 
 return [
-    // application settings
+    // web application settings shared
     'app.aliases' => [
         '@app' => $rootDir,
         '@bower' => '@app/node_modules',
@@ -31,8 +31,10 @@ return [
             'class' => SiteController::class,
         ],
     ],
-    'app.mailer.useFileTransport' => true,
+    'app.errorHandler.errorAction' => 'site/404',
     'app.id' => 'app.basic',
+    'app.language' => 'en-US',
+    'app.name' => 'Web application basic',
     'app.params' => [
         'app.mailer.sender' => 'noreply@example.com',
         'app.mailer.sender.name' => 'Web application basic',
@@ -48,9 +50,10 @@ return [
                 'order' => 2
             ],
         ],
+        'app.menu.islogged' => [],
         'icons'  => '@npm/fortawesome--fontawesome-free/svgs/{family}/{name}.svg',
     ],
-    'app.request.cookieValidationKey' => 'your secret key here',
+    'app.request.cookieValidationKey' => 'your-cookie-validation-key',
     'app.request.enableCsrfValidation' => true,
     'app.root.dir' => $rootDir,
     'app.urlManager.enablePrettyUrl' => true,
