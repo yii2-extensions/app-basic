@@ -19,7 +19,10 @@ use yii\bootstrap5\Html;
                 'type' => 'button'
             ],
         ) ?>
-            <?= Icon::renderIcon('solid', 'circle-half-stroke', ['class' => 'me-2 fa-solid fa-xl theme-icon-active']) ?>
+            <?= Icon::renderIcon(
+                'solid',
+                'circle-half-stroke', ['class' => 'me-2 fa-solid fa-xl theme-icon-active text-secondary-emphasis'],
+            ) ?>
             <?= Html::tag('span', 'Toggle theme', ['class' => 'visually-hidden', 'id' => 'bd-theme-text']) ?>
         <?= Html::endTag('button') ?>
         <?= Html::beginTag(
