@@ -10,11 +10,6 @@ use yii\web\Session;
  */
 return [
     'container' => [
-        'definitions' => [
-            Mailer::class => [
-                'useFileTransport' => $params['app.mailer.useFileTransport'],
-            ],
-        ],
         'singletons' => [
             Session::class => static function (): Session {
                 return new Session();

@@ -8,21 +8,22 @@ use yii\console\controllers\ServeController;
 $rootDir = dirname(__DIR__);
 
 return [
-    'app.aliases' => [
+    'console.aliases' => [
         '@app' => $rootDir,
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
         '@resource' => '@app/src/Framework/resource',
         '@tests' => '@app/tests',
     ],
-    'app.id' => 'console.basic',
-    'app.controllerMap' => [
+    'console.bootstrap' => [],
+    'console.id' => 'console.basic',
+    'console.controllerMap' => [
         'hello' => HelloController::class,
         'serve' => [
             'class' => ServeController::class,
             'docroot' => "$rootDir/public",
         ],
     ],
-    'app.params' => [],
-    'app.root.dir' => $rootDir,
+    'console.params' => [],
+    'console.root.dir' => $rootDir,
 ];

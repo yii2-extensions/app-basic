@@ -29,7 +29,7 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
                 <?= Html::beginTag('p', ['class' => 'contact-form-subtitle']) ?>
                     <?= Yii::t(
                         'app.basic',
-                        'Please fill out the following fields to Sign up.'
+                        'Please fill out the following form to contact us.'
                     ) ?>
                 <?= Html::endTag('p') ?>
                 <?= Html::tag('hr', '', ['class' => 'mb-3']) ?>
@@ -121,39 +121,34 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
                                 ['class' => 'btn btn-lg btn-primary btn-block', 'name' => 'contact-button', 'tabindex' => '6']
                         ) ?>
                     <?= Html::endTag('div') ?>
-                    <?= Html::beginTag('p', ['class' => 'text-center mt-5']) ?>
-                        <?= Yii::t(
-                            'app.basic',
-                            'If you have business inquiries or other questions,<br/> please fill out the following form to contact us.<br/> <b>Thank you</b>.'
-                        ) ?>
-                    <?= Html::endTag('p') ?>
                 <?php ActiveForm::end() ?>
-                <?php if ($session->hasFlash('contactFormSubmitted')) : ?>
-                    <?= Html::tag('hr') ?>
-                    <?= Html::beginTag('p', ['class' => 'text-center']) ?>
-                        <?= Yii::t(
-                            'app.basic',
-                            'Note that if you turn on the Yii debugger, you should be able to view the mail message on the mail panel of the debugger.'
-                        ) ?>
-                        <br/>
-                        <br/>
-                        <?php if ($mailer->useFileTransport) : ?>
-                            <?= Yii::t(
-                                'app.basic',
-                                'Because the application is in development mode, the email is not sent but saved as a file under.'
-                            ) ?>
-                            <br/>
-                            <?= '<code>' . Yii::getAlias($mailer->fileTransportPath) . '</code>' ?>
-                            <br/>
-                            <br/>
-                            <?= Yii::t(
-                                'app.basic',
-                                'Please configure the <code>useFileTransport </code>property of the <code>mail </code>application component to be false to enable email sending.'
-                            ) ?>
-                        <?php endif ?>
-                    <?= Html::endTag('p') ?>
-                <?php endif ?>
             <?= Html::endTag('div') ?>
         <?= Html::endTag('div') ?>
     <?= Html::endTag('div') ?>
+    <?= Html::beginTag('p', ['class' => 'text-center mt-5']) ?>
+    <?php if ($session->hasFlash('contactFormSubmitted')) : ?>
+        <?= Html::tag('hr') ?>
+        <?= Html::beginTag('p', ['class' => 'text-center']) ?>
+            <?= Yii::t(
+                'app.basic',
+                'Note that if you turn on the Yii debugger, you should be able to view the mail message on the mail panel of the debugger.'
+            ) ?>
+            <br/>
+            <br/>
+            <?php if ($mailer->useFileTransport) : ?>
+               <?= Yii::t(
+                    'app.basic',
+                    'Because the application is in development mode, the email is not sent but saved as a file under.'
+                ) ?>
+                <br/>
+                <?= '<code>' . Yii::getAlias($mailer->fileTransportPath) . '</code>' ?>
+                <br/>
+                <br/>
+                <?= Yii::t(
+                    'app.basic',
+                    'Please configure the <code>useFileTransport </code>property of the <code>mail </code>application component to be false to enable email sending.'
+                ) ?>
+            <?php endif ?>
+        <?= Html::endTag('p') ?>
+    <?php endif ?>
 <?= Html::endTag('div');

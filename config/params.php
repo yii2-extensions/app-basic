@@ -3,8 +3,8 @@
 declare(strict_types=1);
 
 return [
-    'app.bootstrap' => ['log'],
-    'app.errorHandler.errorAction' => 'site/404',
-    'app.language' => 'en-US',
-    'app.name' => 'Web application basic',
+    'common.bootstrap' => ['log'],
+    'common.mailer.useFileTransport' => true,
+    'common.log.levels' => ['error', 'warning', 'info'],
+    'common.log.logFile' => '@runtime/logs/app.log',
 ];
