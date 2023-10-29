@@ -21,20 +21,19 @@ final class LanguageEventHandler implements BootstrapInterface
             Application::class,
             Application::EVENT_BEFORE_REQUEST,
             static function (Event $event): void {
-                if(php_sapi_name() === 'cli') {
+                if (php_sapi_name() === 'cli') {
                     return;
                 }
 
                 $languageNew = Yii::$app->request->get('language');
 
-                if($languageNew) {
+                if ($languageNew) {
                     $event->sender->language = $languageNew;
 
                     $cookie = new Cookie(['name' => 'language', 'value' => $languageNew, 'httpOnly' => true, 'sameSite' => 'strict']);
 
                     Yii::$app->getResponse()->getCookies()->add($cookie);
-                }
-                else {
+                } else {
                     $event->sender->language = Yii::$app->getRequest()->getCookies()->getValue('language', $_COOKIE['language'] ?? 'EN');
                 }
             }

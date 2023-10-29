@@ -11,39 +11,39 @@ use yii\helpers\Url;
 
 final class LanguageSwitcher extends Widget
 {
-	public function run(){
-		$languages = Yii::$app->params['app.languages'];
+    public function run()
+    {
+        $languages = Yii::$app->params['app.languages'];
 
-		$current = $languages[Yii::$app->language];
-		unset($languages[Yii::$app->language]);
+        $current = $languages[Yii::$app->language];
+        unset($languages[Yii::$app->language]);
 
-		$items = [];
-		foreach($languages as $code => $language)
-		{
-			$temp = [];
-			$temp['label'] = $language;
-			$temp['url'] = 'javascript:void(0);';
-			$temp['linkOptions'] = [
-				'class' => 'language-switch',
-				'data-language' => $code,
-			];
+        $items = [];
+        foreach ($languages as $code => $language) {
+            $temp = [];
+            $temp['label'] = $language;
+            $temp['url'] = 'javascript:void(0);';
+            $temp['linkOptions'] = [
+                'class' => 'language-switch',
+                'data-language' => $code,
+            ];
 
-			array_push($items, $temp);
-		}
+            array_push($items, $temp);
+        }
 
-		echo ButtonDropdown::widget(
-			[
-				'label' => $current,
-				'buttonOptions' => [
-					'class' => 'btn-secondary',
-				],
-				'dropdown' => [
-					'items' => $items,
-				],
-			],
-		);
+        echo ButtonDropdown::widget(
+            [
+                'label' => $current,
+                'buttonOptions' => [
+                    'class' => 'btn-secondary',
+                ],
+                'dropdown' => [
+                    'items' => $items,
+                ],
+            ],
+        );
 
-		$Js = <<<JS
+        $Js = <<<JS
 		$(document).ready(function(){
 			$('.language-switch').on('click', function (event) {
 				event.preventDefault(); // Prevenir el evento click
@@ -61,5 +61,5 @@ final class LanguageSwitcher extends Widget
 		JS;
 
         $this->view->registerJs($Js);
-	}
+    }
 }
