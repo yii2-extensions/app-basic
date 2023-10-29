@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\UseCase\Site;
 
+use App\Framework\Action\LanguageAction;
 use App\UseCase\Controller;
 use yii\web\ErrorAction;
 
@@ -14,6 +15,9 @@ final class SiteController extends Controller
         return [
             '404' => [
                 'class' => ErrorAction::class,
+            ],
+            'language' => [
+                'class' => LanguageAction::class,
             ],
         ];
     }

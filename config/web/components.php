@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use yii\i18n\PhpMessageSource;
+use App\Framework\Widget\languageSwitcher;
 
 /**
  * @var array $params
@@ -19,8 +20,12 @@ return [
             'translations' => [
                 'app.basic' => [
                     'class' => PhpMessageSource::class,
+                    'basePath' => '@resource/message',
                 ],
             ],
+        ],
+        'languageSwitcher' => [
+            'class' => languageSwitcher::class,
         ],
         'request' => [
             'cookieValidationKey' => $params['app.request.cookieValidationKey'],

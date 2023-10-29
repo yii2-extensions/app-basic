@@ -36,6 +36,12 @@ return [
     'app.language' => 'en-US',
     'app.name' => 'Web application basic',
     'app.params' => [
+        'app.languages' => [
+            'en-US' => 'English',
+            'es-ES' => 'Español',
+            'fr-FR' => 'Français',
+            'ru-RU' => 'Русский',
+        ],
         'app.mailer.sender' => 'noreply@example.com',
         'app.mailer.sender.name' => 'Web application basic',
         'app.menu.isguest' => [

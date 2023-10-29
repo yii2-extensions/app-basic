@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Framework\Widget\languageSwitcher;
 use sjaakp\icon\Icon;
 use yii\bootstrap5\Html;
 use yii\web\View;
@@ -80,6 +81,10 @@ use yii\web\View;
                 ['class' => 'ms-3'],
             ) ?>
             <?= $this->render('component/toggle_dark') ?>
+            <?= Html::tag(
+                'li',
+                languageSwitcher::Widget(),
+            ) ?>
         <?= Html::endTag('ul') ?>
     <?= Html::endTag('footer') ?>
 <?= Html::endTag('div') ?>
