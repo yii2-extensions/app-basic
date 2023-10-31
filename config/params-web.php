@@ -33,7 +33,7 @@ return [
     ],
     'app.errorHandler.errorAction' => 'site/404',
     'app.id' => 'app.basic',
-    'app.language' => 'en-US',
+    'app.language' => 'en',
     'app.name' => 'Web application basic',
     'app.params' => [
         'app.languages' => ['de-*', 'en-*', 'es-*', 'fr-*', 'pt-*', 'ru-*', 'zh-*'],
