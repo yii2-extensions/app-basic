@@ -10,9 +10,8 @@ $rootDir = dirname(__DIR__);
 
 $config = new Config(
     new ConfigPaths($rootDir, 'config', 'vendor'),
-    null,
-    [RecursiveMerge::groups('web', 'params-web')],
-    'params-web',
+    modifiers: [RecursiveMerge::groups('web', 'params-web')],
+    paramsGroup: 'params-web',
 );
 
 return $config->get('web');
