@@ -7,11 +7,11 @@ declare(strict_types=1);
  */
 $bootstrap = $params['common.bootstrap'] ?? [];
 
-if (isset($params['yii.debug']) && $params['yii.debug'] === true) {
+if (isset($params['yii2.debug']) && $params['yii2.debug'] === true) {
     $bootstrap = array_merge($bootstrap, ['debug']);
 }
 
-if (isset($params['yii.gii']) && $params['yii.gii'] === true) {
+if (isset($params['yii2.gii']) && $params['yii2.gii'] === true) {
     $bootstrap = array_merge($bootstrap, ['gii']);
 }
 

@@ -9,6 +9,8 @@ use yii\web\View;
 /**
  * @var View $this
  */
+$languages = Yii::$app->language;
+$languageLabel = Yii::$app->params['app.languages.labels'][$languages] ?? null;
 ?>
 <?= Html::beginTag('div', ['class' => 'container mt-auto']) ?>
     <?= Html::beginTag(
@@ -79,7 +81,10 @@ use yii\web\View;
                 ),
                 ['class' => 'ms-3'],
             ) ?>
-            <?= $this->render('component/toggle_dark') ?>
+            <?= $this->render('component/toggle_theme') ?>
+            <?php if ($languageLabel !== null) : ?>
+                <?= $this->render('component/toggle_language', ['languageLabel' => $languageLabel]) ?>
+            <?php endif ?>
         <?= Html::endTag('ul') ?>
     <?= Html::endTag('footer') ?>
 <?= Html::endTag('div') ?>

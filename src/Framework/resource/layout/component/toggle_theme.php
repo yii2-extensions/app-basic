@@ -2,9 +2,15 @@
 
 declare(strict_types=1);
 
+use App\Framework\Asset\ToggleThemeAsset;
 use sjaakp\icon\Icon;
 use yii\bootstrap5\Html;
+use yii\web\View;
 
+/**
+ * @var View $this
+ */
+ToggleThemeAsset::register($this);
 ?>
 <?= Html::beginTag('li') ?>
     <?= Html::beginTag('div', ['class' => 'dropdown bd-mode-toggle']) ?>
@@ -15,7 +21,7 @@ use yii\bootstrap5\Html;
                 'aria-label' => 'Toggle theme (auto)',
                 'class' => 'btn btn-bd-primary dropdown-toggle d-flex align-items-center',
                 'data-bs-toggle' => 'dropdown',
-                'id' => 'bd-theme',
+                'id' => 'toggle-theme',
                 'type' => 'button'
             ],
         ) ?>
@@ -23,11 +29,11 @@ use yii\bootstrap5\Html;
                 'solid',
                 'circle-half-stroke', ['class' => 'me-2 fa-solid fa-xl theme-icon-active text-secondary-emphasis'],
             ) ?>
-            <?= Html::tag('span', 'Toggle theme', ['class' => 'visually-hidden', 'id' => 'bd-theme-text']) ?>
+            <?= Html::tag('span', 'Toggle theme', ['class' => 'visually-hidden', 'id' => 'toggle-theme-text']) ?>
         <?= Html::endTag('button') ?>
         <?= Html::beginTag(
             'ul',
-            ['aria-labelledby' => 'bd-theme-text', 'class' => 'dropdown-menu dropdown-menu-end shadow'],
+            ['aria-labelledby' => 'toggle-theme-text', 'class' => 'dropdown-menu dropdown-menu-end shadow'],
         ) ?>
             <?= Html::beginTag('li') ?>
                 <?= Html::beginTag(

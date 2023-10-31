@@ -36,18 +36,30 @@ return [
     'app.language' => 'en-US',
     'app.name' => 'Web application basic',
     'app.params' => [
+        'app.languages' => ['de-*', 'en-*', 'es-*', 'fr-*', 'pt-*', 'ru-*', 'zh-*'],
+        'app.languages.labels' => [
+            'de' => 'German',
+            'en' => 'English',
+            'es' => 'Spanish',
+            'fr' => 'French',
+            'pt' => 'Portuguese',
+            'ru' => 'Russian',
+            'zh' => 'Chinese',
+        ],
         'app.mailer.sender' => 'noreply@example.com',
         'app.mailer.sender.name' => 'Web application basic',
         'app.menu.isguest' => [
             [
-                'label' => Yii::t('app.basic', 'About'),
+                'label' => 'About',
                 'url' => ['/about/index'],
-                'order' => 1
+                'order' => 1,
+                'category' => 'app.basic',
             ],
             [
-                'label' => Yii::t('app.basic', 'Contact'),
+                'label' => 'Contact',
                 'url' => ['/contact/index'],
-                'order' => 2
+                'order' => 2,
+                'category' => 'app.basic',
             ],
         ],
         'app.menu.islogged' => [],
@@ -62,4 +74,6 @@ return [
     // yii2 extensions settings
     'yii2.debug' => false,
     'yii2.gii' => false,
+    'yii2.localeurls.languages' => ['de', 'en', 'es', 'fr', 'pt', 'ru', 'zh'],
+    'yii2.ulrManager.class' => null,
 ];

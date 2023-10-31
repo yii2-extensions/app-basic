@@ -18,6 +18,13 @@ $menuItems = match ($user?->getIsGuest()) {
     default => Yii::$app->params['app.menu.isguest'],
 };
 
+foreach ($menuItems as $key => $item) {
+    if (isset($item['label']) && is_string($item['label'])) {
+        $category = $item['category'] ?? 'app.basic';
+        $menuItems[$key]['label'] = Yii::t($category, $item['label']);
+    }
+}
+
 $orders = array_column($menuItems, 'order');
 array_multisort($orders, SORT_ASC, $menuItems);
 

@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use yii\i18n\PhpMessageSource;
+use yii\web\UrlManager;
 
 /**
  * @var array $params
@@ -19,6 +20,7 @@ return [
             'translations' => [
                 'app.basic' => [
                     'class' => PhpMessageSource::class,
+                    'basePath' => '@resource/message',
                 ],
             ],
         ],
@@ -27,6 +29,7 @@ return [
             'enableCsrfValidation' => $params['app.request.enableCsrfValidation'],
         ],
         'urlManager' => [
+            'class' => $params['yii2.urlManager.class'] ?? UrlManager::class,
             'enablePrettyUrl' => $params['app.urlManager.enablePrettyUrl'],
             'showScriptName' => $params['app.urlManager.showScriptName'],
         ],
