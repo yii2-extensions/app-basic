@@ -13,6 +13,7 @@ return [
             '$common',
             '$yii2-debug',
             '$yii2-gii',
+            '$yii2-localeurls',
             'web/*.php'
         ],
         'params' => 'params.php',

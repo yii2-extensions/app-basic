@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f701ed81de36cbd55cc05364712e255d",
+    "content-hash": "fb1e54a0461fd542a813d3098030b790",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
-            "version": "v5.3.2",
+            "version": "v5.3.0-alpha1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "344e912d04b5b6a04482113eff20ab416ff01048"
+                "url": "git@github.com:twbs/bootstrap.git",
+                "reference": "cf9454caa00872899215603e5e036d9a824b1b11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/344e912d04b5b6a04482113eff20ab416ff01048",
-                "reference": "344e912d04b5b6a04482113eff20ab416ff01048"
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/cf9454caa00872899215603e5e036d9a824b1b11",
+                "reference": "cf9454caa00872899215603e5e036d9a824b1b11"
             },
             "type": "bower-asset"
         },
@@ -509,6 +509,18 @@
                 "source": "https://github.com/ezyang/htmlpurifier/tree/v4.16.0"
             },
             "time": "2022-09-18T07:06:19+00:00"
+        },
+        {
+            "name": "npm-asset/flag-icons",
+            "version": "6.11.2",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/flag-icons/-/flag-icons-6.11.2.tgz"
+            },
+            "type": "npm-asset",
+            "license": [
+                "MIT"
+            ]
         },
         {
             "name": "npm-asset/fortawesome--fontawesome-free",
@@ -1580,6 +1592,66 @@
             "time": "2023-05-23T14:45:45+00:00"
         },
         {
+            "name": "yii2-extensions/localeurls",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yii2-extensions/localeurls.git",
+                "reference": "175e964ecbcb801eb8355228b95e2ce6b9798614"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yii2-extensions/localeurls/zipball/175e964ecbcb801eb8355228b95e2ce6b9798614",
+                "reference": "175e964ecbcb801eb8355228b95e2ce6b9798614",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=8.1",
+                "yiisoft/yii2": "^2.2",
+                "yiisoft/yii2-bootstrap5": "^2.0"
+            },
+            "require-dev": {
+                "maglnet/composer-require-checker": "^4.6",
+                "phpunit/phpunit": "^10.4",
+                "yii2-extensions/phpstan": "dev-main"
+            },
+            "default-branch": true,
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.0.x-dev"
+                },
+                "config-plugin-options": {
+                    "source-directory": "config"
+                },
+                "config-plugin": {
+                    "params-web": "params-web.php",
+                    "yii2-localeurls": "components.php"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\localeurls\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Automatic locale/language management for URLs.",
+            "keywords": [
+                "i18n",
+                "locale",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/yii2-extensions/localeurls/issues",
+                "source": "https://github.com/yii2-extensions/localeurls/tree/main"
+            },
+            "time": "2023-10-31T13:06:09+00:00"
+        },
+        {
             "name": "yiisoft/arrays",
             "version": "3.0.0",
             "source": {
@@ -1718,16 +1790,16 @@
         },
         {
             "name": "yiisoft/strings",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/strings.git",
-                "reference": "55530b8853b34ac7995748986324aa2329aee2c5"
+                "reference": "980a5bc140766692ba7a6f6050213f63b77806d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/strings/zipball/55530b8853b34ac7995748986324aa2329aee2c5",
-                "reference": "55530b8853b34ac7995748986324aa2329aee2c5",
+                "url": "https://api.github.com/repos/yiisoft/strings/zipball/980a5bc140766692ba7a6f6050213f63b77806d8",
+                "reference": "980a5bc140766692ba7a6f6050213f63b77806d8",
                 "shasum": ""
             },
             "require": {
@@ -1777,7 +1849,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2023-10-23T16:50:10+00:00"
+            "time": "2023-10-30T11:38:34+00:00"
         },
         {
             "name": "yiisoft/var-dumper",
@@ -3404,16 +3476,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.39",
+            "version": "1.10.40",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "d9dedb0413f678b4d03cbc2279a48f91592c97c4"
+                "reference": "93c84b5bf7669920d823631e39904d69b9c7dc5d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/d9dedb0413f678b4d03cbc2279a48f91592c97c4",
-                "reference": "d9dedb0413f678b4d03cbc2279a48f91592c97c4",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/93c84b5bf7669920d823631e39904d69b9c7dc5d",
+                "reference": "93c84b5bf7669920d823631e39904d69b9c7dc5d",
                 "shasum": ""
             },
             "require": {
@@ -3462,7 +3534,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-10-17T15:46:26+00:00"
+            "time": "2023-10-30T14:48:31+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -5783,16 +5855,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v6.3.3",
+            "version": "v6.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "e23292e8c07c85b971b44c1c4b87af52133e2add"
+                "reference": "9758b6c69d179936435d0ffb577c3708d57e38a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/e23292e8c07c85b971b44c1c4b87af52133e2add",
-                "reference": "e23292e8c07c85b971b44c1c4b87af52133e2add",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/9758b6c69d179936435d0ffb577c3708d57e38a8",
+                "reference": "9758b6c69d179936435d0ffb577c3708d57e38a8",
                 "shasum": ""
             },
             "require": {
@@ -5835,7 +5907,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v6.3.3"
+                "source": "https://github.com/symfony/yaml/tree/v6.3.7"
             },
             "funding": [
                 {
@@ -5851,7 +5923,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-07-31T07:08:24+00:00"
+            "time": "2023-10-28T23:31:00+00:00"
         },
         {
             "name": "theseer/tokenizer",
@@ -6016,12 +6088,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii2-extensions/debug.git",
-                "reference": "eb0e3846d6b63d3abdf37460dd97615fb39822e3"
+                "reference": "90bd387ee63f08663b10eb19cce45e4fd58f4b2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2-extensions/debug/zipball/eb0e3846d6b63d3abdf37460dd97615fb39822e3",
-                "reference": "eb0e3846d6b63d3abdf37460dd97615fb39822e3",
+                "url": "https://api.github.com/repos/yii2-extensions/debug/zipball/90bd387ee63f08663b10eb19cce45e4fd58f4b2d",
+                "reference": "90bd387ee63f08663b10eb19cce45e4fd58f4b2d",
                 "shasum": ""
             },
             "require": {
@@ -6071,7 +6143,7 @@
                 "issues": "https://github.com/yii2-extensions/debug/issues",
                 "source": "https://github.com/yii2-extensions/debug/tree/main"
             },
-            "time": "2023-10-23T10:45:32+00:00"
+            "time": "2023-10-30T15:07:26+00:00"
         },
         {
             "name": "yii2-extensions/gii",
@@ -6079,12 +6151,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii2-extensions/gii.git",
-                "reference": "8b7ae311f44457266a1d514d7428ae90aa8d885c"
+                "reference": "90667b3ece274617480dd369da24cf189c9ff7b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2-extensions/gii/zipball/8b7ae311f44457266a1d514d7428ae90aa8d885c",
-                "reference": "8b7ae311f44457266a1d514d7428ae90aa8d885c",
+                "url": "https://api.github.com/repos/yii2-extensions/gii/zipball/90667b3ece274617480dd369da24cf189c9ff7b2",
+                "reference": "90667b3ece274617480dd369da24cf189c9ff7b2",
                 "shasum": ""
             },
             "require": {
@@ -6130,7 +6202,7 @@
                 "issues": "https://github.com/yii2-extensions/gii/issues",
                 "source": "https://github.com/yii2-extensions/gii/tree/main"
             },
-            "time": "2023-10-23T12:40:51+00:00"
+            "time": "2023-10-30T15:04:02+00:00"
         },
         {
             "name": "yii2-extensions/phpstan",
@@ -6188,6 +6260,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "yii2-extensions/localeurls": 20,
         "yii2-extensions/debug": 20,
         "yii2-extensions/gii": 20,
         "yii2-extensions/phpstan": 20
@@ -6198,5 +6271,5 @@
         "php": ">=8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

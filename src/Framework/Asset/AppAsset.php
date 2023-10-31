@@ -20,16 +20,14 @@ final class AppAsset extends AssetBundle
         'css/site.css',
     ];
 
-    public $js = [
-        'js/site.js',
-    ];
-
-    public $jsOptions = [
-        'position' => View::POS_HEAD,
-    ];
-
     public $depends = [
         YiiAsset::class,
         BootstrapAsset::class,
+    ];
+
+    public $publishOptions = [
+        'only' => [
+            'site.css',
+        ],
     ];
 }
