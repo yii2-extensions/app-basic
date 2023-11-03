@@ -2,18 +2,20 @@
 
 declare(strict_types=1);
 
-use yii\bootstrap5\Html;
+use PHPForge\Html\Head;
+use PHPForge\Html\Meta;
+use PHPForge\Html\Title;
+use yii\helpers\Html;
 use yii\web\View;
 
 /**
  * @var View $this
  */
 ?>
-<?= Html::beginTag('head') ?>
-    <?= Html::tag('meta', '', ['charset' => Yii::$app->charset]) ?>
-    <?= Html::tag('meta', '', ['http-equiv' => 'X-UA-Compatible', 'content' => 'IE=edge']) ?>
-    <?= Html::tag('meta', '', ['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1']) ?>
+<?= Head::widget()->begin() ?>
+    <?= Meta::widget()->charset(Yii::$app->charset) ?>
+    <?= Meta::widget()->content('viewport', 'width=device-width, initial-scale=1') ?>
     <?= Html::csrfMetaTags() ?>
-    <?= Html::tag('title', Html::encode($this->title)) ?>
+    <?= Title::widget()->content(Html::encode($this->title)) ?>
     <?php $this->head() ?>
-<?= Html::endTag('head') ?>
+<?= Head::end();

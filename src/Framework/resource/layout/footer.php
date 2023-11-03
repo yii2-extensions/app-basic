@@ -2,8 +2,11 @@
 
 declare(strict_types=1);
 
+use PHPForge\Html\A;
+use PHPForge\Html\Div;
+use PHPForge\Html\Footer;
+use PHPForge\Html\Span;
 use sjaakp\icon\Icon;
-use yii\bootstrap5\Html;
 use yii\web\View;
 
 /**
@@ -12,79 +15,48 @@ use yii\web\View;
 $languages = Yii::$app->language;
 $languageLabel = Yii::$app->params['app.languages.labels'][$languages] ?? null;
 ?>
-<?= Html::beginTag('div', ['class' => 'container mt-auto']) ?>
-    <?= Html::beginTag(
-        'footer',
-        [
-            'class' => 'd-flex justify-content-between align-items-center py-3 my-4 border-top border-secondary-subtle',
-        ],
-    ) ?>
-        <?= Html::beginTag('div', ['class' => 'col-md-4']) ?>
-            <?= Html::beginTag(
-                'a',
-                [
-                    'class' => 'mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1',
-                    'href' => 'https://www.yiiframework.com/',
-                    'aria-label' => 'Yii Framework',
-                ],
-            ) ?>
-                <?= Html::tag(
-                    'span',
-                    '&copy; ' . date('Y') . ' <strong>YiiFramework</strong>',
-                    ['class' => 'mb-3 mb-md-0 text-body-secondary'],
-                ) ?>
-            <?= Html::endTag('a') ?>
-        <?= Html::endTag('div') ?>
-        <?= Html::beginTag(
-            'ul',
-            ['class' => 'nav col-md-4 justify-content-end list-unstyled d-flex align-items-center'],
-        ) ?>
-            <?= Html::tag(
-                'li',
-                Html::a(
-                    Icon::renderIcon('brands', 'twitter', ['class' => 'fa-solid fa-xl']),
-                    'https://x.com/Terabytesoftw',
-                    [
-                        'class' => 'text-body-secondary',
-                        'rel' => 'noopener',
-                        'target' => '_blank',
-                        'title' => 'Terabytesoftw on en X',
-                    ]
-                ),
-                ['class' => 'ms-3'],
-            ) ?>
-            <?= Html::tag(
-                'li',
-                Html::a(
-                    Icon::renderIcon('brands', 'github', ['class' => 'fa-solid fa-xl']),
-                    'https://github.com/yiisoft/yii2/tree/2.2',
-                    [
-                        'class' => 'text-body-secondary',
-                        'rel' => 'noopener',
-                        'target' => '_blank',
-                        'title' => 'Yii Framework v.2.2 on GitHub',
-                    ]
-                ),
-                ['class' => 'ms-3'],
-            ) ?>
-            <?= Html::tag(
-                'li',
-                Html::a(
-                    Icon::renderIcon('brands', 'telegram', ['class' => 'fa-solid fa-xl']),
-                    'https://t.me/yii_framework_in_english',
-                    [
-                        'class' => 'text-body-secondary',
-                        'rel' => 'noopener',
-                        'target' => '_blank',
-                        'title' => 'Yii Framework v.2.2 on Telegram',
-                    ]
-                ),
-                ['class' => 'ms-3'],
-            ) ?>
+<?= Div::widget()->class('container mt-auto')->begin() ?>
+    <?= Footer::widget()
+            ->class('d-flex justify-content-between align-items-center py-3 my-4 border-top border-secondary-subtle')
+            ->begin() ?>
+        <?= Div::widget()->class('col-md-4')->begin() ?>
+            <?= A::widget()
+                    ->attributes(['aria-label' => 'Yii Framework'])
+                    ->class('mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1')
+                    ->content(
+                        Span::widget()
+                            ->class('mb-3 mb-md-0 text-body-secondary')
+                            ->content('&copy; ', date('Y'), ' <strong>Yii Framework</strong>')
+                    )
+                    ->href('https://www.yiiframework.com/')
+                    ->title('Yii Framework') ?>
+        <?= Div::end() ?>
+        <?= Div::widget()->class('col-md-4 justify-content-end d-flex align-items-center')->begin() ?>
+            <?= A::widget()
+                    ->class('text-body-secondary ms-3')
+                    ->content(Icon::renderIcon('brands', 'twitter', ['class' => 'fa-solid fa-xl']))
+                    ->href('https://x.com/Terabytesoftw')
+                    ->rel('noopener')
+                    ->target('_blank')
+                    ->title('Terabytesoftw on en X') ?>
+            <?= A::widget()
+                    ->class('text-body-secondary ms-3')
+                    ->content(Icon::renderIcon('brands', 'github', ['class' => 'fa-solid fa-xl']))
+                    ->href('https://github.com/yiisoft/yii2/tree/2.2')
+                    ->rel('noopener')
+                    ->target('_blank')
+                    ->title('Yii Framework v.2.2 on GitHub') ?>
+            <?= A::widget()
+                    ->class('text-body-secondary ms-3')
+                    ->content(Icon::renderIcon('brands', 'telegram', ['class' => 'fa-solid fa-xl']))
+                    ->href('https://t.me/yii_framework_in_english')
+                    ->rel('noopener')
+                    ->target('_blank')
+                    ->title('Yii Framework emglish on Telegram') ?>
             <?= $this->render('component/toggle_theme') ?>
             <?php if ($languageLabel !== null) : ?>
                 <?= $this->render('component/toggle_language', ['languageLabel' => $languageLabel]) ?>
             <?php endif ?>
-        <?= Html::endTag('ul') ?>
-    <?= Html::endTag('footer') ?>
-<?= Html::endTag('div') ?>
+        <?= Div::end() ?>
+    <?= Footer::end() ?>
+<?= Div::end();

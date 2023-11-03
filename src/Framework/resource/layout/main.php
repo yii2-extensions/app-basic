@@ -3,9 +3,13 @@
 declare(strict_types=1);
 
 use App\Framework\Asset\AppAsset;
+use PHPForge\Html\Body;
+use PHPForge\Html\Div;
+use PHPForge\Html\Header;
+use PHPForge\Html\Html;
+use PHPForge\Html\Tag;
 use sjaakp\icon\Icon;
 use yii\bootstrap5\Breadcrumbs;
-use yii\bootstrap5\Html;
 use yii\web\View;
 
 /**
@@ -16,12 +20,12 @@ AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
     <!DOCTYPE html>
-    <?= Html::beginTag('html', ['lang' => Yii::$app->language, 'data-bs-theme' => 'auto']) ?>
+    <?= Html::widget()->attributes(['lang' => Yii::$app->language, 'data-bs-theme' => 'auto'])->begin() ?>
         <?= $this->render('head') ?>
         <?php $this->beginBody() ?>
-            <?= Html::beginTag('body', ['class' => 'd-flex']) ?>
-                <?= Html::beginTag('div', ['class' => 'cover-container d-flex w-100 h-100 mx-auto flex-column']) ?>
-                    <?= Html::beginTag('header', ['class' => 'mb-auto']) ?>
+            <?= Body::widget()->class('d-flex')->begin() ?>
+                <?= Div::widget()->class('cover-container d-flex w-100 h-100 mx-auto flex-column')->begin() ?>
+                    <?= Header::widget()->class('mb-auto')->begin() ?>
                         <?= $this->render('component/menu') ?>
                         <?= $this->render('component/alert') ?>
                         <?= Breadcrumbs::widget(
@@ -29,12 +33,14 @@ AppAsset::register($this);
                                 'links' => $this->params['breadcrumbs'] ?? [],
                             ]
                         ) ?>
-                    <?= Html::endTag('header') ?>
-                    <?= Html::tag('main', $content) ?>
+                    <?= Header::end() ?>
+                    <?= Div::widget()->begin() ?>
+                        <?= $content ?>
+                    <?= Div::end() ?>
                     <?= $this->render('footer') ?>
-                <?= Html::endTag('div') ?>
+                <?= Div::end() ?>
                 <?= Icon::symbols($this) ?>
-            <?= Html::endTag('body') ?>
+            <?= Body::end() ?>
         <?php $this->endBody() ?>
-    <?= Html::endTag('html') ?>
+    <?= Html::end() ?>
 <?php $this->endPage();

@@ -17,6 +17,8 @@
         "npm-asset/flag-icons": "^6.1",
         "npm-asset/fortawesome--fontawesome-free": "^6.4",
         "oomphinc/composer-installers-extender": "^2.0",
+        "php-forge/awesome-component": "dev-main",
+        "php-forge/html": "dev-main",
         "sjaakp/yii2-icon": "^1.0",
         "yii2-extensions/localeurls": "dev-main",
         "yiisoft/config": "^1.3",
