@@ -65,7 +65,7 @@ echo Dropdown::widget()
     ->toggleAttributes(
         [
             'aria-expanded' => 'false',
-            'aria-label' => 'Toggle theme (auto)',
+            'aria-label' => 'Toggle language dropdown',
             'data-bs-toggle' => 'dropdown',
             'id' => 'toggle-language',
         ],
