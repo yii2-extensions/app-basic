@@ -77,5 +77,4 @@ echo Dropdown::widget()
         Span::widget()->class('visually-hidden')->content('Toggle theme')->id('toggle-theme-text'),
     )
     ->toggleSvg(null)
-    ->toggleType('dropdown')
-    ->render();
+    ->toggleType('dropdown');

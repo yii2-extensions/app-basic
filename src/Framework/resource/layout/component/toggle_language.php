@@ -72,5 +72,4 @@ echo Dropdown::widget()
     )
     ->toggleClass('btn btn-bd-primary dropdown-toggle d-flex align-items-center text-secondary-emphasis')
     ->toggleContent(Yii::t('app.basic', $languageLabel))
-    ->toggleType('dropdown')
-    ->render();
+    ->toggleType('dropdown');
