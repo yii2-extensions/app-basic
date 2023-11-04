@@ -2,7 +2,10 @@
 
 declare(strict_types=1);
 
-use yii\bootstrap5\Html;
+use PHPForge\Html\Div;
+use PHPForge\Html\H;
+use PHPForge\Html\Helper\Encode;
+use PHPForge\Html\P;
 use yii\web\View;
 
 /**
@@ -10,11 +13,19 @@ use yii\web\View;
  */
 $this->title = Yii::t('app.basic', 'About');
 ?>
-<?= Html::beginTag('div', ['class' => 'text-center']) ?>
-    <?= Html::tag('h1', '<b>'. Html::encode($this->title) . '</b>', ['class' => 'c-grey-900 mb-40 display-4']) ?>
-    <?= Html::tag(
-        'p',
-        Yii::t('app.basic', 'This is the About page. You may modify the following file to customize its content.')
-    ) ?>
+<?= Div::widget()->class('text-center')->begin() ?>
+    <?= H::widget()
+            ->content('<b>' . Encode::create()->content($this->title) . '</b>')
+            ->class('c-grey-900 mb-40 display-4')
+            ->tagName('h1')
+    ?>
+    <?= P::widget()
+            ->content(
+                Yii::t(
+                    'app.basic',
+                    'This is the About page. You may modify the following file to customize its content.'
+                )
+            )
+    ?>
     <code><?= __FILE__ ?></code>
-<?= Html::endTag('div') ?>
+<?= Div::end();
