@@ -71,7 +71,8 @@ echo Dropdown::widget()
     ->toggleContent(
         Icon::renderIcon(
             'solid',
-            'circle-half-stroke', ['class' => 'me-2 fa-solid fa-xl theme-icon-active text-secondary-emphasis'],
+            'circle-half-stroke',
+            ['class' => 'me-2 fa-solid fa-xl theme-icon-active text-secondary-emphasis'],
         ),
         Span::widget()->class('visually-hidden')->content('Toggle theme')->id('toggle-theme-text'),
     )
