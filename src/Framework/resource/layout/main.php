@@ -7,7 +7,6 @@ use PHPForge\Html\Body;
 use PHPForge\Html\Div;
 use PHPForge\Html\Header;
 use PHPForge\Html\Html;
-use PHPForge\Html\Tag;
 use sjaakp\icon\Icon;
 use yii\bootstrap5\Breadcrumbs;
 use yii\web\View;
@@ -34,9 +33,7 @@ AppAsset::register($this);
                             ]
                         ) ?>
                     <?= Header::end() ?>
-                    <?= Div::widget()->begin() ?>
-                        <?= $content ?>
-                    <?= Div::end() ?>
+                    <?= $content ?>
                     <?= $this->render('footer') ?>
                 <?= Div::end() ?>
                 <?= Icon::symbols($this) ?>
