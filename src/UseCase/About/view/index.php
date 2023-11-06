@@ -14,12 +14,9 @@ use yii\web\View;
 $this->title = Yii::t('app.basic', 'About');
 ?>
 <?= Div::widget()->class('text-center')->begin() ?>
-    <?= H::widget()
-            ->content('<b>' . Encode::create()->content($this->title) . '</b>')
-            ->class('c-grey-900 mb-40 display-4')
-            ->tagName('h1')
-    ?>
-    <?= P::widget()
+    <?= H::widget()->content(Encode::content($this->title))->class('mb-40 display-4 fw-bold')->tagName('h1') ?>
+    <?=
+        P::widget()
             ->content(
                 Yii::t(
                     'app.basic',

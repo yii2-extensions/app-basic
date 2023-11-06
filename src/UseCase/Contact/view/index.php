@@ -3,8 +3,13 @@
 declare(strict_types=1);
 
 use App\UseCase\Contact\ContactForm;
+use PHPForge\Html\Button;
+use PHPForge\Html\Div;
+use PHPForge\Html\H;
+use PHPForge\Html\Helper\Encode;
+use PHPForge\Html\P;
+use PHPForge\Html\Tag;
 use yii\bootstrap5\ActiveForm;
-use yii\bootstrap5\Html;
 use yii\captcha\Captcha;
 use yii\symfonymailer\Mailer;
 use yii\web\Session;
@@ -18,47 +23,29 @@ use yii\web\View;
  */
 $this->title = $this->title = Yii::t('app.basic', 'Contact');
 ?>
-<?= Html::beginTag('div', ['class' => 'container mt-3']) ?>
-    <?= Html::beginTag('div', ['class' => 'row align-items-center justify-content-center']) ?>
-        <?= Html::beginTag('div', ['class' => 'col-md-5 col-sm-12']) ?>
-            <?= Html::beginTag(
-                'div',
-                ['class' => 'bg-body-tertiary shadow border-0 rounded border-light p-4 p-lg-5 w-100 fmxw-500'],
-            ) ?>
-                <?= Html::tag('h1', '<b>' . Html::encode($this->title) . '</b>', ['class' => 'contact-form-title']) ?>
-                <?= Html::beginTag('p', ['class' => 'contact-form-subtitle']) ?>
-                    <?= Yii::t(
-                        'app.basic',
-                        'Please fill out the following form to contact us.'
-                    ) ?>
-                <?= Html::endTag('p') ?>
-                <?= Html::tag('hr', '', ['class' => 'mb-3']) ?>
+<?= Div::widget()->class('container mt-3')->begin() ?>
+    <?= Div::widget()->class('row align-items-center justify-content-center')->begin() ?>
+        <?= Div::widget()->class('col-md-5 col-sm-12')->begin() ?>
+            <?=
+                Div::widget()
+                    ->class('bg-body-tertiary shadow border-0 rounded border-light p-4 p-lg-5 w-100 fmxw-500')
+                    ->begin()
+            ?>
+                <?= H::widget()->content(Encode::content($this->title))->class('fw-bold')->tagName('h1') ?>
+                <?= P::widget()->content(Yii::t('app.basic', 'Please fill out the following form to contact us.')) ?>
+                <?= Tag::widget()->class('mb-3')->tagName('hr') ?>
                 <?php $form = ActiveForm::begin(
                     [
                         'id' => 'contact-form',
-                        'layout' => 'default',
-                        'enableAjaxValidation' => false,
-                        'enableClientValidation' => false,
-                        'fieldConfig' => [
-                            'template' => '{input}{label}{hint}{error}',
-                            'horizontalCssClasses' => [
-                                'error' => 'text-center',
-                                'field' => 'form-floating',
-                            ],
-                            'options' => ['class' => 'form-floating mb-4'],
-                        ],
-                        'validateOnType' => false,
-                        'validateOnChange' => false,
+                        'layout' => ActiveForm::LAYOUT_FLOATING,
                     ]
                 ) ?>
                     <?= $form->field($model, 'name')
                         ->textInput(
                             [
                                 'autofocus' => true,
-                                'oninput' => 'this.setCustomValidity("")',
                                 'oninvalid' => 'this.setCustomValidity("' . Yii::t('app.basic', 'Enter Username Here') .'")',
-                                'placeholder' => Yii::t('app.basic', 'Username'),
-                                'required' => !((YII_ENV === 'test')),
+                                'required' => true,
                                 'tabindex' => '1',
                             ]
                         )
@@ -66,10 +53,8 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
                     <?= $form->field($model, 'email')
                         ->textInput(
                             [
-                                'oninput' => 'this.setCustomValidity("")',
                                 'oninvalid' => 'this.setCustomValidity("' . Yii::t('app.basic', 'Enter Email Here') . '")',
-                                'placeholder' => Yii::t('app.basic', 'Email'),
-                                'required' => !((YII_ENV === 'tests')),
+                                'required' => true,
                                 'tabindex' => '2',
                             ]
                         )
@@ -77,10 +62,8 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
                     <?= $form->field($model, 'subject')
                         ->textInput(
                             [
-                                'oninput' => 'this.setCustomValidity("")',
                                 'oninvalid' => 'this.setCustomValidity("' . Yii::t('app.basic', 'Enter Subject Here').'")',
-                                'placeholder' => Yii::t('app.basic', 'Subject'),
-                                'required' => !((YII_ENV === 'test')),
+                                'required' => true,
                                 'tabindex' => '3',
                             ]
                         )
@@ -88,10 +71,8 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
                     <?= $form->field($model, 'body')
                         ->textarea(
                             [
-                                'oninput' => 'this.setCustomValidity("")',
                                 'oninvalid' => 'this.setCustomValidity("' . Yii::t('app.basic', 'Enter Body Here') . '")',
-                                'placeholder' => Yii::t('app.basic', 'Body'),
-                                'required' => !((YII_ENV === 'test')),
+                                'required' => true,
                                 'style' => 'height: 100px',
                                 'tabindex' => '4',
                             ]
@@ -102,53 +83,57 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
                             Captcha::class,
                             [
                                 'captchaAction' => 'contact/captcha',
-                                'template' => '{input}<div class="text-center">' . '<b>' . Yii::t('app.basic', 'Captcha Code') . ': ' . '</b>' . '{image}</div>',
+                                'template' => '{input}<div class="text-center mb-3">' . '<b>' . Yii::t('app.basic', 'Captcha Code') . ': ' . '</b>' . '{image}</div>',
                                 'options' => [
                                     'class' => 'form-control',
-                                    'oninput' => 'this.setCustomValidity("")',
                                     'oninvalid' => 'this.setCustomValidity("' . Yii::t('app.basic', 'Enter Captcha Code Here') . '")',
-                                    'placeholder' => Yii::t('app.basic', 'Captcha Code'),
-                                    'required' => !((YII_ENV === 'test')),
-                                    'style' => 'margin-bottom:10px',
+                                    'required' => true,
                                     'tabindex' => '5',
                                 ],
                             ]
                         )
                     ?>
-                    <?= Html::beginTag('div', ['class' => 'd-grid gap-2']) ?>
-                        <?= Html::submitButton(
-                                Yii::t('app.basic', 'Contact us'),
-                                ['class' => 'btn btn-lg btn-primary btn-block', 'name' => 'contact-button', 'tabindex' => '6']
-                        ) ?>
-                    <?= Html::endTag('div') ?>
+                    <?=
+                        Div::widget()
+                            ->class('d-grid gap-2')
+                            ->content(
+                                Button::widget()
+                                    ->class('btn btn-lg btn-primary btn-block')
+                                    ->content(Yii::t('app.basic', 'Contact us'))
+                                    ->name('contact-button')
+                                    ->submit()
+                                    ->tabIndex(6)
+                        )
+                    ?>
                 <?php ActiveForm::end() ?>
-            <?= Html::endTag('div') ?>
-        <?= Html::endTag('div') ?>
-    <?= Html::endTag('div') ?>
-    <?= Html::beginTag('p', ['class' => 'text-center mt-5']) ?>
-    <?php if ($session->hasFlash('contactFormSubmitted')) : ?>
-        <?= Html::tag('hr') ?>
-        <?= Html::beginTag('p', ['class' => 'text-center']) ?>
-            <?= Yii::t(
-                'app.basic',
-                'Note that if you turn on the Yii debugger, you should be able to view the mail message on the mail panel of the debugger.'
-            ) ?>
-            <br/>
-            <br/>
-            <?php if ($mailer->useFileTransport) : ?>
-               <?= Yii::t(
-                    'app.basic',
-                    'Because the application is in development mode, the email is not sent but saved as a file under.'
-                ) ?>
-                <br/>
-                <?= '<code>' . Yii::getAlias($mailer->fileTransportPath) . '</code>' ?>
-                <br/>
-                <br/>
+            <?= Div::end() ?>
+        <?= Div::end() ?>
+    <?= Div::end() ?>
+    <?= P::widget()->class('text-center mt-5')->begin() ?>
+        <?php if ($session->hasFlash('contactFormSubmitted')) : ?>
+            <?= Tag::widget()->tagName('hr') ?>
+            <?= P::widget()->class('text-center')->begin() ?>
                 <?= Yii::t(
                     'app.basic',
-                    'Please configure the <code>useFileTransport </code>property of the <code>mail </code>application component to be false to enable email sending.'
+                    'Note that if you turn on the Yii debugger, you should be able to view the mail message on the mail panel of the debugger.'
                 ) ?>
-            <?php endif ?>
-        <?= Html::endTag('p') ?>
-    <?php endif ?>
-<?= Html::endTag('div');
+                <br/>
+                <br/>
+                <?php if ($mailer->useFileTransport) : ?>
+                    <?= Yii::t(
+                        'app.basic',
+                        'Because the application is in development mode, the email is not sent but saved as a file under.'
+                    ) ?>
+                    <br/>
+                    <?= '<code>' . Yii::getAlias($mailer->fileTransportPath) . '</code>' ?>
+                    <br/>
+                    <br/>
+                    <?= Yii::t(
+                        'app.basic',
+                        'Please configure the <code>useFileTransport </code>property of the <code>mail </code>application component to be false to enable email sending.'
+                    ) ?>
+                <?php endif ?>
+            <?= P::end() ?>
+        <?php endif ?>
+    <?= P::end() ?>
+<?= Div::end();
