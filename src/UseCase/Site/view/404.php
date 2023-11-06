@@ -42,5 +42,5 @@ echo Div::widget()
                         Encode::content(Yii::t('app.basic', 'If you think this is a problem with us, please tell us.'))
                     )
                     ->tagName('h6'),
-            )
+            ),
     );
