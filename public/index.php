@@ -33,6 +33,4 @@ $config = new Config(
     paramsGroup: 'params-web',
 );
 
-Yii::$container->set(Application::class, $config->get('web'));
-
 (new yii\web\Application($config->get('web')))->run();
