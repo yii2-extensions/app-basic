@@ -7,7 +7,7 @@ namespace App\Framework\EventHandler;
 use App\UseCase\Contact\ContactController;
 use App\UseCase\Contact\ContactEvent;
 use Yii;
-use yii\base\Application;
+use yii\web\Application;
 use yii\base\BootstrapInterface;
 use yii\base\Event;
 
@@ -21,8 +21,8 @@ final class ContactEventHandler implements BootstrapInterface
         Event::on(
             ContactController::class,
             ContactEvent::EVENT_AFTER_SEND,
-            static function (): void {
-                Yii::$app->session->setFlash(
+            static function () use ($app): void {
+                $app->session->setFlash(
                     'success',
                     Yii::t(
                         'app.basic',

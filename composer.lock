@@ -512,10 +512,10 @@
         },
         {
             "name": "npm-asset/flag-icons",
-            "version": "6.11.2",
+            "version": "6.12.0",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/flag-icons/-/flag-icons-6.11.2.tgz"
+                "url": "https://registry.npmjs.org/flag-icons/-/flag-icons-6.12.0.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -597,12 +597,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-forge/awesome-component.git",
-                "reference": "66cd154b3b13e1eb02bbaeac5c9c2bf244a38902"
+                "reference": "ca954e9b957b085ad62363448d9b0ceafd2e2768"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-forge/awesome-component/zipball/66cd154b3b13e1eb02bbaeac5c9c2bf244a38902",
-                "reference": "66cd154b3b13e1eb02bbaeac5c9c2bf244a38902",
+                "url": "https://api.github.com/repos/php-forge/awesome-component/zipball/ca954e9b957b085ad62363448d9b0ceafd2e2768",
+                "reference": "ca954e9b957b085ad62363448d9b0ceafd2e2768",
                 "shasum": ""
             },
             "require": {
@@ -646,7 +646,7 @@
                 "issues": "https://github.com/php-forge/awesome-component/issues",
                 "source": "https://github.com/php-forge/awesome-component/tree/main"
             },
-            "time": "2023-11-03T19:31:36+00:00"
+            "time": "2023-11-06T17:06:28+00:00"
         },
         {
             "name": "php-forge/awesome-widget",
@@ -707,12 +707,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-forge/html.git",
-                "reference": "d504f36945e471c57c3c147c0938c6686fa9ac22"
+                "reference": "a8dd639a431a99ac3e6df0696ae55944c2a4265c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-forge/html/zipball/d504f36945e471c57c3c147c0938c6686fa9ac22",
-                "reference": "d504f36945e471c57c3c147c0938c6686fa9ac22",
+                "url": "https://api.github.com/repos/php-forge/html/zipball/a8dd639a431a99ac3e6df0696ae55944c2a4265c",
+                "reference": "a8dd639a431a99ac3e6df0696ae55944c2a4265c",
                 "shasum": ""
             },
             "require": {
@@ -758,7 +758,7 @@
                 "issues": "https://github.com/php-forge/html/issues",
                 "source": "https://github.com/php-forge/html/tree/main"
             },
-            "time": "2023-11-03T21:15:52+00:00"
+            "time": "2023-11-06T16:58:44+00:00"
         },
         {
             "name": "psr/container",
@@ -4069,16 +4069,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.40",
+            "version": "1.10.41",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "93c84b5bf7669920d823631e39904d69b9c7dc5d"
+                "reference": "c6174523c2a69231df55bdc65b61655e72876d76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/93c84b5bf7669920d823631e39904d69b9c7dc5d",
-                "reference": "93c84b5bf7669920d823631e39904d69b9c7dc5d",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/c6174523c2a69231df55bdc65b61655e72876d76",
+                "reference": "c6174523c2a69231df55bdc65b61655e72876d76",
                 "shasum": ""
             },
             "require": {
@@ -4127,7 +4127,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-10-30T14:48:31+00:00"
+            "time": "2023-11-05T12:57:57+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",

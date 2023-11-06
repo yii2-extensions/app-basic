@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use yii\web\Application;
 use Yiisoft\Config\Config;
 use Yiisoft\Config\ConfigPaths;
 use Yiisoft\Config\Modifier\RecursiveMerge;
@@ -31,5 +32,7 @@ $config = new Config(
     modifiers: [RecursiveMerge::groups('web', 'params-web')],
     paramsGroup: 'params-web',
 );
+
+Yii::$container->set(Application::class, $config->get('web'));
 
 (new yii\web\Application($config->get('web')))->run();
