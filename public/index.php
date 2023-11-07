@@ -33,4 +33,6 @@ $config = new Config(
     paramsGroup: 'params-web',
 );
 
-(new yii\web\Application($config->get('web')))->run();
+$container = Yii::$container->setSingleton(Application::class, $config->get('web'));
+$app = Yii::$container->get(Application::class);
+$app->run();
