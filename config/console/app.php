@@ -7,10 +7,10 @@ declare(strict_types=1);
  */
 return [
     'id' => $params['console.id'],
-    'aliases' => $params['console.aliases'],
+    'aliases' => $params['common.aliases'],
     'basePath' => dirname(__DIR__, 2),
     'bootstrap' => $params['common.bootstrap'],
     'controllerMap' => $params['console.controllerMap'],
     'params' => $params['console.params'],
-    'runtimePath' => $params['console.root.dir'] . '/public/runtime',
+    'runtimePath' => $params['common.runtime.path'],
 ];

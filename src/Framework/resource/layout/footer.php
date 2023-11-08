@@ -21,8 +21,9 @@ $languageLabel = Yii::$app->params['app.languages.labels'][$languages] ?? null;
             ->begin()
     ?>
         <?= Div::widget()->class('col-md-4')->begin() ?>
-            <?= A::widget()
-                    ->attributes(['aria-label' => 'Yii Framework'])
+            <?=
+                A::widget()
+                    ->ariaLabel('Yii Framework')
                     ->class('mb-3 mb-md-0 text-body-secondary text-decoration-none lh-1')
                     ->content(
                         Span::widget()
@@ -34,7 +35,8 @@ $languageLabel = Yii::$app->params['app.languages.labels'][$languages] ?? null;
             ?>
         <?= Div::end() ?>
         <?= Div::widget()->class('col-md-4 justify-content-end d-flex align-items-center')->begin() ?>
-            <?= A::widget()
+            <?=
+                A::widget()
                     ->class('d-none d-sm-block d-md-block d-lg-block d-xl-block text-body-secondary ms-3')
                     ->content(Icon::renderIcon('brands', 'twitter', ['class' => 'fa-solid fa-xl']))
                     ->href('https://x.com/Terabytesoftw')
@@ -42,7 +44,8 @@ $languageLabel = Yii::$app->params['app.languages.labels'][$languages] ?? null;
                     ->target('_blank')
                     ->title('Terabytesoftw on en X')
             ?>
-            <?= A::widget()
+            <?=
+                A::widget()
                     ->class('d-none d-sm-block d-md-block d-lg-block d-xl-block text-body-secondary ms-3')
                     ->content(Icon::renderIcon('brands', 'github', ['class' => 'fa-solid fa-xl']))
                     ->href('https://github.com/yiisoft/yii2/tree/2.2')
@@ -50,7 +53,8 @@ $languageLabel = Yii::$app->params['app.languages.labels'][$languages] ?? null;
                     ->target('_blank')
                     ->title('Yii Framework v.2.2 on GitHub')
             ?>
-            <?= A::widget()
+            <?=
+                A::widget()
                     ->class('d-none d-sm-block d-md-block d-lg-block d-xl-block text-body-secondary ms-3')
                     ->content(Icon::renderIcon('brands', 'telegram', ['class' => 'fa-solid fa-xl']))
                     ->href('https://t.me/yii_framework_in_english')
