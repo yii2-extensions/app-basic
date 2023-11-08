@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use App\UseCase\About\AboutController;
 use App\UseCase\Contact\ContactController;
 use App\UseCase\Site\SiteController;
 
@@ -17,9 +16,6 @@ return [
     ],
     'app.assetManager.basePath' => '@public/assets',
     'app.controllerMap' => [
-        'about' => [
-            'class' => AboutController::class,
-        ],
         'contact' => [
             'class' => ContactController::class,
         ],
@@ -47,7 +43,7 @@ return [
         'app.menu.isguest' => [
             [
                 'label' => 'About',
-                'url' => ['/about/index'],
+                'url' => ['/site/about'],
                 'order' => 1,
                 'category' => 'app.basic',
             ],

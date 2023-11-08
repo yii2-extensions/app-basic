@@ -46,6 +46,7 @@ Web Application Basic of Yii Version 2.2. <a href="http://www.yiiframework.com/"
 ```text
 root
 ├── config                  
+│   ├── Common              Common configuration.
 │   ├── Console             Console configuration.
 │   ├── Web                 Web configuration.
 │   ├── config-plugin.php   Plugin configuration.
@@ -64,10 +65,10 @@ root
 │   │       ├── layout      Layout files.
 │   │       └── message     Translation files.
 │   └── UseCase
-│       ├── About           About use case.
 │       ├── Contact         Contact use case.
 │       ├── Hello           Hello use case (console).
 │       └── Site            Site use case.
+│           └── About       About use case.
 ├── tests                   Tests codeception.
 ├── vendor                  Composer dependencies.
 └── public                  Web server public.
