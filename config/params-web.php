@@ -6,17 +6,13 @@ use App\UseCase\About\AboutController;
 use App\UseCase\Contact\ContactController;
 use App\UseCase\Site\SiteController;
 
-$rootDir = dirname(__DIR__);
-
 return [
     // web application settings shared
-    'app.aliases' => [
-        '@app' => $rootDir,
+    'common.aliases' => [
         '@bower' => '@app/node_modules',
         '@npm'   => '@app/node_modules',
         '@public' => '@app/public',
         '@web' => '@public',
-        '@resource' => '@app/src/Framework/resource',
         '@runtime' => '@public/runtime',
     ],
     'app.assetManager.basePath' => '@public/assets',
@@ -67,7 +63,6 @@ return [
     ],
     'app.request.cookieValidationKey' => 'your-cookie-validation-key',
     'app.request.enableCsrfValidation' => true,
-    'app.root.dir' => $rootDir,
     'app.urlManager.enablePrettyUrl' => true,
     'app.urlManager.showScriptName' => false,
 

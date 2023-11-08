@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3208b98157da5fa4a6a9730e249e3654",
+    "content-hash": "deb8b40144dd01c4fc2ca435d38ec17b",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -707,12 +707,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-forge/html.git",
-                "reference": "a8dd639a431a99ac3e6df0696ae55944c2a4265c"
+                "reference": "852207d1a32062e1e3e3d57c4e81ac8babf705a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-forge/html/zipball/a8dd639a431a99ac3e6df0696ae55944c2a4265c",
-                "reference": "a8dd639a431a99ac3e6df0696ae55944c2a4265c",
+                "url": "https://api.github.com/repos/php-forge/html/zipball/852207d1a32062e1e3e3d57c4e81ac8babf705a5",
+                "reference": "852207d1a32062e1e3e3d57c4e81ac8babf705a5",
                 "shasum": ""
             },
             "require": {
@@ -758,7 +758,7 @@
                 "issues": "https://github.com/php-forge/html/issues",
                 "source": "https://github.com/php-forge/html/tree/main"
             },
-            "time": "2023-11-06T16:58:44+00:00"
+            "time": "2023-11-08T16:34:57+00:00"
         },
         {
             "name": "psr/container",
@@ -2190,12 +2190,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii2-extensions/localeurls.git",
-                "reference": "175e964ecbcb801eb8355228b95e2ce6b9798614"
+                "reference": "02b286537a1a0b3c616ece3ee72d28051eb116ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2-extensions/localeurls/zipball/175e964ecbcb801eb8355228b95e2ce6b9798614",
-                "reference": "175e964ecbcb801eb8355228b95e2ce6b9798614",
+                "url": "https://api.github.com/repos/yii2-extensions/localeurls/zipball/02b286537a1a0b3c616ece3ee72d28051eb116ec",
+                "reference": "02b286537a1a0b3c616ece3ee72d28051eb116ec",
                 "shasum": ""
             },
             "require": {
@@ -2220,7 +2220,7 @@
                 },
                 "config-plugin": {
                     "params-web": "params-web.php",
-                    "yii2-localeurls": "components.php"
+                    "yii2-localeurls": "extension.php"
                 }
             },
             "autoload": {
@@ -2242,7 +2242,7 @@
                 "issues": "https://github.com/yii2-extensions/localeurls/issues",
                 "source": "https://github.com/yii2-extensions/localeurls/tree/main"
             },
-            "time": "2023-10-31T13:06:09+00:00"
+            "time": "2023-11-08T11:51:32+00:00"
         },
         {
             "name": "yiisoft/arrays",
@@ -6596,16 +6596,16 @@
         },
         {
             "name": "yii2-extensions/debug",
-            "version": "dev-main",
+            "version": "dev-improve-config",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii2-extensions/debug.git",
-                "reference": "90bd387ee63f08663b10eb19cce45e4fd58f4b2d"
+                "reference": "ea978ad38be9fc9376f3fd3a0c8494d10b1765a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2-extensions/debug/zipball/90bd387ee63f08663b10eb19cce45e4fd58f4b2d",
-                "reference": "90bd387ee63f08663b10eb19cce45e4fd58f4b2d",
+                "url": "https://api.github.com/repos/yii2-extensions/debug/zipball/ea978ad38be9fc9376f3fd3a0c8494d10b1765a1",
+                "reference": "ea978ad38be9fc9376f3fd3a0c8494d10b1765a1",
                 "shasum": ""
             },
             "require": {
@@ -6623,7 +6623,6 @@
                 "rector/rector": "^0.18",
                 "yii2-extensions/phpstan": "dev-main"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -6633,7 +6632,7 @@
                     "source-directory": "config"
                 },
                 "config-plugin": {
-                    "yii2-debug": "modules.php"
+                    "yii2-debug": "extension.php"
                 }
             },
             "autoload": {
@@ -6653,9 +6652,9 @@
             ],
             "support": {
                 "issues": "https://github.com/yii2-extensions/debug/issues",
-                "source": "https://github.com/yii2-extensions/debug/tree/main"
+                "source": "https://github.com/yii2-extensions/debug/tree/improve-config"
             },
-            "time": "2023-10-30T15:07:26+00:00"
+            "time": "2023-11-08T22:22:29+00:00"
         },
         {
             "name": "yii2-extensions/gii",
@@ -6663,12 +6662,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii2-extensions/gii.git",
-                "reference": "90667b3ece274617480dd369da24cf189c9ff7b2"
+                "reference": "b957e304a2bcf9297ef007b6417ff10a79958b82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2-extensions/gii/zipball/90667b3ece274617480dd369da24cf189c9ff7b2",
-                "reference": "90667b3ece274617480dd369da24cf189c9ff7b2",
+                "url": "https://api.github.com/repos/yii2-extensions/gii/zipball/b957e304a2bcf9297ef007b6417ff10a79958b82",
+                "reference": "b957e304a2bcf9297ef007b6417ff10a79958b82",
                 "shasum": ""
             },
             "require": {
@@ -6692,7 +6691,7 @@
                     "source-directory": "config"
                 },
                 "config-plugin": {
-                    "yii2-gii": "modules.php"
+                    "yii2-gii": "extension.php"
                 }
             },
             "autoload": {
@@ -6714,7 +6713,7 @@
                 "issues": "https://github.com/yii2-extensions/gii/issues",
                 "source": "https://github.com/yii2-extensions/gii/tree/main"
             },
-            "time": "2023-10-30T15:04:02+00:00"
+            "time": "2023-11-08T22:30:54+00:00"
         },
         {
             "name": "yii2-extensions/phpstan",

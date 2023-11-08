@@ -22,6 +22,7 @@ use yii\web\View;
  * @var View $this
  */
 $this->title = $this->title = Yii::t('app.basic', 'Contact');
+$tabInput = 1;
 ?>
 <?= Div::widget()->class('container mt-3')->begin() ?>
     <?= Div::widget()->class('row align-items-center justify-content-center')->begin() ?>
@@ -40,58 +41,63 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
                         'layout' => ActiveForm::LAYOUT_FLOATING,
                     ]
                 ) ?>
-                    <?= $form->field($model, 'name')
-                        ->textInput(
-                            [
-                                'autofocus' => true,
-                                'oninvalid' => 'this.setCustomValidity("' . Yii::t('app.basic', 'Enter Username Here') .'")',
-                                'required' => true,
-                                'tabindex' => '1',
-                            ]
-                        )
-                    ?>
-                    <?= $form->field($model, 'email')
-                        ->textInput(
-                            [
-                                'oninvalid' => 'this.setCustomValidity("' . Yii::t('app.basic', 'Enter Email Here') . '")',
-                                'required' => true,
-                                'tabindex' => '2',
-                            ]
-                        )
-                    ?>
-                    <?= $form->field($model, 'subject')
-                        ->textInput(
-                            [
-                                'oninvalid' => 'this.setCustomValidity("' . Yii::t('app.basic', 'Enter Subject Here').'")',
-                                'required' => true,
-                                'tabindex' => '3',
-                            ]
-                        )
-                    ?>
-                    <?= $form->field($model, 'body')
-                        ->textarea(
-                            [
-                                'oninvalid' => 'this.setCustomValidity("' . Yii::t('app.basic', 'Enter Body Here') . '")',
-                                'required' => true,
-                                'style' => 'height: 100px',
-                                'tabindex' => '4',
-                            ]
-                        )
-                    ?>
-                    <?= $form->field($model, 'verifyCode', ['labelOptions' => ['id' => 'verifyCode']])
-                        ->widget(
-                            Captcha::class,
-                            [
-                                'captchaAction' => 'contact/captcha',
-                                'template' => '{input}<div class="text-center mb-3">' . '<b>' . Yii::t('app.basic', 'Captcha Code') . ': ' . '</b>' . '{image}</div>',
-                                'options' => [
-                                    'class' => 'form-control',
-                                    'oninvalid' => 'this.setCustomValidity("' . Yii::t('app.basic', 'Enter Captcha Code Here') . '")',
+                    <?=
+                        $form->field($model, 'name')
+                            ->textInput(
+                                [
+                                    'autofocus' => true,
+                                    'oninvalid' => 'this.setCustomValidity("' . Yii::t('app.basic', 'Enter Username Here') .'")',
                                     'required' => true,
-                                    'tabindex' => '5',
-                                ],
-                            ]
-                        )
+                                    'tabindex' => $tabInput++,
+                                ]
+                            )
+                    ?>
+                    <?=
+                        $form->field($model, 'email')
+                            ->textInput(
+                                [
+                                    'oninvalid' => 'this.setCustomValidity("' . Yii::t('app.basic', 'Enter Email Here') . '")',
+                                    'required' => true,
+                                    'tabindex' => $tabInput++,
+                                ]
+                            )
+                    ?>
+                    <?=
+                        $form->field($model, 'subject')
+                            ->textInput(
+                                [
+                                    'oninvalid' => 'this.setCustomValidity("' . Yii::t('app.basic', 'Enter Subject Here').'")',
+                                    'required' => true,
+                                    'tabindex' => $tabInput++,
+                                ]
+                            )
+                    ?>
+                    <?=
+                        $form->field($model, 'body')
+                            ->textarea(
+                                [
+                                    'oninvalid' => 'this.setCustomValidity("' . Yii::t('app.basic', 'Enter Body Here') . '")',
+                                    'required' => true,
+                                    'style' => 'height: 100px',
+                                    'tabindex' => $tabInput++,
+                                ]
+                            )
+                    ?>
+                    <?=
+                        $form->field($model, 'verifyCode', ['labelOptions' => ['id' => 'verifyCode']])
+                            ->widget(
+                                Captcha::class,
+                                [
+                                    'captchaAction' => 'contact/captcha',
+                                    'template' => '{input}<div class="text-center mb-3">' . '<b>' . Yii::t('app.basic', 'Captcha Code') . ': ' . '</b>' . '{image}</div>',
+                                    'options' => [
+                                        'class' => 'form-control',
+                                        'oninvalid' => 'this.setCustomValidity("' . Yii::t('app.basic', 'Enter Captcha Code Here') . '")',
+                                        'required' => true,
+                                        'tabindex' => $tabInput++,
+                                    ],
+                                ]
+                            )
                     ?>
                     <?=
                         Div::widget()
@@ -102,7 +108,7 @@ $this->title = $this->title = Yii::t('app.basic', 'Contact');
                                     ->content(Yii::t('app.basic', 'Contact us'))
                                     ->name('contact-button')
                                     ->submit()
-                                    ->tabIndex(6)
+                                    ->tabIndex($tabInput++)
                         )
                     ?>
                 <?php ActiveForm::end() ?>
