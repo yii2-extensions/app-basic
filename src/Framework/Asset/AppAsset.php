@@ -20,8 +20,8 @@ final class AppAsset extends AssetBundle
     ];
 
     public $depends = [
-        YiiAsset::class,
         BootstrapAsset::class,
+        YiiAsset::class,
     ];
 
     public $publishOptions = [
