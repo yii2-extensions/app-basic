@@ -47,14 +47,23 @@ Web Application Basic of Yii Version 2.2. <a href="http://www.yiiframework.com/"
 root
 ├── config                  
 │   ├── Common              Common configuration.
+│   │   ├── components.php  
+│   │   └── container.php   
 │   ├── Console             Console configuration.
+│   │   ├── app.php
+│   │   └── components.php     
 │   ├── Web                 Web configuration.
+│   │   ├── app.php
+│   │   ├── bootstrap.php    
+│   │   ├── components.php
+│   │   ├── container.php
+│   │   └── modules.php 
+│   ├── build.php           Build configuration codeception tests.
 │   ├── config-plugin.php   Plugin configuration.
 │   ├── messages.php        Translation configuration.
 │   ├── params-console.php  Console parameters.
 │   ├── params-web.php      Web parameters.
-│   ├── params.php          Common parameters.
-│   └── test.php            Test configuration.
+│   └── params.php          Common parameters.
 ├── src             
 │   ├── Framework 
 │   │   ├── Asset           Asset bundle files.
