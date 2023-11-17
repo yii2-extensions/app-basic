@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3366f5a4dd11e227c663bd9fd1f31bd5",
+    "content-hash": "7010e6d60f08c69d1e75d4377cff55e4",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -6917,6 +6917,7 @@
     "stability-flags": {
         "php-forge/awesome-component": 20,
         "php-forge/html": 20,
+        "yii2-extensions/asset-bootstrap5": 20,
         "yii2-extensions/bootstrap5": 20,
         "yii2-extensions/localeurls": 20,
         "yii2-extensions/debug": 20,
