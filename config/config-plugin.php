@@ -28,9 +28,9 @@ return [
     ],
     'config-plugin-options' => [
         'package-types' => [
-            "composer-plugin",
-            "library",
-            "yii2-extension"
+            'composer-plugin',
+            'library',
+            'yii2-extension',
         ],
         'source-directory' => 'config',
     ],
