@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "46641528b02371b09b1b6faec913d844",
+    "content-hash": "ce2768bbae43b2f1271dbcd6ba8e993e",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
-            "version": "v5.3.2",
+            "version": "v5.3.0-alpha1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "344e912d04b5b6a04482113eff20ab416ff01048"
+                "url": "git@github.com:twbs/bootstrap.git",
+                "reference": "cf9454caa00872899215603e5e036d9a824b1b11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/344e912d04b5b6a04482113eff20ab416ff01048",
-                "reference": "344e912d04b5b6a04482113eff20ab416ff01048"
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/cf9454caa00872899215603e5e036d9a824b1b11",
+                "reference": "cf9454caa00872899215603e5e036d9a824b1b11"
             },
             "type": "bower-asset"
         },
@@ -975,7 +975,7 @@
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v3.3.0",
+            "version": "v3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
@@ -1022,7 +1022,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.3.0"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.4.0"
             },
             "funding": [
                 {
@@ -1122,7 +1122,7 @@
         },
         {
             "name": "symfony/event-dispatcher-contracts",
-            "version": "v3.3.0",
+            "version": "v3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher-contracts.git",
@@ -1178,7 +1178,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.3.0"
+                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.4.0"
             },
             "funding": [
                 {
@@ -1856,16 +1856,16 @@
         },
         {
             "name": "symfony/service-contracts",
-            "version": "v3.3.0",
+            "version": "v3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/service-contracts.git",
-                "reference": "40da9cc13ec349d9e4966ce18b5fbcd724ab10a4"
+                "reference": "b3313c2dbffaf71c8de2934e2ea56ed2291a3838"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/40da9cc13ec349d9e4966ce18b5fbcd724ab10a4",
-                "reference": "40da9cc13ec349d9e4966ce18b5fbcd724ab10a4",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/b3313c2dbffaf71c8de2934e2ea56ed2291a3838",
+                "reference": "b3313c2dbffaf71c8de2934e2ea56ed2291a3838",
                 "shasum": ""
             },
             "require": {
@@ -1918,7 +1918,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/service-contracts/tree/v3.3.0"
+                "source": "https://github.com/symfony/service-contracts/tree/v3.4.0"
             },
             "funding": [
                 {
@@ -1934,7 +1934,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-05-23T14:45:45+00:00"
+            "time": "2023-07-30T20:28:31+00:00"
         },
         {
             "name": "voku/anti-xss",
@@ -2197,22 +2197,87 @@
             "time": "2023-03-08T08:35:38+00:00"
         },
         {
+            "name": "yii2-extensions/asset-bootstrap5",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yii2-extensions/asset-bootstrap5.git",
+                "reference": "ed3c5eb61a7ab02f4756d6834c03461b79cca16f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yii2-extensions/asset-bootstrap5/zipball/ed3c5eb61a7ab02f4756d6834c03461b79cca16f",
+                "reference": "ed3c5eb61a7ab02f4756d6834c03461b79cca16f",
+                "shasum": ""
+            },
+            "require": {
+                "npm-asset/bootstrap": "^5.3",
+                "oomphinc/composer-installers-extender": "^2.0",
+                "php": ">=8.1",
+                "yiisoft/yii2": "^2.2"
+            },
+            "require-dev": {
+                "maglnet/composer-require-checker": "^4.6",
+                "php-forge/support": "dev-main",
+                "phpunit/phpunit": "^10.2",
+                "yii2-extensions/phpstan": "dev-main"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.0.x-dev"
+                },
+                "installer-types": [
+                    "bower-asset",
+                    "npm-asset"
+                ],
+                "installer-paths": {
+                    "./node_modules/{$name}": [
+                        "type:bower-asset",
+                        "type:npm-asset"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Yii2\\Asset\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "mit"
+            ],
+            "description": "Asset for Bootstrap5 for Yii Framework",
+            "keywords": [
+                "asset",
+                "bootstrap5",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/yii2-extensions/asset-bootstrap5/issues",
+                "source": "https://github.com/yii2-extensions/asset-bootstrap5/tree/main"
+            },
+            "time": "2023-11-17T09:24:00+00:00"
+        },
+        {
             "name": "yii2-extensions/bootstrap5",
             "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii2-extensions/bootstrap5.git",
-                "reference": "1354f3092f8d56376b478d20fb58f4156c324065"
+                "reference": "92da851e8fa3aa8e1f40ca732463b89ec15cb473"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2-extensions/bootstrap5/zipball/1354f3092f8d56376b478d20fb58f4156c324065",
-                "reference": "1354f3092f8d56376b478d20fb58f4156c324065",
+                "url": "https://api.github.com/repos/yii2-extensions/bootstrap5/zipball/92da851e8fa3aa8e1f40ca732463b89ec15cb473",
+                "reference": "92da851e8fa3aa8e1f40ca732463b89ec15cb473",
                 "shasum": ""
             },
             "require": {
-                "npm-asset/bootstrap": "^5.3",
+                "oomphinc/composer-installers-extender": "^2.0",
                 "php": ">=8.1",
+                "yii2-extensions/asset-bootstrap5": "dev-main",
                 "yiisoft/yii2": "^2.2"
             },
             "require-dev": {
@@ -2231,6 +2296,16 @@
                 },
                 "config-plugin": {
                     "yii2-bootstrap5": "extension.php"
+                },
+                "installer-types": [
+                    "bower-asset",
+                    "npm-asset"
+                ],
+                "installer-paths": {
+                    "./node_modules/{$name}": [
+                        "type:bower-asset",
+                        "type:npm-asset"
+                    ]
                 }
             },
             "autoload": {
@@ -2251,7 +2326,7 @@
                 "issues": "https://github.com/yii2-extensions/bootstrap5/issues",
                 "source": "https://github.com/yii2-extensions/bootstrap5/tree/main"
             },
-            "time": "2023-11-11T02:00:09+00:00"
+            "time": "2023-11-17T09:54:52+00:00"
         },
         {
             "name": "yii2-extensions/localeurls",
@@ -2378,16 +2453,16 @@
         },
         {
             "name": "yiisoft/config",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/config.git",
-                "reference": "da4762e366080a24a6b5f626dfb9a52517ac965c"
+                "reference": "c41c37f027fe417b770bfbf80d1e4982716295bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/config/zipball/da4762e366080a24a6b5f626dfb9a52517ac965c",
-                "reference": "da4762e366080a24a6b5f626dfb9a52517ac965c",
+                "url": "https://api.github.com/repos/yiisoft/config/zipball/c41c37f027fe417b770bfbf80d1e4982716295bc",
+                "reference": "c41c37f027fe417b770bfbf80d1e4982716295bc",
                 "shasum": ""
             },
             "require": {
@@ -2402,7 +2477,7 @@
                 "ext-json": "*",
                 "maglnet/composer-require-checker": "^4.4",
                 "phpunit/phpunit": "^9.5",
-                "rector/rector": "^0.15.7",
+                "rector/rector": "^0.18.0",
                 "roave/infection-static-analysis-plugin": "^1.16",
                 "spatie/phpunit-watcher": "^1.23",
                 "vimeo/psalm": "^4.30|^5.6"
@@ -2448,7 +2523,7 @@
                     "type": "opencollective"
                 }
             ],
-            "time": "2023-02-11T07:48:37+00:00"
+            "time": "2023-11-17T11:59:42+00:00"
         },
         {
             "name": "yiisoft/strings",
@@ -3237,16 +3312,16 @@
         },
         {
             "name": "codeception/lib-innerbrowser",
-            "version": "4.0.0",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/lib-innerbrowser.git",
-                "reference": "32e9a19a39bbb5165cdb845dc3618b412a17e6da"
+                "reference": "ee5d25ee93444845d34dc78a73973016695df421"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/lib-innerbrowser/zipball/32e9a19a39bbb5165cdb845dc3618b412a17e6da",
-                "reference": "32e9a19a39bbb5165cdb845dc3618b412a17e6da",
+                "url": "https://api.github.com/repos/Codeception/lib-innerbrowser/zipball/ee5d25ee93444845d34dc78a73973016695df421",
+                "reference": "ee5d25ee93444845d34dc78a73973016695df421",
                 "shasum": ""
             },
             "require": {
@@ -3290,9 +3365,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Codeception/lib-innerbrowser/issues",
-                "source": "https://github.com/Codeception/lib-innerbrowser/tree/4.0.0"
+                "source": "https://github.com/Codeception/lib-innerbrowser/tree/4.0.1"
             },
-            "time": "2023-02-03T19:31:45+00:00"
+            "time": "2023-11-16T16:24:33+00:00"
         },
         {
             "name": "codeception/lib-web",
@@ -4200,16 +4275,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "10.1.7",
+            "version": "10.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "355324ca4980b8916c18b9db29f3ef484078f26e"
+                "reference": "84838eed9ded511f61dc3e8b5944a52d9017b297"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/355324ca4980b8916c18b9db29f3ef484078f26e",
-                "reference": "355324ca4980b8916c18b9db29f3ef484078f26e",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/84838eed9ded511f61dc3e8b5944a52d9017b297",
+                "reference": "84838eed9ded511f61dc3e8b5944a52d9017b297",
                 "shasum": ""
             },
             "require": {
@@ -4266,7 +4341,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
                 "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/10.1.7"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/10.1.8"
             },
             "funding": [
                 {
@@ -4274,7 +4349,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-10-04T15:34:17+00:00"
+            "time": "2023-11-15T13:31:15+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -6842,6 +6917,7 @@
     "stability-flags": {
         "php-forge/awesome-component": 20,
         "php-forge/html": 20,
+        "yii2-extensions/asset-bootstrap5": 20,
         "yii2-extensions/bootstrap5": 20,
         "yii2-extensions/localeurls": 20,
         "yii2-extensions/debug": 20,
