@@ -15,7 +15,7 @@ require __DIR__ . '/vendor/yiisoft/yii2/Yii.php';
 
 $config = new Config(
     new ConfigPaths(__DIR__, 'config', 'vendor'),
-    modifiers: [RecursiveMerge::groups('console', 'params-console')],
+    modifiers: [RecursiveMerge::groups('console', 'params', 'params-console')],
     paramsGroup: 'params-console',
 );
 

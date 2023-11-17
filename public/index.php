@@ -29,7 +29,7 @@ require_once __DIR__ . '/../vendor/yiisoft/yii2/Yii.php';
 
 $config = new Config(
     new ConfigPaths(dirname(__DIR__), 'config', 'vendor'),
-    modifiers: [RecursiveMerge::groups('web', 'params-web')],
+    modifiers: [RecursiveMerge::groups('web', 'params', 'params-web')],
     paramsGroup: 'params-web',
 );
 
