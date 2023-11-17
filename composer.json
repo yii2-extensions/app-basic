@@ -57,9 +57,15 @@
             "dev-master": "1.0.x-dev"
         },
         "config-plugin-file": "/config/config-plugin.php",
-        "installer-types": ["bower-asset", "npm-asset"],
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
         "installer-paths": {
-            "./node_modules/{$name}/": ["type:bower-asset", "type:npm-asset"]
+            "./node_modules/{$name}/": [
+                "type:bower-asset",
+                "type:npm-asset"
+            ]
         }
     },
     "repositories": [
