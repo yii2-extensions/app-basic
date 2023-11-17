@@ -13,7 +13,6 @@
     "prefer-stable": true,
     "require": {
         "php": ">=8.1",
-        "bower-asset/bootstrap": "^5.3",
         "npm-asset/flag-icons": "^6.1",
         "npm-asset/fortawesome--fontawesome-free": "^6.4",
         "oomphinc/composer-installers-extender": "^2.0",
