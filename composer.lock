@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "71b7fac830f346303bf40146c2f0cbcd",
+    "content-hash": "508854391f777d23a09762490ada9e7a",
     "packages": [
         {
             "name": "bower-asset/inputmask",
@@ -529,6 +529,18 @@
             "type": "npm-asset",
             "license": [
                 "(CC-BY-4.0 AND OFL-1.1 AND MIT)"
+            ]
+        },
+        {
+            "name": "npm-asset/popperjs--core",
+            "version": "2.11.8",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/@popperjs/core/-/core-2.11.8.tgz"
+            },
+            "type": "npm-asset",
+            "license": [
+                "MIT"
             ]
         },
         {
@@ -2187,16 +2199,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii2-extensions/asset-bootstrap5.git",
-                "reference": "9e05ff7751b81025dba15232c600df4478f2fedc"
+                "reference": "4fced22d51977b157dffd1a3c1868b2990b0d689"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2-extensions/asset-bootstrap5/zipball/9e05ff7751b81025dba15232c600df4478f2fedc",
-                "reference": "9e05ff7751b81025dba15232c600df4478f2fedc",
+                "url": "https://api.github.com/repos/yii2-extensions/asset-bootstrap5/zipball/4fced22d51977b157dffd1a3c1868b2990b0d689",
+                "reference": "4fced22d51977b157dffd1a3c1868b2990b0d689",
                 "shasum": ""
             },
             "require": {
                 "npm-asset/bootstrap": "^5.3",
+                "npm-asset/popperjs--core": "^2.11",
                 "oomphinc/composer-installers-extender": "^2.0",
                 "php": ">=8.1",
                 "yiisoft/yii2": "^2.2"
@@ -2243,7 +2256,7 @@
                 "issues": "https://github.com/yii2-extensions/asset-bootstrap5/issues",
                 "source": "https://github.com/yii2-extensions/asset-bootstrap5/tree/main"
             },
-            "time": "2023-11-17T15:56:24+00:00"
+            "time": "2023-11-17T21:00:37+00:00"
         },
         {
             "name": "yii2-extensions/bootstrap5",
@@ -2319,12 +2332,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii2-extensions/localeurls.git",
-                "reference": "47c594e1d83e4749ab4c3976d6ed4ce1350233c1"
+                "reference": "dd92af04aabeb32a027c2bffdb0a6563ce74e37a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2-extensions/localeurls/zipball/47c594e1d83e4749ab4c3976d6ed4ce1350233c1",
-                "reference": "47c594e1d83e4749ab4c3976d6ed4ce1350233c1",
+                "url": "https://api.github.com/repos/yii2-extensions/localeurls/zipball/dd92af04aabeb32a027c2bffdb0a6563ce74e37a",
+                "reference": "dd92af04aabeb32a027c2bffdb0a6563ce74e37a",
                 "shasum": ""
             },
             "require": {
@@ -2370,7 +2383,7 @@
                 "issues": "https://github.com/yii2-extensions/localeurls/issues",
                 "source": "https://github.com/yii2-extensions/localeurls/tree/main"
             },
-            "time": "2023-11-17T15:31:01+00:00"
+            "time": "2023-11-18T11:58:39+00:00"
         },
         {
             "name": "yiisoft/arrays",
@@ -6820,6 +6833,7 @@
     "stability-flags": {
         "php-forge/awesome-component": 20,
         "php-forge/html": 20,
+        "yii2-extensions/asset-bootstrap5": 20,
         "yii2-extensions/bootstrap5": 20,
         "yii2-extensions/localeurls": 20,
         "yii2-extensions/debug": 20,
