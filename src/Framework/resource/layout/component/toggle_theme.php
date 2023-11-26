@@ -9,7 +9,6 @@ use PHPForge\Html\Span;
 use sjaakp\icon\Icon;
 use yii\helpers\Url;
 use yii\web\View;
-use yii\base\Action;
 
 /**
  * @var View $this
