@@ -10,4 +10,10 @@ modules:
       - Filesystem
       - Yii2
       - Asserts
+      - REST:
+          url: http://localhost:8080
+          depends: Yii2
+          part: Json
+          headers:
+              Content-Type: application/json
 step_decorators: ~

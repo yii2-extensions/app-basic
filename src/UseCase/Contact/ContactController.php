@@ -20,7 +20,7 @@ final class ContactController extends Controller
             [
                 'captcha' => [
                     'class' => CaptchaAction::class,
-                    'fixedVerifyCode' => (YII_ENV === 'tests') ? 'testme' : null,
+                    'fixedVerifyCode' => (YII_ENV === 'test') ? 'testme' : null,
                 ],
             ],
             parent::actions(),
@@ -43,8 +43,7 @@ final class ContactController extends Controller
     {
         if (
             $this->request instanceof Request &&
-            $this->contactForm->load($this->request->post()) &&
-            $this->contactForm->validate()
+            $this->contactForm->load($this->request->post()) && $this->contactForm->validate()
         ) {
             if ($this->contactForm->sendContact($this->mailer, $this->module->params)) {
                 $this->session->setFlash('contactFormSubmitted');

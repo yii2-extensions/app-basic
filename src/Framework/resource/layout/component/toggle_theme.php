@@ -7,12 +7,15 @@ use PHPForge\Component\Dropdown;
 use PHPForge\Component\Item;
 use PHPForge\Html\Span;
 use sjaakp\icon\Icon;
+use yii\helpers\Url;
 use yii\web\View;
 
 /**
  * @var View $this
  */
 ToggleThemeAsset::register($this);
+
+$link = $this->context->action->uniqueId === 'site/index' ? Url::home() : Url::current([]);
 
 echo Dropdown::widget()
     ->container(true)
@@ -28,7 +31,7 @@ echo Dropdown::widget()
                     ['class' => 'check ms-auto d-none', 'width' => '1em', 'height' => '1em'],
                 ),
             )
-            ->link('#')
+            ->link($link)
             ->linkAttributes(['aria-pressed' => 'false', 'data-bs-theme-value' => 'light'])
             ->linkClass('dropdown-item d-flex align-items-center'),
         Item::create()
@@ -41,7 +44,7 @@ echo Dropdown::widget()
                     ['class' => 'check ms-auto d-none', 'width' => '1em', 'height' => '1em'],
                 ),
             )
-            ->link('#')
+            ->link($link)
             ->linkAttributes(['aria-pressed' => 'false', 'data-bs-theme-value' => 'dark'])
             ->linkClass('dropdown-item d-flex align-items-center'),
         Item::create()
@@ -54,7 +57,7 @@ echo Dropdown::widget()
                     ['class' => 'check ms-auto d-none', 'width' => '1em', 'height' => '1em'],
                 ),
             )
-            ->link('#')
+            ->link($link)
             ->linkAttributes(['aria-pressed' => 'false', 'data-bs-theme-value' => 'auto'])
             ->linkClass('dropdown-item d-flex align-items-center'),
     )

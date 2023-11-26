@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\UseCase\Api\ApiController;
 use App\UseCase\Contact\ContactController;
 use App\UseCase\Site\SiteController;
 
@@ -16,6 +17,9 @@ return [
     ],
     'app.assetManager.basePath' => '@public/assets',
     'app.controllerMap' => [
+        'api' => [
+            'class' => ApiController::class,
+        ],
         'contact' => [
             'class' => ContactController::class,
         ],
