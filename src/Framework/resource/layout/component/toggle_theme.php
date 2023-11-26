@@ -9,13 +9,15 @@ use PHPForge\Html\Span;
 use sjaakp\icon\Icon;
 use yii\helpers\Url;
 use yii\web\View;
+use yii\base\Action;
 
 /**
  * @var View $this
  */
 ToggleThemeAsset::register($this);
 
-$link = $this->context->action->uniqueId === 'site/index' ? Url::home() : Url::current([]);
+/** @phpstan-ignore-next-line */
+$link = $this->context->action->getUniqueId() === 'site/index' ? Url::home() : Url::current([]);
 
 echo Dropdown::widget()
     ->container(true)

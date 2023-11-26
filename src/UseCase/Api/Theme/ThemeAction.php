@@ -7,35 +7,40 @@ namespace App\UseCase\Api\Theme;
 use yii\base\Action;
 use yii\helpers\Json;
 use yii\web\Cookie;
+use yii\web\Request;
 use yii\web\Response;
 
 final class ThemeAction extends Action
 {
     public function run(): array
     {
-        $this->controller->response->format = Response::FORMAT_JSON;
+        if ($this->controller->response instanceof Response && $this->controller->request instanceof Request) {
+            $this->controller->response->format = Response::FORMAT_JSON;
 
-        $theme = Json::decode($this->controller->request->getRawBody());
+            $this->controller->response->format = Response::FORMAT_JSON;
 
-        if (isset($theme['theme'])) {
-            $cookie = $this->controller->request->cookies->get('theme');
+            $theme = Json::decode($this->controller->request->getRawBody());
 
-            if ($cookie !== null) {
-                $cookie->value = $theme['theme'];
-                $this->controller->response->cookies->add($cookie);
-            } else {
-                $cookie = new Cookie(
-                    [
-                        'name' => 'theme',
-                        'value' => $theme['theme'],
-                        'expire' => time() + 86400, // 1 day
-                    ],
-                );
+            if (isset($theme['theme'])) {
+                $cookie = $this->controller->request->cookies->get('theme');
 
-                $this->controller->response->cookies->add($cookie);
+                if ($cookie !== null) {
+                    $cookie->value = $theme['theme'];
+                    $this->controller->response->cookies->add($cookie);
+                } else {
+                    $cookie = new Cookie(
+                        [
+                            'name' => 'theme',
+                            'value' => $theme['theme'],
+                            'expire' => time() + 86400, // 1 day
+                        ],
+                    );
+
+                    $this->controller->response->cookies->add($cookie);
+                }
             }
         }
 
-        return $theme;
+        return $theme ?? [];
     }
 }
