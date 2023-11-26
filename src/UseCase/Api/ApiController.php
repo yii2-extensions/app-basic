@@ -19,8 +19,9 @@ final class ApiController extends Controller
         ];
     }
 
-    public function beforeAction($action) {
-        if(YII_ENV == 'test' && $action->id == 'theme') {
+    public function beforeAction($action)
+    {
+        if (YII_ENV == 'test' && $action->id == 'theme') {
             $this->enableCsrfValidation = false;
         }
 
