@@ -5,7 +5,9 @@ declare(strict_types=1);
 namespace App\UseCase\Contact\Index;
 
 use App\UseCase\Contact\ContactEvent;
+use App\UseCase\Contact\ContactForm;
 use yii\base\Action;
+use yii\base\InvalidConfigException;
 use yii\symfonymailer\Mailer;
 use yii\web\Controller;
 use yii\web\Request;
@@ -14,6 +16,8 @@ use yii\web\Session;
 
 final class IndexAction extends Action
 {
+    public string $formModelClass = '';
+
     public function __construct(
         string $id,
         Controller $controller,
@@ -26,7 +30,11 @@ final class IndexAction extends Action
 
     public function run(): Response|string
     {
-        $contactForm = new $this->controller->formModelClass();
+        if ($this->formModelClass === '') {
+            throw new InvalidConfigException('The "formModelClass" property must be set.');
+        }
+
+        $contactForm = new $this->formModelClass();
         $contactEvent = new ContactEvent();
 
         if (
@@ -39,8 +47,6 @@ final class IndexAction extends Action
 
                 $this->trigger(ContactEvent::EVENT_AFTER_SEND, $contactEvent);
             }
-
-            return $this->controller->refresh();
         }
 
         return $this->controller->render(

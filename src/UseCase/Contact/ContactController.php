@@ -20,6 +20,7 @@ final class ContactController extends Controller
             [
                 'index' => [
                     'class' => Index\IndexAction::class,
+                    'formModelClass' => $this->formModelClass,
                 ],
                 'captcha' => [
                     'class' => CaptchaAction::class,
