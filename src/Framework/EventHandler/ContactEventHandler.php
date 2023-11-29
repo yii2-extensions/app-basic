@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace App\Framework\EventHandler;
 
-use App\UseCase\Contact\ContactController;
 use App\UseCase\Contact\ContactEvent;
+use App\UseCase\Contact\Index\IndexAction;
 use Yii;
-use yii\web\Application;
 use yii\base\BootstrapInterface;
 use yii\base\Event;
+use yii\web\Application;
 
 final class ContactEventHandler implements BootstrapInterface
 {
@@ -19,7 +19,7 @@ final class ContactEventHandler implements BootstrapInterface
     public function bootstrap($app): void
     {
         Event::on(
-            ContactController::class,
+            IndexAction::class,
             ContactEvent::EVENT_AFTER_SEND,
             static function () use ($app): void {
                 $app->session->setFlash(
