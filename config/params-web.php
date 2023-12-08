@@ -14,8 +14,8 @@ return [
         '@web' => '@public',
         '@runtime' => '@public/runtime',
     ],
-    'app.assetManager.basePath' => '@public/assets',
-    'app.controllerMap' => [
+    'web.assetManager.basePath' => '@public/assets',
+    'web.controllerMap' => [
         'contact' => [
             'class' => ContactController::class,
         ],
@@ -23,11 +23,11 @@ return [
             'class' => SiteController::class,
         ],
     ],
-    'app.errorHandler.errorAction' => 'site/404',
-    'app.id' => 'app.basic',
-    'app.language' => 'en-US',
-    'app.name' => 'Web application basic',
-    'app.params' => [
+    'web.errorHandler.errorAction' => 'site/404',
+    'web.id' => 'web.basic',
+    'web.language' => 'en-US',
+    'web.name' => 'Web application basic',
+    'web.params' => [
         'app.languages.labels' => [
             'de-DE' => 'German',
             'en-US' => 'English',
@@ -56,10 +56,10 @@ return [
         'app.menu.islogged' => [],
         'icons'  => '@npm/fortawesome--fontawesome-free/svgs/{family}/{name}.svg',
     ],
-    'app.request.cookieValidationKey' => 'your-cookie-validation-key',
-    'app.request.enableCsrfValidation' => true,
-    'app.urlManager.enablePrettyUrl' => true,
-    'app.urlManager.showScriptName' => false,
+    'web.request.cookieValidationKey' => 'your-cookie-validation-key',
+    'web.request.enableCsrfValidation' => true,
+    'web.urlManager.enablePrettyUrl' => true,
+    'web.urlManager.showScriptName' => false,
 
     // yii2 extensions settings
     'yii2.debug' => false,
