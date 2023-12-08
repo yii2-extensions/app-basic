@@ -8,7 +8,6 @@ use yii\console\controllers\ServeController;
 $rootDir = dirname(__DIR__);
 
 return [
-    'console.bootstrap' => [],
     'console.id' => 'console.basic',
     'console.controllerMap' => [
         'hello' => HelloController::class,

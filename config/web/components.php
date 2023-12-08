@@ -11,10 +11,10 @@ use yii\web\UrlManager;
 return [
     'components' => [
         'assetManager' => [
-            'basePath' => $params['app.assetManager.basePath'],
+            'basePath' => $params['web.assetManager.basePath'],
         ],
         'errorHandler' => [
-            'errorAction' => $params['app.errorHandler.errorAction'],
+            'errorAction' => $params['web.errorHandler.errorAction'],
         ],
         'i18n' => [
             'translations' => [
@@ -25,13 +25,13 @@ return [
             ],
         ],
         'request' => [
-            'cookieValidationKey' => $params['app.request.cookieValidationKey'],
-            'enableCsrfValidation' => $params['app.request.enableCsrfValidation'],
+            'cookieValidationKey' => $params['web.request.cookieValidationKey'],
+            'enableCsrfValidation' => $params['web.request.enableCsrfValidation'],
         ],
         'urlManager' => [
             'class' => $params['yii2.urlManager.class'] ?? UrlManager::class,
-            'enablePrettyUrl' => $params['app.urlManager.enablePrettyUrl'],
-            'showScriptName' => $params['app.urlManager.showScriptName'],
+            'enablePrettyUrl' => $params['web.urlManager.enablePrettyUrl'],
+            'showScriptName' => $params['web.urlManager.showScriptName'],
         ],
     ],
 ];

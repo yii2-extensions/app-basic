@@ -3,6 +3,7 @@
 
 declare(strict_types=1);
 
+use yii\console\Application;
 use Yiisoft\Config\Config;
 use Yiisoft\Config\ConfigPaths;
 use Yiisoft\Config\Modifier\RecursiveMerge;
@@ -19,7 +20,8 @@ $config = new Config(
     paramsGroup: 'params-console',
 );
 
-$application = new yii\console\Application($config->get('console'));
+$container = Yii::$container->setSingleton(Application::class, $config->get('comsole'));
+$app = Yii::$container->get(Application::class);
 $exitCode = $application->run();
 
 exit($exitCode);
