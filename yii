@@ -20,8 +20,8 @@ $config = new Config(
     paramsGroup: 'params-console',
 );
 
-$container = Yii::$container->setSingleton(Application::class, $config->get('comsole'));
+$container = Yii::$container->setSingleton(Application::class, $config->get('console'));
 $app = Yii::$container->get(Application::class);
-$exitCode = $application->run();
+$exitCode = $app->run();
 
 exit($exitCode);
