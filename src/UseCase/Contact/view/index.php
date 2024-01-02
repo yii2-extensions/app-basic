@@ -89,7 +89,7 @@ $tabInput = 1;
                                 Captcha::class,
                                 [
                                     'captchaAction' => 'contact/captcha',
-                                    'template' => '{input}<div class="text-center mb-3">' . '<b>' . Yii::t('app.basic', 'Captcha Code') . ': ' . '</b>' . '{image}</div>',
+                                    'template' => '{input}<div class="text-center mt-3 mb-3">' . '<b>' . Yii::t('app.basic', 'Captcha Code') . ': ' . '</b>' . '{image}</div>',
                                     'options' => [
                                         'class' => 'form-control',
                                         'oninvalid' => 'this.setCustomValidity("' . Yii::t('app.basic', 'Enter Captcha Code Here') . '")',

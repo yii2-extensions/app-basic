@@ -5,6 +5,7 @@ declare(strict_types=1);
 use App\Framework\Asset\LocaleAsset;
 use PHPForge\Component\Dropdown;
 use PHPForge\Component\Item;
+use PHPForge\Html\ButtonToggle;
 use yii\helpers\Url;
 use yii\web\View;
 
@@ -62,14 +63,12 @@ echo Dropdown::widget()
             ->active(Yii::$app->language === 'ru-RU'),
     )
     ->listClass('dropdown-menu dropdown-menu-end shadow')
-    ->toggleAttributes(
-        [
-            'aria-expanded' => 'false',
-            'aria-label' => 'Toggle language dropdown',
-            'data-bs-toggle' => 'dropdown',
-            'id' => 'toggle-language',
-        ],
-    )
-    ->toggleClass('btn btn-bd-primary dropdown-toggle d-flex align-items-center text-secondary-emphasis')
-    ->toggleContent(Yii::t('app.basic', $languageLabel))
-    ->toggleType('dropdown');
+    ->toggleButton(
+        ButtonToggle::widget()
+            ->ariaExpanded('false')
+            ->ariaLabel('Toggle language dropdown')
+            ->class('btn btn-bd-primary dropdown-toggle d-flex align-items-center text-secondary-emphasis')
+            ->dataBsToggle('dropdown')
+            ->id('toggle-language')
+            ->toggleContent(Yii::t('app.basic', $languageLabel))
+    );
