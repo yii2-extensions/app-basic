@@ -71,5 +71,4 @@ echo Dropdown::widget()
             ->dataBsToggle('dropdown')
             ->id('toggle-language')
             ->toggleContent(Yii::t('app.basic', $languageLabel))
-
     );
