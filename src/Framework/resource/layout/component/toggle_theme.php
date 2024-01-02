@@ -5,7 +5,7 @@ declare(strict_types=1);
 use App\Framework\Asset\ToggleThemeAsset;
 use PHPForge\Component\Dropdown;
 use PHPForge\Component\Item;
-use PHPForge\Html\Span;
+use PHPForge\Html\ButtonToggle;
 use sjaakp\icon\Icon;
 use yii\web\View;
 
@@ -59,22 +59,21 @@ echo Dropdown::widget()
             ->linkClass('dropdown-item d-flex align-items-center'),
     )
     ->listClass('dropdown-menu dropdown-menu-end shadow')
-    ->toggleAttributes(
-        [
-            'aria-expanded' => 'false',
-            'aria-label' => 'Toggle theme (auto)',
-            'data-bs-toggle' => 'dropdown',
-            'id' => 'toggle-theme',
-        ],
-    )
-    ->toggleClass('btn btn-bd-primary dropdown-toggle d-flex align-items-center')
-    ->toggleContent(
-        Icon::renderIcon(
-            'solid',
-            'circle-half-stroke',
-            ['class' => 'me-2 fa-solid fa-xl theme-icon-active text-secondary-emphasis'],
-        ),
-        Span::widget()->class('visually-hidden')->content('Toggle theme')->id('toggle-theme-text'),
-    )
-    ->toggleSvg(null)
-    ->toggleType('dropdown');
+    ->toggleButton(
+        ButtonToggle::widget()
+            ->ariaExpanded('false')
+            ->ariaLabel('Toggle theme (auto)')
+            ->class('btn btn-bd-primary dropdown-toggle d-flex align-items-center')
+            ->dataBsToggle('dropdown')
+            ->id('toggle-theme')
+            ->toggleClass('visually-hidden')
+            ->toggleContent('Toggle theme')
+            ->toggleId('toggle-theme-text')
+            ->togglePrefix(
+                Icon::renderIcon(
+                    'solid',
+                    'circle-half-stroke',
+                    ['class' => 'me-2 fa-solid fa-xl theme-icon-active text-secondary-emphasis'],
+                ),
+            )
+    );
