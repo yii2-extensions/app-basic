@@ -19,17 +19,14 @@ on:
       - 'infection.json.dist'
       - 'psalm.xml'
 
-name: build
+name: compatibility
 
 jobs:
-  codeception:
-    uses: php-forge/actions/.github/workflows/codeception.yml@main
-    secrets:
-      AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+  phpunit:
+    uses: php-forge/actions/.github/workflows/phpunit.yml@main
     with:
       composer-command: |
-        composer require yiisoft/yii2:^2.2.x-dev --prefer-dist --no-progress --no-interaction --no-scripts --ansi
-      extensions: gd, intl
+        composer require yiisoft/yii2:^2.0.49 --prefer-dist --no-progress --no-interaction --no-scripts --ansi
       os: >-
         ['ubuntu-latest', 'windows-latest']
       php: >-

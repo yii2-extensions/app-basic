@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4bc0febda765ebc29d156d9e6269c76a",
+    "content-hash": "2e76413da55f77ec79fad68d7bbab4e4",
     "packages": [
         {
             "name": "bower-asset/inputmask",
-            "version": "5.0.8",
+            "version": "3.3.11",
             "source": {
                 "type": "git",
-                "url": "https://github.com/RobinHerbots/Inputmask.git",
-                "reference": "e0f39e0c93569c6b494c3a57edef2c59313a6b64"
+                "url": "git@github.com:RobinHerbots/Inputmask.git",
+                "reference": "5e670ad62f50c738388d4dcec78d2888505ad77b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/e0f39e0c93569c6b494c3a57edef2c59313a6b64",
-                "reference": "e0f39e0c93569c6b494c3a57edef2c59313a6b64"
+                "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/5e670ad62f50c738388d4dcec78d2888505ad77b",
+                "reference": "5e670ad62f50c738388d4dcec78d2888505ad77b"
             },
             "require": {
                 "bower-asset/jquery": ">=1.7"
@@ -47,16 +47,16 @@
         },
         {
             "name": "bower-asset/punycode",
-            "version": "v2.2.3",
+            "version": "v1.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mathiasbynens/punycode.js.git",
-                "reference": "46d412120e2feb868876769a9847790ba278c882"
+                "reference": "38c8d3131a82567bfef18da09f7f4db68c84f8a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mathiasbynens/punycode.js/zipball/46d412120e2feb868876769a9847790ba278c882",
-                "reference": "46d412120e2feb868876769a9847790ba278c882"
+                "url": "https://api.github.com/repos/mathiasbynens/punycode.js/zipball/38c8d3131a82567bfef18da09f7f4db68c84f8a3",
+                "reference": "38c8d3131a82567bfef18da09f7f4db68c84f8a3"
             },
             "type": "bower-asset"
         },
@@ -144,151 +144,6 @@
                 "source": "https://github.com/cebe/markdown"
             },
             "time": "2018-03-26T11:24:36+00:00"
-        },
-        {
-            "name": "composer/installers",
-            "version": "v2.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/composer/installers.git",
-                "reference": "c29dc4b93137acb82734f672c37e029dfbd95b35"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/c29dc4b93137acb82734f672c37e029dfbd95b35",
-                "reference": "c29dc4b93137acb82734f672c37e029dfbd95b35",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1.0 || ^2.0",
-                "php": "^7.2 || ^8.0"
-            },
-            "require-dev": {
-                "composer/composer": "1.6.* || ^2.0",
-                "composer/semver": "^1 || ^3",
-                "phpstan/phpstan": "^0.12.55",
-                "phpstan/phpstan-phpunit": "^0.12.16",
-                "symfony/phpunit-bridge": "^5.3",
-                "symfony/process": "^5"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "Composer\\Installers\\Plugin",
-                "branch-alias": {
-                    "dev-main": "2.x-dev"
-                },
-                "plugin-modifies-install-path": true
-            },
-            "autoload": {
-                "psr-4": {
-                    "Composer\\Installers\\": "src/Composer/Installers"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kyle Robinson Young",
-                    "email": "kyle@dontkry.com",
-                    "homepage": "https://github.com/shama"
-                }
-            ],
-            "description": "A multi-framework Composer library installer",
-            "homepage": "https://composer.github.io/installers/",
-            "keywords": [
-                "Dolibarr",
-                "Eliasis",
-                "Hurad",
-                "ImageCMS",
-                "Kanboard",
-                "Lan Management System",
-                "MODX Evo",
-                "MantisBT",
-                "Mautic",
-                "Maya",
-                "OXID",
-                "Plentymarkets",
-                "Porto",
-                "RadPHP",
-                "SMF",
-                "Starbug",
-                "Thelia",
-                "Whmcs",
-                "WolfCMS",
-                "agl",
-                "annotatecms",
-                "attogram",
-                "bitrix",
-                "cakephp",
-                "chef",
-                "cockpit",
-                "codeigniter",
-                "concrete5",
-                "croogo",
-                "dokuwiki",
-                "drupal",
-                "eZ Platform",
-                "elgg",
-                "expressionengine",
-                "fuelphp",
-                "grav",
-                "installer",
-                "itop",
-                "known",
-                "kohana",
-                "laravel",
-                "lavalite",
-                "lithium",
-                "magento",
-                "majima",
-                "mako",
-                "matomo",
-                "mediawiki",
-                "miaoxing",
-                "modulework",
-                "modx",
-                "moodle",
-                "osclass",
-                "pantheon",
-                "phpbb",
-                "piwik",
-                "ppi",
-                "processwire",
-                "puppet",
-                "pxcms",
-                "reindex",
-                "roundcube",
-                "shopware",
-                "silverstripe",
-                "sydes",
-                "sylius",
-                "tastyigniter",
-                "wordpress",
-                "yawik",
-                "zend",
-                "zikula"
-            ],
-            "support": {
-                "issues": "https://github.com/composer/installers/issues",
-                "source": "https://github.com/composer/installers/tree/v2.2.0"
-            },
-            "funding": [
-                {
-                    "url": "https://packagist.com",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/composer",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2022-08-20T06:45:11+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -509,10 +364,10 @@
         },
         {
             "name": "npm-asset/flag-icons",
-            "version": "6.12.0",
+            "version": "6.15.0",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/flag-icons/-/flag-icons-6.12.0.tgz"
+                "url": "https://registry.npmjs.org/flag-icons/-/flag-icons-6.15.0.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -532,73 +387,54 @@
             ]
         },
         {
-            "name": "npm-asset/popperjs--core",
-            "version": "2.11.8",
-            "dist": {
-                "type": "tar",
-                "url": "https://registry.npmjs.org/@popperjs/core/-/core-2.11.8.tgz"
-            },
-            "type": "npm-asset",
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "oomphinc/composer-installers-extender",
-            "version": "2.0.1",
+            "name": "paragonie/random_compat",
+            "version": "v9.99.100",
             "source": {
                 "type": "git",
-                "url": "https://github.com/oomphinc/composer-installers-extender.git",
-                "reference": "cbf4b6f9a24153b785d09eee755b995ba87bd5f9"
+                "url": "https://github.com/paragonie/random_compat.git",
+                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oomphinc/composer-installers-extender/zipball/cbf4b6f9a24153b785d09eee755b995ba87bd5f9",
-                "reference": "cbf4b6f9a24153b785d09eee755b995ba87bd5f9",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/996434e5492cb4c3edcb9168db6fbb1359ef965a",
+                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.1 || ^2.0",
-                "composer/installers": "^1.0 || ^2.0",
-                "php": ">=7.1"
+                "php": ">= 7"
             },
             "require-dev": {
-                "composer/composer": "^2.0",
-                "phpunit/phpunit": "^7.2",
-                "squizlabs/php_codesniffer": "^3.3"
+                "phpunit/phpunit": "4.*|5.*",
+                "vimeo/psalm": "^1"
             },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "OomphInc\\ComposerInstallersExtender\\Plugin"
+            "suggest": {
+                "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
             },
-            "autoload": {
-                "psr-4": {
-                    "OomphInc\\ComposerInstallersExtender\\": "src/"
-                }
-            },
+            "type": "library",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
-                    "name": "Stephen Beemsterboer",
-                    "email": "stephen@oomphinc.com",
-                    "homepage": "https://github.com/balbuf"
-                },
-                {
-                    "name": "Nathan Dentzau",
-                    "email": "nate@oomphinc.com",
-                    "homepage": "http://oomph.is/ndentzau"
+                    "name": "Paragon Initiative Enterprises",
+                    "email": "security@paragonie.com",
+                    "homepage": "https://paragonie.com"
                 }
             ],
-            "description": "Extend the composer/installers plugin to accept any arbitrary package type.",
-            "homepage": "http://www.oomphinc.com/",
+            "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
+            "keywords": [
+                "csprng",
+                "polyfill",
+                "pseudorandom",
+                "random"
+            ],
             "support": {
-                "issues": "https://github.com/oomphinc/composer-installers-extender/issues",
-                "source": "https://github.com/oomphinc/composer-installers-extender/tree/2.0.1"
+                "email": "info@paragonie.com",
+                "issues": "https://github.com/paragonie/random_compat/issues",
+                "source": "https://github.com/paragonie/random_compat"
             },
-            "time": "2021-12-15T12:32:42+00:00"
+            "time": "2020-10-15T08:29:30+00:00"
         },
         {
             "name": "php-forge/awesome-component",
@@ -606,12 +442,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-forge/awesome-component.git",
-                "reference": "2c14fe8f6a46180f13fb14d69d55eafec171800d"
+                "reference": "c09ed8454483ab4105eacf91a56db9a5f20108de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-forge/awesome-component/zipball/2c14fe8f6a46180f13fb14d69d55eafec171800d",
-                "reference": "2c14fe8f6a46180f13fb14d69d55eafec171800d",
+                "url": "https://api.github.com/repos/php-forge/awesome-component/zipball/c09ed8454483ab4105eacf91a56db9a5f20108de",
+                "reference": "c09ed8454483ab4105eacf91a56db9a5f20108de",
                 "shasum": ""
             },
             "require": {
@@ -655,7 +491,7 @@
                 "issues": "https://github.com/php-forge/awesome-component/issues",
                 "source": "https://github.com/php-forge/awesome-component/tree/main"
             },
-            "time": "2024-01-02T14:38:28+00:00"
+            "time": "2024-01-12T20:32:06+00:00"
         },
         {
             "name": "php-forge/awesome-widget",
@@ -663,12 +499,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-forge/awesome-widget.git",
-                "reference": "37b63f482526fe618a8b12362cc936af448c17d4"
+                "reference": "04a6e5a06afde734263c70a82d2c8f35e0517eb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-forge/awesome-widget/zipball/37b63f482526fe618a8b12362cc936af448c17d4",
-                "reference": "37b63f482526fe618a8b12362cc936af448c17d4",
+                "url": "https://api.github.com/repos/php-forge/awesome-widget/zipball/04a6e5a06afde734263c70a82d2c8f35e0517eb0",
+                "reference": "04a6e5a06afde734263c70a82d2c8f35e0517eb0",
                 "shasum": ""
             },
             "require": {
@@ -707,7 +543,7 @@
                 "issues": "https://github.com/php-forge/awesome-widget/issues",
                 "source": "https://github.com/php-forge/awesome-widget/tree/main"
             },
-            "time": "2023-12-31T13:26:43+00:00"
+            "time": "2024-01-12T18:35:40+00:00"
         },
         {
             "name": "php-forge/html",
@@ -715,12 +551,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-forge/html.git",
-                "reference": "84264adc0eabaddf5cbb5a52e35965f8e14f1708"
+                "reference": "f18fbaff28f498ab1224c99045fb8ecae4214971"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-forge/html/zipball/84264adc0eabaddf5cbb5a52e35965f8e14f1708",
-                "reference": "84264adc0eabaddf5cbb5a52e35965f8e14f1708",
+                "url": "https://api.github.com/repos/php-forge/html/zipball/f18fbaff28f498ab1224c99045fb8ecae4214971",
+                "reference": "f18fbaff28f498ab1224c99045fb8ecae4214971",
                 "shasum": ""
             },
             "require": {
@@ -766,7 +602,7 @@
                 "issues": "https://github.com/php-forge/html/issues",
                 "source": "https://github.com/php-forge/html/tree/main"
             },
-            "time": "2024-01-02T15:13:42+00:00"
+            "time": "2024-01-18T11:20:20+00:00"
         },
         {
             "name": "psr/container",
@@ -2194,47 +2030,34 @@
         },
         {
             "name": "yii2-extensions/asset-bootstrap5",
-            "version": "dev-main",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii2-extensions/asset-bootstrap5.git",
-                "reference": "7d8d76914a81b05a92b4365811a9f621954f12d8"
+                "reference": "19c7dc691601b22b7b650d482a209507df8b2233"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2-extensions/asset-bootstrap5/zipball/7d8d76914a81b05a92b4365811a9f621954f12d8",
-                "reference": "7d8d76914a81b05a92b4365811a9f621954f12d8",
+                "url": "https://api.github.com/repos/yii2-extensions/asset-bootstrap5/zipball/19c7dc691601b22b7b650d482a209507df8b2233",
+                "reference": "19c7dc691601b22b7b650d482a209507df8b2233",
                 "shasum": ""
             },
             "require": {
                 "npm-asset/bootstrap": "^5.3",
-                "npm-asset/popperjs--core": "^2.11",
-                "oomphinc/composer-installers-extender": "^2.0",
                 "php": ">=8.1",
-                "yiisoft/yii2": "*"
+                "yiisoft/yii2": "^2.0.49 || ^2.2"
             },
             "require-dev": {
-                "maglnet/composer-require-checker": "^4.6",
-                "php-forge/support": "dev-main",
-                "phpunit/phpunit": "^10.2",
-                "roave/infection-static-analysis-plugin": "^1.32",
+                "maglnet/composer-require-checker": "^4.7",
+                "php-forge/support": "^0.1",
+                "phpunit/phpunit": "^10.5.7",
+                "roave/infection-static-analysis-plugin": "^1.34",
                 "yii2-extensions/phpstan": "dev-main"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-main": "1.0.x-dev"
-                },
-                "installer-types": [
-                    "bower-asset",
-                    "npm-asset"
-                ],
-                "installer-paths": {
-                    "./node_modules/{$name}": [
-                        "type:bower-asset",
-                        "type:npm-asset"
-                    ]
                 }
             },
             "autoload": {
@@ -2254,56 +2077,44 @@
             ],
             "support": {
                 "issues": "https://github.com/yii2-extensions/asset-bootstrap5/issues",
-                "source": "https://github.com/yii2-extensions/asset-bootstrap5/tree/main"
+                "source": "https://github.com/yii2-extensions/asset-bootstrap5/tree/0.1.0"
             },
-            "time": "2023-11-23T10:21:31+00:00"
+            "time": "2024-01-21T10:56:02+00:00"
         },
         {
             "name": "yii2-extensions/bootstrap5",
-            "version": "dev-main",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii2-extensions/bootstrap5.git",
-                "reference": "92da851e8fa3aa8e1f40ca732463b89ec15cb473"
+                "reference": "5d8c5a32ba3c11e18413316b9336108a56bd0052"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2-extensions/bootstrap5/zipball/92da851e8fa3aa8e1f40ca732463b89ec15cb473",
-                "reference": "92da851e8fa3aa8e1f40ca732463b89ec15cb473",
+                "url": "https://api.github.com/repos/yii2-extensions/bootstrap5/zipball/5d8c5a32ba3c11e18413316b9336108a56bd0052",
+                "reference": "5d8c5a32ba3c11e18413316b9336108a56bd0052",
                 "shasum": ""
             },
             "require": {
-                "oomphinc/composer-installers-extender": "^2.0",
                 "php": ">=8.1",
-                "yii2-extensions/asset-bootstrap5": "dev-main",
-                "yiisoft/yii2": "^2.2"
+                "yii2-extensions/asset-bootstrap5": "^0.1",
+                "yiisoft/yii2": "^2.0.49 || ^2.2"
             },
             "require-dev": {
                 "maglnet/composer-require-checker": "^4.6",
                 "phpunit/phpunit": "^10.2",
                 "yii2-extensions/phpstan": "dev-main"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.0.x-dev"
+                    "dev-main": "0.1-dev"
                 },
                 "config-plugin-options": {
                     "source-directory": "config"
                 },
                 "config-plugin": {
                     "yii2-bootstrap5": "extension.php"
-                },
-                "installer-types": [
-                    "bower-asset",
-                    "npm-asset"
-                ],
-                "installer-paths": {
-                    "./node_modules/{$name}": [
-                        "type:bower-asset",
-                        "type:npm-asset"
-                    ]
                 }
             },
             "autoload": {
@@ -2322,9 +2133,9 @@
             ],
             "support": {
                 "issues": "https://github.com/yii2-extensions/bootstrap5/issues",
-                "source": "https://github.com/yii2-extensions/bootstrap5/tree/main"
+                "source": "https://github.com/yii2-extensions/bootstrap5/tree/0.1.0"
             },
-            "time": "2023-11-17T09:54:52+00:00"
+            "time": "2024-01-21T11:12:07+00:00"
         },
         {
             "name": "yii2-extensions/localeurls",
@@ -2660,29 +2471,30 @@
         },
         {
             "name": "yiisoft/yii2",
-            "version": "2.2.x-dev",
+            "version": "2.0.49",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "2be8715ef1d876e2d5828e02fae0ed22d86d0ee3"
+                "reference": "98008bf02a6f6bae78d2ab37e19240b59f8a2957"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/2be8715ef1d876e2d5828e02fae0ed22d86d0ee3",
-                "reference": "2be8715ef1d876e2d5828e02fae0ed22d86d0ee3",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/98008bf02a6f6bae78d2ab37e19240b59f8a2957",
+                "reference": "98008bf02a6f6bae78d2ab37e19240b59f8a2957",
                 "shasum": ""
             },
             "require": {
-                "bower-asset/inputmask": "^5.0.8 ",
+                "bower-asset/inputmask": "~3.2.2 | ~3.3.5",
                 "bower-asset/jquery": "3.7.*@stable | 3.6.*@stable | 3.5.*@stable | 3.4.*@stable | 3.3.*@stable | 3.2.*@stable | 3.1.*@stable | 2.2.*@stable | 2.1.*@stable | 1.11.*@stable | 1.12.*@stable",
-                "bower-asset/punycode": "^2.2",
+                "bower-asset/punycode": "1.3.*",
                 "bower-asset/yii2-pjax": "~2.0.1",
                 "cebe/markdown": "~1.0.0 | ~1.1.0 | ~1.2.0",
                 "ext-ctype": "*",
                 "ext-mbstring": "*",
                 "ezyang/htmlpurifier": "^4.6",
                 "lib-pcre": "*",
-                "php": ">=8.1",
+                "paragonie/random_compat": ">=1",
+                "php": ">=5.4.0",
                 "yiisoft/yii2-composer": "~2.0.4"
             },
             "bin": [
@@ -2777,7 +2589,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-10-31T17:41:22+00:00"
+            "time": "2023-08-29T13:36:17+00:00"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -3287,16 +3099,16 @@
         },
         {
             "name": "codeception/lib-web",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/lib-web.git",
-                "reference": "28cb2ed1169de18e720bec758015aadc37d8344c"
+                "reference": "cea9d53c9cd665498632acc417c9a96bff7eb2b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/lib-web/zipball/28cb2ed1169de18e720bec758015aadc37d8344c",
-                "reference": "28cb2ed1169de18e720bec758015aadc37d8344c",
+                "url": "https://api.github.com/repos/Codeception/lib-web/zipball/cea9d53c9cd665498632acc417c9a96bff7eb2b0",
+                "reference": "cea9d53c9cd665498632acc417c9a96bff7eb2b0",
                 "shasum": ""
             },
             "require": {
@@ -3334,9 +3146,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Codeception/lib-web/issues",
-                "source": "https://github.com/Codeception/lib-web/tree/1.0.4"
+                "source": "https://github.com/Codeception/lib-web/tree/1.0.5"
             },
-            "time": "2023-12-01T11:38:22+00:00"
+            "time": "2024-01-13T11:54:18+00:00"
         },
         {
             "name": "codeception/module-asserts",
@@ -3449,16 +3261,16 @@
         },
         {
             "name": "codeception/module-yii2",
-            "version": "1.1.9",
+            "version": "1.1.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/module-yii2.git",
-                "reference": "70ad7544fc256363acd082b4ef9e7220a18017a0"
+                "reference": "2971f1fb44cd3088f7ecbe78bc51161c037a6551"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/module-yii2/zipball/70ad7544fc256363acd082b4ef9e7220a18017a0",
-                "reference": "70ad7544fc256363acd082b4ef9e7220a18017a0",
+                "url": "https://api.github.com/repos/Codeception/module-yii2/zipball/2971f1fb44cd3088f7ecbe78bc51161c037a6551",
+                "reference": "2971f1fb44cd3088f7ecbe78bc51161c037a6551",
                 "shasum": ""
             },
             "require": {
@@ -3503,9 +3315,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Codeception/module-yii2/issues",
-                "source": "https://github.com/Codeception/module-yii2/tree/1.1.9"
+                "source": "https://github.com/Codeception/module-yii2/tree/1.1.10"
             },
-            "time": "2023-06-16T03:48:50+00:00"
+            "time": "2023-12-04T09:18:47+00:00"
         },
         {
             "name": "codeception/stub",
@@ -4129,16 +3941,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.50",
+            "version": "1.10.56",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "06a98513ac72c03e8366b5a0cb00750b487032e4"
+                "reference": "27816a01aea996191ee14d010f325434c0ee76fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/06a98513ac72c03e8366b5a0cb00750b487032e4",
-                "reference": "06a98513ac72c03e8366b5a0cb00750b487032e4",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/27816a01aea996191ee14d010f325434c0ee76fa",
+                "reference": "27816a01aea996191ee14d010f325434c0ee76fa",
                 "shasum": ""
             },
             "require": {
@@ -4187,7 +3999,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-12-13T10:59:42+00:00"
+            "time": "2024-01-15T10:43:00+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -4512,16 +4324,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.5.5",
+            "version": "10.5.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "ed21115d505b4b4f7dc7b5651464e19a2c7f7856"
+                "reference": "08f4fa74d5fbfff1ef22abffee47aaedcaea227e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ed21115d505b4b4f7dc7b5651464e19a2c7f7856",
-                "reference": "ed21115d505b4b4f7dc7b5651464e19a2c7f7856",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/08f4fa74d5fbfff1ef22abffee47aaedcaea227e",
+                "reference": "08f4fa74d5fbfff1ef22abffee47aaedcaea227e",
                 "shasum": ""
             },
             "require": {
@@ -4593,7 +4405,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.5"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.8"
             },
             "funding": [
                 {
@@ -4609,7 +4421,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-12-27T15:13:52+00:00"
+            "time": "2024-01-19T07:07:27+00:00"
         },
         {
             "name": "psr/http-factory",
@@ -6664,12 +6476,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii2-extensions/debug.git",
-                "reference": "b1700a3f87a78dcdb182c3161482f8f58cf892f6"
+                "reference": "f96b93989be45d85dba933c8f6e158d6dcbdd3d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2-extensions/debug/zipball/b1700a3f87a78dcdb182c3161482f8f58cf892f6",
-                "reference": "b1700a3f87a78dcdb182c3161482f8f58cf892f6",
+                "url": "https://api.github.com/repos/yii2-extensions/debug/zipball/f96b93989be45d85dba933c8f6e158d6dcbdd3d1",
+                "reference": "f96b93989be45d85dba933c8f6e158d6dcbdd3d1",
                 "shasum": ""
             },
             "require": {
@@ -6677,14 +6489,14 @@
                 "ext-mbstring": "*",
                 "php": ">=8.1",
                 "symfony/mime": "^6.3",
-                "yiisoft/yii2": "^2.2",
+                "yiisoft/yii2": "^2.0.49 || ^2.2",
                 "yiisoft/yii2-symfonymailer": "^3.0"
             },
             "require-dev": {
                 "maglnet/composer-require-checker": "^4.6",
                 "phpstan/phpstan": "^1.10",
                 "phpunit/phpunit": "^10.2",
-                "rector/rector": "^0.18",
+                "rector/rector": "^0.19",
                 "yii2-extensions/phpstan": "dev-main"
             },
             "default-branch": true,
@@ -6719,7 +6531,7 @@
                 "issues": "https://github.com/yii2-extensions/debug/issues",
                 "source": "https://github.com/yii2-extensions/debug/tree/main"
             },
-            "time": "2023-11-08T22:29:57+00:00"
+            "time": "2024-01-21T08:53:06+00:00"
         },
         {
             "name": "yii2-extensions/gii",
@@ -6727,19 +6539,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii2-extensions/gii.git",
-                "reference": "b957e304a2bcf9297ef007b6417ff10a79958b82"
+                "reference": "9e96ece24630ad225fc39ca0b51e16899ca9ba5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2-extensions/gii/zipball/b957e304a2bcf9297ef007b6417ff10a79958b82",
-                "reference": "b957e304a2bcf9297ef007b6417ff10a79958b82",
+                "url": "https://api.github.com/repos/yii2-extensions/gii/zipball/9e96ece24630ad225fc39ca0b51e16899ca9ba5f",
+                "reference": "9e96ece24630ad225fc39ca0b51e16899ca9ba5f",
                 "shasum": ""
             },
             "require": {
                 "ext-ctype": "*",
                 "php": ">=8.1",
                 "phpspec/php-diff": "^1.1",
-                "yiisoft/yii2": "^2.2"
+                "yiisoft/yii2": "^2.0.49 || ^2.2"
             },
             "require-dev": {
                 "maglnet/composer-require-checker": "^4.6",
@@ -6778,7 +6590,7 @@
                 "issues": "https://github.com/yii2-extensions/gii/issues",
                 "source": "https://github.com/yii2-extensions/gii/tree/main"
             },
-            "time": "2023-11-08T22:30:54+00:00"
+            "time": "2024-01-21T08:55:12+00:00"
         },
         {
             "name": "yii2-extensions/phpstan",
@@ -6838,8 +6650,6 @@
     "stability-flags": {
         "php-forge/awesome-component": 20,
         "php-forge/html": 20,
-        "yii2-extensions/asset-bootstrap5": 20,
-        "yii2-extensions/bootstrap5": 20,
         "yii2-extensions/localeurls": 20,
         "yii2-extensions/debug": 20,
         "yii2-extensions/gii": 20,
