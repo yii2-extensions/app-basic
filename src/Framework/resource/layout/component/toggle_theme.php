@@ -66,9 +66,9 @@ echo Dropdown::widget()
             ->class('btn btn-bd-primary dropdown-toggle d-flex align-items-center')
             ->dataBsToggle('dropdown')
             ->id('toggle-theme')
+            ->toggleAttributes(['id' => 'toggle-theme-text'])
             ->toggleClass('visually-hidden')
             ->toggleContent('Toggle theme')
-            ->toggleId('toggle-theme-text')
             ->togglePrefix(
                 Icon::renderIcon(
                     'solid',

@@ -9,9 +9,6 @@
     <a href="https://www.php.net/releases/8.1/en.php" target="_blank">
         <img src="https://img.shields.io/badge/PHP-%3E%3D8.1-787CB5" alt="php-version">
     </a>
-    <a href="https://github.com/yiisoft/yii2/tree/2.2" target="_blank">
-        <img src="https://img.shields.io/badge/Yii2%20version-2.2-blue" alt="yii2-version">
-    </a>
     <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/build.yml" target="_blank">
         <img src="https://github.com/yii2-extensions/app-basic/actions/workflows/build.yml/badge.svg" alt="PHPUnit">
     </a>
@@ -32,7 +29,7 @@
 </br>
 
 <p align="center">
-Web Application Basic of Yii Version 2.2. <a href="http://www.yiiframework.com/" title="Yii Framework" target="_blank">Yii Framework</a> application best for rapidly creating projects with Bootstrap 5.
+Web Application Basic of Yii Version 2. <a href="http://www.yiiframework.com/" title="Yii Framework" target="_blank">Yii Framework</a> application best for rapidly creating projects with Bootstrap 5.
 </p>
 
 </br>
@@ -135,7 +132,7 @@ __Console commands:__
 ## Generate translations
 
 <p align="justify">
-To generate the Yii 2.2 Web Application Basic translations, you can change the language settings in the configuration file.
+To generate the Yii Web Application Basic translations, you can change the language settings in the configuration file.
 <p>
 
 ```
@@ -162,6 +159,11 @@ $ composer update --prefer-dist -vvv
 // run all tests with code coverage
 $ vendor/bin/codecept run --coverage-xml
 ~~~
+
+## Support versions Yii2
+
+[![Yii20](https://img.shields.io/badge/Yii2%20version-2.0-blue)](https://github.com/yiisoft/yii2/tree/2.0.49.3)
+[![Yii22](https://img.shields.io/badge/Yii2%20version-2.2-blue)](https://github.com/yiisoft/yii2/tree/2.2)
 
 ## Our social networks
 
