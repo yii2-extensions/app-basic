@@ -135,7 +135,7 @@ __Console commands:__
 ## Generate translations
 
 <p align="justify">
-To generate the Yii 2.2 Web Application Basic translations, you can change the language settings in the configuration file.
+To generate the Yii Web Application Basic translations, you can change the language settings in the configuration file.
 <p>
 
 ```
