@@ -13,7 +13,7 @@
     "prefer-stable": true,
     "require": {
         "php": ">=8.1",
-        "npm-asset/flag-icons": "^6.15",
+        "npm-asset/flag-icons": "^7.1",
         "npm-asset/fortawesome--fontawesome-free": "^6.5",
         "php-forge/awesome-component": "dev-main",
         "php-forge/html": "dev-main",
