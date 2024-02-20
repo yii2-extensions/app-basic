@@ -3,10 +3,10 @@
 declare(strict_types=1);
 
 use App\UseCase\Contact\ContactForm;
-use PHPForge\Html\Button;
 use PHPForge\Html\Div;
 use PHPForge\Html\H;
 use PHPForge\Html\Helper\Encode;
+use PHPForge\Html\Input\Submit;
 use PHPForge\Html\P;
 use PHPForge\Html\Tag;
 use yii\bootstrap5\ActiveForm;
@@ -103,12 +103,11 @@ $tabInput = 1;
                         Div::widget()
                             ->class('d-grid gap-2')
                             ->content(
-                                Button::widget()
+                                Submit::widget()
                                     ->class('btn btn-lg btn-primary btn-block')
-                                    ->content(Yii::t('app.basic', 'Contact us'))
                                     ->name('contact-button')
-                                    ->submit()
                                     ->tabIndex($tabInput++)
+                                    ->value(Yii::t('app.basic', 'Contact us'))
                         )
                     ?>
                 <?php ActiveForm::end() ?>

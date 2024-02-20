@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use PHPForge\Html\A;
 use PHPForge\Html\Div;
-use PHPForge\Html\Footer;
+use PHPForge\Html\Layout\Footer;
 use PHPForge\Html\Span;
 use sjaakp\icon\Icon;
 use yii\web\View;
