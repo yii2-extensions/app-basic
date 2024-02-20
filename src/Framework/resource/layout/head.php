@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-use PHPForge\Html\Head;
-use PHPForge\Html\Meta;
-use PHPForge\Html\Title;
+use PHPForge\Html\Layout\Head;
+use PHPForge\Html\Layout\Meta;
+use PHPForge\Html\Layout\Title;
 use yii\helpers\Html;
 use yii\web\View;
 
@@ -14,7 +14,7 @@ use yii\web\View;
 ?>
 <?= Head::widget()->begin() ?>
     <?= Meta::widget()->charset(Yii::$app->charset) ?>
-    <?= Meta::widget()->content('viewport', 'width=device-width, initial-scale=1') ?>
+    <?= Meta::widget()->content('width=device-width, initial-scale=1')->name('viewport') ?>
     <?= Html::csrfMetaTags() ?>
     <?= Title::widget()->content(Html::encode($this->title)) ?>
     <?php $this->head() ?>

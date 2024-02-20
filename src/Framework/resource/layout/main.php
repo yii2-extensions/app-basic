@@ -3,10 +3,10 @@
 declare(strict_types=1);
 
 use App\Framework\Asset\AppAsset;
-use PHPForge\Html\Body;
 use PHPForge\Html\Div;
-use PHPForge\Html\Header;
-use PHPForge\Html\Html;
+use PHPForge\Html\Layout\Body;
+use PHPForge\Html\Layout\Header;
+use PHPForge\Html\Layout\Html;
 use sjaakp\icon\Icon;
 use yii\bootstrap5\Breadcrumbs;
 use yii\web\View;
