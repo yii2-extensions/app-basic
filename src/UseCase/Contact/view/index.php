@@ -3,11 +3,11 @@
 declare(strict_types=1);
 
 use App\UseCase\Contact\ContactForm;
-use PHPForge\Html\Div;
+use PHPForge\Html\FormControl\Input\Submit;
+use PHPForge\Html\Group\Div;
+use PHPForge\Html\Group\P;
 use PHPForge\Html\H;
 use PHPForge\Html\Helper\Encode;
-use PHPForge\Html\Input\Submit;
-use PHPForge\Html\P;
 use PHPForge\Html\Tag;
 use yii\bootstrap5\ActiveForm;
 use yii\captcha\Captcha;

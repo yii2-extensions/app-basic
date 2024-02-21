@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-use PHPForge\Html\Div;
+use PHPForge\Html\Group\Div;
+use PHPForge\Html\Group\P;
 use PHPForge\Html\H;
 use PHPForge\Html\Helper\Encode;
-use PHPForge\Html\P;
 use PHPForge\Html\Tag;
 use yii\web\View;
 

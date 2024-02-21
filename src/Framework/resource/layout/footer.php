@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use PHPForge\Html\A;
-use PHPForge\Html\Div;
+use PHPForge\Html\Group\Div;
 use PHPForge\Html\Layout\Footer;
 use PHPForge\Html\Span;
 use sjaakp\icon\Icon;

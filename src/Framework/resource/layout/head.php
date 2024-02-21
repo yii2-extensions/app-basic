@@ -3,8 +3,8 @@
 declare(strict_types=1);
 
 use PHPForge\Html\Layout\Head;
-use PHPForge\Html\Layout\Meta;
-use PHPForge\Html\Layout\Title;
+use PHPForge\Html\Metadata\Meta;
+use PHPForge\Html\Metadata\Title;
 use yii\helpers\Html;
 use yii\web\View;
 

@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\UseCase\Contact\Index;
 
 use App\UseCase\Contact\ContactEvent;
-use App\UseCase\Contact\ContactForm;
 use yii\base\Action;
 use yii\base\InvalidConfigException;
 use yii\symfonymailer\Mailer;
