@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use PHPForge\Html\Layout\Head;
+use PHPForge\Html\Document\Head;
 use PHPForge\Html\Metadata\Meta;
 use PHPForge\Html\Metadata\Title;
 use yii\helpers\Html;

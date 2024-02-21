@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-use PHPForge\Html\A;
 use PHPForge\Html\Group\Div;
-use PHPForge\Html\Layout\Footer;
-use PHPForge\Html\Span;
+use PHPForge\Html\Semantic\Footer;
+use PHPForge\Html\Textual\A;
+use PHPForge\Html\Textual\Span;
 use sjaakp\icon\Icon;
 use yii\web\View;
 
