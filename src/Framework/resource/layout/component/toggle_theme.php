@@ -5,7 +5,7 @@ declare(strict_types=1);
 use App\Framework\Asset\ToggleThemeAsset;
 use PHPForge\Component\Dropdown;
 use PHPForge\Component\Item;
-use PHPForge\Html\ButtonToggle;
+use PHPForge\Component\Toggle;
 use sjaakp\icon\Icon;
 use yii\web\View;
 
@@ -60,7 +60,7 @@ echo Dropdown::widget()
     )
     ->listClass('dropdown-menu dropdown-menu-end shadow')
     ->toggleButton(
-        ButtonToggle::widget()
+        Toggle::widget()
             ->ariaExpanded('false')
             ->ariaLabel('Toggle theme (auto)')
             ->class('btn btn-bd-primary dropdown-toggle d-flex align-items-center')
