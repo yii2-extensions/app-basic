@@ -59,7 +59,7 @@ echo Dropdown::widget()
             ->linkClass('dropdown-item d-flex align-items-center'),
     )
     ->listClass('dropdown-menu dropdown-menu-end shadow')
-    ->toggleButton(
+    ->toggle(
         Toggle::widget()
             ->ariaExpanded('false')
             ->ariaLabel('Toggle theme (auto)')

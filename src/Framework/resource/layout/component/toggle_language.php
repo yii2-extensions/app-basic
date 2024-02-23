@@ -63,7 +63,7 @@ echo Dropdown::widget()
             ->active(Yii::$app->language === 'ru-RU'),
     )
     ->listClass('dropdown-menu dropdown-menu-end shadow')
-    ->toggleButton(
+    ->toggle(
         Toggle::widget()
             ->ariaExpanded('false')
             ->ariaLabel('Toggle language dropdown')
