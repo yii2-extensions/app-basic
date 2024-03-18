@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 use UIAwesome\Html\{Component\Alert, Component\Cookbook\BootstrapAlertDismiss, Group\Div};
 
-use function in_array;
-
 $session = Yii::$app->getSession();
 $flashMessages = $session->getAllFlashes();
 $html = [];
