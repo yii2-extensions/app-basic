@@ -2,14 +2,13 @@
 
 declare(strict_types=1);
 
-use UIAwesome\Html\{
-    Component\Cookbook\BootstrapNavBarMenuItemsRigth,
-    Component\Item,
-    Component\Menu,
-    Component\NavBar,
-    Multimedia\Img
-};
-use yii\{helpers\Url, web\User};
+use UIAwesome\Html\Component\Cookbook\BootstrapNavBarMenuItemsRigth;
+use UIAwesome\Html\Component\Item;
+use UIAwesome\Html\Component\Menu;
+use UIAwesome\Html\Component\NavBar;
+use UIAwesome\Html\Multimedia\Img;
+use yii\helpers\Url;
+use yii\web\User;
 
 $user = null;
 

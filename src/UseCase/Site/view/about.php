@@ -2,7 +2,11 @@
 
 declare(strict_types=1);
 
-use UIAwesome\Html\{Group\Div, Group\P, Helper\Encode, Semantic\H, Tag};
+use UIAwesome\Html\Group\Div;
+use UIAwesome\Html\Group\P;
+use UIAwesome\Html\Helper\Encode;
+use UIAwesome\Html\Semantic\H;
+use UIAwesome\Html\Tag;
 use yii\web\View;
 
 /**

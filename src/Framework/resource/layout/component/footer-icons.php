@@ -2,7 +2,8 @@
 
 declare(strict_types=1);
 
-use UIAwesome\Html\{Graphic\Svg, Textual\A};
+use UIAwesome\Html\Graphic\Svg;
+use UIAwesome\Html\Textual\A;
 
 $linkIconDefinitions = [
     'class()' => ['d-none d-sm-block d-md-block d-lg-block d-xl-block text-muted hover:text-dark text-decoration-none ms-3'],
