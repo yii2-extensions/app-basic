@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 /**
  * Message translations.
  *
@@ -21,18 +24,14 @@ return [
     'Because the application is in development mode, the email is not sent but saved as a file under.' => 'Поскольку приложение находится в режиме разработки, электронное письмо не отправляется, а сохраняется как файл под именем.',
     'Body' => 'Сообщение',
     'Captcha Code' => 'Код Captcha',
-    'Chinese' => 'Китайский',
-    'Contact' => 'Контакт',
     'Contact us' => 'Свяжитесь с нами',
+    'Contact' => 'Контакт',
     'Email' => 'Электронная почта',
-    'English' => 'Английский',
     'Enter Body Here' => 'Введите текст сообщения здесь',
     'Enter Captcha Code Here' => 'Введите код Captcha здесь',
     'Enter Email Here' => 'Введите адрес электронной почты здесь',
     'Enter Subject Here' => 'Введите тему здесь',
     'Enter Username Here' => 'Введите имя пользователя здесь',
-    'French' => 'Французский',
-    'German' => 'Немецкий',
     'If you think this is a problem with us, please tell us.' => 'Если вы считаете, что это проблема с нами, пожалуйста, сообщите нам.',
     'Index' => 'Главная',
     'Name' => 'Имя',
@@ -40,9 +39,13 @@ return [
     'Oops! Looks like you followed a bad link.' => 'Упс! Похоже, вы перешли по неверной ссылке.',
     'Please configure the <code>useFileTransport </code>property of the <code>mail </code>application component to be false to enable email sending.' => 'Пожалуйста, настройте свойство <code>useFileTransport</code> компонента приложения <code>mail</code> на значение false, чтобы включить отправку электронной почты.',
     'Please fill out the following form to contact us.' => 'Пожалуйста, заполните следующую форму, чтобы связаться с нами.',
-    'Portuguese' => 'Португальский',
-    'Russian' => 'Русский',
-    'Spanish' => 'Испанский',
+    'site.selector.language.de' => 'Немецкий',
+    'site.selector.language.en' => 'Английский',
+    'site.selector.language.es' => 'Испанский',
+    'site.selector.language.fr' => 'Французский',
+    'site.selector.language.pt' => 'Португальский',
+    'site.selector.language.ru' => 'Русский',
+    'site.selector.language.zh' => 'Китайский',
     'Subject' => 'Тема',
     'Thank you for contacting us. We will respond to you as soon as possible.' => 'Спасибо, что связались с нами. Мы ответим вам как можно скорее.',
     'This is the About page. You may modify the following file to customize its content.' => 'Это страница "О нас". Вы можете изменить следующий файл, чтобы настроить ее содержание.',

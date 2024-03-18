@@ -3,17 +3,8 @@
 declare(strict_types=1);
 
 use App\UseCase\Contact\ContactForm;
-use PHPForge\Html\FormControl\Input\Submit;
-use PHPForge\Html\Group\Div;
-use PHPForge\Html\Group\P;
-use PHPForge\Html\Helper\Encode;
-use PHPForge\Html\Semantic\H;
-use PHPForge\Html\Tag;
-use yii\bootstrap5\ActiveForm;
-use yii\captcha\Captcha;
-use yii\symfonymailer\Mailer;
-use yii\web\Session;
-use yii\web\View;
+use UIAwesome\Html\{FormControl\Input\Submit, Group\Div, Group\P, Helper\Encode, Semantic\H, Tag};
+use yii\{bootstrap5\ActiveForm, captcha\Captcha, symfonymailer\Mailer, web\Session, web\View};
 
 /**
  * @var ContactForm $model

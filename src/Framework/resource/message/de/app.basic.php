@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 /**
  * Message translations.
  *
@@ -21,18 +24,14 @@ return [
     'Because the application is in development mode, the email is not sent but saved as a file under.' => 'Da die Anwendung im Entwicklungsmodus ist, wird die E-Mail nicht gesendet, sondern als Datei gespeichert unter.',
     'Body' => 'Nachrichtentext',
     'Captcha Code' => 'Captcha-Code',
-    'Chinese' => 'Chinesisch',
-    'Contact' => 'Kontakt',
     'Contact us' => 'Kontaktiere uns',
+    'Contact' => 'Kontakt',
     'Email' => 'E-Mail',
-    'English' => 'Englisch',
     'Enter Body Here' => 'Hier Nachricht eingeben',
     'Enter Captcha Code Here' => 'Hier Captcha-Code eingeben',
     'Enter Email Here' => 'Hier E-Mail eingeben',
     'Enter Subject Here' => 'Hier Betreff eingeben',
     'Enter Username Here' => 'Hier Benutzername eingeben',
-    'French' => 'Französisch',
-    'German' => 'Deutsch',
     'If you think this is a problem with us, please tell us.' => 'Wenn Sie denken, dass dies ein Problem bei uns ist, informieren Sie uns bitte.',
     'Index' => 'Startseite',
     'Name' => 'Name',
@@ -40,9 +39,13 @@ return [
     'Oops! Looks like you followed a bad link.' => 'Hoppla! Sie sind einem fehlerhaften Link gefolgt.',
     'Please configure the <code>useFileTransport </code>property of the <code>mail </code>application component to be false to enable email sending.' => 'Bitte konfigurieren Sie die Eigenschaft <code>useFileTransport</code> des <code>mail</code>-Anwendungsbausteins als falsch, um das Versenden von E-Mails zu ermöglichen.',
     'Please fill out the following form to contact us.' => 'Bitte füllen Sie das folgende Formular aus, um uns zu kontaktieren.',
-    'Portuguese' => 'Portugiesisch',
-    'Russian' => 'Russisch',
-    'Spanish' => 'Spanisch',
+    'site.selector.language.de' => 'Deutsch',
+    'site.selector.language.en' => 'Englisch',
+    'site.selector.language.es' => 'Spanisch',
+    'site.selector.language.fr' => 'Französisch',
+    'site.selector.language.pt' => 'Portugiesisch',
+    'site.selector.language.ru' => 'Russisch',
+    'site.selector.language.zh' => 'Chinesisch',
     'Subject' => 'Betreff',
     'Thank you for contacting us. We will respond to you as soon as possible.' => 'Vielen Dank für Ihre Kontaktaufnahme. Wir werden uns so schnell wie möglich bei Ihnen melden.',
     'This is the About page. You may modify the following file to customize its content.' => 'Dies ist die Über-uns-Seite. Sie können die folgende Datei bearbeiten, um ihren Inhalt anzupassen.',

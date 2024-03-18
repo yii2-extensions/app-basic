@@ -2,34 +2,18 @@
 
 declare(strict_types=1);
 
-use yii\bootstrap5\Alert;
+use UIAwesome\Html\{Component\Alert, Component\Cookbook\BootstrapAlertDismiss, Group\Div};
 
-$alertTypes = [
-    'danger' => 'alert-danger',
-    'dark' => 'alert-dark',
-    'info' => 'alert-info',
-    'light' => 'alert-light',
-    'primary' => 'alert-primary',
-    'secondary' => 'alert-secondary',
-    'success' => 'alert-success',
-    'warning' => 'alert-warning',
-];
+use function in_array;
 
 $session = Yii::$app->getSession();
-$flashes = $session->getAllFlashes();
+$flashMessages = $session->getAllFlashes();
+$html = [];
 
-foreach ($flashes as $type => $message) {
-    if (isset($alertTypes[$type])) {
-        /* initialize css class for each alert box */
-        $options['class'] = $alertTypes[$type];
-
-        echo Alert::widget(
-            [
-                'body' => $message,
-                'options' => $options,
-            ]
-        );
-
-        $session->removeFlash($type);
+foreach ($flashMessages as $type => $message) {
+    if (in_array($type, ['danger', 'dark', 'info', 'success', 'warning'], true) === true) {
+        $html[] = Alert::widget(BootstrapAlertDismiss::definitions($type))->content($message);
     }
 }
+
+echo Div::widget()->id('alert_dismissing')->content(...$html);

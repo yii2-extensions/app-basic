@@ -28,27 +28,33 @@ return [
     'web.language' => 'en-US',
     'web.name' => 'Web application basic',
     'web.params' => [
-        'app.languages.labels' => [
-            'de-DE' => 'German',
-            'en-US' => 'English',
-            'es-ES' => 'Spanish',
-            'fr-FR' => 'French',
-            'pt-BR' => 'Portuguese',
-            'ru-RU' => 'Russian',
-            'zh-CN' => 'Chinese',
+        'app.localeurls.languages' => [
+            'de' => 'de-DE',
+            'en' => 'en-US',
+            'es' => 'es-ES',
+            'fr' => 'fr-FR',
+            'pt' => 'pt-BR',
+            'ru' => 'ru-RU',
+            'zh' => 'zh-CN',
         ],
         'app.mailer.sender' => 'noreply@example.com',
         'app.mailer.sender.name' => 'Web application basic',
         'app.menu.isguest' => [
             [
+                'label' => 'Home',
+                'link' => ['/site/index'],
+                'order' => 0,
+                'category' => 'app.basic',
+            ],
+            [
                 'label' => 'About',
-                'url' => ['/site/about'],
+                'link' => ['/site/about'],
                 'order' => 1,
                 'category' => 'app.basic',
             ],
             [
                 'label' => 'Contact',
-                'url' => ['/contact/index'],
+                'link' => ['/contact/index'],
                 'order' => 2,
                 'category' => 'app.basic',
             ],

@@ -2,11 +2,8 @@
 
 declare(strict_types=1);
 
-use PHPForge\Html\Document\Head;
-use PHPForge\Html\Metadata\Meta;
-use PHPForge\Html\Metadata\Title;
-use yii\helpers\Html;
-use yii\web\View;
+use UIAwesome\Html\{Document\Head, Metadata\Meta, Metadata\Title};
+use yii\{helpers\Html, web\View};
 
 /**
  * @var View $this
