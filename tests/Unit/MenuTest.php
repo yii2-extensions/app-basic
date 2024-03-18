@@ -7,6 +7,7 @@ namespace App\Tests\Unit;
 use App\Tests\Support\Data\UserIdentity;
 use Codeception\Test\Unit;
 use Yii;
+use yii\web\Request;
 use yii\web\User;
 use yii\web\View;
 
@@ -18,20 +19,15 @@ final class MenuTest extends Unit
     {
         $view = new View();
 
-        Yii::$container->set(
-            User::class,
-            [
-                'identityClass' => UserIdentity::class,
-            ]
-        );
-
+        Yii::$app->request->setUrl('http://example.com');
         Yii::$app->params['app.menu.islogged'] = [
             [
                 'label' => 'Logout',
-                'url' => ['/logout/index'],
+                'link' => ['/logout/index'],
                 'order' => 1,
             ],
         ];
+        Yii::$container->set(User::class, ['identityClass' => UserIdentity::class]);
 
         $user = Yii::$container->get(User::class);
         $user->login(UserIdentity::findIdentity('user1'), 0);

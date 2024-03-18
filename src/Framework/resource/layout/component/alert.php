@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-use UIAwesome\Html\Component\Alert;
-use UIAwesome\Html\Component\Cookbook\BootstrapAlertDismiss;
-use UIAwesome\Html\Group\Div;
+use UIAwesome\Html\{Component\Alert, Component\Cookbook\BootstrapAlertDismiss, Group\Div};
 
 $session = Yii::$app->getSession();
 $flashMessages = $session->getAllFlashes();
