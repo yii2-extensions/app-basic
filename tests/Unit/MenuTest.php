@@ -7,7 +7,6 @@ namespace App\Tests\Unit;
 use App\Tests\Support\Data\UserIdentity;
 use Codeception\Test\Unit;
 use Yii;
-use yii\web\Request;
 use yii\web\User;
 use yii\web\View;
 

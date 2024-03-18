@@ -9,7 +9,7 @@ return [
     // web application settings shared
     'common.aliases' => [
         '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
+        '@npm' => '@vendor/npm-asset',
         '@public' => '@app/public',
         '@web' => '@public',
         '@runtime' => '@public/runtime',
@@ -60,7 +60,7 @@ return [
             ],
         ],
         'app.menu.islogged' => [],
-        'icons'  => '@npm/fortawesome--fontawesome-free/svgs/{family}/{name}.svg',
+        'icons' => '@npm/fortawesome--fontawesome-free/svgs/{family}/{name}.svg',
     ],
     'web.request.cookieValidationKey' => 'your-cookie-validation-key',
     'web.request.enableCsrfValidation' => true,
