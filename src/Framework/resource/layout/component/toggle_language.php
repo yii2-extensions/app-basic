@@ -3,8 +3,11 @@
 declare(strict_types=1);
 
 use App\Framework\Asset\LocaleAsset;
-use UIAwesome\Html\Component\{Cookbook\BootstrapDropdownLanguage, Dropdown, Item};
-use yii\{helpers\Url, web\View};
+use UIAwesome\Html\Component\Cookbook\BootstrapDropdownLanguage;
+use UIAwesome\Html\Component\Dropdown;
+use UIAwesome\Html\Component\Item;
+use yii\helpers\Url;
+use yii\web\View;
 
 /**
  * @var string $languageLabel

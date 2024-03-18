@@ -2,7 +2,10 @@
 
 declare(strict_types=1);
 
-use UIAwesome\Html\{Group\Div, Helper\Encode, Multimedia\Img, Semantic\H};
+use UIAwesome\Html\Group\Div;
+use UIAwesome\Html\Helper\Encode;
+use UIAwesome\Html\Multimedia\Img;
+use UIAwesome\Html\Semantic\H;
 use yii\web\View;
 
 /**

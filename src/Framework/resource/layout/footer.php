@@ -3,14 +3,12 @@
 declare(strict_types=1);
 
 use App\Framework\Asset\ToggleThemeAsset;
-use UIAwesome\Html\{
-    Component\Cookbook\BootstrapToggleTheme,
-    Component\Toggle,
-    Group\Div,
-    Semantic\Footer,
-    Textual\A,
-    Textual\Span
-};
+use UIAwesome\Html\Component\Cookbook\BootstrapToggleTheme;
+use UIAwesome\Html\Component\Toggle;
+use UIAwesome\Html\Group\Div;
+use UIAwesome\Html\Semantic\Footer;
+use UIAwesome\Html\Textual\A;
+use UIAwesome\Html\Textual\Span;
 use yii\web\View;
 
 /**
