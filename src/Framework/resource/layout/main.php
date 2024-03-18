@@ -3,13 +3,9 @@
 declare(strict_types=1);
 
 use App\Framework\Asset\AppAsset;
-use PHPForge\Html\Document\Body;
-use PHPForge\Html\Document\Html;
-use PHPForge\Html\Group\Div;
-use PHPForge\Html\Semantic\Header;
 use sjaakp\icon\Icon;
-use yii\bootstrap5\Breadcrumbs;
-use yii\web\View;
+use UIAwesome\Html\{Document\Body, Document\Html, Group\Div, Semantic\Header};
+use yii\{bootstrap5\Breadcrumbs, web\View};
 
 /**
  * @var string $content

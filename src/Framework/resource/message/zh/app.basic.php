@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 /**
  * Message translations.
  *
@@ -21,18 +24,14 @@ return [
     'Because the application is in development mode, the email is not sent but saved as a file under.' => '因为应用程序处于开发模式，电子邮件不会被发送，而会保存为文件。',
     'Body' => '正文',
     'Captcha Code' => '验证码',
-    'Chinese' => '中文',
-    'Contact' => '联系',
     'Contact us' => '联系我们',
+    'Contact' => '联系',
     'Email' => '电子邮件',
-    'English' => '英语',
     'Enter Body Here' => '在此输入正文',
     'Enter Captcha Code Here' => '在此输入验证码',
     'Enter Email Here' => '在此输入电子邮件',
     'Enter Subject Here' => '在此输入主题',
     'Enter Username Here' => '在此输入用户名',
-    'French' => '法语',
-    'German' => '德国的',
     'If you think this is a problem with us, please tell us.' => '如果您认为这是我们的问题，请告诉我们。',
     'Index' => '主页',
     'Name' => '姓名',
@@ -40,9 +39,13 @@ return [
     'Oops! Looks like you followed a bad link.' => '糟糕！看起来您跟随了一个错误的链接。',
     'Please configure the <code>useFileTransport </code>property of the <code>mail </code>application component to be false to enable email sending.' => '请配置<code>mail </code>应用程序组件的<code>useFileTransport </code>属性为false，以启用电子邮件发送。',
     'Please fill out the following form to contact us.' => '请填写以下表单以与我们联系。',
-    'Portuguese' => '葡萄牙语',
-    'Russian' => '俄语',
-    'Spanish' => '西班牙语',
+    'site.selector.language.de' => '德国的',
+    'site.selector.language.en' => '英语',
+    'site.selector.language.es' => '西班牙语',
+    'site.selector.language.fr' => '法语',
+    'site.selector.language.pt' => '葡萄牙语',
+    'site.selector.language.ru' => '俄语',
+    'site.selector.language.zh' => '中文',
     'Subject' => '主题',
     'Thank you for contacting us. We will respond to you as soon as possible.' => '感谢您联系我们。我们将尽快回复您。',
     'This is the About page. You may modify the following file to customize its content.' => '这是关于页面。您可以修改以下文件来自定义其内容。',

@@ -2,10 +2,14 @@
 
 declare(strict_types=1);
 
-use yii\bootstrap5\Nav;
-use yii\bootstrap5\NavBar;
-use yii\helpers\Html;
-use yii\web\User;
+use UIAwesome\Html\{
+    Component\Cookbook\BootstrapNavBarMenuItemsRigth,
+    Component\Item,
+    Component\Menu,
+    Component\NavBar,
+    Multimedia\Img
+};
+use yii\{helpers\Url, web\User};
 
 $user = null;
 
@@ -18,40 +22,35 @@ $menuItems = match ($user?->getIsGuest()) {
     default => Yii::$app->params['app.menu.isguest'],
 };
 
+$items = [];
+
 foreach ($menuItems as $key => $item) {
     if (isset($item['label']) && is_string($item['label'])) {
         $category = $item['category'] ?? 'app.basic';
         $menuItems[$key]['label'] = Yii::t($category, $item['label']);
     }
+
+    $items[$key] = Item::widget()
+        ->label($item['label'] ?? '')
+        ->link(Url::to($item['link'] ?? '#'))
+        ->linkAttributes($item['linkAttributes'] ?? []);
 }
 
 $orders = array_column($menuItems, 'order');
 array_multisort($orders, SORT_ASC, $menuItems);
 
-NavBar::begin(
-    [
-        'brandLabel' => Html::img(
-            Yii::getAlias('@web/image/yiiframework.svg'),
-            [
-                'alt' => Yii::$app->name,
-                'width' => '200',
-            ],
-        ),
-        'brandUrl'   => Yii::$app->homeUrl,
-        'collapseOptions' => [
-            'class' => 'justify-content-end',
-        ],
-        'options'    => [
-            'class' => 'navbar navbar bg-body-secondary navbar-expand-lg',
-        ],
-    ]
-);
-
-echo Nav::widget(
-    [
-        'options' => ['class' => 'navbar-nav'],
-        'items'   => $menuItems,
-    ]
-);
-
-NavBar::end();
+echo NavBar::widget(BootstrapNavBarMenuItemsRigth::definitions())
+    ->brandImage(
+        Img::widget()
+            ->alt(Yii::$app->name)
+            ->src(Yii::getAlias('@web/image/yiiframework.svg'))
+            ->title(Yii::$app->name)
+            ->width(200)
+    )
+    ->brandLink(Yii::$app->homeUrl)
+    ->menu(
+        Menu::widget()
+            ->currentPath(Yii::$app->request->url)
+            ->items(...$items)
+    )
+    ->render();

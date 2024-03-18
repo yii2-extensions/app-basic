@@ -21,6 +21,7 @@ return [
                 'app.basic' => [
                     'class' => PhpMessageSource::class,
                     'basePath' => '@resource/message',
+                    'sourceLanguage' => 'en',
                 ],
             ],
         ],

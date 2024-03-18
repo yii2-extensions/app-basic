@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 /**
  * Message translations.
  *
@@ -21,18 +24,14 @@ return [
     'Because the application is in development mode, the email is not sent but saved as a file under.' => 'Debido a que la aplicación está en modo de desarrollo, el correo electrónico no se envía, pero se guarda como un archivo en.',
     'Body' => 'Cuerpo',
     'Captcha Code' => 'Código Captcha',
-    'Chinese' => 'Chino',
-    'Contact' => 'Contacto',
     'Contact us' => 'Contáctanos',
+    'Contact' => 'Contacto',
     'Email' => 'Correo Electrónico',
-    'English' => 'Inglés',
     'Enter Body Here' => 'Ingresa el Cuerpo Aquí',
     'Enter Captcha Code Here' => 'Ingresa el Código Captcha Aquí',
     'Enter Email Here' => 'Ingresa el Correo Electrónico Aquí',
     'Enter Subject Here' => 'Ingresa el Asunto Aquí',
     'Enter Username Here' => 'Ingresa el Nombre de Usuario Aquí',
-    'French' => 'Francés',
-    'German' => 'Alemán',
     'If you think this is a problem with us, please tell us.' => 'Si crees que esto es un problema con nosotros, por favor cuéntanos.',
     'Index' => 'Índice',
     'Name' => 'Nombre',
@@ -41,9 +40,13 @@ return [
     'Please configure the <code>useFileTransport </code>property of the <code>mail </code>application component to be false to enable email sending.' => '',
     'Please configure the <code>useFileTransport</code> property of the <code>mail</code> application component to be false to enable email sending.' => '@@Por favor configura la propiedad <code>useFileTransport</code> del componente de aplicación <code>mail</code> en falso para habilitar el envío de correos electrónicos.@@',
     'Please fill out the following form to contact us.' => 'Por favor completa el siguiente formulario para contactarnos.',
-    'Portuguese' => 'Portugués',
-    'Russian' => 'Ruso',
-    'Spanish' => 'Español',
+    'site.selector.language.de' => 'Alemán',
+    'site.selector.language.en' => 'Inglés',
+    'site.selector.language.es' => 'Español',
+    'site.selector.language.fr' => 'Francés',
+    'site.selector.language.pt' => 'Portugués',
+    'site.selector.language.ru' => 'Ruso',
+    'site.selector.language.zh' => 'Chino',
     'Subject' => 'Asunto',
     'Thank you for contacting us. We will respond to you as soon as possible.' => 'Gracias por contactarnos. Te responderemos lo antes posible.',
     'This is the About page. You may modify the following file to customize its content.' => 'Esta es la página de Acerca de. Puedes modificar el siguiente archivo para personalizar su contenido.',

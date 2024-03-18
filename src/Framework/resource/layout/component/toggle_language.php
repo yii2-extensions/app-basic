@@ -3,11 +3,8 @@
 declare(strict_types=1);
 
 use App\Framework\Asset\LocaleAsset;
-use PHPForge\Component\Dropdown;
-use PHPForge\Component\Item;
-use PHPForge\Component\Toggle;
-use yii\helpers\Url;
-use yii\web\View;
+use UIAwesome\Html\Component\{Cookbook\BootstrapDropdownLanguage, Dropdown, Item};
+use yii\{helpers\Url, web\View};
 
 /**
  * @var string $languageLabel
@@ -15,60 +12,26 @@ use yii\web\View;
  */
 LocaleAsset::register($this);
 
-echo Dropdown::widget()
-    ->container(true)
-    ->containerClass('btn-group dropup ms-3')
-    ->items(
-        Item::create()
-            ->label(Yii::t('app.basic', 'Chinese'))
-            ->iconClass('fi fi-cn fis me-2')
-            ->link(Url::current(['language' => 'zh']))
-            ->linkClass('dropdown-item d-flex align-items-center')
-            ->active(Yii::$app->language === 'zh-CN'),
-        Item::create()
-            ->label(Yii::t('app.basic', 'German'))
-            ->iconClass('fi fi-de fis me-2')
-            ->link(Url::current(['language' => 'de']))
-            ->linkClass('dropdown-item d-flex align-items-center')
-            ->active(Yii::$app->language === 'de-DE'),
-        Item::create()
-            ->label(Yii::t('app.basic', 'English'))
-            ->iconClass('fi fi-us fis me-2')
-            ->link(Url::current(['language' => 'en']))
-            ->linkClass('dropdown-item d-flex align-items-center')
-            ->active(Yii::$app->language === 'en-US'),
-        Item::create()
-            ->label(Yii::t('app.basic', 'French'))
-            ->iconClass('fi fi-fr fis me-2')
-            ->link(Url::current(['language' => 'fr']))
-            ->linkClass('dropdown-item d-flex align-items-center')
-            ->active(Yii::$app->language === 'fr-FR'),
-        Item::create()
-            ->label(Yii::t('app.basic', 'Portuguese'))
-            ->iconClass('fi fi-pt fis me-2')
-            ->link(Url::current(['language' => 'pt']))
-            ->linkClass('dropdown-item d-flex align-items-center')
-            ->active(Yii::$app->language === 'pt-BR'),
-        Item::create()
-            ->label(Yii::t('app.basic', 'Spanish'))
-            ->iconClass('fi fi-es fis me-2')
-            ->link(Url::current(['language' => 'es']))
-            ->linkClass('dropdown-item d-flex align-items-center')
-            ->active(Yii::$app->language === 'es-ES'),
-        Item::create()
-            ->label(Yii::t('app.basic', 'Russian'))
-            ->iconClass('fi fi-ru fis me-2')
-            ->link(Url::current(['language' => 'ru']))
-            ->linkClass('dropdown-item d-flex align-items-center')
-            ->active(Yii::$app->language === 'ru-RU'),
-    )
-    ->listClass('dropdown-menu dropdown-menu-end shadow')
-    ->toggle(
-        Toggle::widget()
-            ->ariaExpanded('false')
-            ->ariaLabel('Toggle language dropdown')
-            ->class('btn btn-bd-primary dropdown-toggle d-flex align-items-center text-secondary-emphasis')
-            ->dataBsToggle('dropdown')
-            ->id('toggle-language')
-            ->toggleContent(Yii::t('app.basic', $languageLabel))
-    );
+$items = [];
+
+$locales = Yii::$app->params['app.localeurls.languages'] ?? [];
+
+foreach ($locales as $key => $value) {
+    $icon = match ($key) {
+        'en' => 'us',
+        'zh' => 'cn',
+        default => $key,
+    };
+
+    if (Yii::$app->language === $value) {
+        $languageLabel = "site.selector.language.$key";
+    }
+
+    $items[] = Item::widget()
+        ->iconClass('fi fi-' . $icon . ' fis me-2')
+        ->label(Yii::t('app.basic', "site.selector.language.$key"))
+        ->link(Url::current(['language' => $key]))
+        ->active(Yii::$app->language === $value);
+}
+
+echo Dropdown::widget(BootstrapDropdownLanguage::definitions())->items(...$items);

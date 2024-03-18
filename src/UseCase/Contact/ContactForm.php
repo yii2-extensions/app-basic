@@ -16,6 +16,7 @@ final class ContactForm extends Model
     public string $subject = '';
     public string $body = '';
     public string $verifyCode = '';
+    public string $date = '';
 
     public function attributeLabels(): array
     {

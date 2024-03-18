@@ -15,16 +15,16 @@ return [
             '$yii2-debug',
             '$yii2-gii',
             '$yii2-localeurls',
-            'web/*.php'
+            'web/*.php',
         ],
         'params' => 'params.php',
         'params-console' => [
             '$params',
-            'params-console.php'
+            'params-console.php',
         ],
         'params-web' => [
             '$params',
-            'params-web.php'
+            'params-web.php',
         ],
     ],
     'config-plugin-options' => [

@@ -2,10 +2,7 @@
 
 declare(strict_types=1);
 
-use PHPForge\Html\Group\Div;
-use PHPForge\Html\Group\P;
-use PHPForge\Html\Helper\Encode;
-use PHPForge\Html\Semantic\H;
+use UIAwesome\Html\{Group\Div, Group\P, Helper\Encode, Semantic\H};
 use yii\web\View;
 
 /**
