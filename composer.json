@@ -19,6 +19,7 @@
         "ui-awesome/html": "^0.2",
         "ui-awesome/html-component": "^0.2",
         "ui-awesome/html-helper":"^0.1",
+        "ui-awesome/html-svg":"^0.1",
         "yii2-extensions/asset-bootstrap5": "^0.1",
         "yii2-extensions/bootstrap5": "^0.1",
         "yii2-extensions/localeurls": "dev-main",
