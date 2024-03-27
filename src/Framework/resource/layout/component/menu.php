@@ -3,10 +3,9 @@
 declare(strict_types=1);
 
 use UIAwesome\Html\{
-    Component\Cookbook\BootstrapNavBarMenuItemsRigth,
-    Component\Item,
-    Component\Menu,
-    Component\NavBar,
+    Component\Bootstrap5\Item,
+    Component\Bootstrap5\Menu,
+    Component\Bootstrap5\NavBar,
     Multimedia\Img
 };
 use yii\{helpers\Url, web\User};
@@ -39,7 +38,7 @@ foreach ($menuItems as $key => $item) {
 $orders = array_column($menuItems, 'order');
 array_multisort($orders, SORT_ASC, $menuItems);
 
-echo NavBar::widget(BootstrapNavBarMenuItemsRigth::definitions())
+echo NavBar::widget()
     ->brandImage(
         Img::widget()
             ->alt(Yii::$app->name)
@@ -48,9 +47,6 @@ echo NavBar::widget(BootstrapNavBarMenuItemsRigth::definitions())
             ->width(200)
     )
     ->brandLink(Yii::$app->homeUrl)
-    ->menu(
-        Menu::widget()
-            ->currentPath(Yii::$app->request->url)
-            ->items(...$items)
-    )
+    ->definition('align-right')
+    ->menu(Menu::widget()->currentPath(Yii::$app->request->url)->items(...$items))
     ->render();
