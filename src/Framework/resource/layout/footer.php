@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 use App\Framework\Asset\ToggleThemeAsset;
 use UIAwesome\Html\{
-    Component\Cookbook\BootstrapToggleTheme,
-    Component\Toggle,
+    Component\Bootstrap5\Toggle,
     Group\Div,
     Semantic\Footer,
     Textual\A,
@@ -40,7 +39,7 @@ echo Div::widget()
                     ->class('col-md-4 justify-content-end d-flex align-items-center')
                     ->content(
                         $this->render('component/footer-icons'),
-                        Toggle::Widget(BootstrapToggleTheme::definitions())->id('theme-toggle'),
+                        Toggle::Widget()->definition('selector-theme')->id('theme-toggle'),
                         $this->render('component/toggle_language')
                     )
             )

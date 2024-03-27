@@ -17,7 +17,7 @@
         "npm-asset/fortawesome--fontawesome-free": "^6.5",
         "sjaakp/yii2-icon": "^1.0",
         "ui-awesome/html": "^0.2",
-        "ui-awesome/html-component": "^0.2",
+        "ui-awesome/html-component-bootstrap5": "^1.0@dev",
         "ui-awesome/html-helper":"^0.1",
         "ui-awesome/html-svg":"^0.1",
         "yii2-extensions/asset-bootstrap5": "^0.1",

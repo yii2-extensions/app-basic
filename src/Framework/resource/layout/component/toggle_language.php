@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use App\Framework\Asset\LocaleAsset;
-use UIAwesome\Html\Component\{Cookbook\BootstrapDropdownLanguage, Dropdown, Item};
+use UIAwesome\Html\Component\Bootstrap5\{Dropdown, Item};
 use yii\{helpers\Url, web\View};
 
 /**
@@ -34,4 +34,4 @@ foreach ($locales as $key => $value) {
         ->active(Yii::$app->language === $value);
 }
 
-echo Dropdown::widget(BootstrapDropdownLanguage::definitions())->items(...$items);
+echo Dropdown::widget()->definition('language')->items(...$items);
