@@ -34,4 +34,4 @@ foreach ($locales as $key => $value) {
         ->active(Yii::$app->language === $value);
 }
 
-echo Dropdown::widget()->definition('language')->items(...$items);
+echo Dropdown::widget()->cookbook('language')->items(...$items);

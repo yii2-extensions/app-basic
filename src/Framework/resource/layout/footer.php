@@ -39,7 +39,7 @@ echo Div::widget()
                     ->class('col-md-4 justify-content-end d-flex align-items-center')
                     ->content(
                         $this->render('component/footer-icons'),
-                        Toggle::Widget()->definition('selector-theme')->id('theme-toggle'),
+                        Toggle::Widget()->cookbook('selector-theme')->id('theme-toggle'),
                         $this->render('component/toggle_language')
                     )
             )
