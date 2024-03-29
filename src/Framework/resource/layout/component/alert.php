@@ -10,7 +10,7 @@ $html = [];
 
 foreach ($flashMessages as $type => $message) {
     if (in_array($type, ['danger', 'dark', 'info', 'success', 'warning'], true) === true) {
-        $html[] = Alert::widget()->definition('dismissible', $type)->content($message);
+        $html[] = Alert::widget()->cookbook('dismissible', $type)->content($message);
     }
 }
 

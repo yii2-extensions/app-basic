@@ -47,6 +47,6 @@ echo NavBar::widget()
             ->width(200)
     )
     ->brandLink(Yii::$app->homeUrl)
-    ->definition('align-right')
+    ->cookbook('align-right')
     ->menu(Menu::widget()->currentPath(Yii::$app->request->url)->items(...$items))
     ->render();
