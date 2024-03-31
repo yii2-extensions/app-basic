@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use UIAwesome\Html\{Group\Div, Group\P, Helper\Encode, Semantic\H, Tag};
+use UIAwesome\Html\{Core\HTMLBuilder, Group\Div, Group\P, Helper\Encode, Semantic\H};
 use yii\web\View;
 
 /**
@@ -21,5 +21,5 @@ echo Div::widget()
                     'This is the About page. You may modify the following file to customize its content.'
                 )
             ),
-        Tag::widget()->content(__FILE__)->tagName('code'),
+        HTMLBuilder::createTag('code', __FILE__),
     );
