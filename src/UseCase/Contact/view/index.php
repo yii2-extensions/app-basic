@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use App\UseCase\Contact\ContactForm;
-use UIAwesome\Html\{FormControl\Input\Submit, Group\Div, Group\P, Helper\Encode, Semantic\H, Tag};
+use UIAwesome\Html\{FormControl\Input\Submit, Group\Div, Group\Hr, Group\P, Helper\Encode, Semantic\H};
 use yii\{bootstrap5\ActiveForm, captcha\Captcha, symfonymailer\Mailer, web\Session, web\View};
 
 /**
@@ -25,7 +25,7 @@ $tabInput = 1;
             ?>
                 <?= H::widget()->content(Encode::content($this->title))->class('fw-bold')->tagName('h1') ?>
                 <?= P::widget()->content(Yii::t('app.basic', 'Please fill out the following form to contact us.')) ?>
-                <?= Tag::widget()->class('mb-3')->tagName('hr') ?>
+                <?= Hr::widget()->class('mb-3') ?>
                 <?php $form = ActiveForm::begin(
                     [
                         'id' => 'contact-form',
@@ -107,7 +107,7 @@ $tabInput = 1;
     <?= Div::end() ?>
     <?= P::widget()->class('text-center mt-5')->begin() ?>
         <?php if ($session->hasFlash('contactFormSubmitted')) : ?>
-            <?= Tag::widget()->tagName('hr') ?>
+            <?= Hr::widget() ?>
             <?= P::widget()->class('text-center')->begin() ?>
                 <?= Yii::t(
                     'app.basic',
