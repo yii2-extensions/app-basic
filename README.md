@@ -126,7 +126,7 @@ __*Server Yii:*__
 __Console commands:__
 
 ```shell
-./yii hellow/index
+./yii hello/index
 ```
 
 ## Generate translations
