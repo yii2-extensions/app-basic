@@ -29,7 +29,7 @@
 </br>
 
 <p align="center">
-Web Application Basic of Yii Version 2. <a href="http://www.yiiframework.com/" title="Yii Framework" target="_blank">Yii Framework</a> application best for rapidly creating projects with Bootstrap 5.
+Web Application Basic of Yii Version 2. <a href="https://www.yiiframework.com/" title="Yii Framework" target="_blank">Yii Framework</a> application best for rapidly creating projects with Bootstrap 5.
 </p>
 
 </br>
