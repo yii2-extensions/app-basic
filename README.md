@@ -136,7 +136,7 @@ config/messages.php
 
 Root directory
 
-```
+```shell
 ./yii message config/messages.php
 ```
 
