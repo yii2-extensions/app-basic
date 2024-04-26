@@ -20,21 +20,21 @@
     </a>
     <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml" target="_blank">
         <img src="https://img.shields.io/badge/PHPStan%20level-5-blue" alt="PHPStan level">
-    </a>    
+    </a>
     <a href="https://github.styleci.io/repos/698621511?branch=main" target="_blank">
         <img src="https://github.styleci.io/repos/698621511/shield?branch=main" alt="Code style">
-    </a>        
+    </a>
 </p>
 
 </br>
 
 <p align="center">
-Web Application Basic of Yii Version 2. <a href="http://www.yiiframework.com/" title="Yii Framework" target="_blank">Yii Framework</a> application best for rapidly creating projects with Bootstrap 5.
+Web Application Basic of Yii Version 2. <a href="https://www.yiiframework.com/" title="Yii Framework" target="_blank">Yii Framework</a> application best for rapidly creating projects with Bootstrap 5.
 </p>
 
 </br>
 
-![app-basic](docs/home.png)
+![app-basic](docs/images/home.png)
 
 </br>
 
@@ -85,20 +85,16 @@ root
 The web application contains:
 
 - [x] Pages - [Screenshots]:
-    - [about](docs/about.png)
-    - [contact](docs/contact.png)
-    - [404](docs/404.png)
+  - [about](docs/images/about.png)
+  - [contact](docs/images/contact.png)
+  - [404](docs/images/404.png)
 
-<p align="justify">
 It includes all commonly used configurations that would allow you to focus on adding new
 features to your application.
-</P>
 
 ## Installation
 
-<p align="justify">
-If you do not have <a href="http://getcomposer.org/" title="Composer" target="_blank">Composer</a>, you may install it by following the instructions at <a href="http://getcomposer.org/doc/00-intro.md#installation-nix" title="getcomposer.org" target="_blank">getcomposer.org</a>.
-</p>
+If you do not have <a href="https://getcomposer.org/" title="Composer" target="_blank">Composer</a>, you may install it by following the instructions at <a href="https://getcomposer.org/doc/00-intro.md#installation-nix" title="getcomposer.org" target="_blank">getcomposer.org</a>.
 
 You can then install this project app-basic using the following command:
 
@@ -106,10 +102,8 @@ You can then install this project app-basic using the following command:
 composer create-project --prefer-dist --stability=dev yii2-extensions/app-basic myapp
 ```
 
-<p align="justify">
 Now you should be able to access the application through the following URL, assuming `public` is the directory
 directly under the Web root.
-</p>
 
 __*Virtual Host:*__
 
@@ -131,34 +125,32 @@ __Console commands:__
 
 ## Generate translations
 
-<p align="justify">
 To generate the Yii Web Application Basic translations, you can change the language settings in the configuration file.
-<p>
 
 ```
 config/messages.php
 ```
 
-<p align="justify">
  Automatically the generator will create the folder of your language in `src/Framework/resource/message`,
  If any translation is needed, you can open an issue to add it.
-</p>
 
 Root directory
 
-```
+```shell
 ./yii message config/messages.php
 ```
 
 ## Tests
 
-~~~
+```shell
 // download all composer dependencies root project
 $ composer update --prefer-dist -vvv
+```
 
+```shell
 // run all tests with code coverage
 $ vendor/bin/codecept run --coverage-xml
-~~~
+```
 
 ## Support versions Yii2
 
