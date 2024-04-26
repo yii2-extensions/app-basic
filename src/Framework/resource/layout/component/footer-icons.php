@@ -33,7 +33,7 @@ echo A::widget($linkIconDefinitions)
             ->filePath(Yii::getAlias('@npm/fortawesome--fontawesome-free/svgs/brands//slack.svg'))
     )
     ->href(
-        'https://join.slack.com/t/yii/shared_invite/enQtMzQ4MDExMDcyNTk2LTc0NDQ2ZTZhNjkzZDgwYjE4YjZlNGQxZjFmZDBjZTU3NjViMDE4ZTMxNDRkZjVlNmM1ZTA1ODVmZGUwY2U3NDA'
+        'https://www.yiiframework.com/chat'
     )
     ->title('Slack');
 
