@@ -38,7 +38,7 @@
         "codeception/verify": "^3.0",
         "maglnet/composer-require-checker": "^4.6",
         "symfony/browser-kit": "^6.3",
-        "symfony/process": "^6.3",
+        "symfony/process": "^7.1",
         "yii2-extensions/debug": "dev-main",
         "yii2-extensions/gii": "dev-main",
         "yii2-extensions/phpstan": "^0.1"
