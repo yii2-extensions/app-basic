@@ -7,8 +7,8 @@ use Yiisoft\Config\Config;
 use Yiisoft\Config\ConfigPaths;
 use Yiisoft\Config\Modifier\RecursiveMerge;
 
-defined('YII_DEBUG') or define('YII_DEBUG', true);
-defined('YII_ENV') or define('YII_ENV', 'dev');
+defined('YII_DEBUG') || define('YII_DEBUG', true);
+defined('YII_ENV') || define('YII_ENV', 'dev');
 
 if (getenv('YII_C3')) {
     $c3 = dirname(__DIR__) . '/c3.php';
