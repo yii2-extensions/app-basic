@@ -40,13 +40,13 @@ Web Application Basic of Yii Version 2. <a href="http://www.yiiframework.com/" t
 ```text
 root
 ├── config                  
-│   ├── Common              Common configuration.
+│   ├── common              Common configuration.
 │   │   ├── components.php  
 │   │   └── container.php   
-│   ├── Console             Console configuration.
+│   ├── console             Console configuration.
 │   │   ├── app.php
 │   │   └── components.php     
-│   ├── Web                 Web configuration.
+│   ├── web                 Web configuration.
 │   │   ├── app.php
 │   │   ├── bootstrap.php    
 │   │   ├── components.php
@@ -59,19 +59,18 @@ root
 │   ├── params-web.php      Web parameters.
 │   └── params.php          Common parameters.
 ├── src             
-│   ├── Framework 
-│   │   ├── Asset           Asset bundle files.
-│   │   ├── EnventHandler   Event handler files.
-│   │   └── resources 
+│   ├── framework 
+│   │   ├── asset           Asset bundle files.
+│   │   ├── envent          Event handler files.
+│   │   └── resource 
 │   │       ├── css         Css files.
 │   │       ├── js          Js files.
 │   │       ├── layout      Layout files.
 │   │       └── message     Translation files.
-│   └── UseCase
-│       ├── Contact         Contact use case.
-│       ├── Hello           Hello use case (console).
-│       └── Site            Site use case.
-│           └── About       About use case.
+│   └── usecase
+│       ├── contact         Contact use case.
+│       ├── hello           Hello use case (console).
+│       └── site            Site use case.
 ├── tests                   Tests codeception.
 ├── vendor                  Composer dependencies.
 └── public                  Web server public.
