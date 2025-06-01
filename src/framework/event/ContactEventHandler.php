@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\framework\events;
+namespace app\framework\event;
 
 use app\usecase\contact\{ContactEvent, IndexAction};
 use Yii;

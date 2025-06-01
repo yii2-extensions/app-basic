@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\framework\assets;
+namespace app\framework\asset;
 
 use yii\web\AssetBundle;
 

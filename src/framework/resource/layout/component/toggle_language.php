@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use app\framework\assets\LocaleAsset;
+use app\framework\asset\LocaleAsset;
 use UIAwesome\Html\Graphic\Svg;
 use yii\helpers\Html;
 use yii\{helpers\Url, web\View};

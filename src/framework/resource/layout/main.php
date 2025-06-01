@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use app\framework\assets\AppAsset;
+use app\framework\asset\AppAsset;
 use yii\{bootstrap5\Breadcrumbs, web\View};
 
 /**

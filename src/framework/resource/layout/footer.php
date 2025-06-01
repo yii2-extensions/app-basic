@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use app\framework\assets\ToggleThemeAsset;
+use app\framework\asset\ToggleThemeAsset;
 use yii\helpers\Html;
 use yii\web\View;
 
