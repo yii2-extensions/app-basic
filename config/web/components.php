@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 use yii2\extensions\localeurls\UrlLanguageManager;
 use yii\i18n\PhpMessageSource;
-use yii\web\UrlManager;
 
 /**
  * @var array $params
