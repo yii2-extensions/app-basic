@@ -7,8 +7,6 @@ return static function (Rector\Config\RectorConfig $rectorConfig): void {
 
     $rectorConfig->importNames();
 
-    $rectorConfig->phpVersion(Rector\ValueObject\PhpVersion::PHP_81);
-
     $rectorConfig->paths(
         [
             __DIR__ . '/src',

@@ -30,7 +30,7 @@ echo A::widget($linkIconDefinitions)
     ->class('md:block hidden')
     ->content(
         Svg::widget($svgDefinitions)
-            ->filePath(Yii::getAlias('@npm/@fortawesome/fontawesome-free/svgs/brands//slack.svg')),
+            ->filePath(Yii::getAlias('@npm/@fortawesome/fontawesome-free/svgs/brands/slack.svg')),
     )
     ->href(
         'https://join.slack.com/t/yii/shared_invite/enQtMzQ4MDExMDcyNTk2LTc0NDQ2ZTZhNjkzZDgwYjE4YjZlNGQxZjFmZDBjZTU3NjViMDE4ZTMxNDRkZjVlNmM1ZTA1ODVmZGUwY2U3NDA',
@@ -42,7 +42,7 @@ echo A::widget($linkIconDefinitions)
     ->class('md:block hidden')
     ->content(
         Svg::widget($svgDefinitions)
-            ->filePath(Yii::getAlias('@npm/@fortawesome/fontawesome-free/svgs/brands//facebook.svg')),
+            ->filePath(Yii::getAlias('@npm/@fortawesome/fontawesome-free/svgs/brands/facebook.svg')),
     )
     ->href('https://www.facebook.com/groups/yiitalk/')
     ->title('Facebook');
@@ -51,7 +51,7 @@ echo A::widget($linkIconDefinitions)
 echo A::widget($linkIconDefinitions)
     ->content(
         Svg::widget($svgDefinitions)
-            ->filePath(Yii::getAlias('@npm/@fortawesome/fontawesome-free/svgs/brands//twitter.svg')),
+            ->filePath(Yii::getAlias('@npm/@fortawesome/fontawesome-free/svgs/brands/twitter.svg')),
     )
     ->href('https://twitter.com/yiiframework')
     ->title('Twitter');
@@ -60,7 +60,7 @@ echo A::widget($linkIconDefinitions)
 echo A::widget($linkIconDefinitions)
     ->content(
         Svg::widget($svgDefinitions)
-            ->filePath(Yii::getAlias('@npm/@fortawesome/fontawesome-free/svgs/brands//telegram.svg')),
+            ->filePath(Yii::getAlias('@npm/@fortawesome/fontawesome-free/svgs/brands/telegram.svg')),
     )
     ->href('https://t.me/yii_framework_in_english')
     ->title('Telegram');
