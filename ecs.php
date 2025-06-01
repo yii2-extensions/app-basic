@@ -58,6 +58,6 @@ return ECSConfig::configure()
         [
             '*/src/framework/resource/layout/*',
             '*/src/usecase/contact/view/*',
-            '*/src/useCase/site/view/*',
+            '*/src/usecase/site/view/*',
         ],
     );

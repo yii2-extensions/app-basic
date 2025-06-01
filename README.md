@@ -61,7 +61,7 @@ root
 ├── src             
 │   ├── framework 
 │   │   ├── asset           Asset bundle files.
-│   │   ├── envent          Event handler files.
+│   │   ├── event           Event handler files.
 │   │   └── resource 
 │   │       ├── css         Css files.
 │   │       ├── js          Js files.
