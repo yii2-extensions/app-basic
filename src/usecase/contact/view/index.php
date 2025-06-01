@@ -86,7 +86,7 @@ $tabInput = 1;
             </div>
         </div>
     </div>
-    <p class="text-center mt-5">
+    <p class="text-center">
         <?php if ($session->hasFlash('contactFormSubmitted')) : ?>
             <hr>
             <p class="text-success">
