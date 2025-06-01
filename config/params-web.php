@@ -59,7 +59,7 @@ return [
             ],
         ],
         'app.menu.islogged' => [],
-        'icons' => '@npm/@fortawesome/fontawesome-free/svgs/{family}/{name}.sv',
+        'icons' => '@npm/@fortawesome/fontawesome-free/svgs/{family}/{name}.svg',
     ],
     'web.request.cookieValidationKey' => 'your-cookie-validation-key',
     'web.request.enableCsrfValidation' => true,

@@ -18,4 +18,4 @@ parameters:
         - vendor/yiisoft/yii2/Yii.php
 
     excludePaths:
-        - vendor
+        - vendor/**

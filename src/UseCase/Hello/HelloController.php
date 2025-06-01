@@ -9,7 +9,7 @@ use yii\console\ExitCode;
 
 final class HelloController extends Controller
 {
-    public function actionIndex($message = 'hello world')
+    public function actionIndex(string $message = 'hello world'): int
     {
         echo $message . "\n";
 
