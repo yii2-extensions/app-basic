@@ -54,4 +54,10 @@ return ECSConfig::configure()
             SingleQuoteFixer::class,
         ]
     )
-    ->withSkip(['*/src/UseCase/Contact/view/*', '*/src/UseCase/Site/view/*']);
+    ->withSkip(
+        [
+            '*/src/framework/resource/layout/*',
+            '*/src/usecase/contact/view/*',
+            '*/src/useCase/site/view/*'
+        ],
+    );
