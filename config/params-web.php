@@ -8,8 +8,7 @@ use App\UseCase\Site\SiteController;
 return [
     // web application settings shared
     'common.aliases' => [
-        '@bower' => '@vendor/bower-asset',
-        '@npm' => '@vendor/npm-asset',
+        '@npm' => '@app/node_modules',
         '@public' => '@app/public',
         '@web' => '@public',
         '@runtime' => '@public/runtime',

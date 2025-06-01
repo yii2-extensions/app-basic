@@ -44,7 +44,7 @@ echo NavBar::widget()
             ->alt(Yii::$app->name)
             ->src(Yii::getAlias('@web/image/yiiframework.svg'))
             ->title(Yii::$app->name)
-            ->width(200)
+            ->width(200),
     )
     ->brandLink(Yii::$app->homeUrl)
     ->cookbook('align-right')

@@ -59,7 +59,7 @@ final class ContactCest
         $I->expectTo('success.');
         $I->see('Thank you for contacting us. We will respond to you as soon as possible.');
         $I->see(
-            'Note that if you turn on the Yii debugger, you should be able to view the mail message on the mail panel of the debugger.'
+            'Note that if you turn on the Yii debugger, you should be able to view the mail message on the mail panel of the debugger.',
         );
     }
 }

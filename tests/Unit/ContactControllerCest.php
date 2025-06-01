@@ -19,7 +19,7 @@ final class ContactControllerCest
 
         $I->expectThrowable(
             new InvalidConfigException('The "formModelClass" property must be set.'),
-            static fn () => $contactControler->runAction('index'),
+            static fn() => $contactControler->runAction('index'),
         );
     }
 }

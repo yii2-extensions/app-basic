@@ -10,7 +10,6 @@ use yii\base\InvalidConfigException;
 use yii\symfonymailer\Mailer;
 use yii\web\Controller;
 use yii\web\Request;
-use yii\web\Response;
 use yii\web\Session;
 
 final class IndexAction extends Action
@@ -22,12 +21,12 @@ final class IndexAction extends Action
         Controller $controller,
         private readonly Mailer $mailer,
         private readonly Session $session,
-        array $config = []
+        array $config = [],
     ) {
         parent::__construct($id, $controller, $config);
     }
 
-    public function run(): Response|string
+    public function run(): string
     {
         if ($this->formModelClass === '') {
             throw new InvalidConfigException('The "formModelClass" property must be set.');

@@ -15,14 +15,13 @@ on:
       - '.gitignore'
       - '.gitattributes'
 
-name: dependency-check
+name: ecs
 
 jobs:
-  composer-require-checker:
-    uses: php-forge/actions/.github/workflows/composer-require-checker.yml@main
-    secrets:
-      AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+  easy-coding-standard:
+    uses: php-forge/actions/.github/workflows/ecs.yml@main
     with:
+      extensions: mbstring
       os: >-
         ['ubuntu-latest']
       php: >-

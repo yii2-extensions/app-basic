@@ -12,21 +12,19 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=8.1",
-        "npm-asset/flag-icons": "^7.1",
-        "npm-asset/fortawesome--fontawesome-free": "^6.5",
+        "php": ">=8.2",
+        "php-forge/foxy": "^0.1",
         "sjaakp/yii2-icon": "^1.0",
         "ui-awesome/html": "^0.3",
         "ui-awesome/html-component-bootstrap5": "^1.0@dev",
         "ui-awesome/html-core":"^0.1",
         "ui-awesome/html-helper":"^0.2",
         "ui-awesome/html-svg":"^0.2",
-        "yii2-extensions/asset-bootstrap5": "^0.1",
-        "yii2-extensions/bootstrap5": "^0.1",
         "yii2-extensions/localeurls": "dev-main",
         "yiisoft/config": "^1.4",
-        "yiisoft/yii2": "^2.0.49 || ^2.2",
-        "yiisoft/yii2-symfonymailer": "^4.0"
+        "yiisoft/yii2": "22.0.x-dev",
+        "yiisoft/yii2-bootstrap5": "22.x-dev",
+        "yiisoft/yii2-symfonymailer": "22.x-dev"
     },
     "require-dev": {
         "codeception/c3": "^2.8",
@@ -37,11 +35,13 @@
         "codeception/module-yii2": "^1.1",
         "codeception/verify": "^3.0",
         "maglnet/composer-require-checker": "^4.6",
+        "phpstan/phpstan": "^2.1",
+        "rector/rector": "^2.0",
         "symfony/browser-kit": "^6.3",
         "symfony/process": "^6.3",
-        "yii2-extensions/debug": "dev-main",
-        "yii2-extensions/gii": "dev-main",
-        "yii2-extensions/phpstan": "^0.1"
+        "symplify/easy-coding-standard": "^12.3",
+        "yiisoft/yii2-debug": "22.x-dev",
+        "yiisoft/yii2-gii": "22.x-dev"
     },
     "autoload": {
         "psr-4": {
@@ -59,18 +59,20 @@
         },
         "config-plugin-file": "/config/config-plugin.php"
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        }
-    ],
     "config": {
         "allow-plugins": {
             "codeception/c3": true,
             "yiisoft/yii2-composer": true,
             "composer/installers": true,
-            "yiisoft/config": true
+            "yiisoft/config": true,
+            "php-forge/foxy": true
         }
+    },
+    "scripts": {
+        "check-dependencies": "./vendor/bin/composer-require-checker check",
+        "ecs": "./vendor/bin/ecs --fix",
+        "rector": "./vendor/bin/rector process src",
+        "static": "./vendor/bin/phpstan analyse src --memory-limit=512M",
+        "tests": "./vendor/bin/codecept run"
     }
 }

@@ -30,17 +30,17 @@ echo Div::widget()
                             ->content(
                                 Span::widget()
                                     ->class('mb-3 mb-md-0 text-body-secondary')
-                                    ->content('&copy;', date('Y'), ' <strong>YiiFramework™.</strong>')
+                                    ->content('&copy;', date('Y'), ' <strong>YiiFramework™.</strong>'),
                             )
                             ->href('https://www.yiiframework.com/')
-                            ->title('Yii Framework')
+                            ->title('Yii Framework'),
                     ),
                 Div::widget()
                     ->class('col-md-4 justify-content-end d-flex align-items-center')
                     ->content(
                         $this->render('component/footer-icons'),
                         Toggle::Widget()->cookbook('selector-theme')->id('theme-toggle'),
-                        $this->render('component/toggle_language')
-                    )
-            )
+                        $this->render('component/toggle_language'),
+                    ),
+            ),
     );

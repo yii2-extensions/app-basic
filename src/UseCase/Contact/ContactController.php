@@ -7,6 +7,8 @@ namespace App\UseCase\Contact;
 use App\UseCase\Controller;
 use yii\captcha\CaptchaAction;
 
+use function array_merge;
+
 final class ContactController extends Controller
 {
     /**

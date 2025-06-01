@@ -5,9 +5,7 @@ declare(strict_types=1);
 use UIAwesome\Html\{Core\HTMLBuilder, Group\Div, Group\P, Helper\Encode, Semantic\H};
 use yii\web\View;
 
-/**
- * @var View $this
- */
+/** @var View $this */
 $this->title = Yii::t('app.basic', 'About');
 
 echo Div::widget()
@@ -18,8 +16,8 @@ echo Div::widget()
             ->content(
                 Yii::t(
                     'app.basic',
-                    'This is the About page. You may modify the following file to customize its content.'
-                )
+                    'This is the About page. You may modify the following file to customize its content.',
+                ),
             ),
         HTMLBuilder::createTag('code', __FILE__),
     );
