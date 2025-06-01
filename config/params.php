@@ -7,7 +7,7 @@ $rootDir = dirname(__DIR__);
 return [
     'common.aliases' => [
         '@app' => $rootDir,
-        '@resource' => '@app/src/Framework/resource',
+        '@resource' => '@app/src/framework/resource',
     ],
     'common.bootstrap' => ['log'],
     'common.log.levels' => ['error', 'warning', 'info'],

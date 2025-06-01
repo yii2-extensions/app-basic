@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use App\UseCase\Contact\ContactController;
-use App\UseCase\Site\SiteController;
+use app\usecase\contact\ContactController;
+use app\usecase\site\SiteController;
 
 return [
     // web application settings shared
@@ -59,7 +59,6 @@ return [
             ],
         ],
         'app.menu.islogged' => [],
-        'icons' => '@npm/@fortawesome/fontawesome-free/svgs/{family}/{name}.svg',
     ],
     'web.request.cookieValidationKey' => 'your-cookie-validation-key',
     'web.request.enableCsrfValidation' => true,
