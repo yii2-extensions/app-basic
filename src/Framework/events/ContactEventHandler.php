@@ -2,13 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Framework\EventHandler;
+namespace app\framework\events;
 
-use App\UseCase\Contact\ContactEvent;
-use App\UseCase\Contact\Index\IndexAction;
+use app\usecase\contact\{ContactEvent, IndexAction};
 use Yii;
-use yii\base\BootstrapInterface;
-use yii\base\Event;
+use yii\base\{BootstrapInterface, Event};
 use yii\web\Application;
 
 final class ContactEventHandler implements BootstrapInterface

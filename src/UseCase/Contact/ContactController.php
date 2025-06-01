@@ -2,13 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\UseCase\Contact;
+namespace app\usecase\contact;
 
-use App\UseCase\Contact\Index\IndexAction;
-use App\UseCase\Controller;
+use app\usecase\Controller;
 use yii\captcha\CaptchaAction;
-
-use function array_merge;
+use yii\helpers\ArrayHelper;
 
 final class ContactController extends Controller
 {
@@ -19,7 +17,7 @@ final class ContactController extends Controller
 
     public function actions(): array
     {
-        return array_merge(
+        return ArrayHelper::merge(
             [
                 'index' => [
                     'class' => IndexAction::class,

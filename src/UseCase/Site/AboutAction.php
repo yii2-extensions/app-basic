@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\UseCase\Site\About;
+namespace app\usecase\site;
 
 use yii\base\Action;
 

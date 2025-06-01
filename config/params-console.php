@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\UseCase\Hello\HelloController;
+use app\usecase\hello\HelloController;
 use yii\console\controllers\ServeController;
 
 $rootDir = dirname(__DIR__);

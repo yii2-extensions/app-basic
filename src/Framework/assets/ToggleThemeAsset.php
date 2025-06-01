@@ -2,15 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Framework\Asset;
+namespace app\framework\assets;
 
 use yii\bootstrap5\BootstrapAsset;
-use yii\web\AssetBundle;
-use yii\web\View;
+use yii\web\{AssetBundle, View};
 
-/**
- * Asset bundle for the toggle theme.
- **/
 final class ToggleThemeAsset extends AssetBundle
 {
     public $sourcePath = __DIR__ . '/../resource/js/';

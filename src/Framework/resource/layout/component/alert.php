@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use UIAwesome\Html\{Component\Bootstrap5\Alert, Group\Div};
+use UIAwesome\Html\{Component\Bootstrap5\Alert};
 
 $session = Yii::$app->getSession();
 $flashMessages = $session->getAllFlashes();
@@ -13,5 +13,7 @@ foreach ($flashMessages as $type => $message) {
         $html[] = Alert::widget()->cookbook('dismissible', $type)->content($message);
     }
 }
-
-echo Div::widget()->id('alert_dismissing')->content(...$html);
+?>
+<div id ="alert_dismissing">
+    <?= implode('', $html) ?>
+</div>

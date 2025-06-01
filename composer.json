@@ -14,11 +14,8 @@
     "require": {
         "php": ">=8.2",
         "php-forge/foxy": "^0.1",
-        "sjaakp/yii2-icon": "^1.0",
         "ui-awesome/html": "^0.3",
         "ui-awesome/html-component-bootstrap5": "^1.0@dev",
-        "ui-awesome/html-core":"^0.1",
-        "ui-awesome/html-helper":"^0.2",
         "ui-awesome/html-svg":"^0.2",
         "yii2-extensions/localeurls": "dev-main",
         "yiisoft/config": "^1.4",
@@ -45,12 +42,12 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "app\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\Tests\\": "tests/"
+            "app\\tests\\": "tests/"
         }
     },
     "extra": {

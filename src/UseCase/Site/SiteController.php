@@ -2,10 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\UseCase\Site;
+namespace app\usecase\site;
 
-use App\UseCase\Controller;
-use App\UseCase\Site\About\AboutAction;
+use app\usecase\Controller;
 use yii\web\ErrorAction;
 
 final class SiteController extends Controller

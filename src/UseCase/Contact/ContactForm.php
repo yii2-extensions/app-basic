@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\UseCase\Contact;
+namespace app\usecase\contact;
 
 use Yii;
 use yii\base\Model;

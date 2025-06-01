@@ -2,15 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\UseCase\Contact\Index;
+namespace app\usecase\contact;
 
-use App\UseCase\Contact\ContactEvent;
-use yii\base\Action;
-use yii\base\InvalidConfigException;
+use yii\base\{Action, InvalidConfigException};
 use yii\symfonymailer\Mailer;
-use yii\web\Controller;
-use yii\web\Request;
-use yii\web\Session;
+use yii\web\{Controller, Request, Session};
 
 final class IndexAction extends Action
 {

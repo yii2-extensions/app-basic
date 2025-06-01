@@ -2,45 +2,40 @@
 
 declare(strict_types=1);
 
-use App\Framework\Asset\ToggleThemeAsset;
-use UIAwesome\Html\{
-    Component\Bootstrap5\Toggle,
-    Group\Div,
-    Semantic\Footer,
-    Textual\A,
-    Textual\Span
-};
+use app\framework\assets\ToggleThemeAsset;
+use yii\helpers\Html;
 use yii\web\View;
 
 /**
  * @var View $this
  */
 ToggleThemeAsset::register($this);
-echo Div::widget()
-    ->class('container mt-auto')
-    ->content(
-        Footer::widget()
-            ->class('d-flex justify-content-between align-items-center py-3 my-4 border-top border-secondary-subtle')
-            ->content(
-                Div::widget()->class('col-md-4')
-                    ->content(
-                        A::widget()
-                            ->ariaLabel('Yii Framework')
-                            ->class('mb-3 mb-md-0 text-body-secondary text-decoration-none lh-1')
-                            ->content(
-                                Span::widget()
-                                    ->class('mb-3 mb-md-0 text-body-secondary')
-                                    ->content('&copy;', date('Y'), ' <strong>YiiFramework™.</strong>'),
-                            )
-                            ->href('https://www.yiiframework.com/')
-                            ->title('Yii Framework'),
-                    ),
-                Div::widget()
-                    ->class('col-md-4 justify-content-end d-flex align-items-center')
-                    ->content(
-                        $this->render('component/footer-icons'),
-                        Toggle::Widget()->cookbook('selector-theme')->id('theme-toggle'),
-                        $this->render('component/toggle_language'),
-                    ),
-            ),
-    );
+?>
+
+<div class="container mt-auto">
+    <footer class ="d-flex justify-content-between align-items-center py-3 my-4 border-top border-secondary-subtle">
+        <div class="col-md-4">
+            <?= Html::a(
+                'Yii Framework' .
+                Html::tag(
+                    'span',
+                    '&copy;' . date('Y') . ' <strong>YiiFramework™.</strong>',
+                    [
+                        'class' => 'mb-3 mb-md-0 text-body-secondary',
+                    ],
+                ),
+                'https://www.yiiframework.com/',
+                [
+                    'aria-label' => 'Yii Framework',
+                    'class' => 'mb-3 mb-md-0 text-body-secondary text-decoration-none lh-1',
+                    'title' => 'Yii Framework',
+                ],
+            ) ?>
+        </div>
+        <div class="col-md-4 justify-content-end d-flex align-items-center">
+            <?= $this->render('component/footer-icons') ?>
+            <?= $this->render('component/toggle_theme') ?>
+            <?= $this->render('component/toggle_language') ?>
+        </div>
+    </footer>
+</div>

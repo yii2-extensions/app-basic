@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Framework\EventHandler\ContactEventHandler;
+use app\Framework\events\ContactEventHandler;
 
 return [
     'bootstrap' => [

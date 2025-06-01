@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\UseCase;
+namespace app\usecase;
 
 use yii\filters\VerbFilter;
 use yii\web\ErrorAction;

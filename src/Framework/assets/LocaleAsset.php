@@ -2,13 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Framework\Asset;
+namespace app\framework\assets;
 
 use yii\web\AssetBundle;
 
-/**
- * Asset bundle for locale urls.
- **/
 final class LocaleAsset extends AssetBundle
 {
     public $sourcePath = '@npm/flag-icons/';

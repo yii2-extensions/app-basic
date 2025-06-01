@@ -2,65 +2,68 @@
 
 declare(strict_types=1);
 
-use UIAwesome\Html\{Graphic\Svg, Textual\A};
+use UIAwesome\Html\{Graphic\Svg};
+use yii\helpers\Html;
 
-$linkIconDefinitions = [
-    'class()' => ['d-none d-sm-block d-md-block d-lg-block d-xl-block text-muted hover:text-dark text-decoration-none ms-3'],
-    'rel()' => ['noopener'],
-    'target()' => ['_blank'],
-];
+?>
 
-$svgDefinitions = [
-    'fill()' => ['currentColor'],
-    'height()' => ['32'],
-];
-
-// Github icon
-echo A::widget($linkIconDefinitions)
-    ->class('md:block hidden')
-    ->content(
-        Svg::widget($svgDefinitions)
-            ->filePath(Yii::getAlias('@npm/@fortawesome/fontawesome-free/svgs/brands/github.svg')),
-    )
-    ->href('https://github.com/yiisoft')
-    ->title('GitHub');
-
-// Slack icon
-echo A::widget($linkIconDefinitions)
-    ->class('md:block hidden')
-    ->content(
-        Svg::widget($svgDefinitions)
-            ->filePath(Yii::getAlias('@npm/@fortawesome/fontawesome-free/svgs/brands/slack.svg')),
-    )
-    ->href(
-        'https://join.slack.com/t/yii/shared_invite/enQtMzQ4MDExMDcyNTk2LTc0NDQ2ZTZhNjkzZDgwYjE4YjZlNGQxZjFmZDBjZTU3NjViMDE4ZTMxNDRkZjVlNmM1ZTA1ODVmZGUwY2U3NDA',
-    )
-    ->title('Slack');
-
-// Facebook icon
-echo A::widget($linkIconDefinitions)
-    ->class('md:block hidden')
-    ->content(
-        Svg::widget($svgDefinitions)
-            ->filePath(Yii::getAlias('@npm/@fortawesome/fontawesome-free/svgs/brands/facebook.svg')),
-    )
-    ->href('https://www.facebook.com/groups/yiitalk/')
-    ->title('Facebook');
-
-// Twitter icon
-echo A::widget($linkIconDefinitions)
-    ->content(
-        Svg::widget($svgDefinitions)
-            ->filePath(Yii::getAlias('@npm/@fortawesome/fontawesome-free/svgs/brands/twitter.svg')),
-    )
-    ->href('https://twitter.com/yiiframework')
-    ->title('Twitter');
-
-// Telegram icon
-echo A::widget($linkIconDefinitions)
-    ->content(
-        Svg::widget($svgDefinitions)
-            ->filePath(Yii::getAlias('@npm/@fortawesome/fontawesome-free/svgs/brands/telegram.svg')),
-    )
-    ->href('https://t.me/yii_framework_in_english')
-    ->title('Telegram');
+<?= Html::a(
+    Svg::widget()
+        ->attributes(['height' => '24', 'width' => '24'])
+        ->filePath(Yii::getAlias('@npm/bootstrap-icons/icons/github.svg'))
+        ->render(),
+    'https://github.com/yiisoft',
+    [
+        'class' => 'd-none d-sm-block d-md-block d-lg-block d-xl-block text-muted hover:text-dark text-decoration-none ms-3',
+        'rel' => 'noopener',
+        'title' => 'GitHub',
+    ],
+) ?>
+<?= Html::a(
+    Svg::widget()
+        ->attributes(['height' => '24', 'width' => '24'])
+        ->filePath(Yii::getAlias('@npm/bootstrap-icons/icons/slack.svg'))
+        ->render(),
+    'https://join.slack.com/t/yii/shared_invite/enQtMzQ4MDExMDcyNTk2LTc0NDQ2ZTZhNjkzZDgwYjE4YjZlNGQxZjFmZDBjZTU3NjViMDE4ZTMxNDRkZjVlNmM1ZTA1ODVmZGUwY2U3NDA',
+    [
+        'class' => 'd-none d-sm-block d-md-block d-lg-block d-xl-block text-muted hover:text-dark text-decoration-none ms-3',
+        'rel' => 'noopener',
+        'title' => 'Slack',
+    ],
+) ?>
+<?= Html::a(
+    Svg::widget()
+        ->attributes(['height' => '24', 'width' => '24'])
+        ->filePath(Yii::getAlias('@npm/bootstrap-icons/icons/facebook.svg'))
+        ->render(),
+    'https://www.facebook.com/groups/yiitalk/',
+    [
+        'class' => 'd-none d-sm-block d-md-block d-lg-block d-xl-block text-muted hover:text-dark text-decoration-none ms-3',
+        'rel' => 'noopener',
+        'title' => 'Facebook',
+    ],
+) ?>
+<?= Html::a(
+    Svg::widget()
+        ->attributes(['height' => '24', 'width' => '24'])
+        ->filePath(Yii::getAlias('@npm/bootstrap-icons/icons/twitter.svg'))
+        ->render(),
+    'https://twitter.com/yiiframework',
+    [
+        'class' => 'd-none d-sm-block d-md-block d-lg-block d-xl-block text-muted hover:text-dark text-decoration-none ms-3',
+        'rel' => 'noopener',
+        'title' => 'Twitter',
+    ],
+) ?>
+<?= Html::a(
+    Svg::widget()
+        ->attributes(['height' => '24', 'width' => '24'])
+        ->filePath(Yii::getAlias('@npm/bootstrap-icons/icons/telegram.svg'))
+        ->render(),
+    'https://t.me/yii_framework_in_english',
+    [
+        'class' => 'd-none d-sm-block d-md-block d-lg-block d-xl-block text-muted hover:text-dark text-decoration-none ms-3',
+        'rel' => 'noopener',
+        'title' => 'Telegram',
+    ],
+) ?>

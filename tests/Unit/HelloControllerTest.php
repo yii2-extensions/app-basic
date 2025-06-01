@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Tests\Unit;
 
-use App\UseCase\Hello\HelloController;
+use app\usecase\hello\HelloController;
 use Codeception\Test\Unit;
 use Yii;
 
