@@ -18,7 +18,7 @@ $tabInput = 1;
 <div class="container mt-3">
     <div class="row align-items-center justify-content-center">
         <div class="col-md-5 col-sm-12">
-            <div class="bg-body-tertiary shadow border-0 rounded border-light p-4 p-lg-5 w-100 fmxw-500">
+            <div class="bg-body-tertiary shadow border-0 rounded border-light p-4 p-lg-4 w-100 fmxw-500">
                 <h1 class="fw-bold"><?= Html::encode($this->title) ?></h1>
                 <p><?= Yii::t('app.basic', 'Please fill out the following form to contact us.') ?></p>
                 <hr class="mb-3">
@@ -86,7 +86,7 @@ $tabInput = 1;
             </div>
         </div>
     </div>
-    <p class="text-center mt-5">
+    <div class="text-center">
         <?php if ($session->hasFlash('contactFormSubmitted')) : ?>
             <hr>
             <p class="text-success">
@@ -115,5 +115,5 @@ $tabInput = 1;
                 <?php endif ?>
             </p>
         <?php endif ?>
-    </p>
+    </div>
 </div>
