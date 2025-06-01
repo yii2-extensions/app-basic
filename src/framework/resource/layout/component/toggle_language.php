@@ -8,11 +8,11 @@ use yii\helpers\Html;
 use yii\{helpers\Url, web\View};
 
 /**
- * @var string $languageLabel
  * @var View $this
  */
 LocaleAsset::register($this);
 
+$languageLabel = 'site.selector.language.en';
 $items = [];
 
 $locales = Yii::$app->params['app.localeurls.languages'] ?? [];
@@ -29,7 +29,7 @@ foreach ($locales as $key => $value) {
     }
 
     $items[] = Html::a(
-        '<i class="fi fi-' . $icon . ' fis me-2"></i> ' . Yii::t('app.basic', "site.selector.language.$key"),
+        '<i class="fi fi-' . $icon . ' fis me-2"></i> ' . Yii::t('app.basic', $languageLabel),
         Url::current(['language' => $key]),
         [
             'class' => 'dropdown-item d-flex align-items-center' . (Yii::$app->language === $value ? ' active' : ''),
