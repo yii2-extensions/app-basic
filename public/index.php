@@ -7,14 +7,8 @@ use Yiisoft\Config\Config;
 use Yiisoft\Config\ConfigPaths;
 use Yiisoft\Config\Modifier\RecursiveMerge;
 
-// comment out the following two lines when deployed to production
 defined('YII_DEBUG') || define('YII_DEBUG', false);
-
-if (getenv('YII_ENV')) {
-    defined('YII_ENV') || define('YII_ENV', getenv('YII_ENV'));
-} else {
-    defined('YII_ENV') || define('YII_ENV', 'prod');
-}
+defined('YII_ENV') || define('YII_ENV', 'prod');
 
 if (getenv('YII_C3')) {
     $c3 = dirname(__DIR__) . '/c3.php';

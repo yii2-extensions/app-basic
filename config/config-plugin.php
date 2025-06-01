@@ -11,10 +11,6 @@ return [
         ],
         'web' => [
             '$common',
-            '$yii2-bootstrap5',
-            '$yii2-debug',
-            '$yii2-gii',
-            '$yii2-localeurls',
             'web/*.php',
         ],
         'params' => 'params.php',

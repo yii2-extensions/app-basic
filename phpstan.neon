@@ -1,6 +1,3 @@
-includes:
-	- vendor/yii2-extensions/phpstan/extension.neon
-
 parameters:
     bootstrapFiles:
         - tests/_bootstrap.php
@@ -20,6 +17,5 @@ parameters:
     scanFiles:
         - vendor/yiisoft/yii2/Yii.php
 
-    yii2:
-        config_path: %currentWorkingDirectory%/phpstan-yii-config.php
-
+    excludePaths:
+        - vendor/**

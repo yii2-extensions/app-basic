@@ -6,8 +6,11 @@
 </p>
 
 <p align="center">
-    <a href="https://www.php.net/releases/8.1/en.php" target="_blank">
-        <img src="https://img.shields.io/badge/PHP-%3E%3D8.1-787CB5" alt="php-version">
+    <a href="https://www.php.net/releases/8.2/en.php" target="_blank">
+        <img src="https://img.shields.io/badge/PHP-%3E%3D8.2-787CB5" alt="php-version">
+    </a>
+    <a href="https://github.com/yiisoft/yii2/tree/22.0" target="_blank">
+        <img src="https://img.shields.io/badge/Yii2%20-22-blue" alt="Yii2 version">
     </a>
     <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/build.yml" target="_blank">
         <img src="https://github.com/yii2-extensions/app-basic/actions/workflows/build.yml/badge.svg" alt="PHPUnit">
@@ -17,12 +20,6 @@
     </a>
     <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml" target="_blank">
         <img src="https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml/badge.svg" alt="PHPStan">
-    </a>
-    <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml" target="_blank">
-        <img src="https://img.shields.io/badge/PHPStan%20level-5-blue" alt="PHPStan level">
-    </a>    
-    <a href="https://github.styleci.io/repos/698621511?branch=main" target="_blank">
-        <img src="https://github.styleci.io/repos/698621511/shield?branch=main" alt="Code style">
     </a>        
 </p>
 
@@ -150,6 +147,11 @@ Root directory
 ./yii message config/messages.php
 ```
 
+## Quality code
+
+[![phpstan-level](https://img.shields.io/badge/PHPStan%20level-5-blue)](https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml)
+[![StyleCI](https://github.styleci.io/repos/698621511/shield?branch=main)](https://github.styleci.io/repos/698621511?branch=main)
+
 ## Tests
 
 ~~~
@@ -159,11 +161,6 @@ $ composer update --prefer-dist -vvv
 // run all tests with code coverage
 $ vendor/bin/codecept run --coverage-xml
 ~~~
-
-## Support versions Yii2
-
-[![Yii20](https://img.shields.io/badge/Yii2%20version-2.0-blue)](https://github.com/yiisoft/yii2/tree/2.0.49.3)
-[![Yii22](https://img.shields.io/badge/Yii2%20version-2.2-blue)](https://github.com/yiisoft/yii2/tree/2.2)
 
 ## Our social networks
 

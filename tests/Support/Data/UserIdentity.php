@@ -29,7 +29,7 @@ final class UserIdentity extends Component implements IdentityInterface
 
     public static function findIdentity($id): IdentityInterface|null
     {
-        if (in_array($id, ['user1', 'user2', 'user3'])) {
+        if (in_array($id, ['user1', 'user2', 'user3'], true)) {
             $identitiy = new self();
             $identitiy->id = $id;
 

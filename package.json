@@ -1,0 +1,6 @@
+{
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^6.7.2",
+        "flag-icons": "^7.5.0"
+    }
+}

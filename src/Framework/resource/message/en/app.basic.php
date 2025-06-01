@@ -43,7 +43,7 @@ return [
     'Thank you for contacting us. We will respond to you as soon as possible.' => '',
     'This is the About page. You may modify the following file to customize its content.' => '',
     'Web Application' => '',
-    'Yii v.2.2' => '',
+    'Yii v.22' => '',
     'site.selector.language.de' => 'German',
     'site.selector.language.en' => 'English',
     'site.selector.language.es' => 'Spanish',

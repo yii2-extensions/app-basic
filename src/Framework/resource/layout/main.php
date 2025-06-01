@@ -26,7 +26,7 @@ AppAsset::register($this);
                         <?= Breadcrumbs::widget(
                             [
                                 'links' => $this->params['breadcrumbs'] ?? [],
-                            ]
+                            ],
                         ) ?>
                     <?= Header::end() ?>
                     <?= $content ?>

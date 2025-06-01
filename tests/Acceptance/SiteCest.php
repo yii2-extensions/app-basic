@@ -16,7 +16,7 @@ final class SiteCest
         $I->wantTo('ensure that Home page works.');
         $I->expectTo('see page index.');
         $I->see('Web Application');
-        $I->see('Yii v.2.2');
+        $I->see('Yii v.22');
         $I->see('English');
     }
 }

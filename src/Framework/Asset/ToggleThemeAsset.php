@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Framework\Asset;
 
-use Yii2\Asset\BootstrapAsset;
+use yii\bootstrap5\BootstrapAsset;
 use yii\web\AssetBundle;
 use yii\web\View;
 

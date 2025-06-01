@@ -26,10 +26,10 @@ final class ContactEventHandler implements BootstrapInterface
                     'success',
                     Yii::t(
                         'app.basic',
-                        'Thank you for contacting us. We will respond to you as soon as possible.'
-                    )
+                        'Thank you for contacting us. We will respond to you as soon as possible.',
+                    ),
                 );
-            }
+            },
         );
     }
 }

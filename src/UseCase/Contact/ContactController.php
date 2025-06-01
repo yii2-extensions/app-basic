@@ -4,8 +4,11 @@ declare(strict_types=1);
 
 namespace App\UseCase\Contact;
 
+use App\UseCase\Contact\Index\IndexAction;
 use App\UseCase\Controller;
 use yii\captcha\CaptchaAction;
+
+use function array_merge;
 
 final class ContactController extends Controller
 {
@@ -19,7 +22,7 @@ final class ContactController extends Controller
         return array_merge(
             [
                 'index' => [
-                    'class' => Index\IndexAction::class,
+                    'class' => IndexAction::class,
                     'formModelClass' => $this->formModelClass,
                 ],
                 'captcha' => [

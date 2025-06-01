@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
+use yii2\extensions\localeurls\UrlLanguageManager;
 use yii\i18n\PhpMessageSource;
-use yii\web\UrlManager;
 
 /**
  * @var array $params
@@ -30,7 +30,8 @@ return [
             'enableCsrfValidation' => $params['web.request.enableCsrfValidation'],
         ],
         'urlManager' => [
-            'class' => $params['yii2.urlManager.class'] ?? UrlManager::class,
+            'class' => UrlLanguageManager::class,
+            'languages' => $params['yii2.localeurls.languages'],
             'enablePrettyUrl' => $params['web.urlManager.enablePrettyUrl'],
             'showScriptName' => $params['web.urlManager.showScriptName'],
         ],

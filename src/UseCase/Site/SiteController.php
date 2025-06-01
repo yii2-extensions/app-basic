@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\UseCase\Site;
 
 use App\UseCase\Controller;
+use App\UseCase\Site\About\AboutAction;
 use yii\web\ErrorAction;
 
 final class SiteController extends Controller
@@ -16,7 +17,7 @@ final class SiteController extends Controller
                 'class' => ErrorAction::class,
             ],
             'about' => [
-                'class' => About\AboutAction::class,
+                'class' => AboutAction::class,
             ],
         ];
     }
