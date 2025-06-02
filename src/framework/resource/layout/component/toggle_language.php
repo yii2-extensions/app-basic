@@ -17,17 +17,26 @@ $items = [];
 $locales = Yii::$app->params['app.localeurls.languages'] ?? [];
 
 foreach ($locales as $key => $value) {
+    $classes = [
+        'dropdown-item',
+        'd-flex',
+        'align-items-center',
+    ];
     $icon = match ($key) {
         'en' => 'us',
         'zh' => 'cn',
         default => $key,
     };
 
+    if (Yii::$app->language === $value) {
+        $classes[] = 'active';
+    }
+
     $items[] = Html::a(
-        '<i class="fi fi-' . $icon . ' fis me-2"></i> ' . Yii::t('app.basic', "site.selector.language.$key"),
+        '<i class="fi fi-' . $icon . ' fis me-2"></i> ' . Yii::t('app.basic', "site.selector.language.{$key}"),
         Url::current(['language' => $key]),
         [
-            'class' => 'dropdown-item d-flex align-items-center ' . (Yii::$app->language === $value ? ' active' : ''),
+            'class' => implode(' ', $classes),
         ],
     );
 }
