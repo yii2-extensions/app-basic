@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace app\usecase\contact;
 
-use yii\base\{Action};
+use yii\base\Action;
 use yii\symfonymailer\Mailer;
 use yii\web\{Controller, Request, Session};
 
