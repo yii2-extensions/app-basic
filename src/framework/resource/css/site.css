@@ -33,19 +33,19 @@ html, body {
 }
 
 [data-bs-theme=light] .contact-title {
-    color: text-dark;
+    color: var(--bs-body-color);
 }
 
 [data-bs-theme=dark] .contact-title {
-    color: text-light;
+    color: var(--bs-light);
 }
 
 [data-bs-theme=light] .contact-subtitle {
-    color: text-dark;
+    color: var(--bs-body-color);
 }
 
 [data-bs-theme=dark] .contact-subtitle {
-    color: text-light;
+    color: var(--bs-light);
 }
 
 [data-bs-theme=dark] #contactform-verifycode-image {
