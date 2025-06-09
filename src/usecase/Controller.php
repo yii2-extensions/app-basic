@@ -9,9 +9,6 @@ use yii\web\ErrorAction;
 
 class Controller extends \yii\web\Controller
 {
-    /**
-     * @var string the default layout for the controller view.
-     */
     public $layout = '@resource/layout/main';
 
     /**
@@ -26,9 +23,6 @@ class Controller extends \yii\web\Controller
         ];
     }
 
-    /**
-     * @phpstan-return array<array-key, array<array-key, mixed>>
-     */
     public function behaviors(): array
     {
         return [

@@ -7,12 +7,11 @@ namespace app\framework\event;
 use app\usecase\contact\{ContactEvent, IndexAction};
 use Yii;
 use yii\base\{BootstrapInterface, Event};
-use yii\web\Application;
 
 final class ContactEventHandler implements BootstrapInterface
 {
     /**
-     * @param Application $app
+     * @param \yii\base\Application $app
      */
     public function bootstrap($app): void
     {
