@@ -1,13 +1,8 @@
 /**
- * site.css
- *
  * Css web application basic
  */
 
-/**********************************************************************************************************************
- * MAIN                                                                                                               *
- **********************************************************************************************************************/
- :root {
+:root {
     --input-padding-x: .75rem;
     --input-padding-y: .75rem;
 }
@@ -27,7 +22,7 @@ html, body {
 }
 
 .breadcrumb > li + li:before {
-    color: #7c8695;
+    color: var(--bs-tertiary-color);
     content: "/\00a0";
     padding: 0 5px;
 }
@@ -49,7 +44,7 @@ html, body {
 }
 
 [data-bs-theme=dark] #contactform-verifycode-image {
-    background-color: #ced4da;
+    background-color: var(--bs-secondary-color);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
