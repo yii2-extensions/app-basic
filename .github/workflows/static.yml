@@ -18,7 +18,7 @@ on:
 name: static analysis
 
 jobs:
-  psalm:
+  phpstan:
     uses: php-forge/actions/.github/workflows/phpstan.yml@main
     secrets:
       AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
