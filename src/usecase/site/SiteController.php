@@ -9,6 +9,9 @@ use yii\web\ErrorAction;
 
 final class SiteController extends Controller
 {
+    /**
+     * @phpstan-return array<array-key, array<array-key, mixed>>
+     */
     public function actions(): array
     {
         return [

@@ -20,13 +20,16 @@ final class ContactEventHandler implements BootstrapInterface
             IndexAction::class,
             ContactEvent::EVENT_AFTER_SEND,
             static function () use ($app): void {
-                $app->session->setFlash(
-                    'success',
-                    Yii::t(
-                        'app.basic',
-                        'Thank you for contacting us. We will respond to you as soon as possible.',
-                    ),
+                $title = Yii::t(
+                    'app.basic',
+                    'Message sent successfully!.',
                 );
+                $message = Yii::t(
+                    'app.basic',
+                    'Thank you for contacting us. We will respond to you as soon as possible.',
+                );
+
+                $app->session->setFlash('success', "{$title}<br>{$message}");
             },
         );
     }

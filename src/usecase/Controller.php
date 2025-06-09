@@ -14,6 +14,9 @@ class Controller extends \yii\web\Controller
      */
     public $layout = '@resource/layout/main';
 
+    /**
+     * @phpstan-return array<array-key, array<array-key, mixed>>
+     */
     public function actions(): array
     {
         return [
@@ -23,6 +26,9 @@ class Controller extends \yii\web\Controller
         ];
     }
 
+    /**
+     * @phpstan-return array<array-key, array<array-key, mixed>>
+     */
     public function behaviors(): array
     {
         return [

@@ -26,11 +26,30 @@ html, body {
 	height: 100vh;
 }
 
-/**********************************************************************************************************************
- * BREADCRUMBS                                                                                                        *
- **********************************************************************************************************************/
 .breadcrumb > li + li:before {
     color: #7c8695;
     content: "/\00a0";
     padding: 0 5px;
+}
+
+[data-bs-theme=light] .contact-title {
+    color: text-dark;
+}
+
+[data-bs-theme=dark] .contact-title {
+    color: text-light;
+}
+
+[data-bs-theme=light] .contact-subtitle {
+    color: text-dark;
+}
+
+[data-bs-theme=dark] .contact-subtitle {
+    color: text-light;
+}
+
+[data-bs-theme=dark] #contactform-verifycode-image {
+    background-color: #ced4da;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }

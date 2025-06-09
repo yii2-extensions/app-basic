@@ -148,7 +148,7 @@ Root directory
 
 ## Quality code
 
-[![phpstan-level](https://img.shields.io/badge/PHPStan%20level-5-blue)](https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml)
+[![phpstan-level](https://img.shields.io/badge/PHPStan%20level-9-blue)](https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml)
 [![StyleCI](https://github.styleci.io/repos/698621511/shield?branch=main)](https://github.styleci.io/repos/698621511?branch=main)
 
 ## Tests

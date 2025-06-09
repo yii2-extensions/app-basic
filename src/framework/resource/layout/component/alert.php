@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use UIAwesome\Html\{Component\Bootstrap5\Alert};
 
-$session = Yii::$app->getSession();
+$session = Yii::$app->session;
 $flashMessages = $session->getAllFlashes();
 $html = [];
 
