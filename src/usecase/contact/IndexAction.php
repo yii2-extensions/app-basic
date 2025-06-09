@@ -4,18 +4,20 @@ declare(strict_types=1);
 
 namespace app\usecase\contact;
 
-use yii\base\{Action, InvalidConfigException};
+use yii\base\Action;
 use yii\symfonymailer\Mailer;
 use yii\web\{Controller, Request, Session};
 
 final class IndexAction extends Action
 {
-    public string $formModelClass = '';
-
+    /**
+     * @phpstan-param array<array-key, mixed> $config
+     */
     public function __construct(
         string $id,
         Controller $controller,
         private readonly Mailer $mailer,
+        private readonly Request $request,
         private readonly Session $session,
         array $config = [],
     ) {
@@ -24,22 +26,13 @@ final class IndexAction extends Action
 
     public function run(): string
     {
-        if ($this->formModelClass === '') {
-            throw new InvalidConfigException('The "formModelClass" property must be set.');
-        }
+        $contactForm = new ContactForm();
 
-        $contactForm = new $this->formModelClass();
-        $contactEvent = new ContactEvent();
+        $post = $this->request->post();
 
-        if (
-            $this->controller->request instanceof Request &&
-            $contactForm->load($this->controller->request->post()) &&
-            $contactForm->validate()
-        ) {
+        if (is_array($post) && $contactForm->load($post) && $contactForm->validate()) {
             if ($contactForm->sendContact($this->mailer, $this->controller->module->params)) {
-                $this->session->setFlash('contactFormSubmitted');
-
-                $this->trigger(ContactEvent::EVENT_AFTER_SEND, $contactEvent);
+                $this->trigger(ContactEvent::EVENT_AFTER_SEND, new ContactEvent());
             }
         }
 

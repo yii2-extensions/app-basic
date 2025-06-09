@@ -1,13 +1,8 @@
 /**
- * site.css
- *
  * Css web application basic
  */
 
-/**********************************************************************************************************************
- * MAIN                                                                                                               *
- **********************************************************************************************************************/
- :root {
+:root {
     --input-padding-x: .75rem;
     --input-padding-y: .75rem;
 }
@@ -26,11 +21,30 @@ html, body {
 	height: 100vh;
 }
 
-/**********************************************************************************************************************
- * BREADCRUMBS                                                                                                        *
- **********************************************************************************************************************/
 .breadcrumb > li + li:before {
-    color: #7c8695;
+    color: var(--bs-tertiary-color);
     content: "/\00a0";
     padding: 0 5px;
+}
+
+[data-bs-theme=light] .contact-title {
+    color: var(--bs-body-color);
+}
+
+[data-bs-theme=dark] .contact-title {
+    color: var(--bs-light);
+}
+
+[data-bs-theme=light] .contact-subtitle {
+    color: var(--bs-body-color);
+}
+
+[data-bs-theme=dark] .contact-subtitle {
+    color: var(--bs-light);
+}
+
+[data-bs-theme=dark] #contactform-verifycode-image {
+    background-color: var(--bs-secondary-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }

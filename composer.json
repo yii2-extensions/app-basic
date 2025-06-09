@@ -12,12 +12,12 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=8.2",
+        "php": ">=8.1",
         "php-forge/foxy": "^0.1",
         "ui-awesome/html": "^0.3",
         "ui-awesome/html-component-bootstrap5": "^1.0@dev",
         "ui-awesome/html-svg":"^0.2",
-        "yii2-extensions/localeurls": "dev-main",
+        "yii2-extensions/localeurls": "^0.1.0",
         "yiisoft/config": "^1.4",
         "yiisoft/yii2": "22.0.x-dev",
         "yiisoft/yii2-bootstrap5": "22.x-dev",
@@ -32,11 +32,13 @@
         "codeception/module-yii2": "^1.1",
         "codeception/verify": "^3.0",
         "maglnet/composer-require-checker": "^4.6",
-        "phpstan/phpstan": "^2.1",
+        "phpstan/extension-installer": "^1.4",
+        "phpstan/phpstan-strict-rules": "^2.0.3",
         "rector/rector": "^2.0",
         "symfony/browser-kit": "^6.3",
         "symfony/process": "^6.3",
         "symplify/easy-coding-standard": "^12.3",
+        "yii2-extensions/phpstan": "^0.2.3",
         "yiisoft/yii2-debug": "22.x-dev",
         "yiisoft/yii2-gii": "22.x-dev"
     },
@@ -62,7 +64,8 @@
             "yiisoft/yii2-composer": true,
             "composer/installers": true,
             "yiisoft/config": true,
-            "php-forge/foxy": true
+            "php-forge/foxy": true,
+            "phpstan/extension-installer": true
         }
     },
     "scripts": {
