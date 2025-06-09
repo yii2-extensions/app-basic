@@ -32,8 +32,6 @@ final class IndexAction extends Action
 
         if (is_array($post) && $contactForm->load($post) && $contactForm->validate()) {
             if ($contactForm->sendContact($this->mailer, $this->controller->module->params)) {
-                $this->session->setFlash('contactFormSubmitted');
-
                 $this->trigger(ContactEvent::EVENT_AFTER_SEND, new ContactEvent());
             }
         }

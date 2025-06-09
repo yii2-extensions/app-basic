@@ -10,9 +10,6 @@ use yii\base\{BootstrapInterface, Event};
 
 final class ContactEventHandler implements BootstrapInterface
 {
-    /**
-     * @param \yii\base\Application $app
-     */
     public function bootstrap($app): void
     {
         Event::on(
