@@ -7,7 +7,6 @@ namespace app\usecase\contact;
 use Yii;
 use yii\base\Model;
 use yii\captcha\CaptchaValidator;
-use yii\mail\MailerInterface;
 
 final class ContactForm extends Model
 {
@@ -42,19 +41,5 @@ final class ContactForm extends Model
             // verifyCode needs to be entered correctly
             ['verifyCode', CaptchaValidator::class, 'captchaAction' => '/contact/captcha', 'message' => ''],
         ];
-    }
-
-    /**
-     * @phpstan-param array<array-key, mixed> $params
-     */
-    public function sendContact(MailerInterface $mailer, array $params): bool
-    {
-        return $mailer->compose()
-            ->setTo($this->email)
-            ->setFrom([$params['app.mailer.sender'] => $params['app.mailer.sender.name']])
-            ->setReplyTo([$this->email => $this->name])
-            ->setSubject($this->subject)
-            ->setTextBody($this->body)
-            ->send();
     }
 }

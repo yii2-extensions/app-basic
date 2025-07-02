@@ -5,7 +5,8 @@ declare(strict_types=1);
 use app\framework\asset\LocaleAsset;
 use UIAwesome\Html\Graphic\Svg;
 use yii\helpers\Html;
-use yii\{helpers\Url, web\View};
+use yii\helpers\Url;
+use yii\web\View;
 
 /**
  * @var View $this
@@ -14,7 +15,7 @@ LocaleAsset::register($this);
 
 $items = [];
 
-$locales = Yii::$app->params['app.localeurls.languages'] ?? [];
+$locales = Yii::$app->urlManager->languages;
 
 foreach ($locales as $key => $value) {
     $classes = [

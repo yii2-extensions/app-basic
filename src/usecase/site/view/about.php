@@ -3,10 +3,12 @@
 declare(strict_types=1);
 
 use yii\helpers\Html;
-use yii\web\View;
 
-/** @var View $this */
+/**
+ * @var yii\web\View $this
+ */
 $this->title = Yii::t('app.basic', 'About');
+$this->params['breadcrumbs'] = [$this->title];
 ?>
 <div class="text-center">
     <h1 class="mb-40 display-4 fw-bold"><?= Html::encode($this->title) ?></h1>

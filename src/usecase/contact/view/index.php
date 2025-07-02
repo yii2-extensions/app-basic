@@ -2,17 +2,16 @@
 
 declare(strict_types=1);
 
-use app\usecase\contact\ContactForm;
-use yii\{bootstrap5\ActiveForm, captcha\Captcha, symfonymailer\Mailer, web\Session, web\View};
+use yii\bootstrap5\ActiveForm;
+use yii\captcha\Captcha;
 use yii\helpers\Html;
 
 /**
- * @var ContactForm $model
- * @var Mailer $mailer
- * @var Session $session
- * @var View $this
+ * @var app\usecase\contact\ContactForm $model
+ * @var yii\web\View $this
  */
 $this->title = Yii::t('app.basic', 'Contact');
+$this->params['breadcrumbs'] = [$this->title];
 $tabInput = 1;
 ?>
 
@@ -22,7 +21,7 @@ $tabInput = 1;
             <h1 class="display-5 fw-bold mb-1 contact-title">
                 <?= Html::encode($this->title) ?>
             </h1>
-            <p class="lead conctact-subtitle">
+            <p class="lead contact-subtitle">
                 <?= Yii::t('app.basic', 'Please fill out the following form to contact us.') ?>
             </p>
             <hr class="w-25 mx-auto">
@@ -41,91 +40,113 @@ $tabInput = 1;
                         ],
                     ) ?>
 
-                    <div class="row g-3 mb-2">
-                        <div class="col-md-6">
-                            <?= $form->field($model, 'name')->textInput(
-                                [
-                                    'autofocus' => true,
-                                    'class' => 'form-control form-control-lg',
-                                    'placeholder' => Yii::t('app.basic', 'Your full name'),
-                                    'required' => true,
-                                    'tabindex' => $tabInput++,
-                                ],
-                            ) ?>
-                        </div>
-                        <div class="col-md-6">
-                            <?= $form->field($model, 'email')->textInput(
-                                [
-                                    'class' => 'form-control form-control-lg',
-                                    'placeholder' => Yii::t('app.basic', 'your.email@example.com'),
-                                    'required' => true,
-                                    'tabindex' => $tabInput++,
-                                ],
-                            ) ?>
-                        </div>
-                    </div>
-
-                    <!-- Subject -->
-                    <div class="mb-2">
-                        <?= $form->field($model, 'subject')->textInput(
-                            [
-                                'class' => 'form-control form-control-lg',
-                                'placeholder' => Yii::t('app.basic', 'What is this about?'),
-                                'required' => true,
-                                'tabindex' => $tabInput++,
-                            ],
-                        ) ?>
-                    </div>
-
-                    <!-- Message body -->
-                    <div class="mb-3">
-                        <?= $form->field($model, 'body')->textarea(
-                            [
-                                'class' => 'form-control',
-                                'rows' => 6,
-                                'placeholder' => Yii::t('app.basic', 'Tell us more about your inquiry...'),
-                                'required' => true,
-                                'style' => 'resize: vertical; min-height: 150px;',
-                                'tabindex' => $tabInput++,
-                            ],
-                        ) ?>
-                    </div>
-
-                    <!-- Captcha -->
-                    <div class="mb-4">
-                        <div class="text-center mb-3">
-                            <h6 class="fw-semibold text-muted mb-3">Security Verification</h6>
-                        </div>
-                        <div class="card bg-body-tertiary border border-opacity-25">
-                            <div class="card-body text-center py-2">
-                                <?= $form->field($model, 'verifyCode', [
-                                    'template' => '{input}{error}',
-                                    'options' => ['class' => 'mb-3'],
-                                ])->widget(Captcha::class, [
-                                    'captchaAction' => 'contact/captcha',
-                                    'template' => '<div class="d-flex align-items-center justify-content-center mb-3"><span class="me-3 fw-semibold text-body">Captcha Code:</span>{image}</div>{input}',
-                                    'options' => [
-                                        'class' => 'form-control form-control-lg text-center',
-                                        'placeholder' => Yii::t('app.basic', 'Enter the code above'),
+                        <!-- Name and Email Fields -->
+                        <div class="row g-3 mb-2">
+                            <div class="col-md-6">
+                                <?= $form->field($model, 'name')->textInput(
+                                    [
+                                        'autofocus' => true,
+                                        'class' => 'form-control form-control-lg',
+                                        'placeholder' => Yii::t(
+                                            'app.basic',
+                                            'Your full name',
+                                        ),
                                         'required' => true,
                                         'tabindex' => $tabInput++,
                                     ],
-                                ]) ?>
+                                ) ?>
+                            </div>
+                            <div class="col-md-6">
+                                <?= $form->field($model, 'email')->textInput(
+                                    [
+                                        'class' => 'form-control form-control-lg',
+                                        'placeholder' => Yii::t(
+                                            'app.basic',
+                                            'your.email@example.com',
+                                        ),
+                                        'required' => true,
+                                        'tabindex' => $tabInput++,
+                                    ],
+                                ) ?>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Submit button -->
-                    <div class="d-grid">
-                        <?= Html::submitButton(
-                            Yii::t('app.basic', 'Contact us'),
-                            [
-                                'class' => 'btn btn-primary btn-lg py fw-semibold rounded-3',
-                                'name' => 'contact-button',
-                                'tabindex' => $tabInput++,
-                            ],
-                        ) ?>
-                    </div>
+                        <!-- Subject -->
+                        <div class="mb-2">
+                            <?= $form->field($model, 'subject')->textInput(
+                                [
+                                    'class' => 'form-control form-control-lg',
+                                    'placeholder' => Yii::t('app.basic', 'What is this about?'),
+                                    'required' => true,
+                                    'tabindex' => $tabInput++,
+                                ],
+                            ) ?>
+                        </div>
+
+                        <!-- Message body -->
+                        <div class="mb-3">
+                            <?= $form->field($model, 'body')->textarea(
+                                [
+                                    'class' => 'form-control',
+                                    'rows' => 6,
+                                    'placeholder' => Yii::t(
+                                        'app.basic',
+                                        'Tell us more about your inquiry...',
+                                    ),
+                                    'required' => true,
+                                    'style' => 'resize: vertical; min-height: 150px;',
+                                    'tabindex' => $tabInput++,
+                                ],
+                            ) ?>
+                        </div>
+
+                        <!-- Captcha -->
+                        <div class="mb-3">
+                            <div class="text-center mb-3">
+                                <h6 class="fw-semibold text-muted mb-3">Security Verification</h6>
+                            </div>
+                            <div class="card bg-body-tertiary border border-opacity-25">
+                                <div class="card-body text-center py-2">
+                                    <?= $form->field(
+                                        $model,
+                                        'verifyCode',
+                                        [
+                                            'template' => '{input}{error}',
+                                            'options' => [
+                                                'class' => 'mb-2',
+                                            ],
+                                        ]
+                                    )->widget(
+                                        Captcha::class,
+                                        [
+                                            'captchaAction' => 'contact/captcha',
+                                            'template' => '<div class="d-flex align-items-center justify-content-center mb-3"><span class="me-3 fw-semibold text-body">Captcha Code:</span>{image}</div>{input}',
+                                            'options' => [
+                                                'class' => 'form-control form-control-lg text-center',
+                                                'placeholder' => Yii::t(
+                                                    'app.basic',
+                                                    'Enter the code above',
+                                                ),
+                                                'required' => true,
+                                                'tabindex' => $tabInput++,
+                                            ],
+                                        ]
+                                    ) ?>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit button -->
+                        <div class="d-grid">
+                            <?= Html::submitButton(
+                                Yii::t('app.basic', 'Contact us'),
+                                [
+                                    'class' => 'btn btn-primary btn-lg py fw-semibold rounded-3',
+                                    'name' => 'contact-button',
+                                    'tabindex' => $tabInput++,
+                                ],
+                            ) ?>
+                        </div>
 
                     <?php ActiveForm::end() ?>
                 </div>
@@ -179,11 +200,11 @@ $tabInput = 1;
                         <ul class="list-unstyled mb-0 small">
                             <li class="d-flex justify-content-between py-1 border-bottom border-opacity-25">
                                 <span class="text-body">Monday - Friday</span>
-                                <span class="text-muted fw-semibold">9:00 AM - 6:00 PM</span>
+                                <span class="text-muted fw-semibold">9:00 AM to 6:00 PM</span>
                             </li>
                             <li class="d-flex justify-content-between py-1 border-bottom border-opacity-25">
                                 <span class="text-body">Saturday</span>
-                                <span class="text-muted fw-semibold">10:00 AM - 4:00 PM</span>
+                                <span class="text-muted fw-semibold">10:00 AM to 4:00 PM</span>
                             </li>
                             <li class="d-flex justify-content-between py-1">
                                 <span class="text-body">Sunday</span>

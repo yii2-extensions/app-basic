@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Acceptance;
+namespace app\tests\acceptance;
 
-use App\Tests\Support\AcceptanceTester;
+use app\tests\support\AcceptanceTester;
 
 final class AboutCest
 {
@@ -14,6 +14,7 @@ final class AboutCest
         $I->amOnRoute('site/about');
 
         $I->wantTo('ensure that About page works.');
+
         $I->expectTo('see page index.');
         $I->see('About');
         $I->see('This is the About page.');

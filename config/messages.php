@@ -5,7 +5,7 @@ declare(strict_types=1);
 /**
  * This is a configuration file for the [[\yii\console\controllers\MessageController]] console command.
  *
- * In order to update translations, run the following console command:
+ * To update translations, run the following console command:
  * php yii message messages/config.php
  *
  * @see yii\console\controllers\MessageController
@@ -19,7 +19,7 @@ return [
     'languages' => ['de', 'es', 'fr', 'pt', 'ru', 'zh'],
     // string, the name of the function for translating messages.
     // Defaults to 'Yii::t'. This is used as a mark to find the messages to be
-    // translated. You may use a string for single function name or an array for
+    // translated. You may use a string for a single function name or an array for
     // multiple function names.
     'translator' => ['Yii::t'],
     // boolean, whether to sort messages by keys when merging new messages
@@ -33,7 +33,7 @@ return [
     // If empty or not set, all files will be processed.
     // Please refer to "except" for details about the patterns.
     'only' => ['*.php'],
-    // array, list of patterns that specify which files/directories should NOT be processed.
+    // array, list of patterns that specify which files/directories shouldn't be processed.
     // If empty or not set, all files/directories will be processed.
     // A path matches a pattern if it contains the pattern string at its end. For example,
     // '/a/b' will match all files and directories ending with '/a/b';

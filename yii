@@ -4,9 +4,6 @@
 declare(strict_types=1);
 
 use yii\console\Application;
-use Yiisoft\Config\Config;
-use Yiisoft\Config\ConfigPaths;
-use Yiisoft\Config\Modifier\RecursiveMerge;
 
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'dev');
@@ -14,14 +11,9 @@ defined('YII_ENV') or define('YII_ENV', 'dev');
 require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/vendor/yiisoft/yii2/Yii.php';
 
-$config = new Config(
-    new ConfigPaths(__DIR__, 'config', 'vendor'),
-    modifiers: [RecursiveMerge::groups('console', 'params', 'params-console')],
-    paramsGroup: 'params-console',
-);
+$config = require __DIR__ . '/config/console/app.php';
 
-$container = Yii::$container->setSingleton(Application::class, $config->get('console'));
-$app = Yii::$container->get(Application::class);
-$exitCode = $app->run();
+$application = new Application($config);
+$exitCode = $application->run();
 
 exit($exitCode);
