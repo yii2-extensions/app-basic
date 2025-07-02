@@ -10,9 +10,6 @@ use yii\helpers\ArrayHelper;
 
 final class ContactController extends Controller
 {
-    /**
-     * @phpstan-return array<array-key, array<array-key, mixed>>
-     */
     public function actions(): array
     {
         return ArrayHelper::merge(

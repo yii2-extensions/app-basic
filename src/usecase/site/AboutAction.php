@@ -6,6 +6,9 @@ namespace app\usecase\site;
 
 use yii\base\Action;
 
+/**
+ * @extends Action<SiteController>
+ */
 final class AboutAction extends Action
 {
     public function run(): string
