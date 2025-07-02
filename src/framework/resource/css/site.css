@@ -1,7 +1,6 @@
 /**
  * Css web application basic
  */
-
 :root {
     --input-padding-x: .75rem;
     --input-padding-y: .75rem;
@@ -44,7 +43,16 @@ html, body {
 }
 
 [data-bs-theme=dark] #contactform-verifycode-image {
-    background-color: var(--bs-secondary-color);
+    background-color: var(---bs-secondary-bg);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    filter: invert(1) hue-rotate(180deg);
+}
+
+[data-bs-theme=dark] .login-info {
+    background-color: var(--bs-secondary-bg);
+}
+
+[data-bs-theme=dark] .login-info-user {
+    color: var(--bs-white);
 }

@@ -21,11 +21,7 @@ AppAsset::register($this);
                     <header class="mb-auto">
                         <?= $this->render('component/menu') ?>
                         <?= $this->render('component/alert') ?>
-                        <?= Breadcrumbs::widget(
-                            [
-                                'links' => $this->params['breadcrumbs'] ?? [],
-                            ],
-                        ) ?>
+                        <?= $this->render('component/breadcrumbs') ?>
                     </header>
                     <?= $content ?>
                     <?= $this->render('footer') ?>

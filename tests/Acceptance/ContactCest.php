@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Acceptance;
+namespace app\tests\acceptance;
 
-use App\Tests\Support\AcceptanceTester;
+use app\tests\support\AcceptanceTester;
 
 final class ContactCest
 {
@@ -14,6 +14,7 @@ final class ContactCest
         $I->amOnRoute('contact/index');
 
         $I->wantTo('ensure that Contact page works.');
+
         $I->expectTo('see page index.');
         $I->see('Contact');
         $I->see('Please fill out the following form to contact us.');

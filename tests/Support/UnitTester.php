@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Support;
+namespace app\tests\support;
 
 /**
  * Inherited Methods
@@ -18,7 +18,7 @@ namespace App\Tests\Support;
  * @method void pause($vars = [])
  *
  * @SuppressWarnings(PHPMD)
- */
+*/
 class UnitTester extends \Codeception\Actor
 {
     use _generated\UnitTesterActions;

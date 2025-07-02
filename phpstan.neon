@@ -1,8 +1,33 @@
+includes:
+    - phar://phpstan.phar/conf/bleedingEdge.neon
+
 parameters:
     bootstrapFiles:
         - tests/_bootstrap.php
 
-    level: 9
+    excludePaths:
+        analyse:
+            - tests/support
+
+    level: max
 
     paths:
+        - config
         - src
+        - tests/acceptance
+        - tests/functional
+        - tests/unit
+
+    tmpDir: %currentWorkingDirectory%/runtime
+
+    yii2:
+        config_path: %currentWorkingDirectory%/config/web/app.php
+
+    # Enable strict advanced checks
+    checkImplicitMixed: true
+    checkBenevolentUnionTypes: true
+    checkUninitializedProperties: true
+    checkTooWideReturnTypesInProtectedAndPublicMethods: true
+    reportAnyTypeWideningInVarTag: true
+    reportPossiblyNonexistentConstantArrayOffset: true
+    reportPossiblyNonexistentGeneralArrayOffset: true
