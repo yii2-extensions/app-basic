@@ -7,7 +7,6 @@ namespace app\tests\unit;
 use app\usecase\hello\HelloController;
 use Codeception\Test\Unit;
 use Yii;
-
 use yii\base\InvalidRouteException;
 use yii\console\Exception;
 

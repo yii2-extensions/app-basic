@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace app\usecase\contact;
 
 use yii\base\Action;
-use Yii;
 
 /**
  * @template T of ContactController
@@ -24,6 +23,6 @@ final class IndexAction extends Action
             }
         }
 
-        return $this->controller->render('index',['model' => $form]);
+        return $this->controller->render('index', ['model' => $form]);
     }
 }

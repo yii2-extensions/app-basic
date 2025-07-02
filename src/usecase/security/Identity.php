@@ -46,7 +46,7 @@ final class Identity extends BaseObject implements IdentityInterface
     {
         foreach (self::$users as $user) {
             if (strcasecmp($user['username'], $username) === 0) {
-                return new static($user);
+                return new self($user);
             }
         }
 
@@ -62,7 +62,7 @@ final class Identity extends BaseObject implements IdentityInterface
     {
         foreach (self::$users as $user) {
             if ($user['accessToken'] === $token) {
-                return new static($user);
+                return new self($user);
             }
         }
 

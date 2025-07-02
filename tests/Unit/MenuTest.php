@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace app\tests\unit;
 
-
 use app\usecase\security\Identity;
 use Codeception\Test\Unit;
 use Yii;

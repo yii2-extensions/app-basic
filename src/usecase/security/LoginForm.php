@@ -1,8 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 namespace app\usecase\security;
 
-use Yii;
 use yii\base\Model;
 use yii\web\IdentityInterface;
 use yii\web\User;
@@ -10,8 +11,7 @@ use yii\web\User;
 /**
  * LoginForm is the model behind the login form.
  *
- * @property-read Identity|null $user
- *
+ * @property Identity|null $user
  */
 class LoginForm extends Model
 {
@@ -22,7 +22,6 @@ class LoginForm extends Model
     public bool $rememberMe = true;
 
     private bool|null|IdentityInterface $_identity = false;
-
 
     /**
      * @phpstan-return array<array<int|string, mixed>>

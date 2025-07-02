@@ -41,7 +41,8 @@ final class ContactControllerTest extends Unit
 
         assert(
             $emailMessage instanceof MessageInterface,
-            'Last sent email should be an instance of \'MessageInterface\'');
+            'Last sent email should be an instance of \'MessageInterface\''
+        );
 
         verify($emailMessage->getTo())->arrayHasKey('tester@example.com');
         verify($emailMessage->getFrom())->arrayHasKey('noreply@example.com');

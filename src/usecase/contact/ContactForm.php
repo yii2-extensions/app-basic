@@ -4,11 +4,9 @@ declare(strict_types=1);
 
 namespace app\usecase\contact;
 
-use app\framework\ApplicationParameters;
 use Yii;
 use yii\base\Model;
 use yii\captcha\CaptchaValidator;
-use yii\mail\MailerInterface;
 
 final class ContactForm extends Model
 {
