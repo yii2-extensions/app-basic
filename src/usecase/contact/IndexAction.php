@@ -8,11 +8,11 @@ use yii\base\Action;
 use yii\symfonymailer\Mailer;
 use yii\web\{Controller, Request, Session};
 
+/**
+ * @extends Action<ContactController>
+ */
 final class IndexAction extends Action
 {
-    /**
-     * @phpstan-param array<array-key, mixed> $config
-     */
     public function __construct(
         string $id,
         Controller $controller,

@@ -18,9 +18,6 @@ final class ContactForm extends Model
     public string $verifyCode = '';
     public string $date = '';
 
-    /**
-     * @return array<string, string>
-     */
     public function attributeLabels(): array
     {
         return [
