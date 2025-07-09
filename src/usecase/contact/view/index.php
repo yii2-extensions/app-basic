@@ -115,7 +115,7 @@ $tabInput = 1;
                                             'options' => [
                                                 'class' => 'mb-2',
                                             ],
-                                        ]
+                                        ],
                                     )->widget(
                                         Captcha::class,
                                         [
@@ -130,7 +130,7 @@ $tabInput = 1;
                                                 'required' => true,
                                                 'tabindex' => $tabInput++,
                                             ],
-                                        ]
+                                        ],
                                     ) ?>
                                 </div>
                             </div>

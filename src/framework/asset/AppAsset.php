@@ -11,8 +11,6 @@ use yii\web\YiiAsset;
 
 final class AppAsset extends AssetBundle
 {
-    public $sourcePath = __DIR__ . '/../resource/';
-
     public $css = [
         'css/site.css',
     ];
@@ -23,4 +21,6 @@ final class AppAsset extends AssetBundle
         BootstrapPluginAsset::class,
         YiiAsset::class,
     ];
+
+    public $sourcePath = __DIR__ . '/../resource/';
 }

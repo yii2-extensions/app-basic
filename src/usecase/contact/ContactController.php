@@ -29,14 +29,14 @@ final class ContactController extends Controller
         );
     }
 
-    public function getViewPath(): string
-    {
-        return __DIR__ . '/view';
-    }
-
     public function getMailer(): MailerInterface
     {
         return $this->module->get('mailer');
+    }
+
+    public function getViewPath(): string
+    {
+        return __DIR__ . '/view';
     }
 
     public function sendEmail(ContactForm $form): bool

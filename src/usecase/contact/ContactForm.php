@@ -10,12 +10,12 @@ use yii\captcha\CaptchaValidator;
 
 final class ContactForm extends Model
 {
-    public string $name = '';
-    public string $email = '';
-    public string $subject = '';
     public string $body = '';
-    public string $verifyCode = '';
     public string $date = '';
+    public string $email = '';
+    public string $name = '';
+    public string $subject = '';
+    public string $verifyCode = '';
 
     public function attributeLabels(): array
     {

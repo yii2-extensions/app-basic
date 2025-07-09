@@ -15,13 +15,24 @@ use yii\web\User;
  */
 class LoginForm extends Model
 {
-    public string $username = '';
-
     public string $password = '';
 
     public bool $rememberMe = true;
+    public string $username = '';
 
     private bool|null|IdentityInterface $_identity = false;
+
+    /**
+     * Finds user by [[username]]
+     */
+    public function getIdentity(): bool|null|IdentityInterface
+    {
+        if ($this->_identity === false) {
+            $this->_identity = Identity::findByUsername($this->username);
+        }
+
+        return $this->_identity;
+    }
 
     /**
      * @phpstan-return array<array<int|string, mixed>>
@@ -58,17 +69,5 @@ class LoginForm extends Model
                 $this->addError($attribute, 'Incorrect username or password.');
             }
         }
-    }
-
-    /**
-     * Finds user by [[username]]
-     */
-    public function getIdentity(): bool|null|IdentityInterface
-    {
-        if ($this->_identity === false) {
-            $this->_identity = Identity::findByUsername($this->username);
-        }
-
-        return $this->_identity;
     }
 }

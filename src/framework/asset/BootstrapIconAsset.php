@@ -8,9 +8,9 @@ use yii\web\AssetBundle;
 
 final class BootstrapIconAsset extends AssetBundle
 {
-    public $sourcePath = '@npm/bootstrap-icons/font';
-
     public $css = [
         'bootstrap-icons.css',
     ];
+
+    public $sourcePath = '@npm/bootstrap-icons/font';
 }

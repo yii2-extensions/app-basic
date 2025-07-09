@@ -3,8 +3,8 @@
 declare(strict_types=1);
 
 use app\framework\ApplicationParameters;
-use yii\bootstrap5\NavBar;
 use yii\bootstrap5\Nav;
+use yii\bootstrap5\NavBar;
 use yii\helpers\Html;
 
 $menuItems = match (Yii::$app->user->getIsGuest()) {
@@ -20,13 +20,13 @@ NavBar::begin(
                 'alt' => Yii::$app->name,
                 'title' => Yii::$app->name,
                 'width' => 200,
-            ]
+            ],
         ),
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar navbar-expand-lg bg-body-tertiary',
         ],
-    ]
+    ],
 );
 
 echo Nav::widget(
@@ -35,7 +35,7 @@ echo Nav::widget(
         'options' => [
             'class' => 'navbar-nav justify-content-end navbar-collapse',
         ],
-    ]
+    ],
 );
 
 NavBar::end();

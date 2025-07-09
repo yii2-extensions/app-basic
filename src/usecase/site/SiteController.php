@@ -10,6 +10,10 @@ use yii\web\ErrorAction;
 
 final class SiteController extends Controller
 {
+    public function actionIndex(): string
+    {
+        return $this->render('index');
+    }
     public function actions(): array
     {
         return ArrayHelper::merge(
@@ -23,11 +27,6 @@ final class SiteController extends Controller
             ],
             parent::actions(),
         );
-    }
-
-    public function actionIndex(): string
-    {
-        return $this->render('index');
     }
 
     public function getViewPath(): string

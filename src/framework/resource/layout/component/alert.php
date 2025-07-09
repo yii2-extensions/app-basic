@@ -25,7 +25,7 @@ foreach ($flashes as $type => $message) {
                 'options' => [
                     'class' => $alertTypes[$type],
                 ],
-            ]
+            ],
         );
 
         Yii::$app->session->removeFlash($type);

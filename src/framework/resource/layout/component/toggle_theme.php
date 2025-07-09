@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use UIAwesome\Html\Graphic\Svg;
 use yii\helpers\Html;
+
 ?>
 <?= Html::button(
     Svg::widget()

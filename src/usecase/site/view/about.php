@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 use yii\helpers\Html;
 
-/**
- * @var yii\web\View $this
- */
+/** @var yii\web\View $this */
 $this->title = Yii::t('app.basic', 'About');
 $this->params['breadcrumbs'] = [$this->title];
 ?>

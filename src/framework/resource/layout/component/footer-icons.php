@@ -14,11 +14,10 @@ $socialLinks = [
 ];
 
 foreach ($socialLinks as $link): ?>
+    <?php $filePath = Yii::getAlias('@npm/bootstrap-icons/icons/' . $link['icon']); ?>
+
     <?= Html::a(
-        Svg::widget()
-            ->attributes(['height' => '24', 'width' => '24'])
-            ->filePath(Yii::getAlias('@npm/bootstrap-icons/icons/' . $link['icon']))
-            ->render(),
+        Svg::widget()->attributes(['height' => '24', 'width' => '24'])->filePath($filePath)->render(),
         $link['url'],
         [
             'class' => 'd-none d-sm-block d-md-block d-lg-block d-xl-block text-muted text-decoration-none ms-3',
