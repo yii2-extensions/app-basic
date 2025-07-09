@@ -10,9 +10,9 @@ parameters:
     paths:
         - config
         - src
-        - tests/acceptance
-        - tests/functional
-        - tests/unit
+        - tests/Acceptance
+        - tests/Functional
+        - tests/Unit
 
     tmpDir: %currentWorkingDirectory%/runtime
 
