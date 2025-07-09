@@ -1,22 +1,22 @@
 <p align="center">
-    <a href="https://github.com/yii2-extensions/debug" target="_blank">
-        <img src="https://www.yiiframework.com/image/yii_logo_light.svg" height="100px;">
+    <a href="https://github.com/yii2-extensions/localeurls" target="_blank">
+        <img src="https://www.yiiframework.com/image/yii_logo_light.svg" alt="Yii Framework">
     </a>
     <h1 align="center">Web Application Basic</h1>
 </p>
 
 <p align="center">
-    <a href="https://www.php.net/releases/8.2/en.php" target="_blank">
-        <img src="https://img.shields.io/badge/PHP-%3E%3D8.2-787CB5" alt="php-version">
+    <a href="https://www.php.net/releases/8.1/en.php" target="_blank">
+        <img src="https://img.shields.io/badge/PHP-%3E%3D8.1-787CB5" alt="php-version">
+    </a>
+    <a href="https://github.com/yiisoft/yii2/tree/2.0.53" target="_blank">
+        <img src="https://img.shields.io/badge/Yii2%20-2.0.53-blue" alt="Yii2 2.0.53">
     </a>
     <a href="https://github.com/yiisoft/yii2/tree/22.0" target="_blank">
-        <img src="https://img.shields.io/badge/Yii2%20-22-blue" alt="Yii2 version">
+        <img src="https://img.shields.io/badge/Yii2%20-22-blue" alt="Yii2 22.0">
     </a>
     <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/build.yml" target="_blank">
         <img src="https://github.com/yii2-extensions/app-basic/actions/workflows/build.yml/badge.svg" alt="PHPUnit">
-    </a>
-    <a href="https://codecov.io/gh/yii2-extensions/app-basic" target="_blank">
-        <img src="https://codecov.io/gh/yii2-extensions/app-basic/graph/badge.svg?token=zcXbeTspxy" alt="Codecov">
     </a>
     <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml" target="_blank">
         <img src="https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml/badge.svg" alt="PHPStan">
@@ -148,7 +148,10 @@ Root directory
 
 ## Quality code
 
-[![phpstan-level](https://img.shields.io/badge/PHPStan%20level-9-blue)](https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml)
+[![Latest Stable Version](https://poser.pugx.org/yii2-extensions/app-basic/v)](https://packagist.org/packages/yii2-extensions/app-basic)
+[![Total Downloads](https://poser.pugx.org/yii2-extensions/app-basic/downloads)](https://packagist.org/packages/yii2-extensions/app-basic)
+[![codecov](https://codecov.io/github/yii2-extensions/app-basic/graph/badge.svg?token=zcXbeTspxy)](https://codecov.io/github/yii2-extensions/app-basic)
+[![phpstan-level](https://img.shields.io/badge/PHPStan%20level-max-blue)](https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml)
 [![StyleCI](https://github.styleci.io/repos/698621511/shield?branch=main)](https://github.styleci.io/repos/698621511?branch=main)
 
 ## Tests
