@@ -22,7 +22,3 @@ jobs:
     uses: php-forge/actions/.github/workflows/ecs.yml@main
     with:
       extensions: mbstring
-      os: >-
-        ['ubuntu-latest']
-      php: >-
-        ['8.4']
