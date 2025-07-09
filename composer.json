@@ -49,6 +49,13 @@
             "app\\tests\\": "tests/"
         }
     },
+    "provide": {
+        "bower-asset/inputmask": "5.0.9",
+        "bower-asset/jquery": "3.6.1",
+        "bower-asset/punycode": "^1.4",
+        "bower-asset/yii2-pjax": "~2.0.1",
+        "bower-asset/bootstrap": "^5.2"
+    },
     "extra": {
         "branch-alias": {
             "dev-master": "0.1-dev"
@@ -69,11 +76,5 @@
         "rector": "./vendor/bin/rector process src",
         "static": "./vendor/bin/phpstan analyse src --memory-limit=512M",
         "tests": "./vendor/bin/codecept run"
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        }
-    ]
+    }
 }

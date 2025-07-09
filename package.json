@@ -1,6 +1,23 @@
 {
+    "name": "yii2",
+    "description": "A modern PHP framework designed for professional Web development",
     "dependencies": {
-        "@fortawesome/fontawesome-free": "^6.7.2",
-        "flag-icons": "^7.5.0"
-    }
+        "bootstrap": "^5.3.2",
+        "bootstrap-icons": "^1.10.5",
+        "flag-icons": "^7.5.0",
+        "inputmask": "^5.0.8",
+        "jquery": "~3.6.4",
+        "jquery-pjax": "^2.0.1",
+        "punycode": "^1.4.0",
+        "yii2-pjax": "^2.0.8"
+    },
+    "keywords": [
+        "php",
+        "framework"
+    ],
+    "license": "BSD-3-Clause",
+    "bugs": {
+        "url": "https://github.com/yiisoft/yii2/issues"
+    },
+    "homepage": "https://github.com/yiisoft/yii2"
 }

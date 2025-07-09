@@ -21,6 +21,7 @@ $config = [
     'aliases' => [
         '@root' => $rootDir,
         '@npm' => '@root/node_modules',
+        '@bower' => '@npm',
         '@public' => '@root/public',
         '@resource' => '@root/src/framework/resource',
         '@runtime' => '@root/runtime',
