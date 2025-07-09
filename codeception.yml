@@ -3,10 +3,10 @@ bootstrap: _bootstrap.php
 support_namespace: support
 paths:
   tests: tests
-  output: tests/_output
-  data: tests/Support/data
-  support: tests/Support
-  envs: tests/_envs
+  output: runtime/output
+  data: runtime/Support/data
+  support: runtime/Support
+  envs: runtime/_envs
 actor_suffix: Tester
 settings:
   memory_limit: 1024M
@@ -14,7 +14,7 @@ settings:
 modules:
   config:
     Yii2:
-      configFile: 'config/web/app.php'
+      configFile: config/web/app.php
 extensions:
   enabled:
     - Codeception\Extension\RunFailed
