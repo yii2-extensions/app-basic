@@ -23,5 +23,5 @@ jobs:
     secrets:
       AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
     with:
-      coverage-file: tests/output/coverage.xml
+      coverage-file: runtime/output/coverage.xml
       extensions: gd, intl
