@@ -34,7 +34,7 @@ final class LoginAction extends Action
         $identity = $form->getIdentity();
 
         if ($identity instanceof Identity && $form->validate()) {
-            return $this->controller->getUser()->login($identity, $form->rememberMe ? 3600*24*30 : 0);
+            return $this->controller->getUser()->login($identity, $form->rememberMe ? 3600 * 24 * 30 : 0);
         }
 
         return false;
