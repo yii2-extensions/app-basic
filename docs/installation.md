@@ -58,28 +58,6 @@ Ensure the following directories are writable by the web server.
 chmod 775 public/assets runtime tests/_output
 ```
 
-### Environment configuration
-
-1. **Create environment file** (optional)
-```bash
-cp .env.example .env
-```
-
-2. **Configure database connection** in `config/web/components.php`
-```php
-<?php
-
-return [
-    'db' => [
-        'class' => 'yii\db\Connection',
-        'dsn' => 'mysql:host=localhost;dbname=myapp',
-        'username' => 'root',
-        'password' => '',
-        'charset' => 'utf8',
-    ],
-];
-```
-
 ### Web server configuration
 
 #### Apache
