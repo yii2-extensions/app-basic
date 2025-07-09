@@ -5,7 +5,7 @@ declare(strict_types=1);
 use yii\web\Application;
 
 defined('YII_DEBUG') || define('YII_DEBUG', false);
-defined('YII_ENV') || define('YII_ENV', 'dev');
+defined('YII_ENV') || define('YII_ENV', 'prod');
 
 if (getenv('YII_C3')) {
     $c3 = dirname(__DIR__) . '/c3.php';

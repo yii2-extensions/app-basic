@@ -17,7 +17,7 @@
     ],
     "license": "BSD-3-Clause",
     "bugs": {
-        "url": "https://github.com/yiisoft/yii2/issues"
+        "url": "https://github.com/yii2-extensions/app-basic/issues"
     },
-    "homepage": "https://github.com/yiisoft/yii2"
+    "homepage": "https://github.com/yii2-extensions/app-basic"
 }

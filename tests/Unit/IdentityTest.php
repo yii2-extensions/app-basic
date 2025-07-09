@@ -33,17 +33,16 @@ final class IdentityTest extends Unit
     {
         $user = Identity::findIdentityByAccessToken('100-token');
 
-        assert($user instanceof Identity, 'Expected an instance of \'Identity\' for access token \'100-token\'.');
-
-        self::assertSame('100', $user->getId(), 'User ID for access token \'100-token\' should be \'100\'.');
-        self::assertSame('admin', $user->username, 'Username property should be \'admin\'.');
+        self::assertInstanceOf(Identity::class, $user, "Expected an instance of 'Identity' for username 'admin'.");
+        self::assertSame('100', $user->getId(), "User ID for access token '100-token' should be '100'.");
+        self::assertSame('admin', $user->username, "Username property should be 'admin'.");
     }
 
     public function testFindByAccessTokenReturnsNullForInvalidToken(): void
     {
         self::assertNull(
             Identity::findIdentityByAccessToken('invalid-token'),
-            'Expected \'null\' when finding a user by an invalid access token.',
+            "Expected 'null' when finding a user by an invalid access token.",
         );
     }
 
@@ -51,17 +50,16 @@ final class IdentityTest extends Unit
     {
         $user = Identity::findByUsername('admin');
 
-        assert($user instanceof Identity, 'Expected an instance of \'Identity\' for username \'admin\'.');
-
-        self::assertSame('100', $user->getId(), 'User ID for \'admin\' should be \'100\'.');
-        self::assertSame('admin', $user->username, 'Username property should be \'admin\'.');
+        self::assertInstanceOf(Identity::class, $user, "Expected an instance of 'Identity' for username 'admin'.");
+        self::assertSame('100', $user->getId(), "User ID for 'admin' should be '100'.");
+        self::assertSame('admin', $user->username, "Username property should be 'admin'.");
     }
 
     public function testFindByUsernameReturnsNullForNonexistentUser(): void
     {
         self::assertNull(
             Identity::findByUsername('nonexistent'),
-            'Expected \'null\' when finding a user by a `nonexistent` username.',
+            "Expected 'null' when finding a user by a 'nonexistent' username.",
         );
     }
 
@@ -69,8 +67,11 @@ final class IdentityTest extends Unit
     {
         $user = Identity::findByUsername('admin');
 
-        assert($user instanceof Identity, 'Expected an instance of \'Identity\' for username \'admin\'.');
-
+        self::assertInstanceOf(
+            Identity::class,
+            $user,
+            "Expected an instance of 'Identity' for username 'admin'.",
+        );
         self::assertTrue(
             $user->validateAuthKey('test100key'),
             'Expected auth key validation to return `true` for correct auth key.',
@@ -81,8 +82,11 @@ final class IdentityTest extends Unit
     {
         $user = Identity::findByUsername('admin');
 
-        assert($user instanceof Identity, 'Expected an instance of \'Identity\' for username \'admin\'.');
-
+        self::assertInstanceOf(
+            Identity::class,
+            $user,
+            "Expected an instance of 'Identity' for username 'admin'.",
+        );
         self::assertTrue(
             $user->validatePassword('admin'),
             'Expected password validation to return `true` for correct password.',
