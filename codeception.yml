@@ -1,6 +1,6 @@
 namespace: app\tests
 bootstrap: _bootstrap.php
-support_namespace: support
+support_namespace: Support
 paths:
   tests: tests
   output: runtime/output
