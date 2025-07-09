@@ -40,40 +40,35 @@ Web Application Basic of Yii Version 2. <a href="http://www.yiiframework.com/" t
 ```text
 root
 ├── config                  
-│   ├── common              Common configuration.
-│   │   ├── components.php  
-│   │   └── container.php   
-│   ├── console             Console configuration.
+│   ├── common                              Common configuration.
+│   │   └── components.php  
+│   ├── console                             Console configuration.
+│   │   └── app.php
+│   ├── web                                 Web configuration.
 │   │   ├── app.php
-│   │   └── components.php     
-│   ├── web                 Web configuration.
-│   │   ├── app.php
-│   │   ├── bootstrap.php    
 │   │   ├── components.php
-│   │   ├── container.php
 │   │   └── modules.php 
-│   ├── build.php           Build configuration codeception tests.
-│   ├── config-plugin.php   Plugin configuration.
-│   ├── messages.php        Translation configuration.
-│   ├── params-console.php  Console parameters.
-│   ├── params-web.php      Web parameters.
-│   └── params.php          Common parameters.
+│   ├── messages.php                        Translation configuration.
+│   ├── params-console.php                  Console parameters.
+│   └── params-web.php                      Web parameters.
 ├── src             
 │   ├── framework 
-│   │   ├── asset           Asset bundle files.
-│   │   ├── event           Event handler files.
+│   │   ├── asset                           Asset bundle files.
+│   │   ├── event                           Event handler files.
 │   │   └── resource 
-│   │       ├── css         Css files.
-│   │       ├── js          Js files.
-│   │       ├── layout      Layout files.
-│   │       └── message     Translation files.
+│   │       ├── css                         Css files.
+│   │       ├── js                          Js files.
+│   │       ├── layout                      Layout files.
+│   │       ├── message                     Translation files.
+│   │       └── ApplicationParameters.php   Configuration application parameters.
 │   └── usecase
-│       ├── contact         Contact use case.
-│       ├── hello           Hello use case (console).
-│       └── site            Site use case.
-├── tests                   Tests codeception.
-├── vendor                  Composer dependencies.
-└── public                  Web server public.
+│       ├── contact                         Contact use case.
+│       ├── hello                           Hello use case (console).
+│       ├── security                        Security use case.
+│       └── site                            Site use case.
+├── tests                                   Tests codeception.
+├── vendor                                  Composer dependencies.
+└── public                                  Web server public.
 ```
 
 ## Features
