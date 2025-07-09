@@ -23,124 +23,153 @@
     </a>        
 </p>
 
-</br>
+A modern, Bootstrap-5 powered Yii2 application template designed for rapid development of web applications. 
 
-<p align="center">
-Web Application Basic of Yii Version 2. <a href="http://www.yiiframework.com/" title="Yii Framework" target="_blank">Yii Framework</a> application best for rapidly creating projects with Bootstrap 5.
-</p>
+Built with best practices, clean architecture, and developer-friendly configuration.
 
-</br>
+Perfect for creating production-ready web applications with minimal setup time while maintaining code quality and 
+extensibility.
 
 ![app-basic](docs/home.png)
 
-</br>
-
-## Directory structure
-
-```text
-root
-├── config                  
-│   ├── common                              Common configuration.
-│   │   └── components.php  
-│   ├── console                             Console configuration.
-│   │   └── app.php
-│   ├── web                                 Web configuration.
-│   │   ├── app.php
-│   │   ├── components.php
-│   │   └── modules.php 
-│   ├── messages.php                        Translation configuration.
-│   ├── params-console.php                  Console parameters.
-│   └── params-web.php                      Web parameters.
-├── src             
-│   ├── framework 
-│   │   ├── asset                           Asset bundle files.
-│   │   ├── event                           Event handler files.
-│   │   └── resource 
-│   │       ├── css                         Css files.
-│   │       ├── js                          Js files.
-│   │       ├── layout                      Layout files.
-│   │       ├── message                     Translation files.
-│   │       └── ApplicationParameters.php   Configuration application parameters.
-│   └── usecase
-│       ├── contact                         Contact use case.
-│       ├── hello                           Hello use case (console).
-│       ├── security                        Security use case.
-│       └── site                            Site use case.
-├── tests                                   Tests codeception.
-├── vendor                                  Composer dependencies.
-└── public                                  Web server public.
-```
-
 ## Features
 
-The web application contains:
+- ✅ **Asset Management** - Optimized asset bundles for CSS, JS, and resource management.
+- ✅ **Clean Architecture** - Well-organized directory structure following Yii2 best practices.
+- ✅ **Console Commands** - Example console commands for background tasks and maintenance.
+- ✅ **Contact Form** - Fully functional contact form with validation and email sending.
+- ✅ **Developer Tools** - Debugging tools, logging, and development-friendly configurations.
+- ✅ **Modern Bootstrap 5 UI** - Responsive, mobile-first design with latest Bootstrap components.
+- ✅ **Multi-language Support** - Built-in internationalization (i18n) support with message translations.
+- ✅ **Ready-to-Use Pages** - Pre-built pages including home, about, contact, and error handling.
+- ✅ **Security Features** - Built-in CSRF protection, input validation, and secure configurations.
+- ✅ **Testing Ready** - Codeception test suite with examples for functional and unit testing.
 
-- [x] Pages - [Screenshots]:
-    - [about](docs/about.png)
-    - [contact](docs/contact.png)
-    - [404](docs/404.png)
+## Environment support
 
-<p align="justify">
-It includes all commonly used configurations that would allow you to focus on adding new
-features to your application.
-</P>
+[![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white)](https://httpd.apache.org/)
+[![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)](https://nginx.org/)
+[![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
 
-## Installation
+## Quick start
 
-<p align="justify">
-If you do not have <a href="http://getcomposer.org/" title="Composer" target="_blank">Composer</a>, you may install it by following the instructions at <a href="http://getcomposer.org/doc/00-intro.md#installation-nix" title="getcomposer.org" target="_blank">getcomposer.org</a>.
-</p>
+### How it works
 
-You can then install this project app-basic using the following command:
+The Yii2 Web Application Basic template provides a complete foundation for building modern web applications. Unlike starting from scratch, this template includes:
 
-```shell
-composer create-project --prefer-dist --stability=dev yii2-extensions/app-basic myapp
+1. **Pre-configured structure** with organized directories for assets, views, models, and controllers.
+2. **Bootstrap 5 integration** for responsive, mobile-first user interfaces.
+3. **Security features** including CSRF protection and input validation.
+4. **Development tools** for debugging, logging, and testing.
+
+#### Why use this template?
+
+- **Rapid development**: Start building features immediately without setup overhead.
+- **Best practices**: Follow Yii2 conventions and modern web development standards.
+- **Extensible**: Easy to customize and extend for specific project requirements.
+- **Production-ready**: Includes security features and optimizations for deployment.
+
+```text
+Application structure:
+
+Web App Basic
+├── Assets (CSS, JS, Images)
+├── Console (Background tasks)
+├── I18n (Multi-language support)
+├── Pages (Home, About, Contact, Error)
+├── Security (CSRF, Validation, Authentication)
+└── Testing (Unit, Functional tests)
 ```
 
-<p align="justify">
-Now you should be able to access the application through the following URL, assuming `public` is the directory
-directly under the Web root.
-</p>
+### Installation
 
-__*Virtual Host:*__
+**Quick start**
+
+```bash
+composer create-project --prefer-dist --stability=dev yii2-extensions/app-basic myapp
+cd myapp
+```
+
+**Start development server**
+
+```bash
+# Using built-in PHP server
+php -S localhost:8080 -t public
+
+# Or using Yii console command
+./yii serve
+```
+
+**Access your application**
 
 ```
 http://localhost:8080/
 ```
 
-__*Server Yii:*__
+### Basic usage
 
-```shell
-./yii serve
+#### Directory structure
+
+```text
+root/
+├── config/                Configuration files
+│   ├── common/            Common configuration
+│   ├── console/           Console configuration  
+│   ├── web/               Web configuration
+│   └── messages.php       Translation config
+├── src/
+│   ├── framework/         Framework assets & resources
+│   │   ├── asset/         Asset bundles
+│   │   ├── event/         Event handlers
+│   │   └── resource/      CSS, JS, layouts, messages
+│   └── usecase/           Application use cases
+│       ├── contact/       Contact functionality
+│       ├── hello/         Console command example
+│       ├── security/      Security features
+│       └── site/          Site pages
+├── tests/                 Test suites
+├── vendor/                Composer dependencies
+└── public/                Web server document root
 ```
 
-__Console commands:__
+#### Creating your first page
 
-```shell
+```php
+<?php
+// src/usecase/site/SiteController.php
+
+declare(strict_types=1);
+
+namespace app\usecase\site;
+
+use yii\web\Controller;
+
+class SiteController extends Controller
+{
+    public function actionIndex(): string
+    {
+        return $this->render('index');
+    }
+    
+    public function actionAbout(): string
+    {
+        return $this->render('about');
+    }
+}
+```
+
+#### Console commands
+
+```bash
+# Run the hello command
 ./yii hello/index
-```
 
-## Generate translations
-
-<p align="justify">
-To generate the Yii Web Application Basic translations, you can change the language settings in the configuration file.
-<p>
-
-```
-config/messages.php
-```
-
-<p align="justify">
- Automatically the generator will create the folder of your language in `src/Framework/resource/message`,
- If any translation is needed, you can open an issue to add it.
-</p>
-
-Root directory
-
-```
+# Generate translations
 ./yii message config/messages.php
-```
 
+# Clear cache
+./yii cache/flush-all
+```
 ## Quality code
 
 [![Latest Stable Version](https://poser.pugx.org/yii2-extensions/app-basic/v)](https://packagist.org/packages/yii2-extensions/app-basic)
@@ -149,15 +178,23 @@ Root directory
 [![phpstan-level](https://img.shields.io/badge/PHPStan%20level-max-blue)](https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml)
 [![StyleCI](https://github.styleci.io/repos/698621511/shield?branch=main)](https://github.styleci.io/repos/698621511?branch=main)
 
-## Tests
+## Documentation
 
-~~~
-// download all composer dependencies root project
-$ composer update --prefer-dist -vvv
+For detailed configuration options and advanced usage:
 
-// run all tests with code coverage
-$ vendor/bin/codecept run --coverage-xml
-~~~
+- 📚 [Installation Guide](docs/installation.md)
+- ⚙️ [Configuration Reference](docs/configuration.md) 
+- 💡 [Usage Examples](docs/examples.md)
+- 🧪 [Testing Guide](docs/testing.md)
+
+## Screenshots
+
+The web application includes these ready-to-use pages:
+
+- **[Home Page](docs/home.png)** - Welcome page with navigation
+- **[About Page](docs/about.png)** - Information about your application  
+- **[Contact Page](docs/contact.png)** - Contact form with validation
+- **[404 Error Page](docs/404.png)** - Custom error handling
 
 ## Our social networks
 
