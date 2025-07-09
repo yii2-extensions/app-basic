@@ -161,7 +161,7 @@ $ vendor/bin/codecept run --coverage-xml
 
 ## Our social networks
 
-[![X](https://img.shields.io/badge/follow-@terabytesoftw-1DA1F2?logo=x&logoColor=1DA1F2&labelColor=555555?style=flat)](https://x.com/Terabytesoftw)
+[![X](https://img.shields.io/badge/follow-@terabytesoftw-1DA1F2?logo=x&logoColor=1DA1F2&labelColor=555555&style=flat)](https://x.com/Terabytesoftw)
 
 ## License
 
