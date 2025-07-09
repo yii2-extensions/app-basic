@@ -161,8 +161,8 @@ $ vendor/bin/codecept run --coverage-xml
 
 ## Our social networks
 
-[![Twitter](https://img.shields.io/badge/twitter-follow-1DA1F2?logo=twitter&logoColor=1DA1F2&labelColor=555555?style=flat)](https://twitter.com/Terabytesoftw)
+[![X](https://img.shields.io/badge/follow-@terabytesoftw-1DA1F2?logo=x&logoColor=1DA1F2&labelColor=555555?style=flat)](https://x.com/Terabytesoftw)
 
 ## License
 
-The MIT License. Please see [License File](LICENSE.md) for more information.
+[![License](https://poser.pugx.org/yii2-extensions/app-basic/license)](LICENSE.md)
