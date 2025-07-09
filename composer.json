@@ -8,7 +8,7 @@
         "web",
         "yii2"
     ],
-    "license": "mit",
+    "license": "BSD-3-Clause",
     "require": {
         "php": ">=8.1",
         "php-forge/foxy": "^0.1",
