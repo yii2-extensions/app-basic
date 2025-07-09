@@ -36,8 +36,6 @@ The configuration follows this loading order.
 
 ### Common configuration
 
-#### Components configuration
-
 Common components configuration in `config/common/components.php`.
 
 ```php
@@ -238,4 +236,3 @@ return $config;
 - 💡 [Usage Examples](examples.md)
 - 🧪 [Testing Guide](testing.md)
 - 📚 [Installation Guide](installation.md)
-            '
