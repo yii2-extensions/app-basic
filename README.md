@@ -179,7 +179,6 @@ For detailed configuration options and advanced usage:
 
 - 📚 [Installation Guide](docs/installation.md)
 - ⚙️ [Configuration Reference](docs/configuration.md) 
-- 💡 [Usage Examples](docs/examples.md)
 - 🧪 [Testing Guide](docs/testing.md)
 
 ## Screenshots
