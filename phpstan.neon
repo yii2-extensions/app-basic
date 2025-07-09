@@ -5,6 +5,10 @@ parameters:
     bootstrapFiles:
         - tests/_bootstrap.php
 
+    excludePaths:
+        analyse:
+            - runtime/Support
+
     level: max
 
     paths:
