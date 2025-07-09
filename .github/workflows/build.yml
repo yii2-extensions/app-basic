@@ -22,6 +22,7 @@ jobs:
     uses: php-forge/actions/.github/workflows/codeception.yml@main
     secrets:
       AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     with:
       coverage-file: runtime/output/coverage.xml
       extensions: gd, intl
