@@ -32,7 +32,15 @@ final class MenuTest extends Unit
         $identity = Identity::findIdentity('100');
         $view = new View();
 
-        self::assertNotNull($identity, 'Failed asserting that the user identity with ID \'100\' exists.');
+        self::assertNotNull(
+            $identity,
+            "Failed asserting that the user identity with ID '100' exists.",
+        );
+        self::assertInstanceOf(
+            Identity::class,
+            $identity,
+            "Failed asserting that the identity is an instance of 'Identity' class.",
+        );
 
         Yii::$app->user->login($identity);
 
