@@ -23,7 +23,8 @@ trait FunctionalTesterActions
      * Project root directory is used by default
      * @see \Codeception\Module\Filesystem::amInPath()
      */
-    public function amInPath(string $path): void {
+    public function amInPath(string $path): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Condition('amInPath', func_get_args()));
     }
 
@@ -41,7 +42,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Module\Filesystem::openFile()
      */
-    public function openFile(string $filename): void {
+    public function openFile(string $filename): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('openFile', func_get_args()));
     }
 
@@ -56,7 +58,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Module\Filesystem::deleteFile()
      */
-    public function deleteFile(string $filename): void {
+    public function deleteFile(string $filename): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('deleteFile', func_get_args()));
     }
 
@@ -71,7 +74,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Module\Filesystem::deleteDir()
      */
-    public function deleteDir(string $dirname): void {
+    public function deleteDir(string $dirname): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('deleteDir', func_get_args()));
     }
 
@@ -86,7 +90,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Module\Filesystem::copyDir()
      */
-    public function copyDir(string $src, string $dst): void {
+    public function copyDir(string $src, string $dst): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('copyDir', func_get_args()));
     }
 
@@ -104,7 +109,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Module\Filesystem::seeInThisFile()
      */
-    public function seeInThisFile(string $text): void {
+    public function seeInThisFile(string $text): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeInThisFile', func_get_args()));
     }
 
@@ -124,7 +130,8 @@ trait FunctionalTesterActions
      * @param int $number New lines
      * @see \Codeception\Module\Filesystem::seeNumberNewLines()
      */
-    public function seeNumberNewLines(int $number): void {
+    public function seeNumberNewLines(int $number): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeNumberNewLines', func_get_args()));
     }
 
@@ -134,7 +141,8 @@ trait FunctionalTesterActions
      * Checks that contents of currently opened file matches $regex
      * @see \Codeception\Module\Filesystem::seeThisFileMatches()
      */
-    public function seeThisFileMatches(string $regex): void {
+    public function seeThisFileMatches(string $regex): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeThisFileMatches', func_get_args()));
     }
 
@@ -153,7 +161,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Module\Filesystem::seeFileContentsEqual()
      */
-    public function seeFileContentsEqual(string $text): void {
+    public function seeFileContentsEqual(string $text): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeFileContentsEqual', func_get_args()));
     }
 
@@ -169,7 +178,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Module\Filesystem::dontSeeInThisFile()
      */
-    public function dontSeeInThisFile(string $text): void {
+    public function dontSeeInThisFile(string $text): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('dontSeeInThisFile', func_get_args()));
     }
 
@@ -179,7 +189,8 @@ trait FunctionalTesterActions
      * Deletes a file
      * @see \Codeception\Module\Filesystem::deleteThisFile()
      */
-    public function deleteThisFile(): void {
+    public function deleteThisFile(): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('deleteThisFile', func_get_args()));
     }
 
@@ -195,7 +206,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Module\Filesystem::seeFileFound()
      */
-    public function seeFileFound(string $filename, string $path = ''): void {
+    public function seeFileFound(string $filename, string $path = ''): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeFileFound', func_get_args()));
     }
 
@@ -205,7 +217,8 @@ trait FunctionalTesterActions
      * Checks if file does not exist in path
      * @see \Codeception\Module\Filesystem::dontSeeFileFound()
      */
-    public function dontSeeFileFound(string $filename, string $path = ''): void {
+    public function dontSeeFileFound(string $filename, string $path = ''): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('dontSeeFileFound', func_get_args()));
     }
 
@@ -220,7 +233,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Module\Filesystem::cleanDir()
      */
-    public function cleanDir(string $dirname): void {
+    public function cleanDir(string $dirname): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('cleanDir', func_get_args()));
     }
 
@@ -230,7 +244,8 @@ trait FunctionalTesterActions
      * Saves contents to file
      * @see \Codeception\Module\Filesystem::writeToFile()
      */
-    public function writeToFile(string $filename, string $contents): void {
+    public function writeToFile(string $filename, string $contents): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('writeToFile', func_get_args()));
     }
 
@@ -254,7 +269,8 @@ trait FunctionalTesterActions
      * @throws \Codeception\Exception\ModuleException
      * @see \Codeception\Module\Yii2::amLoggedInAs()
      */
-    public function amLoggedInAs(\yii\web\IdentityInterface|string|int $user): void {
+    public function amLoggedInAs(\yii\web\IdentityInterface|string|int $user): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Condition('amLoggedInAs', func_get_args()));
     }
 
@@ -293,11 +309,11 @@ trait FunctionalTesterActions
      * ```
      * instead of calling `haveFixtures` in Cest `_before`
      *
-     * @param $fixtures
      * @part fixtures
      * @see \Codeception\Module\Yii2::haveFixtures()
      */
-    public function haveFixtures($fixtures): void {
+    public function haveFixtures($fixtures): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('haveFixtures', func_get_args()));
     }
 
@@ -311,7 +327,8 @@ trait FunctionalTesterActions
      * @return array
      * @see \Codeception\Module\Yii2::grabFixtures()
      */
-    public function grabFixtures() {
+    public function grabFixtures()
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('grabFixtures', func_get_args()));
     }
 
@@ -333,13 +350,13 @@ trait FunctionalTesterActions
      * $user = $I->grabFixture('users', 'user1');
      * ```
      *
-     * @param $name
      * @throws \Codeception\Exception\ModuleException if the fixture is not found
      * @return mixed
      * @part fixtures
      * @see \Codeception\Module\Yii2::grabFixture()
      */
-    public function grabFixture($name, $index = null) {
+    public function grabFixture($name, $index = null)
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('grabFixture', func_get_args()));
     }
 
@@ -356,11 +373,11 @@ trait FunctionalTesterActions
      * @template T of \yii\db\ActiveRecord
      * @param class-string<T> $model
      * @param array<string, mixed> $attributes
-     * @return mixed
      * @part orm
      * @see \Codeception\Module\Yii2::haveRecord()
      */
-    public function haveRecord(string $model, $attributes = []): mixed {
+    public function haveRecord(string $model, $attributes = []): mixed
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('haveRecord', func_get_args()));
     }
 
@@ -378,7 +395,8 @@ trait FunctionalTesterActions
      * @part orm
      * @see \Codeception\Module\Yii2::seeRecord()
      */
-    public function seeRecord(string $model, array $attributes = []): void {
+    public function seeRecord(string $model, array $attributes = []): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeRecord', func_get_args()));
     }
 
@@ -396,7 +414,8 @@ trait FunctionalTesterActions
      * @part orm
      * @see \Codeception\Module\Yii2::dontSeeRecord()
      */
-    public function dontSeeRecord(string $model, array $attributes = []): void {
+    public function dontSeeRecord(string $model, array $attributes = []): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('dontSeeRecord', func_get_args()));
     }
 
@@ -414,7 +433,8 @@ trait FunctionalTesterActions
      * @part orm
      * @see \Codeception\Module\Yii2::grabRecord()
      */
-    public function grabRecord(string $model, array $attributes = []): \yii\db\ActiveRecord|array|null {
+    public function grabRecord(string $model, array $attributes = []): \yii\db\ActiveRecord|array|null
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('grabRecord', func_get_args()));
     }
 
@@ -431,7 +451,8 @@ trait FunctionalTesterActions
      * @param array $params Additional route parameters
      * @see \Codeception\Module\Yii2::amOnRoute()
      */
-    public function amOnRoute(string $route, array $params = []): void {
+    public function amOnRoute(string $route, array $params = []): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Condition('amOnRoute', func_get_args()));
     }
 
@@ -450,7 +471,8 @@ trait FunctionalTesterActions
      * @deprecated in your tests you can use \Yii::$app directly.
      * @see \Codeception\Module\Yii2::grabComponent()
      */
-    public function grabComponent(string $component): ?object {
+    public function grabComponent(string $component): ?object
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('grabComponent', func_get_args()));
     }
 
@@ -468,12 +490,12 @@ trait FunctionalTesterActions
      * $I->seeEmailIsSent(3);
      * ```
      *
-     * @param int|null $num
      * @throws \Codeception\Exception\ModuleException
      * @part email
      * @see \Codeception\Module\Yii2::seeEmailIsSent()
      */
-    public function seeEmailIsSent(?int $num = null): void {
+    public function seeEmailIsSent(?int $num = null): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeEmailIsSent', func_get_args()));
     }
 
@@ -485,7 +507,8 @@ trait FunctionalTesterActions
      * @part email
      * @see \Codeception\Module\Yii2::dontSeeEmailIsSent()
      */
-    public function dontSeeEmailIsSent(): void {
+    public function dontSeeEmailIsSent(): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('dontSeeEmailIsSent', func_get_args()));
     }
 
@@ -505,10 +528,10 @@ trait FunctionalTesterActions
      *
      * @part email
      * @throws \Codeception\Exception\ModuleException
-     * @return array
      * @see \Codeception\Module\Yii2::grabSentEmails()
      */
-    public function grabSentEmails(): array {
+    public function grabSentEmails(): array
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('grabSentEmails', func_get_args()));
     }
 
@@ -526,7 +549,8 @@ trait FunctionalTesterActions
      * @part email
      * @see \Codeception\Module\Yii2::grabLastSentEmail()
      */
-    public function grabLastSentEmail(): object {
+    public function grabLastSentEmail(): object
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('grabLastSentEmail', func_get_args()));
     }
 
@@ -535,10 +559,10 @@ trait FunctionalTesterActions
      *
      * Returns a list of regex patterns for recognized domain names
      *
-     * @return array
      * @see \Codeception\Module\Yii2::getInternalDomains()
      */
-    public function getInternalDomains(): array {
+    public function getInternalDomains(): array
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('getInternalDomains', func_get_args()));
     }
 
@@ -551,7 +575,8 @@ trait FunctionalTesterActions
      * @param array $params Additional cookie params like `domain`, `path`, `expires` and `secure`.
      * @see \Codeception\Module\Yii2::setCookie()
      */
-    public function setCookie($name, $val, $params = []) {
+    public function setCookie($name, $val, $params = [])
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('setCookie', func_get_args()));
     }
 
@@ -563,7 +588,8 @@ trait FunctionalTesterActions
      * @return string[] Returns an array containing the name of the CSRF param and the masked CSRF token.
      * @see \Codeception\Module\Yii2::createAndSetCsrfCookie()
      */
-    public function createAndSetCsrfCookie(string $val): array {
+    public function createAndSetCsrfCookie(string $val): array
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('createAndSetCsrfCookie', func_get_args()));
     }
 
@@ -573,7 +599,8 @@ trait FunctionalTesterActions
      * Authenticates user for HTTP_AUTH
      * @see \Codeception\Lib\InnerBrowser::amHttpAuthenticated()
      */
-    public function amHttpAuthenticated(string $username, string $password): void {
+    public function amHttpAuthenticated(string $username, string $password): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Condition('amHttpAuthenticated', func_get_args()));
     }
 
@@ -605,7 +632,8 @@ trait FunctionalTesterActions
      *        requests
      * @see \Codeception\Lib\InnerBrowser::haveHttpHeader()
      */
-    public function haveHttpHeader(string $name, string $value): void {
+    public function haveHttpHeader(string $name, string $value): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('haveHttpHeader', func_get_args()));
     }
 
@@ -628,7 +656,8 @@ trait FunctionalTesterActions
      * @param string $name the name of the header to unset.
      * @see \Codeception\Lib\InnerBrowser::unsetHttpHeader()
      */
-    public function unsetHttpHeader(string $name): void {
+    public function unsetHttpHeader(string $name): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('unsetHttpHeader', func_get_args()));
     }
 
@@ -638,7 +667,8 @@ trait FunctionalTesterActions
      * @deprecated Use [unsetHttpHeader](#unsetHttpHeader) instead
      * @see \Codeception\Lib\InnerBrowser::deleteHeader()
      */
-    public function deleteHeader(string $name): void {
+    public function deleteHeader(string $name): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('deleteHeader', func_get_args()));
     }
 
@@ -656,7 +686,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::amOnPage()
      */
-    public function amOnPage(string $page): void {
+    public function amOnPage(string $page): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Condition('amOnPage', func_get_args()));
     }
 
@@ -691,7 +722,8 @@ trait FunctionalTesterActions
      * @param array|string $link
      * @see \Codeception\Lib\InnerBrowser::click()
      */
-    public function click($link, $context = null): void {
+    public function click($link, $context = null): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('click', func_get_args()));
     }
 
@@ -728,7 +760,8 @@ trait FunctionalTesterActions
      * @param array|string $selector optional
      * @see \Codeception\Lib\InnerBrowser::see()
      */
-    public function see(string $text, $selector = null): void {
+    public function see(string $text, $selector = null): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('see', func_get_args()));
     }
 
@@ -763,7 +796,8 @@ trait FunctionalTesterActions
      * @param array|string $selector optional
      * @see \Codeception\Lib\InnerBrowser::dontSee()
      */
-    public function dontSee(string $text, $selector = null): void {
+    public function dontSee(string $text, $selector = null): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('dontSee', func_get_args()));
     }
 
@@ -779,7 +813,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::seeInSource()
      */
-    public function seeInSource(string $raw): void {
+    public function seeInSource(string $raw): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeInSource', func_get_args()));
     }
 
@@ -795,7 +830,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::dontSeeInSource()
      */
-    public function dontSeeInSource(string $raw): void {
+    public function dontSeeInSource(string $raw): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('dontSeeInSource', func_get_args()));
     }
 
@@ -812,7 +848,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::seeLink()
      */
-    public function seeLink(string $text, ?string $url = null): void {
+    public function seeLink(string $text, ?string $url = null): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeLink', func_get_args()));
     }
 
@@ -829,7 +866,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::dontSeeLink()
      */
-    public function dontSeeLink(string $text, string $url = ''): void {
+    public function dontSeeLink(string $text, string $url = ''): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('dontSeeLink', func_get_args()));
     }
 
@@ -847,7 +885,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::seeInCurrentUrl()
      */
-    public function seeInCurrentUrl(string $uri): void {
+    public function seeInCurrentUrl(string $uri): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeInCurrentUrl', func_get_args()));
     }
 
@@ -862,7 +901,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::dontSeeInCurrentUrl()
      */
-    public function dontSeeInCurrentUrl(string $uri): void {
+    public function dontSeeInCurrentUrl(string $uri): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('dontSeeInCurrentUrl', func_get_args()));
     }
 
@@ -879,7 +919,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::seeCurrentUrlEquals()
      */
-    public function seeCurrentUrlEquals(string $uri): void {
+    public function seeCurrentUrlEquals(string $uri): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeCurrentUrlEquals', func_get_args()));
     }
 
@@ -896,7 +937,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::dontSeeCurrentUrlEquals()
      */
-    public function dontSeeCurrentUrlEquals(string $uri): void {
+    public function dontSeeCurrentUrlEquals(string $uri): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('dontSeeCurrentUrlEquals', func_get_args()));
     }
 
@@ -912,7 +954,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::seeCurrentUrlMatches()
      */
-    public function seeCurrentUrlMatches(string $uri): void {
+    public function seeCurrentUrlMatches(string $uri): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeCurrentUrlMatches', func_get_args()));
     }
 
@@ -928,7 +971,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::dontSeeCurrentUrlMatches()
      */
-    public function dontSeeCurrentUrlMatches(string $uri): void {
+    public function dontSeeCurrentUrlMatches(string $uri): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('dontSeeCurrentUrlMatches', func_get_args()));
     }
 
@@ -945,7 +989,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::grabFromCurrentUrl()
      */
-    public function grabFromCurrentUrl(?string $uri = null): mixed {
+    public function grabFromCurrentUrl(?string $uri = null): mixed
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('grabFromCurrentUrl', func_get_args()));
     }
 
@@ -962,7 +1007,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::seeCheckboxIsChecked()
      */
-    public function seeCheckboxIsChecked($checkbox): void {
+    public function seeCheckboxIsChecked($checkbox): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeCheckboxIsChecked', func_get_args()));
     }
 
@@ -978,7 +1024,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::dontSeeCheckboxIsChecked()
      */
-    public function dontSeeCheckboxIsChecked($checkbox): void {
+    public function dontSeeCheckboxIsChecked($checkbox): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('dontSeeCheckboxIsChecked', func_get_args()));
     }
 
@@ -1001,7 +1048,8 @@ trait FunctionalTesterActions
      * @param array|string $field
      * @see \Codeception\Lib\InnerBrowser::seeInField()
      */
-    public function seeInField($field, $value): void {
+    public function seeInField($field, $value): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeInField', func_get_args()));
     }
 
@@ -1023,7 +1071,8 @@ trait FunctionalTesterActions
      * @param array|string $field
      * @see \Codeception\Lib\InnerBrowser::dontSeeInField()
      */
-    public function dontSeeInField($field, $value): void {
+    public function dontSeeInField($field, $value): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('dontSeeInField', func_get_args()));
     }
 
@@ -1084,7 +1133,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::seeInFormFields()
      */
-    public function seeInFormFields($formSelector, array $params): void {
+    public function seeInFormFields($formSelector, array $params): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeInFormFields', func_get_args()));
     }
 
@@ -1126,7 +1176,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::dontSeeInFormFields()
      */
-    public function dontSeeInFormFields($formSelector, array $params): void {
+    public function dontSeeInFormFields($formSelector, array $params): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('dontSeeInFormFields', func_get_args()));
     }
 
@@ -1305,7 +1356,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::submitForm()
      */
-    public function submitForm($selector, array $params, ?string $button = null): void {
+    public function submitForm($selector, array $params, ?string $button = null): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('submitForm', func_get_args()));
     }
 
@@ -1321,7 +1373,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::fillField()
      */
-    public function fillField($field, $value): void {
+    public function fillField($field, $value): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('fillField', func_get_args()));
     }
 
@@ -1353,7 +1406,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::selectOption()
      */
-    public function selectOption($select, $option): void {
+    public function selectOption($select, $option): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('selectOption', func_get_args()));
     }
 
@@ -1368,7 +1422,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::checkOption()
      */
-    public function checkOption($option): void {
+    public function checkOption($option): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('checkOption', func_get_args()));
     }
 
@@ -1383,7 +1438,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::uncheckOption()
      */
-    public function uncheckOption($option): void {
+    public function uncheckOption($option): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('uncheckOption', func_get_args()));
     }
 
@@ -1399,7 +1455,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::attachFile()
      */
-    public function attachFile($field, string $filename): void {
+    public function attachFile($field, string $filename): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('attachFile', func_get_args()));
     }
 
@@ -1410,7 +1467,8 @@ trait FunctionalTesterActions
      * See `sendAjaxPostRequest()`
      * @see \Codeception\Lib\InnerBrowser::sendAjaxGetRequest()
      */
-    public function sendAjaxGetRequest(string $uri, array $params = []): void {
+    public function sendAjaxGetRequest(string $uri, array $params = []): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('sendAjaxGetRequest', func_get_args()));
     }
 
@@ -1437,7 +1495,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::sendAjaxPostRequest()
      */
-    public function sendAjaxPostRequest(string $uri, array $params = []): void {
+    public function sendAjaxPostRequest(string $uri, array $params = []): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('sendAjaxPostRequest', func_get_args()));
     }
 
@@ -1453,7 +1512,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::sendAjaxRequest()
      */
-    public function sendAjaxRequest(string $method, string $uri, array $params = []): void {
+    public function sendAjaxRequest(string $method, string $uri, array $params = []): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('sendAjaxRequest', func_get_args()));
     }
 
@@ -1471,7 +1531,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::makeHtmlSnapshot()
      */
-    public function makeHtmlSnapshot(?string $name = null): void {
+    public function makeHtmlSnapshot(?string $name = null): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('makeHtmlSnapshot', func_get_args()));
     }
 
@@ -1490,7 +1551,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::grabTextFrom()
      */
-    public function grabTextFrom($cssOrXPathOrRegex): mixed {
+    public function grabTextFrom($cssOrXPathOrRegex): mixed
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('grabTextFrom', func_get_args()));
     }
 
@@ -1506,7 +1568,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::grabAttributeFrom()
      */
-    public function grabAttributeFrom($cssOrXpath, string $attribute): mixed {
+    public function grabAttributeFrom($cssOrXpath, string $attribute): mixed
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('grabAttributeFrom', func_get_args()));
     }
 
@@ -1534,7 +1597,8 @@ trait FunctionalTesterActions
      * @return string[]
      * @see \Codeception\Lib\InnerBrowser::grabMultiple()
      */
-    public function grabMultiple($cssOrXpath, ?string $attribute = null): array {
+    public function grabMultiple($cssOrXpath, ?string $attribute = null): array
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('grabMultiple', func_get_args()));
     }
 
@@ -1553,7 +1617,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::grabValueFrom()
      */
-    public function grabValueFrom($field): mixed {
+    public function grabValueFrom($field): mixed
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('grabValueFrom', func_get_args()));
     }
 
@@ -1565,7 +1630,8 @@ trait FunctionalTesterActions
      * If the cookie is set by an ajax request (XMLHttpRequest), there might be some delay caused by the browser, so try `$I->wait(0.1)`.
      * @see \Codeception\Lib\InnerBrowser::grabCookie()
      */
-    public function grabCookie(string $cookie, array $params = []): mixed {
+    public function grabCookie(string $cookie, array $params = []): mixed
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('grabCookie', func_get_args()));
     }
 
@@ -1578,7 +1644,8 @@ trait FunctionalTesterActions
      * @return string Current page source code.
      * @see \Codeception\Lib\InnerBrowser::grabPageSource()
      */
-    public function grabPageSource(): string {
+    public function grabPageSource(): string
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('grabPageSource', func_get_args()));
     }
 
@@ -1596,7 +1663,8 @@ trait FunctionalTesterActions
      * @return mixed|void
      * @see \Codeception\Lib\InnerBrowser::seeCookie()
      */
-    public function seeCookie($cookie, $params = []) {
+    public function seeCookie($cookie, $params = [])
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeCookie', func_get_args()));
     }
 
@@ -1609,7 +1677,8 @@ trait FunctionalTesterActions
      * @return mixed|void
      * @see \Codeception\Lib\InnerBrowser::dontSeeCookie()
      */
-    public function dontSeeCookie($cookie, $params = []) {
+    public function dontSeeCookie($cookie, $params = [])
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('dontSeeCookie', func_get_args()));
     }
 
@@ -1622,7 +1691,8 @@ trait FunctionalTesterActions
      * @return mixed|void
      * @see \Codeception\Lib\InnerBrowser::resetCookie()
      */
-    public function resetCookie($cookie, $params = []) {
+    public function resetCookie($cookie, $params = [])
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('resetCookie', func_get_args()));
     }
 
@@ -1645,7 +1715,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::seeElement()
      */
-    public function seeElement($selector, array $attributes = []): void {
+    public function seeElement($selector, array $attributes = []): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeElement', func_get_args()));
     }
 
@@ -1664,7 +1735,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::dontSeeElement()
      */
-    public function dontSeeElement($selector, array $attributes = []): void {
+    public function dontSeeElement($selector, array $attributes = []): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('dontSeeElement', func_get_args()));
     }
 
@@ -1682,7 +1754,8 @@ trait FunctionalTesterActions
      * @param int|int[] $expected
      * @see \Codeception\Lib\InnerBrowser::seeNumberOfElements()
      */
-    public function seeNumberOfElements($selector, $expected): void {
+    public function seeNumberOfElements($selector, $expected): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeNumberOfElements', func_get_args()));
     }
 
@@ -1699,7 +1772,8 @@ trait FunctionalTesterActions
      * @return mixed|void
      * @see \Codeception\Lib\InnerBrowser::seeOptionIsSelected()
      */
-    public function seeOptionIsSelected($selector, $optionText) {
+    public function seeOptionIsSelected($selector, $optionText)
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeOptionIsSelected', func_get_args()));
     }
 
@@ -1716,7 +1790,8 @@ trait FunctionalTesterActions
      * @return mixed|void
      * @see \Codeception\Lib\InnerBrowser::dontSeeOptionIsSelected()
      */
-    public function dontSeeOptionIsSelected($selector, $optionText) {
+    public function dontSeeOptionIsSelected($selector, $optionText)
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('dontSeeOptionIsSelected', func_get_args()));
     }
 
@@ -1726,7 +1801,8 @@ trait FunctionalTesterActions
      * Asserts that current page has 404 response status code.
      * @see \Codeception\Lib\InnerBrowser::seePageNotFound()
      */
-    public function seePageNotFound(): void {
+    public function seePageNotFound(): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seePageNotFound', func_get_args()));
     }
 
@@ -1744,7 +1820,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::seeResponseCodeIs()
      */
-    public function seeResponseCodeIs(int $code): void {
+    public function seeResponseCodeIs(int $code): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeResponseCodeIs', func_get_args()));
     }
 
@@ -1754,7 +1831,8 @@ trait FunctionalTesterActions
      * Checks that response code is between a certain range. Between actually means [from <= CODE <= to]
      * @see \Codeception\Lib\InnerBrowser::seeResponseCodeIsBetween()
      */
-    public function seeResponseCodeIsBetween(int $from, int $to): void {
+    public function seeResponseCodeIsBetween(int $from, int $to): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeResponseCodeIsBetween', func_get_args()));
     }
 
@@ -1772,7 +1850,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::dontSeeResponseCodeIs()
      */
-    public function dontSeeResponseCodeIs(int $code): void {
+    public function dontSeeResponseCodeIs(int $code): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('dontSeeResponseCodeIs', func_get_args()));
     }
 
@@ -1782,7 +1861,8 @@ trait FunctionalTesterActions
      * Checks that the response code 2xx
      * @see \Codeception\Lib\InnerBrowser::seeResponseCodeIsSuccessful()
      */
-    public function seeResponseCodeIsSuccessful(): void {
+    public function seeResponseCodeIsSuccessful(): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeResponseCodeIsSuccessful', func_get_args()));
     }
 
@@ -1792,7 +1872,8 @@ trait FunctionalTesterActions
      * Checks that the response code 3xx
      * @see \Codeception\Lib\InnerBrowser::seeResponseCodeIsRedirection()
      */
-    public function seeResponseCodeIsRedirection(): void {
+    public function seeResponseCodeIsRedirection(): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeResponseCodeIsRedirection', func_get_args()));
     }
 
@@ -1802,7 +1883,8 @@ trait FunctionalTesterActions
      * Checks that the response code is 4xx
      * @see \Codeception\Lib\InnerBrowser::seeResponseCodeIsClientError()
      */
-    public function seeResponseCodeIsClientError(): void {
+    public function seeResponseCodeIsClientError(): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeResponseCodeIsClientError', func_get_args()));
     }
 
@@ -1812,7 +1894,8 @@ trait FunctionalTesterActions
      * Checks that the response code is 5xx
      * @see \Codeception\Lib\InnerBrowser::seeResponseCodeIsServerError()
      */
-    public function seeResponseCodeIsServerError(): void {
+    public function seeResponseCodeIsServerError(): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeResponseCodeIsServerError', func_get_args()));
     }
 
@@ -1829,7 +1912,8 @@ trait FunctionalTesterActions
      * @return mixed|void
      * @see \Codeception\Lib\InnerBrowser::seeInTitle()
      */
-    public function seeInTitle($title) {
+    public function seeInTitle($title)
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeInTitle', func_get_args()));
     }
 
@@ -1841,7 +1925,8 @@ trait FunctionalTesterActions
      * @return mixed|void
      * @see \Codeception\Lib\InnerBrowser::dontSeeInTitle()
      */
-    public function dontSeeInTitle($title) {
+    public function dontSeeInTitle($title)
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('dontSeeInTitle', func_get_args()));
     }
 
@@ -1862,7 +1947,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::switchToIframe()
      */
-    public function switchToIframe(string $name): void {
+    public function switchToIframe(string $name): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('switchToIframe', func_get_args()));
     }
 
@@ -1874,7 +1960,8 @@ trait FunctionalTesterActions
      * @param int $numberOfSteps (default value 1)
      * @see \Codeception\Lib\InnerBrowser::moveBack()
      */
-    public function moveBack(int $numberOfSteps = 1): void {
+    public function moveBack(int $numberOfSteps = 1): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('moveBack', func_get_args()));
     }
 
@@ -1889,7 +1976,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::setServerParameters()
      */
-    public function setServerParameters(array $params): void {
+    public function setServerParameters(array $params): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('setServerParameters', func_get_args()));
     }
 
@@ -1903,7 +1991,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::haveServerParameter()
      */
-    public function haveServerParameter(string $name, string $value): void {
+    public function haveServerParameter(string $name, string $value): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('haveServerParameter', func_get_args()));
     }
 
@@ -1918,7 +2007,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::stopFollowingRedirects()
      */
-    public function stopFollowingRedirects(): void {
+    public function stopFollowingRedirects(): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('stopFollowingRedirects', func_get_args()));
     }
 
@@ -1933,7 +2023,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::startFollowingRedirects()
      */
-    public function startFollowingRedirects(): void {
+    public function startFollowingRedirects(): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('startFollowingRedirects', func_get_args()));
     }
 
@@ -1948,7 +2039,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::followRedirect()
      */
-    public function followRedirect(): void {
+    public function followRedirect(): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('followRedirect', func_get_args()));
     }
 
@@ -1963,7 +2055,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Lib\InnerBrowser::setMaxRedirects()
      */
-    public function setMaxRedirects(int $maxRedirects): void {
+    public function setMaxRedirects(int $maxRedirects): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('setMaxRedirects', func_get_args()));
     }
 
@@ -1994,7 +2087,8 @@ trait FunctionalTesterActions
      * ```
      * @see \Codeception\Module\Asserts::expectThrowable()
      */
-    public function expectThrowable(\Throwable|string $throwable, callable $callback): void {
+    public function expectThrowable(\Throwable|string $throwable, callable $callback): void
+    {
         $this->getScenario()->runStep(new \Codeception\Step\Action('expectThrowable', func_get_args()));
     }
 
@@ -2004,7 +2098,8 @@ trait FunctionalTesterActions
      * Asserts that a file does not exist.
      * @see \Codeception\Module\AbstractAsserts::assertFileNotExists()
      */
-    public function assertFileNotExists(string $filename, string $message = '') {
+    public function assertFileNotExists(string $filename, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertFileNotExists', func_get_args()));
     }
 
@@ -2017,7 +2112,8 @@ trait FunctionalTesterActions
      * @param mixed $actual
      * @see \Codeception\Module\AbstractAsserts::assertGreaterOrEquals()
      */
-    public function assertGreaterOrEquals($expected, $actual, string $message = '') {
+    public function assertGreaterOrEquals($expected, $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertGreaterOrEquals', func_get_args()));
     }
 
@@ -2029,7 +2125,8 @@ trait FunctionalTesterActions
      * @param mixed $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsEmpty()
      */
-    public function assertIsEmpty($actual, string $message = '') {
+    public function assertIsEmpty($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsEmpty', func_get_args()));
     }
 
@@ -2042,7 +2139,8 @@ trait FunctionalTesterActions
      * @param mixed $actual
      * @see \Codeception\Module\AbstractAsserts::assertLessOrEquals()
      */
-    public function assertLessOrEquals($expected, $actual, string $message = '') {
+    public function assertLessOrEquals($expected, $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertLessOrEquals', func_get_args()));
     }
 
@@ -2052,7 +2150,8 @@ trait FunctionalTesterActions
      * Asserts that a string does not match a given regular expression.
      * @see \Codeception\Module\AbstractAsserts::assertNotRegExp()
      */
-    public function assertNotRegExp(string $pattern, string $string, string $message = '') {
+    public function assertNotRegExp(string $pattern, string $string, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertNotRegExp', func_get_args()));
     }
 
@@ -2062,7 +2161,8 @@ trait FunctionalTesterActions
      * Asserts that a string matches a given regular expression.
      * @see \Codeception\Module\AbstractAsserts::assertRegExp()
      */
-    public function assertRegExp(string $pattern, string $string, string $message = '') {
+    public function assertRegExp(string $pattern, string $string, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertRegExp', func_get_args()));
     }
 
@@ -2074,7 +2174,8 @@ trait FunctionalTesterActions
      * @param mixed $value
      * @see \Codeception\Module\AbstractAsserts::assertThatItsNot()
      */
-    public function assertThatItsNot($value, \PHPUnit\Framework\Constraint\Constraint $constraint, string $message = '') {
+    public function assertThatItsNot($value, \PHPUnit\Framework\Constraint\Constraint $constraint, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertThatItsNot', func_get_args()));
     }
 
@@ -2087,7 +2188,8 @@ trait FunctionalTesterActions
      * @param array|\ArrayAccess $array
      * @see \Codeception\Module\AbstractAsserts::assertArrayHasKey()
      */
-    public function assertArrayHasKey($key, $array, string $message = '') {
+    public function assertArrayHasKey($key, $array, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertArrayHasKey', func_get_args()));
     }
 
@@ -2100,7 +2202,8 @@ trait FunctionalTesterActions
      * @param array|\ArrayAccess $array
      * @see \Codeception\Module\AbstractAsserts::assertArrayNotHasKey()
      */
-    public function assertArrayNotHasKey($key, $array, string $message = '') {
+    public function assertArrayNotHasKey($key, $array, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertArrayNotHasKey', func_get_args()));
     }
 
@@ -2110,7 +2213,8 @@ trait FunctionalTesterActions
      * Asserts that a class has a specified attribute.
      * @see \Codeception\Module\AbstractAsserts::assertClassHasAttribute()
      */
-    public function assertClassHasAttribute(string $attributeName, string $className, string $message = '') {
+    public function assertClassHasAttribute(string $attributeName, string $className, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertClassHasAttribute', func_get_args()));
     }
 
@@ -2120,7 +2224,8 @@ trait FunctionalTesterActions
      * Asserts that a class has a specified static attribute.
      * @see \Codeception\Module\AbstractAsserts::assertClassHasStaticAttribute()
      */
-    public function assertClassHasStaticAttribute(string $attributeName, string $className, string $message = '') {
+    public function assertClassHasStaticAttribute(string $attributeName, string $className, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertClassHasStaticAttribute', func_get_args()));
     }
 
@@ -2130,7 +2235,8 @@ trait FunctionalTesterActions
      * Asserts that a class does not have a specified attribute.
      * @see \Codeception\Module\AbstractAsserts::assertClassNotHasAttribute()
      */
-    public function assertClassNotHasAttribute(string $attributeName, string $className, string $message = '') {
+    public function assertClassNotHasAttribute(string $attributeName, string $className, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertClassNotHasAttribute', func_get_args()));
     }
 
@@ -2140,7 +2246,8 @@ trait FunctionalTesterActions
      * Asserts that a class does not have a specified static attribute.
      * @see \Codeception\Module\AbstractAsserts::assertClassNotHasStaticAttribute()
      */
-    public function assertClassNotHasStaticAttribute(string $attributeName, string $className, string $message = '') {
+    public function assertClassNotHasStaticAttribute(string $attributeName, string $className, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertClassNotHasStaticAttribute', func_get_args()));
     }
 
@@ -2152,7 +2259,8 @@ trait FunctionalTesterActions
      * @param mixed $needle
      * @see \Codeception\Module\AbstractAsserts::assertContains()
      */
-    public function assertContains($needle, iterable $haystack, string $message = '') {
+    public function assertContains($needle, iterable $haystack, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertContains', func_get_args()));
     }
 
@@ -2162,7 +2270,8 @@ trait FunctionalTesterActions
      * @param mixed $needle
      * @see \Codeception\Module\AbstractAsserts::assertContainsEquals()
      */
-    public function assertContainsEquals($needle, iterable $haystack, string $message = '') {
+    public function assertContainsEquals($needle, iterable $haystack, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertContainsEquals', func_get_args()));
     }
 
@@ -2172,7 +2281,8 @@ trait FunctionalTesterActions
      * Asserts that a haystack contains only values of a given type.
      * @see \Codeception\Module\AbstractAsserts::assertContainsOnly()
      */
-    public function assertContainsOnly(string $type, iterable $haystack, ?bool $isNativeType = null, string $message = '') {
+    public function assertContainsOnly(string $type, iterable $haystack, ?bool $isNativeType = null, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertContainsOnly', func_get_args()));
     }
 
@@ -2182,7 +2292,8 @@ trait FunctionalTesterActions
      * Asserts that a haystack contains only instances of a given class name.
      * @see \Codeception\Module\AbstractAsserts::assertContainsOnlyInstancesOf()
      */
-    public function assertContainsOnlyInstancesOf(string $className, iterable $haystack, string $message = '') {
+    public function assertContainsOnlyInstancesOf(string $className, iterable $haystack, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertContainsOnlyInstancesOf', func_get_args()));
     }
 
@@ -2194,7 +2305,8 @@ trait FunctionalTesterActions
      * @param \Countable|iterable $haystack
      * @see \Codeception\Module\AbstractAsserts::assertCount()
      */
-    public function assertCount(int $expectedCount, $haystack, string $message = '') {
+    public function assertCount(int $expectedCount, $haystack, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertCount', func_get_args()));
     }
 
@@ -2204,7 +2316,8 @@ trait FunctionalTesterActions
      * Asserts that a directory does not exist.
      * @see \Codeception\Module\AbstractAsserts::assertDirectoryDoesNotExist()
      */
-    public function assertDirectoryDoesNotExist(string $directory, string $message = '') {
+    public function assertDirectoryDoesNotExist(string $directory, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertDirectoryDoesNotExist', func_get_args()));
     }
 
@@ -2214,7 +2327,8 @@ trait FunctionalTesterActions
      * Asserts that a directory exists.
      * @see \Codeception\Module\AbstractAsserts::assertDirectoryExists()
      */
-    public function assertDirectoryExists(string $directory, string $message = '') {
+    public function assertDirectoryExists(string $directory, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertDirectoryExists', func_get_args()));
     }
 
@@ -2224,7 +2338,8 @@ trait FunctionalTesterActions
      * Asserts that a directory exists and is not readable.
      * @see \Codeception\Module\AbstractAsserts::assertDirectoryIsNotReadable()
      */
-    public function assertDirectoryIsNotReadable(string $directory, string $message = '') {
+    public function assertDirectoryIsNotReadable(string $directory, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertDirectoryIsNotReadable', func_get_args()));
     }
 
@@ -2234,7 +2349,8 @@ trait FunctionalTesterActions
      * Asserts that a directory exists and is not writable.
      * @see \Codeception\Module\AbstractAsserts::assertDirectoryIsNotWritable()
      */
-    public function assertDirectoryIsNotWritable(string $directory, string $message = '') {
+    public function assertDirectoryIsNotWritable(string $directory, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertDirectoryIsNotWritable', func_get_args()));
     }
 
@@ -2244,7 +2360,8 @@ trait FunctionalTesterActions
      * Asserts that a directory exists and is readable.
      * @see \Codeception\Module\AbstractAsserts::assertDirectoryIsReadable()
      */
-    public function assertDirectoryIsReadable(string $directory, string $message = '') {
+    public function assertDirectoryIsReadable(string $directory, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertDirectoryIsReadable', func_get_args()));
     }
 
@@ -2254,7 +2371,8 @@ trait FunctionalTesterActions
      * Asserts that a directory exists and is writable.
      * @see \Codeception\Module\AbstractAsserts::assertDirectoryIsWritable()
      */
-    public function assertDirectoryIsWritable(string $directory, string $message = '') {
+    public function assertDirectoryIsWritable(string $directory, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertDirectoryIsWritable', func_get_args()));
     }
 
@@ -2264,7 +2382,8 @@ trait FunctionalTesterActions
      * Asserts that a string does not match a given regular expression.
      * @see \Codeception\Module\AbstractAsserts::assertDoesNotMatchRegularExpression()
      */
-    public function assertDoesNotMatchRegularExpression(string $pattern, string $string, string $message = '') {
+    public function assertDoesNotMatchRegularExpression(string $pattern, string $string, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertDoesNotMatchRegularExpression', func_get_args()));
     }
 
@@ -2278,7 +2397,8 @@ trait FunctionalTesterActions
      * @phpstan-assert empty $actual
      * @see \Codeception\Module\AbstractAsserts::assertEmpty()
      */
-    public function assertEmpty($actual, string $message = '') {
+    public function assertEmpty($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertEmpty', func_get_args()));
     }
 
@@ -2291,7 +2411,8 @@ trait FunctionalTesterActions
      * @param mixed $actual
      * @see \Codeception\Module\AbstractAsserts::assertEquals()
      */
-    public function assertEquals($expected, $actual, string $message = '') {
+    public function assertEquals($expected, $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertEquals', func_get_args()));
     }
 
@@ -2304,7 +2425,8 @@ trait FunctionalTesterActions
      * @param mixed $actual
      * @see \Codeception\Module\AbstractAsserts::assertEqualsCanonicalizing()
      */
-    public function assertEqualsCanonicalizing($expected, $actual, string $message = '') {
+    public function assertEqualsCanonicalizing($expected, $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertEqualsCanonicalizing', func_get_args()));
     }
 
@@ -2317,7 +2439,8 @@ trait FunctionalTesterActions
      * @param mixed $actual
      * @see \Codeception\Module\AbstractAsserts::assertEqualsIgnoringCase()
      */
-    public function assertEqualsIgnoringCase($expected, $actual, string $message = '') {
+    public function assertEqualsIgnoringCase($expected, $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertEqualsIgnoringCase', func_get_args()));
     }
 
@@ -2330,7 +2453,8 @@ trait FunctionalTesterActions
      * @param mixed $actual
      * @see \Codeception\Module\AbstractAsserts::assertEqualsWithDelta()
      */
-    public function assertEqualsWithDelta($expected, $actual, float $delta, string $message = '') {
+    public function assertEqualsWithDelta($expected, $actual, float $delta, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertEqualsWithDelta', func_get_args()));
     }
 
@@ -2344,7 +2468,8 @@ trait FunctionalTesterActions
      * @phpstan-assert false $condition
      * @see \Codeception\Module\AbstractAsserts::assertFalse()
      */
-    public function assertFalse($condition, string $message = '') {
+    public function assertFalse($condition, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertFalse', func_get_args()));
     }
 
@@ -2354,7 +2479,8 @@ trait FunctionalTesterActions
      * Asserts that a file does not exist.
      * @see \Codeception\Module\AbstractAsserts::assertFileDoesNotExist()
      */
-    public function assertFileDoesNotExist(string $filename, string $message = '') {
+    public function assertFileDoesNotExist(string $filename, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertFileDoesNotExist', func_get_args()));
     }
 
@@ -2364,7 +2490,8 @@ trait FunctionalTesterActions
      * Asserts that the contents of one file is equal to the contents of another file.
      * @see \Codeception\Module\AbstractAsserts::assertFileEquals()
      */
-    public function assertFileEquals(string $expected, string $actual, string $message = '') {
+    public function assertFileEquals(string $expected, string $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertFileEquals', func_get_args()));
     }
 
@@ -2374,7 +2501,8 @@ trait FunctionalTesterActions
      * Asserts that the contents of one file is equal to the contents of another file (canonicalizing).
      * @see \Codeception\Module\AbstractAsserts::assertFileEqualsCanonicalizing()
      */
-    public function assertFileEqualsCanonicalizing(string $expected, string $actual, string $message = '') {
+    public function assertFileEqualsCanonicalizing(string $expected, string $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertFileEqualsCanonicalizing', func_get_args()));
     }
 
@@ -2384,7 +2512,8 @@ trait FunctionalTesterActions
      * Asserts that the contents of one file is equal to the contents of another file (ignoring case).
      * @see \Codeception\Module\AbstractAsserts::assertFileEqualsIgnoringCase()
      */
-    public function assertFileEqualsIgnoringCase(string $expected, string $actual, string $message = '') {
+    public function assertFileEqualsIgnoringCase(string $expected, string $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertFileEqualsIgnoringCase', func_get_args()));
     }
 
@@ -2394,7 +2523,8 @@ trait FunctionalTesterActions
      * Asserts that a file exists.
      * @see \Codeception\Module\AbstractAsserts::assertFileExists()
      */
-    public function assertFileExists(string $filename, string $message = '') {
+    public function assertFileExists(string $filename, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertFileExists', func_get_args()));
     }
 
@@ -2404,7 +2534,8 @@ trait FunctionalTesterActions
      * Asserts that a file exists and is not readable.
      * @see \Codeception\Module\AbstractAsserts::assertFileIsNotReadable()
      */
-    public function assertFileIsNotReadable(string $file, string $message = '') {
+    public function assertFileIsNotReadable(string $file, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertFileIsNotReadable', func_get_args()));
     }
 
@@ -2414,7 +2545,8 @@ trait FunctionalTesterActions
      * Asserts that a file exists and is not writable.
      * @see \Codeception\Module\AbstractAsserts::assertFileIsNotWritable()
      */
-    public function assertFileIsNotWritable(string $file, string $message = '') {
+    public function assertFileIsNotWritable(string $file, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertFileIsNotWritable', func_get_args()));
     }
 
@@ -2424,7 +2556,8 @@ trait FunctionalTesterActions
      * Asserts that a file exists and is readable.
      * @see \Codeception\Module\AbstractAsserts::assertFileIsReadable()
      */
-    public function assertFileIsReadable(string $file, string $message = '') {
+    public function assertFileIsReadable(string $file, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertFileIsReadable', func_get_args()));
     }
 
@@ -2434,7 +2567,8 @@ trait FunctionalTesterActions
      * Asserts that a file exists and is writable.
      * @see \Codeception\Module\AbstractAsserts::assertFileIsWritable()
      */
-    public function assertFileIsWritable(string $file, string $message = '') {
+    public function assertFileIsWritable(string $file, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertFileIsWritable', func_get_args()));
     }
 
@@ -2444,7 +2578,8 @@ trait FunctionalTesterActions
      * Asserts that the contents of one file is not equal to the contents of another file.
      * @see \Codeception\Module\AbstractAsserts::assertFileNotEquals()
      */
-    public function assertFileNotEquals(string $expected, string $actual, string $message = '') {
+    public function assertFileNotEquals(string $expected, string $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertFileNotEquals', func_get_args()));
     }
 
@@ -2454,7 +2589,8 @@ trait FunctionalTesterActions
      * Asserts that the contents of one file is not equal to the contents of another file (canonicalizing).
      * @see \Codeception\Module\AbstractAsserts::assertFileNotEqualsCanonicalizing()
      */
-    public function assertFileNotEqualsCanonicalizing(string $expected, string $actual, string $message = '') {
+    public function assertFileNotEqualsCanonicalizing(string $expected, string $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertFileNotEqualsCanonicalizing', func_get_args()));
     }
 
@@ -2464,7 +2600,8 @@ trait FunctionalTesterActions
      * Asserts that the contents of one file is not equal to the contents of another file (ignoring case).
      * @see \Codeception\Module\AbstractAsserts::assertFileNotEqualsIgnoringCase()
      */
-    public function assertFileNotEqualsIgnoringCase(string $expected, string $actual, string $message = '') {
+    public function assertFileNotEqualsIgnoringCase(string $expected, string $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertFileNotEqualsIgnoringCase', func_get_args()));
     }
 
@@ -2476,7 +2613,8 @@ trait FunctionalTesterActions
      * @param mixed $actual
      * @see \Codeception\Module\AbstractAsserts::assertFinite()
      */
-    public function assertFinite($actual, string $message = '') {
+    public function assertFinite($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertFinite', func_get_args()));
     }
 
@@ -2489,7 +2627,8 @@ trait FunctionalTesterActions
      * @param mixed $actual
      * @see \Codeception\Module\AbstractAsserts::assertGreaterThan()
      */
-    public function assertGreaterThan($expected, $actual, string $message = '') {
+    public function assertGreaterThan($expected, $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertGreaterThan', func_get_args()));
     }
 
@@ -2502,7 +2641,8 @@ trait FunctionalTesterActions
      * @param mixed $actual
      * @see \Codeception\Module\AbstractAsserts::assertGreaterThanOrEqual()
      */
-    public function assertGreaterThanOrEqual($expected, $actual, string $message = '') {
+    public function assertGreaterThanOrEqual($expected, $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertGreaterThanOrEqual', func_get_args()));
     }
 
@@ -2514,7 +2654,8 @@ trait FunctionalTesterActions
      * @param mixed $actual
      * @see \Codeception\Module\AbstractAsserts::assertInfinite()
      */
-    public function assertInfinite($actual, string $message = '') {
+    public function assertInfinite($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertInfinite', func_get_args()));
     }
 
@@ -2531,7 +2672,8 @@ trait FunctionalTesterActions
      * @phpstan-assert =ExpectedType $actual
      * @see \Codeception\Module\AbstractAsserts::assertInstanceOf()
      */
-    public function assertInstanceOf(string $expected, $actual, string $message = '') {
+    public function assertInstanceOf(string $expected, $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertInstanceOf', func_get_args()));
     }
 
@@ -2545,7 +2687,8 @@ trait FunctionalTesterActions
      * @phpstan-assert array $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsArray()
      */
-    public function assertIsArray($actual, string $message = '') {
+    public function assertIsArray($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsArray', func_get_args()));
     }
 
@@ -2559,7 +2702,8 @@ trait FunctionalTesterActions
      * @phpstan-assert bool $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsBool()
      */
-    public function assertIsBool($actual, string $message = '') {
+    public function assertIsBool($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsBool', func_get_args()));
     }
 
@@ -2573,7 +2717,8 @@ trait FunctionalTesterActions
      * @phpstan-assert callable $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsCallable()
      */
-    public function assertIsCallable($actual, string $message = '') {
+    public function assertIsCallable($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsCallable', func_get_args()));
     }
 
@@ -2587,7 +2732,8 @@ trait FunctionalTesterActions
      * @phpstan-assert resource $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsClosedResource()
      */
-    public function assertIsClosedResource($actual, string $message = '') {
+    public function assertIsClosedResource($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsClosedResource', func_get_args()));
     }
 
@@ -2601,7 +2747,8 @@ trait FunctionalTesterActions
      * @phpstan-assert float $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsFloat()
      */
-    public function assertIsFloat($actual, string $message = '') {
+    public function assertIsFloat($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsFloat', func_get_args()));
     }
 
@@ -2615,7 +2762,8 @@ trait FunctionalTesterActions
      * @phpstan-assert int $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsInt()
      */
-    public function assertIsInt($actual, string $message = '') {
+    public function assertIsInt($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsInt', func_get_args()));
     }
 
@@ -2629,7 +2777,8 @@ trait FunctionalTesterActions
      * @phpstan-assert iterable $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsIterable()
      */
-    public function assertIsIterable($actual, string $message = '') {
+    public function assertIsIterable($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsIterable', func_get_args()));
     }
 
@@ -2643,7 +2792,8 @@ trait FunctionalTesterActions
      * @phpstan-assert !array $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsNotArray()
      */
-    public function assertIsNotArray($actual, string $message = '') {
+    public function assertIsNotArray($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsNotArray', func_get_args()));
     }
 
@@ -2657,7 +2807,8 @@ trait FunctionalTesterActions
      * @phpstan-assert !bool $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsNotBool()
      */
-    public function assertIsNotBool($actual, string $message = '') {
+    public function assertIsNotBool($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsNotBool', func_get_args()));
     }
 
@@ -2671,7 +2822,8 @@ trait FunctionalTesterActions
      * @phpstan-assert !callable $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsNotCallable()
      */
-    public function assertIsNotCallable($actual, string $message = '') {
+    public function assertIsNotCallable($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsNotCallable', func_get_args()));
     }
 
@@ -2685,7 +2837,8 @@ trait FunctionalTesterActions
      * @phpstan-assert !resource $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsNotClosedResource()
      */
-    public function assertIsNotClosedResource($actual, string $message = '') {
+    public function assertIsNotClosedResource($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsNotClosedResource', func_get_args()));
     }
 
@@ -2699,7 +2852,8 @@ trait FunctionalTesterActions
      * @phpstan-assert !float $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsNotFloat()
      */
-    public function assertIsNotFloat($actual, string $message = '') {
+    public function assertIsNotFloat($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsNotFloat', func_get_args()));
     }
 
@@ -2713,7 +2867,8 @@ trait FunctionalTesterActions
      * @phpstan-assert !int $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsNotInt()
      */
-    public function assertIsNotInt($actual, string $message = '') {
+    public function assertIsNotInt($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsNotInt', func_get_args()));
     }
 
@@ -2727,7 +2882,8 @@ trait FunctionalTesterActions
      * @phpstan-assert !iterable $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsNotIterable()
      */
-    public function assertIsNotIterable($actual, string $message = '') {
+    public function assertIsNotIterable($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsNotIterable', func_get_args()));
     }
 
@@ -2741,7 +2897,8 @@ trait FunctionalTesterActions
      * @phpstan-assert !numeric $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsNotNumeric()
      */
-    public function assertIsNotNumeric($actual, string $message = '') {
+    public function assertIsNotNumeric($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsNotNumeric', func_get_args()));
     }
 
@@ -2755,7 +2912,8 @@ trait FunctionalTesterActions
      * @phpstan-assert !object $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsNotObject()
      */
-    public function assertIsNotObject($actual, string $message = '') {
+    public function assertIsNotObject($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsNotObject', func_get_args()));
     }
 
@@ -2765,7 +2923,8 @@ trait FunctionalTesterActions
      * Asserts that a file/dir exists and is not readable.
      * @see \Codeception\Module\AbstractAsserts::assertIsNotReadable()
      */
-    public function assertIsNotReadable(string $filename, string $message = '') {
+    public function assertIsNotReadable(string $filename, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsNotReadable', func_get_args()));
     }
 
@@ -2779,7 +2938,8 @@ trait FunctionalTesterActions
      * @phpstan-assert !resource $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsNotResource()
      */
-    public function assertIsNotResource($actual, string $message = '') {
+    public function assertIsNotResource($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsNotResource', func_get_args()));
     }
 
@@ -2793,7 +2953,8 @@ trait FunctionalTesterActions
      * @psalm-assert !scalar $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsNotScalar()
      */
-    public function assertIsNotScalar($actual, string $message = '') {
+    public function assertIsNotScalar($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsNotScalar', func_get_args()));
     }
 
@@ -2807,7 +2968,8 @@ trait FunctionalTesterActions
      * @phpstan-assert !string $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsNotString()
      */
-    public function assertIsNotString($actual, string $message = '') {
+    public function assertIsNotString($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsNotString', func_get_args()));
     }
 
@@ -2817,7 +2979,8 @@ trait FunctionalTesterActions
      * Asserts that a file/dir exists and is not writable.
      * @see \Codeception\Module\AbstractAsserts::assertIsNotWritable()
      */
-    public function assertIsNotWritable(string $filename, string $message = '') {
+    public function assertIsNotWritable(string $filename, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsNotWritable', func_get_args()));
     }
 
@@ -2831,7 +2994,8 @@ trait FunctionalTesterActions
      * @phpstan-assert numeric $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsNumeric()
      */
-    public function assertIsNumeric($actual, string $message = '') {
+    public function assertIsNumeric($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsNumeric', func_get_args()));
     }
 
@@ -2845,7 +3009,8 @@ trait FunctionalTesterActions
      * @phpstan-assert object $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsObject()
      */
-    public function assertIsObject($actual, string $message = '') {
+    public function assertIsObject($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsObject', func_get_args()));
     }
 
@@ -2855,7 +3020,8 @@ trait FunctionalTesterActions
      * Asserts that a file/dir is readable.
      * @see \Codeception\Module\AbstractAsserts::assertIsReadable()
      */
-    public function assertIsReadable(string $filename, string $message = '') {
+    public function assertIsReadable(string $filename, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsReadable', func_get_args()));
     }
 
@@ -2869,7 +3035,8 @@ trait FunctionalTesterActions
      * @phpstan-assert resource $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsResource()
      */
-    public function assertIsResource($actual, string $message = '') {
+    public function assertIsResource($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsResource', func_get_args()));
     }
 
@@ -2883,7 +3050,8 @@ trait FunctionalTesterActions
      * @phpstan-assert scalar $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsScalar()
      */
-    public function assertIsScalar($actual, string $message = '') {
+    public function assertIsScalar($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsScalar', func_get_args()));
     }
 
@@ -2897,7 +3065,8 @@ trait FunctionalTesterActions
      * @phpstan-assert string $actual
      * @see \Codeception\Module\AbstractAsserts::assertIsString()
      */
-    public function assertIsString($actual, string $message = '') {
+    public function assertIsString($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsString', func_get_args()));
     }
 
@@ -2907,7 +3076,8 @@ trait FunctionalTesterActions
      * Asserts that a file/dir exists and is writable.
      * @see \Codeception\Module\AbstractAsserts::assertIsWritable()
      */
-    public function assertIsWritable(string $filename, string $message = '') {
+    public function assertIsWritable(string $filename, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertIsWritable', func_get_args()));
     }
 
@@ -2917,7 +3087,8 @@ trait FunctionalTesterActions
      * Asserts that a string is a valid JSON string.
      * @see \Codeception\Module\AbstractAsserts::assertJson()
      */
-    public function assertJson(string $actualJson, string $message = '') {
+    public function assertJson(string $actualJson, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertJson', func_get_args()));
     }
 
@@ -2927,7 +3098,8 @@ trait FunctionalTesterActions
      * Asserts that two JSON files are equal.
      * @see \Codeception\Module\AbstractAsserts::assertJsonFileEqualsJsonFile()
      */
-    public function assertJsonFileEqualsJsonFile(string $expectedFile, string $actualFile, string $message = '') {
+    public function assertJsonFileEqualsJsonFile(string $expectedFile, string $actualFile, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertJsonFileEqualsJsonFile', func_get_args()));
     }
 
@@ -2937,7 +3109,8 @@ trait FunctionalTesterActions
      * Asserts that two JSON files are not equal.
      * @see \Codeception\Module\AbstractAsserts::assertJsonFileNotEqualsJsonFile()
      */
-    public function assertJsonFileNotEqualsJsonFile(string $expectedFile, string $actualFile, string $message = '') {
+    public function assertJsonFileNotEqualsJsonFile(string $expectedFile, string $actualFile, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertJsonFileNotEqualsJsonFile', func_get_args()));
     }
 
@@ -2947,7 +3120,8 @@ trait FunctionalTesterActions
      * Asserts that the generated JSON encoded object and the content of the given file are equal.
      * @see \Codeception\Module\AbstractAsserts::assertJsonStringEqualsJsonFile()
      */
-    public function assertJsonStringEqualsJsonFile(string $expectedFile, string $actualJson, string $message = '') {
+    public function assertJsonStringEqualsJsonFile(string $expectedFile, string $actualJson, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertJsonStringEqualsJsonFile', func_get_args()));
     }
 
@@ -2957,7 +3131,8 @@ trait FunctionalTesterActions
      * Asserts that two given JSON encoded objects or arrays are equal.
      * @see \Codeception\Module\AbstractAsserts::assertJsonStringEqualsJsonString()
      */
-    public function assertJsonStringEqualsJsonString(string $expectedJson, string $actualJson, string $message = '') {
+    public function assertJsonStringEqualsJsonString(string $expectedJson, string $actualJson, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertJsonStringEqualsJsonString', func_get_args()));
     }
 
@@ -2967,7 +3142,8 @@ trait FunctionalTesterActions
      * Asserts that the generated JSON encoded object and the content of the given file are not equal.
      * @see \Codeception\Module\AbstractAsserts::assertJsonStringNotEqualsJsonFile()
      */
-    public function assertJsonStringNotEqualsJsonFile(string $expectedFile, string $actualJson, string $message = '') {
+    public function assertJsonStringNotEqualsJsonFile(string $expectedFile, string $actualJson, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertJsonStringNotEqualsJsonFile', func_get_args()));
     }
 
@@ -2977,7 +3153,8 @@ trait FunctionalTesterActions
      * Asserts that two given JSON encoded objects or arrays are not equal.
      * @see \Codeception\Module\AbstractAsserts::assertJsonStringNotEqualsJsonString()
      */
-    public function assertJsonStringNotEqualsJsonString(string $expectedJson, string $actualJson, string $message = '') {
+    public function assertJsonStringNotEqualsJsonString(string $expectedJson, string $actualJson, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertJsonStringNotEqualsJsonString', func_get_args()));
     }
 
@@ -2990,7 +3167,8 @@ trait FunctionalTesterActions
      * @param mixed $actual
      * @see \Codeception\Module\AbstractAsserts::assertLessThan()
      */
-    public function assertLessThan($expected, $actual, string $message = '') {
+    public function assertLessThan($expected, $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertLessThan', func_get_args()));
     }
 
@@ -3003,7 +3181,8 @@ trait FunctionalTesterActions
      * @param mixed $actual
      * @see \Codeception\Module\AbstractAsserts::assertLessThanOrEqual()
      */
-    public function assertLessThanOrEqual($expected, $actual, string $message = '') {
+    public function assertLessThanOrEqual($expected, $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertLessThanOrEqual', func_get_args()));
     }
 
@@ -3013,7 +3192,8 @@ trait FunctionalTesterActions
      * Asserts that a string matches a given regular expression.
      * @see \Codeception\Module\AbstractAsserts::assertMatchesRegularExpression()
      */
-    public function assertMatchesRegularExpression(string $pattern, string $string, string $message = '') {
+    public function assertMatchesRegularExpression(string $pattern, string $string, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertMatchesRegularExpression', func_get_args()));
     }
 
@@ -3025,7 +3205,8 @@ trait FunctionalTesterActions
      * @param mixed $actual
      * @see \Codeception\Module\AbstractAsserts::assertNan()
      */
-    public function assertNan($actual, string $message = '') {
+    public function assertNan($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertNan', func_get_args()));
     }
 
@@ -3037,7 +3218,8 @@ trait FunctionalTesterActions
      * @param mixed $needle
      * @see \Codeception\Module\AbstractAsserts::assertNotContains()
      */
-    public function assertNotContains($needle, iterable $haystack, string $message = '') {
+    public function assertNotContains($needle, iterable $haystack, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertNotContains', func_get_args()));
     }
 
@@ -3046,7 +3228,8 @@ trait FunctionalTesterActions
      *
      * @see \Codeception\Module\AbstractAsserts::assertNotContainsEquals()
      */
-    public function assertNotContainsEquals($needle, iterable $haystack, string $message = '') {
+    public function assertNotContainsEquals($needle, iterable $haystack, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertNotContainsEquals', func_get_args()));
     }
 
@@ -3056,7 +3239,8 @@ trait FunctionalTesterActions
      * Asserts that a haystack does not contain only values of a given type.
      * @see \Codeception\Module\AbstractAsserts::assertNotContainsOnly()
      */
-    public function assertNotContainsOnly(string $type, iterable $haystack, ?bool $isNativeType = null, string $message = '') {
+    public function assertNotContainsOnly(string $type, iterable $haystack, ?bool $isNativeType = null, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertNotContainsOnly', func_get_args()));
     }
 
@@ -3068,7 +3252,8 @@ trait FunctionalTesterActions
      * @param \Countable|iterable $haystack
      * @see \Codeception\Module\AbstractAsserts::assertNotCount()
      */
-    public function assertNotCount(int $expectedCount, $haystack, string $message = '') {
+    public function assertNotCount(int $expectedCount, $haystack, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertNotCount', func_get_args()));
     }
 
@@ -3082,7 +3267,8 @@ trait FunctionalTesterActions
      * @phpstan-assert !empty $actual
      * @see \Codeception\Module\AbstractAsserts::assertNotEmpty()
      */
-    public function assertNotEmpty($actual, string $message = '') {
+    public function assertNotEmpty($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertNotEmpty', func_get_args()));
     }
 
@@ -3095,7 +3281,8 @@ trait FunctionalTesterActions
      * @param mixed $actual
      * @see \Codeception\Module\AbstractAsserts::assertNotEquals()
      */
-    public function assertNotEquals($expected, $actual, string $message = '') {
+    public function assertNotEquals($expected, $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertNotEquals', func_get_args()));
     }
 
@@ -3108,7 +3295,8 @@ trait FunctionalTesterActions
      * @param mixed $actual
      * @see \Codeception\Module\AbstractAsserts::assertNotEqualsCanonicalizing()
      */
-    public function assertNotEqualsCanonicalizing($expected, $actual, string $message = '') {
+    public function assertNotEqualsCanonicalizing($expected, $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertNotEqualsCanonicalizing', func_get_args()));
     }
 
@@ -3121,7 +3309,8 @@ trait FunctionalTesterActions
      * @param mixed $actual
      * @see \Codeception\Module\AbstractAsserts::assertNotEqualsIgnoringCase()
      */
-    public function assertNotEqualsIgnoringCase($expected, $actual, string $message = '') {
+    public function assertNotEqualsIgnoringCase($expected, $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertNotEqualsIgnoringCase', func_get_args()));
     }
 
@@ -3134,7 +3323,8 @@ trait FunctionalTesterActions
      * @param mixed $actual
      * @see \Codeception\Module\AbstractAsserts::assertNotEqualsWithDelta()
      */
-    public function assertNotEqualsWithDelta($expected, $actual, float $delta, string $message = '') {
+    public function assertNotEqualsWithDelta($expected, $actual, float $delta, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertNotEqualsWithDelta', func_get_args()));
     }
 
@@ -3148,7 +3338,8 @@ trait FunctionalTesterActions
      * @phpstan-assert !false $condition
      * @see \Codeception\Module\AbstractAsserts::assertNotFalse()
      */
-    public function assertNotFalse($condition, string $message = '') {
+    public function assertNotFalse($condition, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertNotFalse', func_get_args()));
     }
 
@@ -3165,7 +3356,8 @@ trait FunctionalTesterActions
      * @phpstan-assert !ExpectedType $actual
      * @see \Codeception\Module\AbstractAsserts::assertNotInstanceOf()
      */
-    public function assertNotInstanceOf(string $expected, $actual, string $message = '') {
+    public function assertNotInstanceOf(string $expected, $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertNotInstanceOf', func_get_args()));
     }
 
@@ -3179,7 +3371,8 @@ trait FunctionalTesterActions
      * @phpstan-assert !null $actual
      * @see \Codeception\Module\AbstractAsserts::assertNotNull()
      */
-    public function assertNotNull($actual, string $message = '') {
+    public function assertNotNull($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertNotNull', func_get_args()));
     }
 
@@ -3192,7 +3385,8 @@ trait FunctionalTesterActions
      * @param mixed $actual
      * @see \Codeception\Module\AbstractAsserts::assertNotSame()
      */
-    public function assertNotSame($expected, $actual, string $message = '') {
+    public function assertNotSame($expected, $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertNotSame', func_get_args()));
     }
 
@@ -3205,7 +3399,8 @@ trait FunctionalTesterActions
      * @param \Countable|iterable $actual
      * @see \Codeception\Module\AbstractAsserts::assertNotSameSize()
      */
-    public function assertNotSameSize($expected, $actual, string $message = '') {
+    public function assertNotSameSize($expected, $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertNotSameSize', func_get_args()));
     }
 
@@ -3219,7 +3414,8 @@ trait FunctionalTesterActions
      * @phpstan-assert !true $condition
      * @see \Codeception\Module\AbstractAsserts::assertNotTrue()
      */
-    public function assertNotTrue($condition, string $message = '') {
+    public function assertNotTrue($condition, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertNotTrue', func_get_args()));
     }
 
@@ -3233,7 +3429,8 @@ trait FunctionalTesterActions
      * @phpstan-assert null $actual
      * @see \Codeception\Module\AbstractAsserts::assertNull()
      */
-    public function assertNull($actual, string $message = '') {
+    public function assertNull($actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertNull', func_get_args()));
     }
 
@@ -3243,7 +3440,8 @@ trait FunctionalTesterActions
      * Asserts that an object has a specified attribute.
      * @see \Codeception\Module\AbstractAsserts::assertObjectHasAttribute()
      */
-    public function assertObjectHasAttribute(string $attributeName, object $object, string $message = '') {
+    public function assertObjectHasAttribute(string $attributeName, object $object, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertObjectHasAttribute', func_get_args()));
     }
 
@@ -3253,7 +3451,8 @@ trait FunctionalTesterActions
      * Asserts that an object does not have a specified attribute.
      * @see \Codeception\Module\AbstractAsserts::assertObjectNotHasAttribute()
      */
-    public function assertObjectNotHasAttribute(string $attributeName, object $object, string $message = '') {
+    public function assertObjectNotHasAttribute(string $attributeName, object $object, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertObjectNotHasAttribute', func_get_args()));
     }
 
@@ -3272,7 +3471,8 @@ trait FunctionalTesterActions
      * @phpstan-assert =ExpectedType $actual
      * @see \Codeception\Module\AbstractAsserts::assertSame()
      */
-    public function assertSame($expected, $actual, string $message = '') {
+    public function assertSame($expected, $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertSame', func_get_args()));
     }
 
@@ -3285,7 +3485,8 @@ trait FunctionalTesterActions
      * @param \Countable|iterable $actual
      * @see \Codeception\Module\AbstractAsserts::assertSameSize()
      */
-    public function assertSameSize($expected, $actual, string $message = '') {
+    public function assertSameSize($expected, $actual, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertSameSize', func_get_args()));
     }
 
@@ -3294,7 +3495,8 @@ trait FunctionalTesterActions
      *
      * @see \Codeception\Module\AbstractAsserts::assertStringContainsString()
      */
-    public function assertStringContainsString(string $needle, string $haystack, string $message = '') {
+    public function assertStringContainsString(string $needle, string $haystack, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertStringContainsString', func_get_args()));
     }
 
@@ -3303,7 +3505,8 @@ trait FunctionalTesterActions
      *
      * @see \Codeception\Module\AbstractAsserts::assertStringContainsStringIgnoringCase()
      */
-    public function assertStringContainsStringIgnoringCase(string $needle, string $haystack, string $message = '') {
+    public function assertStringContainsStringIgnoringCase(string $needle, string $haystack, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertStringContainsStringIgnoringCase', func_get_args()));
     }
 
@@ -3313,7 +3516,8 @@ trait FunctionalTesterActions
      * Asserts that a string ends not with a given suffix.
      * @see \Codeception\Module\AbstractAsserts::assertStringEndsNotWith()
      */
-    public function assertStringEndsNotWith(string $suffix, string $string, string $message = '') {
+    public function assertStringEndsNotWith(string $suffix, string $string, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertStringEndsNotWith', func_get_args()));
     }
 
@@ -3323,7 +3527,8 @@ trait FunctionalTesterActions
      * Asserts that a string ends with a given suffix.
      * @see \Codeception\Module\AbstractAsserts::assertStringEndsWith()
      */
-    public function assertStringEndsWith(string $suffix, string $string, string $message = '') {
+    public function assertStringEndsWith(string $suffix, string $string, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertStringEndsWith', func_get_args()));
     }
 
@@ -3333,7 +3538,8 @@ trait FunctionalTesterActions
      * Asserts that the contents of a string is equal to the contents of a file.
      * @see \Codeception\Module\AbstractAsserts::assertStringEqualsFile()
      */
-    public function assertStringEqualsFile(string $expectedFile, string $actualString, string $message = '') {
+    public function assertStringEqualsFile(string $expectedFile, string $actualString, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertStringEqualsFile', func_get_args()));
     }
 
@@ -3343,7 +3549,8 @@ trait FunctionalTesterActions
      * Asserts that the contents of a string is equal to the contents of a file (canonicalizing).
      * @see \Codeception\Module\AbstractAsserts::assertStringEqualsFileCanonicalizing()
      */
-    public function assertStringEqualsFileCanonicalizing(string $expectedFile, string $actualString, string $message = '') {
+    public function assertStringEqualsFileCanonicalizing(string $expectedFile, string $actualString, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertStringEqualsFileCanonicalizing', func_get_args()));
     }
 
@@ -3353,7 +3560,8 @@ trait FunctionalTesterActions
      * Asserts that the contents of a string is equal to the contents of a file (ignoring case).
      * @see \Codeception\Module\AbstractAsserts::assertStringEqualsFileIgnoringCase()
      */
-    public function assertStringEqualsFileIgnoringCase(string $expectedFile, string $actualString, string $message = '') {
+    public function assertStringEqualsFileIgnoringCase(string $expectedFile, string $actualString, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertStringEqualsFileIgnoringCase', func_get_args()));
     }
 
@@ -3363,7 +3571,8 @@ trait FunctionalTesterActions
      * Asserts that a string matches a given format string.
      * @see \Codeception\Module\AbstractAsserts::assertStringMatchesFormat()
      */
-    public function assertStringMatchesFormat(string $format, string $string, string $message = '') {
+    public function assertStringMatchesFormat(string $format, string $string, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertStringMatchesFormat', func_get_args()));
     }
 
@@ -3373,7 +3582,8 @@ trait FunctionalTesterActions
      * Asserts that a string matches a given format file.
      * @see \Codeception\Module\AbstractAsserts::assertStringMatchesFormatFile()
      */
-    public function assertStringMatchesFormatFile(string $formatFile, string $string, string $message = '') {
+    public function assertStringMatchesFormatFile(string $formatFile, string $string, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertStringMatchesFormatFile', func_get_args()));
     }
 
@@ -3382,7 +3592,8 @@ trait FunctionalTesterActions
      *
      * @see \Codeception\Module\AbstractAsserts::assertStringNotContainsString()
      */
-    public function assertStringNotContainsString(string $needle, string $haystack, string $message = '') {
+    public function assertStringNotContainsString(string $needle, string $haystack, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertStringNotContainsString', func_get_args()));
     }
 
@@ -3391,7 +3602,8 @@ trait FunctionalTesterActions
      *
      * @see \Codeception\Module\AbstractAsserts::assertStringNotContainsStringIgnoringCase()
      */
-    public function assertStringNotContainsStringIgnoringCase(string $needle, string $haystack, string $message = '') {
+    public function assertStringNotContainsStringIgnoringCase(string $needle, string $haystack, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertStringNotContainsStringIgnoringCase', func_get_args()));
     }
 
@@ -3401,7 +3613,8 @@ trait FunctionalTesterActions
      * Asserts that the contents of a string is not equal to the contents of a file.
      * @see \Codeception\Module\AbstractAsserts::assertStringNotEqualsFile()
      */
-    public function assertStringNotEqualsFile(string $expectedFile, string $actualString, string $message = '') {
+    public function assertStringNotEqualsFile(string $expectedFile, string $actualString, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertStringNotEqualsFile', func_get_args()));
     }
 
@@ -3411,7 +3624,8 @@ trait FunctionalTesterActions
      * Asserts that the contents of a string is not equal to the contents of a file (canonicalizing).
      * @see \Codeception\Module\AbstractAsserts::assertStringNotEqualsFileCanonicalizing()
      */
-    public function assertStringNotEqualsFileCanonicalizing(string $expectedFile, string $actualString, string $message = '') {
+    public function assertStringNotEqualsFileCanonicalizing(string $expectedFile, string $actualString, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertStringNotEqualsFileCanonicalizing', func_get_args()));
     }
 
@@ -3421,7 +3635,8 @@ trait FunctionalTesterActions
      * Asserts that the contents of a string is not equal to the contents of a file (ignoring case).
      * @see \Codeception\Module\AbstractAsserts::assertStringNotEqualsFileIgnoringCase()
      */
-    public function assertStringNotEqualsFileIgnoringCase(string $expectedFile, string $actualString, string $message = '') {
+    public function assertStringNotEqualsFileIgnoringCase(string $expectedFile, string $actualString, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertStringNotEqualsFileIgnoringCase', func_get_args()));
     }
 
@@ -3431,7 +3646,8 @@ trait FunctionalTesterActions
      * Asserts that a string does not match a given format string.
      * @see \Codeception\Module\AbstractAsserts::assertStringNotMatchesFormat()
      */
-    public function assertStringNotMatchesFormat(string $format, string $string, string $message = '') {
+    public function assertStringNotMatchesFormat(string $format, string $string, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertStringNotMatchesFormat', func_get_args()));
     }
 
@@ -3441,7 +3657,8 @@ trait FunctionalTesterActions
      * Asserts that a string does not match a given format string.
      * @see \Codeception\Module\AbstractAsserts::assertStringNotMatchesFormatFile()
      */
-    public function assertStringNotMatchesFormatFile(string $formatFile, string $string, string $message = '') {
+    public function assertStringNotMatchesFormatFile(string $formatFile, string $string, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertStringNotMatchesFormatFile', func_get_args()));
     }
 
@@ -3451,7 +3668,8 @@ trait FunctionalTesterActions
      * Asserts that a string starts not with a given prefix.
      * @see \Codeception\Module\AbstractAsserts::assertStringStartsNotWith()
      */
-    public function assertStringStartsNotWith(string $prefix, string $string, string $message = '') {
+    public function assertStringStartsNotWith(string $prefix, string $string, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertStringStartsNotWith', func_get_args()));
     }
 
@@ -3461,7 +3679,8 @@ trait FunctionalTesterActions
      * Asserts that a string starts with a given prefix.
      * @see \Codeception\Module\AbstractAsserts::assertStringStartsWith()
      */
-    public function assertStringStartsWith(string $prefix, string $string, string $message = '') {
+    public function assertStringStartsWith(string $prefix, string $string, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertStringStartsWith', func_get_args()));
     }
 
@@ -3473,7 +3692,8 @@ trait FunctionalTesterActions
      * @param mixed $value
      * @see \Codeception\Module\AbstractAsserts::assertThat()
      */
-    public function assertThat($value, \PHPUnit\Framework\Constraint\Constraint $constraint, string $message = '') {
+    public function assertThat($value, \PHPUnit\Framework\Constraint\Constraint $constraint, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertThat', func_get_args()));
     }
 
@@ -3487,7 +3707,8 @@ trait FunctionalTesterActions
      * @phpstan-assert true $condition
      * @see \Codeception\Module\AbstractAsserts::assertTrue()
      */
-    public function assertTrue($condition, string $message = '') {
+    public function assertTrue($condition, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertTrue', func_get_args()));
     }
 
@@ -3497,7 +3718,8 @@ trait FunctionalTesterActions
      * Asserts that two XML files are equal.
      * @see \Codeception\Module\AbstractAsserts::assertXmlFileEqualsXmlFile()
      */
-    public function assertXmlFileEqualsXmlFile(string $expectedFile, string $actualFile, string $message = '') {
+    public function assertXmlFileEqualsXmlFile(string $expectedFile, string $actualFile, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertXmlFileEqualsXmlFile', func_get_args()));
     }
 
@@ -3507,7 +3729,8 @@ trait FunctionalTesterActions
      * Asserts that two XML files are not equal.
      * @see \Codeception\Module\AbstractAsserts::assertXmlFileNotEqualsXmlFile()
      */
-    public function assertXmlFileNotEqualsXmlFile(string $expectedFile, string $actualFile, string $message = '') {
+    public function assertXmlFileNotEqualsXmlFile(string $expectedFile, string $actualFile, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertXmlFileNotEqualsXmlFile', func_get_args()));
     }
 
@@ -3519,7 +3742,8 @@ trait FunctionalTesterActions
      * @param \DOMDocument|string $actualXml
      * @see \Codeception\Module\AbstractAsserts::assertXmlStringEqualsXmlFile()
      */
-    public function assertXmlStringEqualsXmlFile(string $expectedFile, $actualXml, string $message = '') {
+    public function assertXmlStringEqualsXmlFile(string $expectedFile, $actualXml, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertXmlStringEqualsXmlFile', func_get_args()));
     }
 
@@ -3532,7 +3756,8 @@ trait FunctionalTesterActions
      * @param \DOMDocument|string $actualXml
      * @see \Codeception\Module\AbstractAsserts::assertXmlStringEqualsXmlString()
      */
-    public function assertXmlStringEqualsXmlString($expectedXml, $actualXml, string $message = '') {
+    public function assertXmlStringEqualsXmlString($expectedXml, $actualXml, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertXmlStringEqualsXmlString', func_get_args()));
     }
 
@@ -3544,7 +3769,8 @@ trait FunctionalTesterActions
      * @param \DOMDocument|string $actualXml
      * @see \Codeception\Module\AbstractAsserts::assertXmlStringNotEqualsXmlFile()
      */
-    public function assertXmlStringNotEqualsXmlFile(string $expectedFile, $actualXml, string $message = '') {
+    public function assertXmlStringNotEqualsXmlFile(string $expectedFile, $actualXml, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertXmlStringNotEqualsXmlFile', func_get_args()));
     }
 
@@ -3557,7 +3783,8 @@ trait FunctionalTesterActions
      * @param \DOMDocument|string $actualXml
      * @see \Codeception\Module\AbstractAsserts::assertXmlStringNotEqualsXmlString()
      */
-    public function assertXmlStringNotEqualsXmlString($expectedXml, $actualXml, string $message = '') {
+    public function assertXmlStringNotEqualsXmlString($expectedXml, $actualXml, string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('assertXmlStringNotEqualsXmlString', func_get_args()));
     }
 
@@ -3567,7 +3794,8 @@ trait FunctionalTesterActions
      * Fails a test with the given message.
      * @see \Codeception\Module\AbstractAsserts::fail()
      */
-    public function fail(string $message = '') {
+    public function fail(string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('fail', func_get_args()));
     }
 
@@ -3577,7 +3805,8 @@ trait FunctionalTesterActions
      * Mark the test as incomplete.
      * @see \Codeception\Module\AbstractAsserts::markTestIncomplete()
      */
-    public function markTestIncomplete(string $message = '') {
+    public function markTestIncomplete(string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('markTestIncomplete', func_get_args()));
     }
 
@@ -3587,7 +3816,8 @@ trait FunctionalTesterActions
      * Mark the test as skipped.
      * @see \Codeception\Module\AbstractAsserts::markTestSkipped()
      */
-    public function markTestSkipped(string $message = '') {
+    public function markTestSkipped(string $message = '')
+    {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('markTestSkipped', func_get_args()));
     }
 }

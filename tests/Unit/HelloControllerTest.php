@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\tests\unit;
+namespace app\tests\Unit;
 
 use app\usecase\hello\HelloController;
 use Codeception\Test\Unit;

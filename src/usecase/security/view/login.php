@@ -70,7 +70,7 @@ $tabInput = 1;
                                 <?= $form->field($model, 'rememberMe')->checkbox(
                                     [
                                         'labelOptions' => [
-                                            'class' => 'form-check-label fw-medium text-body'
+                                            'class' => 'form-check-label fw-medium text-body',
                                         ],
                                         'options' => [
                                             'class' => 'form-check-input',

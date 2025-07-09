@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace app\tests\functional;
+namespace app\tests\Functional;
 
-use app\tests\support\FunctionalTester;
+use app\tests\Support\FunctionalTester;
 
 final class ContactCest
 {

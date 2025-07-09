@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\tests\unit;
+namespace app\tests\Unit;
 
 use app\usecase\security\Identity;
 use Codeception\Test\Unit;

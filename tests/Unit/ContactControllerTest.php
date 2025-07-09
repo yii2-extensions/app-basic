@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\tests\unit;
+namespace app\tests\Unit;
 
 use app\usecase\contact\ContactController;
 use app\usecase\contact\ContactForm;
@@ -41,7 +41,7 @@ final class ContactControllerTest extends Unit
 
         assert(
             $emailMessage instanceof MessageInterface,
-            'Last sent email should be an instance of \'MessageInterface\''
+            'Last sent email should be an instance of \'MessageInterface\'',
         );
 
         verify($emailMessage->getTo())->arrayHasKey('tester@example.com');
