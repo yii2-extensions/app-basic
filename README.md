@@ -55,7 +55,8 @@ extensibility.
 
 ### How it works
 
-The Yii2 Web Application Basic template provides a complete foundation for building modern web applications. Unlike starting from scratch, this template includes:
+The Yii2 Web Application Basic template provides a complete foundation for building modern web applications. Unlike 
+starting from scratch, this template includes.
 
 1. **Pre-configured structure** with organized directories for assets, views, models, and controllers.
 2. **Bootstrap 5 integration** for responsive, mobile-first user interfaces.
