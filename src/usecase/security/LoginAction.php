@@ -8,8 +8,7 @@ use yii\base\Action;
 use yii\web\Response;
 
 /**
- * @template T of SecurityController
- * @extends Action<T>
+ * @extends Action<SecurityController>
  */
 final class LoginAction extends Action
 {

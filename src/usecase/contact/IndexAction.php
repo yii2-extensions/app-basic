@@ -7,8 +7,7 @@ namespace app\usecase\contact;
 use yii\base\Action;
 
 /**
- * @template T of ContactController
- * @extends Action<T>
+ * @extends Action<ContactController>
  */
 final class IndexAction extends Action
 {
