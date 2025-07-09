@@ -14,6 +14,7 @@ final class SiteController extends Controller
     {
         return $this->render('index');
     }
+
     public function actions(): array
     {
         return ArrayHelper::merge(
