@@ -11,9 +11,6 @@ class Controller extends \yii\web\Controller
 {
     public $layout = '@resource/layout/main';
 
-    /**
-     * @phpstan-return array<array-key, array<array-key, mixed>>
-     */
     public function actions(): array
     {
         return [

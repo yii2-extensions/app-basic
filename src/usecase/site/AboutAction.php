@@ -7,8 +7,7 @@ namespace app\usecase\site;
 use yii\base\Action;
 
 /**
- * @template T of SiteController
- * @extends Action<T>
+ * @extends Action<SiteController>
  */
 final class AboutAction extends Action
 {
