@@ -55,9 +55,7 @@ composer install
 Ensure the following directories are writable by the web server.
 
 ```bash
-chmod 755 public/assets
-chmod 755 runtime
-chmod 755 tests/_output
+chmod 775 public/assets runtime tests/_output
 ```
 
 ### Environment configuration
@@ -85,15 +83,6 @@ return [
 ### Web server configuration
 
 #### Apache
-
-Create `.htaccess` in the project root.
-
-```apache
-RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ public/$1 [L]
-```
 
 Create `public/.htaccess`.
 
