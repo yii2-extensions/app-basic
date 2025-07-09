@@ -7,7 +7,7 @@ parameters:
 
     excludePaths:
         analyse:
-            - runtime/Support
+            - tests/?Support
 
     level: max
 
