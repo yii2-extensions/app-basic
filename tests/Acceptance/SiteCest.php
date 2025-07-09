@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Acceptance;
+namespace app\tests\Acceptance;
 
-use App\Tests\Support\AcceptanceTester;
+use app\tests\Support\AcceptanceTester;
 
 final class SiteCest
 {
@@ -14,6 +14,7 @@ final class SiteCest
         $I->amOnRoute('/');
 
         $I->wantTo('ensure that Home page works.');
+
         $I->expectTo('see page index.');
         $I->see('Web Application');
         $I->see('Yii v.22');

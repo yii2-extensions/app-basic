@@ -2,24 +2,27 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Unit;
+namespace app\tests\Unit;
 
-use App\UseCase\Contact\ContactForm;
+use app\usecase\contact\ContactController;
+use app\usecase\contact\ContactForm;
+use Codeception\Module\Yii2;
 use Codeception\Test\Unit;
 use Yii;
 use yii\mail\MessageInterface;
 
 use function verify;
 
-final class ContactFormTest extends Unit
+final class ContactControllerTest extends Unit
 {
-    public mixed $tester;
+    public mixed $tester = null;
 
     public function testEmailIsSentOnContact(): void
     {
-        $formModel = new ContactForm();
+        $controller = new ContactController('contact', Yii::$app);
+        $form = new ContactForm();
 
-        $formModel->attributes = [
+        $form->attributes = [
             'name' => 'Tester',
             'email' => 'tester@example.com',
             'subject' => 'very important letter subject',
@@ -27,15 +30,20 @@ final class ContactFormTest extends Unit
             'verifyCode' => 'testme',
         ];
 
-        verify($formModel->sendContact(Yii::$app->mailer, Yii::$app->params))->notEmpty();
+        verify($controller->sendEmail($form))->notEmpty();
+        assert(
+            $this->tester instanceof Yii2,
+            '\'Yii2\' module should be available in the tester',
+        );
 
-        // using Yii2 module actions to check email was sent
         $this->tester->seeEmailIsSent();
-
-        /** @var MessageInterface $emailMessage */
         $emailMessage = $this->tester->grabLastSentEmail();
 
-        verify($emailMessage)->instanceOf(MessageInterface::class);
+        assert(
+            $emailMessage instanceof MessageInterface,
+            'Last sent email should be an instance of \'MessageInterface\'',
+        );
+
         verify($emailMessage->getTo())->arrayHasKey('tester@example.com');
         verify($emailMessage->getFrom())->arrayHasKey('noreply@example.com');
         verify($emailMessage->getReplyTo())->arrayHasKey('tester@example.com');

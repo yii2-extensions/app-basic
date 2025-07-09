@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace app\framework\asset;
 
-use yii\bootstrap5\{BootstrapAsset, BootstrapIconAsset, BootstrapPluginAsset};
-use yii\web\{AssetBundle, YiiAsset};
+use yii\bootstrap5\BootstrapAsset;
+use yii\bootstrap5\BootstrapPluginAsset;
+use yii\web\AssetBundle;
+use yii\web\YiiAsset;
 
 final class AppAsset extends AssetBundle
 {
-    public $sourcePath = __DIR__ . '/../resource/';
-
     public $css = [
         'css/site.css',
     ];
@@ -22,9 +22,5 @@ final class AppAsset extends AssetBundle
         YiiAsset::class,
     ];
 
-    public $publishOptions = [
-        'only' => [
-            'site.css',
-        ],
-    ];
+    public $sourcePath = __DIR__ . '/../resource/';
 }

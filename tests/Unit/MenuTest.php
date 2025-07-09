@@ -2,36 +2,52 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Unit;
+namespace app\tests\Unit;
 
-use App\Tests\Support\Data\UserIdentity;
+use app\usecase\security\Identity;
 use Codeception\Test\Unit;
 use Yii;
-use yii\web\User;
 use yii\web\View;
 
+/**
+ * Test suite for menu component rendering for authentication scenarios.
+ *
+ * Verifies correct rendering of the logout link in the navigation menu when a user is authenticated.
+ *
+ * This test ensures that the menu component displays the logout link only for logged-in users, validating the
+ * integration between the identity system and the view rendering logic.
+ *
+ * Test coverage.
+ * - Identity resolution and login simulation for test context.
+ * - Rendering of the logout link for authenticated users.
+ * - View rendering with expected HTML output.
+ *
+ * @copyright Copyright (C) 2023 Terabytesoftw.
+ * @license https://opensource.org/license/bsd-3-clause BSD 3-Clause License.
+ */
 final class MenuTest extends Unit
 {
-    public mixed $tester;
-
-    public function testMenu(): void
+    public function testRenderLogoutLinkWhenUserIsLoggedIn(): void
     {
+        $identity = Identity::findIdentity('100');
         $view = new View();
 
-        Yii::$app->request->setUrl('http://example.com');
-        Yii::$app->params['app.menu.islogged'] = [
-            [
-                'label' => 'Logout',
-                'link' => ['/logout/index'],
-                'order' => 1,
-            ],
-        ];
-        Yii::$container->set(User::class, ['identityClass' => UserIdentity::class]);
+        self::assertNotNull(
+            $identity,
+            "Failed asserting that the user identity with ID '100' exists.",
+        );
+        self::assertInstanceOf(
+            Identity::class,
+            $identity,
+            "Failed asserting that the identity is an instance of 'Identity' class.",
+        );
 
-        $user = Yii::$container->get(User::class);
-        $user->login(UserIdentity::findIdentity('user1'), 0);
-        $result = $view->render('@resource/layout/component/menu.php');
+        Yii::$app->user->login($identity);
 
-        $this->assertStringContainsString('<a class="nav-link" href="/logout/index">Logout</a>', $result);
+        self::assertStringContainsString(
+            '<a class="nav-link" href="/security/logout" data-method="post">Logout</a>',
+            $view->render('@resource/layout/component/menu.php'),
+            'Failed asserting that the logout link is rendered for a logged-in user.',
+        );
     }
 }

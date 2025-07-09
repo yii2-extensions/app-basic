@@ -23,7 +23,4 @@ jobs:
     secrets:
       AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
     with:
-      os: >-
-        ['ubuntu-latest']
-      php: >-
-        ['8.1', '8.2', '8.3', '8.4']
+      hook: vendor/bin/codecept build

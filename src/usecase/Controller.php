@@ -26,7 +26,9 @@ class Controller extends \yii\web\Controller
             'verbs' => [
                 'class' => VerbFilter::class,
                 'actions' => [
-                    'logout' => ['post'],
+                    'logout' => [
+                        'post',
+                    ],
                 ],
             ],
         ];

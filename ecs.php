@@ -2,31 +2,45 @@
 
 declare(strict_types=1);
 
-use PhpCsFixer\Fixer\ClassNotation\ClassDefinitionFixer;
-use PhpCsFixer\Fixer\ClassNotation\OrderedClassElementsFixer;
-use PhpCsFixer\Fixer\ClassNotation\OrderedTraitsFixer;
-use PhpCsFixer\Fixer\ClassNotation\VisibilityRequiredFixer;
-use PhpCsFixer\Fixer\Import\NoUnusedImportsFixer;
-use PhpCsFixer\Fixer\Import\OrderedImportsFixer;
-use PhpCsFixer\Fixer\StringNotation\SingleQuoteFixer;
-use Symplify\EasyCodingStandard\Config\ECSConfig;
-
-return ECSConfig::configure()
+return Symplify\EasyCodingStandard\Config\ECSConfig::configure()
     ->withConfiguredRule(
-        ClassDefinitionFixer::class,
+        PhpCsFixer\Fixer\ClassNotation\ClassDefinitionFixer::class,
         [
             'space_before_parenthesis' => true,
         ],
     )
     ->withConfiguredRule(
-        OrderedImportsFixer::class,
+        PhpCsFixer\Fixer\ClassNotation\OrderedClassElementsFixer::class,
+        [
+            'order' => [
+                'use_trait',
+                'constant_public',
+                'constant_protected',
+                'constant_private',
+                'case',
+                'property_public',
+                'property_protected',
+                'property_private',
+                'construct',
+                'destruct',
+                'magic',
+                'phpunit',
+                'method_public',
+                'method_protected',
+                'method_private',
+            ],
+            'sort_algorithm' => 'alpha',
+        ],
+    )
+    ->withConfiguredRule(
+        PhpCsFixer\Fixer\Import\OrderedImportsFixer::class,
         [
             'imports_order' => ['class', 'function', 'const'],
             'sort_algorithm' => 'alpha',
         ],
     )
     ->withConfiguredRule(
-        VisibilityRequiredFixer::class,
+        PhpCsFixer\Fixer\ClassNotation\VisibilityRequiredFixer::class,
         [
             'elements' => [],
         ],
@@ -48,16 +62,8 @@ return ECSConfig::configure()
     )
     ->withRules(
         [
-            NoUnusedImportsFixer::class,
-            OrderedClassElementsFixer::class,
-            OrderedTraitsFixer::class,
-            SingleQuoteFixer::class,
+            PhpCsFixer\Fixer\ClassNotation\OrderedTraitsFixer::class,
+            PhpCsFixer\Fixer\Import\NoUnusedImportsFixer::class,
+            PhpCsFixer\Fixer\StringNotation\SingleQuoteFixer::class,
         ]
-    )
-    ->withSkip(
-        [
-            '*/src/framework/resource/layout/*',
-            '*/src/usecase/contact/view/*',
-            '*/src/usecase/site/view/*',
-        ],
     );

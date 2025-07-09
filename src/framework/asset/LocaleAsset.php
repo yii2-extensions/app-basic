@@ -8,8 +8,6 @@ use yii\web\AssetBundle;
 
 final class LocaleAsset extends AssetBundle
 {
-    public $sourcePath = '@npm/flag-icons/';
-
     public $css = [
         'css/flag-icons.css',
     ];
@@ -20,4 +18,6 @@ final class LocaleAsset extends AssetBundle
             'flags/**/*',
         ],
     ];
+
+    public $sourcePath = '@npm/flag-icons/';
 }

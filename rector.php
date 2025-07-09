@@ -16,8 +16,8 @@ return static function (Rector\Config\RectorConfig $rectorConfig): void {
 
     $rectorConfig->sets(
         [
-            Rector\Set\ValueObject\SetList::PHP_82,
-            Rector\Set\ValueObject\LevelSetList::UP_TO_PHP_82,
+            Rector\Set\ValueObject\SetList::PHP_81,
+            Rector\Set\ValueObject\LevelSetList::UP_TO_PHP_81,
             Rector\Set\ValueObject\SetList::TYPE_DECLARATION,
         ],
     );

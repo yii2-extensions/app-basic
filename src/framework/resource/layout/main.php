@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use app\framework\asset\AppAsset;
-use yii\{bootstrap5\Breadcrumbs, web\View};
+use yii\web\View;
 
 /**
  * @var string $content
@@ -21,11 +21,7 @@ AppAsset::register($this);
                     <header class="mb-auto">
                         <?= $this->render('component/menu') ?>
                         <?= $this->render('component/alert') ?>
-                        <?= Breadcrumbs::widget(
-                            [
-                                'links' => $this->params['breadcrumbs'] ?? [],
-                            ],
-                        ) ?>
+                        <?= $this->render('component/breadcrumbs') ?>
                     </header>
                     <?= $content ?>
                     <?= $this->render('footer') ?>
