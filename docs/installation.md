@@ -14,7 +14,7 @@
 
 ## Installation methods
 
-### Method 1: Using Composer (Recommended)
+### Method 1: Using composer (recommended)
 
 Create a new project using the Yii App Basic template.
 
@@ -36,7 +36,7 @@ cd myapp
 composer install
 ```
 
-### Method 3: Using Git
+### Method 3: Using git
 
 Clone the repository and set up your project.
 
@@ -172,7 +172,7 @@ npm run watch
 
 ## Docker setup
 
-### Using Docker Compose
+### Using docker compose
 
 Create `docker-compose.yml`.
 

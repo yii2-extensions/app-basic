@@ -57,7 +57,7 @@ The Yii2 Web Application Basic template provides a complete foundation for build
 3. **Security features** including CSRF protection and input validation.
 4. **Development tools** for debugging, logging, and testing.
 
-#### Why use this template?
+#### Why use this template
 
 - **Rapid development**: Start building features immediately without setup overhead.
 - **Best practices**: Follow Yii2 conventions and modern web development standards.
