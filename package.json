@@ -1,5 +1,6 @@
 {
-    "name": "yii2",
+    "name": "@yii2-extensions/app-basic",
+    "version": "0.1.0",
     "description": "A modern PHP framework designed for professional Web development",
     "dependencies": {
         "bootstrap": "^5.3.2",
@@ -19,5 +20,9 @@
     "bugs": {
         "url": "https://github.com/yii2-extensions/app-basic/issues"
     },
-    "homepage": "https://github.com/yii2-extensions/app-basic"
+    "homepage": "https://github.com/yii2-extensions/app-basic",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yii2-extensions/app-basic.git"
+    }
 }
