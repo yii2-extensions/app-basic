@@ -148,8 +148,8 @@ Root directory
 
 ## Quality code
 
-[![Latest Stable Version](http://poser.pugx.org/yii2-extensions/app-basic/v)](https://packagist.org/packages/yii2-extensions/app-basic)
-[![Total Downloads](http://poser.pugx.org/yii2-extensions/app-basic/downloads)](https://packagist.org/packages/yii2-extensions/app-basic)
+[![Latest Stable Version](https://poser.pugx.org/yii2-extensions/app-basic/v)](https://packagist.org/packages/yii2-extensions/app-basic)
+[![Total Downloads](https://poser.pugx.org/yii2-extensions/app-basic/downloads)](https://packagist.org/packages/yii2-extensions/app-basic)
 [![codecov](https://codecov.io/github/yii2-extensions/app-basic/graph/badge.svg?token=zcXbeTspxy)](https://codecov.io/github/yii2-extensions/app-basic)
 [![phpstan-level](https://img.shields.io/badge/PHPStan%20level-max-blue)](https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml)
 [![StyleCI](https://github.styleci.io/repos/698621511/shield?branch=main)](https://github.styleci.io/repos/698621511?branch=main)
