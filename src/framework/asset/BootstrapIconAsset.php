@@ -11,6 +11,6 @@ final class BootstrapIconAsset extends AssetBundle
     public $sourcePath = '@npm/bootstrap-icons/font';
 
     public $css = [
-        'bootstrap-icons.css'
+        'bootstrap-icons.css',
     ];
 }
