@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-return \Symplify\EasyCodingStandard\Config\ECSConfig::configure()
+return Symplify\EasyCodingStandard\Config\ECSConfig::configure()
     ->withConfiguredRule(
-        \PhpCsFixer\Fixer\ClassNotation\ClassDefinitionFixer::class,
+        PhpCsFixer\Fixer\ClassNotation\ClassDefinitionFixer::class,
         [
             'space_before_parenthesis' => true,
         ],
     )
     ->withConfiguredRule(
-        \PhpCsFixer\Fixer\ClassNotation\OrderedClassElementsFixer::class,
+        PhpCsFixer\Fixer\ClassNotation\OrderedClassElementsFixer::class,
         [
             'order' => [
                 'use_trait',
@@ -33,14 +33,14 @@ return \Symplify\EasyCodingStandard\Config\ECSConfig::configure()
         ],
     )
     ->withConfiguredRule(
-        \PhpCsFixer\Fixer\Import\OrderedImportsFixer::class,
+        PhpCsFixer\Fixer\Import\OrderedImportsFixer::class,
         [
             'imports_order' => ['class', 'function', 'const'],
             'sort_algorithm' => 'alpha',
         ],
     )
     ->withConfiguredRule(
-        \PhpCsFixer\Fixer\ClassNotation\VisibilityRequiredFixer::class,
+        PhpCsFixer\Fixer\ClassNotation\VisibilityRequiredFixer::class,
         [
             'elements' => [],
         ],
@@ -62,8 +62,8 @@ return \Symplify\EasyCodingStandard\Config\ECSConfig::configure()
     )
     ->withRules(
         [
-            \PhpCsFixer\Fixer\ClassNotation\OrderedTraitsFixer::class,
-            \PhpCsFixer\Fixer\Import\NoUnusedImportsFixer::class,
-            \PhpCsFixer\Fixer\StringNotation\SingleQuoteFixer::class,
+            PhpCsFixer\Fixer\ClassNotation\OrderedTraitsFixer::class,
+            PhpCsFixer\Fixer\Import\NoUnusedImportsFixer::class,
+            PhpCsFixer\Fixer\StringNotation\SingleQuoteFixer::class,
         ]
     );
