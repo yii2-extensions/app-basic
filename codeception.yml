@@ -4,8 +4,8 @@ support_namespace: support
 paths:
   tests: tests
   output: tests/_output
-  data: tests/support/data
-  support: tests/support
+  data: tests/Support/data
+  support: tests/Support
   envs: tests/_envs
 actor_suffix: Tester
 settings:
