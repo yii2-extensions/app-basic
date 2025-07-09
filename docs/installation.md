@@ -239,5 +239,4 @@ Enable cache components in `config/web/components.php`.
 Once the installation is complete.
 
 - ⚙️ [Configuration Reference](configuration.md)
-- 💡 [Usage Examples](examples.md)
 - 🧪 [Testing Guide](testing.md)

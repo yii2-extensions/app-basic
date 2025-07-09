@@ -233,6 +233,5 @@ return $config;
 
 ## Next steps
 
-- 💡 [Usage Examples](examples.md)
 - 🧪 [Testing Guide](testing.md)
 - 📚 [Installation Guide](installation.md)
