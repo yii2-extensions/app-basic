@@ -26,7 +26,7 @@ config/
 
 ### Configuration hierarchy
 
-The configuration follows this loading order.
+Configuration follows this loading order.
 
 1. **Common configuration** - Shared between web and console.
 2. **Console application configuration** - Specific to the console application.
@@ -36,7 +36,7 @@ The configuration follows this loading order.
 
 ### Common configuration
 
-Common components configuration in `config/common/components.php`.
+Components configuration in `config/common/components.php`.
 
 ```php
 <?php
@@ -74,7 +74,7 @@ return [
 
 ### Console application configuration
 
-Console application configuration in `config/console/app.php`.
+Application configuration in `config/console/app.php`.
 
 ```php
 <?php
@@ -113,7 +113,7 @@ return [
 
 ### Web application configuration
 
-Main web application configuration in `config/web/app.php`.
+Application configuration in `config/web/app.php`.
 
 ```php
 <?php
@@ -170,7 +170,7 @@ return [
 ];
 ```
 
-Web components configuration in `config/web/components.php`.
+Components configuration in `config/web/components.php`.
 
 ```php
 <?php
