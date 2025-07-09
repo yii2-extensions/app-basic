@@ -31,6 +31,6 @@ composer run static
 
 The code is tested with [Codeception](https://github.com/Codeception/Codeception/). To run tests.
 
-```
+```shell
 composer run test
 ```
