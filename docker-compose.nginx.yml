@@ -1,0 +1,15 @@
+
+services:
+  yii2-nginx:
+    build:
+      dockerfile: docker/nginx/Dockerfile
+    container_name: yii2-nginx
+    restart: always
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+    ports:
+      - '8081:80'
+    environment:
+      TZ: "UTC"
