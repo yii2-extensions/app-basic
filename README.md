@@ -43,7 +43,7 @@ A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-a
 ## Environment support
 
 [![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&label=docker&logo=apache&logoColor=white)](docker-compose.yml)
-[![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&&label=docker&logo=nginx&logoColor=white)](docker-compose.nginx.yml)
+[![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&label=docker&logo=nginx&logoColor=white)](docker-compose.nginx.yml)
 
 ## Quick start
 
