@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # copy supervisord config
-COPY docker/apache/supervisord/supervisord.conf /etc/supervisor/supervisord.conf
+COPY docker/nginx/supervisord/supervisord.conf /etc/supervisor/supervisord.conf
 
 # copy supervisord program configs
 COPY docker/nginx/supervisord/conf.d/nginx.conf /etc/supervisor/conf.d/nginx.conf

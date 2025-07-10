@@ -16,7 +16,7 @@ use function verify;
 final class ContactControllerTest extends Unit
 {
     /**
-     * @phpstan-var Yii2|null $tester
+     * @phpstan-var Yii2|null
      */
     public $tester = null;
 
