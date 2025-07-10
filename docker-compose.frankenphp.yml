@@ -1,4 +1,3 @@
-
 services:
   yii2-frankenphp:
     build:
