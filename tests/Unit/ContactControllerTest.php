@@ -15,7 +15,10 @@ use function verify;
 
 final class ContactControllerTest extends Unit
 {
-    public mixed $tester = null;
+    /**
+     * @phpstan-var Yii2|null $tester
+     */
+    public $tester = null;
 
     public function testEmailIsSentOnContact(): void
     {
@@ -31,10 +34,8 @@ final class ContactControllerTest extends Unit
         ];
 
         verify($controller->sendEmail($form))->notEmpty();
-        assert(
-            $this->tester instanceof Yii2,
-            '\'Yii2\' module should be available in the tester',
-        );
+
+        self::assertNotNull($this->tester, 'Yii2 module is not initialized');
 
         $this->tester->seeEmailIsSent();
         $emailMessage = $this->tester->grabLastSentEmail();
