@@ -32,8 +32,10 @@ jobs:
       - name: Update vendor packages.
         run: docker exec yii2-apache composer update --prefer-dist -vvv
 
-      - name: Run codeception tests.
-        run: docker exec yii2-apache vendor/bin/codecept run
+      - name: Run codeception build and tests.
+        run: |
+          docker exec yii2-nginx vendor/bin/codecept build
+          docker exec yii2-nginx vendor/bin/codecept run
 
   test-nginx:
     runs-on: ubuntu-latest
@@ -49,10 +51,12 @@ jobs:
           docker-compose --version
 
       - name: Build and start containers.
-        run: docker-compose -f docker-compose-nginx.yml build --no-cache && docker-compose -f docker-compose-nginx.yml up -d
+        run: docker-compose -f docker-compose build --no-cache && docker-compose -f docker-compose-nginx.yml up -d
 
       - name: Update vendor packages.
         run: docker exec yii2-nginx composer update --prefer-dist -vvv
 
-      - name: Run codeception tests.
-        run: docker exec yii2-nginx vendor/bin/codecept run
+      - name: Run codeception build and tests.
+        run: |
+          docker exec yii2-nginx vendor/bin/codecept build
+          docker exec yii2-nginx vendor/bin/codecept run
