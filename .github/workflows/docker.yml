@@ -20,13 +20,19 @@ jobs:
       - name: Checkout.
         uses: actions/checkout@v4
 
-      - name: Build and start Containers.
+      - name: Install docker compose.
+        run: |
+          sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+          sudo chmod +x /usr/local/bin/docker-compose
+          docker-compose --version
+
+      - name: Build and start containers.
         run: docker-compose build --no-cache && docker-compose up -d
 
-      - name: Update Vendor Packages.
+      - name: Update vendor packages.
         run: docker exec yii2-apache composer update --prefer-dist -vvv
 
-      - name: Run Codeception Tests
+      - name: Run codeception tests.
         run: docker exec yii2-apache vendor/bin/codecept run
 
   test-nginx:
@@ -36,11 +42,17 @@ jobs:
       - name: Checkout.
         uses: actions/checkout@v4
 
-      - name: Build and start Containers.
+      - name: Install docker Compose.
+        run: |
+          sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+          sudo chmod +x /usr/local/bin/docker-compose
+          docker-compose --version
+
+      - name: Build and start containers.
         run: docker-compose -f docker-compose-nginx.yml build --no-cache && docker-compose -f docker-compose-nginx.yml up -d
 
-      - name: Update Vendor Packages.
+      - name: Update vendor packages.
         run: docker exec yii2-nginx composer update --prefer-dist -vvv
 
-      - name: Run Codeception Tests
+      - name: Run codeception tests.
         run: docker exec yii2-nginx vendor/bin/codecept run
