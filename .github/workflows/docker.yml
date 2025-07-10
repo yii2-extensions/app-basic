@@ -52,7 +52,7 @@ jobs:
           docker-compose --version
 
       - name: Build and start containers.
-        run: docker-compose -f docker-compose build --no-cache && docker-compose -f docker-compose-nginx.yml up -d
+        run: docker-compose build --no-cache && docker-compose -f docker-compose-nginx.yml up -d
 
       - name: Update vendor packages.
         run: docker exec yii2-nginx composer update --prefer-dist -vvv
