@@ -1,0 +1,25 @@
+
+services:
+  yii2-frankenphp:
+    build:
+      dockerfile: docker/frankenphp/Dockerfile
+    container_name: yii2-frankenphp
+    restart: always
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      - caddy_data:/data
+      - caddy_config:/config
+    ports:
+      - '8082:80'
+      - '8443:443'
+      - '8443:443/udp'
+    environment:
+      TZ: "UTC"
+    tty: true
+
+# Volumes needed for Caddy certificates and configuration
+volumes:
+  caddy_data:
+  caddy_config:

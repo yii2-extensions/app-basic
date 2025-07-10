@@ -43,6 +43,7 @@ A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-a
 ## Environment support
 
 [![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&label=docker&logo=apache&logoColor=white)](docker-compose.yml)
+[![FrankenPHP](https://img.shields.io/badge/frankenphp-%23FF6B35.svg?style=for-the-badge&label=docker&logo=php&logoColor=white)](docker-compose.frankenphp.yml)
 [![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&label=docker&logo=nginx&logoColor=white)](docker-compose.nginx.yml)
 
 ## Quick start
@@ -100,6 +101,9 @@ php -S localhost:8080 -t public
 # For Apache
 docker-compose up -d
 
+# For FrankenPHP
+docker-compose -f docker-compose.frankenphp.yml up -d
+
 # For Nginx
 docker-compose -f docker-compose.nginx.yml up -d 
 ```
@@ -114,6 +118,9 @@ http://localhost:8080/
 
 # For Apache
 http://localhost:8080/
+
+# For FrankenPHP
+http://localhost:8082/
 
 # For Nginx
 http://localhost:8081/
@@ -132,6 +139,7 @@ root/
 │   └── messages.php       Translation config
 ├── docker/                Docker configuration files
 │   ├── apache/            Apache configuration
+│   ├── frankenphp/        FrankenPHP configuration
 │   ├── nginx/             Nginx configuration
 │   └── php/               PHP configuration
 ├── src/
