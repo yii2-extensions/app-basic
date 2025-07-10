@@ -11,8 +11,11 @@ COPY docker/php/php.ini /usr/local/etc/php/conf.d/base.ini
 RUN apt-get update && apt-get install -y supervisor --no-install-recommends && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 COPY docker/apache/supervisord/supervisord.conf /etc/supervisor/supervisord.conf
 
-# copy apache2 config
+# copy supervisord program configs
 COPY docker/apache/supervisord/conf.d/apache2.conf /etc/supervisor/conf.d/apache2.conf
+
+# copy queue worker config uncommented for use with yii2-queue
+#COPY docker/apache/supervisord/conf.d/queue.conf /etc/supervisor/conf.d/queue.conf
 
 # run supervisord
 CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]
