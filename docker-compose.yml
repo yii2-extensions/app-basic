@@ -2,6 +2,7 @@ services:
   yii2-apache:
     build:
       dockerfile: docker/apache/Dockerfile
+    container_name: yii2-apache
     image: yii2-apache:84
     restart: always
     working_dir: /app

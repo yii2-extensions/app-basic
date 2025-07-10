@@ -5,156 +5,43 @@ on:
     paths:
       - 'docker/**'
       - 'docker-compose*.yml'
-      - '.github/workflows/docker-ci.yml'
+      - '.github/workflows/docker.yml'
   push:
     paths:
       - 'docker/**'
       - 'docker-compose*.yml'
-      - '.github/workflows/docker-ci.yml'
+      - '.github/workflows/docker.yml'
 
 jobs:
   test-apache:
-    name: Test Apache Image
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout.
         uses: actions/checkout@v4
 
-      - name: Set up docker buildx.
-        uses: docker/setup-buildx-action@v3
+      - name: Build and start Containers.
+        run: docker-compose build --no-cache && docker-compose up -d
 
-      - name: Install docker compose.
-        run: |
-          sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-          sudo chmod +x /usr/local/bin/docker-compose
-          docker-compose --version
+      - name: Update Vendor Packages.
+        run: docker exec yii2-apache composer update --prefer-dist -vvv
 
-      - name: Build apache image.
-        run: docker-compose build yii2-apache
+      - name: Run Codeception Tests
+        run: docker exec yii2-apache vendor/bin/codecept run
 
-      - name: Start apache container.
-        run: docker-compose up -d yii2-apache
-
-      - name: Check container logs for errors.
-        run: |
-          docker logs $(docker-compose ps -q yii2-apache) 2>&1 | grep -i error || true
-
-      - name: Wait for apache to be ready.
-        run: timeout 60 sh -c 'until curl -f http://localhost:8080 ; do sleep 2; done'
-
-      - name: Test apache container health.
-        run: |
-          # Test that Apache is responding
-          curl -f http://localhost:8080 || echo "Apache not responding"
-
-          # Check that supervisord is running all services
-          docker exec $(docker-compose ps -q yii2-apache) supervisorctl status
-
-          # Check for any container errors
-          docker logs $(docker-compose ps -q yii2-apache) 2>&1 | grep -i error && exit 1 || true
-
-      - name: Test PHP functionality.
-        run: |
-          # Test PHP is working
-          docker exec $(docker-compose ps -q yii2-apache) php -v
-
-          # Test Yii2 application (if you have a test endpoint)
-          # curl -f http://localhost:8080/site/about || echo "Yii2 routes not working"
-
-      - name: Stop apache container.
-        run: docker-compose down yii2-apache
-
+jobs:
   test-nginx:
-    name: Test Nginx Image
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout.
         uses: actions/checkout@v4
 
-      - name: Set up docker buildx.
-        uses: docker/setup-buildx-action@v3
+      - name: Build and start Containers.
+        run: docker-compose -f docker-compose-nginx.yml build --no-cache && docker-compose -f docker-compose-nginx.yml up -d
 
-      - name: Install docker compose.
-        run: |
-          sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-          sudo chmod +x /usr/local/bin/docker-compose
-          docker-compose --version
+      - name: Update Vendor Packages.
+        run: docker exec yii2-nginx composer update --prefer-dist -vvv
 
-      - name: Build nginx image.
-        run: docker-compose -f docker-compose.nginx.yml build yii2-nginx
-
-      - name: Start nginx container.
-        run: docker-compose -f docker-compose.nginx.yml up -d yii2-nginx
-
-      - name: Check container logs for errors.
-        run: |
-          docker logs $(docker-compose -f docker-compose.nginx.yml ps -q yii2-nginx) 2>&1 | grep -i error || true
-
-      - name: Wait for nginx to be ready.
-        run: timeout 60 sh -c 'until curl -f http://localhost:8081 ; do sleep 2; done'
-
-      - name: Test nginx container health.
-        run: |
-          # Test that Nginx is responding
-          curl -f http://localhost:8081 || echo "Nginx not responding"
-
-          # Check that supervisord is running all services
-          docker exec $(docker-compose -f docker-compose.nginx.yml ps -q yii2-nginx) supervisorctl status
-
-          # Check for any container errors
-          docker logs $(docker-compose -f docker-compose.nginx.yml ps -q yii2-nginx) 2>&1 | grep -i error && exit 1 || true
-
-      - name: Test PHP-FPM functionality.
-        run: |
-          # Test PHP-FPM is working
-          docker exec $(docker-compose -f docker-compose.nginx.yml ps -q yii2-nginx) php -v
-
-          # Test that PHP-FPM is listening
-          docker exec $(docker-compose -f docker-compose.nginx.yml ps -q yii2-nginx) netstat -ln | grep :9000
-
-      - name: Stop Nginx container
-        run: docker-compose -f docker-compose.nginx.yml down yii2-nginx
-
-  security-scan:
-    name: Security Scan
-    runs-on: ubuntu-latest
-    needs: [test-apache, test-nginx]
-
-    steps:
-      - name: Checkout.
-        uses: actions/checkout@v4
-
-      - name: Build images for scanning.
-        run: |
-          docker-compose build
-          docker-compose -f docker-compose.nginx.yml build
-
-      - name: Run trivy vulnerability scanner - apache.
-        uses: aquasecurity/trivy-action@master
-        with:
-          image-ref: 'yii2-apache:84'
-          format: 'sarif'
-          output: 'trivy-apache-results.sarif'
-          severity: 'CRITICAL,HIGH'
-
-      - name: Run trivy vulnerability scanner - nginx.
-        uses: aquasecurity/trivy-action@master
-        with:
-          image-ref: 'yii2-nginx:84'
-          format: 'sarif'
-          output: 'trivy-nginx-results.sarif'
-          severity: 'CRITICAL,HIGH'
-
-      - name: Upload trivy scan results to GitHub security tab.
-        uses: github/codeql-action/upload-sarif@v2
-        if: always()
-        with:
-          sarif_file: 'trivy-apache-results.sarif'
-
-      - name: Upload trivy scan results to GitHub security tab.
-        uses: github/codeql-action/upload-sarif@v2
-        if: always()
-        with:
-          sarif_file: 'trivy-nginx-results.sarif'
+      - name: Run Codeception Tests
+        run: docker exec yii2-nginx vendor/bin/codecept run

@@ -3,7 +3,7 @@ services:
   yii2-nginx:
     build:
       dockerfile: docker/nginx/Dockerfile
-    image: yii2-nginx:84
+    container_name: yii2-nginx
     restart: always
     working_dir: /app
     volumes:

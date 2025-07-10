@@ -7,8 +7,17 @@ COPY docker/apache/vhost.conf /etc/apache2/sites-available/000-default.conf
 # change PHP config
 COPY docker/php/php.ini /usr/local/etc/php/conf.d/base.ini
 
-# install supervisord
-RUN apt-get update && apt-get install -y supervisor --no-install-recommends && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+# install supervisord and Node.js (includes npm)
+RUN apt-get update && apt-get install -y \
+    supervisor \
+    curl \
+    --no-install-recommends \
+    && curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
+    && apt-get install -y nodejs \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# copy supervisord config
 COPY docker/apache/supervisord/supervisord.conf /etc/supervisor/supervisord.conf
 
 # copy supervisord program configs
