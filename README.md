@@ -108,18 +108,16 @@ docker-compose -f docker-compose.nginx.yml up -d
 ### Access your application
 
 After starting the server, you can access your application in your web browser.
+
 ```bash
+# For built-in PHP server
+http://localhost:8080/
+
 # For Apache
 http://localhost:8080/
 
 # For Nginx
 http://localhost:8081/
-```
-
-**Access your application**
-
-```
-http://localhost:8080/
 ```
 
 ### Basic usage
