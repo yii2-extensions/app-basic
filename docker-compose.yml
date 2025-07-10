@@ -1,0 +1,15 @@
+services:
+  yii2-apache:
+    build:
+      context: docker/
+      dockerfile: apache/Dockerfile
+    image: yii2-apache:84
+    restart: always
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+    ports:
+      - '8080:80'
+    environment:
+      TZ: "UTC"
