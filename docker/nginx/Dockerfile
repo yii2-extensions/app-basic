@@ -4,7 +4,7 @@ FROM yiisoftware/yii2-php:8.4-fpm-nginx
 COPY docker/nginx/nginx.conf /etc/nginx/nginx.conf
 COPY docker/nginx/default.conf /etc/nginx/conf.d/default.conf
 
-# change PHP config (same as Apache)
+# change PHP config
 COPY docker/php/php.ini /usr/local/etc/php/conf.d/base.ini
 
 # install supervisord and Node.js (includes npm)
