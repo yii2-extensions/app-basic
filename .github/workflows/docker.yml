@@ -29,7 +29,6 @@ jobs:
       - name: Run Codeception Tests
         run: docker exec yii2-apache vendor/bin/codecept run
 
-jobs:
   test-nginx:
     runs-on: ubuntu-latest
 
