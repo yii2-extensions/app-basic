@@ -36,6 +36,10 @@ jobs:
       - name: Start apache container.
         run: docker-compose up -d yii2-apache
 
+      - name: Check container logs for errors.
+        run: |
+          docker logs $(docker-compose.yml ps -q yii2-apache) 2>&1 | grep -i error || true
+
       - name: Wait for apache to be ready.
         run: timeout 60 sh -c 'until curl -f http://localhost:8080 ; do sleep 2; done'
 
@@ -83,6 +87,10 @@ jobs:
 
       - name: Start nginx container.
         run: docker-compose -f docker-compose.nginx.yml up -d yii2-nginx
+
+      - name: Check container logs for errors.
+        run: |
+          docker logs $(docker-compose.nginx.yml ps -q yii2-nginx) 2>&1 | grep -i error || true
 
       - name: Wait for nginx to be ready.
         run: timeout 60 sh -c 'until curl -f curl -f http://localhost:8081 ; do sleep 2; done'
