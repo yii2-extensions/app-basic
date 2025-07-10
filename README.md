@@ -95,6 +95,27 @@ php -S localhost:8080 -t public
 ./yii serve
 ```
 
+**Start Apache or Nginx server**
+
+```bash
+# For Apache
+docker-compose up -d
+
+# For Nginx
+docker-compose -f docker-compose.nginx.yml up -d 
+```
+
+### Access your application
+
+After starting the server, you can access your application in your web browser.
+```bash
+# For Apache
+http://localhost:8080/
+
+# For Nginx
+http://localhost:8081/
+```
+
 **Access your application**
 
 ```
@@ -112,6 +133,10 @@ root/
 │   ├── console/           Console configuration  
 │   ├── web/               Web configuration
 │   └── messages.php       Translation config
+├── docker/                Docker configuration files
+│   ├── apache/            Apache configuration
+│   ├── nginx/             Nginx configuration
+│   └── php/               PHP configuration
 ├── src/
 │   ├── framework/         Framework assets & resources
 │   │   ├── asset/         Asset bundles
