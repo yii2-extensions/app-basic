@@ -10,6 +10,7 @@ WORKDIR /app
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
 RUN install-php-extensions \
         bcmath \
+        @composer \
         exif \
         gd \
         imagick \
@@ -20,6 +21,9 @@ RUN install-php-extensions \
         soap \
         xdebug \
         zip
+
+# set composer environment
+ENV COMPOSER_ALLOW_SUPERUSER=1
 
 # change PHP config
 COPY docker/php/php.ini /usr/local/etc/php/conf.d/base.ini
@@ -42,6 +46,8 @@ COPY docker/frankenphp/supervisord/conf.d/frankenphp.conf /etc/supervisor/conf.d
 
 # copy queue worker config uncommented for use with yii2-queue
 #COPY docker/frankenphp/supervisord/conf.d/queue.conf /etc/supervisor/conf.d/queue.conf
+
+RUN mkdir -p /var/run && chown -R www-data:www-data /var/run
 
 # Run supervisord
 CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]
