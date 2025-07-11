@@ -48,18 +48,13 @@ echo -e "${GREEN}Setup completed.${NC}"
 if [ -f "/app/composer.json" ] && [ ! -d "/app/vendor" ]; then
     echo -e "${YELLOW}Installing Composer dependencies...${NC}"
 
-    # Install dependencies based on environment
+    # Install dependencies based on environment AS www-data user
     if [ "$YII_ENV" = "prod" ]; then
         # Production: exclude dev dependencies and optimize autoloader
-        composer install --no-dev --optimize-autoloader --no-interaction
+        su-exec www-data composer install --no-dev --optimize-autoloader --no-interaction
     else
         # Development: include dev dependencies
-        composer install --optimize-autoloader --no-interaction
-    fi
-
-    # Set proper ownership for vendor directory if possible
-    if chown -R www-data:www-data /app/vendor 2>/dev/null; then
-        echo -e "${GREEN}✓ Vendor directory ownership set${NC}"
+        su-exec www-data composer install --optimize-autoloader --no-interaction
     fi
 
     echo -e "${GREEN}✓ Composer dependencies installed successfully.${NC}"

@@ -34,10 +34,11 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 # Change PHP config
 COPY docker/php/php.ini /usr/local/etc/php/conf.d/base.ini
 
-# Install supervisord and Node.js (includes npm)
+# Install supervisord, Node.js, and su-exec
 RUN apt-get update && apt-get install -y \
     supervisor \
     curl \
+    su-exec \
     --no-install-recommends \
     && curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
     && apt-get install -y nodejs \
