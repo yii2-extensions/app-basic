@@ -21,9 +21,6 @@ services:
       - '8444:443'
       - '8444:443/udp'
     restart: always
-    sysctls:
-      - net.core.rmem_max=${UDP_BUFFER_SIZE:-7168000}
-      - net.core.rmem_default=${UDP_BUFFER_SIZE:-7168000}
     volumes:
       - ./:/app
       - ${HOME}/.composer-docker/cache:/var/www/.composer/cache:delegated
