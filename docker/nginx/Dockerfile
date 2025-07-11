@@ -44,7 +44,7 @@ COPY docker/nginx/supervisord/conf.d/nginx.conf /etc/supervisor/conf.d/nginx.con
 COPY docker/nginx/supervisord/conf.d/php-fpm.conf /etc/supervisor/conf.d/php-fpm.conf
 
 # Copy queue worker config uncommented for use with yii2-queue
-#COPY docker/apache/supervisord/conf.d/queue.conf /etc/supervisor/conf.d/queue.conf
+#COPY docker/nginx/supervisord/conf.d/queue.conf /etc/supervisor/conf.d/queue.conf
 
 # Copy scripts
 COPY docker/init.sh /usr/local/bin/init.sh
