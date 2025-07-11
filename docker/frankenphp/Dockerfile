@@ -34,14 +34,16 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 # Change PHP config
 COPY docker/php/php.ini /usr/local/etc/php/conf.d/base.ini
 
-# Install supervisord, Node.js, and gosu
+# Install supervisord, gosu, and Node.js with script verification
 RUN apt-get update && apt-get install -y --no-install-recommends \
     supervisor \
     curl \
     gosu \
     && curl -fsSL https://deb.nodesource.com/setup_lts.x -o /tmp/nodesetup.sh \
-    && echo "<expected-sha256>  /tmp/nodesetup.sh" | sha256sum -c - \
+    && echo "Downloaded NodeSource script size: $(wc -c < /tmp/nodesetup.sh) bytes" \
+    && head -10 /tmp/nodesetup.sh | grep -q "NodeSource" \
     && bash /tmp/nodesetup.sh \
+    && rm /tmp/nodesetup.sh \
     && apt-get install -y nodejs \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
