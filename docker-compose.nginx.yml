@@ -1,15 +1,27 @@
 services:
   yii2-nginx:
     build:
+      args:
+        USER_ID: ${USER_ID:-1000}
+        GROUP_ID: ${GROUP_ID:-1000}
+        USER_NAME: ${USER_NAME:-www-data}
+        GROUP_NAME: ${GROUP_NAME:-www-data}
+      context: .
       dockerfile: docker/nginx/Dockerfile
     container_name: yii2-nginx
-    restart: always
-    working_dir: /app
-    volumes:
-      - ./:/app
-      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+    entrypoint: ["/usr/local/bin/entrypoint.sh"]
+    env_file:
+      - .env
+    environment:
+      TZ: "UTC"
+      YII_DEBUG: "${YII_DEBUG:-false}"
+      YII_ENV: "${YII_ENV:-prod}"
     ports:
       - '8082:80'
       - '8445:443'
-    environment:
-      TZ: "UTC"
+    restart: always
+    volumes:
+      - ./:/app
+      - ${HOME}/.composer-docker/cache:/var/www/.composer/cache:delegated
+    working_dir: /app
+    tty: true
