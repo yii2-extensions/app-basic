@@ -52,21 +52,13 @@ jobs:
           docker-compose --version
 
       - name: Build and start containers.
-        run: docker-compose -f docker-compose.frankenphp.yml build --no-cache && docker-compose -f docker-compose.frankenphp.yml up -d
+        run: docker-compose -f && docker-compose -f docker-compose.frankenphp.yml up -d --build
 
-      - name: Wait for container initialization
+      - name: Wait for container to be ready
         run: |
-          echo "Waiting for container to be ready..."
-          # Wait for the init script to complete
-          timeout 60 bash -c 'until docker exec yii2-frankenphp test -d /app/vendor; do sleep 2; done'
-
-          # Additional check: wait for supervisord to be running
-          timeout 30 bash -c 'until docker exec yii2-frankenphp pgrep supervisord > /dev/null; do sleep 2; done'
-
-          echo "Container is ready!"
-
-      - name: Show container logs for debugging
-        run: docker logs yii2-frankenphp
+          echo "Waiting 30 seconds for container initialization..."
+          sleep 30
+          docker logs yii2-frankenphp
 
       - name: Codeception build.
         run: docker exec yii2-frankenphp vendor/bin/codecept build
