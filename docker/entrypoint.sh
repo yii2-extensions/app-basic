@@ -1,5 +1,5 @@
 #!/bin/bash
-+set -euo pipefail
+set -euo pipefail
 
 echo "=== Container Starting ==="
 echo "Running initialization script..."

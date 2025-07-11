@@ -62,6 +62,14 @@ if [ -f "/app/composer.json" ] && [ ! -d "/app/vendor" ]; then
         echo -e "${GREEN}✓ Vendor directory ownership set${NC}"
     fi
 
+    # Set permissions for node_modules directory if it exists
+    if chown -R www-data:www-data /app/node_modules 2>/dev/null; then
+        chmod -R 775 /app/node_modules
+        echo -e "${GREEN}✓ Node modules directory ownership set${NC}"
+    else
+        echo -e "${YELLOW}⚠ Node modules directory ownership could not be set (mounted volume?)${NC}"
+    fi
+
     echo -e "${GREEN}✓ Composer dependencies installed successfully.${NC}"
 fi
 
