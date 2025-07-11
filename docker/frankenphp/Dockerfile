@@ -39,7 +39,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     supervisor \
     curl \
     gosu \
-    && curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
+    && curl -fsSL https://deb.nodesource.com/setup_lts.x -o /tmp/nodesetup.sh \
+    && echo "<expected-sha256>  /tmp/nodesetup.sh" | sha256sum -c - \
+    && bash /tmp/nodesetup.sh \
     && apt-get install -y nodejs \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
