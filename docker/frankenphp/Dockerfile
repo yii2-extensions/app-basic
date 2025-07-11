@@ -34,15 +34,22 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 # Change PHP config
 COPY docker/php/php.ini /usr/local/etc/php/conf.d/base.ini
 
-# Install supervisord and Node.js (includes npm)
-RUN apt-get update && apt-get install -y \
+# Install supervisord, gosu, and Node.js (version simple)
+RUN apt-get update && apt-get install -y --no-install-recommends \
     supervisor \
     curl \
-    --no-install-recommends \
+    gosu \
     && curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
     && apt-get install -y nodejs \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# Apply the user/group IDs to www-data
+RUN usermod -u ${USER_ID} www-data && groupmod -g ${GROUP_ID} www-data
+
+# Create composer and npm cache directories with proper ownership
+RUN mkdir -p /var/www/.composer/cache /var/www/.npm && \
+    chown -R www-data:www-data /var/www/.composer /var/www/.npm
 
 # Copy supervisord config
 COPY docker/frankenphp/supervisord/supervisord.conf /etc/supervisor/supervisord.conf
@@ -64,7 +71,7 @@ RUN chmod +x /usr/local/bin/init.sh /usr/local/bin/entrypoint.sh && \
     # Test that scripts have valid syntax
     bash -n /usr/local/bin/init.sh && \
     bash -n /usr/local/bin/entrypoint.sh && \
-    echo "Scripts validated successfully"
+    echo "✓ Scripts validated successfully..."
 
 # Use ENTRYPOINT to guarantee execution
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
