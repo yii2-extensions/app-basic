@@ -54,6 +54,12 @@ jobs:
       - name: Build and start containers.
         run: docker-compose -f docker-compose.frankenphp.yml up -d --build
 
+      - name: Wait for container to be ready.
+        run: |
+          echo "Waiting 30 seconds for container initialization..."
+          sleep 30
+          docker logs yii2-frankenphp
+
       - name: Codeception build.
         run: docker exec yii2-frankenphp vendor/bin/codecept build
 
