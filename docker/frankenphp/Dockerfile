@@ -54,12 +54,11 @@ COPY docker/frankenphp/supervisord/conf.d/frankenphp.conf /etc/supervisor/conf.d
 #COPY docker/frankenphp/supervisord/conf.d/queue.conf /etc/supervisor/conf.d/queue.conf
 
 # Create necessary directories and set permissions
-RUN mkdir -p /var/run && chown -R www-data:www-data /var/run
-
-RUN mkdir -p /var/run /app/runtime /app/web/assets /app/runtime/cache /app/runtime/logs && \
+RUN mkdir -p /app/runtime/cache /app/runtime/logs && \
     chown -R ${USER_NAME}:${GROUP_NAME} /var/run /app && \
+    chown -R ${USER_NAME}:${GROUP_NAME} /app/public /app/runtime && \
     chmod -R 755 /app && \
-    chmod -R 775 /app/runtime /app/web/assets
+    chmod -R 775 /app/runtime /app/public
 
 # Copy init script
 COPY docker/init.sh /usr/local/bin/init.sh
