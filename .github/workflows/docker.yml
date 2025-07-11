@@ -52,7 +52,7 @@ jobs:
           docker-compose --version
 
       - name: Build and start containers.
-        run: docker-compose -f && docker-compose -f docker-compose.frankenphp.yml up -d --build
+        run: docker-compose -f docker-compose.frankenphp.yml up -d --build
 
       - name: Wait for container to be ready
         run: |
