@@ -27,5 +27,18 @@ COPY docker/nginx/supervisord/conf.d/php-fpm.conf /etc/supervisor/conf.d/php-fpm
 # Copy queue worker config uncommented for use with yii2-queue
 #COPY docker/apache/supervisord/conf.d/queue.conf /etc/supervisor/conf.d/queue.conf
 
-# Run supervisord
-CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]
+# Copy scripts
+COPY docker/init.sh /usr/local/bin/init.sh
+COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
+
+# Make scripts executable and validate
+RUN chmod +x /usr/local/bin/init.sh /usr/local/bin/entrypoint.sh && \
+    # Convert any Windows line endings
+    sed -i 's/\r$//' /usr/local/bin/init.sh /usr/local/bin/entrypoint.sh && \
+    # Test that scripts have valid syntax
+    bash -n /usr/local/bin/init.sh && \
+    bash -n /usr/local/bin/entrypoint.sh && \
+    echo "✓ Scripts validated successfully..."
+
+# Use ENTRYPOINT to guarantee execution
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
