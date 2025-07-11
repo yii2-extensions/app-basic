@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
++set -euo pipefail
 
 echo "=== Container Starting ==="
 echo "Running initialization script..."
@@ -7,13 +7,8 @@ echo "Running initialization script..."
 # Ensure init script is executable
 chmod +x /usr/local/bin/init.sh
 
-# Execute init script
-if /usr/local/bin/init.sh; then
-    echo "=== Initialization completed successfully ==="
-else
-    echo "=== Initialization failed ==="
-    exit 1
-fi
+# Execute init script; replace the PID 1 shell
+exec /usr/local/bin/init.sh
 
 # If we get here, everything went well
 echo "=== Container ready ==="
