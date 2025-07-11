@@ -53,13 +53,6 @@ COPY docker/frankenphp/supervisord/conf.d/frankenphp.conf /etc/supervisor/conf.d
 # Copy queue worker config uncommented for use with yii2-queue
 #COPY docker/frankenphp/supervisord/conf.d/queue.conf /etc/supervisor/conf.d/queue.conf
 
-# Create necessary directories and set permissions
-RUN mkdir -p /app/runtime/cache /app/runtime/logs && \
-    chown -R ${USER_NAME}:${GROUP_NAME} /var/run /app && \
-    chown -R ${USER_NAME}:${GROUP_NAME} /app/public /app/runtime && \
-    chmod -R 755 /app && \
-    chmod -R 775 /app/runtime /app/public
-
 # Copy init script
 COPY docker/init.sh /usr/local/bin/init.sh
 
