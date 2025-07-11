@@ -9,6 +9,7 @@ services:
       context: .
       dockerfile: docker/frankenphp/Dockerfile
     container_name: yii2-frankenphp
+    entrypoint: ["/usr/local/bin/entrypoint.sh"]
     env_file:
       - .env
     restart: always
