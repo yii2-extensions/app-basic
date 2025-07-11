@@ -53,11 +53,18 @@ COPY docker/frankenphp/supervisord/conf.d/frankenphp.conf /etc/supervisor/conf.d
 # Copy queue worker config uncommented for use with yii2-queue
 #COPY docker/frankenphp/supervisord/conf.d/queue.conf /etc/supervisor/conf.d/queue.conf
 
-# Copy init script
+# Copy scripts
 COPY docker/init.sh /usr/local/bin/init.sh
+COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
 
-# Make init script executable
-RUN chmod +x /usr/local/bin/init.sh
+# Make scripts executable and validate
+RUN chmod +x /usr/local/bin/init.sh /usr/local/bin/entrypoint.sh && \
+    # Convert any Windows line endings
+    sed -i 's/\r$//' /usr/local/bin/init.sh /usr/local/bin/entrypoint.sh && \
+    # Test that scripts have valid syntax
+    bash -n /usr/local/bin/init.sh && \
+    bash -n /usr/local/bin/entrypoint.sh && \
+    echo "Scripts validated successfully"
 
-# Run initialization script and then supervisord
-CMD ["/usr/local/bin/init.sh"]
+# Use ENTRYPOINT to guarantee execution
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
