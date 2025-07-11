@@ -14,7 +14,7 @@ parameters:
         - tests/Functional
         - tests/Unit
 
-    tmpDir: %currentWorkingDirectory%/runtime
+    tmpDir: %currentWorkingDirectory%/public/runtime
 
     yii2:
         config_path: %currentWorkingDirectory%/config/web/app.php
