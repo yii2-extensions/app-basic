@@ -1,5 +1,11 @@
 FROM dunglas/frankenphp:1.8-php8.4
 
+# Build arguments for user/group
+ARG USER_ID=1000
+ARG GROUP_ID=1000
+ARG USER_NAME=www-data
+ARG GROUP_NAME=www-data
+
 # Change web server config
 COPY docker/frankenphp/Caddyfile /etc/caddy/Caddyfile
 
@@ -47,7 +53,18 @@ COPY docker/frankenphp/supervisord/conf.d/frankenphp.conf /etc/supervisor/conf.d
 # Copy queue worker config uncommented for use with yii2-queue
 #COPY docker/frankenphp/supervisord/conf.d/queue.conf /etc/supervisor/conf.d/queue.conf
 
-RUN mkdir -p /var/run && chown -R www-data:www-data /var/run
+# Create necessary directories and set permissions
+RUN mkdir -p /app/runtime/cache /app/runtime/logs && \
+    chown -R ${USER_NAME}:${GROUP_NAME} /var/run /app && \
+    chown -R ${USER_NAME}:${GROUP_NAME} /app/public /app/runtime && \
+    chmod -R 755 /app && \
+    chmod -R 775 /app/runtime /app/public
 
-# Run supervisord
-CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]
+# Copy init script
+COPY docker/init.sh /usr/local/bin/init.sh
+
+# Make init script executable
+RUN chmod +x /usr/local/bin/init.sh
+
+# Run initialization script and then supervisord
+CMD ["/usr/local/bin/init.sh"]

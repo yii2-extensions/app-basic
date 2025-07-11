@@ -1,8 +1,16 @@
 services:
   yii2-frankenphp:
     build:
+      args:
+        USER_ID: ${USER_ID:-1000}
+        GROUP_ID: ${GROUP_ID:-1000}
+        USER_NAME: ${USER_NAME:-www-data}
+        GROUP_NAME: ${GROUP_NAME:-www-data}
+      context: .
       dockerfile: docker/frankenphp/Dockerfile
     container_name: yii2-frankenphp
+    env_file:
+      - .env
     restart: always
     working_dir: /app
     volumes:
@@ -16,6 +24,8 @@ services:
       - '8444:443/udp'
     environment:
       TZ: "UTC"
+      YII_DEBUG: "${YII_DEBUG:-false}"
+      YII_ENV: "${YII_ENV:-prod}"
     tty: true
 
 # Volumes needed for Caddy certificates and configuration
