@@ -48,16 +48,33 @@ echo -e "${GREEN}Setup completed.${NC}"
 if [ -f "/app/composer.json" ] && [ ! -d "/app/vendor" ]; then
     echo -e "${YELLOW}Installing Composer dependencies...${NC}"
 
+    # Set up composer environment variables for www-data user
+    export HOME=/var/www
+    export COMPOSER_HOME=/var/www/.composer
+    export COMPOSER_CACHE_DIR=/var/www/.composer/cache
+
+    # Create composer cache directory and set ownership
+    echo -e "${YELLOW}Setting up composer cache...${NC}"
+    mkdir -p /var/www/.composer/cache
+    chown -R www-data:www-data /var/www/.composer
+
+    # Make /app writable by www-data (critical for mounted volumes)
+    echo -e "${YELLOW}Ensuring /app is writable...${NC}"
+    chmod 777 /app
+
     # Install dependencies based on environment AS www-data user
     if [ "$YII_ENV" = "prod" ]; then
         # Production: exclude dev dependencies and optimize autoloader
-        gosu www-data composer install --no-dev --optimize-autoloader --no-interaction
+        gosu www-data env HOME=/var/www COMPOSER_HOME=/var/www/.composer COMPOSER_CACHE_DIR=/var/www/.composer/cache \
+            composer install --no-dev --optimize-autoloader --no-interaction
     else
         # Development: include dev dependencies
-        gosu www-data composer install --optimize-autoloader --no-interaction
+        gosu www-data env HOME=/var/www COMPOSER_HOME=/var/www/.composer COMPOSER_CACHE_DIR=/var/www/.composer/cache \
+            composer install --optimize-autoloader --no-interaction
     fi
 
     echo -e "${GREEN}✓ Composer dependencies installed successfully.${NC}"
+    echo -e "${GREEN}✓ Both vendor/ and node_modules/ should have correct permissions.${NC}"
 fi
 
 echo -e "${GREEN}Starting supervisord...${NC}"
