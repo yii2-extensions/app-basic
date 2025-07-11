@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
 # Colors for output
 RED='\033[0;31m'
@@ -24,16 +25,16 @@ chown -R www-data:www-data /app/runtime
 chown -R www-data:www-data /app/public/assets
 
 # Verify directories exist and have correct permissions
-if [ -d "/app/runtime" ] && [ -w "/app/runtime" ]; then
+if [ -d "/app/runtime" ] && sudo -u www-data test -w "/app/runtime"; then
     echo -e "${GREEN}✓ Runtime directory configured correctly${NC}"
 else
-    echo -e "${RED}✗ Error: Could not configure runtime directory${NC}"
+    echo -e "${RED}✗ Error: www-data cannot write to /app/runtime directory${NC}"
 fi
 
-if [ -d "/app/public/assets" ] && [ -w "/app/public/assets" ]; then
+if [ -d "/app/public/assets" ] && sudo -u www-data test -w "/app/public/assets"; then
     echo -e "${GREEN}✓ Assets directory configured correctly${NC}"
 else
-    echo -e "${RED}✗ Error: Could not configure assets directory${NC}"
+    echo -e "${RED}✗ Error: www-data cannot write to /app/public/assets directory${NC}"
 fi
 
 echo -e "${GREEN}Setup completed.${NC}"
