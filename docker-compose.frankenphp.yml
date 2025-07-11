@@ -16,7 +16,7 @@ services:
     working_dir: /app
     volumes:
       - ./:/app
-      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      - ~/.composer-docker/cache:/var/www/.composer/cache:delegated
       - caddy_data:/data
       - caddy_config:/config
     ports:

@@ -8,6 +8,12 @@ NC='\033[0m'
 
 echo -e "${GREEN}Starting container setup...${NC}"
 
+# Create necessary Caddy directories with proper permissions
+echo -e "${YELLOW}Creating Caddy directories...${NC}"
+mkdir -p /data/caddy/locks /config/caddy
+chown -R www-data:www-data /data /config
+chmod -R 755 /data /config
+
 # Create necessary Yii2 directories if they don't exist
 echo -e "${YELLOW}Creating Yii2 directories...${NC}"
 mkdir -p /app/runtime/cache
@@ -48,29 +54,27 @@ echo -e "${GREEN}Setup completed.${NC}"
 if [ -f "/app/composer.json" ] && [ ! -d "/app/vendor" ]; then
     echo -e "${YELLOW}Installing Composer dependencies...${NC}"
 
-    # Install dependencies based on environment
+    # Make /app writable by www-data for mounted volumes
+    chmod 777 /app
+
+    # Install dependencies with proper environment variables
     if [ "$YII_ENV" = "prod" ]; then
         # Production: exclude dev dependencies and optimize autoloader
-        composer install --no-dev --optimize-autoloader --no-interaction
+        gosu www-data env \
+            HOME=/var/www \
+            COMPOSER_HOME=/var/www/.composer \
+            COMPOSER_CACHE_DIR=/var/www/.composer/cache \
+            composer install --no-dev --optimize-autoloader --no-interaction
     else
         # Development: include dev dependencies
-        composer install --optimize-autoloader --no-interaction
+        gosu www-data env \
+            HOME=/var/www \
+            COMPOSER_HOME=/var/www/.composer \
+            COMPOSER_CACHE_DIR=/var/www/.composer/cache \
+            composer install --optimize-autoloader --no-interaction
     fi
 
-    # Set proper ownership for vendor directory if possible
-    if chown -R www-data:www-data /app/vendor 2>/dev/null; then
-        echo -e "${GREEN}✓ Vendor directory ownership set${NC}"
-    fi
-
-    echo -e "${GREEN}✓ Composer dependencies installed successfully.${NC}"
-fi
-
-# Set permissions for node_modules directory if it exists
-if chown -R www-data:www-data /app/node_modules 2>/dev/null; then
-    chmod -R 775 /app/node_modules
-    echo -e "${GREEN}✓ Node modules directory ownership set${NC}"
-else
-    echo -e "${YELLOW}⚠ Node modules directory ownership could not be set (mounted volume?)${NC}"
+    echo -e "${GREEN}✓ Composer dependencies installed successfully${NC}"
 fi
 
 echo -e "${GREEN}Starting supervisord...${NC}"
