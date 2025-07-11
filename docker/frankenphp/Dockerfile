@@ -1,12 +1,12 @@
 FROM dunglas/frankenphp:1.8-php8.4
 
-# change web server config
+# Change web server config
 COPY docker/frankenphp/Caddyfile /etc/caddy/Caddyfile
 
-# set document root to /app/public (Yii2 structure)
+# Set document root to /app/public (Yii2 structure)
 WORKDIR /app
 
-# install required system packages for PHP extensions for Yii 2.0 Framework
+# Install required system packages for PHP extensions for Yii 2.0 Framework
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
 RUN install-php-extensions \
         bcmath \
@@ -22,13 +22,13 @@ RUN install-php-extensions \
         xdebug \
         zip
 
-# set composer environment
+# Set composer environment
 ENV COMPOSER_ALLOW_SUPERUSER=1
 
-# change PHP config
+# Change PHP config
 COPY docker/php/php.ini /usr/local/etc/php/conf.d/base.ini
 
-# install supervisord and Node.js (includes npm)
+# Install supervisord and Node.js (includes npm)
 RUN apt-get update && apt-get install -y \
     supervisor \
     curl \
@@ -38,13 +38,13 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# copy supervisord config
+# Copy supervisord config
 COPY docker/frankenphp/supervisord/supervisord.conf /etc/supervisor/supervisord.conf
 
-# copy supervisord program configs
+# Copy supervisord program configs
 COPY docker/frankenphp/supervisord/conf.d/frankenphp.conf /etc/supervisor/conf.d/frankenphp.conf
 
-# copy queue worker config uncommented for use with yii2-queue
+# Copy queue worker config uncommented for use with yii2-queue
 #COPY docker/frankenphp/supervisord/conf.d/queue.conf /etc/supervisor/conf.d/queue.conf
 
 RUN mkdir -p /var/run && chown -R www-data:www-data /var/run

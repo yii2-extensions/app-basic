@@ -1,13 +1,13 @@
 FROM yiisoftware/yii2-php:8.4-fpm-nginx
 
-# change nginx config
+# Change nginx config
 COPY docker/nginx/nginx.conf /etc/nginx/nginx.conf
 COPY docker/nginx/default.conf /etc/nginx/conf.d/default.conf
 
-# change PHP config
+# Change PHP config
 COPY docker/php/php.ini /usr/local/etc/php/conf.d/base.ini
 
-# install supervisord and Node.js (includes npm)
+# Install supervisord and Node.js (includes npm)
 RUN apt-get update && apt-get install -y \
     supervisor \
     curl \
@@ -17,15 +17,15 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# copy supervisord config
+# Copy supervisord config
 COPY docker/nginx/supervisord/supervisord.conf /etc/supervisor/supervisord.conf
 
-# copy supervisord program configs
+# Copy supervisord program configs
 COPY docker/nginx/supervisord/conf.d/nginx.conf /etc/supervisor/conf.d/nginx.conf
 COPY docker/nginx/supervisord/conf.d/php-fpm.conf /etc/supervisor/conf.d/php-fpm.conf
 
-# copy queue worker config uncommented for use with yii2-queue
+# Copy queue worker config uncommented for use with yii2-queue
 #COPY docker/apache/supervisord/conf.d/queue.conf /etc/supervisor/conf.d/queue.conf
 
-# run supervisord
+# Run supervisord
 CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]

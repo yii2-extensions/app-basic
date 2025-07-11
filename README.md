@@ -38,6 +38,7 @@ A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-a
 - ✅ **Multi-language Support** - Built-in internationalization (i18n) support with message translations.
 - ✅ **Ready-to-Use Pages** - Pre-built pages including home, about, contact, and error handling.
 - ✅ **Security Features** - Built-in CSRF protection, input validation, and secure configurations.
+- ✅ **SSL Support** - Configured for secure HTTPS connections with SSL (mkcert).
 - ✅ **Testing Ready** - Codeception test suite with examples for functional and unit testing.
 
 ## Environment support
@@ -120,10 +121,10 @@ http://localhost:8080/
 http://localhost:8080/
 
 # For FrankenPHP
-http://localhost:8082/
+http://localhost:8081/
 
 # For Nginx
-http://localhost:8081/
+http://localhost:8082/
 ```
 
 ### Basic usage

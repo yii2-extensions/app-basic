@@ -9,6 +9,7 @@ services:
       - ./:/app
       - ~/.composer-docker/cache:/root/.composer/cache:delegated
     ports:
-      - '8081:80'
+      - '8082:80'
+      - '8445:443'
     environment:
       TZ: "UTC"
