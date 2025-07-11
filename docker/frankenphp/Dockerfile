@@ -1,5 +1,11 @@
 FROM dunglas/frankenphp:1.8-php8.4
 
+# Build arguments for user/group
+ARG USER_ID=1000
+ARG GROUP_ID=1000
+ARG USER_NAME=www-data
+ARG GROUP_NAME=www-data
+
 # Change web server config
 COPY docker/frankenphp/Caddyfile /etc/caddy/Caddyfile
 
