@@ -27,10 +27,13 @@ jobs:
           docker-compose --version
 
       - name: Build and start containers.
-        run: docker-compose build --no-cache && docker-compose up -d
+        run: docker-compose up -d --build
 
-      - name: Update vendor packages.
-        run: docker exec yii2-apache composer update --prefer-dist -vvv
+      - name: Wait for container to be ready.
+        run: |
+          echo "Waiting 30 seconds for container initialization..."
+          sleep 30
+          docker logs yii2-apache
 
       - name: Codeceptcion build.
         run: docker exec yii2-apache vendor/bin/codecept build
