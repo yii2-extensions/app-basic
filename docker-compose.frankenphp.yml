@@ -11,9 +11,9 @@ services:
       - caddy_data:/data
       - caddy_config:/config
     ports:
-      - '8082:80'
-      - '8443:443'
-      - '8443:443/udp'
+      - '8081:80'
+      - '8444:443'
+      - '8444:443/udp'
     environment:
       TZ: "UTC"
     tty: true

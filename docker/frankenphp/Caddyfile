@@ -3,8 +3,11 @@
     auto_https off
 }
 
-# Main server block
-:80 {
+# HTTPS server block using mkcert certificates
+https://localhost:443 {
+    # Specify mkcert certificates
+    tls /app/docker/ssl/localhost.pem /app/docker/ssl/localhost-key.pem
+
     # Document root
     root * /app/public
 
@@ -16,6 +19,7 @@
         X-Frame-Options "SAMEORIGIN"
         X-XSS-Protection "1; mode=block"
         X-Content-Type-Options "nosniff"
+        Strict-Transport-Security "max-age=31536000; includeSubDomains"
         -Server
     }
 
@@ -49,4 +53,10 @@
 
     # Try files for Yii2 URL rewriting
     try_files {path} {path}/ /index.php?{query}
+}
+
+# HTTP server block - redirect to HTTPS
+http://localhost:80 {
+    # Redirect all HTTP traffic to HTTPS
+    redir https://localhost:8444{uri} permanent
 }
