@@ -71,7 +71,7 @@ RUN chmod +x /usr/local/bin/init.sh /usr/local/bin/entrypoint.sh && \
     # Test that scripts have valid syntax
     bash -n /usr/local/bin/init.sh && \
     bash -n /usr/local/bin/entrypoint.sh && \
-    echo "${GREEN}✓ Scripts validated successfully...${NC}"
+    echo "✓ Scripts validated successfully..."
 
 # Use ENTRYPOINT to guarantee execution
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
