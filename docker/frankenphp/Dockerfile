@@ -35,11 +35,10 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 COPY docker/php/php.ini /usr/local/etc/php/conf.d/base.ini
 
 # Install supervisord, Node.js, and su-exec
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     supervisor \
     curl \
-    su-exec \
-    --no-install-recommends \
+    gosu \
     && curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
     && apt-get install -y nodejs \
     && apt-get clean \

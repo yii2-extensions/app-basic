@@ -51,10 +51,10 @@ if [ -f "/app/composer.json" ] && [ ! -d "/app/vendor" ]; then
     # Install dependencies based on environment AS www-data user
     if [ "$YII_ENV" = "prod" ]; then
         # Production: exclude dev dependencies and optimize autoloader
-        su-exec www-data composer install --no-dev --optimize-autoloader --no-interaction
+        gosu www-data composer install --no-dev --optimize-autoloader --no-interaction
     else
         # Development: include dev dependencies
-        su-exec www-data composer install --optimize-autoloader --no-interaction
+        gosu www-data composer install --optimize-autoloader --no-interaction
     fi
 
     echo -e "${GREEN}✓ Composer dependencies installed successfully.${NC}"
