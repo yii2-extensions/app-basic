@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-set -euo pipefail
+#!/bin/bash
 
 # Colors for output
 RED='\033[0;31m'
@@ -17,24 +16,30 @@ mkdir -p /app/public/assets
 
 # Configure permissions for Yii2 directories
 echo -e "${YELLOW}Setting up permissions...${NC}"
-chmod -R 775 /app/runtime
-chmod -R 775 /app/public/assets
 
-# Ensure www-data has proper ownership
-chown -R www-data:www-data /app/runtime
-chown -R www-data:www-data /app/public/assets
-
-# Verify directories exist and have correct permissions
-if [ -d "/app/runtime" ] && sudo -u www-data test -w "/app/runtime"; then
+# Try to set permissions and ownership - handle both mounted volumes and container-only scenarios
+if chown -R www-data:www-data /app/runtime 2>/dev/null; then
+    chmod -R 775 /app/runtime
     echo -e "${GREEN}✓ Runtime directory configured correctly${NC}"
 else
-    echo -e "${RED}✗ Error: www-data cannot write to /app/runtime directory${NC}"
+    # If chown fails (mounted volume), try chmod only
+    if chmod -R 777 /app/runtime 2>/dev/null; then
+        echo -e "${YELLOW}⚠ Runtime directory permissions set to 777 (mounted volume)${NC}"
+    else
+        echo -e "${RED}✗ Error: Could not configure runtime directory${NC}"
+    fi
 fi
 
-if [ -d "/app/public/assets" ] && sudo -u www-data test -w "/app/public/assets"; then
+if chown -R www-data:www-data /app/public/assets 2>/dev/null; then
+    chmod -R 775 /app/public/assets
     echo -e "${GREEN}✓ Assets directory configured correctly${NC}"
 else
-    echo -e "${RED}✗ Error: www-data cannot write to /app/public/assets directory${NC}"
+    # If chown fails (mounted volume), try chmod only
+    if chmod -R 777 /app/public/assets 2>/dev/null; then
+        echo -e "${YELLOW}⚠ Assets directory permissions set to 777 (mounted volume)${NC}"
+    else
+        echo -e "${RED}✗ Error: Could not configure assets directory${NC}"
+    fi
 fi
 
 echo -e "${GREEN}Setup completed.${NC}"
@@ -52,8 +57,10 @@ if [ -f "/app/composer.json" ] && [ ! -d "/app/vendor" ]; then
         composer install --optimize-autoloader --no-interaction
     fi
 
-    # Set proper ownership for vendor directory
-    chown -R www-data:www-data /app/vendor
+    # Set proper ownership for vendor directory if possible
+    if chown -R www-data:www-data /app/vendor 2>/dev/null; then
+        echo -e "${GREEN}✓ Vendor directory ownership set${NC}"
+    fi
 
     echo -e "${GREEN}✓ Composer dependencies installed successfully.${NC}"
 fi
