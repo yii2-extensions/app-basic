@@ -57,6 +57,10 @@ if [ -f "/app/composer.json" ] && [ ! -d "/app/vendor" ]; then
     # Make /app writable by www-data for mounted volumes
     chmod 777 /app
 
+    # Create and configure npm cache directory for www-data
+    mkdir -p /var/www/.npm
+    chown -R www-data:www-data /var/www/.npm
+
     # Install dependencies with proper environment variables
     if [ "$YII_ENV" = "prod" ]; then
         # Production: exclude dev dependencies and optimize autoloader
@@ -64,6 +68,7 @@ if [ -f "/app/composer.json" ] && [ ! -d "/app/vendor" ]; then
             HOME=/var/www \
             COMPOSER_HOME=/var/www/.composer \
             COMPOSER_CACHE_DIR=/var/www/.composer/cache \
+            npm_config_cache=/var/www/.npm \
             composer install --no-dev --optimize-autoloader --no-interaction
     else
         # Development: include dev dependencies
@@ -71,6 +76,7 @@ if [ -f "/app/composer.json" ] && [ ! -d "/app/vendor" ]; then
             HOME=/var/www \
             COMPOSER_HOME=/var/www/.composer \
             COMPOSER_CACHE_DIR=/var/www/.composer/cache \
+            npm_config_cache=/var/www/.npm \
             composer install --optimize-autoloader --no-interaction
     fi
 
