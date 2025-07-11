@@ -54,9 +54,6 @@ jobs:
       - name: Build and start containers.
         run: docker-compose -f docker-compose.frankenphp.yml build --no-cache && docker-compose -f docker-compose.frankenphp.yml up -d
 
-      - name: Update vendor packages.
-        run: docker exec yii2-frankenphp composer update --prefer-dist -vvv
-
       - name: Codeception build.
         run: docker exec yii2-frankenphp vendor/bin/codecept build
 
@@ -78,6 +75,9 @@ jobs:
 
       - name: Build and start containers.
         run: docker-compose -f docker-compose.nginx.yml build --no-cache && docker-compose -f docker-compose.nginx.yml up -d
+
+      - name: Update vendor packages.
+        run: docker exec yii2-nginx composer update --prefer-dist -vvv
 
       - name: Codeception build.
         run: docker exec yii2-nginx vendor/bin/codecept build
