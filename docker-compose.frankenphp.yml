@@ -12,24 +12,26 @@ services:
     entrypoint: ["/usr/local/bin/entrypoint.sh"]
     env_file:
       - .env
-    restart: always
-    working_dir: /app
-    volumes:
-      - ./:/app
-      - ~/.composer-docker/cache:/var/www/.composer/cache:delegated
-      - caddy_data:/data
-      - caddy_config:/config
-    ports:
-      - '8081:80'
-      - '8444:443'
-      - '8444:443/udp'
     environment:
       TZ: "UTC"
       YII_DEBUG: "${YII_DEBUG:-false}"
       YII_ENV: "${YII_ENV:-prod}"
+    ports:
+      - '8081:80'
+      - '8444:443'
+      - '8444:443/udp'
+    restart: always
+    sysctls:
+      - net.core.rmem_max=${UDP_BUFFER_SIZE:-7168000}
+      - net.core.rmem_default=${UDP_BUFFER_SIZE:-7168000}
+    volumes:
+      - ./:/app
+      - ${HOME}/.composer-docker/cache:/var/www/.composer/cache:delegated
+      - caddy_data:/data
+      - caddy_config:/config
+    working_dir: /app
     tty: true
 
-# Volumes needed for Caddy certificates and configuration
 volumes:
   caddy_data:
   caddy_config:
