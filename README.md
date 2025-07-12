@@ -66,18 +66,6 @@ The Yii2 Web Application Basic template provides a complete foundation for build
 - **Extensible**: Easy to customize and extend for specific project requirements.
 - **Production-ready**: Includes security features and optimizations for deployment.
 
-```text
-Application structure:
-
-Web App Basic
-├── Assets (CSS, JS, Images)
-├── Console (Background tasks)
-├── I18n (Multi-language support)
-├── Pages (Home, About, Contact, Error)
-├── Security (CSRF, Validation, Authentication)
-└── Testing (Unit, Functional tests)
-```
-
 ### Installation
 
 **Quick start**
@@ -147,9 +135,12 @@ root/
 │   └── messages.php       Translation config
 ├── docker/                Docker configuration files
 │   ├── apache/            Apache configuration
+│   ├── caddy/             Caddy configuration
 │   ├── frankenphp/        FrankenPHP configuration
 │   ├── nginx/             Nginx configuration
-│   └── php/               PHP configuration
+│   ├── php/               PHP configuration
+│   ├── ssl/               SSL certificates
+│   └── supervisor/        Supervisor configuration
 ├── src/
 │   ├── framework/         Framework assets & resources
 │   │   ├── asset/         Asset bundles
