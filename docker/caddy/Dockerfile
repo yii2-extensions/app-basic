@@ -31,7 +31,7 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 # Change PHP config
 COPY docker/php/php.ini /usr/local/etc/php/conf.d/base.ini
 
-# Install supervisord, gosu, and Node.js (version simple)
+# Install supervisor, gosu, and Node.js (version simple)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     supervisor \
     curl \
@@ -70,11 +70,11 @@ RUN sed -i 's|^listen = 127.0.0.1:9000|listen = /var/run/php/php-fpm.sock|' /usr
     && mkdir -p /var/run/php \
     && chown www-data:www-data /var/run/php
 
-# Copy supervisord program configs
-COPY docker/supervisord/conf.d/caddy-php-fpm.conf /etc/supervisor/conf.d/caddy-php-fpm.conf
+# Copy supervisor program configs
+COPY docker/supervisor/conf.d/caddy-php-fpm.conf /etc/supervisor/conf.d/caddy-php-fpm.conf
 
 # Copy queue worker config uncommented for use with yii2-queue
-#COPY docker/supervisord/available/queue.conf /etc/supervisord/available/queue.conf
+#COPY docker/supervisor/config.d/queue.conf /etc/supervisor/available/queue.conf
 
 # Copy scripts
 COPY docker/init.sh /usr/local/bin/init.sh
