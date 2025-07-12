@@ -34,7 +34,7 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 # Change PHP config
 COPY docker/php/php.ini /usr/local/etc/php/conf.d/base.ini
 
-# Install supervisord, gosu, and Node.js (version simple)
+# Install supervisor, gosu, and Node.js (version simple)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     supervisor \
     curl \
@@ -51,11 +51,11 @@ RUN usermod -u ${USER_ID} www-data && groupmod -g ${GROUP_ID} www-data
 RUN mkdir -p /var/www/.composer/cache /var/www/.npm && \
     chown -R www-data:www-data /var/www/.composer /var/www/.npm
 
-# Copy supervisord program configs
-COPY docker/supervisord/conf.d/frankenphp.conf /etc/supervisor/conf.d/frankenphp.conf
+# Copy supervisor program configs
+COPY docker/supervisor/conf.d/frankenphp.conf /etc/supervisor/conf.d/frankenphp.conf
 
 # Copy queue worker config uncommented for use with yii2-queue
-#COPY docker/supervisord/conf.d/queue.conf /etc/supervisor/conf.d/queue.conf
+#COPY docker/supervisor/conf.d/queue.conf /etc/supervisor/conf.d/queue.conf
 
 # Copy scripts
 COPY docker/init.sh /usr/local/bin/init.sh

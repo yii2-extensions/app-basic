@@ -90,18 +90,18 @@ if [ -f "/app/composer.json" ] && [ ! -d "/app/vendor" ]; then
     echo -e "${GREEN}✓ Composer dependencies installed successfully${NC}"
 fi
 
-# Copy supervisord configuration
-echo -e "${YELLOW}Configuring supervisord...${NC}"
+# Copy supervisor configuration
+echo -e "${YELLOW}Configuring supervisor...${NC}"
 
-if [ -f "/app/docker/supervisord/supervisord.conf" ]; then
-    cp /app/docker/supervisord/supervisord.conf /etc/supervisor/supervisord.conf
-    echo -e "${GREEN}✓ Supervisord configuration copied successfully${NC}"
+if [ -f "/app/docker/supervisor/supervisord.conf" ]; then
+    cp /app/docker/supervisor/supervisord.conf /etc/supervisor/supervisord.conf
+    echo -e "${GREEN}✓ Supervisor configuration copied successfully${NC}"
 else
-    echo -e "${RED}✗ Error: Supervisord configuration file not found${NC}"
+    echo -e "${RED}✗ Error: Supervisor configuration file not found${NC}"
     exit 1
 fi
 
-echo -e "${GREEN}Starting supervisord...${NC}"
+echo -e "${GREEN}Starting supervisor daemon...${NC}"
 
-# Start supervisord
+# Start supervisor daemon
 exec /usr/bin/supervisord -c /etc/supervisor/supervisord.conf
