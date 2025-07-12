@@ -6,6 +6,5 @@
 actor: AcceptanceTester
 modules:
     enabled:
-        - PhpBrowser:
-            url: '%YII_URL%'
+        - PhpBrowser
 step_decorators: ~

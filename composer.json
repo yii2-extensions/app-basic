@@ -77,6 +77,6 @@
         "ecs": "./vendor/bin/ecs --fix",
         "rector": "./vendor/bin/rector process src",
         "static": "./vendor/bin/phpstan analyse src --memory-limit=512M",
-        "tests": "./vendor/bin/codecept run"
+        "tests": "./vendor/bin/codecept run --env php-builtin"
     }
 }
