@@ -6,9 +6,6 @@ ARG GROUP_ID=1000
 ARG USER_NAME=www-data
 ARG GROUP_NAME=www-data
 
-# Change web server config
-COPY docker/caddy/Caddyfile /etc/caddy/Caddyfile
-
 # Set document root to /app/public (Yii2 structure)
 WORKDIR /app
 
@@ -54,6 +51,9 @@ RUN curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | gpg --de
     && apt-get install -y caddy \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# Change web server config
+COPY docker/caddy/Caddyfile /etc/caddy/Caddyfile
 
 # Apply the user/group IDs to www-data
 RUN usermod -u ${USER_ID} www-data && groupmod -g ${GROUP_ID} www-data
