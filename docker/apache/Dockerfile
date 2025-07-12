@@ -41,14 +41,11 @@ RUN usermod -u ${USER_ID} www-data && groupmod -g ${GROUP_ID} www-data
 RUN mkdir -p /var/www/.composer/cache /var/www/.npm && \
     chown -R www-data:www-data /var/www/.composer /var/www/.npm
 
-# Copy supervisord config
-COPY docker/apache/supervisord/supervisord.conf /etc/supervisor/supervisord.conf
-
 # Copy supervisord program configs
-COPY docker/apache/supervisord/conf.d/apache2.conf /etc/supervisor/conf.d/apache2.conf
+COPY docker/supervisord/conf.d/apache2.conf /etc/supervisor/conf.d/apache2.conf
 
 # Copy queue worker config uncommented for use with yii2-queue
-#COPY docker/apache/supervisord/conf.d/queue.conf /etc/supervisor/conf.d/queue.conf
+#COPY docker/supervisord/conf.d/queue.conf /etc/supervisor/conf.d/queue.conf
 
 # Copy scripts
 COPY docker/init.sh /usr/local/bin/init.sh
