@@ -1,5 +1,0 @@
-modules:
-    config:
-        PhpBrowser:
-            url: https://localhost:8445
-            ssl: true
