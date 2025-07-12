@@ -20,11 +20,11 @@ services:
       - '8082:80'
       - '8445:443'
     restart: always
+    tty: true
     volumes:
       - ./:/app
       - composer_cache:/var/www/.composer/cache
     working_dir: /app
-    tty: true
 
 volumes:
   composer_cache:
