@@ -86,7 +86,14 @@ fi
 
 # Copy supervisord configuration
 echo -e "${YELLOW}Configuring supervisord...${NC}"
-cp /app/docker/supervisord/supervisord.conf /etc/supervisor/supervisord.conf
+
+if [ -f "/app/docker/supervisord/supervisord.conf" ]; then
+    cp /app/docker/supervisord/supervisord.conf /etc/supervisor/supervisord.conf
+    echo -e "${GREEN}✓ Supervisord configuration copied successfully${NC}"
+else
+    echo -e "${RED}✗ Error: Supervisord configuration file not found${NC}"
+    exit 1
+fi
 
 echo -e "${GREEN}Starting supervisord...${NC}"
 
