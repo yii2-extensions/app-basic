@@ -1,5 +1,5 @@
 services:
-  yii2-frankenphp:
+  yii2-caddy:
     build:
       args:
         USER_ID: ${USER_ID:-1000}
@@ -7,12 +7,13 @@ services:
         USER_NAME: ${USER_NAME:-www-data}
         GROUP_NAME: ${GROUP_NAME:-www-data}
       context: .
-      dockerfile: docker/frankenphp/Dockerfile
-    container_name: yii2-frankenphp
+      dockerfile: docker/caddy/Dockerfile
+    container_name: yii2-caddy
     entrypoint: ["/usr/local/bin/entrypoint.sh"]
     env_file:
       - .env
     environment:
+      SERVER_LONG_RUNNING: "${SERVER_LONG_RUNNING:-}"
       TZ: "UTC"
       YII_DEBUG: "${YII_DEBUG:-false}"
       YII_ENV: "${YII_ENV:-prod}"
@@ -21,13 +22,13 @@ services:
       - '8444:443'
       - '8444:443/udp'
     restart: always
+    tty: true
     volumes:
       - ./:/app
       - caddy_config:/config
       - caddy_data:/data
       - composer_cache:/var/www/.composer/cache
     working_dir: /app
-    tty: true
 
 volumes:
   caddy_data:

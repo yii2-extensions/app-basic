@@ -1,8 +1,12 @@
 #!/bin/bash
 set -euo pipefail
 
-echo "=== Container Starting ==="
-echo "Running initialization script..."
+# Colors for output
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+NC='\033[0m'
+
+echo -e "${BLUE}=== YII2 Web Server Starting ===${NC}"
 
 # Ensure init script is executable
 chmod +x /usr/local/bin/init.sh

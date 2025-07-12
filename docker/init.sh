@@ -50,6 +50,20 @@ fi
 
 echo -e "${GREEN}Setup completed.${NC}"
 
+# Configure server based on SERVER_LONG_RUNNING variable
+SERVER_LONG_RUNNING=${SERVER_LONG_RUNNING:-}
+
+echo -e "Server Long Running: ${GREEN}${SERVER_LONG_RUNNING}${NC}"
+
+case $SERVER_LONG_RUNNING in
+    "frankenphp")
+        ln -sf /etc/caddy/Caddyfile.frankenphp /etc/caddy/Caddyfile
+        ;;
+    "")
+        ln -sf /etc/caddy/Caddyfile.caddy /etc/caddy/Caddyfile
+        ;;
+esac
+
 # Check if composer.json exists and vendor directory doesn't exist
 if [ -f "/app/composer.json" ] && [ ! -d "/app/vendor" ]; then
     echo -e "${YELLOW}Installing Composer dependencies...${NC}"

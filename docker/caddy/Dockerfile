@@ -6,8 +6,9 @@ ARG GROUP_ID=1000
 ARG USER_NAME=www-data
 ARG GROUP_NAME=www-data
 
-# Change web server config
-COPY docker/frankenphp/Caddyfile /etc/caddy/Caddyfile
+# Copy all web server configurations
+COPY docker/caddy/Caddyfile.frankenphp /etc/caddy/Caddyfile.frankenphp
+COPY docker/caddy/Caddyfile.caddy /etc/caddy/Caddyfile.caddy
 
 # Set document root to /app/public (Yii2 structure)
 WORKDIR /app
@@ -53,6 +54,7 @@ RUN mkdir -p /var/www/.composer/cache /var/www/.npm && \
 
 # Copy supervisord program configs
 COPY docker/supervisord/conf.d/frankenphp.conf /etc/supervisor/conf.d/frankenphp.conf
+COPY docker/supervisord/conf.d/caddy-phpfpm.conf /etc/supervisor/conf.d/caddy-phpfpm.conf
 
 # Copy queue worker config uncommented for use with yii2-queue
 #COPY docker/supervisord/conf.d/queue.conf /etc/supervisor/conf.d/queue.conf
