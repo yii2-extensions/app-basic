@@ -17,17 +17,17 @@ services:
       YII_DEBUG: "${YII_DEBUG:-false}"
       YII_ENV: "${YII_ENV:-prod}"
     ports:
-      - '8081:80'
-      - '8444:443'
-      - '8444:443/udp'
+      - '8082:80'
+      - '8445:443'
+      - '8445:443/udp'
     restart: always
+    tty: true
     volumes:
       - ./:/app
       - caddy_config:/config
       - caddy_data:/data
       - composer_cache:/var/www/.composer/cache
     working_dir: /app
-    tty: true
 
 volumes:
   caddy_data:

@@ -17,8 +17,8 @@ services:
       YII_DEBUG: "${YII_DEBUG:-false}"
       YII_ENV: "${YII_ENV:-prod}"
     ports:
-      - '8082:80'
-      - '8445:443'
+      - '8083:80'
+      - '8446:443'
     restart: always
     tty: true
     volumes:
