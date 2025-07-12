@@ -15,8 +15,11 @@ final class SiteCest
 
         $I->wantTo('ensure that Home page works.');
 
+        $I->seeResponseCodeIs(200);
         $I->expectTo('see page index.');
-        $I->see('Web Application');
+        $I->seeInTitle('Index');
+        $I->seeElement('body');
+        $I->see('Web Application', 'h1');
         $I->see('English');
     }
 }
