@@ -18,10 +18,10 @@ require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../vendor/yiisoft/yii2/Yii.php';
 
 // Load environment variables from .env file
-$dotenv = \Dotenv\Dotenv::createImmutable(dirname(__DIR__));
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->safeLoad();
 
 $config = require dirname(__DIR__) . '/config/web/app.php';
 
-$app = new \yii\web\Application($config);
+$app = new yii\web\Application($config);
 $app->run();
