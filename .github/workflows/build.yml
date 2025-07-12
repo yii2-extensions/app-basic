@@ -26,4 +26,4 @@ jobs:
     with:
       codeception-command: vendor/bin/codecept run --env php-builtin --coverage-xml
       coverage-file: runtime/output/coverage.xml
-      extensions: gd, intl
+      extensions: gd, intl, pcov
