@@ -23,12 +23,13 @@ services:
     restart: always
     volumes:
       - ./:/app
-      - ${HOME}/.composer-docker/cache:/var/www/.composer/cache:delegated
-      - caddy_data:/data
       - caddy_config:/config
+      - caddy_data:/data
+      - composer_cache:/var/www/.composer/cache
     working_dir: /app
     tty: true
 
 volumes:
   caddy_data:
   caddy_config:
+  composer_cache:
