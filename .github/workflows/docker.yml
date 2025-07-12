@@ -41,6 +41,34 @@ jobs:
       - name: Run codeception tests.
         run: docker exec yii2-apache vendor/bin/codecept run
 
+  test-caddy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout.
+        uses: actions/checkout@v4
+
+      - name: Install docker compose.
+        run: |
+          sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+          sudo chmod +x /usr/local/bin/docker-compose
+          docker-compose --version
+
+      - name: Build and start containers.
+        run: docker-compose -f docker-compose.caddy.yml up -d --build
+
+      - name: Wait for container to be ready.
+        run: |
+          echo "Waiting 30 seconds for container initialization..."
+          sleep 30
+          docker logs yii2-caddy
+
+      - name: Codeception build.
+        run: docker exec yii2-caddy vendor/bin/codecept build
+
+      - name: Run codeception tests.
+        run: docker exec yii2-caddy vendor/bin/codecept run
+
   test-frankenphp:
     runs-on: ubuntu-latest
 
@@ -66,7 +94,7 @@ jobs:
       - name: Codeception build.
         run: docker exec yii2-frankenphp vendor/bin/codecept build
 
-      - name: Run codeception build and tests.
+      - name: Run codeception tests.
         run: docker exec yii2-frankenphp vendor/bin/codecept run
 
   test-nginx:
@@ -94,5 +122,5 @@ jobs:
       - name: Codeception build.
         run: docker exec yii2-nginx vendor/bin/codecept build
 
-      - name: Run codeception build and tests.
+      - name: Run codeception tests.
         run: docker exec yii2-nginx vendor/bin/codecept run

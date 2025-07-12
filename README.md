@@ -44,6 +44,7 @@ A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-a
 ## Environment support
 
 [![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&label=docker&logo=apache&logoColor=white)](docker-compose.yml)
+[![Caddy](https://img.shields.io/badge/caddy-%231F88C0.svg?style=for-the-badge&label=docker&logo=caddy&logoColor=white)](docker-compose.caddy.yml)
 [![FrankenPHP](https://img.shields.io/badge/frankenphp-%23FF6B35.svg?style=for-the-badge&label=docker&logo=php&logoColor=white)](docker-compose.frankenphp.yml)
 [![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&label=docker&logo=nginx&logoColor=white)](docker-compose.nginx.yml)
 
@@ -102,6 +103,9 @@ php -S localhost:8080 -t public
 # For Apache
 docker-compose up -d
 
+# For Caddy
+docker-compose -f docker-compose.caddy.yml up -d
+
 # For FrankenPHP
 docker-compose -f docker-compose.frankenphp.yml up -d
 
@@ -118,13 +122,16 @@ After starting the server, you can access your application in your web browser.
 http://localhost:8080/
 
 # For Apache
-http://localhost:8080/
+https://localhost:8443/
+
+# For Caddy
+https://localhost:8444/
 
 # For FrankenPHP
-http://localhost:8081/
+https://localhost:8445/
 
 # For Nginx
-http://localhost:8082/
+https://localhost:8446/
 ```
 
 ### Basic usage
