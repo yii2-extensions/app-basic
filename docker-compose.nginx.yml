@@ -28,3 +28,4 @@ services:
 
 volumes:
   composer_cache:
+    external: true

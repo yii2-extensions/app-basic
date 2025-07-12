@@ -33,3 +33,4 @@ volumes:
   caddy_data:
   caddy_config:
   composer_cache:
+    external: true
