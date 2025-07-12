@@ -41,7 +41,7 @@ A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-a
 - ✅ **SSL Support** - Configured for secure HTTPS connections with SSL (mkcert).
 - ✅ **Testing Ready** - Codeception test suite with examples for functional and unit testing.
 
-## Environment support
+## Supported web servers
 
 [![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&label=docker&logo=apache&logoColor=white)](docker-compose.yml)
 [![Caddy](https://img.shields.io/badge/caddy-%231F88C0.svg?style=for-the-badge&label=docker&logo=caddy&logoColor=white)](docker-compose.caddy.yml)
@@ -65,18 +65,6 @@ The Yii2 Web Application Basic template provides a complete foundation for build
 - **Best practices**: Follow Yii2 conventions and modern web development standards.
 - **Extensible**: Easy to customize and extend for specific project requirements.
 - **Production-ready**: Includes security features and optimizations for deployment.
-
-```text
-Application structure:
-
-Web App Basic
-├── Assets (CSS, JS, Images)
-├── Console (Background tasks)
-├── I18n (Multi-language support)
-├── Pages (Home, About, Contact, Error)
-├── Security (CSRF, Validation, Authentication)
-└── Testing (Unit, Functional tests)
-```
 
 ### Installation
 
@@ -147,9 +135,12 @@ root/
 │   └── messages.php       Translation config
 ├── docker/                Docker configuration files
 │   ├── apache/            Apache configuration
+│   ├── caddy/             Caddy configuration
 │   ├── frankenphp/        FrankenPHP configuration
 │   ├── nginx/             Nginx configuration
-│   └── php/               PHP configuration
+│   ├── php/               PHP configuration
+│   ├── ssl/               SSL certificates
+│   └── supervisor/        Supervisor configuration
 ├── src/
 │   ├── framework/         Framework assets & resources
 │   │   ├── asset/         Asset bundles
