@@ -58,6 +58,11 @@ echo -e "Server Long Running: ${GREEN}${SERVER_LONG_RUNNING}${NC}"
 case $SERVER_LONG_RUNNING in
     "frankenphp")
         ln -sf /etc/caddy/Caddyfile.frankenphp /etc/caddy/Caddyfile
+        ln -sf /etc/supervisor/available/frankenphp.conf /etc/supervisor/conf.d/frankenphp.conf
+        ;;
+    "")
+        ln -sf /etc/caddy/Caddyfile.caddy /etc/caddy/Caddyfile
+        ln -sf /etc/supervisor/available/caddy-phpfpm.conf /etc/supervisor/conf.d/caddy-phpfpm.conf
         ;;
 esac
 

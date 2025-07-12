@@ -53,8 +53,8 @@ RUN mkdir -p /var/www/.composer/cache /var/www/.npm && \
     chown -R www-data:www-data /var/www/.composer /var/www/.npm
 
 # Copy supervisord program configs
-COPY docker/supervisord/conf.d/frankenphp.conf /etc/supervisor/conf.d/frankenphp.conf
-COPY docker/supervisord/conf.d/caddy-phpfpm.conf /etc/supervisor/conf.d/caddy-phpfpm.conf
+COPY docker/supervisord/conf.d/frankenphp.conf /etc/supervisor/available/frankenphp.conf
+COPY docker/supervisord/conf.d/caddy-phpfpm.conf /etc/supervisor/available/caddy-phpfpm.conf
 
 # Copy queue worker config uncommented for use with yii2-queue
 #COPY docker/supervisord/conf.d/queue.conf /etc/supervisor/conf.d/queue.conf
