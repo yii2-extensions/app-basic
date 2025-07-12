@@ -41,7 +41,7 @@ A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-a
 - ✅ **SSL Support** - Configured for secure HTTPS connections with SSL (mkcert).
 - ✅ **Testing Ready** - Codeception test suite with examples for functional and unit testing.
 
-## Environment support
+## Docker support
 
 [![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&label=docker&logo=apache&logoColor=white)](docker-compose.yml)
 [![Caddy](https://img.shields.io/badge/caddy-%231F88C0.svg?style=for-the-badge&label=docker&logo=caddy&logoColor=white)](docker-compose.caddy.yml)
