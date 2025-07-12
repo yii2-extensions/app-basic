@@ -11,8 +11,8 @@ https://localhost:443 {
     # Document root
     root * /app/public
 
-    # Enable PHP processing with FPM
-    php_fastcgi unix//var/run/php/php-fpm.sock {
++   # Using TCP socket for improved compatibility across environments
+    php_fastcgi 127.0.0.1:9000 {
         index index.php
         try_files {path} {path}/index.php =404
     }

@@ -62,14 +62,6 @@ RUN usermod -u ${USER_ID} www-data && groupmod -g ${GROUP_ID} www-data
 RUN mkdir -p /var/www/.composer/cache /var/www/.npm && \
     chown -R www-data:www-data /var/www/.composer /var/www/.npm
 
-# Configure PHP-FPM to use Unix socket
-RUN sed -i 's|^listen = 127.0.0.1:9000|listen = /var/run/php/php-fpm.sock|' /usr/local/etc/php-fpm.d/www.conf \
-    && sed -i 's|^;listen.owner = www-data|listen.owner = www-data|' /usr/local/etc/php-fpm.d/www.conf \
-    && sed -i 's|^;listen.group = www-data|listen.group = www-data|' /usr/local/etc/php-fpm.d/www.conf \
-    && sed -i 's|^;listen.mode = 0660|listen.mode = 0660|' /usr/local/etc/php-fpm.d/www.conf \
-    && mkdir -p /var/run/php \
-    && chown www-data:www-data /var/run/php
-
 # Copy supervisor program configs
 COPY docker/supervisor/conf.d/caddy-php-fpm.conf /etc/supervisor/conf.d/caddy-php-fpm.conf
 
