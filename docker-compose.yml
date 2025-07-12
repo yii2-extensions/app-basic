@@ -22,6 +22,9 @@ services:
     restart: always
     volumes:
       - ./:/app
-      - ${HOME}/.composer-docker/cache:/var/www/.composer/cache:delegated
+      - composer_cache:/var/www/.composer/cache
     working_dir: /app
     tty: true
+
+volumes:
+  composer_cache:
