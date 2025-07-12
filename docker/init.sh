@@ -59,9 +59,6 @@ case $SERVER_LONG_RUNNING in
     "frankenphp")
         ln -sf /etc/caddy/Caddyfile.frankenphp /etc/caddy/Caddyfile
         ;;
-    "")
-        ln -sf /etc/caddy/Caddyfile.caddy /etc/caddy/Caddyfile
-        ;;
 esac
 
 # Check if composer.json exists and vendor directory doesn't exist

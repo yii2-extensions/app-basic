@@ -8,7 +8,7 @@ ARG GROUP_NAME=www-data
 
 # Copy all web server configurations
 COPY docker/caddy/Caddyfile.frankenphp /etc/caddy/Caddyfile.frankenphp
-COPY docker/caddy/Caddyfile.caddy /etc/caddy/Caddyfile.caddy
+COPY docker/caddy/Caddyfile /etc/caddy/Caddyfile
 
 # Set document root to /app/public (Yii2 structure)
 WORKDIR /app
