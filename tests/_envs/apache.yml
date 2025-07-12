@@ -1,5 +1,4 @@
 modules:
     config:
         PhpBrowser:
-            url: https://localhost:8443
-            ssl: true
+            url: http://localhost:8080
