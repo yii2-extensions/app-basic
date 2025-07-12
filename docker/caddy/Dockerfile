@@ -71,10 +71,10 @@ RUN sed -i 's|^listen = 127.0.0.1:9000|listen = /var/run/php/php-fpm.sock|' /usr
     && chown www-data:www-data /var/run/php
 
 # Copy supervisord program configs
-COPY docker/supervisord/conf.d/caddy-php-fpm.conf /etc/supervisord/conf.d/caddy-php-fpm.conf
+COPY docker/supervisord/conf.d/caddy-php-fpm.conf /etc/supervisor/conf.d/caddy-php-fpm.conf
 
 # Copy queue worker config uncommented for use with yii2-queue
-#COPY docker/supervisor/available/queue.conf /etc/supervisor/available/queue.conf
+#COPY docker/supervisord/available/queue.conf /etc/supervisord/available/queue.conf
 
 # Copy scripts
 COPY docker/init.sh /usr/local/bin/init.sh

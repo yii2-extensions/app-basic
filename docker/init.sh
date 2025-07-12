@@ -14,6 +14,12 @@ mkdir -p /data/caddy/locks /config/caddy
 chown -R www-data:www-data /data /config
 chmod -R 755 /data /config
 
+# Create PHP-FPM socket directory with proper permissions
+echo -e "${YELLOW}Creating PHP-FPM socket directory...${NC}"
+mkdir -p /var/run/php
+chown www-data:www-data /var/run/php
+chmod 755 /var/run/php
+
 # Create necessary Yii2 directories if they don't exist
 echo -e "${YELLOW}Creating Yii2 directories...${NC}"
 mkdir -p /app/runtime/cache
