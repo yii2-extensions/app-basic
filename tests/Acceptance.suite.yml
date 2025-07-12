@@ -4,14 +4,8 @@
 # Perform tests in browser using the WebDriver or PhpBrowser.
 # If you need both WebDriver and PHPBrowser tests - create a separate suite.
 actor: AcceptanceTester
-extensions:
-  enabled:
-    - Codeception\Extension\RunProcess:
-        0: ./yii serve
-        sleep: 1
 modules:
     enabled:
-      - Filesystem
-      - Yii2
-      - Asserts
+        - PhpBrowser:
+            url: localhost:8080
 step_decorators: ~

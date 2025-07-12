@@ -2,21 +2,24 @@
 
 declare(strict_types=1);
 
-namespace app\tests\Acceptance;
+namespace app\tests\Functional;
 
-use app\tests\Support\AcceptanceTester;
+use app\tests\Support\FunctionalTester;
 
 final class SiteCest
 {
-    public function homePage(AcceptanceTester $I): void
+    public function homePage(FunctionalTester $I): void
     {
         $I->amGoingTo('navigate to the Home page.');
         $I->amOnPage('/');
 
         $I->wantTo('ensure that Home page works.');
 
+        $I->seeResponseCodeIs(200);
         $I->expectTo('see page index.');
-        $I->see('Web Application');
+        $I->seeInTitle('Index');
+        $I->seeElement('body');
+        $I->see('Web Application', 'h1');
         $I->see('English');
     }
 }

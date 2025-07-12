@@ -39,7 +39,7 @@ jobs:
         run: docker exec yii2-apache vendor/bin/codecept build
 
       - name: Run codeception tests.
-        run: docker exec yii2-apache vendor/bin/codecept run
+        run: docker exec yii2-apache vendor/bin/codecept run --env dockerized
 
   test-caddy:
     runs-on: ubuntu-latest
@@ -67,7 +67,7 @@ jobs:
         run: docker exec yii2-caddy vendor/bin/codecept build
 
       - name: Run codeception tests.
-        run: docker exec yii2-caddy vendor/bin/codecept run
+        run: docker exec yii2-caddy vendor/bin/codecept run --env dockerized
 
   test-frankenphp:
     runs-on: ubuntu-latest
@@ -95,7 +95,7 @@ jobs:
         run: docker exec yii2-frankenphp vendor/bin/codecept build
 
       - name: Run codeception tests.
-        run: docker exec yii2-frankenphp vendor/bin/codecept run
+        run: docker exec yii2-frankenphp vendor/bin/codecept run --env dockerized
 
   test-nginx:
     runs-on: ubuntu-latest
@@ -123,4 +123,4 @@ jobs:
         run: docker exec yii2-nginx vendor/bin/codecept build
 
       - name: Run codeception tests.
-        run: docker exec yii2-nginx vendor/bin/codecept run
+        run: docker exec yii2-nginx vendor/bin/codecept run --env dockerized
