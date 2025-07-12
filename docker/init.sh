@@ -84,6 +84,10 @@ if [ -f "/app/composer.json" ] && [ ! -d "/app/vendor" ]; then
     echo -e "${GREEN}✓ Composer dependencies installed successfully${NC}"
 fi
 
+# Copy supervisord configuration
+echo -e "${YELLOW}Configuring supervisord...${NC}"
+cp /app/docker/supervisord/supervisord.conf /etc/supervisor/supervisord.conf
+
 echo -e "${GREEN}Starting supervisord...${NC}"
 
 # Start supervisord
