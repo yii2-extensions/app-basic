@@ -11,7 +11,7 @@ final class ContactCest
     public function contactPage(AcceptanceTester $I): void
     {
         $I->amGoingTo('navigate to the Contact page.');
-        $I->amOnRoute('contact/index');
+        $I->amOnPage('contact/index');
 
         $I->wantTo('ensure that Contact page works.');
 

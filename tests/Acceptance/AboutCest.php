@@ -11,7 +11,7 @@ final class AboutCest
     public function aboutPage(AcceptanceTester $I): void
     {
         $I->amGoingTo('navigate to the About page.');
-        $I->amOnRoute('site/about');
+        $I->amOnPage('site/about');
 
         $I->wantTo('ensure that About page works.');
 

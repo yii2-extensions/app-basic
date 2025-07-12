@@ -3,10 +3,10 @@ bootstrap: _bootstrap.php
 support_namespace: Support
 paths:
   tests: tests
-  output: public/runtime/output
+  output: runtime/output
   data: tests/Support/data
   support: tests/Support
-  envs: public/runtime/_envs
+  envs: tests/_envs
 actor_suffix: Tester
 settings:
   memory_limit: 1024M

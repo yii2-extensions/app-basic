@@ -11,7 +11,7 @@ final class SiteCest
     public function homePage(AcceptanceTester $I): void
     {
         $I->amGoingTo('navigate to the Home page.');
-        $I->amOnRoute('/');
+        $I->amOnPage('/');
 
         $I->wantTo('ensure that Home page works.');
 
