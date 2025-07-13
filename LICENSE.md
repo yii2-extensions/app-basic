@@ -1,4 +1,4 @@
-BSD 3-Clause License
+# BSD 3-Clause License
 
 Copyright © 2008 by Terabytesoftw (<https://github.com/terabytesoftw/>)
 All rights reserved.
