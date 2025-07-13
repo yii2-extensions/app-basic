@@ -225,4 +225,4 @@ The web application includes these ready-to-use pages:
 
 ## License
 
-[![License](https://poser.pugx.org/yii2-extensions/app-basic/license)](LICENSE.md)
+[![License](https://img.shields.io/github/license/yii2-extensions/app-basic?style=flat)](LICENSE.md)
