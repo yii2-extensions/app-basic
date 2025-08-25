@@ -66,6 +66,8 @@ The Yii2 Web Application Basic template provides a complete foundation for build
 - **Extensible**: Easy to customize and extend for specific project requirements.
 - **Production-ready**: Includes security features and optimizations for deployment.
 
+>Note: Also, make sure to install [`npm`](https://nodejs.org/en/download/) for frontend dependency management.
+
 ### Installation
 
 **Quick start**
