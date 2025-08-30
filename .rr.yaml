@@ -9,7 +9,7 @@ server:
         YII_DEBUG: true
         YII_ENV: dev
 http:
-    address: '0.0.0.0:8080'
+    address: :8080
 
     headers:
         response:
