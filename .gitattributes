@@ -29,7 +29,13 @@
 /.gitattributes                 export-ignore
 /.github                        export-ignore
 /.gitignore                     export-ignore
+/.phpstan.neon                  export-ignore
 /.styleci.yml                   export-ignore
+/codeception.yml                export-ignore
+/composer-require-checker.json  export-ignore
+/composer.lock                  export-ignore
 /docs                           export-ignore
+/ecs.php                        export-ignore
 /psalm.xml                      export-ignore
+/rector.php                     export-ignore
 /tests                          export-ignore
