@@ -21,6 +21,7 @@ $config = [
         '@bower' => '@npm',
         '@resource' => '@root/src/framework/resource',
         '@runtime' => '@root/runtime',
+        '@web' => '/',
     ],
     'basePath' => $rootDir,
     'bootstrap' => ['log'],
