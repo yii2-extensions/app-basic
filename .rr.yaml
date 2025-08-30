@@ -5,6 +5,7 @@ server:
     command: 'php web/index.php'
     relay: pipes
     env:
+        YII_C3: true
         YII_DEBUG: true
         YII_ENV: dev
 http:
