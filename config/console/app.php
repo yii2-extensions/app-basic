@@ -11,10 +11,6 @@ $params = require dirname(__DIR__) . '/params-console.php';
 
 return [
     'id' => 'console.basic',
-    'aliases' => [
-        '@root' => dirname(__DIR__, 2),
-        '@resource' => '@root/src/framework/resource',
-    ],
     'basePath' => dirname(__DIR__, 2),
     'bootstrap' => ['log'],
     'components' => $components,

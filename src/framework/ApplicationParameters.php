@@ -18,16 +18,6 @@ use Yii;
  */
 final class ApplicationParameters
 {
-    public static function getMailerSender(): string
-    {
-        return 'noreply@example.com';
-    }
-
-    public static function getMailerSenderName(): string
-    {
-        return 'Web application basic';
-    }
-
     /**
      * @phpstan-return MenuItem
      */
@@ -36,10 +26,7 @@ final class ApplicationParameters
         return [
             [
                 'label' => Yii::t('app.basic', 'Home'),
-                'url' => [
-                    '/site/index',
-                ],
-                'order' => 0,
+                'url' => ['/site/index'],
             ],
         ];
     }

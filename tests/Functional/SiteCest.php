@@ -17,7 +17,7 @@ final class SiteCest
 
         $I->seeResponseCodeIs(200);
         $I->expectTo('see page index.');
-        $I->seeInTitle('Index');
+        $I->seeInTitle('Home');
         $I->seeElement('body');
         $I->see('Web Application', 'h1');
     }

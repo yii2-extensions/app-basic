@@ -8,6 +8,9 @@ use yii\i18n\PhpMessageSource;
 $commonComponents = require dirname(__DIR__) . '/common/components.php';
 
 $config = [
+    'assetManager' => [
+        'basePath' => '@root/web/assets',
+    ],
     'errorHandler' => [
         'errorAction' => 'site/404',
     ],
@@ -15,7 +18,6 @@ $config = [
         'translations' => [
             'app.basic' => [
                 'class' => PhpMessageSource::class,
-                'basePath' => '@resource/message',
             ],
         ],
     ],
