@@ -24,9 +24,9 @@ jobs:
       AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     with:
-      before-hook: |
+      codeception-command: |
         vendor/bin/rr get-binary
         ./rr serve > /dev/null 2>&1 &
-      codeception-command: vendor/bin/codecept run --coverage-xml
+        vendor/bin/codecept run --coverage-xml
       coverage-file: runtime/output/coverage.xml
       extensions: gd, intl, pcov
