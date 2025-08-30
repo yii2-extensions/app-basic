@@ -36,12 +36,8 @@ A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-a
 - ✅ **Asset Management** - Optimized asset bundles for CSS, JS, and resource management.
 - ✅ **Clean Architecture** - Well-organized directory structure following Yii2 best practices.
 - ✅ **Console Commands** - Example console commands for background tasks and maintenance.
-- ✅ **Contact Form** - Fully functional contact form with validation and email sending.
 - ✅ **Developer Tools** - Debugging tools, logging, and development-friendly configurations.
 - ✅ **Modern Bootstrap 5 UI** - Responsive, mobile-first design with latest Bootstrap components.
-- ✅ **Multi-language Support** - Built-in internationalization (i18n) support with message translations.
-- ✅ **Ready-to-Use Pages** - Pre-built pages including home, about, contact, and error handling.
-- ✅ **Security Features** - Built-in CSRF protection, input validation, and secure configurations.
 - ✅ **SSL Support** - Configured for secure HTTPS connections with SSL (mkcert).
 - ✅ **Testing Ready** - Codeception test suite with examples for functional and unit testing.
 
