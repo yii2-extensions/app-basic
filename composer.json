@@ -12,11 +12,8 @@
     "require": {
         "php": ">=8.1",
         "php-forge/foxy": "^0.1",
-        "ui-awesome/html": "^0.3",
-        "ui-awesome/html-component-bootstrap5": "^1.0@dev",
         "ui-awesome/html-svg":"^0.2",
         "vlucas/phpdotenv": "^5.6",
-        "yii2-extensions/localeurls": "^0.1.0",
         "yiisoft/yii2": "^2.0.53|^22",
         "yiisoft/yii2-bootstrap5": "^2.0.50|^22",
         "yiisoft/yii2-symfonymailer": "^4.0|^22"

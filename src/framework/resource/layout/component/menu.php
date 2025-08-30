@@ -3,14 +3,8 @@
 declare(strict_types=1);
 
 use app\framework\ApplicationParameters;
-use yii\bootstrap5\Nav;
-use yii\bootstrap5\NavBar;
+use yii\bootstrap5\{Nav, NavBar};
 use yii\helpers\Html;
-
-$menuItems = match (Yii::$app->user->getIsGuest()) {
-    false => ApplicationParameters::getMenuIsLogged(),
-    default => ApplicationParameters::getMenuIsGuest(),
-};
 
 NavBar::begin(
     [
@@ -31,7 +25,7 @@ NavBar::begin(
 
 echo Nav::widget(
     [
-        'items' => $menuItems,
+        'items' => ApplicationParameters::getMenuIsGuest(),
         'options' => [
             'class' => 'navbar-nav justify-content-end navbar-collapse',
         ],

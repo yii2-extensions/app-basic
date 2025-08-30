@@ -6,7 +6,7 @@ use yii\helpers\Html;
 use yii\web\View;
 
 /** @var View $this */
-$this->title = Yii::t('app.basic', 'Index');
+$this->title = Yii::t('app.basic', 'Home');
 ?>
 <div class="jumbotron jumbotron-fluid text-center">
     <h1 class="display-2 fw-bold"><?= Yii::t('app.basic', 'Web Application') ?></h1>

@@ -2,9 +2,6 @@
 
 declare(strict_types=1);
 
-use app\framework\event\ContactEventHandler;
-use app\usecase\contact\ContactController;
-use app\usecase\security\SecurityController;
 use app\usecase\site\SiteController;
 
 /** @phpstan-var string[] $components */
@@ -22,27 +19,14 @@ $config = [
         '@root' => $rootDir,
         '@npm' => '@root/node_modules',
         '@bower' => '@npm',
-        '@public' => '@root/public',
         '@resource' => '@root/src/framework/resource',
         '@runtime' => '@root/runtime',
-        '@web' => '/',
     ],
     'basePath' => $rootDir,
-    'bootstrap' => [
-        ContactEventHandler::class,
-        'log',
-    ],
+    'bootstrap' => ['log'],
     'components' => $components,
     'controllerMap' => [
-        'contact' => [
-            'class' => ContactController::class,
-        ],
-        'security' => [
-            'class' => SecurityController::class,
-        ],
-        'site' => [
-            'class' => SiteController::class,
-        ],
+        'site' => ['class' => SiteController::class],
     ],
     'language' => 'en-US',
     'modules' => $modules,
@@ -53,18 +37,7 @@ $config = [
 if (YII_ENV_DEV) {
     // configuration adjustments for 'dev' environment
     $config['bootstrap'][] = 'debug';
-    $config['modules']['debug'] = [
-        'class' => yii\debug\Module::class,
-        // uncomment the following to add your IP if you aren't connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
-    ];
-
     $config['bootstrap'][] = 'gii';
-    $config['modules']['gii'] = [
-        'class' => yii\gii\Module::class,
-        // uncomment the following to add your IP if you aren't connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
-    ];
 }
 
 return $config;

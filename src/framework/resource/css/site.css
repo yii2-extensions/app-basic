@@ -25,33 +25,3 @@ html, body {
     content: "/\00a0";
     padding: 0 5px;
 }
-
-[data-bs-theme=light] .contact-title {
-    color: var(--bs-body-color);
-}
-
-[data-bs-theme=dark] .contact-title {
-    color: var(--bs-light);
-}
-
-[data-bs-theme=light] .contact-subtitle {
-    color: var(--bs-body-color);
-}
-
-[data-bs-theme=dark] .contact-subtitle {
-    color: var(--bs-light);
-}
-
-[data-bs-theme=dark] #contactform-verifycode-image {
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-    filter: invert(1) hue-rotate(180deg);
-}
-
-[data-bs-theme=dark] .login-info {
-    background-color: var(--bs-secondary-bg);
-}
-
-[data-bs-theme=dark] .login-info-user {
-    color: var(--bs-white);
-}

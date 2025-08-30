@@ -4,10 +4,8 @@ declare(strict_types=1);
 
 namespace app\framework\asset;
 
-use yii\bootstrap5\BootstrapAsset;
-use yii\bootstrap5\BootstrapPluginAsset;
-use yii\web\AssetBundle;
-use yii\web\YiiAsset;
+use yii\bootstrap5\{BootstrapAsset, BootstrapPluginAsset};
+use yii\web\{AssetBundle, YiiAsset};
 
 final class AppAsset extends AssetBundle
 {

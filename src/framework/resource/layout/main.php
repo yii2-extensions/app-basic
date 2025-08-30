@@ -3,11 +3,10 @@
 declare(strict_types=1);
 
 use app\framework\asset\AppAsset;
-use yii\web\View;
 
 /**
  * @var string $content
- * @var View $this
+ * @var yii\web\View $this
  */
 AppAsset::register($this);
 ?>
@@ -20,7 +19,6 @@ AppAsset::register($this);
                 <div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
                     <header class="mb-auto">
                         <?= $this->render('component/menu') ?>
-                        <?= $this->render('component/alert') ?>
                         <?= $this->render('component/breadcrumbs') ?>
                     </header>
                     <?= $content ?>

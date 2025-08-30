@@ -35,7 +35,6 @@ ToggleThemeAsset::register($this);
         <div class="col-md-4 justify-content-end d-flex align-items-center">
             <?= $this->render('component/footer-icons') ?>
             <?= $this->render('component/toggle_theme') ?>
-            <?= $this->render('component/toggle_language') ?>
         </div>
     </footer>
 </div>

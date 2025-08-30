@@ -56,14 +56,14 @@ composer install
 Ensure the following directories are writable by the web server.
 
 ```bash
-chmod 775 public/assets runtime tests/_output
+chmod 775 web/assets runtime tests/_output
 ```
 
 ### Web server configuration
 
 #### Apache
 
-Create `public/.htaccess`.
+Create `web/.htaccess`.
 
 ```apache
 RewriteEngine on
@@ -80,7 +80,7 @@ Add to your Nginx configuration.
 server {
     listen 80;
     server_name myapp.local;
-    root /path/to/myapp/public;
+    root /path/to/myapp/web;
     index index.php;
 
     location / {
@@ -106,7 +106,7 @@ For development purposes.
 
 ```bash
 # Method 1: Using PHP built-in server
-php -S localhost:8080 -t public
+php -S localhost:8080 -t web
 
 # Method 2: Using Yii console command
 ./yii serve

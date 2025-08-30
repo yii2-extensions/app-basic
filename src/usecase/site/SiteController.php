@@ -19,12 +19,7 @@ final class SiteController extends Controller
     {
         return ArrayHelper::merge(
             [
-                '404' => [
-                    'class' => ErrorAction::class,
-                ],
-                'about' => [
-                    'class' => AboutAction::class,
-                ],
+                '404' => ['class' => ErrorAction::class],
             ],
             parent::actions(),
         );

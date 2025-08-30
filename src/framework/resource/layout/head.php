@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-use yii\{helpers\Html, web\View};
+use yii\helpers\Html;
 
 /**
- * @var View $this
+ * @var yii\web\View $this
  */
 ?>
 <head>
