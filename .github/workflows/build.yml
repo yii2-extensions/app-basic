@@ -27,6 +27,6 @@ jobs:
       codeception-command: |
         vendor/bin/rr get-binary
         ./rr serve > /dev/null 2>&1 &
-        vendor/bin/codecept run --coverage-xml
+        vendor/bin/codecept run
       coverage-file: runtime/output/coverage.xml
       extensions: gd, intl, pcov, sockets
