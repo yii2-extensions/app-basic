@@ -85,7 +85,7 @@ cd myapp
 
 ```bash
 # Using built-in PHP server
-php -S localhost:8080 -t public
+php -S localhost:8080 -t web
 
 # Or using Yii console command
 ./yii serve
@@ -157,7 +157,7 @@ root/
 │       └── site/          Site pages
 ├── tests/                 Test suites
 ├── vendor/                Composer dependencies
-└── public/                Web server document root
+└── web/                   Web server document root
 ```
 
 #### Creating your first page

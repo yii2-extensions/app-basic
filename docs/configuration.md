@@ -82,7 +82,6 @@ Application configuration in `config/console/app.php`.
 declare(strict_types=1);
 
 use app\usecase\hello\HelloController;
-use yii\console\controllers\ServeController;
 
 /** @var string[] $components */
 $components = require dirname(__DIR__) . '/common/components.php';
@@ -92,21 +91,10 @@ $params = require dirname(__DIR__) . '/params-console.php';
 
 return [
     'id' => 'console.basic',
-    'aliases' => [
-        '@root' => dirname(__DIR__, 2),
-    ],
     'basePath' => dirname(__DIR__, 2),
-    'bootstrap' => [
-        'log',
-    ],
+    'bootstrap' => ['log'],
     'components' => $components,
-    'controllerMap' => [
-        'hello' => HelloController::class,
-        'serve' => [
-            'class' => ServeController::class,
-            'docroot' => '@app/public',
-        ],
-    ],
+    'controllerMap' => ['hello' => HelloController::class],
     'params' => $params,
 ];
 ```
@@ -120,9 +108,6 @@ Application configuration in `config/web/app.php`.
 
 declare(strict_types=1);
 
-use app\framework\event\ContactEventHandler;
-use app\usecase\contact\ContactController;
-use app\usecase\security\SecurityController;
 use app\usecase\site\SiteController;
 
 /** @phpstan-var string[] $components */
@@ -139,35 +124,30 @@ return [
     'id' => 'web.basic',
     'aliases' => [
         '@root' => $rootDir,
-        '@bower' => '@npm',
         '@npm' => '@root/node_modules',
-        '@public' => '@root/public',
+        '@bower' => '@npm',
         '@resource' => '@root/src/framework/resource',
         '@runtime' => '@root/runtime',
-        '@web' => '/',
     ],
     'basePath' => $rootDir,
-    'bootstrap' => [
-        ContactEventHandler::class,
-        'log',
-    ],
+    'bootstrap' => ['log'],
     'components' => $components,
     'controllerMap' => [
-        'contact' => [
-            'class' => ContactController::class,
-        ],
-        'security' => [
-            'class' => SecurityController::class,
-        ],
-        'site' => [
-            'class' => SiteController::class,
-        ],
+        'site' => ['class' => SiteController::class],
     ],
     'language' => 'en-US',
     'modules' => $modules,
     'name' => 'Web application basic',
     'params' => $params,
 ];
+
+if (YII_ENV_DEV) {
+    // configuration adjustments for 'dev' environment
+    $config['bootstrap'][] = 'debug';
+    $config['bootstrap'][] = 'gii';
+}
+
+return $config;
 ```
 
 Components configuration in `config/web/components.php`.
@@ -177,17 +157,14 @@ Components configuration in `config/web/components.php`.
 
 declare(strict_types=1);
 
-use app\usecase\security\Identity;
 use yii\i18n\PhpMessageSource;
-use yii\web\User;
-use yii2\extensions\localeurls\UrlLanguageManager;
 
 /** @phpstan-var string[] $commonComponents */
 $commonComponents = require dirname(__DIR__) . '/common/components.php';
 
 $config = [
     'assetManager' => [
-        'basePath' => '@public/assets',
+        'basePath' => '@root/web/assets',
     ],
     'errorHandler' => [
         'errorAction' => 'site/404',
@@ -196,8 +173,6 @@ $config = [
         'translations' => [
             'app.basic' => [
                 'class' => PhpMessageSource::class,
-                'basePath' => '@resource/message',
-                'sourceLanguage' => 'en',
             ],
         ],
     ],
@@ -206,29 +181,37 @@ $config = [
         'enableCsrfValidation' => YII_ENV_DEV === false,
     ],
     'urlManager' => [
-        'class' => UrlLanguageManager::class,
-        'languages' => [
-            'de' => 'de-DE',
-            'en' => 'en-US',
-            'es' => 'es-ES',
-            'fr' => 'fr-FR',
-            'pt' => 'pt-BR',
-            'ru' => 'ru-RU',
-            'zh' => 'zh-CN',
-        ],
         'enablePrettyUrl' => true,
         'showScriptName' => false,
-    ],
-    'user' => [
-        'class' => User::class,
-        'identityClass' => Identity::class,
     ],
 ];
 
 $config += $commonComponents;
 
 return $config;
+```
 
+Modules configuration in `config/web/modules.php`.
+
+```php
+<?php
+
+declare(strict_types=1);
+
+$config = [
+    'debug' => [
+        'class' => yii\debug\Module::class,
+        // uncomment the following to add your IP if you aren't connecting from localhost.
+        //'allowedIPs' => ['127.0.0.1', '::1'],
+    ],
+    'gii' => [
+        'class' => yii\gii\Module::class,
+        // uncomment the following to add your IP if you aren't connecting from localhost.
+        //'allowedIPs' => ['127.0.0.1', '::1'],
+    ],
+];
+
+return YII_ENV_DEV ? $config : [];
 ```
 
 ## Next steps
