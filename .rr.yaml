@@ -1,0 +1,41 @@
+version: '3'
+rpc:
+    listen: 'tcp://127.0.0.1:6001'
+server:
+    command: 'php web/index.php'
+    relay: pipes
+    env:
+        YII_DEBUG: true
+        YII_ENV: dev
+http:
+    address: '0.0.0.0:8080'
+
+    headers:
+        response:
+            "Cache-Control": "no-cache"
+
+    middleware:
+        - static   # serve files first
+        - gzip     # compress dynamic output
+
+    static:
+        dir: web
+        forbid:
+            - .php
+            - .htaccess
+    pool:
+        num_workers: 1
+        supervisor:
+            max_worker_memory: 100
+jobs:
+    pool:
+        num_workers: 2
+        max_worker_memory: 100
+    consume: {  }
+kv:
+    local:
+        driver: memory
+        config:
+            interval: 60
+metrics:
+    address: '127.0.0.1:2112'
