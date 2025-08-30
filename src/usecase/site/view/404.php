@@ -9,7 +9,7 @@ use yii\web\View;
  * @var string $name
  * @var View $this
  */
-$this->title = $name;
+$this->title = Yii::t('app.basic', $name);
 ?>
 <div class="d-flex flex-column align-items-center justify-center">
     <div class="text-center">

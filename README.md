@@ -25,7 +25,11 @@
 
 A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-application development. Built with best practices, clean architecture, and developer-friendly configuration, it lets you create production-ready apps with minimal setup while maintaining code quality and extensibility.
 
-![app-basic](docs/home.png)
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/images/home-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="docs/images/home.png">
+    <img src="docs/images/home.png" alt="Web Application Basic">
+</picture>
 
 ## Features
 
@@ -149,9 +153,7 @@ root/
 │   │   ├── event/         Event handlers
 │   │   └── resource/      CSS, JS, layouts, messages
 │   └── usecase/           Application use cases
-│       ├── contact/       Contact functionality
 │       ├── hello/         Console command example
-│       ├── security/      Security features
 │       └── site/          Site pages
 ├── tests/                 Test suites
 ├── vendor/                Composer dependencies
@@ -216,10 +218,8 @@ For detailed configuration options and advanced usage:
 
 The web application includes these ready-to-use pages:
 
-- **[Home Page](docs/home.png)** - Welcome page with navigation
-- **[About Page](docs/about.png)** - Information about your application  
-- **[Contact Page](docs/contact.png)** - Contact form with validation
-- **[404 Error Page](docs/404.png)** - Custom error handling
+- **[404 Error Page](docs/images/404.png)** - Custom error handling
+- **[404 Error Page Dark](docs/images/404-dark.png)** - Custom error handling
 
 ## Our social networks
 

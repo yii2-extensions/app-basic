@@ -3,11 +3,10 @@
 declare(strict_types=1);
 
 use app\framework\asset\AppAsset;
-use yii\web\View;
 
 /**
  * @var string $content
- * @var View $this
+ * @var yii\web\View $this
  */
 AppAsset::register($this);
 ?>
