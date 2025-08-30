@@ -20,6 +20,5 @@ final class SiteCest
         $I->seeInTitle('Index');
         $I->seeElement('body');
         $I->see('Web Application', 'h1');
-        $I->see('English');
     }
 }

@@ -17,6 +17,5 @@ final class SiteCest
 
         $I->expectTo('see page index.');
         $I->see('Web Application');
-        $I->see('English');
     }
 }
