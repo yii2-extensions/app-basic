@@ -7,7 +7,7 @@
 
 <p align="center">
     <a href="https://github.com/roadrunner-server/roadrunner" target="_blank">
-        <img src="https://img.shields.io/badge/roadrunner-%23FF6B35.svg?label=stack&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMjIgMTJMMTIgMjJMMiAxMkwxMiAyWiIgZmlsbD0iI0ZGNkIzNSIvPgo8cGF0aCBkPSJNMTIgNkwxOCAxMkwxMiAxOEw2IDEyTDEyIDZaIiBmaWxsPSIjRkZGRkZGIi8+CjxwYXRoIGQ9Ik0xMiA5TDE1IDEyTDEyIDE1TDkgMTJMMTIgOVoiIGZpbGw9IiNGRjZCMzUiLz4KPC9zdmc+&logoColor=white" alt="roadrunner-badge">
+        <img src="https://img.shields.io/badge/roadrunner-%23FF6B35.svg?style=for-the-badge&label=stack&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMjIgMTJMMTIgMjJMMiAxMkwxMiAyWiIgZmlsbD0iI0ZGNkIzNSIvPgo8cGF0aCBkPSJNMTIgNkwxOCAxMkwxMiAxOEw2IDEyTDEyIDZaIiBmaWxsPSIjRkZGRkZGIi8+CjxwYXRoIGQ9Ik0xMiA5TDE1IDEyTDEyIDE1TDkgMTJMMTIgOVoiIGZpbGw9IiNGRjZCMzUiLz4KPC9zdmc+&logoColor=white" alt="roadrunner-badge">
     </a>
     <a href="https://www.php.net/releases/8.1/en.php" target="_blank">
         <img src="https://img.shields.io/badge/%3E%3D8.1-777BB4.svg?style=for-the-badge&logo=php&logoColor=white" alt="PHP version">
@@ -18,11 +18,11 @@
     <a href="https://github.com/yiisoft/yii2/tree/22.0" target="_blank">
         <img src="https://img.shields.io/badge/22.0.x-0073AA.svg?style=for-the-badge&logo=yii&logoColor=white" alt="Yii 22.0.x">
     </a>
-    <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/build.yml" target="_blank">
-        <img src="https://img.shields.io/github/actions/workflow/status/yii2-extensions/app-basic/build.yml?branch=main&style=for-the-badge&label=PHPUnit" alt="PHPUnit">
+    <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/build.yml?query=branch%3Aroad-runner" target="_blank">
+        <img src="https://img.shields.io/github/actions/workflow/status/yii2-extensions/app-basic/build.yml?branch=road-runner&style=for-the-badge&label=PHPUnit" alt="PHPUnit">
     </a>
-    <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml" target="_blank">
-        <img src="https://img.shields.io/github/actions/workflow/status/yii2-extensions/app-basic/static.yml?branch=main&style=for-the-badge&label=PHPStan" alt="PHPStan">
+    <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml?query=branch%3Aroad-runner" target="_blank">
+        <img src="https://img.shields.io/github/actions/workflow/status/yii2-extensions/app-basic/static.yml?branch=road-runner&style=for-the-badge&label=PHPStan" alt="PHPStan">
     </a>
 </p>
 
@@ -144,11 +144,10 @@ final class SiteController extends Controller
 ```
 ## Quality code
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/yii2-extensions/app-basic.svg?style=for-the-badge&logo=packagist&logoColor=white&label=Stable)](https://packagist.org/packages/yii2-extensions/app-basic)
-[![Total Downloads](https://img.shields.io/packagist/dt/yii2-extensions/app-basic.svg?style=for-the-badge&logo=packagist&logoColor=white&label=Downloads)](https://packagist.org/packages/yii2-extensions/app-basic)
-[![Codecov](https://img.shields.io/codecov/c/github/yii2-extensions/app-basic.svg?branch=main&style=for-the-badge&logo=codecov&logoColor=white&label=Coverage)](https://codecov.io/github/yii2-extensions/app-basic)
-[![PHPStan Level Max](https://img.shields.io/badge/PHPStan-Level%20Max-4F5D95.svg?style=for-the-badge&logo=php&logoColor=white)](https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml)
-[![StyleCI](https://img.shields.io/badge/StyleCI-Passed-44CC11.svg?style=for-the-badge&logo=styleci&logoColor=white)](https://github.styleci.io/repos/165419144?branch=main)
+[![Latest Stable Version](https://img.shields.io/packagist/v/yii2-extensions/app-basic.svg?branch=road-runner&style=for-the-badge&logo=packagist&logoColor=white&label=Stable)](https://packagist.org/packages/yii2-extensions/app-basic#dev-road-runner)
+[![Codecov](https://img.shields.io/codecov/c/github/yii2-extensions/app-basic.svg?branch=road-runner&style=for-the-badge&logo=codecov&logoColor=white&label=Coverage)](https://app.codecov.io/github/yii2-extensions/app-basic/tree/road-runner)
+[![PHPStan Level Max](https://img.shields.io/badge/PHPStan-Level%20Max-4F5D95.svg?style=for-the-badge&logo=php&logoColor=white)](https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml?query=branch%3Aroad-runner)
+[![StyleCI](https://img.shields.io/badge/StyleCI-Passed-44CC11.svg?branch=road-runner&style=for-the-badge&logo=styleci&logoColor=white)](https://github.styleci.io/repos/165419144?branch=road-runner)
 
 ## Documentation
 
