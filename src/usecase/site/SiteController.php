@@ -22,7 +22,7 @@ final class SiteController extends Controller
             [
                 '404' => ['class' => ErrorAction::class],
             ],
-            parent::actions()
+            parent::actions(),
         );
     }
 

@@ -23,6 +23,7 @@
         "yii2-extensions/road-runner": "^0.1.0@dev"
     },
     "require-dev": {
+        "codeception/c3": "^2.8",
         "codeception/codeception": "^5.0.0",
         "codeception/lib-innerbrowser": "^4.0",
         "codeception/module-asserts": "^3.0",
@@ -65,10 +66,11 @@
     },
     "config": {
         "allow-plugins": {
-            "yiisoft/yii2-composer": true,
+            "codeception/c3": true,
             "composer/installers": true,
             "php-forge/foxy": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "yiisoft/yii2-composer": true
         }
     },
     "scripts": {
