@@ -114,7 +114,7 @@ namespace app\usecase\site;
 
 use yii\web\Controller;
 
-class SiteController extends Controller
+final class SiteController extends Controller
 {
     public function actionIndex(): string
     {
@@ -150,13 +150,7 @@ For detailed configuration options and advanced usage:
 - 📚 [Installation Guide](docs/installation.md)
 - ⚙️ [Configuration Reference](docs/configuration.md) 
 - 🧪 [Testing Guide](docs/testing.md)
-
-## Screenshots
-
-The web application includes these ready-to-use pages:
-
-- **[404 Error Page](docs/images/404.png)** - Custom error handling
-- **[404 Error Page Dark](docs/images/404-dark.png)** - Custom error handling
+- 📸 [Screenshots](docs/screenshots.md)
 
 ## Our social networks
 
