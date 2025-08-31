@@ -6,12 +6,10 @@
 - [`Composer`](https://getcomposer.org/download/) for dependency management.
 - [`npm`](https://nodejs.org/en/download/) for frontend dependency management.
 - [`Yii2`](https://github.com/yiisoft/yii2) 2.0.53+ or 22.x.
-- Web server (Apache, Nginx, or built-in PHP server).
 
 ### Optional requirements
 
 - **Node.js**: For advanced asset compilation (optional)
-- **Docker**: For containerized development
 
 ## Installation methods
 
@@ -20,16 +18,16 @@
 Create a new project using the Yii App Basic template.
 
 ```bash
-composer create-project --prefer-dist --stability=dev yii2-extensions/app-basic myapp
-cd myapp
+composer create-project --prefer-dist yii2-extensions/app-basic:^0.1 app-basic
+cd app-basic
 ```
 
 ### Method 2: Manual installation
 
 1. **Download the template**:
 ```bash
-git clone https://github.com/yii2-extensions/app-basic.git myapp
-cd myapp
+git clone --branch 0.1 https://github.com/yii2-extensions/app-basic.git app-basic
+cd app-basic
 ```
 
 2. **Install dependencies**
@@ -42,8 +40,8 @@ composer install
 Clone the repository and set up your project.
 
 ```bash
-git clone https://github.com/yii2-extensions/app-basic.git myapp
-cd myapp
+git clone --branch 0.1 https://github.com/yii2-extensions/app-basic.git app-basic
+cd app-basic
 rm -rf .git
 git init
 composer install
@@ -57,47 +55,6 @@ Ensure the following directories are writable by the web server.
 
 ```bash
 chmod 775 web/assets runtime tests/_output
-```
-
-### Web server configuration
-
-#### Apache
-
-Create `web/.htaccess`.
-
-```apache
-RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . index.php
-```
-
-#### Nginx
-
-Add to your Nginx configuration.
-
-```nginx
-server {
-    listen 80;
-    server_name myapp.local;
-    root /path/to/myapp/web;
-    index index.php;
-
-    location / {
-        try_files $uri $uri/ /index.php?$query_string;
-    }
-
-    location ~ \.php$ {
-        fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;
-        fastcgi_index index.php;
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-        include fastcgi_params;
-    }
-
-    location ~ /\.(ht|svn|git) {
-        deny all;
-    }
-}
 ```
 
 #### Built-in PHP server
@@ -121,7 +78,7 @@ php -S localhost:8080 -t web
 
 1. **Create database**
 ```sql
-CREATE DATABASE myapp CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE app_basic CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
 
 2. **Run migrations** (if available)
@@ -147,58 +104,6 @@ npm run build
 
 # Watch for changes during development
 npm run watch
-```
-
-## Docker setup
-
-### Using docker compose
-
-Create `docker-compose.yml`.
-
-```yaml
-version: '3.8'
-
-services:
-  web:
-    image: yiisoftware/yii2-php:8.1-apache
-    ports:
-      - "8080:80"
-    volumes:
-      - .:/app
-    depends_on:
-      - db
-    environment:
-      - DB_HOST=db
-      - DB_NAME=myapp
-      - DB_USER=root
-      - DB_PASSWORD=secret
-
-  db:
-    image: mysql:8.0
-    environment:
-      - MYSQL_ROOT_PASSWORD=secret
-      - MYSQL_DATABASE=myapp
-    volumes:
-      - mysql_data:/var/lib/mysql
-
-volumes:
-  mysql_data:
-```
-
-Run the application.
-
-```bash
-docker-compose up -d
-```
-
-### Using Docker directly
-
-```bash
-# Build custom image
-docker build -t myapp .
-
-# Run container
-docker run -p 8080:80 myapp
 ```
 
 ### Performance optimization

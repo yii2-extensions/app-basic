@@ -7,20 +7,20 @@
 
 <p align="center">
     <a href="https://www.php.net/releases/8.1/en.php" target="_blank">
-        <img src="https://img.shields.io/badge/PHP-%3E%3D8.1-787CB5" alt="php-version">
+        <img src="https://img.shields.io/badge/%3E%3D8.1-777BB4.svg?style=for-the-badge&logo=php&logoColor=white" alt="PHP version">
     </a>
     <a href="https://github.com/yiisoft/yii2/tree/2.0.53" target="_blank">
-        <img src="https://img.shields.io/badge/Yii2%20-2.0.53-blue" alt="Yii2 2.0.53">
+        <img src="https://img.shields.io/badge/2.0.x-0073AA.svg?style=for-the-badge&logo=yii&logoColor=white" alt="Yii 2.0.x">
     </a>
     <a href="https://github.com/yiisoft/yii2/tree/22.0" target="_blank">
-        <img src="https://img.shields.io/badge/Yii2%20-22-blue" alt="Yii2 22.0">
+        <img src="https://img.shields.io/badge/22.0.x-0073AA.svg?style=for-the-badge&logo=yii&logoColor=white" alt="Yii 22.0.x">
     </a>
     <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/build.yml" target="_blank">
-        <img src="https://github.com/yii2-extensions/app-basic/actions/workflows/build.yml/badge.svg" alt="PHPUnit">
+        <img src="https://img.shields.io/github/actions/workflow/status/yii2-extensions/app-basic/build.yml?branch=main&style=for-the-badge&label=PHPUnit" alt="PHPUnit">
     </a>
     <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml" target="_blank">
-        <img src="https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml/badge.svg" alt="PHPStan">
-    </a>        
+        <img src="https://img.shields.io/github/actions/workflow/status/yii2-extensions/app-basic/static.yml?branch=main&style=for-the-badge&label=PHPStan" alt="PHPStan">
+    </a>
 </p>
 
 A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-application development. Built with best practices, clean architecture, and developer-friendly configuration, it lets you create production-ready apps with minimal setup while maintaining code quality and extensibility.
@@ -38,15 +38,7 @@ A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-a
 - ✅ **Console Commands** - Example console commands for background tasks and maintenance.
 - ✅ **Developer Tools** - Debugging tools, logging, and development-friendly configurations.
 - ✅ **Modern Bootstrap 5 UI** - Responsive, mobile-first design with latest Bootstrap components.
-- ✅ **SSL Support** - Configured for secure HTTPS connections with SSL (mkcert).
 - ✅ **Testing Ready** - Codeception test suite with examples for functional and unit testing.
-
-## Supported web servers
-
-[![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&label=docker&logo=apache&logoColor=white)](docker-compose.yml)
-[![Caddy](https://img.shields.io/badge/caddy-%231F88C0.svg?style=for-the-badge&label=docker&logo=caddy&logoColor=white)](docker-compose.caddy.yml)
-[![FrankenPHP](https://img.shields.io/badge/frankenphp-%23FF6B35.svg?style=for-the-badge&label=docker&logo=php&logoColor=white)](docker-compose.frankenphp.yml)
-[![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&label=docker&logo=nginx&logoColor=white)](docker-compose.nginx.yml)
 
 ## Quick start
 
@@ -73,8 +65,8 @@ The Yii2 Web Application Basic template provides a complete foundation for build
 **Quick start**
 
 ```bash
-composer create-project --prefer-dist --stability=dev yii2-extensions/app-basic myapp
-cd myapp
+composer create-project --prefer-dist yii2-extensions/app-basic app-basic:^0.1
+cd app-basic
 ```
 
 **Start development server**
@@ -85,43 +77,6 @@ php -S localhost:8080 -t web
 
 # Or using Yii console command
 ./yii serve
-```
-
-**Start Apache or Nginx server**
-
-```bash
-# For Apache
-docker-compose up -d
-
-# For Caddy
-docker-compose -f docker-compose.caddy.yml up -d
-
-# For FrankenPHP
-docker-compose -f docker-compose.frankenphp.yml up -d
-
-# For Nginx
-docker-compose -f docker-compose.nginx.yml up -d 
-```
-
-### Access your application
-
-After starting the server, you can access your application in your web browser.
-
-```bash
-# For built-in PHP server
-http://localhost:8080/
-
-# For Apache
-https://localhost:8443/
-
-# For Caddy
-https://localhost:8444/
-
-# For FrankenPHP
-https://localhost:8445/
-
-# For Nginx
-https://localhost:8446/
 ```
 
 ### Basic usage
@@ -135,18 +90,9 @@ root/
 │   ├── console/           Console configuration  
 │   ├── web/               Web configuration
 │   └── messages.php       Translation config
-├── docker/                Docker configuration files
-│   ├── apache/            Apache configuration
-│   ├── caddy/             Caddy configuration
-│   ├── frankenphp/        FrankenPHP configuration
-│   ├── nginx/             Nginx configuration
-│   ├── php/               PHP configuration
-│   ├── ssl/               SSL certificates
-│   └── supervisor/        Supervisor configuration
 ├── src/
 │   ├── framework/         Framework assets & resources
 │   │   ├── asset/         Asset bundles
-│   │   ├── event/         Event handlers
 │   │   └── resource/      CSS, JS, layouts, messages
 │   └── usecase/           Application use cases
 │       ├── hello/         Console command example
@@ -168,7 +114,7 @@ namespace app\usecase\site;
 
 use yii\web\Controller;
 
-class SiteController extends Controller
+final class SiteController extends Controller
 {
     public function actionIndex(): string
     {
@@ -191,11 +137,11 @@ class SiteController extends Controller
 ```
 ## Quality code
 
-[![Latest Stable Version](https://poser.pugx.org/yii2-extensions/app-basic/v)](https://packagist.org/packages/yii2-extensions/app-basic)
-[![Total Downloads](https://poser.pugx.org/yii2-extensions/app-basic/downloads)](https://packagist.org/packages/yii2-extensions/app-basic)
-[![codecov](https://codecov.io/github/yii2-extensions/app-basic/graph/badge.svg?token=zcXbeTspxy)](https://codecov.io/github/yii2-extensions/app-basic)
-[![phpstan-level](https://img.shields.io/badge/PHPStan%20level-max-blue)](https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml)
-[![StyleCI](https://github.styleci.io/repos/698621511/shield?branch=main)](https://github.styleci.io/repos/698621511?branch=main)
+[![Latest Stable Version](https://img.shields.io/packagist/v/yii2-extensions/app-basic.svg?style=for-the-badge&logo=packagist&logoColor=white&label=Stable)](https://packagist.org/packages/yii2-extensions/app-basic)
+[![Total Downloads](https://img.shields.io/packagist/dt/yii2-extensions/app-basic.svg?style=for-the-badge&logo=packagist&logoColor=white&label=Downloads)](https://packagist.org/packages/yii2-extensions/app-basic)
+[![Codecov](https://img.shields.io/codecov/c/github/yii2-extensions/app-basic.svg?branch=main&style=for-the-badge&logo=codecov&logoColor=white&label=Coverage)](https://codecov.io/github/yii2-extensions/app-basic)
+[![PHPStan Level Max](https://img.shields.io/badge/PHPStan-Level%20Max-4F5D95.svg?style=for-the-badge&logo=php&logoColor=white)](https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml)
+[![StyleCI](https://img.shields.io/badge/StyleCI-Passed-44CC11.svg?style=for-the-badge&logo=styleci&logoColor=white)](https://github.styleci.io/repos/165419144?branch=main)
 
 ## Documentation
 
@@ -204,18 +150,12 @@ For detailed configuration options and advanced usage:
 - 📚 [Installation Guide](docs/installation.md)
 - ⚙️ [Configuration Reference](docs/configuration.md) 
 - 🧪 [Testing Guide](docs/testing.md)
-
-## Screenshots
-
-The web application includes these ready-to-use pages:
-
-- **[404 Error Page](docs/images/404.png)** - Custom error handling
-- **[404 Error Page Dark](docs/images/404-dark.png)** - Custom error handling
+- 📸 [Screenshots](docs/screenshots.md)
 
 ## Our social networks
 
-[![X](https://img.shields.io/badge/follow-@terabytesoftw-1DA1F2?logo=x&logoColor=1DA1F2&labelColor=555555&style=flat)](https://x.com/Terabytesoftw)
+[![Follow on X](https://img.shields.io/badge/-Follow%20on%20X-1DA1F2.svg?style=for-the-badge&logo=x&logoColor=white&labelColor=000000)](https://x.com/Terabytesoftw)
 
 ## License
 
-[![License](https://img.shields.io/github/license/yii2-extensions/app-basic)](LICENSE.md)
+[![License](https://img.shields.io/github/license/yii2-extensions/app-basic?style=for-the-badge&logo=opensourceinitiative&logoColor=white&labelColor=333333)](LICENSE.md)

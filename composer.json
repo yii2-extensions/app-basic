@@ -3,11 +3,12 @@
     "type": "project",
     "description": "Web Application Basic",
     "keywords": [
+        "yii2-extensions",
         "application",
         "basic",
-        "web",
-        "yii2"
+        "web"
     ],
+    "minimum-stability": "dev",
     "license": "BSD-3-Clause",
     "require": {
         "php": ">=8.1",
@@ -57,7 +58,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.1-dev"
+            "dev-main": "0.2.x-dev"
         }
     },
     "config": {
