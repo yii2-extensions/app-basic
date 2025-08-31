@@ -65,7 +65,7 @@ The Yii2 Web Application Basic template provides a complete foundation for build
 
 ### Installation
 
-[![Latest Stable Version](https://img.shields.io/badge/Dev-road--runner-orange?style=for-the-badge&logo=packagist&logoColor=white)](https://packagist.org/packages/yii2-extensions/app-basic#dev-road-runner)
+[![Latest Dev Version](https://img.shields.io/badge/Dev-road--runner-orange?style=for-the-badge&logo=packagist&logoColor=white)](https://packagist.org/packages/yii2-extensions/app-basic#dev-road-runner)
 
 **Quick start**
 
