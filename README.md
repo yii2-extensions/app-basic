@@ -70,7 +70,7 @@ The Yii2 Web Application Basic template provides a complete foundation for build
 **Quick start**
 
 ```bash
-composer create-project --prefer-dist yii2-extensions/app-basic:^0.1.0-road-runner app-basic
+composer create-project --prefer-dist yii2-extensions/app-basic:dev-road-runner app-basic
 cd app-basic
 ```
 
