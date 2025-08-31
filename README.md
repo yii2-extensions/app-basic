@@ -6,6 +6,9 @@
 </p>
 
 <p align="center">
+    <a href="docker-compose.roadrunner.yml" target="_blank">
+        <img src="https://img.shields.io/badge/roadrunner-%23FF6B35.svg?label=stack&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMjIgMTJMMTIgMjJMMiAxMkwxMiAyWiIgZmlsbD0iI0ZGNkIzNSIvPgo8cGF0aCBkPSJNMTIgNkwxOCAxMkwxMiAxOEw2IDEyTDEyIDZaIiBmaWxsPSIjRkZGRkZGIi8+CjxwYXRoIGQ9Ik0xMiA5TDE1IDEyTDEyIDE1TDkgMTJMMTIgOVoiIGZpbGw9IiNGRjZCMzUiLz4KPC9zdmc+&logoColor=white" alt="roadrunner-badge">
+    </a>
     <a href="https://www.php.net/releases/8.1/en.php" target="_blank">
         <img src="https://img.shields.io/badge/PHP-%3E%3D8.1-787CB5" alt="php-version">
     </a>
@@ -40,13 +43,6 @@ A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-a
 - ✅ **Modern Bootstrap 5 UI** - Responsive, mobile-first design with latest Bootstrap components.
 - ✅ **SSL Support** - Configured for secure HTTPS connections with SSL (mkcert).
 - ✅ **Testing Ready** - Codeception test suite with examples for functional and unit testing.
-
-## Supported web servers
-
-[![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&label=docker&logo=apache&logoColor=white)](docker-compose.yml)
-[![Caddy](https://img.shields.io/badge/caddy-%231F88C0.svg?style=for-the-badge&label=docker&logo=caddy&logoColor=white)](docker-compose.caddy.yml)
-[![FrankenPHP](https://img.shields.io/badge/frankenphp-%23FF6B35.svg?style=for-the-badge&label=docker&logo=php&logoColor=white)](docker-compose.frankenphp.yml)
-[![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&label=docker&logo=nginx&logoColor=white)](docker-compose.nginx.yml)
 
 ## Quick start
 
@@ -87,43 +83,6 @@ php -S localhost:8080 -t web
 ./yii serve
 ```
 
-**Start Apache or Nginx server**
-
-```bash
-# For Apache
-docker-compose up -d
-
-# For Caddy
-docker-compose -f docker-compose.caddy.yml up -d
-
-# For FrankenPHP
-docker-compose -f docker-compose.frankenphp.yml up -d
-
-# For Nginx
-docker-compose -f docker-compose.nginx.yml up -d 
-```
-
-### Access your application
-
-After starting the server, you can access your application in your web browser.
-
-```bash
-# For built-in PHP server
-http://localhost:8080/
-
-# For Apache
-https://localhost:8443/
-
-# For Caddy
-https://localhost:8444/
-
-# For FrankenPHP
-https://localhost:8445/
-
-# For Nginx
-https://localhost:8446/
-```
-
 ### Basic usage
 
 #### Directory structure
@@ -135,14 +94,6 @@ root/
 │   ├── console/           Console configuration  
 │   ├── web/               Web configuration
 │   └── messages.php       Translation config
-├── docker/                Docker configuration files
-│   ├── apache/            Apache configuration
-│   ├── caddy/             Caddy configuration
-│   ├── frankenphp/        FrankenPHP configuration
-│   ├── nginx/             Nginx configuration
-│   ├── php/               PHP configuration
-│   ├── ssl/               SSL certificates
-│   └── supervisor/        Supervisor configuration
 ├── src/
 │   ├── framework/         Framework assets & resources
 │   │   ├── asset/         Asset bundles
@@ -193,7 +144,6 @@ class SiteController extends Controller
 
 [![Latest Stable Version](https://poser.pugx.org/yii2-extensions/app-basic/v)](https://packagist.org/packages/yii2-extensions/app-basic)
 [![Total Downloads](https://poser.pugx.org/yii2-extensions/app-basic/downloads)](https://packagist.org/packages/yii2-extensions/app-basic)
-[![codecov](https://codecov.io/github/yii2-extensions/app-basic/graph/badge.svg?token=zcXbeTspxy)](https://codecov.io/github/yii2-extensions/app-basic)
 [![phpstan-level](https://img.shields.io/badge/PHPStan%20level-max-blue)](https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml)
 [![StyleCI](https://github.styleci.io/repos/698621511/shield?branch=main)](https://github.styleci.io/repos/698621511?branch=main)
 
