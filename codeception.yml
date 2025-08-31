@@ -17,3 +17,7 @@ modules:
 extensions:
   enabled:
     - Codeception\Extension\RunFailed
+coverage:
+  enabled: true
+  include:
+    - src/*
