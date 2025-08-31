@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-    <a href="docker-compose.roadrunner.yml" target="_blank">
+    <a href="https://github.com/roadrunner-server/roadrunner" target="_blank">
         <img src="https://img.shields.io/badge/roadrunner-%23FF6B35.svg?label=stack&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMjIgMTJMMTIgMjJMMiAxMkwxMiAyWiIgZmlsbD0iI0ZGNkIzNSIvPgo8cGF0aCBkPSJNMTIgNkwxOCAxMkwxMiAxOEw2IDEyTDEyIDZaIiBmaWxsPSIjRkZGRkZGIi8+CjxwYXRoIGQ9Ik0xMiA5TDE1IDEyTDEyIDE1TDkgMTJMMTIgOVoiIGZpbGw9IiNGRjZCMzUiLz4KPC9zdmc+&logoColor=white" alt="roadrunner-badge">
     </a>
     <a href="https://www.php.net/releases/8.1/en.php" target="_blank">
@@ -41,7 +41,6 @@ A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-a
 - ✅ **Console Commands** - Example console commands for background tasks and maintenance.
 - ✅ **Developer Tools** - Debugging tools, logging, and development-friendly configurations.
 - ✅ **Modern Bootstrap 5 UI** - Responsive, mobile-first design with latest Bootstrap components.
-- ✅ **SSL Support** - Configured for secure HTTPS connections with SSL (mkcert).
 - ✅ **Testing Ready** - Codeception test suite with examples for functional and unit testing.
 
 ## Quick start
@@ -69,18 +68,22 @@ The Yii2 Web Application Basic template provides a complete foundation for build
 **Quick start**
 
 ```bash
-composer create-project --prefer-dist --stability=dev yii2-extensions/app-basic myapp
-cd myapp
+composer create-project --prefer-dist --stability=dev yii2-extensions/app-basic:dev-road-runner app-basic
+cd app-basic
 ```
 
 **Start development server**
 
-```bash
-# Using built-in PHP server
-php -S localhost:8080 -t web
+Download and install [RoadRunner](https://docs.roadrunner.dev/docs/general/install) first.
 
-# Or using Yii console command
-./yii serve
+```bash
+./vendor/bin/rr get-binary
+```
+
+Run the server in daemon mode.
+
+```bash
+./rr serve -d
 ```
 
 ### Basic usage
@@ -119,7 +122,7 @@ namespace app\usecase\site;
 
 use yii\web\Controller;
 
-class SiteController extends Controller
+final class SiteController extends Controller
 {
     public function actionIndex(): string
     {
