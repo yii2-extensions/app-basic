@@ -25,6 +25,7 @@ jobs:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     with:
       codeception-command: vendor/bin/codecept run
+      coverage-driver: none
       coverage-file: runtime/output/coverage.xml
       extensions: gd, intl, pcov, sockets
       hook: |
