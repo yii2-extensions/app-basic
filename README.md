@@ -6,9 +6,6 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/roadrunner-server/roadrunner" target="_blank">
-        <img src="https://img.shields.io/badge/roadrunner-%23FF6B35.svg?style=for-the-badge&label=stack&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMjIgMTJMMTIgMjJMMiAxMkwxMiAyWiIgZmlsbD0iI0ZGNkIzNSIvPgo8cGF0aCBkPSJNMTIgNkwxOCAxMkwxMiAxOEw2IDEyTDEyIDZaIiBmaWxsPSIjRkZGRkZGIi8+CjxwYXRoIGQ9Ik0xMiA5TDE1IDEyTDEyIDE1TDkgMTJMMTIgOVoiIGZpbGw9IiNGRjZCMzUiLz4KPC9zdmc+&logoColor=white" alt="roadrunner-badge">
-    </a>
     <a href="https://www.php.net/releases/8.1/en.php" target="_blank">
         <img src="https://img.shields.io/badge/%3E%3D8.1-777BB4.svg?style=for-the-badge&logo=php&logoColor=white" alt="PHP version">
     </a>
