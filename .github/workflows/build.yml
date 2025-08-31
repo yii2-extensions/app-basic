@@ -24,6 +24,10 @@ jobs:
       AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     with:
-      codeception-command: vendor/bin/codecept run --env php-builtin --coverage-xml
+      codeception-command: vendor/bin/codecept run
+      coverage-driver: none
       coverage-file: runtime/output/coverage.xml
-      extensions: gd, intl, pcov
+      extensions: gd, intl, pcov, sockets
+      hook: |
+        vendor/bin/rr get-binary
+        ./rr serve > /dev/null 2>&1 &

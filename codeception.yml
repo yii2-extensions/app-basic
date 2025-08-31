@@ -6,7 +6,6 @@ paths:
   output: runtime/output
   data: tests/Support/data
   support: tests/Support
-  envs: tests/_envs
 actor_suffix: Tester
 settings:
   memory_limit: 1024M
@@ -18,7 +17,3 @@ modules:
 extensions:
   enabled:
     - Codeception\Extension\RunFailed
-coverage:
-  enabled: true
-  include:
-    - src/*
