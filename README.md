@@ -65,10 +65,12 @@ The Yii2 Web Application Basic template provides a complete foundation for build
 
 ### Installation
 
+[![Latest Dev Version](https://img.shields.io/badge/Dev-road--runner-orange?style=for-the-badge&logo=packagist&logoColor=white)](https://packagist.org/packages/yii2-extensions/app-basic#dev-road-runner)
+
 **Quick start**
 
 ```bash
-composer create-project --prefer-dist --stability=dev yii2-extensions/app-basic:dev-road-runner app-basic
+composer create-project --prefer-dist yii2-extensions/app-basic:dev-road-runner app-basic
 cd app-basic
 ```
 
@@ -144,7 +146,6 @@ final class SiteController extends Controller
 ```
 ## Quality code
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/yii2-extensions/app-basic.svg?branch=road-runner&style=for-the-badge&logo=packagist&logoColor=white&label=Stable)](https://packagist.org/packages/yii2-extensions/app-basic#dev-road-runner)
 [![Codecov](https://img.shields.io/codecov/c/github/yii2-extensions/app-basic.svg?branch=road-runner&style=for-the-badge&logo=codecov&logoColor=white&label=Coverage)](https://app.codecov.io/github/yii2-extensions/app-basic/tree/road-runner)
 [![PHPStan Level Max](https://img.shields.io/badge/PHPStan-Level%20Max-4F5D95.svg?style=for-the-badge&logo=php&logoColor=white)](https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml?query=branch%3Aroad-runner)
 [![StyleCI](https://img.shields.io/badge/StyleCI-Passed-44CC11.svg?branch=road-runner&style=for-the-badge&logo=styleci&logoColor=white)](https://github.styleci.io/repos/165419144?branch=road-runner)
