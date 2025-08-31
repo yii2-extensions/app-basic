@@ -18,7 +18,7 @@
 Create a new project using the Yii App Basic template.
 
 ```bash
-composer create-project --prefer-dist --stability=dev yii2-extensions/app-basic app-basic
+composer create-project --prefer-dist yii2-extensions/app-basic:^0.1 app-basic
 cd app-basic
 ```
 
@@ -26,7 +26,7 @@ cd app-basic
 
 1. **Download the template**:
 ```bash
-git clone https://github.com/yii2-extensions/app-basic.git app-basic
+git clone --branch 0.1 https://github.com/yii2-extensions/app-basic.git app-basic
 cd app-basic
 ```
 
@@ -40,7 +40,7 @@ composer install
 Clone the repository and set up your project.
 
 ```bash
-git clone https://github.com/yii2-extensions/app-basic.git app-basic
+git clone --branch 0.1 https://github.com/yii2-extensions/app-basic.git app-basic
 cd app-basic
 rm -rf .git
 git init
