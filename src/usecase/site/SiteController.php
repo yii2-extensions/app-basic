@@ -7,8 +7,6 @@ namespace app\usecase\site;
 use app\usecase\Controller;
 use yii\web\ErrorAction;
 
-use function array_merge;
-
 final class SiteController extends Controller
 {
     public function actionIndex(): string
