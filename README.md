@@ -37,6 +37,7 @@ A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-a
 - ✅ **Clean Architecture** - Well-organized directory structure following Yii2 best practices.
 - ✅ **Console Commands** - Example console commands for background tasks and maintenance.
 - ✅ **Developer Tools** - Debugging tools, logging, and development-friendly configurations.
+- ✅ **HTTPS/TLS Support** - Local HTTPS via TLS using mkcert-generated certificates.
 - ✅ **Modern Bootstrap 5 UI** - Responsive, mobile-first design with latest Bootstrap components.
 - ✅ **Testing Ready** - Codeception test suite with examples for functional and unit testing.
 

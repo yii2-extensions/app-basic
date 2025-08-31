@@ -11,6 +11,12 @@ server:
 http:
     address: :8080
 
+    ssl:
+        address: :8443
+        cert: 'web/ssl/localhost.pem'
+        key: 'web/ssl/localhost-key.pem'
+        redirect: true
+
     headers:
         response:
             "Cache-Control": "no-cache"
