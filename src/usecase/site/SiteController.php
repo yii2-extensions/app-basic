@@ -18,12 +18,9 @@ final class SiteController extends Controller
 
     public function actions(): array
     {
-        return array_merge(
-            [
-                '404' => ['class' => ErrorAction::class],
-            ],
-            parent::actions(),
-        );
+        return [
+            '404' => ['class' => ErrorAction::class],
+        ] + parent::actions();
     }
 
     public function getViewPath(): string
