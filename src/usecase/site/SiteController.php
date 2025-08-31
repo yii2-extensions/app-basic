@@ -5,8 +5,9 @@ declare(strict_types=1);
 namespace app\usecase\site;
 
 use app\usecase\Controller;
-use yii\helpers\ArrayHelper;
 use yii\web\ErrorAction;
+
+use function array_merge;
 
 final class SiteController extends Controller
 {
@@ -17,11 +18,11 @@ final class SiteController extends Controller
 
     public function actions(): array
     {
-        return ArrayHelper::merge(
+        return array_merge(
             [
-                '404' => ['class' => ErrorAction::class],
+              '404' => ['class' => ErrorAction::class],
             ],
-            parent::actions(),
+            parent::actions()
         );
     }
 
