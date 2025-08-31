@@ -24,7 +24,7 @@ jobs:
       AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     with:
-      codeception-command: vendor/bin/codecept run --coverage-xml
+      codeception-command: vendor/bin/codecept run
       coverage-file: runtime/output/coverage.xml
       extensions: gd, intl, pcov, sockets
       hook: |
