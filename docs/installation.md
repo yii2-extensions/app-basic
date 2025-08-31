@@ -78,7 +78,7 @@ php -S localhost:8080 -t web
 
 1. **Create database**
 ```sql
-CREATE DATABASE app CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE app_basic CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
 
 2. **Run migrations** (if available)
