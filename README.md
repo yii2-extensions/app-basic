@@ -1,11 +1,14 @@
 <p align="center">
-    <a href="https://github.com/yii2-extensions/localeurls" target="_blank">
+    <a href="https://github.com/yii2-extensions/app-basic" target="_blank">
         <img src="https://www.yiiframework.com/image/yii_logo_light.svg" alt="Yii Framework">
     </a>
     <h1 align="center">Web Application Basic</h1>
 </p>
 
 <p align="center">
+    <a href="https://github.com/yii2-extensions/road-runner" target="_blank">
+        <img src="https://img.shields.io/badge/Dev-road--runner-orange?style=for-the-badge&logo=packagist&logoColor=white" alt="Latest Dev Version">
+    </a>
     <a href="https://www.php.net/releases/8.1/en.php" target="_blank">
         <img src="https://img.shields.io/badge/%3E%3D8.1-777BB4.svg?style=for-the-badge&logo=php&logoColor=white" alt="PHP version">
     </a>
@@ -41,9 +44,7 @@ A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-a
 - ✅ **Modern Bootstrap 5 UI** - Responsive, mobile-first design with latest Bootstrap components.
 - ✅ **Testing Ready** - Codeception test suite with examples for functional and unit testing.
 
-## Quick start
-
-### How it works
+## How it works
 
 The Yii2 Web Application Basic template provides a complete foundation for building modern web applications. Unlike starting from scratch, this template includes.
 
@@ -63,24 +64,20 @@ The Yii2 Web Application Basic template provides a complete foundation for build
 
 ### Installation
 
-[![Latest Dev Version](https://img.shields.io/badge/Dev-road--runner-orange?style=for-the-badge&logo=packagist&logoColor=white)](https://packagist.org/packages/yii2-extensions/app-basic#dev-road-runner)
-
-**Quick start**
-
 ```bash
 composer create-project --prefer-dist yii2-extensions/app-basic:dev-road-runner app-basic
 cd app-basic
 ```
 
-**Start development server**
+### Quick start
 
-Download and install [RoadRunner](https://docs.roadrunner.dev/docs/general/install) first.
+Download and install [RoadRunner](https://docs.roadrunner.dev/docs/general/install) first
 
 ```bash
 ./vendor/bin/rr get-binary
 ```
 
-Run the server in daemon mode.
+Start the server in daemon mode
 
 ```bash
 ./rr serve -d
