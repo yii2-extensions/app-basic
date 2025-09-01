@@ -9,6 +9,7 @@
 - Bug #150: Add container configuration to `console` app setup (@terabytesoftw)
 - Enh #151: Implement `FrankenPHP` stack (@terabytesoftw)
 - Bug #152: Remove redundant `Quick start` section header from `README.md` (@terabytesoftw)
+- Bug #154:  Update links and headings in `README.md` for clarity and consistency (@terabytesoftw)
 
 ## 0.1.0 August 31, 2025
 

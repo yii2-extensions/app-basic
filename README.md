@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://github.com/yii2-extensions/localeurls" target="_blank">
+    <a href="https://github.com/yii2-extensions/app-basic" target="_blank">
         <img src="https://www.yiiframework.com/image/yii_logo_light.svg" alt="Yii Framework">
     </a>
     <h1 align="center">Web Application Basic</h1>
@@ -45,7 +45,7 @@ A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-a
 - ✅ **Modern Bootstrap 5 UI** - Responsive, mobile-first design with latest Bootstrap components.
 - ✅ **Testing Ready** - Codeception test suite with examples for functional and unit testing.
 
-### How it works
+## How it works
 
 The Yii2 Web Application Basic template provides a complete foundation for building modern web applications. Unlike starting 
 from scratch, this template includes.
@@ -55,7 +55,7 @@ from scratch, this template includes.
 3. **Security features** including CSRF protection and input validation.
 4. **Development tools** for debugging, logging, and testing.
 
-#### Why use this template
+**Why use this template**
 
 - **Rapid development**: Start building features immediately without setup overhead.
 - **Best practices**: Follow Yii2 conventions and modern web development standards.
