@@ -10,6 +10,7 @@
 - Enh #151: Implement `FrankenPHP` stack (@terabytesoftw)
 - Bug #152: Remove redundant `Quick start` section header from `README.md` (@terabytesoftw)
 - Bug #154:  Update links and headings in `README.md` for clarity and consistency (@terabytesoftw)
+- Bug #156: Update `README.md` with new Packagist badges and improve structure (@terabytesoftw)
 
 ## 0.1.0 August 31, 2025
 
