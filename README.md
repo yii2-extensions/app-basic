@@ -6,9 +6,6 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/yii2-extensions/franken-php" target="_blank">
-        <img src="https://img.shields.io/badge/Dev-frankenphp-blue?style=for-the-badge&logo=php&logoColor=white" alt="Latest Dev Version">
-    </a>
     <a href="https://www.php.net/releases/8.1/en.php" target="_blank">
         <img src="https://img.shields.io/badge/%3E%3D8.1-777BB4.svg?style=for-the-badge&logo=php&logoColor=white" alt="PHP version">
     </a>
@@ -177,6 +174,11 @@ final class SiteController extends Controller
 # Clear cache
 ./yii cache/flush-all
 ```
+
+## Package information
+
+[![Development Status](https://img.shields.io/badge/Dev-frankenphp-blue?style=for-the-badge&logo=php&logoColor=white)](https://github.com/yii2-extensions/franken-php)
+
 ## Quality code
 
 [![Codecov](https://img.shields.io/codecov/c/github/yii2-extensions/app-basic.svg?branch=main&style=for-the-badge&logo=codecov&logoColor=white&label=Coverage)](https://codecov.io/github/yii2-extensions/app-basic)
