@@ -6,9 +6,6 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/yii2-extensions/road-runner" target="_blank">
-        <img src="https://img.shields.io/badge/Dev-road--runner-orange?style=for-the-badge&logo=packagist&logoColor=white" alt="Latest Dev Version">
-    </a>
     <a href="https://www.php.net/releases/8.1/en.php" target="_blank">
         <img src="https://img.shields.io/badge/%3E%3D8.1-777BB4.svg?style=for-the-badge&logo=php&logoColor=white" alt="PHP version">
     </a>
@@ -139,11 +136,16 @@ final class SiteController extends Controller
 # Clear cache
 ./yii cache/flush-all
 ```
+
+## Package information
+
+[![Development Status](https://img.shields.io/badge/Dev-road--runner-orange?style=for-the-badge&logo=packagist&logoColor=white)](https://github.com/yii2-extensions/road-runner)
+
 ## Quality code
 
-[![Codecov](https://img.shields.io/codecov/c/github/yii2-extensions/app-basic.svg?branch=road-runner&style=for-the-badge&logo=codecov&logoColor=white&label=Coverage)](https://app.codecov.io/github/yii2-extensions/app-basic/tree/road-runner)
-[![PHPStan Level Max](https://img.shields.io/badge/PHPStan-Level%20Max-4F5D95.svg?style=for-the-badge&logo=php&logoColor=white)](https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml?query=branch%3Aroad-runner)
-[![StyleCI](https://img.shields.io/badge/StyleCI-Passed-44CC11.svg?branch=road-runner&style=for-the-badge&logo=styleci&logoColor=white)](https://github.styleci.io/repos/165419144?branch=road-runner)
+[![Codecov](https://img.shields.io/codecov/c/github/yii2-extensions/app-basic.svg?branch=main&style=for-the-badge&logo=codecov&logoColor=white&label=Coverage)](https://codecov.io/github/yii2-extensions/app-basic)
+[![PHPStan Level Max](https://img.shields.io/badge/PHPStan-Level%20Max-4F5D95.svg?style=for-the-badge&logo=php&logoColor=white)](https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml)
+[![StyleCI](https://img.shields.io/badge/StyleCI-Passed-44CC11.svg?style=for-the-badge&logo=styleci&logoColor=white)](https://github.styleci.io/repos/165419144?branch=main)
 
 ## Documentation
 
