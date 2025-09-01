@@ -12,6 +12,7 @@
 - Bug #149: Update PHPStan annotations and add container configuration file (@terabytesoftw)
 - Bug #150: Add container configuration to `console` app setup (@terabytesoftw)
 - Bug #153: Update `README.md` with correct links and badge for `RoadRunner` (@terabytesoftw)
+- bug #155: Update section header formatting in `README.md` (@terabytesoftw)
 
 ## 0.1.0 August 31, 2025
 
