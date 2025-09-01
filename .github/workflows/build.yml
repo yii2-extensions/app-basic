@@ -31,4 +31,5 @@ jobs:
         curl https://frankenphp.dev/install.sh | sh
         mv frankenphp web
         ./web/frankenphp php-server --worker web/index.php --listen localhost:8080 --no-tls > /dev/null 2>&1 &
+        sleep 3
       os: '["ubuntu-latest"]'
