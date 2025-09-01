@@ -30,6 +30,6 @@ jobs:
       hook: |
         curl https://frankenphp.dev/install.sh | sh
         mv frankenphp web
-        ./frankenphp run --config ./tests/Caddyfile > /dev/null 2>&1 &
+        ./frankenphp run --config ./tests/Caddyfile --watch
         sleep 3
       os: '["ubuntu-latest"]'
