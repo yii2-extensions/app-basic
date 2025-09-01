@@ -123,8 +123,6 @@ docker run \
 
 > Your application will be available at `http://127.0.0.1` (or `http://localhost`) or at the address set in the `Caddyfile`.
 
-### Basic usage
-
 #### Directory structure
 
 ```text
