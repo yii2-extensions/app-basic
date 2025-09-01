@@ -20,6 +20,6 @@ return [
         ResponseFactoryInterface::class => ResponseFactory::class,
         ServerRequestFactoryInterface::class => ServerRequestFactory::class,
         StreamFactoryInterface::class => StreamFactory::class,
-        UploadedFileFactoryInterface::class => UploadedFileFactory::class
+        UploadedFileFactoryInterface::class => UploadedFileFactory::class,
     ],
 ];
