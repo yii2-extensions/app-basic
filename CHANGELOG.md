@@ -9,6 +9,8 @@
 - Bug #144: Remove outdated `RoadRunner` badge from `README.md` (@terabytesoftw)
 - Enh #145: Add HTTPS/TLS support with certificate and key for secure connections (@terabytesoftw)
 - Bug #146: Remove `yiisoft/yii2-symfonymailer` dependency from `composer.json` (@terabytesoftw)
+- Bug #149: Update PHPStan annotations and add container configuration file (@terabytesoftw)
+- Bug #150: Add container configuration to `console` app setup (@terabytesoftw)
 
 ## 0.1.0 August 31, 2025
 
