@@ -7,6 +7,7 @@
 - Bug #146: Remove `yiisoft/yii2-symfonymailer` dependency from `composer.json` (@terabytesoftw)
 - Bug #149: Update PHPStan annotations and add container configuration file (@terabytesoftw)
 - Bug #150: Add container configuration to `console` app setup (@terabytesoftw)
+- Bug #156: Update `README.md` with new Packagist badges and improve structure (@terabytesoftw)
 
 ## 0.1.0 August 31, 2025
 

@@ -1,11 +1,17 @@
 <p align="center">
-    <a href="https://github.com/yii2-extensions/localeurls" target="_blank">
+    <a href="https://github.com/yii2-extensions/app-basic" target="_blank">
         <img src="https://www.yiiframework.com/image/yii_logo_light.svg" alt="Yii Framework">
     </a>
     <h1 align="center">Web Application Basic</h1>
 </p>
 
 <p align="center">
+    <a href="https://packagist.org/packages/yii2-extensions/app-basic" target="_blank">
+        <img src="https://img.shields.io/packagist/v/yii2-extensions/app-basic.svg?style=for-the-badge&logo=packagist&logoColor=white&label=Stable" alt="Latest Stable Version">
+    </a>
+    <a href="https://packagist.org/packages/yii2-extensions/app-basic" target="_blank">
+        <img src="https://img.shields.io/packagist/dt/yii2-extensions/app-basic.svg?style=for-the-badge&logo=packagist&logoColor=white&label=Downloads" alt="Total Downloads">
+    </a>    
     <a href="https://www.php.net/releases/8.1/en.php" target="_blank">
         <img src="https://img.shields.io/badge/%3E%3D8.1-777BB4.svg?style=for-the-badge&logo=php&logoColor=white" alt="PHP version">
     </a>
@@ -42,13 +48,12 @@ A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-a
 
 ## Available stacks
 
+[![FrankenPHP](https://img.shields.io/badge/Dev-frankenphp-blue?style=for-the-badge&logo=php&logoColor=white)](https://github.com/yii2-extensions/app-basic/tree/franken-php)
 [![RoadRunner Worker](https://img.shields.io/badge/road%20runner-%23FF6B35.svg?style=for-the-badge&label=worker&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMjIgMTJMMTIgMjJMMiAxMkwxMiAyWiIgZmlsbD0iI0ZGNkIzNSIvPgo8cGF0aCBkPSJNMTIgNkwxOCAxMkwxMiAxOEw2IDEyTDEyIDZaIiBmaWxsPSIjRkZGRkZGIi8+CjxwYXRoIGQ9Ik0xMiA5TDE1IDEyTDEyIDE1TDkgMTJMMTIgOVoiIGZpbGw9IiNGRjZCMzUiLz4KPC9zdmc+&logoColor=white)](https://github.com/yii2-extensions/app-basic/tree/road-runner)
 
 For setup instructions, see README in each branch.
 
-## Quick start
-
-### How it works
+## How it works
 
 The Yii2 Web Application Basic template provides a complete foundation for building modern web applications. Unlike starting from scratch, this template includes.
 
@@ -57,7 +62,7 @@ The Yii2 Web Application Basic template provides a complete foundation for build
 3. **Security features** including CSRF protection and input validation.
 4. **Development tools** for debugging, logging, and testing.
 
-#### Why use this template
+**Why use this template**
 
 - **Rapid development**: Start building features immediately without setup overhead.
 - **Best practices**: Follow Yii2 conventions and modern web development standards.
@@ -68,17 +73,14 @@ The Yii2 Web Application Basic template provides a complete foundation for build
 
 ### Installation
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/yii2-extensions/app-basic.svg?style=for-the-badge&logo=packagist&logoColor=white&label=Stable)](https://packagist.org/packages/yii2-extensions/app-basic)
-[![Total Downloads](https://img.shields.io/packagist/dt/yii2-extensions/app-basic.svg?style=for-the-badge&logo=packagist&logoColor=white&label=Downloads)](https://packagist.org/packages/yii2-extensions/app-basic)
-
-**Quick start**
-
 ```bash
 composer create-project --prefer-dist yii2-extensions/app-basic app-basic:^0.1
 cd app-basic
 ```
 
-**Start development server**
+### Quick start
+
+Start development server
 
 ```bash
 # Using built-in PHP server
@@ -87,6 +89,8 @@ php -S localhost:8080 -t web
 # Or using Yii console command
 ./yii serve
 ```
+
+> Your application will be available at `http://localhost:8080` or at the address set in `--address` option.
 
 ### Basic usage
 
