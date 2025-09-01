@@ -85,8 +85,6 @@ Start the server in daemon mode
 
 > Your application will be available at `http://127.0.0.1:8080` or at the address set in the `rr.yaml` file.
 
-### Basic usage
-
 #### Directory structure
 
 ```text
