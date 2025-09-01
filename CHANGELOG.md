@@ -12,6 +12,7 @@
 - Bug #154:  Update links and headings in `README.md` for clarity and consistency (@terabytesoftw)
 - Bug #156: Update `README.md` with new Packagist badges and improve structure (@terabytesoftw)
 - Bug #159: Remove redundant `Basic usage` section from `README.md` (@terabytesoftw)
+- Bug #162: Update `README.md` to reorganize `Package information` and add latest stable version badge (@terabytesoftw)
 
 ## 0.1.0 August 31, 2025
 
