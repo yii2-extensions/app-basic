@@ -71,7 +71,7 @@ The Yii2 Web Application Basic template provides a complete foundation for build
 ### Installation
 
 ```bash
-composer create-project --prefer-dist yii2-extensions/app-basic app-basic:^0.1
+composer create-project --prefer-dist yii2-extensions/app-basic:^0.1 app-basic
 cd app-basic
 ```
 
