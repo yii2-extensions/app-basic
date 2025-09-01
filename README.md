@@ -45,8 +45,6 @@ A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-a
 - ✅ **Modern Bootstrap 5 UI** - Responsive, mobile-first design with latest Bootstrap components.
 - ✅ **Testing Ready** - Codeception test suite with examples for functional and unit testing.
 
-## Quick start
-
 ### How it works
 
 The Yii2 Web Application Basic template provides a complete foundation for building modern web applications. Unlike starting 
@@ -73,7 +71,7 @@ composer create-project --prefer-dist yii2-extensions/app-basic:dev-franken-php 
 cd app-basic
 ```
 
-**Quick start**
+### Quick start
 
 Download static cli in Linux/WSL2
 

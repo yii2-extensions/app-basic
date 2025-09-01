@@ -8,6 +8,7 @@
 - Bug #149: Update PHPStan annotations and add container configuration file (@terabytesoftw)
 - Bug #150: Add container configuration to `console` app setup (@terabytesoftw)
 - Enh #151: Implement `FrankenPHP` stack (@terabytesoftw)
+- Bug #152: Remove redundant `Quick start` section header from `README.md` (@terabytesoftw)
 
 ## 0.1.0 August 31, 2025
 
