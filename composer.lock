@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0996a11f110d6276cc71a81ee2b1111b",
+    "content-hash": "e173417bd460c38529cb2a7544bb833f",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -698,151 +698,6 @@
             "time": "2024-05-06T16:37:16+00:00"
         },
         {
-            "name": "doctrine/lexer",
-            "version": "3.1.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/lexer.git",
-                "reference": "042e47e28c5e03f1cf6772fdf3dd4e0785433e05"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/042e47e28c5e03f1cf6772fdf3dd4e0785433e05",
-                "reference": "042e47e28c5e03f1cf6772fdf3dd4e0785433e05",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.1"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^12",
-                "phpstan/phpstan": "^1.10",
-                "phpunit/phpunit": "^10.5",
-                "psalm/plugin-phpunit": "^0.18.3",
-                "vimeo/psalm": "^5.21"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Common\\Lexer\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                }
-            ],
-            "description": "PHP Doctrine Lexer parser library that can be used in Top-Down, Recursive Descent Parsers.",
-            "homepage": "https://www.doctrine-project.org/projects/lexer.html",
-            "keywords": [
-                "annotations",
-                "docblock",
-                "lexer",
-                "parser",
-                "php"
-            ],
-            "support": {
-                "issues": "https://github.com/doctrine/lexer/issues",
-                "source": "https://github.com/doctrine/lexer/tree/3.1.x"
-            },
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Flexer",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2024-07-29T08:29:21+00:00"
-        },
-        {
-            "name": "egulias/email-validator",
-            "version": "4.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "d42c8731f0624ad6bdc8d3e5e9a4524f68801cfa"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/d42c8731f0624ad6bdc8d3e5e9a4524f68801cfa",
-                "reference": "d42c8731f0624ad6bdc8d3e5e9a4524f68801cfa",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/lexer": "^2.0 || ^3.0",
-                "php": ">=8.1",
-                "symfony/polyfill-intl-idn": "^1.26"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^10.2",
-                "vimeo/psalm": "^5.12"
-            },
-            "suggest": {
-                "ext-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Egulias\\EmailValidator\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Eduardo Gulias Davis"
-                }
-            ],
-            "description": "A library for validating emails against several RFCs",
-            "homepage": "https://github.com/egulias/EmailValidator",
-            "keywords": [
-                "email",
-                "emailvalidation",
-                "emailvalidator",
-                "validation",
-                "validator"
-            ],
-            "support": {
-                "issues": "https://github.com/egulias/EmailValidator/issues",
-                "source": "https://github.com/egulias/EmailValidator/tree/4.0.4"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/egulias",
-                    "type": "github"
-                }
-            ],
-            "time": "2025-03-06T22:45:56+00:00"
-        },
-        {
             "name": "enshrined/svg-sanitize",
             "version": "0.18.0",
             "source": {
@@ -1386,21 +1241,25 @@
         },
         {
             "name": "psr/event-dispatcher",
-            "version": "1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/event-dispatcher.git",
-                "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0"
+                "reference": "bbd9eacc080d33861e5b5c75b3b8c4d7e6d01874"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/event-dispatcher/zipball/dbefd12671e8a14ec7f180cab83036ed26714bb0",
-                "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0",
+                "url": "https://api.github.com/repos/php-fig/event-dispatcher/zipball/bbd9eacc080d33861e5b5c75b3b8c4d7e6d01874",
+                "reference": "bbd9eacc080d33861e5b5c75b3b8c4d7e6d01874",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2.0"
             },
+            "suggest": {
+                "fig/event-dispatcher-util": "Provides some useful PSR-14 utilities"
+            },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1419,7 +1278,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Standard interfaces for event handling.",
@@ -1429,10 +1288,9 @@
                 "psr-14"
             ],
             "support": {
-                "issues": "https://github.com/php-fig/event-dispatcher/issues",
-                "source": "https://github.com/php-fig/event-dispatcher/tree/1.0.0"
+                "source": "https://github.com/php-fig/event-dispatcher"
             },
-            "time": "2019-01-08T18:20:26+00:00"
+            "time": "2024-03-17T21:29:03+00:00"
         },
         {
             "name": "psr/http-factory",
@@ -2974,171 +2832,6 @@
             "time": "2024-09-25T14:21:43+00:00"
         },
         {
-            "name": "symfony/event-dispatcher",
-            "version": "7.4.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "c511634ea987e9f96eafe4270a3c5e7cf6f2f747"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/c511634ea987e9f96eafe4270a3c5e7cf6f2f747",
-                "reference": "c511634ea987e9f96eafe4270a3c5e7cf6f2f747",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.2",
-                "symfony/event-dispatcher-contracts": "^2.5|^3"
-            },
-            "conflict": {
-                "symfony/dependency-injection": "<6.4",
-                "symfony/service-contracts": "<2.5"
-            },
-            "provide": {
-                "psr/event-dispatcher-implementation": "1.0",
-                "symfony/event-dispatcher-implementation": "2.0|3.0"
-            },
-            "require-dev": {
-                "psr/log": "^1|^2|^3",
-                "symfony/config": "^6.4|^7.0|^8.0",
-                "symfony/dependency-injection": "^6.4|^7.0|^8.0",
-                "symfony/error-handler": "^6.4|^7.0|^8.0",
-                "symfony/expression-language": "^6.4|^7.0|^8.0",
-                "symfony/http-foundation": "^6.4|^7.0|^8.0",
-                "symfony/service-contracts": "^2.5|^3",
-                "symfony/stopwatch": "^6.4|^7.0|^8.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\EventDispatcher\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Provides tools that allow your application components to communicate with each other by dispatching events and listening to them",
-            "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/event-dispatcher/tree/7.4"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/nicolas-grekas",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2025-08-13T13:43:36+00:00"
-        },
-        {
-            "name": "symfony/event-dispatcher-contracts",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/event-dispatcher-contracts.git",
-                "reference": "59eb412e93815df44f05f342958efa9f46b1e586"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/59eb412e93815df44f05f342958efa9f46b1e586",
-                "reference": "59eb412e93815df44f05f342958efa9f46b1e586",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.1",
-                "psr/event-dispatcher": "^1"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "thanks": {
-                    "url": "https://github.com/symfony/contracts",
-                    "name": "symfony/contracts"
-                },
-                "branch-alias": {
-                    "dev-main": "3.6-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Contracts\\EventDispatcher\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Generic abstractions related to dispatching event",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "abstractions",
-                "contracts",
-                "decoupling",
-                "interfaces",
-                "interoperability",
-                "standards"
-            ],
-            "support": {
-                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.6.0"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/nicolas-grekas",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2024-09-25T14:21:43+00:00"
-        },
-        {
             "name": "symfony/filesystem",
             "version": "8.0.x-dev",
             "source": {
@@ -3460,180 +3153,6 @@
             "time": "2025-04-29T11:18:49+00:00"
         },
         {
-            "name": "symfony/mailer",
-            "version": "7.4.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/mailer.git",
-                "reference": "0b0692fe8062ad7dede1919ebe3359d5e9b3b810"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mailer/zipball/0b0692fe8062ad7dede1919ebe3359d5e9b3b810",
-                "reference": "0b0692fe8062ad7dede1919ebe3359d5e9b3b810",
-                "shasum": ""
-            },
-            "require": {
-                "egulias/email-validator": "^2.1.10|^3|^4",
-                "php": ">=8.2",
-                "psr/event-dispatcher": "^1",
-                "psr/log": "^1|^2|^3",
-                "symfony/event-dispatcher": "^6.4|^7.0|^8.0",
-                "symfony/mime": "^7.2|^8.0",
-                "symfony/service-contracts": "^2.5|^3"
-            },
-            "conflict": {
-                "symfony/http-client-contracts": "<2.5",
-                "symfony/http-kernel": "<6.4",
-                "symfony/messenger": "<6.4",
-                "symfony/mime": "<6.4",
-                "symfony/polyfill-php83": "<1.30",
-                "symfony/twig-bridge": "<6.4"
-            },
-            "require-dev": {
-                "symfony/console": "^6.4|^7.0|^8.0",
-                "symfony/http-client": "^6.4|^7.0|^8.0",
-                "symfony/messenger": "^6.4|^7.0|^8.0",
-                "symfony/twig-bridge": "^6.4|^7.0|^8.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Mailer\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Helps sending emails",
-            "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/mailer/tree/7.4"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/nicolas-grekas",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2025-08-20T10:31:41+00:00"
-        },
-        {
-            "name": "symfony/mime",
-            "version": "7.4.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/mime.git",
-                "reference": "6e6ccd6a15abbd32a060992b376ea39d9bc8f987"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mime/zipball/6e6ccd6a15abbd32a060992b376ea39d9bc8f987",
-                "reference": "6e6ccd6a15abbd32a060992b376ea39d9bc8f987",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.2",
-                "symfony/deprecation-contracts": "^2.5|^3",
-                "symfony/polyfill-intl-idn": "^1.10",
-                "symfony/polyfill-mbstring": "^1.0"
-            },
-            "conflict": {
-                "egulias/email-validator": "~3.0.0",
-                "phpdocumentor/reflection-docblock": "<3.2.2",
-                "phpdocumentor/type-resolver": "<1.4.0",
-                "symfony/mailer": "<6.4",
-                "symfony/serializer": "<6.4.3|>7.0,<7.0.3"
-            },
-            "require-dev": {
-                "egulias/email-validator": "^2.1.10|^3.1|^4",
-                "league/html-to-markdown": "^5.0",
-                "phpdocumentor/reflection-docblock": "^3.0|^4.0|^5.0",
-                "symfony/dependency-injection": "^6.4|^7.0|^8.0",
-                "symfony/process": "^6.4|^7.0|^8.0",
-                "symfony/property-access": "^6.4|^7.0|^8.0",
-                "symfony/property-info": "^6.4|^7.0|^8.0",
-                "symfony/serializer": "^6.4.3|^7.0.3|^8.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Mime\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Allows manipulating MIME messages",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "mime",
-                "mime-type"
-            ],
-            "support": {
-                "source": "https://github.com/symfony/mime/tree/7.4"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/nicolas-grekas",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2025-08-14T14:54:10+00:00"
-        },
-        {
             "name": "symfony/polyfill-ctype",
             "version": "1.x-dev",
             "source": {
@@ -3884,94 +3403,6 @@
                 }
             ],
             "time": "2025-06-27T09:58:17+00:00"
-        },
-        {
-            "name": "symfony/polyfill-intl-idn",
-            "version": "1.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-intl-idn.git",
-                "reference": "9614ac4d8061dc257ecc64cba1b140873dce8ad3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/9614ac4d8061dc257ecc64cba1b140873dce8ad3",
-                "reference": "9614ac4d8061dc257ecc64cba1b140873dce8ad3",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2",
-                "symfony/polyfill-intl-normalizer": "^1.10"
-            },
-            "suggest": {
-                "ext-intl": "For best performance"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "thanks": {
-                    "url": "https://github.com/symfony/polyfill",
-                    "name": "symfony/polyfill"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ],
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Laurent Bassin",
-                    "email": "laurent@bassin.info"
-                },
-                {
-                    "name": "Trevor Rowbotham",
-                    "email": "trevor.rowbotham@pm.me"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill for intl's idn_to_ascii and idn_to_utf8 functions",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "idn",
-                "intl",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "support": {
-                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.33.0"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/nicolas-grekas",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2024-09-10T14:38:51+00:00"
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
@@ -5467,12 +4898,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii2-extensions/psr-bridge.git",
-                "reference": "5a95f3576b520c6cd66d22f640aab8a6054926d4"
+                "reference": "5c708abc7e836128554c94ea6c77bc5c487dae09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2-extensions/psr-bridge/zipball/5a95f3576b520c6cd66d22f640aab8a6054926d4",
-                "reference": "5a95f3576b520c6cd66d22f640aab8a6054926d4",
+                "url": "https://api.github.com/repos/yii2-extensions/psr-bridge/zipball/5c708abc7e836128554c94ea6c77bc5c487dae09",
+                "reference": "5c708abc7e836128554c94ea6c77bc5c487dae09",
                 "shasum": ""
             },
             "require": {
@@ -5534,7 +4965,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-30T12:31:59+00:00"
+            "time": "2025-08-31T22:47:35+00:00"
         },
         {
             "name": "yii2-extensions/road-runner",
@@ -5542,12 +4973,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii2-extensions/road-runner.git",
-                "reference": "f8a0d008ab1e49e46a90451d43201e11d32805b5"
+                "reference": "9422c1f9d0a5c3e18f042eb9cf318805c2d1e219"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2-extensions/road-runner/zipball/f8a0d008ab1e49e46a90451d43201e11d32805b5",
-                "reference": "f8a0d008ab1e49e46a90451d43201e11d32805b5",
+                "url": "https://api.github.com/repos/yii2-extensions/road-runner/zipball/9422c1f9d0a5c3e18f042eb9cf318805c2d1e219",
+                "reference": "9422c1f9d0a5c3e18f042eb9cf318805c2d1e219",
                 "shasum": ""
             },
             "require": {
@@ -5604,7 +5035,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-17T20:39:35+00:00"
+            "time": "2025-08-31T22:24:26+00:00"
         },
         {
             "name": "yiisoft/yii2",
@@ -5887,91 +5318,6 @@
                 }
             ],
             "time": "2025-02-13T20:59:51+00:00"
-        },
-        {
-            "name": "yiisoft/yii2-symfonymailer",
-            "version": "4.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/yiisoft/yii2-symfonymailer.git",
-                "reference": "21f407239c51fc6d50d369e4469d006afa8c9b2c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-symfonymailer/zipball/21f407239c51fc6d50d369e4469d006afa8c9b2c",
-                "reference": "21f407239c51fc6d50d369e4469d006afa8c9b2c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.1",
-                "psr/event-dispatcher": "1.0.0",
-                "symfony/mailer": "^6.4 || ^7.0",
-                "symfony/mime": "^6.4 || ^7.0",
-                "yiisoft/yii2": ">=2.0.4"
-            },
-            "require-dev": {
-                "maglnet/composer-require-checker": "^4.7",
-                "phpunit/phpunit": "^10.5",
-                "roave/infection-static-analysis-plugin": "^1.34",
-                "symplify/easy-coding-standard": "^12.1",
-                "vimeo/psalm": "^5.20"
-            },
-            "suggest": {
-                "yiisoft/yii2-psr-log-source": "Allows routing transport logs to your Yii2 logger"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0.x-dev"
-                },
-                "sort-packages": true
-            },
-            "autoload": {
-                "psr-4": {
-                    "yii\\symfonymailer\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kirill Petrov",
-                    "email": "archibeardrinker@gmail.com"
-                }
-            ],
-            "description": "The SymfonyMailer integration for the Yii framework",
-            "keywords": [
-                "email",
-                "mail",
-                "mailer",
-                "symfony",
-                "symfonymailer",
-                "yii2"
-            ],
-            "support": {
-                "forum": "http://www.yiiframework.com/forum/",
-                "irc": "irc://irc.freenode.net/yii",
-                "issues": "https://github.com/yiisoft/yii2-symfonymailer/issues",
-                "source": "https://github.com/yiisoft/yii2-symfonymailer",
-                "wiki": "http://www.yiiframework.com/wiki/"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/yiisoft",
-                    "type": "github"
-                },
-                {
-                    "url": "https://opencollective.com/yiisoft",
-                    "type": "open_collective"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/yiisoft/yii2-symfonymailer",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2024-01-29T14:13:45+00:00"
         }
     ],
     "packages-dev": [
@@ -7475,12 +6821,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "b3ae3d27beb3625f29c7a01799d3f45506c53745"
+                "reference": "9876b2913e3b9a2ff70e8943c11d703fc4837306"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/b3ae3d27beb3625f29c7a01799d3f45506c53745",
-                "reference": "b3ae3d27beb3625f29c7a01799d3f45506c53745",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/9876b2913e3b9a2ff70e8943c11d703fc4837306",
+                "reference": "9876b2913e3b9a2ff70e8943c11d703fc4837306",
                 "shasum": ""
             },
             "require": {
@@ -7526,7 +6872,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-31T15:28:24+00:00"
+            "time": "2025-09-01T08:36:54+00:00"
         },
         {
             "name": "phpstan/phpstan-strict-rules",
@@ -7583,30 +6929,30 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "7ad0e9bdc72b147600badccd694a2e57ffc9297a"
+                "reference": "96dc0466673e215bf5536301039017f03cd45c6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/7ad0e9bdc72b147600badccd694a2e57ffc9297a",
-                "reference": "7ad0e9bdc72b147600badccd694a2e57ffc9297a",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/96dc0466673e215bf5536301039017f03cd45c6b",
+                "reference": "96dc0466673e215bf5536301039017f03cd45c6b",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
                 "ext-libxml": "*",
                 "ext-xmlwriter": "*",
-                "nikic/php-parser": "^5.4.0",
+                "nikic/php-parser": "^5.6.1",
                 "php": ">=8.3",
                 "phpunit/php-file-iterator": "^6.0",
                 "phpunit/php-text-template": "^5.0",
                 "sebastian/complexity": "^5.0",
-                "sebastian/environment": "^8.0",
+                "sebastian/environment": "^8.0.3",
                 "sebastian/lines-of-code": "^4.0",
                 "sebastian/version": "^6.0",
                 "theseer/tokenizer": "^1.2.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "^12.1"
+                "phpunit/phpunit": "^12.3.7"
             },
             "suggest": {
                 "ext-pcov": "PHP extension that provides line coverage",
@@ -7645,7 +6991,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
                 "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/12.3.4"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/12.3.5"
             },
             "funding": [
                 {
@@ -7665,7 +7011,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-08-29T11:32:44+00:00"
+            "time": "2025-09-01T08:07:42+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -9548,6 +8894,171 @@
                 }
             ],
             "time": "2025-08-21T08:46:20+00:00"
+        },
+        {
+            "name": "symfony/event-dispatcher",
+            "version": "7.4.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/event-dispatcher.git",
+                "reference": "c511634ea987e9f96eafe4270a3c5e7cf6f2f747"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/c511634ea987e9f96eafe4270a3c5e7cf6f2f747",
+                "reference": "c511634ea987e9f96eafe4270a3c5e7cf6f2f747",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "symfony/event-dispatcher-contracts": "^2.5|^3"
+            },
+            "conflict": {
+                "symfony/dependency-injection": "<6.4",
+                "symfony/service-contracts": "<2.5"
+            },
+            "provide": {
+                "psr/event-dispatcher-implementation": "1.0",
+                "symfony/event-dispatcher-implementation": "2.0|3.0"
+            },
+            "require-dev": {
+                "psr/log": "^1|^2|^3",
+                "symfony/config": "^6.4|^7.0|^8.0",
+                "symfony/dependency-injection": "^6.4|^7.0|^8.0",
+                "symfony/error-handler": "^6.4|^7.0|^8.0",
+                "symfony/expression-language": "^6.4|^7.0|^8.0",
+                "symfony/http-foundation": "^6.4|^7.0|^8.0",
+                "symfony/service-contracts": "^2.5|^3",
+                "symfony/stopwatch": "^6.4|^7.0|^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\EventDispatcher\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides tools that allow your application components to communicate with each other by dispatching events and listening to them",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/event-dispatcher/tree/7.4"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2025-08-13T13:43:36+00:00"
+        },
+        {
+            "name": "symfony/event-dispatcher-contracts",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/event-dispatcher-contracts.git",
+                "reference": "59eb412e93815df44f05f342958efa9f46b1e586"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/59eb412e93815df44f05f342958efa9f46b1e586",
+                "reference": "59eb412e93815df44f05f342958efa9f46b1e586",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "psr/event-dispatcher": "^1"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
+                "branch-alias": {
+                    "dev-main": "3.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\EventDispatcher\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Generic abstractions related to dispatching event",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.6.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-09-25T14:21:43+00:00"
         },
         {
             "name": "symfony/var-dumper",
