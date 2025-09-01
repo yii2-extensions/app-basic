@@ -139,7 +139,7 @@ final class SiteController extends Controller
 
 ## Package information
 
-[![Development Status](https://img.shields.io/badge/Dev-road--runner-orange?style=for-the-badge&logo=packagist&logoColor=white)](https://github.com/yii2-extensions/road-runner)
+[![Development Status](https://img.shields.io/badge/Status-Dev-orange.svg?style=for-the-badge&logo=packagist&logoColor=white)](https://github.com/yii2-extensions/road-runner)
 
 ## Quality code
 
