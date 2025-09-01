@@ -69,19 +69,14 @@ The Yii2 Web Application Basic template provides a complete foundation for build
 **Quick start**
 
 ```bash
-composer create-project --prefer-dist yii2-extensions/app-basic app-basic:^0.1
+composer create-project --prefer-dist yii2-extensions/app-basic:dev-franken-php app-basic
 cd app-basic
 ```
 
 **Start development server**
 
-```bash
-# Using built-in PHP server
-php -S localhost:8080 -t web
-
-# Or using Yii console command
-./yii serve
-```
+- Run with cli [FrankenPHP](https://github.com/yii2-extensions/franken-php?tab=readme-ov-file#standalone-binary)
+- Run with docker [FrankenPHP](https://github.com/yii2-extensions/franken-php?tab=readme-ov-file#docker)
 
 ### Basic usage
 
