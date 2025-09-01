@@ -6,6 +6,9 @@
 </p>
 
 <p align="center">
+    <a href="https://github.com/yii2-extensions/franken-php" target="_blank">
+        <img src="https://img.shields.io/badge/Dev-frankenphp-blue?style=for-the-badge&logo=php&logoColor=white" alt="Latest Dev Version">
+    </a>
     <a href="https://www.php.net/releases/8.1/en.php" target="_blank">
         <img src="https://img.shields.io/badge/%3E%3D8.1-777BB4.svg?style=for-the-badge&logo=php&logoColor=white" alt="PHP version">
     </a>
@@ -46,7 +49,8 @@ A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-a
 
 ### How it works
 
-The Yii2 Web Application Basic template provides a complete foundation for building modern web applications. Unlike starting from scratch, this template includes.
+The Yii2 Web Application Basic template provides a complete foundation for building modern web applications. Unlike starting 
+from scratch, this template includes.
 
 1. **Pre-configured structure** with organized directories for assets, views, models, and controllers.
 2. **Bootstrap 5 integration** for responsive, mobile-first user interfaces.
@@ -64,19 +68,60 @@ The Yii2 Web Application Basic template provides a complete foundation for build
 
 ### Installation
 
-[![Latest Dev Version](https://img.shields.io/badge/Dev-frankenphp-blue?style=for-the-badge&logo=php&logoColor=white)](https://github.com/yii2-extensions/franken-php)
-
-**Quick start**
-
 ```bash
 composer create-project --prefer-dist yii2-extensions/app-basic:dev-franken-php app-basic
 cd app-basic
 ```
 
-**Start development server**
+**Quick start**
 
-- Run with cli [FrankenPHP](https://github.com/yii2-extensions/franken-php?tab=readme-ov-file#standalone-binary)
-- Run with docker [FrankenPHP](https://github.com/yii2-extensions/franken-php?tab=readme-ov-file#docker)
+Download static cli in Linux/WSL2.
+
+```bash
+curl https://frankenphp.dev/install.sh | sh
+```
+
+Start the server in CLI mode.
+
+```bash
+./frankenphp run --config ./CaddyfileCli --watch
+```
+
+Download and start the server with [Docker images](https://frankenphp.dev/docs/docker/).
+
+Gitbash/Windows
+```bash
+docker run \
+  -e FRANKENPHP_CONFIG="worker ./web/index.php" \
+  -e SERVER_ROOT=./web \
+  -v "//k/yii2-extensions/app-basic/Caddyfile:/etc/caddy/Caddyfile" \
+  -v "//k/yii2-extensions/app-basic:/app" \
+  -v "//k/yii2-extensions/app-basic/web:/app/web" \
+  -p 80:80 \
+  -p 443:443 \
+  -p 443:443/udp \
+  --name yii2-frankenphp-worker \
+  dunglas/frankenphp
+```
+
+> **Note:** Paths in the example (`//k/yii2-extensions/basic-frankenphp`) are for demonstration purposes only.  
+> Replace them with the actual path to your Yii2 project on your system.
+
+Linux/WSL
+```bash
+docker run \
+  -e FRANKENPHP_CONFIG="worker ./web/index.php" \
+  -v $PWD/Caddyfile:/etc/caddy/Caddyfile \
+  -v $PWD:/app \
+  -v $PWD/web:/app/web \
+  -p 80:80 \
+  -p 443:443 \
+  -p 443:443/udp \
+  --name yii2-frankenphp-worker \
+  dunglas/frankenphp
+```
+
+> Your application will be available at `http://127.0.0.1:8080` (or `http://localhost:8080`) or at the address set in the `Caddyfile`.
 
 ### Basic usage
 
