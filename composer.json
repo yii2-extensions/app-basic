@@ -16,8 +16,7 @@
         "ui-awesome/html-svg":"^0.2",
         "vlucas/phpdotenv": "^5.6",
         "yiisoft/yii2": "^2.0.53|^22",
-        "yiisoft/yii2-bootstrap5": "^2.0.50|^22",
-        "yiisoft/yii2-symfonymailer": "^4.0|^22"
+        "yiisoft/yii2-bootstrap5": "^2.0.50|^22"
     },
     "require-dev": {
         "codeception/c3": "^2.8",
