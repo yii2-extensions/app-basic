@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 use yii\caching\FileCache;
 use yii\log\FileTarget;
-use yii\symfonymailer\Mailer;
 
 return [
     'cache' => [
@@ -23,9 +22,5 @@ return [
                 'logFile' => '@runtime/logs/app.log',
             ],
         ],
-    ],
-    'mailer' => [
-        'class' => Mailer::class,
-        'useFileTransport' => true,
     ],
 ];
