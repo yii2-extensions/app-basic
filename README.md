@@ -75,19 +75,19 @@ cd app-basic
 
 **Quick start**
 
-Download static cli in Linux/WSL2.
+Download static cli in Linux/WSL2
 
 ```bash
 curl https://frankenphp.dev/install.sh | sh
 ```
 
-Start the server in CLI mode.
+Start the server in CLI mode
 
 ```bash
 ./frankenphp run --config ./CaddyfileCli --watch
 ```
 
-Download and start the server with [Docker images](https://frankenphp.dev/docs/docker/).
+Download and start the server with [Docker images](https://frankenphp.dev/docs/docker/)
 
 Gitbash/Windows
 ```bash
