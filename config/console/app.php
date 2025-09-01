@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 use app\usecase\hello\HelloController;
 
-/** @var string[] $components */
+/** @phpstan-var array<string, mixed> $components */
 $components = require dirname(__DIR__) . '/common/components.php';
-/** @var string[] $params */
+/** @phpstan-var array<string, mixed> $params */
 $params = require dirname(__DIR__) . '/params-console.php';
 
 return [
