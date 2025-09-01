@@ -29,7 +29,6 @@ jobs:
       extensions: gd, intl, pcov
       hook: |
         curl https://frankenphp.dev/install.sh | sh
-        mv frankenphp web
         ./frankenphp run --config ./tests/Caddyfile --watch
         sleep 3
       os: '["ubuntu-latest"]'
