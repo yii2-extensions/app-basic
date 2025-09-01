@@ -14,6 +14,7 @@
 - Bug #153: Update `README.md` with correct links and badge for `RoadRunner` (@terabytesoftw)
 - bug #155: Update section header formatting in `README.md` (@terabytesoftw)
 - Bug #156: Update `README.md` with new Packagist badges and improve structure (@terabytesoftw)
+- Bug #159: Remove redundant `Basic usage` section from `README.md` (@terabytesoftw)
 
 ## 0.1.0 August 31, 2025
 
