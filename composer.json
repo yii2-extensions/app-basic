@@ -12,9 +12,11 @@
     "license": "BSD-3-Clause",
     "require": {
         "php": ">=8.1",
+        "httpsoft/http-message": "^1.0",
         "php-forge/foxy": "^0.1",
         "ui-awesome/html-svg":"^0.2",
         "vlucas/phpdotenv": "^5.6",
+        "yii2-extensions/franken-php": "^0.1@dev",
         "yiisoft/yii2": "^2.0.53|^22",
         "yiisoft/yii2-bootstrap5": "^2.0.50|^22"
     },
@@ -35,7 +37,7 @@
         "symfony/process": "^6.3",
         "symplify/easy-coding-standard": "^12.3",
         "yii2-extensions/phpstan": "^0.3.0",
-        "yiisoft/yii2-debug": "^2.1.27|^22",
+        "yii2-extensions/worker-debug": "^0.1",
         "yiisoft/yii2-gii": "^2.2.7|^22"
     },
     "autoload": {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "76ad64624bd202e121b3c69d5b0e24f5",
+    "content-hash": "3de5af63341d48a067dbe737fb7c751a",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -867,6 +867,69 @@
             "time": "2025-03-02T21:31:24+00:00"
         },
         {
+            "name": "httpsoft/http-message",
+            "version": "1.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/httpsoft/http-message.git",
+                "reference": "f6c88e2189b9f75f10dfaeb0a85c56ea04a53c19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/httpsoft/http-message/zipball/f6c88e2189b9f75f10dfaeb0a85c56ea04a53c19",
+                "reference": "f6c88e2189b9f75f10dfaeb0a85c56ea04a53c19",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4|^8.0",
+                "psr/http-factory": "^1.0",
+                "psr/http-message": "^1.1|^2.0"
+            },
+            "provide": {
+                "psr/http-factory-implementation": "1.0",
+                "psr/http-message-implementation": "1.0"
+            },
+            "require-dev": {
+                "php-http/psr7-integration-tests": "^1.3",
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "^3.7",
+                "vimeo/psalm": "^4.9|^5.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "HttpSoft\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Evgeniy Zyubin",
+                    "email": "mail@devanych.ru",
+                    "homepage": "https://devanych.ru/",
+                    "role": "Founder and lead developer"
+                }
+            ],
+            "description": "Strict and fast implementation of PSR-7 and PSR-17",
+            "homepage": "https://httpsoft.org/",
+            "keywords": [
+                "http",
+                "http-message",
+                "php",
+                "psr-17",
+                "psr-7"
+            ],
+            "support": {
+                "docs": "https://httpsoft.org/docs/message",
+                "issues": "https://github.com/httpsoft/http-message/issues",
+                "source": "https://github.com/httpsoft/http-message"
+            },
+            "time": "2024-08-09T07:13:21+00:00"
+        },
+        {
             "name": "justinrainbow/json-schema",
             "version": "dev-master",
             "source": {
@@ -1267,6 +1330,172 @@
                 "source": "https://github.com/php-fig/container"
             },
             "time": "2023-09-22T11:11:30+00:00"
+        },
+        {
+            "name": "psr/http-factory",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-factory.git",
+                "reference": "2b4765fddfe3b508ac62f829e852b1501d3f6e8a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/2b4765fddfe3b508ac62f829e852b1501d3f6e8a",
+                "reference": "2b4765fddfe3b508ac62f829e852b1501d3f6e8a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1",
+                "psr/http-message": "^1.0 || ^2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "PSR-17: Common interfaces for PSR-7 HTTP message factories",
+            "keywords": [
+                "factory",
+                "http",
+                "message",
+                "psr",
+                "psr-17",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/http-factory"
+            },
+            "time": "2024-04-15T12:06:14+00:00"
+        },
+        {
+            "name": "psr/http-message",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "402d35bcb92c70c026d1a6a9883f06b2ead23d71"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/402d35bcb92c70c026d1a6a9883f06b2ead23d71",
+                "reference": "402d35bcb92c70c026d1a6a9883f06b2ead23d71",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/http-message/tree/2.0"
+            },
+            "time": "2023-04-04T09:54:51+00:00"
+        },
+        {
+            "name": "psr/http-server-handler",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-server-handler.git",
+                "reference": "13403d43196ab3382d0a4ca28be32984282641f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-server-handler/zipball/13403d43196ab3382d0a4ca28be32984282641f9",
+                "reference": "13403d43196ab3382d0a4ca28be32984282641f9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0",
+                "psr/http-message": "^1.0 || ^2.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Server\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP server-side request handler",
+            "keywords": [
+                "handler",
+                "http",
+                "http-interop",
+                "psr",
+                "psr-15",
+                "psr-7",
+                "request",
+                "response",
+                "server"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/http-server-handler"
+            },
+            "time": "2023-11-16T18:17:39+00:00"
         },
         {
             "name": "psr/log",
@@ -2775,12 +3004,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "b87a95c24475492ac665704843e341873eea1b28"
+                "reference": "3bd28ceb20216559209766b2ad3154d7d9f3254d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/b87a95c24475492ac665704843e341873eea1b28",
-                "reference": "b87a95c24475492ac665704843e341873eea1b28",
+                "url": "https://api.github.com/repos/symfony/string/zipball/3bd28ceb20216559209766b2ad3154d7d9f3254d",
+                "reference": "3bd28ceb20216559209766b2ad3154d7d9f3254d",
                 "shasum": ""
             },
             "require": {
@@ -2858,7 +3087,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-08-26T09:23:28+00:00"
+            "time": "2025-09-01T09:26:06+00:00"
         },
         {
             "name": "ui-awesome/html-attribute",
@@ -3544,34 +3773,180 @@
             "time": "2023-03-08T08:35:38+00:00"
         },
         {
-            "name": "yiisoft/yii2",
-            "version": "22.0.x-dev",
+            "name": "yii2-extensions/franken-php",
+            "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "1069366405ec1c99605839047900945bc25b2c2d"
+                "url": "https://github.com/yii2-extensions/franken-php.git",
+                "reference": "78e02fc00ee72365aa0cadafda85663dc819a8f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/1069366405ec1c99605839047900945bc25b2c2d",
-                "reference": "1069366405ec1c99605839047900945bc25b2c2d",
+                "url": "https://api.github.com/repos/yii2-extensions/franken-php/zipball/78e02fc00ee72365aa0cadafda85663dc819a8f1",
+                "reference": "78e02fc00ee72365aa0cadafda85663dc819a8f1",
                 "shasum": ""
             },
             "require": {
+                "php": ">=8.1",
+                "yii2-extensions/psr-bridge": "^0.1@dev"
+            },
+            "require-dev": {
+                "httpsoft/http-message": "^1.1",
+                "infection/infection": "^0.27|^0.31",
+                "maglnet/composer-require-checker": "^4.1",
+                "phpstan/extension-installer": "^1.4",
+                "phpstan/phpstan-strict-rules": "^2.0.3",
+                "phpunit/phpunit": "^10.5",
+                "rector/rector": "^2.1",
+                "symplify/easy-coding-standard": "^12.5",
+                "xepozz/internal-mocker": "^1.4",
+                "yii2-extensions/phpstan": "^0.3"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii2\\extensions\\frankenphp\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Yii2 FrankenPHP runtime.",
+            "keywords": [
+                "frankenphp",
+                "runtime",
+                "yii2-extension"
+            ],
+            "support": {
+                "issues": "https://github.com/yii2-extensions/franken-php/issues",
+                "source": "https://github.com/yii2-extensions/franken-php/tree/main"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/terabytesoftw",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-08-31T22:41:17+00:00"
+        },
+        {
+            "name": "yii2-extensions/psr-bridge",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yii2-extensions/psr-bridge.git",
+                "reference": "5c708abc7e836128554c94ea6c77bc5c487dae09"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yii2-extensions/psr-bridge/zipball/5c708abc7e836128554c94ea6c77bc5c487dae09",
+                "reference": "5c708abc7e836128554c94ea6c77bc5c487dae09",
+                "shasum": ""
+            },
+            "require": {
+                "ext-filter": "*",
+                "ext-mbstring": "*",
+                "php": ">=8.1",
+                "psr/http-factory": "^1.1",
+                "psr/http-message": "^2.0",
+                "psr/http-server-handler": "^1.0",
+                "yiisoft/yii2": "^2.0.53|^22"
+            },
+            "require-dev": {
+                "httpsoft/http-message": "^1.1",
+                "infection/infection": "^0.27|^0.31",
+                "maglnet/composer-require-checker": "^4.1",
+                "php-forge/support": "^0.2",
+                "phpstan/extension-installer": "^1.4",
+                "phpstan/phpstan-strict-rules": "^2.0.3",
+                "phpunit/phpunit": "^10.5",
+                "rector/rector": "^2.1",
+                "symplify/easy-coding-standard": "^12.5",
+                "xepozz/internal-mocker": "^1.4",
+                "yii2-extensions/phpstan": "^0.3"
+            },
+            "suggest": {
+                "yii2-extensions/worker-debug": "Provides Yii debug integration for PSR requests"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii2\\extensions\\psrbridge\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "PSR bridge for Yii2",
+            "keywords": [
+                "psr-bridge",
+                "psr-http-factory",
+                "psr-http-message",
+                "psr-http-server-handler",
+                "yii2-extension"
+            ],
+            "support": {
+                "issues": "https://github.com/yii2-extensions/psr-bridge/issues",
+                "source": "https://github.com/yii2-extensions/psr-bridge/tree/main"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/terabytesoftw",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-08-31T22:47:35+00:00"
+        },
+        {
+            "name": "yiisoft/yii2",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-framework.git",
+                "reference": "17a50f86ef8bd33f2de71fd8cb5351dc7811f400"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/17a50f86ef8bd33f2de71fd8cb5351dc7811f400",
+                "reference": "17a50f86ef8bd33f2de71fd8cb5351dc7811f400",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/inputmask": "^5.0.8 ",
+                "bower-asset/jquery": "3.7.*@stable | 3.6.*@stable | 3.5.*@stable | 3.4.*@stable | 3.3.*@stable | 3.2.*@stable | 3.1.*@stable | 2.2.*@stable | 2.1.*@stable | 1.11.*@stable | 1.12.*@stable",
+                "bower-asset/punycode": "^1.4",
+                "bower-asset/yii2-pjax": "~2.0.1",
                 "cebe/markdown": "~1.0.0 | ~1.1.0 | ~1.2.0",
                 "ext-ctype": "*",
                 "ext-mbstring": "*",
                 "ezyang/htmlpurifier": "^4.17",
                 "lib-pcre": "*",
-                "php": ">=8.1",
+                "php": ">=7.3.0",
                 "yiisoft/yii2-composer": "~2.0.4"
             },
+            "default-branch": true,
             "bin": [
                 "yii"
             ],
             "type": "library",
             "extra": {
-                "foxy": true
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
             },
             "autoload": {
                 "psr-4": {
@@ -3656,40 +4031,44 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-08-29T13:44:35+00:00"
+            "time": "2025-08-30T11:02:12+00:00"
         },
         {
             "name": "yiisoft/yii2-bootstrap5",
-            "version": "22.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-bootstrap5.git",
-                "reference": "74623411fccc26ce020436f554b0ba37ec62c3bc"
+                "reference": "bd19a9d413a5778f09ec6f8e2fe8105cd4bf11d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap5/zipball/74623411fccc26ce020436f554b0ba37ec62c3bc",
-                "reference": "74623411fccc26ce020436f554b0ba37ec62c3bc",
+                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap5/zipball/bd19a9d413a5778f09ec6f8e2fe8105cd4bf11d6",
+                "reference": "bd19a9d413a5778f09ec6f8e2fe8105cd4bf11d6",
                 "shasum": ""
             },
             "require": {
+                "bower-asset/bootstrap": "^5.2.3",
                 "ext-json": "*",
-                "php": ">=8.1",
-                "yiisoft/yii2": "22.0.x-dev"
+                "php": ">=7.3",
+                "yiisoft/yii2": "^2.0.42"
             },
             "require-dev": {
-                "php-forge/foxy": "^0.1",
                 "phpunit/phpunit": "^9.6",
                 "symplify/easy-coding-standard": "^12.1",
+                "twbs/bootstrap-icons": "^1.7.2",
                 "yiisoft/yii2-coding-standards": "~2.0"
             },
             "suggest": {
                 "twbs/bootstrap-icons": "Add this package to the `require` section of your `composer.json` if you'd like to use the bootstrap icon asset."
             },
+            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
-                "foxy": true,
-                "bootstrap": "yii\\bootstrap5\\i18n\\TranslationBootstrap"
+                "bootstrap": "yii\\bootstrap5\\i18n\\TranslationBootstrap",
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
             },
             "autoload": {
                 "psr-4": {
@@ -3735,7 +4114,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-05-26T13:20:19+00:00"
+            "time": "2025-04-11T09:27:32+00:00"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -5373,12 +5752,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "b3ae3d27beb3625f29c7a01799d3f45506c53745"
+                "reference": "9876b2913e3b9a2ff70e8943c11d703fc4837306"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/b3ae3d27beb3625f29c7a01799d3f45506c53745",
-                "reference": "b3ae3d27beb3625f29c7a01799d3f45506c53745",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/9876b2913e3b9a2ff70e8943c11d703fc4837306",
+                "reference": "9876b2913e3b9a2ff70e8943c11d703fc4837306",
                 "shasum": ""
             },
             "require": {
@@ -5424,7 +5803,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-31T15:28:24+00:00"
+            "time": "2025-09-01T08:36:54+00:00"
         },
         {
             "name": "phpstan/phpstan-strict-rules",
@@ -5868,12 +6247,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "fb9037c729d0298d9052e92303a8bd4213659116"
+                "reference": "e3bf1e2c6ef85f0f5ddde7eb7a3f26da6f99db81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/fb9037c729d0298d9052e92303a8bd4213659116",
-                "reference": "fb9037c729d0298d9052e92303a8bd4213659116",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/e3bf1e2c6ef85f0f5ddde7eb7a3f26da6f99db81",
+                "reference": "e3bf1e2c6ef85f0f5ddde7eb7a3f26da6f99db81",
                 "shasum": ""
             },
             "require": {
@@ -5887,7 +6266,7 @@
                 "phar-io/manifest": "^2.0.4",
                 "phar-io/version": "^3.2.1",
                 "php": ">=8.3",
-                "phpunit/php-code-coverage": "^12.3.4",
+                "phpunit/php-code-coverage": "^12.3.5",
                 "phpunit/php-file-iterator": "^6.0.0",
                 "phpunit/php-invoker": "^6.0.0",
                 "phpunit/php-text-template": "^5.0.0",
@@ -5966,7 +6345,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-08-29T11:33:58+00:00"
+            "time": "2025-09-01T08:47:08+00:00"
         },
         {
             "name": "psr/event-dispatcher",
@@ -6073,115 +6452,6 @@
                 "source": "https://github.com/php-fig/http-client"
             },
             "time": "2023-09-23T14:17:50+00:00"
-        },
-        {
-            "name": "psr/http-factory",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/http-factory.git",
-                "reference": "2b4765fddfe3b508ac62f829e852b1501d3f6e8a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/2b4765fddfe3b508ac62f829e852b1501d3f6e8a",
-                "reference": "2b4765fddfe3b508ac62f829e852b1501d3f6e8a",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1",
-                "psr/http-message": "^1.0 || ^2.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Http\\Message\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "https://www.php-fig.org/"
-                }
-            ],
-            "description": "PSR-17: Common interfaces for PSR-7 HTTP message factories",
-            "keywords": [
-                "factory",
-                "http",
-                "message",
-                "psr",
-                "psr-17",
-                "psr-7",
-                "request",
-                "response"
-            ],
-            "support": {
-                "source": "https://github.com/php-fig/http-factory"
-            },
-            "time": "2024-04-15T12:06:14+00:00"
-        },
-        {
-            "name": "psr/http-message",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/http-message.git",
-                "reference": "402d35bcb92c70c026d1a6a9883f06b2ead23d71"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message/zipball/402d35bcb92c70c026d1a6a9883f06b2ead23d71",
-                "reference": "402d35bcb92c70c026d1a6a9883f06b2ead23d71",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2 || ^8.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Http\\Message\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "https://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interface for HTTP messages",
-            "homepage": "https://github.com/php-fig/http-message",
-            "keywords": [
-                "http",
-                "http-message",
-                "psr",
-                "psr-7",
-                "request",
-                "response"
-            ],
-            "support": {
-                "source": "https://github.com/php-fig/http-message/tree/2.0"
-            },
-            "time": "2023-04-04T09:54:51+00:00"
         },
         {
             "name": "psy/psysh",
@@ -8221,30 +8491,107 @@
             "time": "2025-08-16T14:57:16+00:00"
         },
         {
-            "name": "yiisoft/yii2-debug",
-            "version": "22.x-dev",
+            "name": "yii2-extensions/worker-debug",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "f743e622db7c06eed0b0b1484d78802a568442d6"
+                "url": "https://github.com/yii2-extensions/worker-debug.git",
+                "reference": "7abd154867016c123abaf6c25d6b0437a988ed22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/f743e622db7c06eed0b0b1484d78802a568442d6",
-                "reference": "f743e622db7c06eed0b0b1484d78802a568442d6",
+                "url": "https://api.github.com/repos/yii2-extensions/worker-debug/zipball/7abd154867016c123abaf6c25d6b0437a988ed22",
+                "reference": "7abd154867016c123abaf6c25d6b0437a988ed22",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "psr/http-factory": "^1.1",
+                "yiisoft/yii2": "^2.0.53|^22",
+                "yiisoft/yii2-debug": "^2.1.27"
+            },
+            "require-dev": {
+                "infection/infection": "^0.27|^0.31",
+                "maglnet/composer-require-checker": "^4.1",
+                "php-forge/support": "^0.1",
+                "phpstan/extension-installer": "^1.4",
+                "phpstan/phpstan-strict-rules": "^2.0.3",
+                "phpunit/phpunit": "^10.5",
+                "rector/rector": "^2.1",
+                "symplify/easy-coding-standard": "^12.5",
+                "xepozz/internal-mocker": "^1.4",
+                "yii2-extensions/phpstan": "^0.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "0.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii2\\extensions\\debug\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Debug toolbar for extension PSR Bridge.",
+            "keywords": [
+                "debug",
+                "psr-bridge",
+                "toolbar",
+                "yii2-extension"
+            ],
+            "support": {
+                "issues": "https://github.com/yii2-extensions/worker-debug/issues",
+                "source": "https://github.com/yii2-extensions/worker-debug/tree/0.1.1"
+            },
+            "time": "2025-08-17T12:29:53+00:00"
+        },
+        {
+            "name": "yiisoft/yii2-debug",
+            "version": "2.1.27",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-debug.git",
+                "reference": "44e158914911ef81cd7111fd6d46b918f65fae7c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/44e158914911ef81cd7111fd6d46b918f65fae7c",
+                "reference": "44e158914911ef81cd7111fd6d46b918f65fae7c",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
-                "php": ">=8.1",
-                "yiisoft/yii2": "22.0.x-dev"
+                "php": ">=5.4",
+                "yiisoft/yii2": "~2.0.13"
             },
             "require-dev": {
-                "phpunit/phpunit": "^9.6",
+                "cweagans/composer-patches": "^1.7",
+                "phpunit/phpunit": "4.8.34",
                 "yiisoft/yii2-coding-standards": "~2.0",
-                "yiisoft/yii2-symfonymailer": "^4.0"
+                "yiisoft/yii2-swiftmailer": "*"
             },
             "type": "yii2-extension",
+            "extra": {
+                "patches": {
+                    "phpunit/phpunit": {
+                        "Fix PHP 7 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_php7.patch",
+                        "Fix PHP 8 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_php8.patch",
+                        "Fix PHP 8.1 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_php81.patch"
+                    },
+                    "phpunit/phpunit-mock-objects": {
+                        "Fix PHP 7 and 8 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_mock_objects.patch"
+                    }
+                },
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                },
+                "composer-exit-on-patch-failure": true
+            },
             "autoload": {
                 "psr-4": {
                     "yii\\debug\\": "src"
@@ -8292,32 +8639,51 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-05-26T13:13:17+00:00"
+            "time": "2025-06-08T13:32:11+00:00"
         },
         {
             "name": "yiisoft/yii2-gii",
-            "version": "22.x-dev",
+            "version": "2.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "1385eca717a64625b76e30c28bdd09a5a4756ac9"
+                "reference": "f17c7ef7ef3081213f612b37ad0ceaa8e8cd3d3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/1385eca717a64625b76e30c28bdd09a5a4756ac9",
-                "reference": "1385eca717a64625b76e30c28bdd09a5a4756ac9",
+                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/f17c7ef7ef3081213f612b37ad0ceaa8e8cd3d3b",
+                "reference": "f17c7ef7ef3081213f612b37ad0ceaa8e8cd3d3b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
                 "phpspec/php-diff": "^1.1.0",
-                "yiisoft/yii2": "22.0.x-dev"
+                "yiisoft/yii2": "~2.0.46"
             },
             "require-dev": {
-                "phpunit/phpunit": "^9.6",
+                "cweagans/composer-patches": "^1.7",
+                "phpunit/phpunit": "4.8.34",
                 "yiisoft/yii2-coding-standards": "~2.0"
             },
             "type": "yii2-extension",
+            "extra": {
+                "patches": {
+                    "phpunit/phpunit": {
+                        "Fix PHP 7 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_php7.patch",
+                        "Fix PHP 8 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_php8.patch",
+                        "Fix PHP 8.1 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_php81.patch"
+                    },
+                    "phpunit/php-file-iterator": {
+                        "Fix PHP 8.1 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_path_file_iterator.patch"
+                    },
+                    "phpunit/phpunit-mock-objects": {
+                        "Fix PHP 7 and 8 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_mock_objects.patch"
+                    }
+                },
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                },
+                "composer-exit-on-patch-failure": true
+            },
             "autoload": {
                 "psr-4": {
                     "yii\\gii\\": "src"
@@ -8361,12 +8727,14 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-05-26T13:16:22+00:00"
+            "time": "2025-02-13T21:21:17+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {},
+    "stability-flags": {
+        "yii2-extensions/franken-php": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

@@ -24,6 +24,11 @@ jobs:
       AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     with:
-      codeception-command: vendor/bin/codecept run --env php-builtin --coverage-xml
-      coverage-file: runtime/output/coverage.xml
+      codeception-command: vendor/bin/codecept run
+      coverage-driver: none
       extensions: gd, intl, pcov
+      hook: |
+        curl https://frankenphp.dev/install.sh | sh
+        ./frankenphp run --config ./CaddyfileCli > /dev/null 2>&1 &
+        sleep 3
+      os: '["ubuntu-latest"]'
