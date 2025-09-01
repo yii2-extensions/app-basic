@@ -37,6 +37,8 @@ A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-a
 - ✅ **Clean Architecture** - Well-organized directory structure following Yii2 best practices.
 - ✅ **Console Commands** - Example console commands for background tasks and maintenance.
 - ✅ **Developer Tools** - Debugging tools, logging, and development-friendly configurations.
+- ✅ **HTTP/2 & HTTP/3 Support**: Native support for modern HTTP protocols with multiplexing.
+- ✅ **HTTPS/TLS Support** - Secure your application with built-in HTTPS support.
 - ✅ **Modern Bootstrap 5 UI** - Responsive, mobile-first design with latest Bootstrap components.
 - ✅ **Testing Ready** - Codeception test suite with examples for functional and unit testing.
 
@@ -62,7 +64,7 @@ The Yii2 Web Application Basic template provides a complete foundation for build
 
 ### Installation
 
-[![Latest Dev Version](https://img.shields.io/badge/Dev-frankenphp-blue?style=for-the-badge&logo=php&logoColor=white)](https://packagist.org/packages/yii2-extensions/app-basic#dev-franken-php)
+[![Latest Dev Version](https://img.shields.io/badge/Dev-frankenphp-blue?style=for-the-badge&logo=php&logoColor=white)](https://github.com/yii2-extensions/franken-php)
 
 **Quick start**
 
