@@ -14,6 +14,8 @@
 - Bug #159: Remove redundant `Basic usage` section from `README.md` (@terabytesoftw)
 - Bug #162: Update `README.md` to reorganize `Package information` and add latest stable version badge (@terabytesoftw)
 - Bug #167: Update section title `Available stacks` and improve badge formatting in `README.md` (@terabytesoftw)
+- Bug #171: Update section title to `Available deployment options`, group stacks by type, and add Apache entry in `README.md` (@terabytesoftw)
+- Bug #172: Update badge label from `PHPUnit` to `Codeception` in `README.md` (@terabytesoftw)
 
 ## 0.1.0 August 31, 2025
 
