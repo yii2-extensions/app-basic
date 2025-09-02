@@ -94,6 +94,7 @@ docker run \
   -e SERVER_ROOT="./web" \
   -v "//k/yii2-extensions/app-basic:/app" \
   -p 8443:8443 \
+  -p 8443:8443/udp \
   --name yii2-frankenphp-worker \
   dunglas/frankenphp
 ```
@@ -110,12 +111,13 @@ docker run \
   -e SERVER_NAME="https://localhost:8443" \
   -e SERVER_ROOT="./web" \
   -v $PWD:/app \
-  -p 8443:8443 \  
+  -p 8443:8443 \
+  -p 8443:8443/udp \  
   --name yii2-frankenphp-worker \
   dunglas/frankenphp
 ```
 
-> Your application will be available at `http://localhost:8443` or at the address set in the `Caddyfile`.
+> Your application will be available at `https://localhost:8443` or at the address set in the `Caddyfile`.
 
 #### Directory structure
 
