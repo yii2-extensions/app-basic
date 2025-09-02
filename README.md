@@ -94,7 +94,6 @@ docker run \
   -e SERVER_ROOT="./web" \
   -v "//k/yii2-extensions/app-basic:/app" \
   -p 8443:8443 \
-  -p 443:443/udp \
   --name yii2-frankenphp-worker \
   dunglas/frankenphp
 ```
@@ -111,9 +110,7 @@ docker run \
   -e SERVER_NAME="https://localhost:8443" \
   -e SERVER_ROOT="./web" \
   -v $PWD:/app \
-  -p 80:80 \
-  -p 443:443 \
-  -p 443:443/udp \
+  -p 8443:8443 \  
   --name yii2-frankenphp-worker \
   dunglas/frankenphp
 ```
