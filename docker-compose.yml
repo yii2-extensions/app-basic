@@ -1,0 +1,30 @@
+services:
+  yii2-apache:
+    build:
+      args:
+        USER_ID: ${USER_ID:-1000}
+        GROUP_ID: ${GROUP_ID:-1000}
+        USER_NAME: ${USER_NAME:-www-data}
+        GROUP_NAME: ${GROUP_NAME:-www-data}
+      context: .
+      dockerfile: docker/apache/Dockerfile
+    container_name: yii2-apache
+    entrypoint: ["/usr/local/bin/entrypoint.sh"]
+    env_file:
+      - .env
+    environment:
+      TZ: "UTC"
+      YII_DEBUG: "${YII_DEBUG:-false}"
+      YII_ENV: "${YII_ENV:-prod}"
+    ports:
+      - '8080:80'
+      - '8443:443'
+    restart: always
+    tty: true
+    volumes:
+      - ./:/app
+      - composer_cache:/var/www/.composer/cache
+    working_dir: /app
+
+volumes:
+  composer_cache:
