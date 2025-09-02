@@ -79,38 +79,38 @@ curl https://frankenphp.dev/install.sh | sh
 Start the server in CLI mode
 
 ```bash
-./frankenphp run --config ./CaddyfileCli --watch
+./frankenphp run --config ./Caddyfile --watch
 ```
-
-> Your application will be available at `http://127.0.0.1:8080` (or `http://localhost:8080`) or at the address set in the `Caddyfile`.
 
 Download and start the server with [Docker images](https://frankenphp.dev/docs/docker/)
 
 Gitbash/Windows
 ```bash
 docker run \
+  -e CADDY_GLOBAL_OPTIONS="auto_https off" \
+  -e CADDY_SERVER_EXTRA_DIRECTIVES="tls /app/web/ssl/localhost.pem /app/web/ssl/localhost-key.pem" \
   -e FRANKENPHP_CONFIG="worker ./web/index.php" \
-  -e SERVER_ROOT=./web \
-  -v "//k/yii2-extensions/app-basic/Caddyfile:/etc/caddy/Caddyfile" \
+  -e SERVER_NAME="https://localhost:8443" \
+  -e SERVER_ROOT="./web" \
   -v "//k/yii2-extensions/app-basic:/app" \
-  -v "//k/yii2-extensions/app-basic/web:/app/web" \
-  -p 80:80 \
-  -p 443:443 \
+  -p 8443:8443 \
   -p 443:443/udp \
   --name yii2-frankenphp-worker \
   dunglas/frankenphp
 ```
 
-> **Note:** Paths in the example (`//k/yii2-extensions/basic-frankenphp`) are for demonstration purposes only.  
+> **Note:** Paths in the example (`//k/yii2-extensions/app-basic`) are for demonstration purposes only.  
 > Replace them with the actual path to your Yii2 project on your system.
 
 Linux/WSL
 ```bash
 docker run \
+  -e CADDY_GLOBAL_OPTIONS="auto_https off" \
+  -e CADDY_SERVER_EXTRA_DIRECTIVES="tls /app/web/ssl/localhost.pem /app/web/ssl/localhost-key.pem" \
   -e FRANKENPHP_CONFIG="worker ./web/index.php" \
-  -v $PWD/Caddyfile:/etc/caddy/Caddyfile \
+  -e SERVER_NAME="https://localhost:8443" \
+  -e SERVER_ROOT="./web" \
   -v $PWD:/app \
-  -v $PWD/web:/app/web \
   -p 80:80 \
   -p 443:443 \
   -p 443:443/udp \
@@ -118,7 +118,7 @@ docker run \
   dunglas/frankenphp
 ```
 
-> Your application will be available at `http://127.0.0.1` (or `http://localhost`) or at the address set in the `Caddyfile`.
+> Your application will be available at `http://localhost:8443` or at the address set in the `Caddyfile`.
 
 #### Directory structure
 
