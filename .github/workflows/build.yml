@@ -29,6 +29,6 @@ jobs:
       extensions: gd, intl, pcov
       hook: |
         curl https://frankenphp.dev/install.sh | sh
-        ./frankenphp run --config ./CaddyfileCli > /dev/null 2>&1 &
+        ./frankenphp run --config ./Caddyfile > /dev/null 2>&1 &
         sleep 3
       os: '["ubuntu-latest"]'

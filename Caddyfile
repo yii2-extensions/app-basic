@@ -1,18 +1,21 @@
 {
     auto_https off
     admin localhost:2019
+    https_port 8443
 
     frankenphp {
-        worker ./index.php
+        worker ./web/index.php
     }
 }
 
 localhost {
+    tls ./web/ssl/localhost.pem ./web/ssl/localhost-key.pem
+
     log
 
     encode zstd br gzip
 
-    root {$SERVER_ROOT:public/}
+    root ./web
 
     request_header X-Sendfile-Type x-accel-redirect
     request_header X-Accel-Mapping ../private-files=/private-files
