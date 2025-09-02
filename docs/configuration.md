@@ -202,12 +202,12 @@ $config = [
     'debug' => [
         'class' => yii\debug\Module::class,
         // uncomment the following to add your IP if you aren't connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
+        'allowedIPs' => ['*'], // allow all IPs for development purposes only, do not use in production
     ],
     'gii' => [
         'class' => yii\gii\Module::class,
         // uncomment the following to add your IP if you aren't connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
+        'allowedIPs' => ['*'], // allow all IPs for development purposes only, do not use in production
     ],
 ];
 
