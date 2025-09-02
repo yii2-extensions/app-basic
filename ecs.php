@@ -48,6 +48,7 @@ return Symplify\EasyCodingStandard\Config\ECSConfig::configure()
     ->withFileExtensions(['php'])
     ->withPaths(
         [
+            __DIR__ . '/config',
             __DIR__ . '/src',
             __DIR__ . '/tests',
         ],
