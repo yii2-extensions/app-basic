@@ -9,12 +9,12 @@ $config = [
     'debug' => [
         'class' => WorkerDebugModule::class,
         // uncomment the following to add your IP if you aren't connecting from localhost.
-        'allowedIPs' => ['*'],
+        'allowedIPs' => ['*'], // allow all IPs for development purposes only, do not use in production
     ],
     'gii' => [
         'class' => Module::class,
         // uncomment the following to add your IP if you aren't connecting from localhost.
-        'allowedIPs' => ['*'],
+        'allowedIPs' => ['*'], // allow all IPs for development purposes only, do not use in production
     ],
 ];
 

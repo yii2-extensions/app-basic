@@ -15,11 +15,11 @@
     <a href="https://github.com/yiisoft/yii2/tree/22.0" target="_blank">
         <img src="https://img.shields.io/badge/22.0.x-0073AA.svg?style=for-the-badge&logo=yii&logoColor=white" alt="Yii 22.0.x">
     </a>
-    <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/build.yml" target="_blank">
-        <img src="https://img.shields.io/github/actions/workflow/status/yii2-extensions/app-basic/build.yml?branch=main&style=for-the-badge&label=PHPUnit" alt="PHPUnit">
+    <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/build.yml?query=branch%3Afranken-php" target="_blank">
+        <img src="https://img.shields.io/github/actions/workflow/status/yii2-extensions/app-basic/build.yml?branch=franken-php&style=for-the-badge&label=Codeception" alt="Codeception">
     </a>
-    <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml" target="_blank">
-        <img src="https://img.shields.io/github/actions/workflow/status/yii2-extensions/app-basic/static.yml?branch=main&style=for-the-badge&label=PHPStan" alt="PHPStan">
+    <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml?query=branch%3Afranken-php" target="_blank">
+        <img src="https://img.shields.io/github/actions/workflow/status/yii2-extensions/app-basic/static.yml?branch=franken-php&style=for-the-badge&label=PHPStan" alt="PHPStan">
     </a>
 </p>
 
@@ -176,7 +176,7 @@ final class SiteController extends Controller
 
 ## Package information
 
-[![Development Status](https://img.shields.io/badge/Dev-frankenphp-blue?style=for-the-badge&logo=php&logoColor=white)](https://github.com/yii2-extensions/franken-php)
+[![Development Status](https://img.shields.io/badge/Status-Dev-orange.svg?style=for-the-badge&logo=packagist&logoColor=white)](https://github.com/yii2-extensions/franken-php)
 
 ## Quality code
 
