@@ -1,14 +1,19 @@
 on:
   pull_request:
-    paths:
-      - 'docker/**'
-      - 'docker-compose*.yml'
-      - '.github/workflows/docker.yml'
+    paths-ignore:
+      - 'docs/**'
+      - 'README.md'
+      - 'CHANGELOG.md'
+      - '.gitignore'
+      - '.gitattributes'
+
   push:
-    paths:
-      - 'docker/**'
-      - 'docker-compose*.yml'
-      - '.github/workflows/docker.yml'
+    paths-ignore:
+      - 'docs/**'
+      - 'README.md'
+      - 'CHANGELOG.md'
+      - '.gitignore'
+      - '.gitattributes'
 
 name: build
 
