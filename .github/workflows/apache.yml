@@ -1,0 +1,42 @@
+on:
+  pull_request:
+    paths:
+      - 'docker/**'
+      - 'docker-compose*.yml'
+      - '.github/workflows/docker.yml'
+  push:
+    paths:
+      - 'docker/**'
+      - 'docker-compose*.yml'
+      - '.github/workflows/docker.yml'
+
+name: apache
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout.
+        uses: actions/checkout@v5
+
+      - name: Install docker compose.
+        run: |
+          sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+          sudo chmod +x /usr/local/bin/docker-compose
+          docker-compose --version
+
+      - name: Build and start containers.
+        run: docker-compose up -d --build
+
+      - name: Wait for container to be ready.
+        run: |
+          echo "Waiting 30 seconds for container initialization..."
+          sleep 30
+          docker logs yii2-apache
+
+      - name: Codeceptcion build.
+        run: docker exec yii2-apache vendor/bin/codecept build
+
+      - name: Run codeception tests.
+        run: docker exec yii2-apache vendor/bin/codecept run

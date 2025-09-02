@@ -7,5 +7,5 @@ actor: AcceptanceTester
 modules:
     enabled:
         - PhpBrowser:
-            url: localhost:8080
+            url: https://localhost:8443/
 step_decorators: ~
