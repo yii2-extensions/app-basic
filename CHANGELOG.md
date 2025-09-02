@@ -17,6 +17,7 @@
 - Bug #159: Remove redundant `Basic usage` section from `README.md` (@terabytesoftw)
 - Bug #162: Update `README.md` to reorganize `Package information` and add latest stable version badge (@terabytesoftw)
 - Bug #165: Update badge links in `README.md` to point to the correct branch (@terabytesoftw)
+- Bug #167: Update section title `Available stacks` and improve badge formatting in `README.md` (@terabytesoftw)
 
 ## 0.1.0 August 31, 2025
 
