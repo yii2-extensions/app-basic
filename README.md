@@ -112,7 +112,7 @@ docker run \
   -e SERVER_ROOT="./web" \
   -v $PWD:/app \
   -p 8443:8443 \
-  -p 8443:8443/udp \  
+  -p 8443:8443/udp \
   --name yii2-frankenphp-worker \
   dunglas/frankenphp
 ```
