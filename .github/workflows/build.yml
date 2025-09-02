@@ -10,10 +10,10 @@ on:
       - 'docker-compose*.yml'
       - '.github/workflows/docker.yml'
 
-name: apache
+name: build
 
 jobs:
-  docker:
+  apache:
     runs-on: ubuntu-latest
 
     steps:
