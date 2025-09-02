@@ -201,13 +201,15 @@ declare(strict_types=1);
 $config = [
     'debug' => [
         'class' => yii\debug\Module::class,
-        // uncomment the following to add your IP if you aren't connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
+        // development only: allows all IPs. 
+        // for production, replace '*' with explicit trusted IPs (for example, ['127.0.0.1', '::1']).
+        'allowedIPs' => ['*'],
     ],
     'gii' => [
         'class' => yii\gii\Module::class,
-        // uncomment the following to add your IP if you aren't connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
+        // development only: allows all IPs. 
+        // for production, replace '*' with explicit trusted IPs (for example, ['127.0.0.1', '::1']).
+        'allowedIPs' => ['*'],
     ],
 ];
 
