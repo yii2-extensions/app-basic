@@ -40,23 +40,6 @@ A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-a
 - ✅ **Modern Bootstrap 5 UI** - Responsive, mobile-first design with latest Bootstrap components.
 - ✅ **Testing Ready** - Codeception test suite with examples for functional and unit testing.
 
-## Available deployment options
-
-### Traditional Web Servers
-
-Classic request-per-process model; simple, widely supported (for example, Apache).
-
-[![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white)](https://github.com/yii2-extensions/app-basic/tree/apache)
-
-### High-Performance Worker Mode
-
-Long-running PHP workers for higher throughput and lower latency.
-
-[![FrankenPHP](https://img.shields.io/badge/FrankenPHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://github.com/yii2-extensions/app-basic/tree/franken-php)
-[![RoadRunner](https://img.shields.io/badge/RoadRunner-%23FF6B35.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMjIgMTJMMTIgMjJMMiAxMkwxMiAyWiIgZmlsbD0iI0ZGRkZGRiIvPgo8cGF0aCBkPSJNOCAyTDE2IDEwTDggMThaIiBmaWxsPSIjRkY2QjM1Ii8+CjxwYXRoIGQ9Ik0xNiA2TDIwIDEwTDE2IDE0WiIgZmlsbD0iI0ZGNkIzNSIvPgo8L3N2Zz4K&logoColor=white)](https://github.com/yii2-extensions/app-basic/tree/road-runner)
-
-> For setup instructions, see `README.md` in each branch.
-
 ## How it works
 
 The Yii2 Web Application Basic template provides a complete foundation for building modern web applications. Unlike starting from scratch, this template includes.
@@ -78,23 +61,19 @@ The Yii2 Web Application Basic template provides a complete foundation for build
 ### Installation
 
 ```bash
-composer create-project --prefer-dist yii2-extensions/app-basic:^0.1 app-basic
+composer create-project --prefer-dist yii2-extensions/app-basic:dev-apache app-basic
 cd app-basic
 ```
 
 ### Quick start
 
-Start development server
+Start Apache
 
 ```bash
-# Using built-in PHP server
-php -S localhost:8080 -t web
-
-# Or using Yii console command
-./yii serve
+docker-compose up -d
 ```
 
-> Your application will be available at `http://localhost:8080` or at the address set in `--address` option.
+> Your application will be available at `https://localhost:8443`.
 
 #### Directory structure
 
@@ -153,9 +132,7 @@ final class SiteController extends Controller
 
 ## Package information
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/yii2-extensions/app-basic.svg?style=for-the-badge&logo=packagist&logoColor=white&label=Stable)](https://packagist.org/packages/yii2-extensions/app-basic)
-[![Total Downloads](https://img.shields.io/packagist/dt/yii2-extensions/app-basic.svg?style=for-the-badge&logo=packagist&logoColor=white&label=Downloads)](https://packagist.org/packages/yii2-extensions/app-basic)
-
+[![Development Status](https://img.shields.io/badge/Status-Dev-orange.svg?style=for-the-badge&logo=packagist&logoColor=white)](https://github.com/yii2-extensions/app-basic/tree/apache)
 
 ## Quality code
 
