@@ -198,16 +198,21 @@ Modules configuration in `config/web/modules.php`.
 
 declare(strict_types=1);
 
+use yii\gii\Module;
+use yii2\extensions\debug\WorkerDebugModule;
+
 $config = [
     'debug' => [
-        'class' => yii\debug\Module::class,
-        // uncomment the following to add your IP if you aren't connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
+        'class' => WorkerDebugModule::class,
+        // development only: allows all IPs.
+        // for production, replace '*' with explicit trusted IPs (for example, ['127.0.0.1', '::1']).
+        'allowedIPs' => ['*'],
     ],
     'gii' => [
-        'class' => yii\gii\Module::class,
-        // uncomment the following to add your IP if you aren't connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
+        'class' => Module::class,
+        // development only: allows all IPs.
+        // for production, replace '*' with explicit trusted IPs (for example, ['127.0.0.1', '::1']).
+        'allowedIPs' => ['*'],
     ],
 ];
 
