@@ -40,12 +40,22 @@ A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-a
 - ✅ **Modern Bootstrap 5 UI** - Responsive, mobile-first design with latest Bootstrap components.
 - ✅ **Testing Ready** - Codeception test suite with examples for functional and unit testing.
 
-## Available worker mode stacks
+## Available deployment options
+
+### Traditional Web Servers
+
+Classic request-per-process model; simple, widely supported (for example, Apache).
+
+[![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white)](https://github.com/yii2-extensions/app-basic/tree/apache)
+
+### High-Performance Worker Mode
+
+Long-running PHP workers for higher throughput and lower latency.
 
 [![FrankenPHP](https://img.shields.io/badge/FrankenPHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://github.com/yii2-extensions/app-basic/tree/franken-php)
-[![RoadRunner](https://img.shields.io/badge/RoadRunner-%23FF6B35.svg?style=for-the-badge&logo=rocket&logoColor=white)](https://github.com/yii2-extensions/app-basic/tree/road-runner)
+[![RoadRunner](https://img.shields.io/badge/RoadRunner-%23FF6B35.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMjIgMTJMMTIgMjJMMiAxMkwxMiAyWiIgZmlsbD0iI0ZGRkZGRiIvPgo8cGF0aCBkPSJNOCAyTDE2IDEwTDggMThaIiBmaWxsPSIjRkY2QjM1Ii8+CjxwYXRoIGQ9Ik0xNiA2TDIwIDEwTDE2IDE0WiIgZmlsbD0iI0ZGNkIzNSIvPgo8L3N2Zz4K&logoColor=white)](https://github.com/yii2-extensions/app-basic/tree/road-runner)
 
-For setup instructions, see README in each branch.
+> For setup instructions, see `README.md` in each branch.
 
 ## How it works
 
