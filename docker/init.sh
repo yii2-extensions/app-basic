@@ -62,6 +62,10 @@ if [ -f "/app/composer.json" ] && [ ! -d "/app/vendor" ]; then
     mkdir -p /var/www/.npm
     chown -R www-data:www-data /var/www/.npm
 
+    # Create and own Composer home & cache for www-data
+    mkdir -p /var/www/.composer/cache
+    chown -R www-data:www-data /var/www/.composer
+
     # Install dependencies with proper environment variables
     if [ "$YII_ENV" = "prod" ]; then
         # Production: exclude dev dependencies and optimize autoloader

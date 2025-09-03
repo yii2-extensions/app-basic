@@ -16,6 +16,12 @@ services:
       TZ: "UTC"
       YII_DEBUG: "${YII_DEBUG:-false}"
       YII_ENV: "${YII_ENV:-prod}"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -ksf https://localhost >/dev/null || exit 1"]
+      interval: 5s
+      timeout: 2s
+      retries: 60
+      start_period: 10s
     ports:
       - '8080:80'
       - '8443:443'
