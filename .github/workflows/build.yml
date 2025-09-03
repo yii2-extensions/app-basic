@@ -25,7 +25,7 @@ jobs:
       - name: Checkout.
         uses: actions/checkout@v5
 
-      - name: Show docker version.
+      - name: Docker version.
         run: |
           docker version
           docker compose version
@@ -42,8 +42,8 @@ jobs:
           done
           echo "Service not ready"; docker logs yii2-nginx; exit 1
 
-      - name: Codeceptcion build.
+      - name: Codeception build.
         run: docker exec yii2-nginx vendor/bin/codecept build
 
-      - name: Run codeception tests.
+      - name: Codeception tests.
         run: docker exec yii2-nginx vendor/bin/codecept run

@@ -18,6 +18,7 @@
 - Enh #181: Implement `Nginx` stack (@terabytesoftw)
 - Bug #182: Improve clarity in deployment options description and add `Nginx` badge in `README.md` (@terabytesoftw)
 - Bug #183: Update badge links in `README.md` to include branch query for `nginx` (@terabytesoftw)
+- Bug #185: Correct typo in Codeception build step name in `build.yml` (@terabytesoftw)
 
 ## 0.1.0 August 31, 2025
 
