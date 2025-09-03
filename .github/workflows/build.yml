@@ -42,7 +42,7 @@ jobs:
           done
           echo "Service not ready"; docker logs yii2-apache; exit 1
 
-      - name: Codeceptcion build.
+      - name: Codeception build.
         run: docker exec yii2-apache vendor/bin/codecept build
 
       - name: Run codeception tests.
