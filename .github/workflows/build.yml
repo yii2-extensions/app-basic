@@ -38,10 +38,10 @@ jobs:
         run: |
           echo "Waiting 30 seconds for container initialization..."
           sleep 30
-          docker logs yii2-apache
+          docker logs yii2-nginx
 
       - name: Codeceptcion build.
-        run: docker exec yii2-apache vendor/bin/codecept build
+        run: docker exec yii2-nginx vendor/bin/codecept build
 
       - name: Run codeception tests.
-        run: docker exec yii2-apache vendor/bin/codecept run
+        run: docker exec yii2-nginx vendor/bin/codecept run
