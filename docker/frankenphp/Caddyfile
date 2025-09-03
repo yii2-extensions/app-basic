@@ -1,0 +1,62 @@
+{
+    # Global options
+    auto_https off
+}
+
+# HTTPS server block using mkcert certificates
+https://localhost:443 {
+    # Specify mkcert certificates
+    tls /app/docker/ssl/localhost.pem /app/docker/ssl/localhost-key.pem
+
+    # Document root
+    root * /app/web
+
+    # Enable PHP processing with FrankenPHP
+    php_server
+
+    # Security headers
+    header {
+        X-Frame-Options "SAMEORIGIN"
+        X-XSS-Protection "1; mode=block"
+        X-Content-Type-Options "nosniff"
+        Strict-Transport-Security "max-age=31536000; includeSubDomains"
+        -Server
+    }
+
+    # Logging
+    log {
+        output stdout
+        format console
+    }
+
+    # Handle static files
+    @static {
+        file
+        path *.css *.js *.png *.jpg *.jpeg *.gif *.ico *.svg *.woff *.woff2 *.ttf *.eot
+    }
+    handle @static {
+        header Cache-Control "public, max-age=31536000"
+        file_server
+    }
+
+    # Block access to sensitive directories
+    @forbidden {
+        path /.git/* /vendor/* /runtime/* /.env*
+    }
+    respond @forbidden 404
+
+    # Deny PHP execution in assets directory (Yii2 security)
+    @assets_php {
+        path /assets/*.php
+    }
+    respond @assets_php 403
+
+    # Try files for Yii2 URL rewriting
+    try_files {path} {path}/ /index.php?{query}
+}
+
+# HTTP server block - redirect to HTTPS
+http://localhost:80 {
+    # Redirect all HTTP traffic to HTTPS
+    redir https://localhost:8443{uri} permanent
+}
