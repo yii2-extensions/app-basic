@@ -18,12 +18,18 @@ on:
 name: build
 
 jobs:
-  codeception:
-    uses: php-forge/actions/.github/workflows/codeception.yml@main
-    secrets:
-      AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
-      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-    with:
-      codeception-command: vendor/bin/codecept run --env php-builtin --coverage-xml
-      coverage-file: runtime/output/coverage.xml
-      extensions: gd, intl, pcov
+  franken-php:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout.
+        uses: actions/checkout@v5
+
+      - name: Build and start containers.
+        run: docker compose up -d --build --wait
+
+      - name: Codeception build.
+        run: docker exec yii2-frankenphp vendor/bin/codecept build
+
+      - name: Codeception tests.
+        run: docker exec yii2-frankenphp vendor/bin/codecept run

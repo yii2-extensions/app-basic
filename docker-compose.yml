@@ -1,0 +1,41 @@
+services:
+  yii2-frankenphp:
+    build:
+      args:
+        USER_ID: ${USER_ID:-1000}
+        GROUP_ID: ${GROUP_ID:-1000}
+        USER_NAME: ${USER_NAME:-www-data}
+        GROUP_NAME: ${GROUP_NAME:-www-data}
+      context: .
+      dockerfile: docker/frankenphp/Dockerfile
+    container_name: yii2-frankenphp
+    entrypoint: ["/usr/local/bin/entrypoint.sh"]
+    env_file:
+      - .env
+    environment:
+      TZ: "UTC"
+      YII_DEBUG: "${YII_DEBUG:-false}"
+      YII_ENV: "${YII_ENV:-prod}"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost/ || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    ports:
+      - '8080:80'
+      - '8443:443'
+      - '8443:443/udp'
+    restart: always
+    tty: true
+    volumes:
+      - ./:/app
+      - caddy_config:/config
+      - caddy_data:/data
+      - composer_cache:/var/www/.composer/cache
+    working_dir: /app
+
+volumes:
+  caddy_data:
+  caddy_config:
+  composer_cache:
