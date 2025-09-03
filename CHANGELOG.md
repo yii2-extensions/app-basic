@@ -16,6 +16,7 @@
 - Bug #175: Update allowed IPs in configuration for development purposes in `configuration.md` (@terabytesoftw)
 - Bug #177: Add missing config path to ECS configuration in `ecs.php` (@terabytesoftw)
 - Bug #182: Improve clarity in deployment options description and add `Nginx` badge in `README.md` (@terabytesoftw)
+- Bug #188: Update `README.md` to include `FrankenPHP` badge for classic web server setup (@terabytesoftw)
 
 ## 0.1.0 August 31, 2025
 
