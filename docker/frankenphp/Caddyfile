@@ -31,6 +31,8 @@ https://localhost:443 {
         format console
     }
 
+    encode zstd gzip
+
     # Handle static files
     @static {
         file
