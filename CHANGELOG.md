@@ -18,6 +18,7 @@
 - Bug #177: Add missing config path to ECS configuration in `ecs.php` (@terabytesoftw)
 - Bug #180: Update paths to ignore in GitHub Actions workflow for pull requests and pushes (@terabytesoftw)
 - Bug #184: Update Docker commands and badge links in `README.md` for accurate workflow status (@terabytesoftw)
+- Bug #186: Rename steps for clarity in GitHub Actions workflow `build.yml` (@terabytesoftw)
 
 ## 0.1.0 August 31, 2025
 
