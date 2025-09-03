@@ -1,6 +1,6 @@
 # Change Log
 
-## 0.1.1 Under development
+## 0.1.1 September 03, 2025
 
 - Bug #141: Move badges for latest stable version and total downloads in `README.md` to `Installation` section (@terabytesoftw)
 - Bug #143: Add `Available stacks` section with `RoadRunner` badge to `README.md` (@terabytesoftw)
