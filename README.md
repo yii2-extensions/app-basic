@@ -44,7 +44,7 @@ A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-a
 
 ### Traditional Web Servers
 
-Classic request-per-process model; simple, widely supported for deployment.
+Classic web-server + PHP-FPM setup; simple and widely supported for deployment.
 
 [![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white)](https://github.com/yii2-extensions/app-basic/tree/apache)
 [![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)](https://github.com/yii2-extensions/app-basic/tree/nginx)
