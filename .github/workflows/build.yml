@@ -25,20 +25,22 @@ jobs:
       - name: Checkout.
         uses: actions/checkout@v5
 
-      - name: Install docker compose.
+      - name: Show docker version.
         run: |
-          sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-          sudo chmod +x /usr/local/bin/docker-compose
-          docker-compose --version
+          docker version
+          docker compose version
 
       - name: Build and start containers.
-        run: docker-compose up -d --build
+        run: docker compose up -d --build
 
-      - name: Wait for container to be ready.
+      - name: Wait for readiness.
         run: |
-          echo "Waiting 30 seconds for container initialization..."
-          sleep 30
-          docker logs yii2-nginx
+          for i in {1..60}; do
+            if docker exec yii2-nginx sh -lc "curl -ksS -o /dev/null -w '%{http_code}' https://localhost | grep -qE '200|302'"; then
+              echo "Service is ready"; exit 0; fi
+            sleep 2
+          done
+          echo "Service not ready"; docker logs yii2-nginx; exit 1
 
       - name: Codeceptcion build.
         run: docker exec yii2-nginx vendor/bin/codecept build
