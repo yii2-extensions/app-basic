@@ -18,12 +18,32 @@ on:
 name: build
 
 jobs:
-  codeception:
-    uses: php-forge/actions/.github/workflows/codeception.yml@main
-    secrets:
-      AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
-      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-    with:
-      codeception-command: vendor/bin/codecept run --env php-builtin --coverage-xml
-      coverage-file: runtime/output/coverage.xml
-      extensions: gd, intl, pcov
+  nginx:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout.
+        uses: actions/checkout@v5
+
+      - name: Show docker version.
+        run: |
+          docker version
+          docker compose version
+
+      - name: Build and start containers.
+        run: docker compose up -d --build
+
+      - name: Wait for readiness.
+        run: |
+          for i in {1..60}; do
+            if docker exec yii2-nginx sh -lc "curl -ksS -o /dev/null -w '%{http_code}' https://localhost | grep -qE '200|302'"; then
+              echo "Service is ready"; exit 0; fi
+            sleep 2
+          done
+          echo "Service not ready"; docker logs yii2-nginx; exit 1
+
+      - name: Codeceptcion build.
+        run: docker exec yii2-nginx vendor/bin/codecept build
+
+      - name: Run codeception tests.
+        run: docker exec yii2-nginx vendor/bin/codecept run
