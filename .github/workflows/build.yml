@@ -25,7 +25,7 @@ jobs:
       - name: Checkout.
         uses: actions/checkout@v5
 
-      - name: Show docker version.
+      - name: Docker version.
         run: |
           docker version
           docker compose version
@@ -45,5 +45,5 @@ jobs:
       - name: Codeception build.
         run: docker exec yii2-apache vendor/bin/codecept build
 
-      - name: Run codeception tests.
+      - name: Codeception tests.
         run: docker exec yii2-apache vendor/bin/codecept run
