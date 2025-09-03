@@ -26,7 +26,7 @@ jobs:
         uses: actions/checkout@v5
 
       - name: Build and start containers.
-        run: docker compose up -d --build
+        run: docker compose up -d --build --wait
 
       - name: Codeception build.
         run: docker exec yii2-frankenphp vendor/bin/codecept build
