@@ -25,22 +25,8 @@ jobs:
       - name: Checkout.
         uses: actions/checkout@v5
 
-      - name: Docker version.
-        run: |
-          docker version
-          docker compose version
-
       - name: Build and start containers.
-        run: docker compose up -d --build
-
-      - name: Wait for readiness.
-        run: |
-          for i in {1..60}; do
-            if docker exec yii2-apache sh -lc "curl -ksS -o /dev/null -w '%{http_code}' https://localhost | grep -qE '200|302'"; then
-              echo "Service is ready"; exit 0; fi
-            sleep 2
-          done
-          echo "Service not ready"; docker logs yii2-apache; exit 1
+        run: docker compose up -d --build --wait
 
       - name: Codeception build.
         run: docker exec yii2-apache vendor/bin/codecept build
