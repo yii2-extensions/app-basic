@@ -48,7 +48,7 @@ Classic web-server + PHP-FPM setup; simple and widely supported for deployment.
 
 [![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white)](https://github.com/yii2-extensions/app-basic/tree/apache)
 [![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)](https://github.com/yii2-extensions/app-basic/tree/nginx)
-[![FrankenPHP](https://img.shields.io/badge/FrankenPHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://github.com/yii2-extensions/app-basic/tree/franken-php-classic)
+[![FrankenPHP Classic](https://img.shields.io/badge/FrankenPHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://github.com/yii2-extensions/app-basic/tree/franken-php-classic)
 
 ### High-Performance Worker Mode
 
