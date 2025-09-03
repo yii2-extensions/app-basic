@@ -19,6 +19,7 @@
 - Bug #182: Improve clarity in deployment options description and add `Nginx` badge in `README.md` (@terabytesoftw)
 - Bug #183: Update badge links in `README.md` to include branch query for `nginx` (@terabytesoftw)
 - Bug #185: Correct typo in Codeception build step name in `build.yml` (@terabytesoftw)
+- Bug #188: Update `README.md` to include `FrankenPHP` badge for classic web server setup (@terabytesoftw)
 - Bug #189: Remove unnecessary Docker version checks and readiness wait from build workflow; add healthcheck to docker-compose configuration (@terabytesoftw)
 
 ## 0.1.0 August 31, 2025
