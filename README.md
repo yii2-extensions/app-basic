@@ -133,6 +133,7 @@ final class SiteController extends Controller
 ## Package information
 
 [![Development Status](https://img.shields.io/badge/Status-Dev-orange.svg?style=for-the-badge&logo=packagist&logoColor=white)](https://github.com/yii2-extensions/app-basic/tree/apache)
+[![GHCR](https://img.shields.io/badge/GHCR-Apache%20Image-blue?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yii2-extensions/docker-images/pkgs/container/apache)
 
 ## Quality code
 
