@@ -13,12 +13,6 @@ services:
       # Yii2 Configuration
       YII_DEBUG: "${YII_DEBUG:-true}"
       YII_ENV: "${YII_ENV:-dev}"
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost/health"]
-      interval: 30s
-      timeout: 3s
-      retries: 3
-      start_period: 40s
     ports:
       - '8080:80'
       - '8443:443'
