@@ -22,6 +22,7 @@
 - Bug #186: Rename steps for clarity in GitHub Actions workflow `build.yml` (@terabytesoftw)
 - Bug #188: Update `README.md` to include `FrankenPHP` badge for classic web server setup (@terabytesoftw)
 - Bug #190: Simplify Docker workflow by removing unnecessary steps and adding healthcheck configuration (@terabytesoftw)
+- Enh #192: Use pre-built Docker image for Yii2 with Apache + PHP-FPM Debian Trixie `ghcr.io/yii2-extensions/apache:8.4-debian-dev-v1.0.0` (@terabytesoftw)
 
 ## 0.1.0 August 31, 2025
 

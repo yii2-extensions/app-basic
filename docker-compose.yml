@@ -1,36 +1,45 @@
 services:
-  yii2-apache:
-    build:
-      args:
-        USER_ID: ${USER_ID:-1000}
-        GROUP_ID: ${GROUP_ID:-1000}
-        USER_NAME: ${USER_NAME:-www-data}
-        GROUP_NAME: ${GROUP_NAME:-www-data}
-      context: .
-      dockerfile: docker/apache/Dockerfile
+  app-basic:
+    image: ghcr.io/yii2-extensions/apache:8.4-debian-dev-v1.0.0
     container_name: yii2-apache
-    entrypoint: ["/usr/local/bin/entrypoint.sh"]
-    env_file:
-      - .env
     environment:
-      TZ: "UTC"
-      YII_DEBUG: "${YII_DEBUG:-false}"
-      YII_ENV: "${YII_ENV:-prod}"
+      # Apache Configuration
+      APACHE_DISABLE_OCSP_STAPLING: ${APACHE_DISABLE_OCSP_STAPLING:-true}
+      APACHE_SSL_REDIRECT: ${APACHE_SSL_REDIRECT:-true}
+      # SSL Configuration
+      SSL_AUTO_GENERATE: ${SSL_AUTO_GENERATE:-false}
+      SSL_CERT_FILE: ${SSL_CERT_FILE:-/etc/apache2/ssl/localhost.pem}
+      SSL_KEY_FILE: ${SSL_KEY_FILE:-/etc/apache2/ssl/localhost-key.pem}
+      # Yii2 Configuration
+      YII_DEBUG: "${YII_DEBUG:-true}"
+      YII_ENV: "${YII_ENV:-dev}"
     healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost/ || exit 1"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-      start_period: 25s
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 40s
     ports:
       - '8080:80'
       - '8443:443'
     restart: always
-    tty: true
     volumes:
-      - ./:/app
-      - composer_cache:/var/www/.composer/cache
-    working_dir: /app
+      # Application directory (exclude vendor and node_modules for performance)
+      - ./:/var/www/app:delegated
+      - ./web/ssl:/etc/apache2/ssl:ro
+      - assets_data:/var/www/app/web/assets
+      # Persist dependencies for faster rebuilds
+      - composer_cache:/var/www/.composer
+      - npm_cache:/var/www/.npm
+      # Runtime directory as named volume to avoid permission issues
+      - runtime_data:/var/www/app/runtime
 
 volumes:
   composer_cache:
+    driver: local
+  npm_cache:
+    driver: local
+  runtime_data:
+    driver: local
+  assets_data:
+    driver: local
