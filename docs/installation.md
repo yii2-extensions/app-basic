@@ -25,17 +25,19 @@ cd app-basic
 ### Method 2: Manual installation
 
 1. **Download the template**:
+
 ```bash
 git clone --branch 0.1 https://github.com/yii2-extensions/app-basic.git app-basic
 cd app-basic
 ```
 
 2. **Install dependencies**
+
 ```bash
 composer install
 ```
 
-### Method 3: Using git
+### Method 3: Using Git
 
 Clone the repository and set up your project.
 
@@ -77,16 +79,19 @@ php -S localhost:8080 -t web
 ### Database setup
 
 1. **Create database**
+
 ```sql
 CREATE DATABASE app_basic CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
 
 2. **Run migrations** (if available)
+
 ```bash
 ./yii migrate
 ```
 
 3. **Seed test data** (optional)
+
 ```bash
 ./yii fixture/load
 ```

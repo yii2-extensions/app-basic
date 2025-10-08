@@ -1,29 +1,28 @@
+<!-- markdownlint-disable MD041 -->
 <p align="center">
-    <a href="https://github.com/yii2-extensions/app-basic" target="_blank">
-        <img src="https://www.yiiframework.com/image/yii_logo_light.svg" alt="Yii Framework">
-    </a>
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://www.yiiframework.com/image/design/logo/yii3_full_for_dark.svg">
+        <source media="(prefers-color-scheme: light)" srcset="https://www.yiiframework.com/image/design/logo/yii3_full_for_light.svg">
+        <img src="https://www.yiiframework.com/image/design/logo/yii3_full_for_dark.svg" alt="Yii Framework" width="80%">
+    </picture>
     <h1 align="center">Web Application Basic</h1>
+    <br>
 </p>
+<!-- markdownlint-enable MD041 -->
 
 <p align="center">
-    <a href="https://www.php.net/releases/8.1/en.php" target="_blank">
-        <img src="https://img.shields.io/badge/%3E%3D8.1-777BB4.svg?style=for-the-badge&logo=php&logoColor=white" alt="PHP version">
-    </a>
-    <a href="https://github.com/yiisoft/yii2/tree/2.0.53" target="_blank">
-        <img src="https://img.shields.io/badge/2.0.x-0073AA.svg?style=for-the-badge&logo=yii&logoColor=white" alt="Yii 2.0.x">
-    </a>
-    <a href="https://github.com/yiisoft/yii2/tree/22.0" target="_blank">
-        <img src="https://img.shields.io/badge/22.0.x-0073AA.svg?style=for-the-badge&logo=yii&logoColor=white" alt="Yii 22.0.x">
-    </a>
     <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/build.yml" target="_blank">
-        <img src="https://img.shields.io/github/actions/workflow/status/yii2-extensions/app-basic/build.yml?branch=main&style=for-the-badge&label=Codeception" alt="Codeception">
+        <img src="https://img.shields.io/github/actions/workflow/status/yii2-extensions/app-basic/build.yml?branch=main&style=for-the-badge&logo=github&label=Codeception" alt="Codeception">
     </a>
     <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml" target="_blank">
-        <img src="https://img.shields.io/github/actions/workflow/status/yii2-extensions/app-basic/static.yml?branch=main&style=for-the-badge&label=PHPStan" alt="PHPStan">
+        <img src="https://img.shields.io/github/actions/workflow/status/yii2-extensions/app-basic/static.yml?branch=main&style=for-the-badge&logo=github&label=PHPStan" alt="PHPStan">
     </a>
 </p>
 
-A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-application development. Built with best practices, clean architecture, and developer-friendly configuration, it lets you create production-ready apps with minimal setup while maintaining code quality and extensibility.
+<p align="center">
+    <strong>A modern, Bootstrap 5-powered Yii2 application template for rapid development</strong><br>
+    <em>Clean architecture, production-ready features, and developer-friendly configuration</em>
+</p>
 
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/images/home-dark.png">
@@ -33,12 +32,10 @@ A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-a
 
 ## Features
 
-- ✅ **Asset Management** - Optimized asset bundles for CSS, JS, and resource management.
-- ✅ **Clean Architecture** - Well-organized directory structure following Yii2 best practices.
-- ✅ **Console Commands** - Example console commands for background tasks and maintenance.
-- ✅ **Developer Tools** - Debugging tools, logging, and development-friendly configurations.
-- ✅ **Modern Bootstrap 5 UI** - Responsive, mobile-first design with latest Bootstrap components.
-- ✅ **Testing Ready** - Codeception test suite with examples for functional and unit testing.
+<picture>
+    <source media="(min-width: 768px)" srcset="./docs/svgs/features.svg">
+    <img src="./docs/svgs/features-mobile.svg" alt="Feature Overview" style="width: 100%;">
+</picture>
 
 ## Available deployment options
 
@@ -57,6 +54,7 @@ Long-running PHP workers for higher throughput and lower latency.
 [![FrankenPHP](https://img.shields.io/badge/FrankenPHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://github.com/yii2-extensions/app-basic/tree/franken-php)
 [![RoadRunner](https://img.shields.io/badge/RoadRunner-%23FF6B35.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMjIgMTJMMTIgMjJMMiAxMkwxMiAyWiIgZmlsbD0iI0ZGRkZGRiIvPgo8cGF0aCBkPSJNOCAyTDE2IDEwTDggMThaIiBmaWxsPSIjRkY2QjM1Ii8+CjxwYXRoIGQ9Ik0xNiA2TDIwIDEwTDE2IDE0WiIgZmlsbD0iI0ZGNkIzNSIvPgo8L3N2Zz4K&logoColor=white)](https://github.com/yii2-extensions/app-basic/tree/road-runner)
 
+> [!IMPORTANT]
 > For setup instructions, see `README.md` in each branch.
 
 ## How it works
@@ -75,7 +73,8 @@ The Yii2 Web Application Basic template provides a complete foundation for build
 - **Extensible**: Easy to customize and extend for specific project requirements.
 - **Production-ready**: Includes security features and optimizations for deployment.
 
->Note: Also, make sure to install [`npm`](https://nodejs.org/en/download/) for frontend dependency management.
+> [!NOTE]
+> Also, make sure to install [`npm`](https://nodejs.org/en/download/) for frontend dependency management.
 
 ### Installation
 
@@ -104,7 +103,7 @@ php -S localhost:8080 -t web
 root/
 ├── config/                Configuration files
 │   ├── common/            Common configuration
-│   ├── console/           Console configuration  
+P│   ├── console/           Console configuration
 │   ├── web/               Web configuration
 │   └── messages.php       Translation config
 ├── src/
@@ -155,8 +154,11 @@ final class SiteController extends Controller
 
 ## Package information
 
+[![PHP](https://img.shields.io/badge/%3E%3D8.1-777BB4.svg?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/releases/8.1/en.php)
+[![Yii 2.0.x](https://img.shields.io/badge/2.0.53-0073AA.svg?style=for-the-badge&logo=yii&logoColor=white)](https://github.com/yiisoft/yii2/tree/2.0.53)
+[![Yii 22.0.x](https://img.shields.io/badge/22.0.x-0073AA.svg?style=for-the-badge&logo=yii&logoColor=white)](https://github.com/yiisoft/yii2/tree/22.0)
 [![Latest Stable Version](https://img.shields.io/packagist/v/yii2-extensions/app-basic.svg?style=for-the-badge&logo=packagist&logoColor=white&label=Stable)](https://packagist.org/packages/yii2-extensions/app-basic)
-[![Total Downloads](https://img.shields.io/packagist/dt/yii2-extensions/app-basic.svg?style=for-the-badge&logo=packagist&logoColor=white&label=Downloads)](https://packagist.org/packages/yii2-extensions/app-basic)
+[![Total Downloads](https://img.shields.io/packagist/dt/yii2-extensions/app-basic.svg?style=for-the-badge&logo=composer&logoColor=white&label=Downloads)](https://packagist.org/packages/yii2-extensions/app-basic)
 
 ## Quality code
 
@@ -169,7 +171,7 @@ final class SiteController extends Controller
 For detailed configuration options and advanced usage:
 
 - 📚 [Installation Guide](docs/installation.md)
-- ⚙️ [Configuration Reference](docs/configuration.md) 
+- ⚙️ [Configuration Reference](docs/configuration.md)
 - 🧪 [Testing Guide](docs/testing.md)
 - 📸 [Screenshots](docs/screenshots.md)
 
@@ -179,4 +181,4 @@ For detailed configuration options and advanced usage:
 
 ## License
 
-[![License](https://img.shields.io/github/license/yii2-extensions/app-basic?style=for-the-badge&logo=opensourceinitiative&logoColor=white&labelColor=333333)](LICENSE.md)
+[![License](https://img.shields.io/badge/License-BSD--3--Clause-brightgreen.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white&labelColor=555555)](LICENSE)
