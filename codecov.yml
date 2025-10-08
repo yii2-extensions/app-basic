@@ -1,0 +1,12 @@
+---
+coverage:
+  status:
+    project:
+      default:
+        branches:
+          - main
+          - apache
+          - franken-php
+          - franken-php-classic
+          - nginx
+          - road-runner
