@@ -1,5 +1,7 @@
 # Change Log
 
+## 0.1.2 Under development
+
 ## 0.1.1 September 03, 2025
 
 - Bug #141: Move badges for latest stable version and total downloads in `README.md` to `Installation` section (@terabytesoftw)
