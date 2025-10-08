@@ -84,7 +84,7 @@
                 const effectiveTheme =
                     theme === "auto"
                         ? window.matchMedia("(prefers-color-scheme: dark)")
-                              .matches
+                            .matches
                             ? "dark"
                             : "light"
                         : theme;
