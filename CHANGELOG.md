@@ -4,6 +4,7 @@
 
 - Bug #197: Update workflows and documentation for improved CI/CD processes and feature clarity (@terabytesoftw)
 - Bug #198: Add `Super-Linter` badge to `README.md` for enhanced CI visibility (@terabytesoftw)
+- Bug #199: Correct indentation in console configuration section of `README.md` (@terabytesoftw)
 
 ## 0.1.1 September 03, 2025
 
