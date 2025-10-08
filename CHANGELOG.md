@@ -1,4 +1,4 @@
-# Change Log
+# ChangeLog
 
 ## 0.1.2 October 8, 2025
 
