@@ -1,9 +1,14 @@
+<!-- markdownlint-disable MD041 -->
 <p align="center">
-    <a href="https://github.com/yii2-extensions/app-basic" target="_blank">
-        <img src="https://www.yiiframework.com/image/yii_logo_light.svg" alt="Yii Framework">
-    </a>
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://www.yiiframework.com/image/design/logo/yii3_full_for_dark.svg">
+        <source media="(prefers-color-scheme: light)" srcset="https://www.yiiframework.com/image/design/logo/yii3_full_for_light.svg">
+        <img src="https://www.yiiframework.com/image/design/logo/yii3_full_for_dark.svg" alt="Yii Framework" width="80%">
+    </picture>
     <h1 align="center">Web Application Basic</h1>
+    <br>
 </p>
+<!-- markdownlint-enable MD041 -->
 
 <p align="center">
     <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/build.yml" target="_blank">
@@ -14,7 +19,10 @@
     </a>
 </p>
 
-A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-application development. Built with best practices, clean architecture, and developer-friendly configuration, it lets you create production-ready apps with minimal setup while maintaining code quality and extensibility.
+<p align="center">
+    <strong>A modern, Bootstrap 5-powered Yii2 application template for rapid development</strong><br>
+    <em>Clean architecture, production-ready features, and developer-friendly configuration</em>
+</p>
 
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/images/home-dark.png">
@@ -24,12 +32,10 @@ A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-a
 
 ## Features
 
-- ✅ **Asset Management** - Optimized asset bundles for CSS, JS, and resource management.
-- ✅ **Clean Architecture** - Well-organized directory structure following Yii2 best practices.
-- ✅ **Console Commands** - Example console commands for background tasks and maintenance.
-- ✅ **Developer Tools** - Debugging tools, logging, and development-friendly configurations.
-- ✅ **Modern Bootstrap 5 UI** - Responsive, mobile-first design with latest Bootstrap components.
-- ✅ **Testing Ready** - Codeception test suite with examples for functional and unit testing.
+<picture>
+    <source media="(min-width: 768px)" srcset="./docs/svgs/features.svg">
+    <img src="./docs/svgs/features-mobile.svg" alt="Feature Overview" style="width: 100%;">
+</picture>
 
 ## Available deployment options
 

@@ -6,12 +6,12 @@
     --input-padding-y: .75rem;
 }
 
-a.asc:after {
+a.asc::after {
     content: "\2191";
 	padding-left: 2px;
 }
 
-a.desc:after {
+a.desc::after {
 	content: "\2193";
     padding-left: 2px;
 }
@@ -20,7 +20,7 @@ html, body {
 	height: 100vh;
 }
 
-.breadcrumb > li + li:before {
+.breadcrumb > li + li::before {
     color: var(--bs-tertiary-color);
     content: "/\00a0";
     padding: 0 5px;
