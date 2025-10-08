@@ -2,22 +2,23 @@
  * Css web application basic
  */
 :root {
-    --input-padding-x: .75rem;
-    --input-padding-y: .75rem;
+    --input-padding-x: 0.75rem;
+    --input-padding-y: 0.75rem;
 }
 
 a.asc::after {
     content: "\2191";
-	padding-left: 2px;
-}
-
-a.desc::after {
-	content: "\2193";
     padding-left: 2px;
 }
 
-html, body {
-	height: 100vh;
+a.desc::after {
+    content: "\2193";
+    padding-left: 2px;
+}
+
+html,
+body {
+    height: 100vh;
 }
 
 .breadcrumb > li + li::before {
