@@ -1,9 +1,14 @@
+<!-- markdownlint-disable MD041 -->
 <p align="center">
-    <a href="https://github.com/yii2-extensions/app-basic" target="_blank">
-        <img src="https://www.yiiframework.com/image/yii_logo_light.svg" alt="Yii Framework">
-    </a>
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://www.yiiframework.com/image/design/logo/yii3_full_for_dark.svg">
+        <source media="(prefers-color-scheme: light)" srcset="https://www.yiiframework.com/image/design/logo/yii3_full_for_light.svg">
+        <img src="https://www.yiiframework.com/image/design/logo/yii3_full_for_dark.svg" alt="Yii Framework" width="80%">
+    </picture>
     <h1 align="center">Web Application Basic</h1>
+    <br>
 </p>
+<!-- markdownlint-enable MD041 -->
 
 <p align="center">
     <a href="https://www.php.net/releases/8.1/en.php" target="_blank">
@@ -23,7 +28,10 @@
     </a>
 </p>
 
-A modern, Bootstrap 5-powered Yii2 application template designed for rapid web-application development. Built with best practices, clean architecture, and developer-friendly configuration, it lets you create production-ready apps with minimal setup while maintaining code quality and extensibility.
+<p align="center">
+    <strong>A modern, Bootstrap 5-powered Yii2 application template for rapid development</strong><br>
+    <em>Clean architecture, production-ready features, and developer-friendly configuration</em>
+</p>
 
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/images/home-dark.png">
@@ -59,7 +67,8 @@ from scratch, this template includes.
 - **Extensible**: Easy to customize and extend for specific project requirements.
 - **Production-ready**: Includes security features and optimizations for deployment.
 
->Note: Also, make sure to install [`npm`](https://nodejs.org/en/download/) for frontend dependency management.
+> [!NOTE]
+> Also, make sure to install [`npm`](https://nodejs.org/en/download/) for frontend dependency management.
 
 ### Installation
 
@@ -125,7 +134,7 @@ docker run \
 root/
 ├── config/                Configuration files
 │   ├── common/            Common configuration
-│   ├── console/           Console configuration  
+│   ├── console/           Console configuration
 │   ├── web/               Web configuration
 │   └── messages.php       Translation config
 ├── src/
@@ -189,7 +198,7 @@ final class SiteController extends Controller
 For detailed configuration options and advanced usage:
 
 - 📚 [Installation Guide](docs/installation.md)
-- ⚙️ [Configuration Reference](docs/configuration.md) 
+- ⚙️ [Configuration Reference](docs/configuration.md)
 - 🧪 [Testing Guide](docs/testing.md)
 - 📸 [Screenshots](docs/screenshots.md)
 
@@ -199,4 +208,4 @@ For detailed configuration options and advanced usage:
 
 ## License
 
-[![License](https://img.shields.io/github/license/yii2-extensions/app-basic?style=for-the-badge&logo=opensourceinitiative&logoColor=white&labelColor=333333)](LICENSE.md)
+[![License](https://img.shields.io/badge/License-BSD--3--Clause-brightgreen.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white&labelColor=555555)](LICENSE)

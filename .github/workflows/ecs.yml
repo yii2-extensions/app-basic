@@ -1,24 +1,23 @@
+---
 on:
-  pull_request:
+  pull_request: &ignore-paths
     paths-ignore:
-      - 'docs/**'
-      - 'README.md'
-      - 'CHANGELOG.md'
-      - '.gitignore'
-      - '.gitattributes'
+      - ".gitattributes"
+      - ".gitignore"
+      - "CHANGELOG.md"
+      - "docs/**"
+      - "README.md"
 
-  push:
-    paths-ignore:
-      - 'docs/**'
-      - 'README.md'
-      - 'CHANGELOG.md'
-      - '.gitignore'
-      - '.gitattributes'
+  push: *ignore-paths
 
 name: ecs
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   easy-coding-standard:
-    uses: php-forge/actions/.github/workflows/ecs.yml@main
+    uses: yii2-framework/actions/.github/workflows/ecs.yml@main
     with:
       extensions: mbstring

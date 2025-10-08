@@ -1,13 +1,15 @@
-### What steps will reproduce the problem?
+# Issue Report
 
-### What is the expected result?
+## What steps will reproduce the problem?
 
-### What do you get instead?
+## What is the expected result?
 
-### Additional info
+## What do you get instead?
 
-| Q                | A
-| ---------------- | ---
-| Version          | 1.0.?
-| PHP version      | 
-| Operating system |
+## Additional info
+
+| Q                | A     |
+| ---------------- | ----- |
+| Version          | 1.0.? |
+| PHP version      |       |
+| Operating system |       |

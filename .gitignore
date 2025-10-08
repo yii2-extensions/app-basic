@@ -7,6 +7,12 @@ composer.phar
 # composer vendor dir
 /vendor
 
+# config plugin
+/config/.merge-plan.php
+
+#copilot
+copilot
+
 # local phpunit config
 /phpunit.xml
 
@@ -46,6 +52,3 @@ requirements.php
 .buildpath
 .project
 .settings
-
-# config plugin
-/config/.merge-plan.php

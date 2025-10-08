@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide covers all configuration options for the Yii2 Web Application Basic template, from basic setup to advanced 
+This guide covers all configuration options for the Yii2 Web Application Basic template, from basic setup to advanced
 customization for production environments.
 
 ## Configuration structure

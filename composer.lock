@@ -1794,12 +1794,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "b7dfa98df95226f19812caa8a8d95f02e96e2e50"
+                "reference": "8294fbe48814e9e313f5af7adcd2ce3d49fcba84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/b7dfa98df95226f19812caa8a8d95f02e96e2e50",
-                "reference": "b7dfa98df95226f19812caa8a8d95f02e96e2e50",
+                "url": "https://api.github.com/repos/symfony/console/zipball/8294fbe48814e9e313f5af7adcd2ce3d49fcba84",
+                "reference": "8294fbe48814e9e313f5af7adcd2ce3d49fcba84",
                 "shasum": ""
             },
             "require": {
@@ -1884,7 +1884,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-10-08T08:52:57+00:00"
+            "time": "2025-10-08T10:26:29+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -3769,12 +3769,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii2-extensions/franken-php.git",
-                "reference": "d9ed557abd9b1500866f69edad4c63787cf31684"
+                "reference": "5257288a27b9e223f412a542191e57ab0d9c7404"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2-extensions/franken-php/zipball/d9ed557abd9b1500866f69edad4c63787cf31684",
-                "reference": "d9ed557abd9b1500866f69edad4c63787cf31684",
+                "url": "https://api.github.com/repos/yii2-extensions/franken-php/zipball/5257288a27b9e223f412a542191e57ab0d9c7404",
+                "reference": "5257288a27b9e223f412a542191e57ab0d9c7404",
                 "shasum": ""
             },
             "require": {
@@ -3824,7 +3824,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-10-08T08:59:45+00:00"
+            "time": "2025-10-08T09:19:05+00:00"
         },
         {
             "name": "yii2-extensions/psr-bridge",
@@ -5743,8 +5743,8 @@
             "version": "2.1.x-dev",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/6bdce5da45d93c61b0bec4d9fa138fc688307dbf",
-                "reference": "6bdce5da45d93c61b0bec4d9fa138fc688307dbf",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/623cb5598f612577cd1163b4ae4c4cf5928cf6bd",
+                "reference": "623cb5598f612577cd1163b4ae4c4cf5928cf6bd",
                 "shasum": ""
             },
             "require": {
@@ -5790,7 +5790,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-10-07T06:03:08+00:00"
+            "time": "2025-10-08T15:05:33+00:00"
         },
         {
             "name": "phpstan/phpstan-strict-rules",
