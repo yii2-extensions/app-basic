@@ -1,19 +1,14 @@
+---
 on:
-  pull_request:
+  pull_request: &ignore-paths
     paths-ignore:
-      - 'docs/**'
-      - 'README.md'
-      - 'CHANGELOG.md'
-      - '.gitignore'
-      - '.gitattributes'
+      - ".gitattributes"
+      - ".gitignore"
+      - "CHANGELOG.md"
+      - "docs/**"
+      - "README.md"
 
-  push:
-    paths-ignore:
-      - 'docs/**'
-      - 'README.md'
-      - 'CHANGELOG.md'
-      - '.gitignore'
-      - '.gitattributes'
+  push: *ignore-paths
 
 name: build
 
@@ -22,7 +17,7 @@ permissions:
 
 jobs:
   codeception:
-    uses: php-forge/actions/.github/workflows/codeception.yml@main
+    uses: yii2-framework/actions/.github/workflows/codeception.yml@main
     secrets:
       AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

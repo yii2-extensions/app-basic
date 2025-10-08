@@ -1,6 +1,11 @@
-# Change Log
+# ChangeLog
 
-## 0.1.1 Under development
+## 0.1.2 October 8, 2025
+
+- Bug #196: Update package version for `yii2-extensions/road-runner` in `composer.json` and change badge to reflect latest stable version in `README.md` (@terabytesoftw)
+- Bug #197: Update workflows and documentation for improved CI/CD processes and feature clarity (@terabytesoftw)
+
+## 0.1.1 September 03, 2025
 
 - Enh #132: Implement RoadRunner stack (@terabytesoftw)
 - Bug #141: Move badges for latest stable version and total downloads in `README.md` to `Installation` section (@terabytesoftw)
@@ -24,7 +29,6 @@
 - Bug #177: Add missing config path to ECS configuration in `ecs.php` (@terabytesoftw)
 - Bug #182: Improve clarity in deployment options description and add `Nginx` badge in `README.md` (@terabytesoftw)
 - Bug #188: Update `README.md` to include `FrankenPHP` badge for classic web server setup (@terabytesoftw)
-- Bug #196: Update package version for `yii2-extensions/road-runner` in `composer.json` and change badge to reflect latest stable version in `README.md` (@terabytesoftw)
 
 ## 0.1.0 August 31, 2025
 
