@@ -103,7 +103,7 @@ php -S localhost:8080 -t web
 root/
 ├── config/                Configuration files
 │   ├── common/            Common configuration
-│   ├── console/           Console configuration  
+│   ├── console/           Console configuration
 │   ├── web/               Web configuration
 │   └── messages.php       Translation config
 ├── src/
@@ -171,7 +171,7 @@ final class SiteController extends Controller
 For detailed configuration options and advanced usage:
 
 - 📚 [Installation Guide](docs/installation.md)
-- ⚙️ [Configuration Reference](docs/configuration.md) 
+- ⚙️ [Configuration Reference](docs/configuration.md)
 - 🧪 [Testing Guide](docs/testing.md)
 - 📸 [Screenshots](docs/screenshots.md)
 
