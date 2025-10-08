@@ -11,20 +11,11 @@
 <!-- markdownlint-enable MD041 -->
 
 <p align="center">
-    <a href="https://www.php.net/releases/8.1/en.php" target="_blank">
-        <img src="https://img.shields.io/badge/%3E%3D8.1-777BB4.svg?style=for-the-badge&logo=php&logoColor=white" alt="PHP version">
-    </a>
-    <a href="https://github.com/yiisoft/yii2/tree/2.0.53" target="_blank">
-        <img src="https://img.shields.io/badge/2.0.x-0073AA.svg?style=for-the-badge&logo=yii&logoColor=white" alt="Yii 2.0.x">
-    </a>
-    <a href="https://github.com/yiisoft/yii2/tree/22.0" target="_blank">
-        <img src="https://img.shields.io/badge/22.0.x-0073AA.svg?style=for-the-badge&logo=yii&logoColor=white" alt="Yii 22.0.x">
-    </a>
     <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/build.yml?query=branch%3Afranken-php" target="_blank">
-        <img src="https://img.shields.io/github/actions/workflow/status/yii2-extensions/app-basic/build.yml?branch=franken-php&style=for-the-badge&label=Codeception" alt="Codeception">
+        <img src="https://img.shields.io/github/actions/workflow/status/yii2-extensions/app-basic/build.yml?branch=franken-php&logo=github&style=for-the-badge&label=Codeception" alt="Codeception">
     </a>
     <a href="https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml?query=branch%3Afranken-php" target="_blank">
-        <img src="https://img.shields.io/github/actions/workflow/status/yii2-extensions/app-basic/static.yml?branch=franken-php&style=for-the-badge&label=PHPStan" alt="PHPStan">
+        <img src="https://img.shields.io/github/actions/workflow/status/yii2-extensions/app-basic/static.yml?branch=franken-php&logo=github&style=for-the-badge&label=PHPStan" alt="PHPStan">
     </a>
 </p>
 
@@ -41,18 +32,14 @@
 
 ## Features
 
-- ✅ **Asset Management** - Optimized asset bundles for CSS, JS, and resource management.
-- ✅ **Clean Architecture** - Well-organized directory structure following Yii2 best practices.
-- ✅ **Console Commands** - Example console commands for background tasks and maintenance.
-- ✅ **Developer Tools** - Debugging tools, logging, and development-friendly configurations.
-- ✅ **HTTP/2 & HTTP/3 Support**: Native support for modern HTTP protocols with multiplexing.
-- ✅ **HTTPS/TLS Support** - Secure your application with built-in HTTPS support.
-- ✅ **Modern Bootstrap 5 UI** - Responsive, mobile-first design with latest Bootstrap components.
-- ✅ **Testing Ready** - Codeception test suite with examples for functional and unit testing.
+<picture>
+    <source media="(min-width: 768px)" srcset="./docs/svgs/features.svg">
+    <img src="./docs/svgs/features-mobile.svg" alt="Feature Overview" style="width: 100%;">
+</picture>
 
 ## How it works
 
-The Yii2 Web Application Basic template provides a complete foundation for building modern web applications. Unlike starting 
+The Yii2 Web Application Basic template provides a complete foundation for building modern web applications. Unlike starting
 from scratch, this template includes.
 
 1. **Pre-configured structure** with organized directories for assets, views, models, and controllers.
@@ -94,6 +81,9 @@ Start the server in CLI mode
 Download and start the server with [Docker images](https://frankenphp.dev/docs/docker/)
 
 Gitbash/Windows
+
+<!-- editorconfig-checker-disable -->
+<!-- prettier-ignore-start -->
 ```bash
 docker run \
   -e CADDY_GLOBAL_OPTIONS="auto_https off" \
@@ -107,11 +97,16 @@ docker run \
   --name yii2-frankenphp-worker \
   dunglas/frankenphp
 ```
+<!-- prettier-ignore-end -->
+<!-- editorconfig-checker-enable -->
 
 > **Note:** Paths in the example (`//k/yii2-extensions/app-basic`) are for demonstration purposes only.  
 > Replace them with the actual path to your Yii2 project on your system.
 
 Linux/WSL
+
+<!-- editorconfig-checker-disable -->
+<!-- prettier-ignore-start -->
 ```bash
 docker run \
   -e CADDY_GLOBAL_OPTIONS="auto_https off" \
@@ -125,7 +120,10 @@ docker run \
   --name yii2-frankenphp-worker \
   dunglas/frankenphp
 ```
+<!-- prettier-ignore-end -->
+<!-- editorconfig-checker-enable -->
 
+> [!IMPORTANT]
 > Your application will be available at `https://localhost:8443` or at the address set in the `Caddyfile`.
 
 #### Directory structure
@@ -185,12 +183,16 @@ final class SiteController extends Controller
 
 ## Package information
 
+[![PHP](https://img.shields.io/badge/%3E%3D8.1-777BB4.svg?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/releases/8.1/en.php)
+[![Yii 2.0.x](https://img.shields.io/badge/2.0.53-0073AA.svg?style=for-the-badge&logo=yii&logoColor=white)](https://github.com/yiisoft/yii2/tree/2.0.53)
+[![Yii 22.0.x](https://img.shields.io/badge/22.0.x-0073AA.svg?style=for-the-badge&logo=yii&logoColor=white)](https://github.com/yiisoft/yii2/tree/22.0)
 [![Latest Stable Version](https://img.shields.io/packagist/v/yii2-extensions/franken-php.svg?style=for-the-badge&logo=packagist&logoColor=white&label=Stable)](https://packagist.org/packages/yii2-extensions/franken-php)
 
 ## Quality code
 
 [![Codecov](https://img.shields.io/codecov/c/github/yii2-extensions/app-basic.svg?branch=main&style=for-the-badge&logo=codecov&logoColor=white&label=Coverage)](https://codecov.io/github/yii2-extensions/app-basic)
 [![PHPStan Level Max](https://img.shields.io/badge/PHPStan-Level%20Max-4F5D95.svg?style=for-the-badge&logo=php&logoColor=white)](https://github.com/yii2-extensions/app-basic/actions/workflows/static.yml?query=branch%3Afranken-php)
+[![Super-Linter](https://img.shields.io/github/actions/workflow/status/yii2-extensions/app-basic/linter.yml?style=for-the-badge&label=Super-Linter&logo=github)](https://github.com/yii2-extensions/app-basic/actions/workflows/linter.yml?query=branch%3Afranken-php)
 [![StyleCI](https://img.shields.io/badge/StyleCI-Passed-44CC11.svg?style=for-the-badge&logo=styleci&logoColor=white)](https://github.styleci.io/repos/165419144?branch=franken-php)
 
 ## Documentation
