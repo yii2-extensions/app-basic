@@ -176,7 +176,7 @@ final class SiteController extends Controller
 
 ## Package information
 
-[![Development Status](https://img.shields.io/badge/Status-Dev-orange.svg?style=for-the-badge&logo=packagist&logoColor=white)](https://github.com/yii2-extensions/franken-php)
+[![Latest Stable Version](https://img.shields.io/packagist/v/yii2-extensions/franken-php.svg?style=for-the-badge&logo=packagist&logoColor=white&label=Stable)](https://packagist.org/packages/yii2-extensions/franken-php)
 
 ## Quality code
 
