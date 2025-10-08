@@ -2,9 +2,12 @@
 
 ## 0.1.2 October 8, 2025
 
+- Bug #194: Use stable version for `yii2-extensions/franken-php:^0.1` in `composer.json` (@terabytesoftw)
+- Bug #195: Update package badge in `README.md` to reflect latest stable version (@terabytesoftw)
 - Bug #197: Update workflows and documentation for improved CI/CD processes and feature clarity (@terabytesoftw)
 - Bug #198: Add `Super-Linter` badge to `README.md` for enhanced CI visibility (@terabytesoftw)
 - Bug #199: Correct indentation in console configuration section of `README.md` (@terabytesoftw)
+- Bug #200: Add Gitleaks configuration and update documentation for improved clarity and consistency (@terabytesoftw)
 
 ## 0.1.1 September 03, 2025
 
@@ -15,7 +18,7 @@
 - Bug #150: Add container configuration to `console` app setup (@terabytesoftw)
 - Enh #151: Implement `FrankenPHP` stack (@terabytesoftw)
 - Bug #152: Remove redundant `Quick start` section header from `README.md` (@terabytesoftw)
-- Bug #154:  Update links and headings in `README.md` for clarity and consistency (@terabytesoftw)
+- Bug #154: Update links and headings in `README.md` for clarity and consistency (@terabytesoftw)
 - Bug #156: Update `README.md` with new Packagist badges and improve structure (@terabytesoftw)
 - Bug #159: Remove redundant `Basic usage` section from `README.md` (@terabytesoftw)
 - Bug #162: Update `README.md` to reorganize `Package information` and add latest stable version badge (@terabytesoftw)
