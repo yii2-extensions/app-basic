@@ -47,27 +47,31 @@
             <div class="container">
                 <div class="alert-box">
                     <p class="alert-title"><strong>Asset Management</strong></p>
-                    <p class="alert-content">Optimized bundles • CSS &amp; JS management • Resource optimization</p>
+                    <p class="alert-content">Optimized asset bundles for CSS, JS, and resource management</p>
                 </div>
                 <div class="alert-box">
                     <p class="alert-title"><strong>Clean Architecture</strong></p>
-                    <p class="alert-content">Organized structure • Yii2 best practices • Extensible design</p>
+                    <p class="alert-content">Well-organized directory structure following Yii2 best practices</p>
                 </div>
                 <div class="alert-box">
                     <p class="alert-title"><strong>Console Commands</strong></p>
-                    <p class="alert-content">Background tasks • Maintenance tools • Custom commands</p>
+                    <p class="alert-content">Example console commands for background tasks and maintenance</p>
                 </div>
                 <div class="alert-box">
                     <p class="alert-title"><strong>Developer Tools</strong></p>
-                    <p class="alert-content">Debugging support • Logging • Development configs</p>
+                    <p class="alert-content">Debugging tools, logging, and development-friendly configurations</p>
+                </div>
+                <div class="alert-box">
+                    <p class="alert-title"><strong>HTTPS/TLS Support</strong></p>
+                    <p class="alert-content">Local HTTPS via TLS using mkcert-generated certificates</p>
                 </div>
                 <div class="alert-box">
                     <p class="alert-title"><strong>Modern Bootstrap 5 UI</strong></p>
-                    <p class="alert-content">Responsive design • Mobile-first • Latest components</p>
+                    <p class="alert-content">Responsive, mobile-first design with latest Bootstrap components</p>
                 </div>
                 <div class="alert-box">
                     <p class="alert-title"><strong>Testing Ready</strong></p>
-                    <p class="alert-content">Codeception suite • Functional tests • Unit testing examples</p>
+                    <p class="alert-content">Codeception test suite with examples for functional and unit testing</p>
                 </div>
             </div>
         </div>

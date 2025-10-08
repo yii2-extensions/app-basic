@@ -32,13 +32,10 @@
 
 ## Features
 
-- ✅ **Asset Management** - Optimized asset bundles for CSS, JS, and resource management.
-- ✅ **Clean Architecture** - Well-organized directory structure following Yii2 best practices.
-- ✅ **Console Commands** - Example console commands for background tasks and maintenance.
-- ✅ **Developer Tools** - Debugging tools, logging, and development-friendly configurations.
-- ✅ **HTTPS/TLS Support** - Local HTTPS via TLS using mkcert-generated certificates.
-- ✅ **Modern Bootstrap 5 UI** - Responsive, mobile-first design with latest Bootstrap components.
-- ✅ **Testing Ready** - Codeception test suite with examples for functional and unit testing.
+<picture>
+    <source media="(min-width: 768px)" srcset="./docs/svgs/features.svg">
+    <img src="./docs/svgs/features-mobile.svg" alt="Feature Overview" style="width: 100%;">
+</picture>
 
 ## How it works
 
