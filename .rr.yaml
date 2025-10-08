@@ -1,8 +1,8 @@
-version: '3'
+version: "3"
 rpc:
-    listen: 'tcp://127.0.0.1:6001'
+    listen: "tcp://127.0.0.1:6001"
 server:
-    command: 'php web/index.php'
+    command: "php web/index.php"
     relay: pipes
     env:
         YII_C3: true
@@ -13,8 +13,8 @@ http:
 
     ssl:
         address: :8443
-        cert: 'web/ssl/localhost.pem'
-        key: 'web/ssl/localhost-key.pem'
+        cert: "web/ssl/localhost.pem"
+        key: "web/ssl/localhost-key.pem"
         redirect: true
 
     headers:
@@ -22,8 +22,8 @@ http:
             "Cache-Control": "no-cache"
 
     middleware:
-        - static   # serve files first
-        - gzip     # compress dynamic output
+        - static # serve files first
+        - gzip # compress dynamic output
 
     static:
         dir: web
@@ -38,11 +38,11 @@ jobs:
     pool:
         num_workers: 2
         max_worker_memory: 100
-    consume: {  }
+    consume: {}
 kv:
     local:
         driver: memory
         config:
             interval: 60
 metrics:
-    address: '127.0.0.1:2112'
+    address: "127.0.0.1:2112"

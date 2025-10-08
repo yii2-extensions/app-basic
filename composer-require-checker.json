@@ -1,5 +1,3 @@
 {
-    "symbol-whitelist": [
-        "YII_ENV"
-    ]
+    "symbol-whitelist": ["YII_ENV"]
 }

@@ -1,10 +1,17 @@
-# Change Log
+# ChangeLog
 
-## 0.1.1 Under development
+## 0.1.2 October 8, 2025
+
+- Bug #196: Update package version for `yii2-extensions/road-runner` in `composer.json` and change badge to reflect latest stable version in `README.md` (@terabytesoftw)
+- Bug #197: Update workflows and documentation for improved CI/CD processes and feature clarity (@terabytesoftw)
+- Bug #198: Add `Super-Linter` badge to `README.md` for enhanced CI visibility (@terabytesoftw)
+- Bug #199: Correct indentation in console configuration section of `README.md` (@terabytesoftw)
+
+## 0.1.1 September 03, 2025
 
 - Enh #132: Implement RoadRunner stack (@terabytesoftw)
 - Bug #141: Move badges for latest stable version and total downloads in `README.md` to `Installation` section (@terabytesoftw)
-- Bug #142: Update installation instructions to use `dev-road-runner` in docs, remove  `extra.branch-alias` from `composer.json` (@terabytesoftw)
+- Bug #142: Update installation instructions to use `dev-road-runner` in docs, remove `extra.branch-alias` from `composer.json` (@terabytesoftw)
 - Bug #143: Add `Available stacks` section with `RoadRunner` badge to `README.md` (@terabytesoftw)
 - Bug #144: Remove outdated `RoadRunner` badge from `README.md` (@terabytesoftw)
 - Enh #145: Add HTTPS/TLS support with certificate and key for secure connections (@terabytesoftw)
