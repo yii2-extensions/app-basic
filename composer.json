@@ -19,7 +19,7 @@
         "ui-awesome/html-svg":"^0.2",
         "yiisoft/yii2": "^2.0.53|^22",
         "yiisoft/yii2-bootstrap5": "^2.0.50|^22",
-        "yii2-extensions/road-runner": "^0.1.0@dev"
+        "yii2-extensions/road-runner": "^0.1"
     },
     "require-dev": {
         "codeception/codeception": "^5.0.0",
