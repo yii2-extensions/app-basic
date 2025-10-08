@@ -103,7 +103,7 @@ php -S localhost:8080 -t web
 root/
 ├── config/                Configuration files
 │   ├── common/            Common configuration
-P│   ├── console/           Console configuration
+│   ├── console/           Console configuration
 │   ├── web/               Web configuration
 │   └── messages.php       Translation config
 ├── src/
