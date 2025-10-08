@@ -1,4 +1,4 @@
 modules:
-    config:
-        PhpBrowser:
-            url: https://localhost:443
+  config:
+    PhpBrowser:
+      url: https://localhost:443

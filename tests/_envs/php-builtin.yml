@@ -1,9 +1,9 @@
 extensions:
-    enabled:
-        - Codeception\Extension\RunProcess:
-            0: php -d variables_order=EGPCS -S localhost:8085 -t web
-            sleep: 1
+  enabled:
+    - Codeception\Extension\RunProcess:
+        0: php -d variables_order=EGPCS -S localhost:8085 -t web
+        sleep: 1
 modules:
-    config:
-        PhpBrowser:
-            url: http://localhost:8085
+  config:
+    PhpBrowser:
+      url: http://localhost:8085
