@@ -1,5 +1,6 @@
 ---
 ignored:
   - DL3006 # Always tag the version of an image explicitly.
+  - DL3008 # Pin versions in apk add.
   - DL3015 # Avoid additional packages by specifying `--no-install-recommends`.
   - DL4006 # Set the SHELL option -o pipefail before RUN with a pipe in it.
