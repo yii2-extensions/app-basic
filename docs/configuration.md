@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide covers all configuration options for the Yii2 Web Application Basic template, from basic setup to advanced 
+This guide covers all configuration options for the Yii2 Web Application Basic template, from basic setup to advanced
 customization for production environments.
 
 ## Configuration structure
@@ -201,13 +201,13 @@ declare(strict_types=1);
 $config = [
     'debug' => [
         'class' => yii\debug\Module::class,
-        // development only: allows all IPs. 
+        // development only: allows all IPs.
         // for production, replace '*' with explicit trusted IPs (for example, ['127.0.0.1', '::1']).
         'allowedIPs' => ['*'],
     ],
     'gii' => [
         'class' => yii\gii\Module::class,
-        // development only: allows all IPs. 
+        // development only: allows all IPs.
         // for production, replace '*' with explicit trusted IPs (for example, ['127.0.0.1', '::1']).
         'allowedIPs' => ['*'],
     ],
