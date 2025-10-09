@@ -6810,8 +6810,8 @@
             "version": "2.1.x-dev",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/31fdd1fbd95e1d2fc07ebd41d640f823bba10843",
-                "reference": "31fdd1fbd95e1d2fc07ebd41d640f823bba10843",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/d78a5d837c7642c68943977b751b84d680f003e3",
+                "reference": "d78a5d837c7642c68943977b751b84d680f003e3",
                 "shasum": ""
             },
             "require": {
@@ -6857,7 +6857,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-10-08T14:03:40+00:00"
+            "time": "2025-10-08T16:15:34+00:00"
         },
         {
             "name": "phpstan/phpstan-strict-rules",

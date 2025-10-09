@@ -1,6 +1,17 @@
 # ChangeLog
 
 ## 0.1.2 October 8, 2025
+## 0.1.3 Under development
+
+- Bug #204: Add YAML front matter to configuration files for consistency (@terabytesoftw)
+
+## 0.1.2 October 8, 2025
+
+- Bug #197: Update workflows and documentation for improved CI/CD processes and feature clarity (@terabytesoftw)
+- Bug #198: Add `Super-Linter` badge to `README.md` for enhanced CI visibility (@terabytesoftw)
+- Bug #199: Correct indentation in console configuration section of `README.md` (@terabytesoftw)
+
+## 0.1.1 September 03, 2025
 
 - Bug #196: Update package version for `yii2-extensions/road-runner` in `composer.json` and change badge to reflect latest stable version in `README.md` (@terabytesoftw)
 - Bug #197: Update workflows and documentation for improved CI/CD processes and feature clarity (@terabytesoftw)
