@@ -1,5 +1,7 @@
 # ChangeLog
 
+## 0.1.3 Under development
+
 ## 0.1.2 October 8, 2025
 
 - Bug #197: Update workflows and documentation for improved CI/CD processes and feature clarity (@terabytesoftw)
