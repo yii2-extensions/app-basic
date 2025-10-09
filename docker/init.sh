@@ -55,8 +55,7 @@ if [ -f "/app/composer.json" ] && [ ! -d "/app/vendor" ]; then
     echo -e "${YELLOW}Installing Composer dependencies...${NC}"
 
     # Give www-data write access without exposing the tree to everyone
-    chown -R www-data:www-data /app && \
-    chmod -R u+rwX,g+rwX /app
+    chown -R www-data:www-data /app && chmod -R u+rwX,g+rwX /app
 
     # Create and configure npm cache directory for www-data
     mkdir -p /var/www/.npm
