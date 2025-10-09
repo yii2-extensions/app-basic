@@ -1,0 +1,7 @@
+title = "gitleaks config"
+
+[allowlist]
+description = "Allowlisted files"
+paths = [
+    '''docker/ssl/.*''',
+]
