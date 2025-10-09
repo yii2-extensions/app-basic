@@ -20,8 +20,8 @@ services:
       retries: 3
       start_period: 40s
     ports:
-      - '8080:80'
-      - '8443:443'
+      - "8080:80"
+      - "8443:443"
     restart: always
     volumes:
       # Application directory (exclude vendor and node_modules for performance)
