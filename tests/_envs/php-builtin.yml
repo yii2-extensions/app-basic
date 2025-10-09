@@ -1,3 +1,4 @@
+---
 extensions:
   enabled:
     - Codeception\Extension\RunProcess:

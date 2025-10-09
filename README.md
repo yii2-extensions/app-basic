@@ -95,6 +95,7 @@ php -S localhost:8080 -t web
 ./yii serve
 ```
 
+> [!IMPORTANT]
 > Your application will be available at `http://localhost:8080` or at the address set in `--address` option.
 
 #### Directory structure
