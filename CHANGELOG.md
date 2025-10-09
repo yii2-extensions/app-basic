@@ -1,5 +1,9 @@
 # ChangeLog
 
+## 0.1.3 Under development
+
+- Bug #204: Add YAML front matter to configuration files for consistency (@terabytesoftw)
+
 ## 0.1.2 October 8, 2025
 
 - Bug #194: Use stable version for `yii2-extensions/franken-php:^0.1` in `composer.json` (@terabytesoftw)
