@@ -1,6 +1,12 @@
-# Change Log
+# ChangeLog
 
-## 0.1.1 Under development
+## 0.1.2 October 8, 2025
+
+- Bug #197: Update workflows and documentation for improved CI/CD processes and feature clarity (@terabytesoftw)
+- Bug #198: Add `Super-Linter` badge to `README.md` for enhanced CI visibility (@terabytesoftw)
+- Bug #199: Correct indentation in console configuration section of `README.md` (@terabytesoftw)
+
+## 0.1.1 September 03, 2025
 
 - Bug #141: Move badges for latest stable version and total downloads in `README.md` to `Installation` section (@terabytesoftw)
 - Bug #143: Add `Available stacks` section with `RoadRunner` badge to `README.md` (@terabytesoftw)
