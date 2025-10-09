@@ -23,8 +23,8 @@ services:
       retries: 6
       start_period: 30s
     ports:
-      - '8080:80'
-      - '8443:443'
+      - "8080:80"
+      - "8443:443"
     restart: always
     tty: true
     volumes:
