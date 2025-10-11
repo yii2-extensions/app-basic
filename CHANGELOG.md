@@ -3,6 +3,7 @@
 ## 0.1.3 Under development
 
 - Bug #204: Add YAML front matter to configuration files for consistency (@terabytesoftw)
+- Bug #210: Update `.editorconfig` and `.gitignore` for improved consistency and clarity (@terabytesoftw)
 
 ## 0.1.2 October 8, 2025
 
