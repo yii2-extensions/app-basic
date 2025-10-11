@@ -1,54 +1,47 @@
-#c3 codeception
+# codecoverage (if present)
+code_coverage
+
+# codeception (if present)
 c3.php
 
-# composer itself is not needed
-composer.phar
+# composer
+composer.lock
 
-# composer vendor dir
-/vendor
+# gitHub copilot config (if present)
+.copilot/
+.github/copilot/**
 
-# config plugin
-/config/.merge-plan.php
-
-#copilot
-copilot
-
-# local phpunit config
-/phpunit.xml
-
-# Mac DS_Store Files
+# mac ds_store (if present)
 .DS_Store
 
-# netbeans project files
+# netbeans project (if present)
 nbproject
 
-#node_modules
-/node_modules
-
-# package json lock
+# node_modules (if present)
+node_modules
 package-lock.json
 
-# phpstorm project files
+# phpstorm project (if present)
 .idea
 
-# phpunit itself is not needed
-phpunit.phar
+# phpunit (if present)
+.phpunit.cache
+.phpunit.result.cache
+phpunit.xml*
 
-# vagrant runtime
-/.vagrant
+# vagrant (if present)
+.vagrant
 
-# vscode
+# vendor
+vendor
+
+# vscode project (if present)
 .vscode
 
-# windows thumbnail cache
+# windows thumbnail cache (if present)
 Thumbs.db
 
-# yii console commands
-requirements.php
-/yii_test
-/yii_test.bat
-
-# zend studio for eclipse project files
+# zend studio for eclipse project (if present)
 .buildpath
 .project
 .settings
