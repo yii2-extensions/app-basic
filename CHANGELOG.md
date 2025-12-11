@@ -4,6 +4,7 @@
 
 - Bug #204: Add YAML front matter to configuration files for consistency (@terabytesoftw)
 - Bug #210: Update `.editorconfig` and `.gitignore` for improved consistency and clarity (@terabytesoftw)
+- Bug #211: Standardize indentation in `.rr.yaml` for improved readability (@terabytesoftw)
 
 ## 0.1.2 October 8, 2025
 
