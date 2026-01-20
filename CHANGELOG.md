@@ -5,6 +5,7 @@
 - Bug #204: Add YAML front matter to configuration files for consistency (@terabytesoftw)
 - Bug #210: Update `.editorconfig` and `.gitignore` for improved consistency and clarity (@terabytesoftw)
 - Enh #211: Add support for `UIAwesome\Html\Svg\Svg` component in footer and theme toggle components (@terabytesoftw)
+- Bug #212: Update PHPDoc to reflect correct parent class for `Controller` classes (@terabytesoftw)
 
 ## 0.1.2 October 8, 2025
 
