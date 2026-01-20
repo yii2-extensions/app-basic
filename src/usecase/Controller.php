@@ -8,7 +8,7 @@ use yii\filters\VerbFilter;
 use yii\web\ErrorAction;
 
 /**
- * @extends \yii\web\Controller<\yii\base\Module>
+ * @extends \yii\web\Controller<\yii\web\Application>
  */
 class Controller extends \yii\web\Controller
 {

@@ -7,7 +7,7 @@ namespace app\usecase\hello;
 use yii\console\{Controller, ExitCode};
 
 /**
- * @extends \yii\console\Controller<\yii\base\Module>
+ * @extends \yii\console\Controller<\yii\console\Application>
  */
 final class HelloController extends Controller
 {
