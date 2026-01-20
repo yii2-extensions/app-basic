@@ -8,6 +8,7 @@ use app\usecase\hello\HelloController;
 use Codeception\Test\Unit;
 use Yii;
 use yii\base\InvalidRouteException;
+use yii\console\Application;
 use yii\console\Exception;
 
 use function ob_get_clean;
@@ -36,7 +37,8 @@ final class HelloControllerTest extends Unit
      */
     public function testIndexActionOutputsHelloWorld(): void
     {
-        $helloControler = new HelloController('hello', Yii::$app);
+        $application = new Application(['id' => 'test', 'basePath' => dirname(__DIR__, 2)]);
+        $helloControler = new HelloController('hello', $application);
 
         ob_start();
         $helloControler->runAction('index');
