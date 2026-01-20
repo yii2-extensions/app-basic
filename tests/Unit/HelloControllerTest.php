@@ -38,10 +38,10 @@ final class HelloControllerTest extends Unit
     public function testIndexActionOutputsHelloWorld(): void
     {
         $application = new Application(['id' => 'test', 'basePath' => dirname(__DIR__, 2)]);
-        $helloControler = new HelloController('hello', $application);
+        $helloController = new HelloController('hello', $application);
 
         ob_start();
-        $helloControler->runAction('index');
+        $helloController->runAction('index');
         $result = ob_get_clean();
 
         self::assertSame("hello world\n", $result, 'Output should be \'hello world\'');
