@@ -6,6 +6,9 @@ namespace app\usecase\hello;
 
 use yii\console\{Controller, ExitCode};
 
+/**
+ * @extends \yii\console\Controller<\yii\base\Module>
+ */
 final class HelloController extends Controller
 {
     public function actionIndex(string $message = 'hello world'): int
