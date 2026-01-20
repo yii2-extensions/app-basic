@@ -13,9 +13,9 @@
     "require": {
         "php": ">=8.1",
         "php-forge/foxy": "^0.1",
-        "ui-awesome/html-svg": "^0.2",
+        "ui-awesome/html-svg": "^0.3",
         "vlucas/phpdotenv": "^5.6",
-        "yiisoft/yii2": "^2.0.53|^22",
+        "yiisoft/yii2": "^2.0.54|^22",
         "yiisoft/yii2-bootstrap5": "^2.0.50|^22"
     },
     "require-dev": {
