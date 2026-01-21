@@ -20,7 +20,7 @@ class Controller extends \yii\web\Controller
     /**
      * Layout view path alias.
      *
-     * @var string|false|null
+     * @var false|string|null
      */
     public $layout = '@resource/layout/main';
 
