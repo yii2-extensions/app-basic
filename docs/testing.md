@@ -7,7 +7,6 @@ Tool references:
 - [Codeception](https://codeception.com/) for unit tests.
 - [Composer Require Checker](https://github.com/maglnet/ComposerRequireChecker) for dependency definition checks.
 - [Easy Coding Standard (ECS)](https://github.com/easy-coding-standard/easy-coding-standard) for coding standards.
-- [Infection](https://infection.github.io/) for mutation testing.
 - [PHPStan](https://phpstan.org/) for static analysis.
 
 ## Coding standards (ECS)
@@ -24,20 +23,6 @@ Verify that runtime dependencies are correctly declared in `composer.json`.
 
 ```bash
 composer run check-dependencies
-```
-
-## Mutation testing (Infection)
-
-Run mutation testing.
-
-```bash
-composer run mutation
-```
-
-Run mutation testing with static analysis enabled.
-
-```bash
-composer run mutation-static
 ```
 
 ## Static analysis (PHPStan)
