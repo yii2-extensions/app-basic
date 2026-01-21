@@ -33,7 +33,7 @@
         "rector/rector": "^2.0",
         "symfony/browser-kit": "^6.3",
         "symfony/process": "^6.3",
-        "symplify/easy-coding-standard": "^12.3",
+        "symplify/easy-coding-standard": "^13.0",
         "yii2-extensions/phpstan": "^0.3.0",
         "yiisoft/yii2-debug": "^2.1.27|^22",
         "yiisoft/yii2-gii": "^2.2.7|^22"
@@ -73,7 +73,17 @@
         "check-dependencies": "./vendor/bin/composer-require-checker check",
         "ecs": "./vendor/bin/ecs --fix",
         "rector": "./vendor/bin/rector process src",
-        "static": "./vendor/bin/phpstan analyse src --memory-limit=512M",
+        "static": "./vendor/bin/phpstan analyse src --memory-limit=-1",
+        "sync-metadata": [
+            "curl -fsSL -o .editorconfig https://raw.githubusercontent.com/yii2-extensions/template/main/.editorconfig",
+            "curl -fsSL -o .gitattributes https://raw.githubusercontent.com/yii2-extensions/template/main/.gitattributes",
+            "curl -fsSL -o .gitignore https://raw.githubusercontent.com/yii2-extensions/template/main/.gitignore",
+            "curl -fsSL -o ecs.php https://raw.githubusercontent.com/yii2-extensions/template/main/ecs.php",
+            "curl -fsSL -o infection.json5 https://raw.githubusercontent.com/yii2-extensions/template/main/infection.json5",
+            "curl -fsSL -o phpstan.neon https://raw.githubusercontent.com/yii2-extensions/template/main/phpstan.neon",
+            "curl -fsSL -o phpunit.xml.dist https://raw.githubusercontent.com/yii2-extensions/template/main/phpunit.xml.dist",
+            "curl -fsSL -o rector.php https://raw.githubusercontent.com/yii2-extensions/template/main/rector.php"
+        ],
         "tests": "./vendor/bin/codecept run --env php-builtin"
     }
 }
