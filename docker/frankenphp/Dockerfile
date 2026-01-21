@@ -1,4 +1,4 @@
-FROM dunglas/frankenphp:1.8-php8.4
+FROM dunglas/frankenphp:1-php8.5.2
 
 # Build arguments for user/group
 ARG USER_ID=1000
