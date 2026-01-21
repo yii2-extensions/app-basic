@@ -6,6 +6,7 @@
 - Bug #210: Update `.editorconfig` and `.gitignore` for improved consistency and clarity (@terabytesoftw)
 - Enh #211: Add support for `UIAwesome\Html\Svg\Svg` component in footer and theme toggle components (@terabytesoftw)
 - Enh #213: Clarify the `@extends` annotations in the controllers (@mspirkov)
+- Bug `#215`: Remove outdated GitHub templates, funding information, use templates and funding from organization level (`@terabytesoftw`)
 
 ## 0.1.2 October 8, 2025
 
