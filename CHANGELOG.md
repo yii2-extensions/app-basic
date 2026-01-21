@@ -8,6 +8,7 @@
 - Enh #213: Clarify the `@extends` annotations in the controllers (@mspirkov)
 - Bug #215: Remove outdated GitHub templates, funding information, use templates and funding from organization level (@terabytesoftw)
 - Enh #216: Update configuration files and documentation for improved development workflow (@terabytesoftw)
+- Bug #217: Add copyright and license information to various files for compliance (@terabytesoftw)
 
 ## 0.1.2 October 8, 2025
 
