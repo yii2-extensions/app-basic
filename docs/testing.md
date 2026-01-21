@@ -1,36 +1,58 @@
 # Testing
 
-## Checking dependencies
+This package provides a consistent set of [Composer](https://getcomposer.org/) scripts for local validation.
 
-This package uses [composer-require-checker](https://github.com/maglnet/ComposerRequireChecker) to check if all dependencies are correctly defined in `composer.json`.
+Tool references:
 
-To run the checker, execute the following command.
+- [Codeception](https://codeception.com/) for unit tests.
+- [Composer Require Checker](https://github.com/maglnet/ComposerRequireChecker) for dependency definition checks.
+- [Easy Coding Standard (ECS)](https://github.com/easy-coding-standard/easy-coding-standard) for coding standards.
+- [PHPStan](https://phpstan.org/) for static analysis.
 
-```shell
-composer run check-dependencies
-```
+## Coding standards (ECS)
 
-## Easy coding standard
+Run Easy Coding Standard (ECS) and apply fixes.
 
-The code is checked with [Easy Coding Standard](https://github.com/easy-coding-standard/easy-coding-standard) and
-[PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer). To run it.
-
-```shell
+```bash
 composer run ecs
 ```
 
-## Static analysis
+## Dependency definition check
 
-The code is statically analyzed with [PHPStan](https://phpstan.org/). To run static analysis.
+Verify that runtime dependencies are correctly declared in `composer.json`.
 
-```shell
+```bash
+composer run check-dependencies
+```
+
+## Static analysis (PHPStan)
+
+Run static analysis.
+
+```bash
 composer run static
 ```
 
-## Unit tests
+## Unit tests (Codeception)
 
-The code is tested with [Codeception](https://github.com/Codeception/Codeception/). To run tests.
+Run the full test suite.
 
-```shell
-composer run test
+```bash
+composer run tests
+```
+
+## Passing extra arguments
+
+Composer scripts support forwarding additional arguments using `--`.
+
+Example: run a specific Codeception test or filter by name.
+
+```bash
+composer run tests -- --filter="MySpecificTest"
+```
+
+Example: run PHPStan with a different memory limit:
+
+```bash
+composer run static -- --memory-limit=512M
 ```
