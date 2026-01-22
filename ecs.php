@@ -2,15 +2,22 @@
 
 declare(strict_types=1);
 
-return Symplify\EasyCodingStandard\Config\ECSConfig::configure()
+use PhpCsFixer\Fixer\ClassNotation\{ClassDefinitionFixer, OrderedClassElementsFixer, OrderedTraitsFixer};
+use PhpCsFixer\Fixer\Import\{NoUnusedImportsFixer, OrderedImportsFixer};
+use PhpCsFixer\Fixer\Phpdoc\PhpdocTypesOrderFixer;
+use PhpCsFixer\Fixer\StringNotation\SingleQuoteFixer;
+use PhpCsFixer\Fixer\LanguageConstruct\NullableTypeDeclarationFixer;
+use Symplify\EasyCodingStandard\Config\ECSConfig;
+
+return ECSConfig::configure()
     ->withConfiguredRule(
-        PhpCsFixer\Fixer\ClassNotation\ClassDefinitionFixer::class,
+        ClassDefinitionFixer::class,
         [
             'space_before_parenthesis' => true,
         ],
     )
     ->withConfiguredRule(
-        PhpCsFixer\Fixer\ClassNotation\OrderedClassElementsFixer::class,
+        OrderedClassElementsFixer::class,
         [
             'order' => [
                 'use_trait',
@@ -24,7 +31,7 @@ return Symplify\EasyCodingStandard\Config\ECSConfig::configure()
                 'construct',
                 'destruct',
                 'magic',
-                'phpunit',
+                'method_protected_abstract',
                 'method_public',
                 'method_protected',
                 'method_private',
@@ -33,38 +40,47 @@ return Symplify\EasyCodingStandard\Config\ECSConfig::configure()
         ],
     )
     ->withConfiguredRule(
-        PhpCsFixer\Fixer\Import\OrderedImportsFixer::class,
+        OrderedImportsFixer::class,
         [
-            'imports_order' => ['class', 'function', 'const'],
+            'imports_order' => [
+                'class',
+                'function',
+                'const',
+            ],
             'sort_algorithm' => 'alpha',
         ],
     )
     ->withConfiguredRule(
-        PhpCsFixer\Fixer\ClassNotation\VisibilityRequiredFixer::class,
+        PhpdocTypesOrderFixer::class,
         [
-            'elements' => [],
+            'sort_algorithm' => 'none',
+            'null_adjustment' => 'always_last',
         ],
     )
     ->withFileExtensions(['php'])
     ->withPaths(
         [
-            __DIR__ . '/config',
             __DIR__ . '/src',
             __DIR__ . '/tests',
         ],
     )
-    ->withPhpCsFixerSets(perCS20: true)
+    ->withPhpCsFixerSets(perCS30: true)
     ->withPreparedSets(
         cleanCode: true,
-        comments:true,
+        comments: true,
         docblocks: true,
         namespaces: true,
         strict: true,
     )
     ->withRules(
         [
-            PhpCsFixer\Fixer\ClassNotation\OrderedTraitsFixer::class,
-            PhpCsFixer\Fixer\Import\NoUnusedImportsFixer::class,
-            PhpCsFixer\Fixer\StringNotation\SingleQuoteFixer::class,
+            NoUnusedImportsFixer::class,
+            OrderedTraitsFixer::class,
+            SingleQuoteFixer::class,
+        ]
+    )
+    ->withSkip(
+        [
+            NullableTypeDeclarationFixer::class,
         ]
     );

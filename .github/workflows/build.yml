@@ -22,11 +22,27 @@ jobs:
       AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     with:
-      codeception-command: vendor/bin/codecept run
+      codeception-command: |
+        mkdir -p private-files
+
+        frankenphp run --config ./Caddyfile > /tmp/frankenphp.log 2>&1 &
+        FRANKENPHP_PID=$!
+        trap 'kill "${FRANKENPHP_PID}" 2>/dev/null || true' EXIT
+
+        curl -kfsS --retry 30 --retry-connrefused --retry-delay 1 https://localhost:8443/ >/dev/null
+
+        vendor/bin/codecept run
       coverage-driver: none
       extensions: gd, intl, pcov
+      php-version: '["8.2","8.3","8.4","8.5"]'
       hook: |
-        curl https://frankenphp.dev/install.sh | sh
-        ./frankenphp run --config ./Caddyfile > /dev/null 2>&1 &
-        sleep 3
+        PHP_VERSION_MINOR="$(php -r 'echo PHP_MAJOR_VERSION . "." . PHP_MINOR_VERSION;')"
+
+        sudo groupadd --system frankenphp 2>/dev/null || true
+        sudo useradd --system --gid frankenphp --home /nonexistent --shell /usr/sbin/nologin frankenphp 2>/dev/null || true
+
+        curl -fsSL https://files.henderkes.com/install.sh | sudo sh -s "${PHP_VERSION_MINOR}"
+        sudo apt-get install -y frankenphp
+
+        sudo systemctl stop frankenphp >/dev/null 2>&1 || true
       os: '["ubuntu-latest"]'
