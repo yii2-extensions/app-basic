@@ -22,40 +22,14 @@ jobs:
       AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     with:
-      codeception-command: vendor/bin/codecept run
-      coverage-driver: none
-      extensions: gd, intl, pcov
-      php-version: '["8.2","8.3","8.4","8.5"]'
-      hook: |
-        PHP_VERSION_MINOR="$(php -r 'echo PHP_MAJOR_VERSION . "." . PHP_MINOR_VERSION;')"
+      codeception-command: |
+        mkdir -p private-files
 
-        if ! getent group frankenphp >/dev/null 2>&1; then
-          sudo groupadd --system frankenphp
-        fi
+        frankenphp run --config ./Caddyfile > /tmp/frankenphp.log 2>&1 &
+        FRANKENPHP_PID=$!
+        trap 'kill "${FRANKENPHP_PID}" 2>/dev/null || true' EXIT
 
-        if ! id -u frankenphp >/dev/null 2>&1; then
-          sudo useradd --system --gid frankenphp --home /nonexistent --shell /usr/sbin/nologin frankenphp
-        fi
-
-        curl -fsSL https://files.henderkes.com/install.sh | sudo sh -s "${PHP_VERSION_MINOR}"
-        sudo apt-get update
-        sudo apt-get install -y frankenphp
-
-        sudo mkdir -p "${GITHUB_WORKSPACE}/private-files"
-
-        sudo mkdir -p /etc/frankenphp
-        sudo cp ./Caddyfile /etc/frankenphp/Caddyfile
-
-        sudo mkdir -p /etc/systemd/system/frankenphp.service.d
-        sudo tee /etc/systemd/system/frankenphp.service.d/override.conf >/dev/null <<EOF
-        [Service]
-        WorkingDirectory=${GITHUB_WORKSPACE}
-        EOF
-
-        sudo systemctl daemon-reload
-        sudo systemctl restart frankenphp
-
-        for i in $(seq 1 15); do
+        for i in $(seq 1 30); do
           if curl -kfsS https://localhost:8443/ >/dev/null 2>&1; then
             break
           fi
@@ -63,4 +37,18 @@ jobs:
         done
 
         curl -kfsS https://localhost:8443/ >/dev/null
+
+        vendor/bin/codecept run
+      coverage-driver: none
+      extensions: gd, intl, pcov
+      php-version: '["8.2","8.3","8.4","8.5"]'
+      hook: |
+        PHP_VERSION_MINOR="$(php -r 'echo PHP_MAJOR_VERSION . "." . PHP_MINOR_VERSION;')"
+
+        sudo groupadd --system frankenphp 2>/dev/null || true
+        sudo useradd --system --gid frankenphp --home /nonexistent --shell /usr/sbin/nologin frankenphp 2>/dev/null || true
+
+        curl -fsSL https://files.henderkes.com/install.sh | sudo sh -s "${PHP_VERSION_MINOR}"
+        sudo apt-get update
+        sudo apt-get install -y frankenphp
       os: '["ubuntu-latest"]'
