@@ -220,12 +220,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "0d661fbf8e06e7dc62642332f2efa00a10ed7a71"
+                "reference": "4fa255cafa099309f2511fd8933710c1e9631112"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/0d661fbf8e06e7dc62642332f2efa00a10ed7a71",
-                "reference": "0d661fbf8e06e7dc62642332f2efa00a10ed7a71",
+                "url": "https://api.github.com/repos/composer/composer/zipball/4fa255cafa099309f2511fd8933710c1e9631112",
+                "reference": "4fa255cafa099309f2511fd8933710c1e9631112",
                 "shasum": ""
             },
             "require": {
@@ -326,7 +326,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-01-22T08:32:16+00:00"
+            "time": "2026-01-22T10:17:40+00:00"
         },
         {
             "name": "composer/metadata-minifier",
@@ -1016,12 +1016,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-forge/foxy.git",
-                "reference": "7b092f50e06b0ef27630f762ef0769ea99dddac3"
+                "reference": "583be98644ccb18ca10f0cffa8c0c804f2bc0650"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-forge/foxy/zipball/7b092f50e06b0ef27630f762ef0769ea99dddac3",
-                "reference": "7b092f50e06b0ef27630f762ef0769ea99dddac3",
+                "url": "https://api.github.com/repos/php-forge/foxy/zipball/583be98644ccb18ca10f0cffa8c0c804f2bc0650",
+                "reference": "583be98644ccb18ca10f0cffa8c0c804f2bc0650",
                 "shasum": ""
             },
             "require": {
@@ -1081,7 +1081,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-01-22T08:48:32+00:00"
+            "time": "2026-01-22T11:05:42+00:00"
         },
         {
             "name": "phpoption/phpoption",
