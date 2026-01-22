@@ -41,6 +41,26 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y frankenphp
 
-        frankenphp run --config ./Caddyfile > /dev/null 2>&1 &
-        sleep 3
+        sudo mkdir -p "${GITHUB_WORKSPACE}/private-files"
+
+        sudo mkdir -p /etc/frankenphp
+        sudo cp ./Caddyfile /etc/frankenphp/Caddyfile
+
+        sudo mkdir -p /etc/systemd/system/frankenphp.service.d
+        sudo tee /etc/systemd/system/frankenphp.service.d/override.conf >/dev/null <<EOF
+        [Service]
+        WorkingDirectory=${GITHUB_WORKSPACE}
+        EOF
+
+        sudo systemctl daemon-reload
+        sudo systemctl restart frankenphp
+
+        for i in $(seq 1 15); do
+          if curl -kfsS https://localhost:8443/ >/dev/null 2>&1; then
+            break
+          fi
+          sleep 1
+        done
+
+        curl -kfsS https://localhost:8443/ >/dev/null
       os: '["ubuntu-latest"]'
