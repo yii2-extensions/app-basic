@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-use UIAwesome\Html\Graphic\Svg;
+use UIAwesome\Html\Svg\Svg;
 use yii\helpers\Html;
 
 ?>
 <?= Html::button(
-    Svg::widget()
+    Svg::tag()
         ->attributes(['height' => '24', 'width' => '24'])
         ->filePath(Yii::getAlias('@npm/bootstrap-icons/icons/moon-stars.svg'))
         ->id('theme-light-icon')
-        ->render() .
-    Svg::widget()
+        ->render()
+    . Svg::tag()
         ->attributes(['height' => '24', 'width' => '24'])
         ->filePath(Yii::getAlias('@npm/bootstrap-icons/icons/sun.svg'))
         ->id('theme-dark-icon')

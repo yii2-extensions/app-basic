@@ -16,8 +16,8 @@ ToggleThemeAsset::register($this);
     <footer class ="d-flex justify-content-between align-items-center py-3 my-4 border-top border-secondary-subtle">
         <div class="col-md-4">
             <?= Html::a(
-                'Yii Framework' .
-                Html::tag(
+                'Yii Framework'
+                . Html::tag(
                     'span',
                     '&copy;' . date('Y') . ' <strong>YiiFramework™.</strong>',
                     [

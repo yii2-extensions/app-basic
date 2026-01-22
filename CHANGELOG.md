@@ -4,6 +4,14 @@
 
 - Bug #204: Add YAML front matter to configuration files for consistency (@terabytesoftw)
 - Bug #210: Update `.editorconfig` and `.gitignore` for improved consistency and clarity (@terabytesoftw)
+- Enh #211: Add support for `UIAwesome\Html\Svg\Svg` component in footer and theme toggle components (@terabytesoftw)
+- Enh #213: Clarify the `@extends` annotations in the controllers (@mspirkov)
+- Bug #215: Remove outdated GitHub templates, funding information, use templates and funding from organization level (@terabytesoftw)
+- Enh #216: Update configuration files and documentation for improved development workflow (@terabytesoftw)
+- Bug #217: Add copyright and license information to various files for compliance (@terabytesoftw)
+- Bug #220: Update `php-forge/foxy` version and add missing composer assets in `package.json` (@terabytesoftw)
+- Bug #223: Remove outdated composer asset dependencies from `package.json` (@terabytesoftw)
+- Enh #226: Add support for `PHP 8.5` in `docker-compose.yml` and GitHub workflows (@terabytesoftw)
 
 ## 0.1.2 October 8, 2025
 
