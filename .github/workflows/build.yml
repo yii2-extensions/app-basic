@@ -26,7 +26,20 @@ jobs:
       coverage-driver: none
       extensions: gd, intl, pcov
       hook: |
-        curl https://frankenphp.dev/install.sh | sh
-        ./frankenphp run --config ./Caddyfile > /dev/null 2>&1 &
+        export TERM=xterm
+
+        if ! getent group frankenphp >/dev/null 2>&1; then
+          sudo groupadd --system frankenphp
+        fi
+
+        if ! id -u frankenphp >/dev/null 2>&1; then
+          sudo useradd --system --gid frankenphp --home /nonexistent --shell /usr/sbin/nologin frankenphp
+        fi
+
+        curl -fsSL https://files.henderkes.com/install.sh | sh -s "${PHP_VERSION}"
+        sudo apt-get update
+        sudo apt-get install -y frankenphp
+
+        frankenphp run --config ./Caddyfile > /dev/null 2>&1 &
         sleep 3
       os: '["ubuntu-latest"]'
