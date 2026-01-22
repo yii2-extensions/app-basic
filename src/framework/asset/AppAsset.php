@@ -7,6 +7,12 @@ namespace app\framework\asset;
 use yii\bootstrap5\{BootstrapAsset, BootstrapPluginAsset};
 use yii\web\{AssetBundle, YiiAsset};
 
+/**
+ * Application asset bundle.
+ *
+ * @copyright Copyright (C) 2025 Terabytesoftw.
+ * @license https://opensource.org/license/bsd-3-clause BSD 3-Clause License.
+ */
 final class AppAsset extends AssetBundle
 {
     public $css = [

@@ -20,10 +20,11 @@ parameters:
         config_path: %currentWorkingDirectory%/config/web/app.php
 
     # Enable strict advanced checks
-    checkImplicitMixed: true
     checkBenevolentUnionTypes: true
-    checkUninitializedProperties: true
+    checkImplicitMixed: true
+    checkMissingCallableSignature: true
     checkTooWideReturnTypesInProtectedAndPublicMethods: true
+    checkUninitializedProperties: true
     reportAnyTypeWideningInVarTag: true
     reportPossiblyNonexistentConstantArrayOffset: true
     reportPossiblyNonexistentGeneralArrayOffset: true

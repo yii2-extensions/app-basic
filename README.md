@@ -202,6 +202,7 @@ For detailed configuration options and advanced usage:
 - 📚 [Installation Guide](docs/installation.md)
 - ⚙️ [Configuration Reference](docs/configuration.md)
 - 🧪 [Testing Guide](docs/testing.md)
+- 🛠️ [Development Guide](docs/development.md)
 - 📸 [Screenshots](docs/screenshots.md)
 
 ## Our social networks

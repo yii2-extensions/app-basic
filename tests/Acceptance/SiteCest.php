@@ -6,6 +6,12 @@ namespace app\tests\Acceptance;
 
 use app\tests\Support\AcceptanceTester;
 
+/**
+ * Acceptance tests for the site home page.
+ *
+ * @copyright Copyright (C) 2025 Terabytesoftw.
+ * @license https://opensource.org/license/bsd-3-clause BSD 3-Clause License.
+ */
 final class SiteCest
 {
     public function homePage(AcceptanceTester $I): void

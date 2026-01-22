@@ -13,11 +13,11 @@
     "require": {
         "php": ">=8.1",
         "httpsoft/http-message": "^1.0",
-        "php-forge/foxy": "^0.1",
-        "ui-awesome/html-svg": "^0.2",
+        "php-forge/foxy": "^0.2@dev",
+        "ui-awesome/html-svg": "^0.3",
         "vlucas/phpdotenv": "^5.6",
         "yii2-extensions/franken-php": "^0.1",
-        "yiisoft/yii2": "^2.0.53|^22",
+        "yiisoft/yii2": "^2.0.54|^22",
         "yiisoft/yii2-bootstrap5": "^2.0.50|^22"
     },
     "require-dev": {
@@ -35,7 +35,7 @@
         "rector/rector": "^2.0",
         "symfony/browser-kit": "^6.3",
         "symfony/process": "^6.3",
-        "symplify/easy-coding-standard": "^12.3",
+        "symplify/easy-coding-standard": "^13.0",
         "yii2-extensions/phpstan": "^0.3.0",
         "yii2-extensions/worker-debug": "^0.1",
         "yiisoft/yii2-gii": "^2.2.7|^22"
@@ -51,11 +51,11 @@
         }
     },
     "provide": {
+        "bower-asset/bootstrap": "^5.2",
         "bower-asset/inputmask": "5.0.9",
         "bower-asset/jquery": "3.6.1",
-        "bower-asset/punycode": "^1.4",
-        "bower-asset/yii2-pjax": "~2.0.1",
-        "bower-asset/bootstrap": "^5.2"
+        "bower-asset/punycode": "^2.2",
+        "bower-asset/yii2-pjax": "~2.0.1"
     },
     "extra": {
         "branch-alias": {
@@ -75,7 +75,17 @@
         "check-dependencies": "./vendor/bin/composer-require-checker check",
         "ecs": "./vendor/bin/ecs --fix",
         "rector": "./vendor/bin/rector process src",
-        "static": "./vendor/bin/phpstan analyse src --memory-limit=512M",
+        "static": "./vendor/bin/phpstan analyse src --memory-limit=-1",
+        "sync-metadata": [
+            "curl -fsSL -o .editorconfig https://raw.githubusercontent.com/yii2-extensions/template/main/.editorconfig",
+            "curl -fsSL -o .gitattributes https://raw.githubusercontent.com/yii2-extensions/template/main/.gitattributes",
+            "curl -fsSL -o .gitignore https://raw.githubusercontent.com/yii2-extensions/template/main/.gitignore",
+            "curl -fsSL -o ecs.php https://raw.githubusercontent.com/yii2-extensions/template/main/ecs.php",
+            "curl -fsSL -o infection.json5 https://raw.githubusercontent.com/yii2-extensions/template/main/infection.json5",
+            "curl -fsSL -o phpstan.neon https://raw.githubusercontent.com/yii2-extensions/template/main/phpstan.neon",
+            "curl -fsSL -o phpunit.xml.dist https://raw.githubusercontent.com/yii2-extensions/template/main/phpunit.xml.dist",
+            "curl -fsSL -o rector.php https://raw.githubusercontent.com/yii2-extensions/template/main/rector.php"
+        ],
         "tests": "./vendor/bin/codecept run --env php-builtin"
     }
 }
