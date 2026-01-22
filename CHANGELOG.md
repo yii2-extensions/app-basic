@@ -11,7 +11,7 @@
 - Bug #217: Add copyright and license information to various files for compliance (@terabytesoftw)
 - Bug #220: Update `php-forge/foxy` version and add missing composer assets in `package.json` (@terabytesoftw)
 - Bug #223: Remove outdated composer asset dependencies from `package.json` (@terabytesoftw)
-- Enh #226: Add support for `PHP 8.5` in `docker-compose.yml` and GitHub workflows (@terabytesoftw)
+- Bug #226: Add support for `PHP 8.5` in `docker-compose.yml` and GitHub workflows (@terabytesoftw)
 
 ## 0.1.2 October 8, 2025
 
