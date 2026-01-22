@@ -11,7 +11,7 @@
     "minimum-stability": "dev",
     "license": "BSD-3-Clause",
     "require": {
-        "php": ">=8.1",
+        "php": ">=8.2",
         "httpsoft/http-message": "^1.0",
         "php-forge/foxy": "^0.2@dev",
         "ui-awesome/html-svg": "^0.3",

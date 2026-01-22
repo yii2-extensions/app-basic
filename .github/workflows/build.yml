@@ -25,8 +25,9 @@ jobs:
       codeception-command: vendor/bin/codecept run
       coverage-driver: none
       extensions: gd, intl, pcov
+      php-version: '["8.2","8.3","8.4","8.5"]'
       hook: |
-        export TERM=xterm
+        PHP_VERSION_MINOR="$(php -r 'echo PHP_MAJOR_VERSION . "." . PHP_MINOR_VERSION;')"
 
         if ! getent group frankenphp >/dev/null 2>&1; then
           sudo groupadd --system frankenphp
@@ -36,7 +37,7 @@ jobs:
           sudo useradd --system --gid frankenphp --home /nonexistent --shell /usr/sbin/nologin frankenphp
         fi
 
-        curl -fsSL https://files.henderkes.com/install.sh | sh -s "${PHP_VERSION}"
+        curl -fsSL https://files.henderkes.com/install.sh | sudo sh -s "${PHP_VERSION_MINOR}"
         sudo apt-get update
         sudo apt-get install -y frankenphp
 
