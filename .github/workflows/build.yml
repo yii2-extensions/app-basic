@@ -51,4 +51,7 @@ jobs:
         curl -fsSL https://files.henderkes.com/install.sh | sudo sh -s "${PHP_VERSION_MINOR}"
         sudo apt-get update
         sudo apt-get install -y frankenphp
+
+        sudo systemctl stop frankenphp >/dev/null 2>&1 || true
+        sudo systemctl disable frankenphp >/dev/null 2>&1 || true
       os: '["ubuntu-latest"]'
