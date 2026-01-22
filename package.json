@@ -3,8 +3,6 @@
     "version": "0.1.0",
     "description": "A modern PHP framework designed for professional Web development",
     "dependencies": {
-        "@composer-asset/yiisoft--yii2": "file:./vendor/php-forge/composer-asset/yiisoft/yii2",
-        "@composer-asset/yiisoft--yii2-bootstrap5": "file:./vendor/php-forge/composer-asset/yiisoft/yii2-bootstrap5",
         "bootstrap": "^5.3.2",
         "bootstrap-icons": "^1.10.5",
         "inputmask": "^5.0.8",
