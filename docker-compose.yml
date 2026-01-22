@@ -1,6 +1,6 @@
 services:
   app-basic:
-    image: ghcr.io/yii2-extensions/apache:8.4-debian-dev-v1.0.0
+    image: ghcr.io/yii2-extensions/apache:8.5-debian-dev-v1.1.0
     container_name: yii2-apache
     environment:
       # Apache Configuration
