@@ -1060,12 +1060,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-forge/foxy.git",
-                "reference": "648db91ef23519c2730ad37473aa7cdd8aac95fd"
+                "reference": "ec42b524762240aa9dfb78e9117b621ae224a9c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-forge/foxy/zipball/648db91ef23519c2730ad37473aa7cdd8aac95fd",
-                "reference": "648db91ef23519c2730ad37473aa7cdd8aac95fd",
+                "url": "https://api.github.com/repos/php-forge/foxy/zipball/ec42b524762240aa9dfb78e9117b621ae224a9c1",
+                "reference": "ec42b524762240aa9dfb78e9117b621ae224a9c1",
                 "shasum": ""
             },
             "require": {
@@ -1125,7 +1125,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-01-22T10:34:26+00:00"
+            "time": "2026-01-22T11:43:27+00:00"
         },
         {
             "name": "psr/container",
@@ -6521,8 +6521,8 @@
             "version": "2.1.x-dev",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/16cf288c4594ba9dca7feddcde330331717835d7",
-                "reference": "16cf288c4594ba9dca7feddcde330331717835d7",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/d53287973a3039125629d37b97707e47898156a1",
+                "reference": "d53287973a3039125629d37b97707e47898156a1",
                 "shasum": ""
             },
             "require": {
@@ -6568,7 +6568,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-01-22T07:50:05+00:00"
+            "time": "2026-01-22T11:14:52+00:00"
         },
         {
             "name": "phpstan/phpstan-strict-rules",
