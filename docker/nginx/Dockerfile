@@ -1,4 +1,4 @@
-FROM yiisoftware/yii2-php:8.4-fpm-nginx
+FROM yiisoftware/yii2-php:8.5-fpm-latest-nginx
 
 # Build arguments for user/group
 ARG USER_ID=1000
