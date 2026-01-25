@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c37d641b8e9fbbcbde9116ce98fbb98c",
+    "content-hash": "15f1f55e055cec6430d8990101742c91",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1075,16 +1075,16 @@
         },
         {
             "name": "php-forge/foxy",
-            "version": "dev-main",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-forge/foxy.git",
-                "reference": "434f22d11336b9cb5593d4736fab58f0231324ad"
+                "reference": "78d5922c2c57a8fd7f8a9d992731c0620d1be03b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-forge/foxy/zipball/434f22d11336b9cb5593d4736fab58f0231324ad",
-                "reference": "434f22d11336b9cb5593d4736fab58f0231324ad",
+                "url": "https://api.github.com/repos/php-forge/foxy/zipball/78d5922c2c57a8fd7f8a9d992731c0620d1be03b",
+                "reference": "78d5922c2c57a8fd7f8a9d992731c0620d1be03b",
                 "shasum": ""
             },
             "require": {
@@ -1098,18 +1098,22 @@
             },
             "require-dev": {
                 "maglnet/composer-require-checker": "^4.7",
-                "php-forge/support": "^0.1",
+                "php-forge/coding-standard": "^0.1",
+                "php-forge/support": "^0.3",
+                "phpstan/extension-installer": "^1.4",
+                "phpstan/phpstan": "^2.1",
+                "phpstan/phpstan-strict-rules": "^2.0.3",
                 "phpunit/phpunit": "^10.5",
-                "symplify/easy-coding-standard": "^12.5",
-                "vimeo/psalm": "^5.26.1|^6.4.1",
                 "xepozz/internal-mocker": "^1.4"
             },
-            "default-branch": true,
+            "suggest": {
+                "infection/infection": "Mutation testing"
+            },
             "type": "composer-plugin",
             "extra": {
                 "class": "Foxy\\Foxy",
                 "branch-alias": {
-                    "dev-main": "0.2.x-dev"
+                    "dev-main": "0.3.x-dev"
                 }
             },
             "autoload": {
@@ -1119,7 +1123,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "BSD-3-Clause"
             ],
             "description": "Fast, reliable, and secure Bun/NPM/Yarn/pnpm bridge for Composer",
             "homepage": "https://github.com/fxpio/foxy",
@@ -1136,7 +1140,7 @@
             ],
             "support": {
                 "issues": "https://github.com/php-forge/foxy/issues",
-                "source": "https://github.com/php-forge/foxy/tree/main"
+                "source": "https://github.com/php-forge/foxy/tree/0.2.0"
             },
             "funding": [
                 {
@@ -1144,7 +1148,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-01-22T14:54:57+00:00"
+            "time": "2026-01-24T22:09:11+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -3255,16 +3259,16 @@
         },
         {
             "name": "ui-awesome/html-mixin",
-            "version": "0.3.1",
+            "version": "0.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ui-awesome/html-mixin.git",
-                "reference": "71342118e77ec88e2ef6d550051051e6fe91325e"
+                "reference": "0d43b4909e80a8d8fd92997508f0273bf9149639"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ui-awesome/html-mixin/zipball/71342118e77ec88e2ef6d550051051e6fe91325e",
-                "reference": "71342118e77ec88e2ef6d550051051e6fe91325e",
+                "url": "https://api.github.com/repos/ui-awesome/html-mixin/zipball/0d43b4909e80a8d8fd92997508f0273bf9149639",
+                "reference": "0d43b4909e80a8d8fd92997508f0273bf9149639",
                 "shasum": ""
             },
             "require": {
@@ -3275,12 +3279,11 @@
             "require-dev": {
                 "infection/infection": "^0.27|^0.32",
                 "maglnet/composer-require-checker": "^4.1",
+                "php-forge/coding-standard": "^0.1",
                 "phpstan/extension-installer": "^1.4",
                 "phpstan/phpstan": "^2.1",
                 "phpstan/phpstan-strict-rules": "^2.0.3",
-                "phpunit/phpunit": "^10.5",
-                "rector/rector": "^2.2",
-                "symplify/easy-coding-standard": "^13.0"
+                "phpunit/phpunit": "^10.5"
             },
             "type": "library",
             "extra": {
@@ -3297,31 +3300,32 @@
             "license": [
                 "BSD-3-Clause"
             ],
-            "description": "UI Awesome HTML Mixin for PHP.",
+            "description": "UI Awesome HTML Mixin Library for PHP.",
             "keywords": [
                 "html",
+                "library",
                 "mixin",
                 "php",
                 "ui-awesome"
             ],
             "support": {
                 "issues": "https://github.com/ui-awesome/html-mixin/issues",
-                "source": "https://github.com/ui-awesome/html-mixin/tree/0.3.1"
+                "source": "https://github.com/ui-awesome/html-mixin/tree/0.3.2"
             },
-            "time": "2026-01-20T07:55:06+00:00"
+            "time": "2026-01-24T22:07:39+00:00"
         },
         {
             "name": "ui-awesome/html-svg",
-            "version": "0.3.0",
+            "version": "0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ui-awesome/html-svg.git",
-                "reference": "f80e83c7adadd7837778e8a184b5b35636e74ff4"
+                "reference": "305ea6ea3229ca8b1282396b222bf058b4790dc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ui-awesome/html-svg/zipball/f80e83c7adadd7837778e8a184b5b35636e74ff4",
-                "reference": "f80e83c7adadd7837778e8a184b5b35636e74ff4",
+                "url": "https://api.github.com/repos/ui-awesome/html-svg/zipball/305ea6ea3229ca8b1282396b222bf058b4790dc1",
+                "reference": "305ea6ea3229ca8b1282396b222bf058b4790dc1",
                 "shasum": ""
             },
             "require": {
@@ -3338,13 +3342,12 @@
             "require-dev": {
                 "infection/infection": "^0.27|^0.32",
                 "maglnet/composer-require-checker": "^4.1",
+                "php-forge/coding-standard": "^0.1",
                 "php-forge/support": "^0.3",
                 "phpstan/extension-installer": "^1.4",
                 "phpstan/phpstan": "^2.1",
                 "phpstan/phpstan-strict-rules": "^2.0.3",
-                "phpunit/phpunit": "^10.5",
-                "rector/rector": "^2.2",
-                "symplify/easy-coding-standard": "^13.0"
+                "phpunit/phpunit": "^10.5"
             },
             "type": "library",
             "extra": {
@@ -3361,7 +3364,7 @@
             "license": [
                 "BSD-3-Clause"
             ],
-            "description": "UI Awesome HTML SVG library for PHP.",
+            "description": "UI Awesome HTML SVG Library for PHP.",
             "keywords": [
                 "html",
                 "library",
@@ -3371,7 +3374,7 @@
             ],
             "support": {
                 "issues": "https://github.com/ui-awesome/html-svg/issues",
-                "source": "https://github.com/ui-awesome/html-svg/tree/0.3.0"
+                "source": "https://github.com/ui-awesome/html-svg/tree/0.3.1"
             },
             "funding": [
                 {
@@ -3379,7 +3382,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-01-20T11:05:17+00:00"
+            "time": "2026-01-24T22:17:17+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -5365,6 +5368,52 @@
             "time": "2022-02-21T01:04:05+00:00"
         },
         {
+            "name": "php-forge/coding-standard",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-forge/coding-standard.git",
+                "reference": "94ec5394846284124483ad971725e0b5709c1079"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-forge/coding-standard/zipball/94ec5394846284124483ad971725e0b5709c1079",
+                "reference": "94ec5394846284124483ad971725e0b5709c1079",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "rector/rector": "^2.1",
+                "symplify/easy-coding-standard": "^13.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "0.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PHPForge\\CodingStandard\\": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Coding standards for PHP projects.",
+            "keywords": [
+                "coding-standard",
+                "php",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/php-forge/coding-standard/issues",
+                "source": "https://github.com/php-forge/coding-standard/tree/0.1.0"
+            },
+            "time": "2026-01-24T17:29:00+00:00"
+        },
+        {
             "name": "phpspec/php-diff",
             "version": "v1.1.3",
             "source": {
@@ -5459,8 +5508,8 @@
             "version": "2.1.x-dev",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/905412048c9b33fe02a8e7f89241893c4a89ce01",
-                "reference": "905412048c9b33fe02a8e7f89241893c4a89ce01",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/1a29c005258c0c991358d8ef6ca7b6acc78bdb10",
+                "reference": "1a29c005258c0c991358d8ef6ca7b6acc78bdb10",
                 "shasum": ""
             },
             "require": {
@@ -5506,7 +5555,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-01-22T14:12:14+00:00"
+            "time": "2026-01-24T22:10:34+00:00"
         },
         {
             "name": "phpstan/phpstan-strict-rules",
@@ -5945,12 +5994,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "5240ea866cd10c15135b8a9b3b8703b447d2ed07"
+                "reference": "79dee3d2685b80518e94b9ea741b3f822b213a5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/5240ea866cd10c15135b8a9b3b8703b447d2ed07",
-                "reference": "5240ea866cd10c15135b8a9b3b8703b447d2ed07",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/79dee3d2685b80518e94b9ea741b3f822b213a5e",
+                "reference": "79dee3d2685b80518e94b9ea741b3f822b213a5e",
                 "shasum": ""
             },
             "require": {
@@ -5970,7 +6019,7 @@
                 "phpunit/php-text-template": "^5.0.0",
                 "phpunit/php-timer": "^8.0.0",
                 "sebastian/cli-parser": "^4.2.0",
-                "sebastian/comparator": "^7.1.3",
+                "sebastian/comparator": "^7.1.4",
                 "sebastian/diff": "^7.0.0",
                 "sebastian/environment": "^8.0.3",
                 "sebastian/exporter": "^7.0.2",
@@ -6018,7 +6067,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.5"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.5.7"
             },
             "funding": [
                 {
@@ -6042,7 +6091,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-01-22T04:43:43+00:00"
+            "time": "2026-01-24T16:12:53+00:00"
         },
         {
             "name": "psr/event-dispatcher",
@@ -6156,12 +6205,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "6bd1bfd66c5d84774e5bb7a8ceda4289aac93169"
+                "reference": "ae78336dec4dc3623d3c84f590585f1eec923d28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/6bd1bfd66c5d84774e5bb7a8ceda4289aac93169",
-                "reference": "6bd1bfd66c5d84774e5bb7a8ceda4289aac93169",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/ae78336dec4dc3623d3c84f590585f1eec923d28",
+                "reference": "ae78336dec4dc3623d3c84f590585f1eec923d28",
                 "shasum": ""
             },
             "require": {
@@ -6228,7 +6277,7 @@
                 "issues": "https://github.com/bobthecow/psysh/issues",
                 "source": "https://github.com/bobthecow/psysh/tree/main"
             },
-            "time": "2026-01-07T23:02:52+00:00"
+            "time": "2026-01-23T15:00:11+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -6409,12 +6458,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/comparator.git",
-                "reference": "029d0f03dc37cb6e8ba1cffd3150ddc74ade37b6"
+                "reference": "740247c4b621becf9e52da7eb6ae64c3f7c32dad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/029d0f03dc37cb6e8ba1cffd3150ddc74ade37b6",
-                "reference": "029d0f03dc37cb6e8ba1cffd3150ddc74ade37b6",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/740247c4b621becf9e52da7eb6ae64c3f7c32dad",
+                "reference": "740247c4b621becf9e52da7eb6ae64c3f7c32dad",
                 "shasum": ""
             },
             "require": {
@@ -6493,7 +6542,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-12-31T13:44:11+00:00"
+            "time": "2026-01-24T09:33:40+00:00"
         },
         {
             "name": "sebastian/complexity",
@@ -7765,6 +7814,7 @@
                 "symfony/uid": "^7.4|^8.0",
                 "twig/twig": "^3.12"
             },
+            "default-branch": true,
             "bin": [
                 "Resources/bin/var-dump-server"
             ],
@@ -8424,9 +8474,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "php-forge/foxy": 20
-    },
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
