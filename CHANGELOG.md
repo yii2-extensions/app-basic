@@ -11,6 +11,8 @@
 - Bug #217: Add copyright and license information to various files for compliance (@terabytesoftw)
 - Bug #220: Update `php-forge/foxy` version and add missing composer assets in `package.json` (@terabytesoftw)
 - Bug #223: Remove outdated composer asset dependencies from `package.json` (@terabytesoftw)
+- Enh #229: Add `php-forge/coding-standard` to development dependencies for code quality checks (@terabytesoftw)
+- Bug #230: Add section for automated refactoring using `Rector` in testing documentation (@terabytesoftw)
 
 ## 0.1.2 October 8, 2025
 
