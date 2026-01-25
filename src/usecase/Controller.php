@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace app\usecase;
 
 use yii\filters\VerbFilter;
-use yii\web\ErrorAction;
+use yii\web\{Application, ErrorAction};
 
 /**
  * Base web controller for application use cases.
  *
- * @extends \yii\web\Controller<\yii\web\Application>
+ * @extends \yii\web\Controller<Application>
  *
  * @copyright Copyright (C) 2025 Terabytesoftw.
  * @license https://opensource.org/license/bsd-3-clause BSD 3-Clause License.
