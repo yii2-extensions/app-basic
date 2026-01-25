@@ -8,6 +8,15 @@ Tool references:
 - [Composer Require Checker](https://github.com/maglnet/ComposerRequireChecker) for dependency definition checks.
 - [Easy Coding Standard (ECS)](https://github.com/easy-coding-standard/easy-coding-standard) for coding standards.
 - [PHPStan](https://phpstan.org/) for static analysis.
+- [Rector](https://github.com/rectorphp/rector) for automated refactoring.
+
+## Automated refactoring (Rector)
+
+Run Rector to apply automated code refactoring.
+
+```bash
+composer run rector
+```
 
 ## Coding standards (ECS)
 
