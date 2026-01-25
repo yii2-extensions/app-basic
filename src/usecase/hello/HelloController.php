@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace app\usecase\hello;
 
-use yii\console\{Controller, ExitCode};
+use yii\console\{Application, Controller, ExitCode};
 
 /**
  * Hello console controller.
  *
- * @extends \yii\console\Controller<\yii\console\Application>
+ * @extends Controller<Application>
  *
  * @copyright Copyright (C) 2025 Terabytesoftw.
  * @license https://opensource.org/license/bsd-3-clause BSD 3-Clause License.
