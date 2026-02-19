@@ -1,6 +1,6 @@
 # ChangeLog
 
-## 0.1.3 Under development
+## 0.2.0 Under development
 
 - Bug #204: Add YAML front matter to configuration files for consistency (@terabytesoftw)
 - Bug #210: Update `.editorconfig` and `.gitignore` for improved consistency and clarity (@terabytesoftw)
@@ -14,6 +14,7 @@
 - Bug #227: Add support for PHP 8.5 in docker-compose.yml and GitHub workflows (@terabytesoftw)
 - Enh #229: Add `php-forge/coding-standard` to development dependencies for code quality checks (@terabytesoftw)
 - Bug #230: Add section for automated refactoring using `Rector` in testing documentation (@terabytesoftw)
+- Dep #235: Update `yii2-extensions/franken-php` `^0.1` to `^0.2` (@terabytesoftw)
 
 ## 0.1.2 October 8, 2025
 
