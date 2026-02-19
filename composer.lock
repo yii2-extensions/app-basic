@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7e3be57cd1c68a59e69c8b9c914a6009",
+    "content-hash": "1a0c8189842874ef51c3899f432268c0",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -800,23 +800,23 @@
         },
         {
             "name": "google/protobuf",
-            "version": "v4.33.5",
+            "version": "v5.34.0RC2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "ebe8010a61b2ae0cff0d246fe1c4d44e9f7dfa6d"
+                "reference": "3f6644d863943ebedafacfbfff2cb1c967a766b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/ebe8010a61b2ae0cff0d246fe1c4d44e9f7dfa6d",
-                "reference": "ebe8010a61b2ae0cff0d246fe1c4d44e9f7dfa6d",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/3f6644d863943ebedafacfbfff2cb1c967a766b2",
+                "reference": "3f6644d863943ebedafacfbfff2cb1c967a766b2",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1.0"
+                "php": ">=8.2.0"
             },
             "require-dev": {
-                "phpunit/phpunit": ">=5.0.0 <8.5.27"
+                "phpunit/phpunit": ">=11.5.0 <12.0.0"
             },
             "suggest": {
                 "ext-bcmath": "Need to support JSON deserialization"
@@ -838,9 +838,9 @@
                 "proto"
             ],
             "support": {
-                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v4.33.5"
+                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v5.34.0RC2"
             },
-            "time": "2026-01-29T20:49:00+00:00"
+            "time": "2026-02-06T18:33:43+00:00"
         },
         {
             "name": "httpsoft/http-message",
@@ -4570,12 +4570,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii2-extensions/psr-bridge.git",
-                "reference": "7f15f594b008f2f2a246d51555f09767e66811c8"
+                "reference": "bc8f897b6af5ae4e5183776236281377b222b0cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2-extensions/psr-bridge/zipball/7f15f594b008f2f2a246d51555f09767e66811c8",
-                "reference": "7f15f594b008f2f2a246d51555f09767e66811c8",
+                "url": "https://api.github.com/repos/yii2-extensions/psr-bridge/zipball/bc8f897b6af5ae4e5183776236281377b222b0cf",
+                "reference": "bc8f897b6af5ae4e5183776236281377b222b0cf",
                 "shasum": ""
             },
             "require": {
@@ -4630,7 +4630,7 @@
                 "issues": "https://github.com/yii2-extensions/psr-bridge/issues",
                 "source": "https://github.com/yii2-extensions/psr-bridge/tree/main"
             },
-            "time": "2026-02-18T22:16:51+00:00"
+            "time": "2026-02-19T00:39:25+00:00"
         },
         {
             "name": "yii2-extensions/road-runner",
@@ -6497,12 +6497,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/extension-installer.git",
-                "reference": "5120c4519119dc588f35bf2b6fa402293f86a3b4"
+                "reference": "bfa982b8ab8de00e737507c653380def73e542a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/extension-installer/zipball/5120c4519119dc588f35bf2b6fa402293f86a3b4",
-                "reference": "5120c4519119dc588f35bf2b6fa402293f86a3b4",
+                "url": "https://api.github.com/repos/phpstan/extension-installer/zipball/bfa982b8ab8de00e737507c653380def73e542a9",
+                "reference": "bfa982b8ab8de00e737507c653380def73e542a9",
                 "shasum": ""
             },
             "require": {
@@ -6538,15 +6538,15 @@
                 "issues": "https://github.com/phpstan/extension-installer/issues",
                 "source": "https://github.com/phpstan/extension-installer/tree/1.4.x"
             },
-            "time": "2026-02-18T11:19:15+00:00"
+            "time": "2026-02-19T08:19:09+00:00"
         },
         {
             "name": "phpstan/phpstan",
             "version": "2.2.x-dev",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/bf2080c6806f505a6c3a0ee31e87cb3636b9f2a9",
-                "reference": "bf2080c6806f505a6c3a0ee31e87cb3636b9f2a9",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/0e542332be569672f1d2063a7cb46700a86479c8",
+                "reference": "0e542332be569672f1d2063a7cb46700a86479c8",
                 "shasum": ""
             },
             "require": {
@@ -6592,7 +6592,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-18T16:19:46+00:00"
+            "time": "2026-02-19T09:57:51+00:00"
         },
         {
             "name": "phpstan/phpstan-strict-rules",
@@ -6600,12 +6600,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan-strict-rules.git",
-                "reference": "38c26a9b6e693fdc313c2eccd252f1bbaaa9011a"
+                "reference": "e8e9032ea9779bf2dbf9065baa145bd018d40f41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan-strict-rules/zipball/38c26a9b6e693fdc313c2eccd252f1bbaaa9011a",
-                "reference": "38c26a9b6e693fdc313c2eccd252f1bbaaa9011a",
+                "url": "https://api.github.com/repos/phpstan/phpstan-strict-rules/zipball/e8e9032ea9779bf2dbf9065baa145bd018d40f41",
+                "reference": "e8e9032ea9779bf2dbf9065baa145bd018d40f41",
                 "shasum": ""
             },
             "require": {
@@ -6644,7 +6644,7 @@
                 "issues": "https://github.com/phpstan/phpstan-strict-rules/issues",
                 "source": "https://github.com/phpstan/phpstan-strict-rules/tree/2.0.x"
             },
-            "time": "2026-02-18T11:15:25+00:00"
+            "time": "2026-02-19T08:19:46+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -9382,7 +9382,14 @@
             "time": "2025-02-13T21:21:17+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "google/protobuf",
+            "version": "5.34.0.0-RC2",
+            "alias": "v4.33.5",
+            "alias_normalized": "4.33.5.0"
+        }
+    ],
     "minimum-stability": "dev",
     "stability-flags": {
         "yii2-extensions/road-runner": 20
