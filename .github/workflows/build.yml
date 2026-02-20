@@ -17,23 +17,24 @@ permissions:
 
 jobs:
   codeception:
-    uses: yii2-framework/actions/.github/workflows/codeception.yml@fix_debug
+    uses: yii2-framework/actions/.github/workflows/codeception.yml@main
     secrets:
       AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     with:
       codeception-command: |
-        mkdir -p private-files runtime /tmp/yii-sessions
+        mkdir -p private-files /tmp/yii-sessions
 
         frankenphp run --config ./Caddyfile > /tmp/frankenphp.log 2>&1 &
         FRANKENPHP_PID=$!
         trap 'kill "${FRANKENPHP_PID}" 2>/dev/null || true' EXIT
 
+        curl -kfsS --retry 30 --retry-connrefused --retry-delay 1 https://localhost:8443/ >/dev/null
+
         vendor/bin/codecept run
       coverage-driver: none
-      debug: true
       extensions: gd, intl, pcov
-      php-version: '["8.4"]'
+      php-version: '["8.2","8.3","8.4","8.5"]'
       hook: |
         PHP_VERSION_MINOR="$(php -r 'echo PHP_MAJOR_VERSION . "." . PHP_MINOR_VERSION;')"
 
