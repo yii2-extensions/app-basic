@@ -28,7 +28,6 @@ jobs:
         frankenphp run --config ./Caddyfile > /tmp/frankenphp.log 2>&1 &
         FRANKENPHP_PID=$!
         trap 'kill "${FRANKENPHP_PID}" 2>/dev/null || true' EXIT
-
         vendor/bin/codecept run
       coverage-driver: none
       debug: true
