@@ -4,7 +4,7 @@
     https_port 8443
 
     frankenphp {
-        php_ini session.save_path ./runtime
+        php_ini session.save_path /tmp/yii-sessions
         worker ./web/index.php
     }
 }
