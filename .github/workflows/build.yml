@@ -29,8 +29,6 @@ jobs:
         FRANKENPHP_PID=$!
         trap 'kill "${FRANKENPHP_PID}" 2>/dev/null || true' EXIT
 
-        curl -kfsS --retry 30 --retry-connrefused --retry-delay 1 https://localhost:8443/ >/dev/null
-
         vendor/bin/codecept run
       coverage-driver: none
       debug: true
