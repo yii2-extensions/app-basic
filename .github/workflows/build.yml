@@ -29,7 +29,7 @@ jobs:
         FRANKENPHP_PID=$!
         trap 'kill "${FRANKENPHP_PID}" 2>/dev/null || true' EXIT
 
-        curl -kfsS --retry 30 --retry-connrefused --retry-delay 1 https://localhost:8443/ >/dev/null
+        curl -kfsS --retry 30 --retry-connrefused --retry-delay 1 https://localhost:8443/ >/dev/null || (cat /tmp/frankenphp.log; exit 1)
 
         vendor/bin/codecept run
       coverage-driver: none
@@ -42,7 +42,7 @@ jobs:
         sudo useradd --system --gid frankenphp --home /nonexistent --shell /usr/sbin/nologin frankenphp 2>/dev/null || true
 
         curl -fsSL https://files.henderkes.com/install.sh | sudo sh -s "${PHP_VERSION_MINOR}"
-        sudo apt-get install -y frankenphp
+        sudo apt-get install -y frankenphp php-zts-gd php-zts-intl
 
         sudo systemctl stop frankenphp >/dev/null 2>&1 || true
       os: '["ubuntu-latest"]'
