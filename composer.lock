@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1a0c8189842874ef51c3899f432268c0",
+    "content-hash": "1a113fab1fcf8aab81e9f58b51fc372e",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -2162,16 +2162,16 @@
         },
         {
             "name": "spiral/roadrunner",
-            "version": "v2025.1.7",
+            "version": "v2025.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roadrunner-server/roadrunner.git",
-                "reference": "f0e9beb540b12e85e36ac5ff83f728eed0436164"
+                "reference": "e3b05713e8d65ad4d5104d839890cc4892d63b2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roadrunner-server/roadrunner/zipball/f0e9beb540b12e85e36ac5ff83f728eed0436164",
-                "reference": "f0e9beb540b12e85e36ac5ff83f728eed0436164",
+                "url": "https://api.github.com/repos/roadrunner-server/roadrunner/zipball/e3b05713e8d65ad4d5104d839890cc4892d63b2d",
+                "reference": "e3b05713e8d65ad4d5104d839890cc4892d63b2d",
                 "shasum": ""
             },
             "type": "metapackage",
@@ -2199,7 +2199,7 @@
                 "chat": "https://discord.gg/V6EK4he",
                 "docs": "https://docs.roadrunner.dev/",
                 "issues": "https://github.com/roadrunner-server/roadrunner/issues",
-                "source": "https://github.com/roadrunner-server/roadrunner/tree/v2025.1.7"
+                "source": "https://github.com/roadrunner-server/roadrunner/tree/v2025.1.8"
             },
             "funding": [
                 {
@@ -2207,7 +2207,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-17T07:53:07+00:00"
+            "time": "2026-02-19T14:32:44+00:00"
         },
         {
             "name": "spiral/roadrunner-cli",
@@ -2281,16 +2281,16 @@
         },
         {
             "name": "spiral/roadrunner-http",
-            "version": "3.x-dev",
+            "version": "4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roadrunner-php/http.git",
-                "reference": "a44a5f7d54d4ee8a14fe99cd22dcd128db270c88"
+                "reference": "8e241065a26cc500d021a29ce28be0d5f4b80a8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roadrunner-php/http/zipball/a44a5f7d54d4ee8a14fe99cd22dcd128db270c88",
-                "reference": "a44a5f7d54d4ee8a14fe99cd22dcd128db270c88",
+                "url": "https://api.github.com/repos/roadrunner-php/http/zipball/8e241065a26cc500d021a29ce28be0d5f4b80a8f",
+                "reference": "8e241065a26cc500d021a29ce28be0d5f4b80a8f",
                 "shasum": ""
             },
             "require": {
@@ -2316,6 +2316,7 @@
                 "ext-protobuf": "Provides Protocol Buffers support. Without it, performance will be lower.",
                 "spiral/roadrunner-cli": "Provides RoadRunner installation and management CLI tools"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -2359,7 +2360,7 @@
                 "docs": "https://docs.roadrunner.dev",
                 "forum": "https://forum.roadrunner.dev/",
                 "issues": "https://github.com/roadrunner-server/roadrunner/issues",
-                "source": "https://github.com/roadrunner-php/http/tree/v3.6.0"
+                "source": "https://github.com/roadrunner-php/http/tree/4.x"
             },
             "funding": [
                 {
@@ -2367,7 +2368,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-31T12:42:23+00:00"
+            "time": "2026-02-18T16:00:02+00:00"
         },
         {
             "name": "spiral/roadrunner-worker",
@@ -4566,16 +4567,16 @@
         },
         {
             "name": "yii2-extensions/psr-bridge",
-            "version": "dev-main",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii2-extensions/psr-bridge.git",
-                "reference": "bc8f897b6af5ae4e5183776236281377b222b0cf"
+                "reference": "43de28a32447f9c67e34694fadeaafaa415fa6b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2-extensions/psr-bridge/zipball/bc8f897b6af5ae4e5183776236281377b222b0cf",
-                "reference": "bc8f897b6af5ae4e5183776236281377b222b0cf",
+                "url": "https://api.github.com/repos/yii2-extensions/psr-bridge/zipball/43de28a32447f9c67e34694fadeaafaa415fa6b0",
+                "reference": "43de28a32447f9c67e34694fadeaafaa415fa6b0",
                 "shasum": ""
             },
             "require": {
@@ -4602,11 +4603,10 @@
             "suggest": {
                 "yii2-extensions/worker-debug": "Provides Yii debug integration for PSR requests"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "0.2.x-dev"
+                    "dev-main": "0.3.x-dev"
                 }
             },
             "autoload": {
@@ -4628,22 +4628,22 @@
             ],
             "support": {
                 "issues": "https://github.com/yii2-extensions/psr-bridge/issues",
-                "source": "https://github.com/yii2-extensions/psr-bridge/tree/main"
+                "source": "https://github.com/yii2-extensions/psr-bridge/tree/0.2.0"
             },
-            "time": "2026-02-19T00:39:25+00:00"
+            "time": "2026-02-20T19:25:25+00:00"
         },
         {
             "name": "yii2-extensions/road-runner",
-            "version": "dev-main",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii2-extensions/road-runner.git",
-                "reference": "8fda0aad4b12b6d6e3006dae20a1ab745de5796c"
+                "reference": "762cf2ec91503d185b7fba459fa317b449d800b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2-extensions/road-runner/zipball/8fda0aad4b12b6d6e3006dae20a1ab745de5796c",
-                "reference": "8fda0aad4b12b6d6e3006dae20a1ab745de5796c",
+                "url": "https://api.github.com/repos/yii2-extensions/road-runner/zipball/762cf2ec91503d185b7fba459fa317b449d800b7",
+                "reference": "762cf2ec91503d185b7fba459fa317b449d800b7",
                 "shasum": ""
             },
             "require": {
@@ -4653,9 +4653,9 @@
                 "psr/http-message": "^2.0",
                 "spiral/roadrunner": "^2025.1.2",
                 "spiral/roadrunner-cli": "^2.7",
-                "spiral/roadrunner-http": "^v3.6",
+                "spiral/roadrunner-http": "^v4.0",
                 "spiral/roadrunner-worker": "^3.6",
-                "yii2-extensions/psr-bridge": "^0.2@dev"
+                "yii2-extensions/psr-bridge": "^0.2"
             },
             "require-dev": {
                 "httpsoft/http-message": "^1.1",
@@ -4667,11 +4667,10 @@
                 "phpunit/phpunit": "^10.5",
                 "yii2-extensions/phpstan": "^0.4"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "0.2.x-dev"
+                    "dev-main": "0.3.x-dev"
                 }
             },
             "autoload": {
@@ -4691,9 +4690,9 @@
             ],
             "support": {
                 "issues": "https://github.com/yii2-extensions/road-runner/issues",
-                "source": "https://github.com/yii2-extensions/road-runner/tree/main"
+                "source": "https://github.com/yii2-extensions/road-runner/tree/0.2.0"
             },
-            "time": "2026-02-19T00:02:32+00:00"
+            "time": "2026-02-20T20:37:01+00:00"
         },
         {
             "name": "yiisoft/yii2",
@@ -6497,12 +6496,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/extension-installer.git",
-                "reference": "bfa982b8ab8de00e737507c653380def73e542a9"
+                "reference": "5e36c19cd31b9c8485829cea2e55c0a7a04138b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/extension-installer/zipball/bfa982b8ab8de00e737507c653380def73e542a9",
-                "reference": "bfa982b8ab8de00e737507c653380def73e542a9",
+                "url": "https://api.github.com/repos/phpstan/extension-installer/zipball/5e36c19cd31b9c8485829cea2e55c0a7a04138b3",
+                "reference": "5e36c19cd31b9c8485829cea2e55c0a7a04138b3",
                 "shasum": ""
             },
             "require": {
@@ -6538,15 +6537,15 @@
                 "issues": "https://github.com/phpstan/extension-installer/issues",
                 "source": "https://github.com/phpstan/extension-installer/tree/1.4.x"
             },
-            "time": "2026-02-19T08:19:09+00:00"
+            "time": "2026-02-19T21:27:50+00:00"
         },
         {
             "name": "phpstan/phpstan",
             "version": "2.2.x-dev",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/0e542332be569672f1d2063a7cb46700a86479c8",
-                "reference": "0e542332be569672f1d2063a7cb46700a86479c8",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/0807b1b39b9ade85b0df2e4ea50572222bd6eab5",
+                "reference": "0807b1b39b9ade85b0df2e4ea50572222bd6eab5",
                 "shasum": ""
             },
             "require": {
@@ -6592,7 +6591,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-19T09:57:51+00:00"
+            "time": "2026-02-20T18:27:49+00:00"
         },
         {
             "name": "phpstan/phpstan-strict-rules",
@@ -6600,12 +6599,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan-strict-rules.git",
-                "reference": "e8e9032ea9779bf2dbf9065baa145bd018d40f41"
+                "reference": "3b3c435989d5ba56119e971d446b3afff36a279c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan-strict-rules/zipball/e8e9032ea9779bf2dbf9065baa145bd018d40f41",
-                "reference": "e8e9032ea9779bf2dbf9065baa145bd018d40f41",
+                "url": "https://api.github.com/repos/phpstan/phpstan-strict-rules/zipball/3b3c435989d5ba56119e971d446b3afff36a279c",
+                "reference": "3b3c435989d5ba56119e971d446b3afff36a279c",
                 "shasum": ""
             },
             "require": {
@@ -6644,7 +6643,7 @@
                 "issues": "https://github.com/phpstan/phpstan-strict-rules/issues",
                 "source": "https://github.com/phpstan/phpstan-strict-rules/tree/2.0.x"
             },
-            "time": "2026-02-19T08:19:46+00:00"
+            "time": "2026-02-19T21:32:39+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -7033,12 +7032,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "47283cfd98d553edcb1353591f4e255dc1bb61f0"
+                "reference": "5e4d8826746d4d4bc0b008781b82d71b68fab420"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/47283cfd98d553edcb1353591f4e255dc1bb61f0",
-                "reference": "47283cfd98d553edcb1353591f4e255dc1bb61f0",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/5e4d8826746d4d4bc0b008781b82d71b68fab420",
+                "reference": "5e4d8826746d4d4bc0b008781b82d71b68fab420",
                 "shasum": ""
             },
             "require": {
@@ -7131,7 +7130,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-02-18T12:38:40+00:00"
+            "time": "2026-02-19T15:05:44+00:00"
         },
         {
             "name": "psr/http-client",
@@ -7192,12 +7191,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "bbc5e84817483986dd3c30d08a764fa5ca635e49"
+                "reference": "9c30b71ec918123a0049e3f9ac5d6f3837757ac9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/bbc5e84817483986dd3c30d08a764fa5ca635e49",
-                "reference": "bbc5e84817483986dd3c30d08a764fa5ca635e49",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/9c30b71ec918123a0049e3f9ac5d6f3837757ac9",
+                "reference": "9c30b71ec918123a0049e3f9ac5d6f3837757ac9",
                 "shasum": ""
             },
             "require": {
@@ -7264,7 +7263,7 @@
                 "issues": "https://github.com/bobthecow/psysh/issues",
                 "source": "https://github.com/bobthecow/psysh/tree/main"
             },
-            "time": "2026-02-15T15:19:10+00:00"
+            "time": "2026-02-18T12:17:45+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -7312,16 +7311,16 @@
         },
         {
             "name": "rector/rector",
-            "version": "2.3.6",
+            "version": "2.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "ca9ebb81d280cd362ea39474dabd42679e32ca6b"
+                "reference": "9c46ad17f57963932c9788fd1b0f1d07ff450370"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/ca9ebb81d280cd362ea39474dabd42679e32ca6b",
-                "reference": "ca9ebb81d280cd362ea39474dabd42679e32ca6b",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/9c46ad17f57963932c9788fd1b0f1d07ff450370",
+                "reference": "9c46ad17f57963932c9788fd1b0f1d07ff450370",
                 "shasum": ""
             },
             "require": {
@@ -7360,7 +7359,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/2.3.6"
+                "source": "https://github.com/rectorphp/rector/tree/2.3.7"
             },
             "funding": [
                 {
@@ -7368,7 +7367,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-06T14:25:06+00:00"
+            "time": "2026-02-19T14:44:16+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -9391,9 +9390,7 @@
         }
     ],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "yii2-extensions/road-runner": 20
-    },
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
