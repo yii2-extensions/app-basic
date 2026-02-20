@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6eb10ad305204e27b5bd8c64b6594dc0",
+    "content-hash": "d8a2dec8095284fb0a08995a403b2b52",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -3454,21 +3454,21 @@
         },
         {
             "name": "yii2-extensions/franken-php",
-            "version": "dev-main",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii2-extensions/franken-php.git",
-                "reference": "baca8a48159aa85e6cecbfd1455f8139996429b2"
+                "reference": "e247583048be876d98b89e83970d31cf6e2c82d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2-extensions/franken-php/zipball/baca8a48159aa85e6cecbfd1455f8139996429b2",
-                "reference": "baca8a48159aa85e6cecbfd1455f8139996429b2",
+                "url": "https://api.github.com/repos/yii2-extensions/franken-php/zipball/e247583048be876d98b89e83970d31cf6e2c82d6",
+                "reference": "e247583048be876d98b89e83970d31cf6e2c82d6",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.1",
-                "yii2-extensions/psr-bridge": "^0.2@dev"
+                "yii2-extensions/psr-bridge": "^0.2"
             },
             "require-dev": {
                 "httpsoft/http-message": "^1.1",
@@ -3481,11 +3481,10 @@
                 "xepozz/internal-mocker": "^1.4",
                 "yii2-extensions/phpstan": "^0.4"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "0.2.x-dev"
+                    "dev-main": "0.3.x-dev"
                 }
             },
             "autoload": {
@@ -3505,22 +3504,22 @@
             ],
             "support": {
                 "issues": "https://github.com/yii2-extensions/franken-php/issues",
-                "source": "https://github.com/yii2-extensions/franken-php/tree/main"
+                "source": "https://github.com/yii2-extensions/franken-php/tree/0.2.0"
             },
-            "time": "2026-02-18T23:30:25+00:00"
+            "time": "2026-02-20T20:04:23+00:00"
         },
         {
             "name": "yii2-extensions/psr-bridge",
-            "version": "dev-main",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii2-extensions/psr-bridge.git",
-                "reference": "7f15f594b008f2f2a246d51555f09767e66811c8"
+                "reference": "43de28a32447f9c67e34694fadeaafaa415fa6b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2-extensions/psr-bridge/zipball/7f15f594b008f2f2a246d51555f09767e66811c8",
-                "reference": "7f15f594b008f2f2a246d51555f09767e66811c8",
+                "url": "https://api.github.com/repos/yii2-extensions/psr-bridge/zipball/43de28a32447f9c67e34694fadeaafaa415fa6b0",
+                "reference": "43de28a32447f9c67e34694fadeaafaa415fa6b0",
                 "shasum": ""
             },
             "require": {
@@ -3547,11 +3546,10 @@
             "suggest": {
                 "yii2-extensions/worker-debug": "Provides Yii debug integration for PSR requests"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "0.2.x-dev"
+                    "dev-main": "0.3.x-dev"
                 }
             },
             "autoload": {
@@ -3573,9 +3571,9 @@
             ],
             "support": {
                 "issues": "https://github.com/yii2-extensions/psr-bridge/issues",
-                "source": "https://github.com/yii2-extensions/psr-bridge/tree/main"
+                "source": "https://github.com/yii2-extensions/psr-bridge/tree/0.2.0"
             },
-            "time": "2026-02-18T22:16:51+00:00"
+            "time": "2026-02-20T19:25:25+00:00"
         },
         {
             "name": "yiisoft/yii2",
@@ -3583,12 +3581,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "79c55c11cd6a99c9a5d2cafc9fad0fa0c7e66b77"
+                "reference": "496c9638422a9885ea31288c722cd37173db9f90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/79c55c11cd6a99c9a5d2cafc9fad0fa0c7e66b77",
-                "reference": "79c55c11cd6a99c9a5d2cafc9fad0fa0c7e66b77",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/496c9638422a9885ea31288c722cd37173db9f90",
+                "reference": "496c9638422a9885ea31288c722cd37173db9f90",
                 "shasum": ""
             },
             "require": {
@@ -3697,7 +3695,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-02-12T09:20:59+00:00"
+            "time": "2026-02-20T20:41:40+00:00"
         },
         {
             "name": "yiisoft/yii2-bootstrap5",
@@ -5436,12 +5434,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/extension-installer.git",
-                "reference": "5120c4519119dc588f35bf2b6fa402293f86a3b4"
+                "reference": "5e36c19cd31b9c8485829cea2e55c0a7a04138b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/extension-installer/zipball/5120c4519119dc588f35bf2b6fa402293f86a3b4",
-                "reference": "5120c4519119dc588f35bf2b6fa402293f86a3b4",
+                "url": "https://api.github.com/repos/phpstan/extension-installer/zipball/5e36c19cd31b9c8485829cea2e55c0a7a04138b3",
+                "reference": "5e36c19cd31b9c8485829cea2e55c0a7a04138b3",
                 "shasum": ""
             },
             "require": {
@@ -5477,15 +5475,15 @@
                 "issues": "https://github.com/phpstan/extension-installer/issues",
                 "source": "https://github.com/phpstan/extension-installer/tree/1.4.x"
             },
-            "time": "2026-02-18T11:19:15+00:00"
+            "time": "2026-02-19T21:27:50+00:00"
         },
         {
             "name": "phpstan/phpstan",
             "version": "2.2.x-dev",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/bf2080c6806f505a6c3a0ee31e87cb3636b9f2a9",
-                "reference": "bf2080c6806f505a6c3a0ee31e87cb3636b9f2a9",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/0807b1b39b9ade85b0df2e4ea50572222bd6eab5",
+                "reference": "0807b1b39b9ade85b0df2e4ea50572222bd6eab5",
                 "shasum": ""
             },
             "require": {
@@ -5531,7 +5529,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-18T16:19:46+00:00"
+            "time": "2026-02-20T18:27:49+00:00"
         },
         {
             "name": "phpstan/phpstan-strict-rules",
@@ -5539,12 +5537,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan-strict-rules.git",
-                "reference": "38c26a9b6e693fdc313c2eccd252f1bbaaa9011a"
+                "reference": "3b3c435989d5ba56119e971d446b3afff36a279c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan-strict-rules/zipball/38c26a9b6e693fdc313c2eccd252f1bbaaa9011a",
-                "reference": "38c26a9b6e693fdc313c2eccd252f1bbaaa9011a",
+                "url": "https://api.github.com/repos/phpstan/phpstan-strict-rules/zipball/3b3c435989d5ba56119e971d446b3afff36a279c",
+                "reference": "3b3c435989d5ba56119e971d446b3afff36a279c",
                 "shasum": ""
             },
             "require": {
@@ -5583,7 +5581,7 @@
                 "issues": "https://github.com/phpstan/phpstan-strict-rules/issues",
                 "source": "https://github.com/phpstan/phpstan-strict-rules/tree/2.0.x"
             },
-            "time": "2026-02-18T11:15:25+00:00"
+            "time": "2026-02-19T21:32:39+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -5972,12 +5970,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "47283cfd98d553edcb1353591f4e255dc1bb61f0"
+                "reference": "5e4d8826746d4d4bc0b008781b82d71b68fab420"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/47283cfd98d553edcb1353591f4e255dc1bb61f0",
-                "reference": "47283cfd98d553edcb1353591f4e255dc1bb61f0",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/5e4d8826746d4d4bc0b008781b82d71b68fab420",
+                "reference": "5e4d8826746d4d4bc0b008781b82d71b68fab420",
                 "shasum": ""
             },
             "require": {
@@ -6070,7 +6068,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-02-18T12:38:40+00:00"
+            "time": "2026-02-19T15:05:44+00:00"
         },
         {
             "name": "psr/event-dispatcher",
@@ -6184,12 +6182,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "bbc5e84817483986dd3c30d08a764fa5ca635e49"
+                "reference": "9c30b71ec918123a0049e3f9ac5d6f3837757ac9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/bbc5e84817483986dd3c30d08a764fa5ca635e49",
-                "reference": "bbc5e84817483986dd3c30d08a764fa5ca635e49",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/9c30b71ec918123a0049e3f9ac5d6f3837757ac9",
+                "reference": "9c30b71ec918123a0049e3f9ac5d6f3837757ac9",
                 "shasum": ""
             },
             "require": {
@@ -6256,7 +6254,7 @@
                 "issues": "https://github.com/bobthecow/psysh/issues",
                 "source": "https://github.com/bobthecow/psysh/tree/main"
             },
-            "time": "2026-02-15T15:19:10+00:00"
+            "time": "2026-02-18T12:17:45+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -6304,16 +6302,16 @@
         },
         {
             "name": "rector/rector",
-            "version": "2.3.6",
+            "version": "2.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "ca9ebb81d280cd362ea39474dabd42679e32ca6b"
+                "reference": "9c46ad17f57963932c9788fd1b0f1d07ff450370"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/ca9ebb81d280cd362ea39474dabd42679e32ca6b",
-                "reference": "ca9ebb81d280cd362ea39474dabd42679e32ca6b",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/9c46ad17f57963932c9788fd1b0f1d07ff450370",
+                "reference": "9c46ad17f57963932c9788fd1b0f1d07ff450370",
                 "shasum": ""
             },
             "require": {
@@ -6352,7 +6350,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/2.3.6"
+                "source": "https://github.com/rectorphp/rector/tree/2.3.7"
             },
             "funding": [
                 {
@@ -6360,7 +6358,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-06T14:25:06+00:00"
+            "time": "2026-02-19T14:44:16+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -8452,9 +8450,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "yii2-extensions/franken-php": 20
-    },
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
