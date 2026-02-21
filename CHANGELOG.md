@@ -15,6 +15,8 @@
 - Enh #229: Add `php-forge/coding-standard` to development dependencies for code quality checks (@terabytesoftw)
 - Bug #230: Add section for automated refactoring using `Rector` in testing documentation (@terabytesoftw)
 - Dep #235: Update `yii2-extensions/franken-php` `^0.1` to `^0.2` (@terabytesoftw)
+- Enh #236: Add `.codespellrc` configuration to skip specific files and directories for spell checking (@terabytesoftw)
+- Enh #237: Update PHP requirement to `8.2` in `composer.json` and adjust PHP versions in `build.yml` (@terabytesoftw)
 
 ## 0.1.2 October 8, 2025
 

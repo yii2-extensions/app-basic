@@ -1,2 +1,2 @@
 [codespell]
-skip = */tests/*,tests/**,composer.lock,composer.json
+skip = */tests/*,tests/**,*/composer.lock,*/composer.json
