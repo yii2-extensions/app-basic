@@ -2,10 +2,10 @@
 
 ## System requirements
 
-- [`PHP`](https://www.php.net/downloads) 8.1 or higher.
+- [`PHP`](https://www.php.net/downloads) 8.2 or higher.
 - [`Composer`](https://getcomposer.org/download/) for dependency management.
 - [`npm`](https://nodejs.org/en/download/) for frontend dependency management.
-- [`Yii2`](https://github.com/yiisoft/yii2) 2.0.53+ or 22.x.
+- [`Yii2`](https://github.com/yiisoft/yii2) 2.0.54+ or 22.x.
 
 ### Optional requirements
 
