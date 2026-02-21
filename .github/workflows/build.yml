@@ -25,3 +25,4 @@ jobs:
       codeception-command: vendor/bin/codecept run --env php-builtin --coverage-xml
       coverage-file: runtime/output/coverage.xml
       extensions: gd, intl, pcov
+      php-version: '["8.2","8.3","8.4","8.5"]'
