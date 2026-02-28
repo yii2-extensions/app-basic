@@ -14,13 +14,12 @@
     "license": "BSD-3-Clause",
     "require": {
         "php": ">=8.2",
-        "google/protobuf": "v5.34.0RC2 as v4.33.5",
         "httpsoft/http-message": "^1.0",
         "php-forge/foxy": "^0.2",
         "ui-awesome/html-svg": "^0.3",
         "yiisoft/yii2": "^2.0.54|^22",
         "yiisoft/yii2-bootstrap5": "^2.0.50|^22",
-        "yii2-extensions/road-runner": "^0.2"
+        "yii2-extensions/road-runner": "^0.3"
     },
     "require-dev": {
         "codeception/codeception": "^5.0.0",
