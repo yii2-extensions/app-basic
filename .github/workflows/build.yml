@@ -23,7 +23,8 @@ jobs:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     with:
       codeception-command: |
-        mkdir -p private-files /tmp/yii-sessions
+        export SESSION_SAVE_PATH="${GITHUB_WORKSPACE}/runtime/sessions"
+        mkdir -p private-files "${SESSION_SAVE_PATH}"
 
         frankenphp run --config ./Caddyfile > /tmp/frankenphp.log 2>&1 &
         FRANKENPHP_PID=$!
