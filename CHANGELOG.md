@@ -16,6 +16,7 @@
 - Dep #234: Update `yii2-extensions/road-runner` `^0.1` to `^0.2` (@terabytesoftw)
 - Enh #236: Add `.codespellrc` configuration to skip specific files and directories for spell checking (@terabytesoftw)
 - Enh #237: Update PHP requirement to `8.2` in `composer.json` and adjust PHP versions in `build.yml` (@terabytesoftw)
+- Dep #243: Update `yii2-extensions/road-runner` `^0.2` to `^0.3` (@terabytesoftw)
 
 ## 0.1.2 October 8, 2025
 
